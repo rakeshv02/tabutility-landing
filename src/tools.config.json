@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "calculators": {
+      "name": "Calculators",
+      "color": "#2563eb",
+      "emoji": "📊",
+      "tools": [
+        {
+          "id": "percentage-calculator",
+          "name": "Percentage Calculator",
+          "description": "Calculate percentages, increases, and decreases instantly",
+          "url": "https://percentage-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "📊"
+        }
+      ]
+    },
+    "image-tools": {
+      "name": "Image Tools",
+      "color": "#10b981",
+      "emoji": "🖼️",
+      "tools": [
+        {
+          "id": "image-compressor",
+          "name": "Image Compressor",
+          "description": "Compress PNG & JPEG up to 80% without quality loss",
+          "url": "https://image-compressor.tabutility.com",
+          "status": "live",
+          "emoji": "🖼️"
+        }
+      ]
+    },
+    "developer-tools": {
+      "name": "Developer Tools",
+      "color": "#f59e0b",
+      "emoji": "{ }",
+      "tools": [
+        {
+          "id": "json-formatter",
+          "name": "JSON Formatter",
+          "description": "Format, validate, and minify JSON instantly",
+          "url": "https://json-formatter.tabutility.com",
+          "status": "live",
+          "emoji": "{ }"
+        },
+        {
+          "id": "word-unscrambler",
+          "name": "Word Unscrambler",
+          "description": "Find all words from scrambled letters",
+          "url": "https://word-unscrambler.tabutility.com",
+          "status": "live",
+          "emoji": "🔤"
+        }
+      ]
+    }
+  }
+}
