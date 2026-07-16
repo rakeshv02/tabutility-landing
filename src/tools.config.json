@@ -1,136 +1,251 @@
-{
-  "categories": {
-    "calculators": {
-      "name": "Calculators",
-      "color": "#2563eb",
-      "emoji": "📊",
-      "tools": [
-        {
-          "id": "percentage-calculator",
-          "name": "Percentage Calculator",
-          "description": "Calculate percentages, increases, decreases, and discounts instantly. Perfect for tips, tax, markups, and financial planning.",
-          "url": "https://percentage-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "📊"
-        }
-      ]
+import React, { useState } from 'react';
+import toolsConfig from './tools.config.json';
+
+export default function App() {
+  const [expandedFaq, setExpandedFaq] = useState(null);
+
+  const faqItems = [
+    {
+      q: "Are all tools truly free?",
+      a: "Yes. All 10 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users."
     },
-    "image-tools": {
-      "name": "Image Tools",
-      "color": "#10b981",
-      "emoji": "🖼️",
-      "tools": [
-        {
-          "id": "image-compressor",
-          "name": "Image Compressor",
-          "description": "Compress PNG, JPEG, and WebP images up to 80% without losing quality. Reduce file size instantly for web, email, and storage.",
-          "url": "https://image-compressor.tabutility.com",
-          "status": "live",
-          "emoji": "🖼️"
-        }
-      ]
+    {
+      q: "Do you store my data?",
+      a: "No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools (subscriptions) store your preferences to improve results, but you can delete anytime."
     },
-    "developer-tools": {
-      "name": "Developer Tools",
-      "color": "#f59e0b",
-      "emoji": "{ }",
-      "tools": [
-        {
-          "id": "json-formatter",
-          "name": "JSON Formatter",
-          "description": "Format, validate, and minify JSON instantly. Beautify messy JSON, check for syntax errors, and compress for production.",
-          "url": "https://json-formatter.tabutility.com",
-          "status": "live",
-          "emoji": "{ }"
-        },
-        {
-          "id": "word-unscrambler",
-          "name": "Word Unscrambler",
-          "description": "Find all possible words from scrambled letters. Perfect for Scrabble, Wordle, word games, and solving letter puzzles instantly.",
-          "url": "https://word-unscrambler.tabutility.com",
-          "status": "live",
-          "emoji": "🔤"
-        },
-        {
-          "id": "base64-encoder",
-          "name": "Base64 Encoder",
-          "description": "Encode and decode Base64 strings instantly. Convert text to Base64 and back—essential for APIs, emails, and data encoding.",
-          "url": "https://base64-encoder.tabutility.com",
-          "status": "live",
-          "emoji": "🔐"
-        },
-        {
-          "id": "url-encoder",
-          "name": "URL Encoder",
-          "description": "Encode and decode URLs instantly. Convert special characters to URL-safe format for APIs, query strings, and web development.",
-          "url": "https://url-encoder.tabutility.com",
-          "status": "live",
-          "emoji": "🔗"
-        },
-        {
-          "id": "password-generator",
-          "name": "Password Generator",
-          "description": "Generate strong, random passwords instantly. Customize length, uppercase, numbers, and symbols for maximum security.",
-          "url": "https://password-generator.tabutility.com",
-          "status": "live",
-          "emoji": "🔑"
-        },
-        {
-          "id": "uuid-generator",
-          "name": "UUID Generator",
-          "description": "Generate unique UUIDs (v4) instantly. Perfect for database IDs, API keys, session tokens, and system identifiers.",
-          "url": "https://uuid-generator.tabutility.com",
-          "status": "live",
-          "emoji": "🆔"
-        },
-        {
-          "id": "markdown-to-html",
-          "name": "Markdown to HTML",
-          "description": "Convert Markdown to HTML instantly. Write in Markdown, get clean HTML—perfect for blogging, documentation, and content creation.",
-          "url": "https://markdown-to-html.tabutility.com",
-          "status": "live",
-          "emoji": "📝"
-        },
-        {
-          "id": "qr-code-generator",
-          "name": "QR Code Generator",
-          "description": "Generate QR codes from text or URLs instantly. Download as PNG for print, web, or mobile—perfect for marketing and tracking.",
-          "url": "https://qr-code-generator.tabutility.com",
-          "status": "live",
-          "emoji": "📲"
-        }
-      ]
+    {
+      q: "Why are these tools free?",
+      a: "We believe useful tools should be accessible to everyone. We're supported by non-intrusive ads and optional subscriptions for advanced features. No tracking. No selling your data."
     },
-    "content-creators": {
-      "name": "Content Tools",
-      "color": "#ec4899",
-      "emoji": "✨",
-      "tools": [
-        {
-          "id": "email-writer",
-          "name": "AI Email Writer",
-          "description": "Write professional emails instantly with AI. Draft cold outreach, follow-ups, and business emails—free tier includes 5 emails/week.",
-          "url": "https://email-writer.tabutility.com",
-          "status": "live",
-          "emoji": "✉️"
-        },
-        {
-          "id": "content-repurposer",
-          "name": "Content Repurposer",
-          "description": "Turn one blog post into Twitter threads, LinkedIn posts, and email newsletters. Repurpose content in seconds—free tier includes 1 post/week.",
-          "url": "https://content-repurposer.tabutility.com",
-          "status": "live",
-          "emoji": "♻️"
-        },
-        {
-          "id": "ai-summarizer",
-          "name": "AI Summarizer",
-          "description": "Summarize articles, PDFs, and videos instantly. Get key points in seconds—free tier includes 3 summaries/week.",
-          "url": "https://ai-summarizer.tabutility.com",
-          "status": "live",
-          "emoji": "📚"
-        }
-      ]
+    {
+      q: "How often are new tools added?",
+      a: "We're building in public. New tools launch regularly as we identify problems worth solving. Follow us on Reddit and Indie Hackers for updates."
+    },
+    {
+      q: "Can I use these tools offline?",
+      a: "Yes. Most utility tools work offline. Hybrid tools (Email Writer, Summarizer) need internet for AI features, but your data stays private."
     }
-  }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-900 text-gray-100">
+      {/* Hero Section */}
+      <section className="px-4 py-16 md:py-24 max-w-5xl mx-auto">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Free Tools for Developers & Creators
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Tabutility is a growing suite of web-based utilities designed to solve real problems. No sign-up. No tracking. No BS. Built by a solo founder, open about the journey.
+          </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12 mt-12">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-500">13</div>
+              <div className="text-sm text-gray-400 mt-2">Tools Live</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-500">100%</div>
+              <div className="text-sm text-gray-400 mt-2">Free Forever</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-500">0</div>
+              <div className="text-sm text-gray-400 mt-2">Sign-ups</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="px-4 py-12 md:py-16 bg-slate-800/50 border-t border-slate-700">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">What is Tabutility?</h2>
+          <div className="space-y-4 text-gray-300 leading-relaxed">
+            <p>
+              Tabutility started as a simple idea: build tools that solve real problems without the bloat, paywalls, and surveillance that comes with modern software.
+            </p>
+            <p>
+              Most online tools are either outdated (they work, but haven't changed in 10 years) or overengineered (they collect your data, track your behavior, and lock basic features behind paywalls). We're taking a different approach.
+            </p>
+            <p>
+              Every tool on Tabutility runs in your browser. Nothing leaves your computer without your permission. No accounts. No tracking pixels. No creepy data collection. Just simple, useful utilities.
+            </p>
+            <p>
+              We're building in public on <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Reddit</a> and <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Indie Hackers</a>. Follow along as we launch new tools, share revenue numbers, and talk about what works (and what doesn't).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="px-4 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto">
+          {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => (
+            <div key={categoryKey} className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="text-3xl">{category.emoji}</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-white">{category.name}</h2>
+              </div>
+
+              {category.tools.filter(tool => tool.status === 'live').length > 0 && (
+                <div className="mb-12">
+                  <h3 className="text-sm text-gray-400 uppercase tracking-wide mb-4">Available Now</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {category.tools.filter(tool => tool.status === 'live').map((tool) => (
+                      <a
+                        key={tool.id}
+                        href={tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group bg-slate-800 border border-slate-700 rounded-lg p-6 hover:bg-slate-750 hover:border-blue-500/50 transition-all duration-200 hover:scale-105"
+                      >
+                        <div className="flex items-start justify-between mb-3">
+                          <span className="text-2xl">{tool.emoji}</span>
+                          <span className="px-2 py-1 bg-green-900/30 text-green-400 text-xs font-semibold rounded">Live</span>
+                        </div>
+                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400">{tool.name}</h3>
+                        <p className="text-sm text-gray-400 mb-4">{tool.description}</p>
+                        <span className="text-blue-400 text-sm font-semibold group-hover:text-blue-300">Open Tool →</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {category.tools.filter(tool => tool.status === 'coming-soon').length > 0 && (
+                <div>
+                  <h3 className="text-sm text-gray-400 uppercase tracking-wide mb-4">Coming Soon</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {category.tools.filter(tool => tool.status === 'coming-soon').map((tool) => (
+                      <div key={tool.id} className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 opacity-60">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-lg">{tool.emoji}</span>
+                          <h3 className="text-sm font-semibold text-gray-300">{tool.name}</h3>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="px-4 py-16 md:py-20 bg-slate-800/50 border-t border-slate-700">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-12">How It Works</h2>
+          <div className="space-y-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">1</div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Pick a Tool</h3>
+                <p className="text-gray-400">Choose any tool above. No account needed. No email required.</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">2</div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Use It Instantly</h3>
+                <p className="text-gray-400">Start using it right away. All tools run in your browser—no server needed.</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">3</div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Upgrade (Optional)</h3>
+                <p className="text-gray-400">Some tools offer premium features. Free tier is always fully functional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="px-4 py-16 md:py-20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-3">
+            {faqItems.map((item, idx) => (
+              <div key={idx} className="border border-slate-700 rounded-lg bg-slate-800/50">
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-800 transition-colors text-left"
+                >
+                  <span className="font-semibold text-white">{item.q}</span>
+                  <span className="text-blue-400 text-2xl leading-none">{expandedFaq === idx ? '−' : '+'}</span>
+                </button>
+                {expandedFaq === idx && (
+                  <div className="px-6 py-4 border-t border-slate-700 text-gray-300 bg-slate-900/50">
+                    {item.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Building in Public */}
+      <section className="px-4 py-16 md:py-20 bg-gradient-to-b from-blue-900/20 to-slate-900 border-t border-slate-700">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Follow the Journey</h2>
+          <p className="text-gray-300 mb-8">
+            We're building Tabutility in the open. Join the community to see what's coming next, share feedback, and help shape the future of these tools.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://reddit.com/r/webdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              Follow on Reddit
+            </a>
+            <a
+              href="https://indiehackers.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors"
+            >
+              Indie Hackers
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-4 py-12 border-t border-slate-700">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="font-semibold text-white mb-4">Tabutility</h3>
+              <p className="text-sm text-gray-400">Free tools built by a solo founder. No tracking. No BS.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-white mb-4">Links</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-blue-400">Home</a></li>
+                <li><a href="#" className="hover:text-blue-400">Tools</a></li>
+                <li><a href="#" className="hover:text-blue-400">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-white mb-4">Community</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="https://reddit.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+                <li><a href="https://indiehackers.com" className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">Indie Hackers</a></li>
+                <li><a href="#" className="hover:text-blue-400">Feedback</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-700 pt-8 text-center text-sm text-gray-500">
+            <p>© 2026 Tabutility. Built with ❤️ in public. <a href="#" className="hover:text-gray-400">Privacy Policy</a> • <a href="#" className="hover:text-gray-400">Terms</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }
