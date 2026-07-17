@@ -124,11 +124,14 @@ export default function App() {
           <h2 style={{ fontSize: 30, fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.5px' }}>13 Tools, All Free.</h2>
           <p style={{ color: '#64748b', margin: '0 0 48px', fontSize: 15 }}>Everything you need to get things done quickly. Click a tool to launch it instantly in your browser.</p>
 
-          {Object.entries(toolsConfig.categories).map(([key, category]) => {
+          {Object.entries(toolsConfig.categories)
+            .sort(([, a], [, b]) => b.tools.length - a.tools.length)
+            .map(([key, category]) => {
             const theme = colorMap[category.name] || { icon: '#4B7FED', light: '#EEF1FF' };
             const isExpanded = showMoreTools[key];
             const visible = isExpanded ? category.tools : category.tools.slice(0, 4);
             const hasMore = category.tools.length > 4;
+            const isSingle = category.tools.length === 1;
 
             return (
               <div key={key} style={{ marginBottom: 52 }}>
@@ -139,24 +142,36 @@ export default function App() {
                   <span style={{ padding: '2px 10px', background: '#f1f5f9', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#64748b' }}>{category.tools.length}</span>
                 </div>
 
-                {/* Tool cards */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
-                  {visible.map(tool => (
-                    <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
-                      style={{ background: 'white', borderRadius: 14, padding: 20, border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 0, position: 'relative', overflow: 'hidden', transition: 'all 0.2s' }}
-                      onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
-                      onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
-                      {/* Colour accent bar on hover — always rendered, shown on hover via JS */}
-                      <div className="accent-bar" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: theme.icon, opacity: 0, transition: 'opacity 0.2s' }}
-                        ref={el => { if (el) { el.parentElement.addEventListener('mouseenter', () => el.style.opacity = 1); el.parentElement.addEventListener('mouseleave', () => el.style.opacity = 0); } }} />
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-                        <span style={{ fontSize: 30 }}>{tool.emoji}</span>
-                      </div>
-                      <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
-                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
-                    </a>
-                  ))}
-                </div>
+                {/* Single-tool: wide horizontal card */}
+                {isSingle ? (
+                  <a href={visible[0].url} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'flex', alignItems: 'center', gap: 20, background: 'white', borderRadius: 14, padding: '20px 24px', border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', maxWidth: 480, transition: 'all 0.2s' }}
+                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
+                    onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
+                    <span style={{ fontSize: 36, flexShrink: 0 }}>{visible[0].emoji}</span>
+                    <div>
+                      <h4 style={{ margin: '0 0 4px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{visible[0].name}</h4>
+                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55 }}>{visible[0].description}</p>
+                    </div>
+                    <span style={{ marginLeft: 'auto', flexShrink: 0, fontSize: 18, color: theme.icon }}>→</span>
+                  </a>
+                ) : (
+                  /* Multi-tool grid */
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
+                    {visible.map(tool => (
+                      <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
+                        style={{ background: 'white', borderRadius: 14, padding: 20, border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', transition: 'all 0.2s' }}
+                        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
+                        onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
+                        <div style={{ marginBottom: 12 }}>
+                          <span style={{ fontSize: 30 }}>{tool.emoji}</span>
+                        </div>
+                        <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
+                        <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
+                      </a>
+                    ))}
+                  </div>
+                )}
 
                 {hasMore && (
                   <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
