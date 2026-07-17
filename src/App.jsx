@@ -27,183 +27,301 @@ export default function App() {
     }
   ];
 
+  const ToolCarousel = ({ tools }) => {
+    const scrollRef = React.useRef(null);
+    
+    const scroll = (direction) => {
+      if (scrollRef.current) {
+        const scrollAmount = 300;
+        scrollRef.current.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    return (
+      <div style={{ position: 'relative', marginBottom: '2rem' }}>
+        <div
+          ref={scrollRef}
+          style={{
+            display: 'flex',
+            gap: '16px',
+            overflowX: 'auto',
+            scrollBehavior: 'smooth',
+            paddingBottom: '8px',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}
+          onWheel={(e) => {
+            e.preventDefault();
+            scroll(e.deltaY > 0 ? 'right' : 'left');
+          }}
+        >
+          <style>{`
+            div::-webkit-scrollbar { display: none; }
+          `}</style>
+          
+          {tools.map((tool) => (
+            <a
+              key={tool.id}
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                minWidth: '200px',
+                background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(79, 70, 229, 0.2) 100%)',
+                border: '0.5px solid rgba(59, 130, 246, 0.3)',
+                borderRadius: '16px',
+                padding: '1.5rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(6, 182, 212, 0.6)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%)';
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(6, 182, 212, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(79, 70, 229, 0.2) 100%)';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ fontSize: '28px' }}>{tool.emoji}</span>
+                <span style={{ fontSize: '11px', background: 'rgba(16, 185, 129, 0.2)', color: '#10b981', padding: '4px 10px', borderRadius: '12px', border: '0.5px solid rgba(16, 185, 129, 0.3)' }}>Live</span>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#ffffff', margin: '0 0 8px' }}>{tool.name}</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(209, 213, 219, 0.8)', margin: '0', lineHeight: '1.4' }}>{tool.description}</p>
+              </div>
+              <div style={{ marginTop: 'auto' }}>
+                <span style={{ fontSize: '12px', color: '#60a5fa', fontWeight: '500' }}>Open Tool →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        {/* Scroll Buttons */}
+        <button
+          onClick={() => scroll('left')}
+          style={{
+            position: 'absolute',
+            left: '-40px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(59, 130, 246, 0.2)',
+            border: '0.5px solid rgba(59, 130, 246, 0.4)',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: '#60a5fa',
+            fontSize: '16px',
+            transition: 'all 0.2s'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.3)';
+            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.2)';
+            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.4)';
+          }}
+        >
+          ←
+        </button>
+        
+        <button
+          onClick={() => scroll('right')}
+          style={{
+            position: 'absolute',
+            right: '-40px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(59, 130, 246, 0.2)',
+            border: '0.5px solid rgba(59, 130, 246, 0.4)',
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: '#60a5fa',
+            fontSize: '16px',
+            transition: 'all 0.2s'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.3)';
+            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.2)';
+            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.4)';
+          }}
+        >
+          →
+        </button>
+      </div>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-gray-100">
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom, #0f172a 0%, #1a1f35 50%, #0f172a 100%)', color: '#e5e7eb' }}>
       {/* Navigation */}
-      <nav className="bg-slate-900/50 border-b border-blue-500/20 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <nav style={{ background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(10px)', borderBottom: '0.5px solid rgba(59, 130, 246, 0.2)', position: 'sticky', top: 0, zIndex: 50 }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <h1 style={{ fontSize: '20px', fontWeight: '700', background: 'linear-gradient(90deg, #60a5fa, #06b6d4)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent', margin: 0 }}>
             Tabutility
           </h1>
-          <div className="flex gap-4">
-            <a href="#about" className="hover:text-blue-400 transition">About</a>
-            <a href="#faq" className="hover:text-blue-400 transition">FAQ</a>
+          <div style={{ display: 'flex', gap: '2rem', fontSize: '14px' }}>
+            <a href="#faq" style={{ color: '#d1d5db', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#d1d5db'}>FAQ</a>
+            <a href="#about" style={{ color: '#d1d5db', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#d1d5db'}>About</a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="px-4 py-20 md:py-32 max-w-6xl mx-auto">
-        <div className="text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full">
-            <span className="text-blue-400 text-sm font-semibold">✨ Building in Public</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Free Tools for <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Developers</span> & <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Creators</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            No sign-up. No tracking. No BS. 13 powerful utilities built by a solo founder who actually cares about your privacy.
-          </p>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12 mt-12 max-w-2xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/20 rounded-lg p-4">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400">13</div>
-              <div className="text-xs md:text-sm text-gray-400 mt-2">Tools Live</div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20 rounded-lg p-4">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400">100%</div>
-              <div className="text-xs md:text-sm text-gray-400 mt-2">Free Forever</div>
-            </div>
-            <div className="bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-500/20 rounded-lg p-4">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400">0</div>
-              <div className="text-xs md:text-sm text-gray-400 mt-2">Sign-ups</div>
-            </div>
-          </div>
+      <section style={{ padding: '3rem 1rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.5rem 1rem', background: 'rgba(59, 130, 246, 0.1)', border: '0.5px solid rgba(59, 130, 246, 0.3)', borderRadius: '2rem', fontSize: '12px', color: '#60a5fa' }}>
+          ✨ Building in Public
         </div>
-      </section>
+        
+        <h1 style={{ fontSize: '3.5rem', fontWeight: '700', margin: '1rem 0', background: 'linear-gradient(90deg, #ffffff 0%, #60a5fa 50%, #06b6d4 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent', lineHeight: '1.2' }}>
+          Free Tools for Developers & Creators
+        </h1>
+        
+        <p style={{ fontSize: '1.1rem', color: '#9ca3af', marginBottom: '2rem', maxWidth: '600px', margin: '1.5rem auto' }}>
+          No sign-up. No tracking. No BS. 13 powerful utilities built by a solo founder who actually cares about your privacy.
+        </p>
 
-      {/* About Section */}
-      <section id="about" className="px-4 py-16 md:py-20 bg-gradient-to-r from-blue-500/5 to-purple-500/5 border-y border-blue-500/20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What is Tabutility?</h2>
-          <div className="space-y-4 text-gray-300 leading-relaxed">
-            <p>
-              Tabutility started as a simple idea: build tools that solve real problems without the bloat, paywalls, and surveillance that comes with modern software.
-            </p>
-            <p>
-              Every tool here runs in your browser. Nothing leaves your device without permission. No accounts. No tracking. No creepy data collection. Just simple, useful utilities.
-            </p>
-            <p>
-              We're building in public on Reddit and Indie Hackers. Follow along as we launch new tools, share revenue numbers, and talk about what works (and what doesn't).
-            </p>
+        {/* Stats */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', maxWidth: '500px', margin: '2rem auto' }}>
+          <div style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1))', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '12px', padding: '1rem' }}>
+            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#60a5fa' }}>13</div>
+            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Tools Live</div>
+          </div>
+          <div style={{ background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.1))', border: '0.5px solid rgba(168, 85, 247, 0.2)', borderRadius: '12px', padding: '1rem' }}>
+            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#a855f7' }}>100%</div>
+            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Free Forever</div>
+          </div>
+          <div style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))', border: '0.5px solid rgba(6, 182, 212, 0.2)', borderRadius: '12px', padding: '1rem' }}>
+            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#06b6d4' }}>0</div>
+            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Sign-ups</div>
           </div>
         </div>
       </section>
 
       {/* Tools Section */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="max-w-6xl mx-auto">
-          {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => (
-            <div key={categoryKey} className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <span className="text-3xl">{category.emoji}</span>
-                <h2 className="text-2xl md:text-3xl font-bold text-white">{category.name}</h2>
-              </div>
+      <section style={{ padding: '2rem 1rem', maxWidth: '1400px', margin: '0 auto' }}>
+        {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => (
+          <div key={categoryKey} style={{ marginBottom: '3rem', paddingLeft: '40px', paddingRight: '40px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.5rem' }}>
+              <span style={{ fontSize: '28px' }}>{category.emoji}</span>
+              <h2 style={{ fontSize: '20px', fontWeight: '600', color: '#ffffff', margin: 0 }}>{category.name}</h2>
+            </div>
+            
+            <ToolCarousel tools={category.tools} />
+          </div>
+        ))}
+      </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.tools.map((tool) => (
-                  <a
-                    key={tool.id}
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-gradient-to-br from-slate-800/80 to-slate-700/50 border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/50 hover:from-slate-800 hover:to-slate-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/10"
-                  >
-                    <div className="flex items-start justify-between mb-3">
-                      <span className="text-3xl">{tool.emoji}</span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-green-900/40 to-green-900/20 text-green-400 text-xs font-semibold rounded-full border border-green-500/30">Live</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition">{tool.name}</h3>
-                    <p className="text-sm text-gray-400 mb-4">{tool.description}</p>
-                    <span className="text-blue-400 text-sm font-semibold group-hover:text-cyan-400 transition">Open Tool →</span>
-                  </a>
-                ))}
-              </div>
+      {/* FAQ Section */}
+      <section id="faq" style={{ padding: '3rem 1rem', maxWidth: '800px', margin: '0 auto', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', borderBottom: '0.5px solid rgba(59, 130, 246, 0.2)' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '700', textAlign: 'center', marginBottom: '2rem', color: '#ffffff' }}>Questions?</h2>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          {faqItems.map((item, idx) => (
+            <div key={idx} style={{ border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '12px', background: 'rgba(30, 58, 138, 0.2)', overflow: 'hidden', transition: 'all 0.2s' }}>
+              <button
+                onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
+                style={{
+                  width: '100%',
+                  padding: '1rem 1.5rem',
+                  background: 'transparent',
+                  border: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  color: '#ffffff',
+                  fontSize: '15px',
+                  fontWeight: '500',
+                  transition: 'all 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(59, 130, 246, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                }}
+              >
+                {item.q}
+                <span style={{ color: '#60a5fa', fontSize: '18px', transition: 'transform 0.2s', transform: expandedFaq === idx ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
+              </button>
+              
+              {expandedFaq === idx && (
+                <div style={{ padding: '1rem 1.5rem', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', color: '#d1d5db', fontSize: '14px', lineHeight: '1.6', background: 'rgba(15, 23, 42, 0.5)' }}>
+                  {item.a}
+                </div>
+              )}
             </div>
           ))}
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="px-4 py-16 md:py-20 bg-gradient-to-r from-purple-500/5 to-pink-500/5 border-y border-purple-500/20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">How It Works</h2>
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm">1</div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Pick a Tool</h3>
-                <p className="text-gray-400">Choose any tool. No account needed. No email required.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">2</div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Use It Instantly</h3>
-                <p className="text-gray-400">Start using it right away. All tools run in your browser—no server needed.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">3</div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Upgrade (Optional)</h3>
-                <p className="text-gray-400">Some tools offer premium features. Free tier is always fully functional.</p>
-              </div>
-            </div>
+      {/* About Section */}
+      <section id="about" style={{ padding: '3rem 1rem', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1.5rem', color: '#ffffff' }}>About Tabutility</h2>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
+          <div style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1))', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
+            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>🚀</div>
+            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#60a5fa', margin: '0 0 0.5rem' }}>Built to Last</h3>
+            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>Simple, useful tools that actually solve problems. No bloat. No nonsense.</p>
+          </div>
+          
+          <div style={{ background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.1))', border: '0.5px solid rgba(168, 85, 247, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
+            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>🔒</div>
+            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#a855f7', margin: '0 0 0.5rem' }}>Private by Default</h3>
+            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>All processing in your browser. Your data stays yours. No tracking.</p>
+          </div>
+          
+          <div style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))', border: '0.5px solid rgba(6, 182, 212, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
+            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>📖</div>
+            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#06b6d4', margin: '0 0 0.5rem' }}>Building in Public</h3>
+            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>Sharing the journey. Revenue numbers, wins, and failures. All honest.</p>
           </div>
         </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="px-4 py-16 md:py-20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Questions?</h2>
-          <div className="space-y-3">
-            {faqItems.map((item, idx) => (
-              <div key={idx} className="border border-blue-500/20 rounded-lg bg-slate-800/50 hover:bg-slate-800/70 hover:border-blue-500/40 transition">
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-800/50 transition-colors text-left"
-                >
-                  <span className="font-semibold text-white">{item.q}</span>
-                  <span className={`text-blue-400 text-2xl leading-none transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}>▼</span>
-                </button>
-                {expandedFaq === idx && (
-                  <div className="px-6 py-4 border-t border-blue-500/20 text-gray-300 bg-slate-900/50">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Building in Public */}
-      <section className="px-4 py-16 md:py-20 bg-gradient-to-b from-blue-900/20 to-slate-900 border-t border-blue-500/20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Follow the Journey</h2>
-          <p className="text-gray-300 mb-8">
-            We're building Tabutility in the open. Join the community to see what's coming next, share feedback, and help shape the future of these tools.
+        <div style={{ background: 'rgba(30, 58, 138, 0.15)', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '16px', padding: '2rem', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '15px', color: '#d1d5db', lineHeight: '1.8', margin: '0 0 1rem' }}>
+            I started Tabutility because I was frustrated. Most online tools are either outdated, bloated, or designed to extract money from you. As a non-technical founder, I decided to build something different — tools that are genuinely useful, completely free, and honest about how they work.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://reddit.com/r/webdev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105"
-            >
+          <p style={{ fontSize: '15px', color: '#d1d5db', lineHeight: '1.8', margin: 0 }}>
+            Building in public means sharing everything: revenue, growth metrics, failures, and learnings. No PR spin. No polished narrative. Just real. This is a solo project, and I'm learning as I go. But every tool works, and every tool respects your privacy.
+          </p>
+        </div>
+
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '14px', color: '#9ca3af', marginBottom: '1.5rem' }}>Follow the journey on Reddit and Indie Hackers. Share your thoughts. Help us build something worth using.</p>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+            <a href="https://reddit.com/r/webdev" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)', color: '#ffffff', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}>
               Follow on Reddit
             </a>
-            <a
-              href="https://indiehackers.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105"
-            >
+            <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: 'rgba(59, 130, 246, 0.2)', color: '#60a5fa', border: '0.5px solid rgba(59, 130, 246, 0.4)', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}>
               Indie Hackers
             </a>
           </div>
@@ -211,33 +329,31 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="px-4 py-12 border-t border-blue-500/20 bg-slate-900/80">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <footer style={{ padding: '2rem 1rem', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', textAlign: 'center', fontSize: '13px', color: '#6b7280' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', marginBottom: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem' }}>
             <div>
-              <h3 className="font-semibold text-white mb-4">Tabutility</h3>
-              <p className="text-sm text-gray-400">Free tools built by a solo founder. No tracking. No BS.</p>
+              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Tabutility</h3>
+              <p style={{ margin: 0, fontSize: '12px' }}>Free tools built by a solo founder. No tracking. No BS.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="/privacy" className="hover:text-blue-400 transition">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-blue-400 transition">Terms of Service</a></li>
-                <li><a href="/about" className="hover:text-blue-400 transition">About</a></li>
-              </ul>
+              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Legal</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <a href="/privacy" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Privacy Policy</a>
+                <a href="/terms" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Terms of Service</a>
+              </div>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Community</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="https://reddit.com" className="hover:text-blue-400 transition" target="_blank" rel="noopener noreferrer">Reddit</a></li>
-                <li><a href="https://indiehackers.com" className="hover:text-blue-400 transition" target="_blank" rel="noopener noreferrer">Indie Hackers</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition">Feedback</a></li>
-              </ul>
+              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Community</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Reddit</a>
+                <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Indie Hackers</a>
+              </div>
             </div>
           </div>
-          <div className="border-t border-blue-500/20 pt-8 text-center text-sm text-gray-500">
-            <p>© 2026 Tabutility. Built with ❤️ in public. No venture capital. No exit strategy. Just tools that work.</p>
-          </div>
+        </div>
+        <div style={{ borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', paddingTop: '1.5rem' }}>
+          <p style={{ margin: 0 }}>© 2026 Tabutility. Built with ❤️ in public. No venture capital. No exit strategy. Just tools that work.</p>
         </div>
       </footer>
     </div>
