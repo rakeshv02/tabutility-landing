@@ -67,6 +67,7 @@ export default function App() {
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [showMoreTools, setShowMoreTools] = useState({});
   const [scrolled, setScrolled] = useState(false);
+  const [modal, setModal] = useState(null); // 'privacy' | 'terms' | null
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -982,22 +983,27 @@ export default function App() {
               Legal
             </h4>
             {[
-              ["Privacy Policy", "/privacy"],
-              ["Terms of Service", "/terms"],
-            ].map(([label, href]) => (
+              ["Privacy Policy", "privacy"],
+              ["Terms of Service", "terms"],
+            ].map(([label, key]) => (
               <div key={label} style={{ marginBottom: 10 }}>
-                <a
-                  href={href}
+                <button
+                  onClick={() => setModal(key)}
                   style={{
+                    background: "none",
+                    border: "none",
+                    padding: 0,
+                    cursor: "pointer",
                     color: "#64748b",
                     textDecoration: "none",
                     fontSize: 13,
+                    fontFamily: "inherit",
                   }}
                   onMouseEnter={(e) => (e.target.style.color = "#0f172a")}
                   onMouseLeave={(e) => (e.target.style.color = "#64748b")}
                 >
                   {label}
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -1053,6 +1059,105 @@ export default function App() {
           <span>Designed for humans, not trackers.</span>
         </div>
       </footer>
+
+      {/* ── Legal Modals ── */}
+      {modal && (
+        <div
+          onClick={() => setModal(null)}
+          style={{ position: 'fixed', inset: 0, zIndex: 200, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{ background: 'white', borderRadius: 24, padding: '40px 48px', maxWidth: 640, width: '100%', maxHeight: '80vh', overflowY: 'auto', boxShadow: '0 24px 64px rgba(0,0,0,0.18)', position: 'relative' }}>
+            {/* Close button */}
+            <button
+              onClick={() => setModal(null)}
+              style={{ position: 'absolute', top: 20, right: 20, width: 36, height: 36, borderRadius: '50%', border: '1px solid #e2e8f0', background: '#f8fafc', cursor: 'pointer', fontSize: 18, color: '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              ✕
+            </button>
+
+            {modal === 'privacy' && (
+              <>
+                <h2 style={{ margin: '0 0 6px', fontSize: 24, fontWeight: 800, color: '#0f172a' }}>Privacy Policy</h2>
+                <p style={{ margin: '0 0 28px', fontSize: 13, color: '#94a3b8' }}>Last updated: July 17, 2026</p>
+
+                <p style={{ margin: '0 0 24px', fontSize: 14, color: '#475569', lineHeight: 1.7 }}>
+                  This Privacy Policy describes how Tabutility ("we", "us", or "our") collects, uses, and shares information when you visit <strong>tabutility.com</strong> and its sub-domains. By using our site, you agree to the practices described here.
+                </p>
+
+                {[
+                  ['1. Information We Collect',
+                   'We collect limited, non-personal information automatically when you visit our site. This includes your browser type, device type, the pages you visit, the time and date of your visit, and your general geographic region (country/region level only — never your precise location). We do not collect your name, email address, or any other personally identifiable information unless you voluntarily contact us.'],
+                  ['2. How Your Data Stays in Your Browser',
+                   'All utility tools on Tabutility (calculators, developer tools, image tools, and wellness tools) run entirely in your browser. Data you enter — text, files, or settings — is processed locally on your device and is never transmitted to our servers. We have no access to it.'],
+                  ['3. Cookies',
+                   'We use cookies and similar tracking technologies for the following purposes: (a) Site functionality — small cookies to remember your preferences, such as which FAQ items you have expanded. (b) Analytics — we use Google Analytics to understand aggregate usage patterns (e.g. which tools are most popular). Google Analytics collects anonymised data and sets its own cookies. You can opt out at https://tools.google.com/dlpage/gaoptout. (c) Advertising — we display ads through Google AdSense. Google and its partners use cookies to serve ads based on your prior visits to our site and other sites on the internet. You can opt out of personalised advertising by visiting https://www.google.com/settings/ads.'],
+                  ['4. Google AdSense & Third-Party Advertising',
+                   'We use Google AdSense to display advertisements. Google AdSense uses the DoubleClick cookie to serve ads based on your interests. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to our website and other websites. The use of advertising cookies enables Google and its partners to serve ads to you based on your visits to our sites and/or other sites on the internet. You may opt out of personalised advertising by visiting Ads Settings (https://www.google.com/settings/ads). Alternatively, you can opt out of a third-party vendor\'s use of cookies for personalised advertising by visiting www.aboutads.info.'],
+                  ['5. AI-Powered (Hybrid) Tools',
+                   'Our AI-powered tools — AI Email Writer, Content Repurposer, and AI Summarizer — send the text content you submit to a third-party AI provider (such as OpenAI) to generate results. This is clearly disclosed on each tool\'s page before you use it. We do not store the content of these requests on our servers beyond the time needed to return a result to you. Please do not submit sensitive personal information through these tools.'],
+                  ['6. Data Sharing',
+                   'We do not sell, rent, or trade your personal information to any third party. We share anonymised, aggregate usage data with analytics providers (Google Analytics) and serve advertisements through Google AdSense, both of which operate under their own privacy policies. We may disclose information if required by law.'],
+                  ['7. Children\'s Privacy',
+                   'Tabutility is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.'],
+                  ['8. Your Rights',
+                   'Depending on your location, you may have rights under GDPR, CCPA, or other privacy laws to access, correct, or delete your data. Since we collect very little identifiable data, most requests can be satisfied by clearing your browser cookies. For any other requests, contact us through Reddit or Indie Hackers and we will respond within 30 days.'],
+                  ['9. Changes to This Policy',
+                   'We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last updated" date above. Your continued use of the site after changes are posted constitutes your acceptance of the updated policy.'],
+                  ['10. Contact',
+                   'If you have any questions about this Privacy Policy, please reach out to us via Reddit (r/tabutility) or Indie Hackers. We are a solo-founder project and are happy to answer any questions directly.'],
+                ].map(([title, body]) => (
+                  <div key={title} style={{ marginBottom: 22 }}>
+                    <h3 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{title}</h3>
+                    <p style={{ margin: 0, fontSize: 14, color: '#475569', lineHeight: 1.75 }}>{body}</p>
+                  </div>
+                ))}
+              </>
+            )}
+
+            {modal === 'terms' && (
+              <>
+                <h2 style={{ margin: '0 0 6px', fontSize: 24, fontWeight: 800, color: '#0f172a' }}>Terms of Service</h2>
+                <p style={{ margin: '0 0 28px', fontSize: 13, color: '#94a3b8' }}>Last updated: July 17, 2026</p>
+
+                <p style={{ margin: '0 0 24px', fontSize: 14, color: '#475569', lineHeight: 1.7 }}>
+                  These Terms of Service govern your use of <strong>tabutility.com</strong> and all tools and services provided by Tabutility. By accessing or using our site, you agree to be bound by these terms.
+                </p>
+
+                {[
+                  ['1. Acceptance of Terms',
+                   'By accessing or using Tabutility, you confirm that you are at least 13 years old and agree to these Terms of Service and our Privacy Policy. If you do not agree, please do not use our site.'],
+                  ['2. Description of Service',
+                   'Tabutility provides free, browser-based utility tools for text processing, developer tasks, image handling, wellness, and productivity. Some tools ("hybrid tools") are AI-powered and offer free tiers with optional paid upgrades. The availability and features of any tool may change at any time without prior notice.'],
+                  ['3. Free Tools',
+                   'All utility tools (non-AI) are and will remain free to use with no account or sign-up required. They run entirely in your browser — no data you enter is sent to our servers. Hybrid (AI-powered) tools include a free tier; paid tiers, if applicable, are governed by additional terms disclosed at the time of purchase.'],
+                  ['4. Acceptable Use',
+                   'You agree not to use Tabutility to: (a) generate, distribute, or store illegal, harmful, defamatory, or abusive content; (b) violate any applicable local, national, or international law or regulation; (c) transmit malware, viruses, or any other malicious code; (d) attempt to gain unauthorised access to our systems or another user\'s data; (e) scrape or crawl our site in a way that imposes unreasonable load on our servers; or (f) misrepresent the origin of output generated by our AI tools. We reserve the right to block access to any user who violates these terms.'],
+                  ['5. Intellectual Property',
+                   'The Tabutility name, logo, site design, and written content are owned by us and protected by applicable intellectual property laws. The output you generate using our tools belongs to you. You grant us no rights over content you enter into our tools.'],
+                  ['6. Third-Party Services',
+                   'Our site uses third-party services including Google AdSense (advertising) and Google Analytics (analytics). AI-powered tools use third-party AI providers. These services are governed by their own terms and privacy policies. We are not responsible for the practices of third-party services.'],
+                  ['7. Disclaimer of Warranties',
+                   'Tabutility is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the tools will be error-free, uninterrupted, or produce accurate results for every use case. You use the tools at your own risk. Nothing on this site constitutes professional legal, financial, medical, or other advice.'],
+                  ['8. Limitation of Liability',
+                   'To the fullest extent permitted by law, Tabutility and its owner shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the site or tools, even if we have been advised of the possibility of such damages. Our total liability to you for any claim shall not exceed €100.'],
+                  ['9. Changes to Terms',
+                   'We may update these Terms of Service at any time. Changes will be effective when posted, indicated by the updated "Last updated" date above. Your continued use of the site after changes are posted constitutes acceptance of the revised terms.'],
+                  ['10. Governing Law',
+                   'These terms are governed by the laws of the jurisdiction in which the owner of Tabutility resides. Any disputes shall be resolved in the courts of that jurisdiction.'],
+                  ['11. Contact',
+                   'For questions about these Terms of Service, reach us via Reddit or Indie Hackers. We aim to respond to all enquiries within 7 business days.'],
+                ].map(([title, body]) => (
+                  <div key={title} style={{ marginBottom: 22 }}>
+                    <h3 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{title}</h3>
+                    <p style={{ margin: 0, fontSize: 14, color: '#475569', lineHeight: 1.75 }}>{body}</p>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
