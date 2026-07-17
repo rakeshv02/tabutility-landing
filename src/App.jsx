@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Why are these tools free?",
-    a: "We believe useful tools should be accessible to everyone. We're supported by non-intrusive ads and optional subscriptions for advanced features. No tracking. No selling your data.",
+    a: "We believe useful tools should be accessible to everyone. We're supported by Google AdSense ads, which may use cookies to show relevant ads based on your browsing. We never sell your data. You can decline cookies in the banner at the bottom of the page and ads will still show — just not personalised.",
   },
   {
     q: "How often are new tools added?",
@@ -35,7 +35,7 @@ const faqs = [
 const valueProps = [
   {
     title: "Private by Default",
-    desc: "Everything runs locally in your browser. No data leaves your machine.",
+    desc: "Everything you type into our tools runs locally in your browser — never sent to our servers. Ads are served by Google AdSense.",
     color: "#27C281",
     light: "#EEFBF5",
     emoji: "🔒",
@@ -210,7 +210,7 @@ export default function App() {
               display: "inline-block",
             }}
           ></span>
-          Free Tools, Real Privacy
+          Free Tools, No Paywalls
         </div>
         <h1
           style={{
@@ -236,7 +236,7 @@ export default function App() {
           }}
         >
           14 browser-based utilities for text, dev, wellness, and daily tasks.
-          No ads tracking you, no paywalls, and absolutely no sign-ups required.
+          Your tool data never leaves your browser. No paywalls, no sign-ups — kept free by non-intrusive Google ads.
         </p>
         <div
           style={{
