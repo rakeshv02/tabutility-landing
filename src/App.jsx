@@ -293,19 +293,18 @@ export default function App() {
     },
     toolGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(155px, 1fr))',
-      gap: '10px',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+      gap: '14px',
       marginBottom: '1.5rem'
     },
     toolCard: (colors) => ({
       background: colors.light,
-      borderRadius: '12px',
-      padding: '1.1rem',
+      borderRadius: '14px',
+      padding: '1.4rem 1.25rem',
       textDecoration: 'none',
       display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      gap: '12px',
+      flexDirection: 'column',
+      gap: '10px',
       border: '1px solid transparent',
       transition: 'all 0.2s ease',
       cursor: 'pointer',
@@ -313,44 +312,36 @@ export default function App() {
       overflow: 'hidden'
     }),
     toolEmoji: {
-      width: '40px',
-      height: '40px',
-      flexShrink: 0,
+      width: '46px',
+      height: '46px',
       background: 'white',
-      borderRadius: '10px',
+      borderRadius: '12px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: '20px',
-      boxShadow: '0 2px 6px rgba(0,0,0,0.07)'
+      fontSize: '22px',
+      boxShadow: '0 2px 8px rgba(0,0,0,0.07)'
     },
     toolInfo: {
       display: 'flex',
       flexDirection: 'column',
-      gap: '2px',
-      minWidth: 0
+      gap: '4px'
     },
     toolName: {
       margin: 0,
-      fontSize: '13px',
+      fontSize: '14px',
       fontWeight: 700,
-      color: '#0f172a',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      textOverflow: 'ellipsis'
+      color: '#0f172a'
     },
     toolDesc: {
       margin: 0,
-      fontSize: '11px',
+      fontSize: '12px',
       color: '#64748b',
-      lineHeight: 1.4,
-      display: '-webkit-box',
-      WebkitLineClamp: 2,
-      WebkitBoxOrient: 'vertical',
-      overflow: 'hidden'
+      lineHeight: 1.5
     },
     toolCta: (color) => ({
       marginTop: 'auto',
+      paddingTop: '6px',
       fontSize: '12px',
       fontWeight: 700,
       color,
@@ -699,6 +690,7 @@ export default function App() {
                         <h4 style={styles.toolName}>{tool.name}</h4>
                         <p style={styles.toolDesc}>{tool.description}</p>
                       </div>
+                      <div style={styles.toolCta(colors.icon)}>Open →</div>
                     </a>
                   ))}
                 </div>
