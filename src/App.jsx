@@ -1,76 +1,92 @@
 import React, { useState, useEffect } from 'react';
 import toolsConfig from './tools.config.json';
 
+const colorMap = {
+  'Calculators':    { icon: '#2563eb', light: '#EFF6FF' },
+  'Image Tools':    { icon: '#10b981', light: '#ECFDF5' },
+  'Developer Tools':{ icon: '#f59e0b', light: '#FFFBEB' },
+  'Content Tools':  { icon: '#ec4899', light: '#FDF2F8' },
+};
+
+const faqs = [
+  { q: 'Are all tools truly free?',      a: 'Yes. All 10 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users.' },
+  { q: 'Do you store my data?',          a: 'No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools store your preferences to improve results, but you can delete anytime.' },
+  { q: 'Why are these tools free?',      a: "We believe useful tools should be accessible to everyone. We're supported by non-intrusive ads and optional subscriptions for advanced features. No tracking. No selling your data." },
+  { q: 'How often are new tools added?', a: "We're building in public. New tools launch regularly as we identify problems worth solving. Follow us on Reddit and Indie Hackers for updates." },
+  { q: 'Can I use these tools offline?', a: 'Yes. Most utility tools work offline. Hybrid tools need internet for AI features, but your data stays private.' },
+];
+
+const valueProps = [
+  { title: 'Private by Default', desc: 'Everything runs locally in your browser. No data leaves your machine.',                color: '#27C281', light: '#EEFBF5', emoji: '🔒' },
+  { title: '100% Free',          desc: 'No hidden fees, no credit card required. Free tools forever.',                        color: '#4B7FED', light: '#EEF1FF', emoji: '💰' },
+  { title: 'No Sign-up',         desc: 'Jump straight into solving your problem without creating an account.',                color: '#FF7A3B', light: '#FFF4EE', emoji: '🚀' },
+  { title: 'Built in Public',    desc: 'Follow the journey. See revenue, wins, and real numbers.',                            color: '#9B6EDE', light: '#F7F1FF', emoji: '📊' },
+];
+
 export default function App() {
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [showMoreTools, setShowMoreTools] = useState({});
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled]         = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const faqItems = [
-    { q: "Are all tools truly free?", a: "Yes. All 10 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users." },
-    { q: "Do you store my data?", a: "No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools store your preferences to improve results, but you can delete anytime." },
-    { q: "Why are these tools free?", a: "We believe useful tools should be accessible to everyone. We're supported by non-intrusive ads and optional subscriptions for advanced features. No tracking. No selling your data." },
-    { q: "How often are new tools added?", a: "We're building in public. New tools launch regularly as we identify problems worth solving. Follow us on Reddit and Indie Hackers for updates." },
-    { q: "Can I use these tools offline?", a: "Yes. Most utility tools work offline. Hybrid tools need internet for AI features, but your data stays private." }
-  ];
-
-  const colorMap = {
-    'Text & Coding Tools': { icon: '#4B7FED', light: '#EEF1FF' },
-    'Developer Utilities':  { icon: '#FF7A3B', light: '#FFF4EE' },
-    'Developer Tools':      { icon: '#FF7A3B', light: '#FFF4EE' },
-    'General Utilities':    { icon: '#27C281', light: '#EEFBF5' },
-    'Image Tools':          { icon: '#9B6EDE', light: '#F7F1FF' },
-    'Calculators':          { icon: '#FFB84D', light: '#FFFBF0' },
-    'Content Tools':        { icon: '#FF6B9D', light: '#FFE8F5' },
-  };
-
-  const valueProps = [
-    { title: 'Private by Default', desc: 'All processing in your browser. Your data never leaves your device.', color: '#27C281', light: '#EEFBF5', icon: '🔒' },
-    { title: '100% Free',          desc: '10 utilities forever free. Premium features optional.',              color: '#4B7FED', light: '#EEF1FF', icon: '✓'  },
-    { title: 'No Sign-up',         desc: 'Start instantly. No email, no account, no questions.',               color: '#FF7A3B', light: '#FFF4EE', icon: '→'  },
-    { title: 'Built in Public',    desc: 'Follow the journey. See revenue, wins, and real numbers.',           color: '#9B6EDE', light: '#F7F1FF', icon: '🏗️' },
-  ];
-
   return (
-    <div className="min-h-screen bg-[#f8f7f4] text-slate-900" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <div style={{ minHeight: '100vh', background: '#f8f7f4', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', color: '#0f172a', margin: 0, padding: 0 }}>
 
       {/* ── Nav ── */}
-      <nav className={`sticky top-0 z-50 flex items-center justify-between px-6 transition-all duration-300 ${scrolled ? 'py-3 bg-[#f8f7f4]/90 backdrop-blur-md shadow-sm border-b border-black/5' : 'py-5 bg-transparent border-b border-transparent'}`}>
-        <div className="flex items-center gap-2 text-xl font-bold text-slate-900">
-          <div className="w-9 h-9 bg-slate-900 text-white rounded-xl flex items-center justify-center text-lg">⌘</div>
+      <nav style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: scrolled ? '12px 32px' : '20px 32px',
+        background: scrolled ? 'rgba(248,247,244,0.92)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.06)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(0,0,0,0.05)' : 'none',
+        transition: 'all 0.3s ease',
+        boxSizing: 'border-box',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 20 }}>
+          <div style={{ width: 32, height: 32, background: '#0f172a', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 18 }}>⌘</div>
           Tabutility
         </div>
-        <div className="flex items-center gap-8 text-sm font-medium">
-          <a href="#tools" className="text-slate-500 hover:text-slate-900 transition-colors">Tools</a>
-          <a href="#faq"   className="text-slate-500 hover:text-slate-900 transition-colors">FAQ</a>
-          <a href="#about" className="text-slate-500 hover:text-slate-900 transition-colors">About</a>
+        <div style={{ display: 'flex', gap: 28, fontSize: 14, fontWeight: 500 }}>
+          {['Tools','FAQ','About'].map(l => (
+            <a key={l} href={`#${l.toLowerCase()}`}
+              style={{ color: '#64748b', textDecoration: 'none' }}
+              onMouseEnter={e => e.target.style.color = '#0f172a'}
+              onMouseLeave={e => e.target.style.color = '#64748b'}>
+              {l}
+            </a>
+          ))}
         </div>
       </nav>
 
       {/* ── Hero ── */}
-      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/5 border border-black/8 text-xs font-bold tracking-widest text-slate-500 uppercase mb-6">
-          <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+      <section style={{ paddingTop: 140, paddingBottom: 80, paddingLeft: 24, paddingRight: 24, textAlign: 'center', maxWidth: 800, margin: '0 auto' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', borderRadius: 999, background: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.08)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', color: '#475569', textTransform: 'uppercase', marginBottom: 24 }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }}></span>
           Free Tools, Real Privacy
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.08] mb-6">
+        <h1 style={{ fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 800, margin: '0 0 24px', lineHeight: 1.1, letterSpacing: '-1px', color: '#0f172a' }}>
           Tools That Actually<br />
-          <span className="text-[#4B7FED]"> Respect You</span>
+          <span style={{ color: '#4B7FED' }}>Respect You.</span>
         </h1>
-        <p className="text-lg md:text-xl text-slate-500 max-w-xl mx-auto leading-relaxed mb-10">
-          No sign-up. No tracking. No BS. 13 free utilities built by a solo founder who actually cares about your privacy.
+        <p style={{ fontSize: 18, color: '#64748b', lineHeight: 1.7, maxWidth: 560, margin: '0 auto 36px' }}>
+          13 browser-based utilities for text, dev, and daily tasks. No ads tracking you, no paywalls, and absolutely no sign-ups required.
         </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <a href="#tools" className="px-7 py-3.5 bg-slate-900 text-white rounded-xl font-semibold text-sm shadow-lg shadow-slate-900/20 hover:-translate-y-0.5 hover:shadow-xl transition-all">
+        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="#tools" style={{ padding: '14px 28px', background: '#0f172a', color: 'white', borderRadius: 12, fontWeight: 600, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(15,23,42,0.22)', display: 'inline-block' }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = ''}>
             Explore Tools
           </a>
-          <a href="#about" className="px-7 py-3.5 bg-white text-slate-700 rounded-xl font-semibold text-sm border border-slate-200 shadow-sm hover:bg-slate-50 transition-all">
+          <a href="#about" style={{ padding: '14px 28px', background: 'white', color: '#334155', borderRadius: 12, fontWeight: 600, fontSize: 15, textDecoration: 'none', border: '1px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', display: 'inline-block' }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+            onMouseLeave={e => e.currentTarget.style.background = 'white'}>
             Read the Story
           </a>
         </div>
@@ -87,68 +103,67 @@ export default function App() {
       ─────────────────────────────────────────────────────────────── */}
 
       {/* ── Value Props ── */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {valueProps.map((prop, i) => (
-            <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-shadow">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl font-bold mb-5" style={{ background: prop.light, color: prop.color }}>
-                {prop.icon}
-              </div>
-              <h3 className="font-bold text-slate-900 mb-1.5">{prop.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{prop.desc}</p>
+      <section style={{ padding: '0 24px 80px', maxWidth: 1100, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+          {valueProps.map((p, i) => (
+            <div key={i}
+              style={{ background: 'white', borderRadius: 20, padding: '28px 24px', border: '1px solid #f1f5f9', boxShadow: '0 4px 20px -4px rgba(0,0,0,0.06)' }}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 30px -4px rgba(0,0,0,0.1)'}
+              onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 20px -4px rgba(0,0,0,0.06)'}>
+              <div style={{ width: 48, height: 48, background: p.light, color: p.color, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 20 }}>{p.emoji}</div>
+              <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 700, color: '#0f172a' }}>{p.title}</h3>
+              <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.65 }}>{p.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── Tools ── */}
-      <section id="tools" className="bg-white py-16 mb-8">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-extrabold text-slate-900 text-center tracking-tight mb-2">13 Tools, All Free.</h2>
-          <p className="text-center text-slate-500 mb-12">Everything you need to get things done quickly. Click a tool to launch it instantly in your browser.</p>
+      <section id="tools" style={{ background: 'white', padding: '64px 24px', marginBottom: 32 }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <h2 style={{ fontSize: 30, fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.5px' }}>13 Tools, All Free.</h2>
+          <p style={{ color: '#64748b', margin: '0 0 48px', fontSize: 15 }}>Everything you need to get things done quickly. Click a tool to launch it instantly in your browser.</p>
 
-          {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => {
-            const colors = colorMap[category.name] || { icon: '#4B7FED', light: '#EEF1FF' };
-            const isExpanded = showMoreTools[categoryKey];
-            const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
+          {Object.entries(toolsConfig.categories).map(([key, category]) => {
+            const theme = colorMap[category.name] || { icon: '#4B7FED', light: '#EEF1FF' };
+            const isExpanded = showMoreTools[key];
+            const visible = isExpanded ? category.tools : category.tools.slice(0, 4);
             const hasMore = category.tools.length > 4;
 
             return (
-              <div key={categoryKey} className="mb-12">
+              <div key={key} style={{ marginBottom: 52 }}>
                 {/* Category header */}
-                <div className="flex items-center gap-3 pb-3 border-b border-slate-100 mb-5">
-                  <span className="text-2xl">{category.emoji}</span>
-                  <h3 className="font-bold text-slate-900 text-lg">{category.name}</h3>
-                  <span className="ml-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-500">{category.tools.length}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, paddingBottom: 14, borderBottom: '1px solid #f1f5f9', marginBottom: 20 }}>
+                  <span style={{ fontSize: 22 }}>{category.emoji}</span>
+                  <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
+                  <span style={{ padding: '2px 10px', background: '#f1f5f9', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#64748b' }}>{category.tools.length}</span>
                 </div>
 
-                {/* Tool grid — always 2 cols on mobile, 4 on desktop */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
-                  {toolsToShow.map((tool) => (
-                    <a
-                      key={tool.id}
-                      href={tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex flex-col rounded-2xl p-5 border border-transparent hover:border-slate-200 hover:shadow-[0_8px_24px_-6px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all"
-                      style={{ background: colors.light, textDecoration: 'none' }}
-                    >
-                      <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm mb-3">
-                        {tool.emoji}
+                {/* Tool cards */}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
+                  {visible.map(tool => (
+                    <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
+                      style={{ background: 'white', borderRadius: 14, padding: 20, border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 0, position: 'relative', overflow: 'hidden', transition: 'all 0.2s' }}
+                      onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
+                      onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
+                      {/* Colour accent bar on hover — always rendered, shown on hover via JS */}
+                      <div className="accent-bar" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: theme.icon, opacity: 0, transition: 'opacity 0.2s' }}
+                        ref={el => { if (el) { el.parentElement.addEventListener('mouseenter', () => el.style.opacity = 1); el.parentElement.addEventListener('mouseleave', () => el.style.opacity = 0); } }} />
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
+                        <span style={{ fontSize: 30 }}>{tool.emoji}</span>
                       </div>
-                      <h4 className="font-bold text-slate-900 text-sm mb-1">{tool.name}</h4>
-                      <p className="text-xs text-slate-500 leading-relaxed flex-1">{tool.description}</p>
-                      <div className="mt-3 text-xs font-bold" style={{ color: colors.icon }}>Open →</div>
+                      <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
+                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
                     </a>
                   ))}
                 </div>
 
-                {hasMore && !isExpanded && (
-                  <button
-                    onClick={() => setShowMoreTools({ ...showMoreTools, [categoryKey]: true })}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
-                  >
-                    See {category.tools.length - 4} more ▾
+                {hasMore && (
+                  <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
+                    style={{ marginTop: 14, padding: '8px 16px', background: 'white', color: '#475569', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 600, fontSize: 13, cursor: 'pointer' }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'white'}>
+                    {isExpanded ? 'Show less ▴' : `See ${category.tools.length - 4} more ▾`}
                   </button>
                 )}
               </div>
@@ -168,26 +183,22 @@ export default function App() {
       ─────────────────────────────────────────────────────────────── */}
 
       {/* ── FAQ ── */}
-      <section id="faq" className="max-w-2xl mx-auto px-6 py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Questions?</h2>
-          <p className="text-slate-500">Everything you need to know about Tabutility.</p>
+      <section id="faq" style={{ padding: '64px 24px', maxWidth: 720, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <h2 style={{ fontSize: 30, fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.5px' }}>Questions?</h2>
+          <p style={{ color: '#64748b', margin: 0, fontSize: 15 }}>Everything you need to know about Tabutility.</p>
         </div>
-        <div className="space-y-3">
-          {faqItems.map((item, idx) => {
-            const isOpen = expandedFaq === idx;
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {faqs.map((f, i) => {
+            const open = expandedFaq === i;
             return (
-              <div key={idx} className={`bg-white rounded-2xl border overflow-hidden transition-all ${isOpen ? 'border-slate-300 shadow-md' : 'border-slate-100 hover:border-slate-200'}`}>
-                <button
-                  onClick={() => setExpandedFaq(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left"
-                >
-                  <span className="font-semibold text-slate-900">{item.q}</span>
-                  <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs transition-all duration-300 ${isOpen ? 'bg-slate-900 text-white rotate-180' : 'bg-slate-100 text-slate-400'}`}>▼</span>
+              <div key={i} style={{ background: 'white', borderRadius: 16, border: open ? '1px solid #cbd5e1' : '1px solid #e2e8f0', boxShadow: open ? '0 4px 16px rgba(0,0,0,0.06)' : 'none', overflow: 'hidden', transition: 'all 0.2s' }}>
+                <button onClick={() => setExpandedFaq(open ? null : i)}
+                  style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, padding: '18px 24px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}>
+                  <span style={{ fontSize: 15, fontWeight: 600, color: '#0f172a', lineHeight: 1.4 }}>{f.q}</span>
+                  <span style={{ flexShrink: 0, width: 28, height: 28, borderRadius: '50%', background: open ? '#0f172a' : '#f1f5f9', color: open ? 'white' : '#64748b', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, transform: open ? 'rotate(180deg)' : 'none', transition: 'all 0.25s' }}>▼</span>
                 </button>
-                {isOpen && (
-                  <div className="px-6 pb-5 text-sm text-slate-500 leading-relaxed">{item.a}</div>
-                )}
+                {open && <div style={{ padding: '0 24px 20px', fontSize: 14, color: '#475569', lineHeight: 1.75 }}>{f.a}</div>}
               </div>
             );
           })}
@@ -195,56 +206,53 @@ export default function App() {
       </section>
 
       {/* ── About ── */}
-      <section id="about" className="max-w-4xl mx-auto px-6 pb-20">
-        <div className="bg-slate-900 rounded-3xl p-10 md:p-16 text-white text-center relative overflow-hidden">
-          <div className="absolute -top-16 -right-16 w-56 h-56 bg-white/5 rounded-full blur-2xl"></div>
-          <div className="relative z-10">
-            <div className="inline-block px-4 py-1 bg-white/10 border border-white/10 rounded-full text-xs font-semibold text-white/60 uppercase tracking-widest mb-5">The Founder Story</div>
-            <h2 className="text-3xl font-extrabold mb-6 tracking-tight">Why Tabutility Exists</h2>
-            <div className="max-w-xl mx-auto space-y-4 text-slate-400 text-base leading-relaxed mb-8">
-              <p>I started Tabutility because I was frustrated. Most online tools are either outdated, bloated, or designed to extract money from you. As a non-technical founder, I decided to build something different — tools that are genuinely useful, completely free, and honest about how they work.</p>
-              <p>Building in public means sharing everything: revenue, growth metrics, failures, and learnings. No PR spin. No polished narrative. Just real.</p>
+      <section id="about" style={{ padding: '0 24px 80px', maxWidth: 900, margin: '0 auto' }}>
+        <div style={{ background: '#0f172a', borderRadius: 28, padding: '60px 48px', color: 'white', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: -60, right: -60, width: 220, height: 220, background: 'rgba(255,255,255,0.04)', borderRadius: '50%', filter: 'blur(40px)' }}></div>
+          <div style={{ position: 'absolute', bottom: -60, left: -60, width: 280, height: 280, background: 'rgba(59,130,246,0.08)', borderRadius: '50%', filter: 'blur(40px)' }}></div>
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <div style={{ display: 'inline-block', padding: '4px 14px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 999, fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.6)', marginBottom: 20, textTransform: 'uppercase', letterSpacing: '0.06em' }}>The Founder Story</div>
+            <h2 style={{ fontSize: 30, fontWeight: 800, margin: '0 0 24px', letterSpacing: '-0.5px' }}>Why Tabutility Exists</h2>
+            <div style={{ maxWidth: 560, margin: '0 auto', color: 'rgba(255,255,255,0.65)', fontSize: 16, lineHeight: 1.8 }}>
+              <p style={{ margin: '0 0 16px' }}>I started Tabutility because I was frustrated. Most online tools are either outdated, bloated, or designed to extract money from you. I decided to build something different — tools that are genuinely useful, completely free, and honest about how they work.</p>
+              <p style={{ margin: '0 0 36px' }}>Building in public means sharing everything: revenue, growth metrics, failures, and learnings. No PR spin. Just real.</p>
             </div>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <a href="https://reddit.com/r/webdev" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors" style={{ background: 'rgba(255,69,0,0.12)', color: '#FF6534', border: '1px solid rgba(255,69,0,0.2)' }}>
-                Follow on Reddit
-              </a>
-              <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors" style={{ background: 'rgba(84,197,150,0.12)', color: '#54C596', border: '1px solid rgba(84,197,150,0.2)' }}>
-                Indie Hackers
-              </a>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="https://reddit.com/r/webdev" target="_blank" rel="noopener noreferrer"
+                style={{ padding: '12px 22px', background: 'rgba(255,69,0,0.12)', color: '#FF6534', border: '1px solid rgba(255,69,0,0.2)', borderRadius: 12, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Follow on Reddit</a>
+              <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer"
+                style={{ padding: '12px 22px', background: 'rgba(84,197,150,0.12)', color: '#54C596', border: '1px solid rgba(84,197,150,0.2)', borderRadius: 12, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Indie Hackers</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-white border-t border-slate-100 py-14 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
+      <footer style={{ background: 'white', borderTop: '1px solid #f1f5f9', padding: '56px 24px 32px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 40, marginBottom: 48 }}>
           <div>
-            <div className="flex items-center gap-2 font-bold text-lg text-slate-900 mb-3">
-              <div className="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center">⌘</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 18, color: '#0f172a', marginBottom: 12 }}>
+              <div style={{ width: 30, height: 30, background: '#0f172a', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, color: 'white' }}>⌘</div>
               Tabutility
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">Free tools built by a solo founder. No tracking. No BS. Just tools that work.</p>
+            <p style={{ margin: 0, fontSize: 13, color: '#94a3b8', lineHeight: 1.65 }}>Free tools built by a solo founder. No tracking. Just tools that work.</p>
           </div>
           <div>
-            <h4 className="font-bold text-slate-900 mb-4">Legal</h4>
-            <div className="flex flex-col gap-3 text-sm text-slate-400">
-              <a href="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
-              <a href="/terms"   className="hover:text-slate-900 transition-colors">Terms of Service</a>
-            </div>
+            <h4 style={{ margin: '0 0 16px', fontSize: 14, fontWeight: 700, color: '#0f172a' }}>Legal</h4>
+            {[['Privacy Policy','/privacy'],['Terms of Service','/terms']].map(([label, href]) => (
+              <div key={label} style={{ marginBottom: 10 }}><a href={href} style={{ color: '#64748b', textDecoration: 'none', fontSize: 13 }} onMouseEnter={e => e.target.style.color='#0f172a'} onMouseLeave={e => e.target.style.color='#64748b'}>{label}</a></div>
+            ))}
           </div>
           <div>
-            <h4 className="font-bold text-slate-900 mb-4">Community</h4>
-            <div className="flex flex-col gap-3 text-sm text-slate-400">
-              <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">Reddit</a>
-              <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">Indie Hackers</a>
-            </div>
+            <h4 style={{ margin: '0 0 16px', fontSize: 14, fontWeight: 700, color: '#0f172a' }}>Community</h4>
+            {[['Reddit','https://reddit.com'],['Indie Hackers','https://indiehackers.com']].map(([label, href]) => (
+              <div key={label} style={{ marginBottom: 10 }}><a href={href} target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none', fontSize: 13 }} onMouseEnter={e => e.target.style.color='#0f172a'} onMouseLeave={e => e.target.style.color='#64748b'}>{label}</a></div>
+            ))}
           </div>
         </div>
-        <div className="max-w-6xl mx-auto pt-6 border-t border-slate-100 flex flex-wrap justify-between gap-2 text-xs text-slate-400">
-          <p>© 2026 Tabutility. Built with ❤️ in public. No venture capital. No exit strategy. Just tools that work.</p>
-          <p>Designed for humans, not trackers.</p>
+        <div style={{ maxWidth: 1100, margin: '0 auto', paddingTop: 24, borderTop: '1px solid #f1f5f9', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, fontSize: 12, color: '#94a3b8' }}>
+          <span>© 2026 Tabutility. Built with ❤️ in public.</span>
+          <span>Designed for humans, not trackers.</span>
         </div>
       </footer>
 
