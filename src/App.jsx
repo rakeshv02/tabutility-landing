@@ -793,6 +793,31 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── Request a Tool ── */}
+      <section style={{ padding: '0 24px 64px', maxWidth: 900, margin: '0 auto' }}>
+        <div style={{ background: 'linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%)', borderRadius: 28, padding: '52px 48px', textAlign: 'center', border: '1px solid #e2e8f0', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: -40, right: -40, width: 180, height: 180, background: 'rgba(75,127,237,0.06)', borderRadius: '50%', filter: 'blur(30px)' }}></div>
+          <div style={{ position: 'absolute', bottom: -40, left: -40, width: 200, height: 200, background: 'rgba(139,92,246,0.06)', borderRadius: '50%', filter: 'blur(30px)' }}></div>
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <div style={{ fontSize: 40, marginBottom: 16 }}>🛠️</div>
+            <h2 style={{ fontSize: 28, fontWeight: 800, color: '#0f172a', margin: '0 0 12px', letterSpacing: '-0.5px' }}>Got a Tool Idea?</h2>
+            <p style={{ fontSize: 16, color: '#64748b', lineHeight: 1.7, maxWidth: 480, margin: '0 auto 32px' }}>
+              Tell us what you wish existed. We build the most-requested tools first — your idea could be next.
+            </p>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="https://reddit.com/r/tabutility" target="_blank" rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '14px 28px', background: '#FF4500', color: 'white', borderRadius: 12, fontWeight: 600, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(255,69,0,0.25)' }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+                onMouseLeave={e => e.currentTarget.style.transform = ''}>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 5.522 4.477 10 10 10s10-4.478 10-10zm-10.768 3.44c-1.552 0-2.818-.814-2.818-1.44h5.636c0 .626-1.266 1.44-2.818 1.44zm-3.904-3.44a1.12 1.12 0 1 1 2.24 0 1.12 1.12 0 0 1-2.24 0zm6.672-1.12a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24zm2.24-1.28c-.448 0-.816.224-1.04.56a5.6 5.6 0 0 0-2.88-.784l.56-2.576 1.776.384a.896.896 0 1 0 .896-.896c-.336 0-.624.192-.784.448l-2-.432a.14.14 0 0 0-.16.1l-.624 2.88a5.6 5.6 0 0 0-2.912.784 1.232 1.232 0 0 0-1.04-.56C5.36 6.608 5 6.976 5 7.44c0 .32.176.592.432.752a2.4 2.4 0 0 0-.032.368c0 1.888 2.208 3.44 4.928 3.44s4.928-1.552 4.928-3.44c0-.128-.016-.256-.032-.368.256-.16.432-.432.432-.752 0-.464-.352-.84-.784-.84z"/></svg>
+                Request on r/tabutility
+              </a>
+            </div>
+            <p style={{ margin: '20px 0 0', fontSize: 13, color: '#94a3b8' }}>Join the community · vote on ideas · follow the build journey</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── About ── */}
       <section
         id="about"
