@@ -293,18 +293,19 @@ export default function App() {
     },
     toolGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-      gap: '14px',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(155px, 1fr))',
+      gap: '10px',
       marginBottom: '1.5rem'
     },
     toolCard: (colors) => ({
       background: colors.light,
-      borderRadius: '14px',
-      padding: '1.5rem 1.25rem',
+      borderRadius: '12px',
+      padding: '1.1rem',
       textDecoration: 'none',
       display: 'flex',
-      flexDirection: 'column',
-      gap: '10px',
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: '12px',
       border: '1px solid transparent',
       transition: 'all 0.2s ease',
       cursor: 'pointer',
@@ -312,27 +313,41 @@ export default function App() {
       overflow: 'hidden'
     }),
     toolEmoji: {
-      width: '46px',
-      height: '46px',
+      width: '40px',
+      height: '40px',
+      flexShrink: 0,
       background: 'white',
-      borderRadius: '11px',
+      borderRadius: '10px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: '22px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.07)'
+      fontSize: '20px',
+      boxShadow: '0 2px 6px rgba(0,0,0,0.07)'
+    },
+    toolInfo: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '2px',
+      minWidth: 0
     },
     toolName: {
       margin: 0,
-      fontSize: '14px',
+      fontSize: '13px',
       fontWeight: 700,
-      color: '#0f172a'
+      color: '#0f172a',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
     },
     toolDesc: {
       margin: 0,
-      fontSize: '12px',
+      fontSize: '11px',
       color: '#64748b',
-      lineHeight: 1.45
+      lineHeight: 1.4,
+      display: '-webkit-box',
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden'
     },
     toolCta: (color) => ({
       marginTop: 'auto',
@@ -615,6 +630,16 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── AdSense Slot 1 (below hero) ──────────────────────────────
+           When approved, replace this comment block with:
+           <ins className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true" />
+      ──────────────────────────────────────────────────────────── */}
+
       {/* Value Props */}
       <section style={styles.valueSection}>
         <div style={styles.valueGrid}>
@@ -661,20 +686,19 @@ export default function App() {
                       rel="noopener noreferrer"
                       style={styles.toolCard(colors)}
                       onMouseEnter={e => {
-                        e.currentTarget.style.transform = 'translateY(-4px)';
-                        e.currentTarget.style.boxShadow = '0 12px 28px -6px rgba(0,0,0,0.12)';
-                        e.currentTarget.style.borderColor = colors.border + '40';
+                        e.currentTarget.style.boxShadow = '0 6px 20px -4px rgba(0,0,0,0.12)';
+                        e.currentTarget.style.borderColor = colors.border + '50';
                       }}
                       onMouseLeave={e => {
-                        e.currentTarget.style.transform = '';
                         e.currentTarget.style.boxShadow = '';
                         e.currentTarget.style.borderColor = 'transparent';
                       }}
                     >
                       <div style={styles.toolEmoji}>{tool.emoji}</div>
-                      <h4 style={styles.toolName}>{tool.name}</h4>
-                      <p style={styles.toolDesc}>{tool.description}</p>
-                      <div style={styles.toolCta(colors.icon)}>Open →</div>
+                      <div style={styles.toolInfo}>
+                        <h4 style={styles.toolName}>{tool.name}</h4>
+                        <p style={styles.toolDesc}>{tool.description}</p>
+                      </div>
                     </a>
                   ))}
                 </div>
@@ -694,6 +718,16 @@ export default function App() {
           })}
         </div>
       </section>
+
+      {/* ── AdSense Slot 2 (between tools and FAQ) ───────────────────
+           When approved, replace this comment block with:
+           <ins className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true" />
+      ──────────────────────────────────────────────────────────── */}
 
       {/* FAQ */}
       <section id="faq" style={styles.faqSection}>
