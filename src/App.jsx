@@ -291,13 +291,12 @@ export default function App() {
       fontWeight: 600,
       color: '#64748b'
     },
-    toolGrid: (count) => ({
-      display: 'grid',
-      gridTemplateColumns: `repeat(${Math.min(count, 4)}, minmax(0, 1fr))`,
+    toolGrid: {
+      display: 'flex',
+      flexWrap: 'wrap',
       gap: '14px',
-      marginBottom: '1.5rem',
-      maxWidth: `${Math.min(count, 4) * 230}px`
-    }),
+      marginBottom: '1.5rem'
+    },
     toolCard: (colors) => ({
       background: colors.light,
       borderRadius: '14px',
@@ -310,7 +309,9 @@ export default function App() {
       transition: 'all 0.2s ease',
       cursor: 'pointer',
       position: 'relative',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      width: '210px',
+      flexShrink: 0
     }),
     toolEmoji: {
       width: '46px',
@@ -669,7 +670,7 @@ export default function App() {
                   <span style={styles.categoryCount}>{category.tools.length}</span>
                 </div>
 
-                <div style={styles.toolGrid(toolsToShow.length)}>
+                <div style={styles.toolGrid}>
                   {toolsToShow.map((tool) => (
                     <a
                       key={tool.id}
