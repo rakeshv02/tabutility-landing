@@ -64,16 +64,33 @@ const valueProps = [
 ];
 
 export default function App() {
-  const [expandedFaq, setExpandedFaq] = useState(null);
+  const [expandedFaq, setExpandedFaq]     = useState(null);
   const [showMoreTools, setShowMoreTools] = useState({});
-  const [scrolled, setScrolled] = useState(false);
-  const [modal, setModal] = useState(null); // 'privacy' | 'terms' | null
+  const [scrolled, setScrolled]           = useState(false);
+  const [modal, setModal]                 = useState(null); // 'privacy' | 'terms' | null
+  const [cookieConsent, setCookieConsent] = useState(null); // null | 'accepted' | 'declined'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Read saved cookie consent on first load
+  useEffect(() => {
+    const saved = localStorage.getItem('tabutility_cookie_consent');
+    if (saved) setCookieConsent(saved);
+  }, []);
+
+  const handleCookieAccept = () => {
+    localStorage.setItem('tabutility_cookie_consent', 'accepted');
+    setCookieConsent('accepted');
+  };
+
+  const handleCookieDecline = () => {
+    localStorage.setItem('tabutility_cookie_consent', 'declined');
+    setCookieConsent('declined');
+  };
 
   // Sort categories by tool count descending so fuller sections appear first
   const sortedCategories = Object.entries(toolsConfig.categories).sort(
@@ -1059,6 +1076,44 @@ export default function App() {
           <span>Designed for humans, not trackers.</span>
         </div>
       </footer>
+
+      {/* ── Cookie Consent Banner ── */}
+      {cookieConsent === null && (
+        <div style={{
+          position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 300,
+          background: '#0f172a', color: 'white',
+          padding: '20px 32px',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          flexWrap: 'wrap', gap: 16,
+          boxShadow: '0 -4px 24px rgba(0,0,0,0.18)',
+        }}>
+          <div style={{ flex: 1, minWidth: 280 }}>
+            <p style={{ margin: '0 0 4px', fontWeight: 700, fontSize: 15 }}>We use cookies 🍪</p>
+            <p style={{ margin: 0, fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+              We use cookies for analytics and to show relevant ads via Google AdSense.
+              Your data is never sold. Utility tools always run 100% in your browser.{' '}
+              <button onClick={() => setModal('privacy')}
+                style={{ background: 'none', border: 'none', padding: 0, color: '#93c5fd', fontSize: 13, cursor: 'pointer', textDecoration: 'underline', fontFamily: 'inherit' }}>
+                Privacy Policy
+              </button>
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
+            <button onClick={handleCookieDecline}
+              style={{ padding: '10px 20px', background: 'transparent', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 10, fontWeight: 600, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'}>
+              Decline
+            </button>
+            <button onClick={handleCookieAccept}
+              style={{ padding: '10px 20px', background: '#4B7FED', color: 'white', border: 'none', borderRadius: 10, fontWeight: 600, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}
+              onMouseEnter={e => e.currentTarget.style.background = '#3b6fd4'}
+              onMouseLeave={e => e.currentTarget.style.background = '#4B7FED'}>
+              Accept All
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* ── Legal Modals ── */}
       {modal && (
