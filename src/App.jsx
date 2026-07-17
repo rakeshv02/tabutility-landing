@@ -3,6 +3,7 @@ import toolsConfig from './tools.config.json';
 
 export default function App() {
   const [expandedFaq, setExpandedFaq] = useState(null);
+  const [showMoreTools, setShowMoreTools] = useState({});
 
   const faqItems = [
     {
@@ -11,7 +12,7 @@ export default function App() {
     },
     {
       q: "Do you store my data?",
-      a: "No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools (subscriptions) store your preferences to improve results, but you can delete anytime."
+      a: "No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools store your preferences to improve results, but you can delete anytime."
     },
     {
       q: "Why are these tools free?",
@@ -23,228 +24,164 @@ export default function App() {
     },
     {
       q: "Can I use these tools offline?",
-      a: "Yes. Most utility tools work offline. Hybrid tools (Email Writer, Summarizer) need internet for AI features, but your data stays private."
+      a: "Yes. Most utility tools work offline. Hybrid tools need internet for AI features, but your data stays private."
     }
   ];
 
-  const ToolCarousel = ({ tools }) => {
-    const scrollRef = React.useRef(null);
-    
-    const scroll = (direction) => {
-      if (scrollRef.current) {
-        const scrollAmount = 300;
-        scrollRef.current.scrollBy({
-          left: direction === 'left' ? -scrollAmount : scrollAmount,
-          behavior: 'smooth'
-        });
-      }
-    };
-
-    return (
-      <div style={{ position: 'relative', marginBottom: '2rem' }}>
-        <div
-          ref={scrollRef}
-          style={{
-            display: 'flex',
-            gap: '16px',
-            overflowX: 'auto',
-            scrollBehavior: 'smooth',
-            paddingBottom: '8px',
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none'
-          }}
-          onWheel={(e) => {
-            e.preventDefault();
-            scroll(e.deltaY > 0 ? 'right' : 'left');
-          }}
-        >
-          <style>{`
-            div::-webkit-scrollbar { display: none; }
-          `}</style>
-          
-          {tools.map((tool) => (
-            <a
-              key={tool.id}
-              href={tool.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                minWidth: '200px',
-                background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(79, 70, 229, 0.2) 100%)',
-                border: '0.5px solid rgba(59, 130, 246, 0.3)',
-                borderRadius: '16px',
-                padding: '1.5rem',
-                textDecoration: 'none',
-                transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                cursor: 'pointer',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '12px',
-                backdropFilter: 'blur(10px)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(6, 182, 212, 0.6)';
-                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%)';
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 12px 32px rgba(6, 182, 212, 0.15)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
-                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(79, 70, 229, 0.2) 100%)';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: '28px' }}>{tool.emoji}</span>
-                <span style={{ fontSize: '11px', background: 'rgba(16, 185, 129, 0.2)', color: '#10b981', padding: '4px 10px', borderRadius: '12px', border: '0.5px solid rgba(16, 185, 129, 0.3)' }}>Live</span>
-              </div>
-              <div>
-                <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#ffffff', margin: '0 0 8px' }}>{tool.name}</h3>
-                <p style={{ fontSize: '13px', color: 'rgba(209, 213, 219, 0.8)', margin: '0', lineHeight: '1.4' }}>{tool.description}</p>
-              </div>
-              <div style={{ marginTop: 'auto' }}>
-                <span style={{ fontSize: '12px', color: '#60a5fa', fontWeight: '500' }}>Open Tool →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-        
-        {/* Scroll Buttons */}
-        <button
-          onClick={() => scroll('left')}
-          style={{
-            position: 'absolute',
-            left: '-40px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'rgba(59, 130, 246, 0.2)',
-            border: '0.5px solid rgba(59, 130, 246, 0.4)',
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            color: '#60a5fa',
-            fontSize: '16px',
-            transition: 'all 0.2s'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.3)';
-            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.6)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.2)';
-            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.4)';
-          }}
-        >
-          ←
-        </button>
-        
-        <button
-          onClick={() => scroll('right')}
-          style={{
-            position: 'absolute',
-            right: '-40px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'rgba(59, 130, 246, 0.2)',
-            border: '0.5px solid rgba(59, 130, 246, 0.4)',
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            color: '#60a5fa',
-            fontSize: '16px',
-            transition: 'all 0.2s'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.3)';
-            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.6)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(59, 130, 246, 0.2)';
-            e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.4)';
-          }}
-        >
-          →
-        </button>
-      </div>
-    );
+  const colorMap = {
+    'Text & Coding Tools': { icon: '#4B7FED', border: '#4B7FED', light: '#EEF1FF' },
+    'Developer Utilities': { icon: '#FF7A3B', border: '#FF7A3B', light: '#FFF4EE' },
+    'General Utilities': { icon: '#27C281', border: '#27C281', light: '#EEFBF5' },
+    'Image Tools': { icon: '#9B6EDE', border: '#9B6EDE', light: '#F7F1FF' },
+    'Calculators': { icon: '#FFB84D', border: '#FFB84D', light: '#FFFBF0' },
+    'Content Tools': { icon: '#FF6B9D', border: '#FF6B9D', light: '#FFE8F5' }
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom, #0f172a 0%, #1a1f35 50%, #0f172a 100%)', color: '#e5e7eb' }}>
+    <div style={{ minHeight: '100vh', background: '#f9f7f2', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       {/* Navigation */}
-      <nav style={{ background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(10px)', borderBottom: '0.5px solid rgba(59, 130, 246, 0.2)', position: 'sticky', top: 0, zIndex: 50 }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ fontSize: '20px', fontWeight: '700', background: 'linear-gradient(90deg, #60a5fa, #06b6d4)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent', margin: 0 }}>
-            Tabutility
-          </h1>
-          <div style={{ display: 'flex', gap: '2rem', fontSize: '14px' }}>
-            <a href="#faq" style={{ color: '#d1d5db', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#d1d5db'}>FAQ</a>
-            <a href="#about" style={{ color: '#d1d5db', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#d1d5db'}>About</a>
-          </div>
+      <nav style={{ background: 'white', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #f0ede7', position: 'sticky', top: 0, zIndex: 50 }}>
+        <h1 style={{ margin: 0, fontSize: '20px', fontWeight: 700, color: '#1a1a1a' }}>Tabutility</h1>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', fontSize: '14px' }}>
+          <a href="#faq" style={{ color: '#666', textDecoration: 'none', fontWeight: 500, cursor: 'pointer', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#666'}>FAQ</a>
+          <a href="#about" style={{ color: '#666', textDecoration: 'none', fontWeight: 500, cursor: 'pointer', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#666'}>About</a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section style={{ padding: '3rem 1rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-        <div style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.5rem 1rem', background: 'rgba(59, 130, 246, 0.1)', border: '0.5px solid rgba(59, 130, 246, 0.3)', borderRadius: '2rem', fontSize: '12px', color: '#60a5fa' }}>
-          ✨ Building in Public
-        </div>
+      <section style={{ padding: '3rem 2rem', textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+        <div style={{ color: '#FF7A3B', fontSize: '13px', fontWeight: 700, letterSpacing: '1px', marginBottom: '1rem' }}>FREE TOOLS, REAL PRIVACY</div>
         
-        <h1 style={{ fontSize: '3.5rem', fontWeight: '700', margin: '1rem 0', background: 'linear-gradient(90deg, #ffffff 0%, #60a5fa 50%, #06b6d4 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent', lineHeight: '1.2' }}>
-          Free Tools for Developers & Creators
+        <h1 style={{ fontSize: '48px', fontWeight: 700, margin: '0 0 1rem', color: '#1a1a1a', lineHeight: 1.1 }}>
+          Tools That Actually
+          <span style={{ color: '#4B7FED' }}> Respect You</span>
         </h1>
         
-        <p style={{ fontSize: '1.1rem', color: '#9ca3af', marginBottom: '2rem', maxWidth: '600px', margin: '1.5rem auto' }}>
-          No sign-up. No tracking. No BS. 13 powerful utilities built by a solo founder who actually cares about your privacy.
+        <p style={{ fontSize: '16px', color: '#666', maxWidth: '600px', margin: '1rem auto 2rem', lineHeight: 1.6 }}>
+          No sign-up. No tracking. No BS. 13 free utilities built by a solo founder who actually cares about your privacy.
         </p>
+      </section>
 
-        {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', maxWidth: '500px', margin: '2rem auto' }}>
-          <div style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1))', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '12px', padding: '1rem' }}>
-            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#60a5fa' }}>13</div>
-            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Tools Live</div>
+      {/* Value Props */}
+      <section style={{ padding: '2rem', maxWidth: '1100px', margin: '0 auto 3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+          
+          <div style={{ background: 'white', borderRadius: '16px', padding: '2rem 1.5rem', borderBottom: '4px solid #FF7A3B', textAlign: 'center' }}>
+            <div style={{ width: '60px', height: '60px', background: '#FF7A3B', borderRadius: '12px', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px' }}>🔒</div>
+            <h3 style={{ margin: '0 0 0.5rem', fontSize: '16px', fontWeight: 700, color: '#1a1a1a' }}>Private by Default</h3>
+            <p style={{ margin: 0, fontSize: '13px', color: '#999', lineHeight: 1.5 }}>All processing in your browser. Your data never leaves your device.</p>
           </div>
-          <div style={{ background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.1))', border: '0.5px solid rgba(168, 85, 247, 0.2)', borderRadius: '12px', padding: '1rem' }}>
-            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#a855f7' }}>100%</div>
-            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Free Forever</div>
+
+          <div style={{ background: 'white', borderRadius: '16px', padding: '2rem 1.5rem', borderBottom: '4px solid #4B7FED', textAlign: 'center' }}>
+            <div style={{ width: '60px', height: '60px', background: '#4B7FED', borderRadius: '12px', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px', color: 'white' }}>✓</div>
+            <h3 style={{ margin: '0 0 0.5rem', fontSize: '16px', fontWeight: 700, color: '#1a1a1a' }}>100% Free</h3>
+            <p style={{ margin: 0, fontSize: '13px', color: '#999', lineHeight: 1.5 }}>10 utilities forever free. Premium features optional.</p>
           </div>
-          <div style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))', border: '0.5px solid rgba(6, 182, 212, 0.2)', borderRadius: '12px', padding: '1rem' }}>
-            <div style={{ fontSize: '1.8rem', fontWeight: '700', color: '#06b6d4' }}>0</div>
-            <div style={{ fontSize: '12px', color: '#9ca3af' }}>Sign-ups</div>
+
+          <div style={{ background: 'white', borderRadius: '16px', padding: '2rem 1.5rem', borderBottom: '4px solid #27C281', textAlign: 'center' }}>
+            <div style={{ width: '60px', height: '60px', background: '#27C281', borderRadius: '12px', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px', color: 'white' }}>→</div>
+            <h3 style={{ margin: '0 0 0.5rem', fontSize: '16px', fontWeight: 700, color: '#1a1a1a' }}>No Sign-up</h3>
+            <p style={{ margin: 0, fontSize: '13px', color: '#999', lineHeight: 1.5 }}>Start instantly. No email, no account, no questions.</p>
+          </div>
+
+          <div style={{ background: 'white', borderRadius: '16px', padding: '2rem 1.5rem', borderBottom: '4px solid #9B6EDE', textAlign: 'center' }}>
+            <div style={{ width: '60px', height: '60px', background: '#9B6EDE', borderRadius: '12px', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px' }}>🏗️</div>
+            <h3 style={{ margin: '0 0 0.5rem', fontSize: '16px', fontWeight: 700, color: '#1a1a1a' }}>Built in Public</h3>
+            <p style={{ margin: 0, fontSize: '13px', color: '#999', lineHeight: 1.5 }}>Follow the journey. See revenue, wins, and real numbers.</p>
           </div>
         </div>
       </section>
 
       {/* Tools Section */}
-      <section style={{ padding: '2rem 1rem', maxWidth: '1400px', margin: '0 auto' }}>
-        {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => (
-          <div key={categoryKey} style={{ marginBottom: '3rem', paddingLeft: '40px', paddingRight: '40px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.5rem' }}>
-              <span style={{ fontSize: '28px' }}>{category.emoji}</span>
-              <h2 style={{ fontSize: '20px', fontWeight: '600', color: '#ffffff', margin: 0 }}>{category.name}</h2>
-            </div>
-            
-            <ToolCarousel tools={category.tools} />
-          </div>
-        ))}
+      <section style={{ padding: '3rem 2rem', background: 'white', marginBottom: '2rem' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: 700, margin: '0 0 2rem', color: '#1a1a1a', textAlign: 'center' }}>13 Tools, All Free</h2>
+        
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          {Object.entries(toolsConfig.categories).map(([categoryKey, category]) => {
+            const colors = colorMap[category.name] || { icon: '#4B7FED', border: '#4B7FED', light: '#EEF1FF' };
+            const isExpanded = showMoreTools[categoryKey];
+            const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
+            const hasMore = category.tools.length > 4;
+
+            return (
+              <div key={categoryKey} style={{ marginBottom: '3rem' }}>
+                <h3 style={{ margin: '0 0 1.5rem', fontSize: '14px', fontWeight: 700, color: '#666', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{category.emoji} {category.name}</h3>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '16px', marginBottom: hasMore ? '2rem' : 0 }}>
+                  {toolsToShow.map((tool) => (
+                    <a
+                      key={tool.id}
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        background: colors.light,
+                        borderRadius: '12px',
+                        padding: '1.5rem',
+                        textAlign: 'center',
+                        cursor: 'pointer',
+                        textDecoration: 'none',
+                        transition: 'all 0.2s',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '0.75rem'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-4px)';
+                        e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.08)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <div style={{ width: '48px', height: '48px', background: colors.icon, borderRadius: '10px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px' }}>{tool.emoji}</div>
+                      <h4 style={{ margin: 0, fontSize: '14px', fontWeight: 700, color: '#1a1a1a' }}>{tool.name}</h4>
+                      <p style={{ margin: 0, fontSize: '12px', color: '#999', lineHeight: 1.4 }}>{tool.description}</p>
+                      <div style={{ marginTop: 'auto', fontSize: '12px', fontWeight: 600, color: colors.icon }}>→ Open</div>
+                    </a>
+                  ))}
+                </div>
+
+                {hasMore && !isExpanded && (
+                  <div style={{ textAlign: 'center' }}>
+                    <button
+                      onClick={() => setShowMoreTools({ ...showMoreTools, [categoryKey]: true })}
+                      style={{
+                        background: '#f0ede7',
+                        color: '#1a1a1a',
+                        border: 'none',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '8px',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        fontSize: '14px',
+                        transition: 'all 0.2s'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#e8e4db';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#f0ede7';
+                      }}
+                    >
+                      See {category.tools.length - 4} more
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" style={{ padding: '3rem 1rem', maxWidth: '800px', margin: '0 auto', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', borderBottom: '0.5px solid rgba(59, 130, 246, 0.2)' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: '700', textAlign: 'center', marginBottom: '2rem', color: '#ffffff' }}>Questions?</h2>
+      <section id="faq" style={{ padding: '3rem 2rem', maxWidth: '800px', margin: '0 auto', borderTop: '1px solid #f0ede7', borderBottom: '1px solid #f0ede7' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: 700, textAlign: 'center', marginBottom: '2rem', color: '#1a1a1a' }}>Questions?</h2>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {faqItems.map((item, idx) => (
-            <div key={idx} style={{ border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '12px', background: 'rgba(30, 58, 138, 0.2)', overflow: 'hidden', transition: 'all 0.2s' }}>
+            <div key={idx} style={{ border: '1px solid #f0ede7', borderRadius: '12px', background: 'white', overflow: 'hidden', transition: 'all 0.2s' }}>
               <button
                 onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                 style={{
@@ -256,24 +193,24 @@ export default function App() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   cursor: 'pointer',
-                  color: '#ffffff',
+                  color: '#1a1a1a',
                   fontSize: '15px',
-                  fontWeight: '500',
+                  fontWeight: '600',
                   transition: 'all 0.2s'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(59, 130, 246, 0.1)';
+                  e.currentTarget.style.background = '#f9f7f2';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'transparent';
                 }}
               >
                 {item.q}
-                <span style={{ color: '#60a5fa', fontSize: '18px', transition: 'transform 0.2s', transform: expandedFaq === idx ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
+                <span style={{ color: '#FF7A3B', fontSize: '18px', transition: 'transform 0.2s', transform: expandedFaq === idx ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
               </button>
               
               {expandedFaq === idx && (
-                <div style={{ padding: '1rem 1.5rem', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', color: '#d1d5db', fontSize: '14px', lineHeight: '1.6', background: 'rgba(15, 23, 42, 0.5)' }}>
+                <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid #f0ede7', color: '#666', fontSize: '14px', lineHeight: 1.6, background: '#f9f7f2' }}>
                   {item.a}
                 </div>
               )}
@@ -283,45 +220,25 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" style={{ padding: '3rem 1rem', maxWidth: '900px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1.5rem', color: '#ffffff' }}>About Tabutility</h2>
+      <section id="about" style={{ padding: '3rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '1.5rem', color: '#1a1a1a' }}>About Tabutility</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
-          <div style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1))', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
-            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>🚀</div>
-            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#60a5fa', margin: '0 0 0.5rem' }}>Built to Last</h3>
-            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>Simple, useful tools that actually solve problems. No bloat. No nonsense.</p>
-          </div>
-          
-          <div style={{ background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.1))', border: '0.5px solid rgba(168, 85, 247, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
-            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>🔒</div>
-            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#a855f7', margin: '0 0 0.5rem' }}>Private by Default</h3>
-            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>All processing in your browser. Your data stays yours. No tracking.</p>
-          </div>
-          
-          <div style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1))', border: '0.5px solid rgba(6, 182, 212, 0.2)', borderRadius: '16px', padding: '1.5rem' }}>
-            <div style={{ fontSize: '24px', marginBottom: '0.5rem' }}>📖</div>
-            <h3 style={{ fontSize: '15px', fontWeight: '600', color: '#06b6d4', margin: '0 0 0.5rem' }}>Building in Public</h3>
-            <p style={{ fontSize: '13px', color: '#9ca3af', margin: 0, lineHeight: '1.5' }}>Sharing the journey. Revenue numbers, wins, and failures. All honest.</p>
-          </div>
-        </div>
-
-        <div style={{ background: 'rgba(30, 58, 138, 0.15)', border: '0.5px solid rgba(59, 130, 246, 0.2)', borderRadius: '16px', padding: '2rem', marginBottom: '2rem' }}>
-          <p style={{ fontSize: '15px', color: '#d1d5db', lineHeight: '1.8', margin: '0 0 1rem' }}>
+        <div style={{ background: 'white', borderRadius: '16px', padding: '2rem', marginBottom: '2rem', border: '1px solid #f0ede7' }}>
+          <p style={{ fontSize: '15px', color: '#666', lineHeight: 1.8, margin: '0 0 1rem' }}>
             I started Tabutility because I was frustrated. Most online tools are either outdated, bloated, or designed to extract money from you. As a non-technical founder, I decided to build something different — tools that are genuinely useful, completely free, and honest about how they work.
           </p>
-          <p style={{ fontSize: '15px', color: '#d1d5db', lineHeight: '1.8', margin: 0 }}>
+          <p style={{ fontSize: '15px', color: '#666', lineHeight: 1.8, margin: 0 }}>
             Building in public means sharing everything: revenue, growth metrics, failures, and learnings. No PR spin. No polished narrative. Just real. This is a solo project, and I'm learning as I go. But every tool works, and every tool respects your privacy.
           </p>
         </div>
 
-        <div style={{ textAlign: 'center' }}>
-          <p style={{ fontSize: '14px', color: '#9ca3af', marginBottom: '1.5rem' }}>Follow the journey on Reddit and Indie Hackers. Share your thoughts. Help us build something worth using.</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <a href="https://reddit.com/r/webdev" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)', color: '#ffffff', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '14px', color: '#999', marginBottom: '1.5rem' }}>Follow the journey on Reddit and Indie Hackers. Share your thoughts. Help us build something worth using.</p>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://reddit.com/r/webdev" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: '#4B7FED', color: 'white', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '600', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.background = '#3557c1'} onMouseLeave={(e) => e.target.style.background = '#4B7FED'}>
               Follow on Reddit
             </a>
-            <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: 'rgba(59, 130, 246, 0.2)', color: '#60a5fa', border: '0.5px solid rgba(59, 130, 246, 0.4)', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '500', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'} onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}>
+            <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ padding: '0.75rem 1.5rem', background: '#f0ede7', color: '#1a1a1a', border: '1px solid #e8e4db', borderRadius: '8px', textDecoration: 'none', fontSize: '14px', fontWeight: '600', transition: 'all 0.2s' }} onMouseEnter={(e) => e.target.style.background = '#e8e4db'} onMouseLeave={(e) => e.target.style.background = '#f0ede7'}>
               Indie Hackers
             </a>
           </div>
@@ -329,30 +246,30 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer style={{ padding: '2rem 1rem', borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', textAlign: 'center', fontSize: '13px', color: '#6b7280' }}>
+      <footer style={{ padding: '2rem', borderTop: '1px solid #f0ede7', textAlign: 'center', fontSize: '12px', color: '#999', background: 'white', marginTop: '2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', marginBottom: '1.5rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem' }}>
             <div>
-              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Tabutility</h3>
+              <h4 style={{ color: '#1a1a1a', fontSize: '14px', fontWeight: 600, marginBottom: '0.75rem', margin: 0 }}>Tabutility</h4>
               <p style={{ margin: 0, fontSize: '12px' }}>Free tools built by a solo founder. No tracking. No BS.</p>
             </div>
             <div>
-              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Legal</h3>
+              <h4 style={{ color: '#1a1a1a', fontSize: '14px', fontWeight: 600, marginBottom: '0.75rem', margin: 0 }}>Legal</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <a href="/privacy" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Privacy Policy</a>
-                <a href="/terms" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Terms of Service</a>
+                <a href="/privacy" style={{ color: '#999', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#999'}>Privacy Policy</a>
+                <a href="/terms" style={{ color: '#999', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#999'}>Terms of Service</a>
               </div>
             </div>
             <div>
-              <h3 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', marginBottom: '0.75rem' }}>Community</h3>
+              <h4 style={{ color: '#1a1a1a', fontSize: '14px', fontWeight: 600, marginBottom: '0.75rem', margin: 0 }}>Community</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Reddit</a>
-                <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#60a5fa'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'}>Indie Hackers</a>
+                <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#999'}>Reddit</a>
+                <a href="https://indiehackers.com" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FF7A3B'} onMouseLeave={(e) => e.target.style.color = '#999'}>Indie Hackers</a>
               </div>
             </div>
           </div>
         </div>
-        <div style={{ borderTop: '0.5px solid rgba(59, 130, 246, 0.2)', paddingTop: '1.5rem' }}>
+        <div style={{ borderTop: '1px solid #f0ede7', paddingTop: '1.5rem' }}>
           <p style={{ margin: 0 }}>© 2026 Tabutility. Built with ❤️ in public. No venture capital. No exit strategy. Just tools that work.</p>
         </div>
       </footer>
