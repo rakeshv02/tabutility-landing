@@ -6,6 +6,7 @@ const colorMap = {
   'Image Tools':    { icon: '#10b981', light: '#ECFDF5' },
   'Developer Tools':{ icon: '#f59e0b', light: '#FFFBEB' },
   'Content Tools':  { icon: '#ec4899', light: '#FDF2F8' },
+  'Wellness':       { icon: '#8b5cf6', light: '#F7F1FF' },
 };
 
 const faqs = [
@@ -76,7 +77,7 @@ export default function App() {
           <span style={{ color: '#4B7FED' }}>Respect You.</span>
         </h1>
         <p style={{ fontSize: 18, color: '#64748b', lineHeight: 1.7, maxWidth: 560, margin: '0 auto 36px' }}>
-          13 browser-based utilities for text, dev, and daily tasks. No ads tracking you, no paywalls, and absolutely no sign-ups required.
+          14 browser-based utilities for text, dev, and daily tasks. No ads tracking you, no paywalls, and absolutely no sign-ups required.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#tools" style={{ padding: '14px 28px', background: '#0f172a', color: 'white', borderRadius: 12, fontWeight: 600, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(15,23,42,0.22)', display: 'inline-block' }}
@@ -107,63 +108,46 @@ export default function App() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
           {valueProps.map((p, i) => (
             <div key={i}
-              style={{ background: 'white', borderRadius: 20, padding: '28px 24px', border: '1px solid #f1f5f9', boxShadow: '0 4px 20px -4px rgba(0,0,0,0.06)' }}
+              style={{ background: 'white', borderRadius: 20, padding: '28px 24px', border: '1px solid #f1f5f9', boxShadow: '0 4px 20px -4px rgba(0,0,0,0.06)', transition: 'box-shadow 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 30px -4px rgba(0,0,0,0.1)'}
               onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 20px -4px rgba(0,0,0,0.06)'}>
-              <div style={{ width: 48, height: 48, background: p.light, color: p.color, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, marginBottom: 20 }}>{p.emoji}</div>
-              <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 700, color: '#0f172a' }}>{p.title}</h3>
-              <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.65 }}>{p.desc}</p>
+              <div style={{ width: 48, height: 48, background: p.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16, color: p.color, fontSize: 24 }}>{p.emoji}</div>
+              <h3 style={{ margin: '0 0 8px', fontSize: 16, fontWeight: 700, color: '#0f172a' }}>{p.title}</h3>
+              <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.6 }}>{p.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── Tools ── */}
-      <section id="tools" style={{ background: 'white', padding: '64px 24px', marginBottom: 32 }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 30, fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.5px' }}>13 Tools, All Free.</h2>
-          <p style={{ color: '#64748b', margin: '0 0 48px', fontSize: 15 }}>Everything you need to get things done quickly. Click a tool to launch it instantly in your browser.</p>
+      <section id="tools" style={{ padding: '0 24px 80px', maxWidth: 1100, margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <h2 style={{ fontSize: 30, fontWeight: 800, color: '#0f172a', margin: '0 0 8px', letterSpacing: '-0.5px' }}>14 Tools Built for You</h2>
+          <p style={{ color: '#64748b', margin: 0, fontSize: 15 }}>No sign-up, no tracking, completely free.</p>
+        </div>
 
-          {Object.entries(toolsConfig.categories)
-            .sort(([, a], [, b]) => b.tools.length - a.tools.length)
-            .map(([key, category]) => {
-            const theme = colorMap[category.name] || { icon: '#4B7FED', light: '#EEF1FF' };
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+          {Object.entries(toolsConfig.categories).map(([key, category]) => {
+            const colors = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
             const isExpanded = showMoreTools[key];
-            const visible = isExpanded ? category.tools : category.tools.slice(0, 4);
+            const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
             const hasMore = category.tools.length > 4;
-            const isSingle = category.tools.length === 1;
 
             return (
-              <div key={key} style={{ marginBottom: 52 }}>
-                {/* Category header */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, paddingBottom: 14, borderBottom: '1px solid #f1f5f9', marginBottom: 20 }}>
-                  <span style={{ fontSize: 22 }}>{category.emoji}</span>
+              <div key={key}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                  <div style={{ width: 44, height: 44, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.icon, fontSize: 20, fontWeight: 700 }}>{category.emoji}</div>
                   <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
-                  <span style={{ padding: '2px 10px', background: '#f1f5f9', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#64748b' }}>{category.tools.length}</span>
                 </div>
 
-                {/* Single-tool: wide horizontal card */}
-                {isSingle ? (
-                  <a href={visible[0].url} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: 20, background: 'white', borderRadius: 14, padding: '20px 24px', border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', maxWidth: 480, transition: 'all 0.2s' }}
-                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
-                    onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
-                    <span style={{ fontSize: 36, flexShrink: 0 }}>{visible[0].emoji}</span>
-                    <div>
-                      <h4 style={{ margin: '0 0 4px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{visible[0].name}</h4>
-                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55 }}>{visible[0].description}</p>
-                    </div>
-                    <span style={{ marginLeft: 'auto', flexShrink: 0, fontSize: 18, color: theme.icon }}>→</span>
-                  </a>
-                ) : (
-                  /* Multi-tool grid */
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
-                    {visible.map(tool => (
+                {toolsToShow.length > 0 && (
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                    {toolsToShow.map(tool => (
                       <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
-                        style={{ background: 'white', borderRadius: 14, padding: 20, border: '1px solid #e2e8f0', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', textDecoration: 'none', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', transition: 'all 0.2s' }}
-                        onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 24px -6px rgba(0,0,0,0.12)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#cbd5e1'; }}
-                        onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'; e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = '#e2e8f0'; }}>
-                        <div style={{ marginBottom: 12 }}>
+                        style={{ display: 'flex', flexDirection: 'column', padding: 16, background: 'white', borderRadius: 14, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = `0 8px 20px rgba(0,0,0,0.08)`; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
+                        <div style={{ width: 40, height: 40, background: colors.light, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
                           <span style={{ fontSize: 30 }}>{tool.emoji}</span>
                         </div>
                         <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
