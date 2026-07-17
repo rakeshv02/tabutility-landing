@@ -10,7 +10,7 @@ const colorMap = {
 };
 
 const faqs = [
-  { q: 'Are all tools truly free?',      a: 'Yes. All 10 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users.' },
+  { q: 'Are all tools truly free?',      a: 'Yes. All 11 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users.' },
   { q: 'Do you store my data?',          a: 'No. All utility tools run entirely in your browser—nothing is sent to our servers. We never store, log, or use your data. Hybrid tools store your preferences to improve results, but you can delete anytime.' },
   { q: 'Why are these tools free?',      a: "We believe useful tools should be accessible to everyone. We're supported by non-intrusive ads and optional subscriptions for advanced features. No tracking. No selling your data." },
   { q: 'How often are new tools added?', a: "We're building in public. New tools launch regularly as we identify problems worth solving. Follow us on Reddit and Indie Hackers for updates." },
@@ -18,14 +18,14 @@ const faqs = [
 ];
 
 const valueProps = [
-  { title: 'Private by Default', desc: 'Everything runs locally in your browser. No data leaves your machine.',                color: '#27C281', light: '#EEFBF5', emoji: '🔒' },
-  { title: '100% Free',          desc: 'No hidden fees, no credit card required. Free tools forever.',                        color: '#4B7FED', light: '#EEF1FF', emoji: '💰' },
-  { title: 'No Sign-up',         desc: 'Jump straight into solving your problem without creating an account.',                color: '#FF7A3B', light: '#FFF4EE', emoji: '🚀' },
-  { title: 'Built in Public',    desc: 'Follow the journey. See revenue, wins, and real numbers.',                            color: '#9B6EDE', light: '#F7F1FF', emoji: '📊' },
+  { title: 'Private by Default', desc: 'Everything runs locally in your browser. No data leaves your machine.',             color: '#27C281', light: '#EEFBF5', emoji: '🔒' },
+  { title: '100% Free',          desc: 'No hidden fees, no credit card required. Free tools forever.',                      color: '#4B7FED', light: '#EEF1FF', emoji: '💰' },
+  { title: 'No Sign-up',         desc: 'Jump straight into solving your problem without creating an account.',              color: '#FF7A3B', light: '#FFF4EE', emoji: '🚀' },
+  { title: 'Built in Public',    desc: 'Follow the journey. See revenue, wins, and real numbers.',                          color: '#9B6EDE', light: '#F7F1FF', emoji: '📊' },
 ];
 
 export default function App() {
-  const [expandedFaq, setExpandedFaq] = useState(null);
+  const [expandedFaq, setExpandedFaq]   = useState(null);
   const [showMoreTools, setShowMoreTools] = useState({});
   const [scrolled, setScrolled]         = useState(false);
 
@@ -34,6 +34,10 @@ export default function App() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Sort categories by tool count descending so fuller sections appear first
+  const sortedCategories = Object.entries(toolsConfig.categories)
+    .sort(([, a], [, b]) => b.tools.length - a.tools.length);
 
   return (
     <div style={{ minHeight: '100vh', background: '#f8f7f4', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', color: '#0f172a', margin: 0, padding: 0 }}>
@@ -77,7 +81,7 @@ export default function App() {
           <span style={{ color: '#4B7FED' }}>Respect You.</span>
         </h1>
         <p style={{ fontSize: 18, color: '#64748b', lineHeight: 1.7, maxWidth: 560, margin: '0 auto 36px' }}>
-          14 browser-based utilities for text, dev, and daily tasks. No ads tracking you, no paywalls, and absolutely no sign-ups required.
+          14 browser-based utilities for text, dev, wellness, and daily tasks. No ads tracking you, no paywalls, and absolutely no sign-ups required.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="#tools" style={{ padding: '14px 28px', background: '#0f172a', color: 'white', borderRadius: 12, fontWeight: 600, fontSize: 15, textDecoration: 'none', boxShadow: '0 4px 16px rgba(15,23,42,0.22)', display: 'inline-block' }}
@@ -127,43 +131,62 @@ export default function App() {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
-          {Object.entries(toolsConfig.categories).map(([key, category]) => {
-            const colors = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
-            const isExpanded = showMoreTools[key];
+          {sortedCategories.map(([key, category]) => {
+            const colors      = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
+            const isSingle    = category.tools.length === 1;
+            const isExpanded  = showMoreTools[key];
             const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
-            const hasMore = category.tools.length > 4;
+            const hasMore     = category.tools.length > 4;
 
             return (
               <div key={key}>
+                {/* Category header */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                   <div style={{ width: 44, height: 44, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.icon, fontSize: 20, fontWeight: 700 }}>{category.emoji}</div>
                   <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
                 </div>
 
-                {toolsToShow.length > 0 && (
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
-                    {toolsToShow.map(tool => (
-                      <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
-                        style={{ display: 'flex', flexDirection: 'column', padding: 16, background: 'white', borderRadius: 14, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
-                        onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = `0 8px 20px rgba(0,0,0,0.08)`; }}
-                        onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
-                        <div style={{ width: 40, height: 40, background: colors.light, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
-                          <span style={{ fontSize: 30 }}>{tool.emoji}</span>
-                        </div>
-                        <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
-                        <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
-                      </a>
-                    ))}
-                  </div>
-                )}
+                {/* Single-tool categories → wide horizontal card */}
+                {isSingle ? (
+                  <a href={category.tools[0].url} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 24px', background: 'white', borderRadius: 16, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
+                    <div style={{ flexShrink: 0, width: 52, height: 52, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>
+                      {category.tools[0].emoji}
+                    </div>
+                    <div>
+                      <h4 style={{ margin: '0 0 4px', fontSize: 16, fontWeight: 700, color: '#0f172a' }}>{category.tools[0].name}</h4>
+                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55 }}>{category.tools[0].description}</p>
+                    </div>
+                  </a>
+                ) : (
+                  /* Multi-tool categories → grid */
+                  <>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                      {toolsToShow.map(tool => (
+                        <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
+                          style={{ display: 'flex', flexDirection: 'column', padding: 16, background: 'white', borderRadius: 14, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
+                          onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
+                          onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
+                          <div style={{ width: 40, height: 40, background: colors.light, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
+                            <span style={{ fontSize: 22 }}>{tool.emoji}</span>
+                          </div>
+                          <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
+                          <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
+                        </a>
+                      ))}
+                    </div>
 
-                {hasMore && (
-                  <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
-                    style={{ marginTop: 14, padding: '8px 16px', background: 'white', color: '#475569', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 600, fontSize: 13, cursor: 'pointer' }}
-                    onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
-                    onMouseLeave={e => e.currentTarget.style.background = 'white'}>
-                    {isExpanded ? 'Show less ▴' : `See ${category.tools.length - 4} more ▾`}
-                  </button>
+                    {hasMore && (
+                      <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
+                        style={{ marginTop: 14, padding: '8px 16px', background: 'white', color: '#475569', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 600, fontSize: 13, cursor: 'pointer' }}
+                        onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+                        onMouseLeave={e => e.currentTarget.style.background = 'white'}>
+                        {isExpanded ? 'Show less ▴' : `See ${category.tools.length - 4} more ▾`}
+                      </button>
+                    )}
+                  </>
                 )}
               </div>
             );
