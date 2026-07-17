@@ -107,6 +107,14 @@
       "emoji": "✨",
       "tools": [
         {
+          "id": "word-counter",
+          "name": "Word Counter",
+          "description": "Count words, characters, sentences, paragraphs, and reading time instantly. Includes a character limit checker for tweets, LinkedIn, and more.",
+          "url": "https://word-counter.tabutility.com",
+          "status": "live",
+          "emoji": "📝"
+        },
+        {
           "id": "email-writer",
           "name": "AI Email Writer",
           "description": "Write professional emails instantly with AI. Draft cold outreach, follow-ups, and business emails—free tier includes 5 emails/week.",
