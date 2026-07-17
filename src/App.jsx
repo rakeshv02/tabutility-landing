@@ -130,67 +130,84 @@ export default function App() {
           <p style={{ color: '#64748b', margin: 0, fontSize: 15 }}>No sign-up, no tracking, completely free.</p>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
-          {sortedCategories.map(([key, category]) => {
-            const colors      = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
-            const isSingle    = category.tools.length === 1;
-            const isExpanded  = showMoreTools[key];
-            const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
-            const hasMore     = category.tools.length > 4;
+        {(() => {
+            const multiCategories  = sortedCategories.filter(([, c]) => c.tools.length > 1);
+            const singleCategories = sortedCategories.filter(([, c]) => c.tools.length === 1);
 
             return (
-              <div key={key}>
-                {/* Category header */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-                  <div style={{ width: 44, height: 44, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.icon, fontSize: 20, fontWeight: 700 }}>{category.emoji}</div>
-                  <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
 
-                {/* Single-tool categories → wide horizontal card */}
-                {isSingle ? (
-                  <a href={category.tools[0].url} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 24px', background: 'white', borderRadius: 16, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
-                    <div style={{ flexShrink: 0, width: 52, height: 52, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>
-                      {category.tools[0].emoji}
+                {/* ── Multi-tool categories (full width) ── */}
+                {multiCategories.map(([key, category]) => {
+                  const colors      = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
+                  const isExpanded  = showMoreTools[key];
+                  const toolsToShow = isExpanded ? category.tools : category.tools.slice(0, 4);
+                  const hasMore     = category.tools.length > 4;
+                  return (
+                    <div key={key}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                        <div style={{ width: 44, height: 44, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.icon, fontSize: 20, fontWeight: 700 }}>{category.emoji}</div>
+                        <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+                        {toolsToShow.map(tool => (
+                          <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
+                            style={{ display: 'flex', flexDirection: 'column', padding: 16, background: 'white', borderRadius: 14, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
+                            <div style={{ width: 40, height: 40, background: colors.light, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
+                              <span style={{ fontSize: 22 }}>{tool.emoji}</span>
+                            </div>
+                            <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
+                            <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
+                          </a>
+                        ))}
+                      </div>
+                      {hasMore && (
+                        <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
+                          style={{ marginTop: 14, padding: '8px 16px', background: 'white', color: '#475569', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 600, fontSize: 13, cursor: 'pointer' }}
+                          onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+                          onMouseLeave={e => e.currentTarget.style.background = 'white'}>
+                          {isExpanded ? 'Show less ▴' : `See ${category.tools.length - 4} more ▾`}
+                        </button>
+                      )}
                     </div>
-                    <div>
-                      <h4 style={{ margin: '0 0 4px', fontSize: 16, fontWeight: 700, color: '#0f172a' }}>{category.tools[0].name}</h4>
-                      <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55 }}>{category.tools[0].description}</p>
-                    </div>
-                  </a>
-                ) : (
-                  /* Multi-tool categories → grid */
-                  <>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
-                      {toolsToShow.map(tool => (
-                        <a key={tool.id} href={tool.url} target="_blank" rel="noopener noreferrer"
-                          style={{ display: 'flex', flexDirection: 'column', padding: 16, background: 'white', borderRadius: 14, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
-                          onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
-                          onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
-                          <div style={{ width: 40, height: 40, background: colors.light, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
-                            <span style={{ fontSize: 22 }}>{tool.emoji}</span>
+                  );
+                })}
+
+                {/* ── Single-tool categories → 2-column grid ── */}
+                {singleCategories.length > 0 && (
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
+                    {singleCategories.map(([key, category]) => {
+                      const colors = colorMap[category.name] || { icon: '#6b7280', light: '#f3f4f6' };
+                      const tool   = category.tools[0];
+                      return (
+                        <div key={key}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                            <div style={{ width: 44, height: 44, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.icon, fontSize: 20, fontWeight: 700 }}>{category.emoji}</div>
+                            <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: '#0f172a' }}>{category.name}</h3>
                           </div>
-                          <h4 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
-                          <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55, flexGrow: 1 }}>{tool.description}</p>
-                        </a>
-                      ))}
-                    </div>
-
-                    {hasMore && (
-                      <button onClick={() => setShowMoreTools(p => ({ ...p, [key]: !p[key] }))}
-                        style={{ marginTop: 14, padding: '8px 16px', background: 'white', color: '#475569', border: '1px solid #e2e8f0', borderRadius: 8, fontWeight: 600, fontSize: 13, cursor: 'pointer' }}
-                        onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
-                        onMouseLeave={e => e.currentTarget.style.background = 'white'}>
-                        {isExpanded ? 'Show less ▴' : `See ${category.tools.length - 4} more ▾`}
-                      </button>
-                    )}
-                  </>
+                          <a href={tool.url} target="_blank" rel="noopener noreferrer"
+                            style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', background: 'white', borderRadius: 16, border: '1px solid #e2e8f0', textDecoration: 'none', color: '#0f172a', boxShadow: '0 2px 8px rgba(0,0,0,0.03)', transition: 'all 0.2s' }}
+                            onMouseEnter={e => { e.currentTarget.style.borderColor = colors.icon; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)'; }}
+                            onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.03)'; }}>
+                            <div style={{ flexShrink: 0, width: 48, height: 48, background: colors.light, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26 }}>
+                              {tool.emoji}
+                            </div>
+                            <div>
+                              <h4 style={{ margin: '0 0 4px', fontSize: 15, fontWeight: 700, color: '#0f172a' }}>{tool.name}</h4>
+                              <p style={{ margin: 0, fontSize: 13, color: '#64748b', lineHeight: 1.55 }}>{tool.description}</p>
+                            </div>
+                          </a>
+                        </div>
+                      );
+                    })}
+                  </div>
                 )}
+
               </div>
             );
-          })}
+          })()}
         </div>
       </section>
 
