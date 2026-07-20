@@ -30,6 +30,21 @@
         }
       ]
     },
+    "converters": {
+      "name": "Converters",
+      "color": "#0891b2",
+      "emoji": "🔄",
+      "tools": [
+        {
+          "id": "unit-converter",
+          "name": "Unit Converter",
+          "description": "Convert length, weight, temperature, volume, speed, area and time instantly. cm to inches, kg to lbs, Celsius to Fahrenheit and hundreds more.",
+          "url": "https://unit-converter.tabutility.com",
+          "status": "live",
+          "emoji": "🔄"
+        }
+      ]
+    },
     "developer-tools": {
       "name": "Developer Tools",
       "color": "#f59e0b",
