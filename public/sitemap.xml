@@ -1,4 +1,20 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tabutility.com/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tabutility.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://percentage-calculator.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unit-converter.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://image-compressor.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://json-formatter.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://word-unscrambler.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://base64-encoder.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://url-encoder.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://password-generator.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://uuid-generator.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://markdown-to-html.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qr-code-generator.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://word-counter.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://email-writer.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://content-repurposer.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ai-summarizer.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meditation-timer.tabutility.com/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
