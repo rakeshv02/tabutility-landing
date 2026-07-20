@@ -7,12 +7,13 @@ const colorMap = {
   "Developer Tools": { icon: "#f59e0b", light: "#FFFBEB" },
   "Content Tools": { icon: "#ec4899", light: "#FDF2F8" },
   Wellness: { icon: "#8b5cf6", light: "#F7F1FF" },
+  Converters: { icon: "#0891b2", light: "#ECFEFF" },
 };
 
 const faqs = [
   {
     q: "Are all tools truly free?",
-    a: "Yes. All 12 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users.",
+    a: "Yes. All 13 utility tools are 100% free forever with no sign-up required. Our 3 hybrid tools (Email Writer, Content Repurposer, AI Summarizer) offer free tiers with optional paid upgrades for power users.",
   },
   {
     q: "Do you store my data?",
@@ -235,7 +236,7 @@ export default function App() {
             margin: "0 auto 36px",
           }}
         >
-          15 browser-based utilities for text, dev, wellness, and daily tasks.
+          16 browser-based utilities for text, dev, wellness, and daily tasks.
           Your tool data never leaves your browser. No paywalls, no sign-ups — kept free by non-intrusive Google ads.
         </p>
         <div
@@ -385,7 +386,7 @@ export default function App() {
               letterSpacing: "-0.5px",
             }}
           >
-            15 Tools Built for You
+            16 Tools Built for You
           </h2>
           <p style={{ color: "#64748b", margin: 0, fontSize: 15 }}>
             No sign-up, no tracking, completely free.
