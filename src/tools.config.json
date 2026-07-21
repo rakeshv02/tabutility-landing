@@ -52,6 +52,22 @@
           "url": "https://discount-calculator.tabutility.com",
           "status": "live",
           "emoji": "🏷️"
+        },
+        {
+          "id": "mortgage-calculator",
+          "name": "Mortgage Affordability Calculator",
+          "description": "Find out how much house you can afford based on your income, debts, and down payment. Shows DTI ratio, 3 affordability scenarios, and full monthly breakdown.",
+          "url": "https://mortgage-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🏠"
+        },
+        {
+          "id": "rent-vs-buy",
+          "name": "Rent vs Buy Calculator",
+          "description": "Find out whether renting or buying makes more financial sense. Compares total costs, break-even point, home equity, and opportunity cost of your down payment.",
+          "url": "https://rent-vs-buy.tabutility.com",
+          "status": "live",
+          "emoji": "🏡"
         }
       ]
     },
@@ -207,6 +223,14 @@
           "url": "https://meditation-timer.tabutility.com/",
           "status": "live",
           "emoji": "🧘"
+        },
+        {
+          "id": "tdee-calculator",
+          "name": "TDEE & Calorie Calculator",
+          "description": "Calculate your Total Daily Energy Expenditure, BMR, and exact daily calories for weight loss, maintenance, or muscle gain. Includes full macro breakdown.",
+          "url": "https://tdee-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🔥"
         }
       ]
     }
