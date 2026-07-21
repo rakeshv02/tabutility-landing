@@ -12,6 +12,46 @@
           "url": "https://percentage-calculator.tabutility.com",
           "status": "live",
           "emoji": "📊"
+        },
+        {
+          "id": "bmi-calculator",
+          "name": "BMI Calculator",
+          "description": "Calculate your Body Mass Index instantly in metric or imperial units. Find out if you are underweight, normal, overweight, or obese.",
+          "url": "https://bmi-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "⚖️"
+        },
+        {
+          "id": "age-calculator",
+          "name": "Age Calculator",
+          "description": "Find your exact age in years, months, days, weeks, and hours. See what day you were born on and how many days until your next birthday.",
+          "url": "https://age-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🎂"
+        },
+        {
+          "id": "tip-calculator",
+          "name": "Tip & Bill Split Calculator",
+          "description": "Calculate tip amount and split the bill between multiple people. See exactly what each person owes with custom tip percentages.",
+          "url": "https://tip-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🧾"
+        },
+        {
+          "id": "loan-calculator",
+          "name": "Loan Calculator",
+          "description": "Calculate your monthly payment, total interest, and full repayment cost for any loan. Perfect for personal loans, car loans, and mortgages.",
+          "url": "https://loan-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🏦"
+        },
+        {
+          "id": "discount-calculator",
+          "name": "Discount Calculator",
+          "description": "Calculate sale price, total savings, and discount percentage instantly. Works for percent off, dollar off, and reverse discount calculations.",
+          "url": "https://discount-calculator.tabutility.com",
+          "status": "live",
+          "emoji": "🏷️"
         }
       ]
     },
