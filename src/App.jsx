@@ -393,6 +393,54 @@ export default function App() {
           </p>
         </div>
 
+        {/* ── Featured: Loan Hub ── */}
+        <a
+          href="https://loan-calculator.tabutility.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            marginBottom: 36,
+            textDecoration: "none",
+            background: "linear-gradient(135deg, #1e1b4b, #3730a3)",
+            borderRadius: 20,
+            padding: "32px 36px",
+            boxShadow: "0 8px 32px rgba(99,102,241,0.25)",
+            transition: "transform 0.2s, box-shadow 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-2px)";
+            e.currentTarget.style.boxShadow = "0 12px 40px rgba(99,102,241,0.35)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "";
+            e.currentTarget.style.boxShadow = "0 8px 32px rgba(99,102,241,0.25)";
+          }}
+        >
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 24 }}>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.12)", borderRadius: 999, padding: "4px 12px", marginBottom: 14 }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#22c55e", display: "inline-block" }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.8)", textTransform: "uppercase", letterSpacing: "0.08em" }}>Featured Tool</span>
+              </div>
+              <h3 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800, color: "#fff" }}>🏦 Loan Calculator — Full Suite</h3>
+              <p style={{ margin: "0 0 20px", fontSize: 14, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, maxWidth: 480 }}>
+                Amortization schedule, rate &amp; term comparison, extra payment simulator, live rate links, and PDF export — all in one place.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {["Amortization Table", "Rate Comparison", "Term Comparison", "Extra Payment Sim", "PDF Export", "Live Rate Links"].map(f => (
+                  <span key={f} style={{ fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.1)", borderRadius: 999, padding: "4px 10px" }}>{f}</span>
+                ))}
+              </div>
+            </div>
+            <div style={{ flexShrink: 0, background: "rgba(255,255,255,0.1)", borderRadius: 16, padding: "20px 28px", textAlign: "center" }}>
+              <div style={{ fontSize: 40, marginBottom: 6 }}>📊</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Open Calculator</div>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Free · No sign-up</div>
+            </div>
+          </div>
+        </a>
+
         {(() => {
           const multiCategories = sortedCategories.filter(
             ([, c]) => c.tools.length > 1,
