@@ -237,16 +237,34 @@
   {
     "id": "uk-salary-calculator",
     "name": "UK Salary Calculator",
-    "description": "2024/25 income tax, National Insurance, pension and student loan.",
+    "description": "2025/26 income tax, National Insurance, pension and student loan.",
     "category": "International",
     "emoji": "💷",
     "url": "https://uk-salary-calculator.tabutility.com",
     "tags": ["uk", "salary", "income tax", "national insurance", "take home pay"]
   },
   {
+    "id": "uk-student-loan",
+    "name": "UK Student Loan Repayment Calculator",
+    "description": "Plans 1, 2, 4, 5 and Postgrad — repayment thresholds, interest rates and payoff timeline. 2025 figures.",
+    "category": "International",
+    "emoji": "🎓",
+    "url": "https://uk-student-loan.tabutility.com",
+    "tags": ["uk", "student loan", "plan 2", "plan 5", "repayment", "university"]
+  },
+  {
+    "id": "uk-maternity-pay",
+    "name": "UK Maternity Pay Calculator",
+    "description": "Statutory Maternity Pay week-by-week — SMP at £194.32/week (April 2025), enhanced pay and leave planner.",
+    "category": "International",
+    "emoji": "👶",
+    "url": "https://uk-maternity-pay.tabutility.com",
+    "tags": ["uk", "maternity pay", "smp", "parental leave", "pregnancy"]
+  },
+  {
     "id": "us-paycheck-calculator",
     "name": "US Paycheck Calculator",
-    "description": "Federal + state taxes, FICA and 401(k) for all 50 states — 2024.",
+    "description": "Federal + state taxes, FICA and 401(k) for all 50 states — 2026 tax year.",
     "category": "International",
     "emoji": "🇺🇸",
     "url": "https://us-paycheck-calculator.tabutility.com",
@@ -255,16 +273,25 @@
   {
     "id": "australian-tax-calculator",
     "name": "Australian Tax Calculator",
-    "description": "PAYG withholding, Medicare levy and take-home pay — 2024–25 ATO rates.",
+    "description": "PAYG withholding, Medicare levy and take-home pay — 2025–26 ATO rates.",
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australian-tax-calculator.tabutility.com",
     "tags": ["australia", "tax", "payg", "medicare", "take home pay", "ato"]
   },
   {
+    "id": "australia-hecs-calculator",
+    "name": "Australia HECS / HELP Calculator",
+    "description": "Compulsory repayments under the new 2025–26 marginal rate system, with payoff timeline.",
+    "category": "International",
+    "emoji": "🎓",
+    "url": "https://australia-hecs-calculator.tabutility.com",
+    "tags": ["australia", "hecs", "help", "student debt", "ato", "repayment"]
+  },
+  {
     "id": "canadian-tax-calculator",
     "name": "Canadian Tax Calculator",
-    "description": "Federal + provincial tax, CPP and EI for all 13 provinces — 2024.",
+    "description": "Federal + provincial tax, CPP and EI for all 13 provinces — 2026 rates.",
     "category": "International",
     "emoji": "🇨🇦",
     "url": "https://canadian-tax-calculator.tabutility.com",
@@ -282,7 +309,7 @@
   {
     "id": "uk-stamp-duty-calculator",
     "name": "UK Stamp Duty Calculator",
-    "description": "SDLT, LBTT and LTT for first-time buyers, home movers and buy-to-let.",
+    "description": "SDLT, LBTT and LTT for first-time buyers, home movers and buy-to-let — April 2025 thresholds.",
     "category": "International",
     "emoji": "🏡",
     "url": "https://uk-stamp-duty-calculator.tabutility.com",
