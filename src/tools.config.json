@@ -1,238 +1,291 @@
-{
-  "categories": {
-    "calculators": {
-      "name": "Calculators",
-      "color": "#2563eb",
-      "emoji": "📊",
-      "tools": [
-        {
-          "id": "percentage-calculator",
-          "name": "Percentage Calculator",
-          "description": "Calculate percentages, increases, decreases, and discounts instantly. Perfect for tips, tax, markups, and financial planning.",
-          "url": "https://percentage-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "📊"
-        },
-        {
-          "id": "bmi-calculator",
-          "name": "BMI Calculator",
-          "description": "Calculate your Body Mass Index instantly in metric or imperial units. Find out if you are underweight, normal, overweight, or obese.",
-          "url": "https://bmi-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "⚖️"
-        },
-        {
-          "id": "age-calculator",
-          "name": "Age Calculator",
-          "description": "Find your exact age in years, months, days, weeks, and hours. See what day you were born on and how many days until your next birthday.",
-          "url": "https://age-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🎂"
-        },
-        {
-          "id": "tip-calculator",
-          "name": "Tip & Bill Split Calculator",
-          "description": "Calculate tip amount and split the bill between multiple people. See exactly what each person owes with custom tip percentages.",
-          "url": "https://tip-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🧾"
-        },
-        {
-          "id": "loan-calculator",
-          "name": "Loan Calculator",
-          "description": "Calculate your monthly payment, total interest, and full repayment cost for any loan. Perfect for personal loans, car loans, and mortgages.",
-          "url": "https://loan-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🏦"
-        },
-        {
-          "id": "discount-calculator",
-          "name": "Discount Calculator",
-          "description": "Calculate sale price, total savings, and discount percentage instantly. Works for percent off, dollar off, and reverse discount calculations.",
-          "url": "https://discount-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🏷️"
-        },
-        {
-          "id": "mortgage-calculator",
-          "name": "Mortgage Affordability Calculator",
-          "description": "Find out how much house you can afford based on your income, debts, and down payment. Shows DTI ratio, 3 affordability scenarios, and full monthly breakdown.",
-          "url": "https://mortgage-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🏠"
-        },
-        {
-          "id": "rent-vs-buy",
-          "name": "Rent vs Buy Calculator",
-          "description": "Find out whether renting or buying makes more financial sense. Compares total costs, break-even point, home equity, and opportunity cost of your down payment.",
-          "url": "https://rent-vs-buy.tabutility.com",
-          "status": "live",
-          "emoji": "🏡"
-        }
-      ]
-    },
-    "image-tools": {
-      "name": "Image Tools",
-      "color": "#10b981",
-      "emoji": "🖼️",
-      "tools": [
-        {
-          "id": "image-compressor",
-          "name": "Image Compressor",
-          "description": "Compress PNG, JPEG, and WebP images up to 80% without losing quality. Reduce file size instantly for web, email, and storage.",
-          "url": "https://image-compressor.tabutility.com",
-          "status": "live",
-          "emoji": "🖼️"
-        }
-      ]
-    },
-    "converters": {
-      "name": "Converters",
-      "color": "#0891b2",
-      "emoji": "🔄",
-      "tools": [
-        {
-          "id": "unit-converter",
-          "name": "Unit Converter",
-          "description": "Convert length, weight, temperature, volume, speed, area and time instantly. cm to inches, kg to lbs, Celsius to Fahrenheit and hundreds more.",
-          "url": "https://unit-converter.tabutility.com",
-          "status": "live",
-          "emoji": "🔄"
-        }
-      ]
-    },
-    "developer-tools": {
-      "name": "Developer Tools",
-      "color": "#f59e0b",
-      "emoji": "{ }",
-      "tools": [
-        {
-          "id": "json-formatter",
-          "name": "JSON Formatter",
-          "description": "Format, validate, and minify JSON instantly. Beautify messy JSON, check for syntax errors, and compress for production.",
-          "url": "https://json-formatter.tabutility.com",
-          "status": "live",
-          "emoji": "{ }"
-        },
-        {
-          "id": "word-unscrambler",
-          "name": "Word Unscrambler",
-          "description": "Find all possible words from scrambled letters. Perfect for Scrabble, Wordle, word games, and solving letter puzzles instantly.",
-          "url": "https://word-unscrambler.tabutility.com",
-          "status": "live",
-          "emoji": "🔤"
-        },
-        {
-          "id": "base64-encoder",
-          "name": "Base64 Encoder",
-          "description": "Encode and decode Base64 strings instantly. Convert text to Base64 and back—essential for APIs, emails, and data encoding.",
-          "url": "https://base64-encoder.tabutility.com",
-          "status": "live",
-          "emoji": "🔐"
-        },
-        {
-          "id": "url-encoder",
-          "name": "URL Encoder",
-          "description": "Encode and decode URLs instantly. Convert special characters to URL-safe format for APIs, query strings, and web development.",
-          "url": "https://url-encoder.tabutility.com",
-          "status": "live",
-          "emoji": "🔗"
-        },
-        {
-          "id": "password-generator",
-          "name": "Password Generator",
-          "description": "Generate strong, random passwords instantly. Customize length, uppercase, numbers, and symbols for maximum security.",
-          "url": "https://password-generator.tabutility.com",
-          "status": "live",
-          "emoji": "🔑"
-        },
-        {
-          "id": "uuid-generator",
-          "name": "UUID Generator",
-          "description": "Generate unique UUIDs (v4) instantly. Perfect for database IDs, API keys, session tokens, and system identifiers.",
-          "url": "https://uuid-generator.tabutility.com",
-          "status": "live",
-          "emoji": "🆔"
-        },
-        {
-          "id": "markdown-to-html",
-          "name": "Markdown to HTML",
-          "description": "Convert Markdown to HTML instantly. Write in Markdown, get clean HTML—perfect for blogging, documentation, and content creation.",
-          "url": "https://markdown-to-html.tabutility.com",
-          "status": "live",
-          "emoji": "📝"
-        },
-        {
-          "id": "qr-code-generator",
-          "name": "QR Code Generator",
-          "description": "Generate QR codes from text or URLs instantly. Download as PNG for print, web, or mobile—perfect for marketing and tracking.",
-          "url": "https://qr-code-generator.tabutility.com",
-          "status": "live",
-          "emoji": "📲"
-        }
-      ]
-    },
-    "content-creators": {
-      "name": "Content Tools",
-      "color": "#ec4899",
-      "emoji": "✨",
-      "tools": [
-        {
-          "id": "word-counter",
-          "name": "Word Counter",
-          "description": "Count words, characters, sentences, paragraphs, and reading time instantly. Includes a character limit checker for tweets, LinkedIn, and more.",
-          "url": "https://word-counter.tabutility.com",
-          "status": "live",
-          "emoji": "📝"
-        },
-        {
-          "id": "email-writer",
-          "name": "AI Email Writer",
-          "description": "Write professional emails instantly with AI. Draft cold outreach, follow-ups, and business emails—free tier includes 5 emails/week.",
-          "url": "https://email-writer.tabutility.com",
-          "status": "live",
-          "emoji": "✉️"
-        },
-        {
-          "id": "content-repurposer",
-          "name": "Content Repurposer",
-          "description": "Turn one blog post into Twitter threads, LinkedIn posts, and email newsletters. Repurpose content in seconds—free tier includes 1 post/week.",
-          "url": "https://content-repurposer.tabutility.com",
-          "status": "live",
-          "emoji": "♻️"
-        },
-        {
-          "id": "ai-summarizer",
-          "name": "AI Summarizer",
-          "description": "Summarize articles, PDFs, and videos instantly. Get key points in seconds—free tier includes 3 summaries/week.",
-          "url": "https://ai-summarizer.tabutility.com",
-          "status": "live",
-          "emoji": "📚"
-        }
-      ]
-    },
-    "wellness": {
-      "name": "Wellness",
-      "color": "#8b5cf6",
-      "emoji": "🧘",
-      "tools": [
-        {
-          "id": "meditation-timer",
-          "name": "Meditation Timer",
-          "description": "Free meditation timer with ambient sounds. Choose duration, background sounds, and track your sessions. 100% private—runs on your device.",
-          "url": "https://meditation-timer.tabutility.com/",
-          "status": "live",
-          "emoji": "🧘"
-        },
-        {
-          "id": "tdee-calculator",
-          "name": "TDEE & Calorie Calculator",
-          "description": "Calculate your Total Daily Energy Expenditure, BMR, and exact daily calories for weight loss, maintenance, or muscle gain. Includes full macro breakdown.",
-          "url": "https://tdee-calculator.tabutility.com",
-          "status": "live",
-          "emoji": "🔥"
-        }
-      ]
-    }
+[
+  {
+    "id": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "description": "Calculate percentages, increases, decreases and differences instantly.",
+    "category": "Calculators",
+    "emoji": "📊",
+    "url": "https://percentage-calculator.tabutility.com",
+    "tags": ["math", "percentage", "calculator"]
+  },
+  {
+    "id": "bmi-calculator",
+    "name": "BMI Calculator",
+    "description": "Calculate your Body Mass Index with metric or imperial units.",
+    "category": "Calculators",
+    "emoji": "⚖️",
+    "url": "https://bmi-calculator.tabutility.com",
+    "tags": ["health", "bmi", "weight"]
+  },
+  {
+    "id": "age-calculator",
+    "name": "Age Calculator",
+    "description": "Find out your exact age in years, months, days and more.",
+    "category": "Calculators",
+    "emoji": "🎂",
+    "url": "https://age-calculator.tabutility.com",
+    "tags": ["age", "birthday", "date"]
+  },
+  {
+    "id": "tip-calculator",
+    "name": "Tip & Bill Splitter",
+    "description": "Calculate tips and split bills evenly between any number of people.",
+    "category": "Calculators",
+    "emoji": "🍽️",
+    "url": "https://tip-calculator.tabutility.com",
+    "tags": ["tip", "bill", "split", "restaurant"]
+  },
+  {
+    "id": "loan-calculator",
+    "name": "Loan Calculator Hub",
+    "description": "Full loan suite — monthly payments, amortization, rate comparison and more.",
+    "category": "Calculators",
+    "emoji": "🏦",
+    "url": "https://loan-calculator.tabutility.com",
+    "tags": ["loan", "mortgage", "interest", "amortization"],
+    "featured": true
+  },
+  {
+    "id": "discount-calculator",
+    "name": "Discount Calculator",
+    "description": "Find the sale price, discount amount or original price in seconds.",
+    "category": "Calculators",
+    "emoji": "🏷️",
+    "url": "https://discount-calculator.tabutility.com",
+    "tags": ["discount", "sale", "price", "savings"]
+  },
+  {
+    "id": "mortgage-calculator",
+    "name": "Mortgage Affordability",
+    "description": "How much house can you afford? DTI gauges, scenarios and monthly breakdown.",
+    "category": "Calculators",
+    "emoji": "🏠",
+    "url": "https://mortgage-calculator.tabutility.com",
+    "tags": ["mortgage", "affordability", "dti", "home"]
+  },
+  {
+    "id": "rent-vs-buy",
+    "name": "Rent vs Buy Calculator",
+    "description": "Total cost comparison, break-even point and opportunity cost analysis.",
+    "category": "Calculators",
+    "emoji": "🏡",
+    "url": "https://rent-vs-buy.tabutility.com",
+    "tags": ["rent", "buy", "property", "real estate"]
+  },
+  {
+    "id": "json-formatter",
+    "name": "JSON Formatter",
+    "description": "Beautify, minify and validate JSON instantly in your browser.",
+    "category": "Developer Tools",
+    "emoji": "{ }",
+    "url": "https://json-formatter.tabutility.com",
+    "tags": ["json", "format", "validate", "developer"]
+  },
+  {
+    "id": "word-unscrambler",
+    "name": "Word Unscrambler",
+    "description": "Unscramble letters to find all possible words — great for word games.",
+    "category": "Developer Tools",
+    "emoji": "🔤",
+    "url": "https://word-unscrambler.tabutility.com",
+    "tags": ["words", "scrabble", "unscramble", "anagram"]
+  },
+  {
+    "id": "base64-encoder",
+    "name": "Base64 Encoder / Decoder",
+    "description": "Encode and decode Base64 strings instantly.",
+    "category": "Developer Tools",
+    "emoji": "🔐",
+    "url": "https://base64-encoder.tabutility.com",
+    "tags": ["base64", "encode", "decode", "developer"]
+  },
+  {
+    "id": "url-encoder",
+    "name": "URL Encoder / Decoder",
+    "description": "Encode or decode URLs and query strings for use in web applications.",
+    "category": "Developer Tools",
+    "emoji": "🔗",
+    "url": "https://url-encoder.tabutility.com",
+    "tags": ["url", "encode", "decode", "developer"]
+  },
+  {
+    "id": "password-generator",
+    "name": "Password Generator",
+    "description": "Generate strong, secure passwords with custom length and character sets.",
+    "category": "Developer Tools",
+    "emoji": "🔑",
+    "url": "https://password-generator.tabutility.com",
+    "tags": ["password", "security", "generator", "random"]
+  },
+  {
+    "id": "uuid-generator",
+    "name": "UUID Generator",
+    "description": "Generate v4 UUIDs instantly — single or bulk, ready to copy.",
+    "category": "Developer Tools",
+    "emoji": "🆔",
+    "url": "https://uuid-generator.tabutility.com",
+    "tags": ["uuid", "guid", "generator", "developer"]
+  },
+  {
+    "id": "markdown-to-html",
+    "name": "Markdown to HTML",
+    "description": "Convert Markdown to clean HTML with live preview.",
+    "category": "Developer Tools",
+    "emoji": "📝",
+    "url": "https://markdown-to-html.tabutility.com",
+    "tags": ["markdown", "html", "convert", "developer"]
+  },
+  {
+    "id": "qr-code-generator",
+    "name": "QR Code Generator",
+    "description": "Generate QR codes for URLs, text, Wi-Fi and more. Download as PNG.",
+    "category": "Developer Tools",
+    "emoji": "📱",
+    "url": "https://qr-code-generator.tabutility.com",
+    "tags": ["qr", "qrcode", "generator", "scan"]
+  },
+  {
+    "id": "word-counter",
+    "name": "Word Counter",
+    "description": "Count words, characters, sentences and estimate reading time.",
+    "category": "Content Tools",
+    "emoji": "✍️",
+    "url": "https://word-counter.tabutility.com",
+    "tags": ["words", "count", "characters", "writing"]
+  },
+  {
+    "id": "ai-email-writer",
+    "name": "AI Email Writer",
+    "description": "Generate professional emails for any situation in seconds.",
+    "category": "Content Tools",
+    "emoji": "📧",
+    "url": "https://ai-email-writer.tabutility.com",
+    "tags": ["ai", "email", "writing", "professional"]
+  },
+  {
+    "id": "content-repurposer",
+    "name": "Content Repurposer",
+    "description": "Turn blog posts into tweets, LinkedIn posts, email newsletters and more.",
+    "category": "Content Tools",
+    "emoji": "♻️",
+    "url": "https://content-repurposer.tabutility.com",
+    "tags": ["content", "social media", "repurpose", "ai"]
+  },
+  {
+    "id": "ai-summarizer",
+    "name": "AI Summarizer",
+    "description": "Paste any text and get a clear, concise summary instantly.",
+    "category": "Content Tools",
+    "emoji": "📄",
+    "url": "https://ai-summarizer.tabutility.com",
+    "tags": ["ai", "summarize", "text", "summary"]
+  },
+  {
+    "id": "unit-converter",
+    "name": "Unit Converter",
+    "description": "Convert length, weight, temperature, area, volume and more.",
+    "category": "Converters",
+    "emoji": "📐",
+    "url": "https://unit-converter.tabutility.com",
+    "tags": ["convert", "units", "measurement", "metric"]
+  },
+  {
+    "id": "image-compressor",
+    "name": "Image Compressor",
+    "description": "Compress images in your browser — no upload, no server, 100% private.",
+    "category": "Image Tools",
+    "emoji": "🖼️",
+    "url": "https://image-compressor.tabutility.com",
+    "tags": ["image", "compress", "optimize", "jpg", "png"]
+  },
+  {
+    "id": "meditation-timer",
+    "name": "Meditation Timer",
+    "description": "Customisable meditation timer with ambient sounds and interval bells.",
+    "category": "Wellness",
+    "emoji": "🧘",
+    "url": "https://meditation-timer.tabutility.com",
+    "tags": ["meditation", "timer", "mindfulness", "wellness"]
+  },
+  {
+    "id": "tdee-calculator",
+    "name": "TDEE & Calorie Calculator",
+    "description": "Calculate BMR, TDEE and daily macros for your fitness goal.",
+    "category": "Wellness",
+    "emoji": "🔥",
+    "url": "https://tdee-calculator.tabutility.com",
+    "tags": ["tdee", "calories", "macros", "fitness", "bmr"]
+  },
+  {
+    "id": "vat-calculator",
+    "name": "VAT Calculator",
+    "description": "Add or remove UK VAT at 20%, 5% or 0%. Custom rates supported.",
+    "category": "International",
+    "emoji": "🇬🇧",
+    "url": "https://vat-calculator.tabutility.com",
+    "tags": ["vat", "tax", "uk", "business"]
+  },
+  {
+    "id": "gst-calculator",
+    "name": "GST Calculator",
+    "description": "GST calculator for India (all slabs + CGST/SGST), Australia and Canada.",
+    "category": "International",
+    "emoji": "🌏",
+    "url": "https://gst-calculator.tabutility.com",
+    "tags": ["gst", "tax", "india", "australia", "canada"]
+  },
+  {
+    "id": "uk-salary-calculator",
+    "name": "UK Salary Calculator",
+    "description": "2024/25 income tax, National Insurance, pension and student loan.",
+    "category": "International",
+    "emoji": "💷",
+    "url": "https://uk-salary-calculator.tabutility.com",
+    "tags": ["uk", "salary", "income tax", "national insurance", "take home pay"]
+  },
+  {
+    "id": "us-paycheck-calculator",
+    "name": "US Paycheck Calculator",
+    "description": "Federal + state taxes, FICA and 401(k) for all 50 states — 2024.",
+    "category": "International",
+    "emoji": "🇺🇸",
+    "url": "https://us-paycheck-calculator.tabutility.com",
+    "tags": ["usa", "paycheck", "federal tax", "state tax", "401k", "take home pay"]
+  },
+  {
+    "id": "australian-tax-calculator",
+    "name": "Australian Tax Calculator",
+    "description": "PAYG withholding, Medicare levy and take-home pay — 2024–25 ATO rates.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australian-tax-calculator.tabutility.com",
+    "tags": ["australia", "tax", "payg", "medicare", "take home pay", "ato"]
+  },
+  {
+    "id": "canadian-tax-calculator",
+    "name": "Canadian Tax Calculator",
+    "description": "Federal + provincial tax, CPP and EI for all 13 provinces — 2024.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canadian-tax-calculator.tabutility.com",
+    "tags": ["canada", "tax", "cra", "cpp", "ei", "provincial tax", "take home pay"]
+  },
+  {
+    "id": "uae-salary-calculator",
+    "name": "UAE Salary Calculator",
+    "description": "0% income tax for expats. See your full take-home vs UK, US and Australia.",
+    "category": "International",
+    "emoji": "🇦🇪",
+    "url": "https://uae-salary-calculator.tabutility.com",
+    "tags": ["uae", "dubai", "salary", "tax free", "expat", "take home pay"]
+  },
+  {
+    "id": "uk-stamp-duty-calculator",
+    "name": "UK Stamp Duty Calculator",
+    "description": "SDLT, LBTT and LTT for first-time buyers, home movers and buy-to-let.",
+    "category": "International",
+    "emoji": "🏡",
+    "url": "https://uk-stamp-duty-calculator.tabutility.com",
+    "tags": ["stamp duty", "sdlt", "uk", "property", "first time buyer", "buy to let"]
   }
-}
+]
