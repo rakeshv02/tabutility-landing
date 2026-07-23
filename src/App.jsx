@@ -18,8 +18,9 @@ const CATEGORY_COLORS = {
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
 
 export default function App() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch]               = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
+  const [view, setView]                   = useState("compact"); // "compact" | "detailed"
 
   const isFiltered = search.trim() !== "" || activeCategory !== "All";
 
@@ -64,7 +65,7 @@ export default function App() {
           <span style={{ position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)", fontSize: 16, pointerEvents: "none" }}>🔍</span>
           <input
             type="text"
-            placeholder="Search 100 tools…"
+            placeholder={`Search ${totalTools} tools…`}
             value={search}
             onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }}
             style={{ width: "100%", padding: "13px 14px 13px 42px", borderRadius: 12, border: "2px solid rgba(165,180,252,0.25)", background: "rgba(255,255,255,0.1)", color: "#fff", fontSize: 15, outline: "none", boxSizing: "border-box" }}
@@ -78,8 +79,10 @@ export default function App() {
 
       {/* ── Sticky Filter Bar ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 100, background: "#1e293b", borderBottom: "1px solid #334155", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 20px", overflowX: "auto" }}>
-          <div style={{ display: "flex", gap: 6, flexWrap: "nowrap", minWidth: "max-content" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 20px", display: "flex", alignItems: "center", gap: 12 }}>
+
+          {/* Category pills — scrollable */}
+          <div style={{ flex: 1, overflowX: "auto", display: "flex", gap: 6, flexWrap: "nowrap" }}>
             {CATEGORIES.map(cat => {
               const isActive = activeCategory === cat;
               const colors = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
@@ -92,13 +95,37 @@ export default function App() {
                     background: isActive ? colors.badge : "#334155",
                     color: isActive ? "#fff" : "#94a3b8",
                     fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .15s",
-                    display: "flex", alignItems: "center", gap: 5
+                    display: "flex", alignItems: "center", gap: 5, flexShrink: 0
                   }}>
                   {cat}
                   <span style={{ fontSize: 11, opacity: 0.8, background: isActive ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.1)", borderRadius: 10, padding: "1px 6px" }}>{count}</span>
                 </button>
               );
             })}
+          </div>
+
+          {/* View toggle — right side, never scrolls */}
+          <div style={{ display: "flex", gap: 2, background: "#334155", borderRadius: 8, padding: 3, flexShrink: 0 }}>
+            <button
+              onClick={() => setView("compact")}
+              title="Compact grid"
+              style={{
+                width: 32, height: 32, border: "none", borderRadius: 6, cursor: "pointer",
+                background: view === "compact" ? "#4f46e5" : "transparent",
+                color: view === "compact" ? "#fff" : "#94a3b8",
+                fontSize: 15, display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "all .15s"
+              }}>⊞</button>
+            <button
+              onClick={() => setView("detailed")}
+              title="Detailed cards"
+              style={{
+                width: 32, height: 32, border: "none", borderRadius: 6, cursor: "pointer",
+                background: view === "detailed" ? "#4f46e5" : "transparent",
+                color: view === "detailed" ? "#fff" : "#94a3b8",
+                fontSize: 15, display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "all .15s"
+              }}>☰</button>
           </div>
         </div>
       </div>
@@ -133,7 +160,9 @@ export default function App() {
 
         {/* Flat grid (search / category filter) */}
         {isFiltered && filtered.length > 0 && (
-          <ToolGrid tools={filtered} />
+          view === "compact"
+            ? <CompactGrid tools={filtered} />
+            : <DetailedGrid tools={filtered} />
         )}
 
         {/* No results */}
@@ -152,7 +181,10 @@ export default function App() {
               <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{category}</h2>
               <span style={{ background: (CATEGORY_COLORS[category] || DEFAULT_COLOR).badge, color: "#fff", fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 20 }}>{tools.length}</span>
             </div>
-            <ToolGrid tools={tools} />
+            {view === "compact"
+              ? <CompactGrid tools={tools} />
+              : <DetailedGrid tools={tools} />
+            }
           </div>
         ))}
       </div>
@@ -168,7 +200,56 @@ export default function App() {
   );
 }
 
-function ToolCard({ tool }) {
+/* ── Compact Grid: icon + name only, colour on hover ── */
+function CompactGrid({ tools }) {
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
+      {tools.map(tool => <CompactCard key={tool.id} tool={tool} />)}
+    </div>
+  );
+}
+
+function CompactCard({ tool }) {
+  const colors = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR;
+  const [hovered, setHovered] = useState(false);
+  return (
+    <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: hovered ? colors.light : "#fff",
+          borderRadius: 10,
+          padding: "12px 12px 10px",
+          border: `1.5px solid ${hovered ? colors.badge : "#e2e8f0"}`,
+          cursor: "pointer",
+          transition: "all 0.15s",
+          transform: hovered ? "translateY(-2px)" : "none",
+          boxShadow: hovered ? `0 4px 14px rgba(0,0,0,0.09)` : "0 1px 3px rgba(0,0,0,0.04)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          gap: 6,
+          boxSizing: "border-box",
+        }}>
+        <span style={{ fontSize: 26, lineHeight: 1 }}>{tool.emoji}</span>
+        <span style={{ fontSize: 12, fontWeight: 700, color: hovered ? colors.text : "#1e293b", lineHeight: 1.3 }}>{tool.name}</span>
+      </div>
+    </a>
+  );
+}
+
+/* ── Detailed Grid: full card with description ── */
+function DetailedGrid({ tools }) {
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 12 }}>
+      {tools.map(tool => <DetailedCard key={tool.id} tool={tool} />)}
+    </div>
+  );
+}
+
+function DetailedCard({ tool }) {
   const colors = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR;
   const [hovered, setHovered] = useState(false);
   return (
@@ -201,13 +282,5 @@ function ToolCard({ tool }) {
         <div style={{ fontSize: 12, color: colors.badge, fontWeight: 600 }}>Open →</div>
       </div>
     </a>
-  );
-}
-
-function ToolGrid({ tools }) {
-  return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 12 }}>
-      {tools.map(tool => <ToolCard key={tool.id} tool={tool} />)}
-    </div>
   );
 }
