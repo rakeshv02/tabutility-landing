@@ -145,13 +145,7 @@ export default function App() {
 
         {/* Grouped view (All, no search) */}
         {!isFiltered && grouped && Object.entries(grouped).map(([category, tools]) => (
-          <div key={category} style={{ marginBottom: 32 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-              <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{category}</h2>
-              <span style={{ background: (CATEGORY_COLORS[category] || DEFAULT_COLOR).badge, color: "#fff", fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 20 }}>{tools.length}</span>
-            </div>
-            <ToolGrid tools={tools} />
-          </div>
+          <CategorySection key={category} category={category} tools={tools} />
         ))}
       </div>
 
@@ -162,6 +156,53 @@ export default function App() {
         <div style={{ color: "#4b5563", fontSize: 12 }}>© {new Date().getFullYear()} Tabutility · All tools run in your browser · Your data never leaves your device</div>
       </div>
 
+    </div>
+  );
+}
+
+const PREVIEW_COUNT = 10;
+
+function CategorySection({ category, tools }) {
+  const colors = CATEGORY_COLORS[category] || DEFAULT_COLOR;
+  const [expanded, setExpanded] = useState(false);
+  const showAll = expanded || tools.length <= PREVIEW_COUNT;
+  const visible = showAll ? tools : tools.slice(0, PREVIEW_COUNT);
+  const remaining = tools.length - PREVIEW_COUNT;
+
+  return (
+    <div style={{ marginBottom: 36 }}>
+      {/* Header */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+        <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{category}</h2>
+        <span style={{ background: colors.badge, color: "#fff", fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 20 }}>{tools.length}</span>
+      </div>
+
+      {/* Cards */}
+      <ToolGrid tools={visible} />
+
+      {/* Show more / less */}
+      {tools.length > PREVIEW_COUNT && (
+        <div style={{ marginTop: 12, textAlign: "center" }}>
+          <button
+            onClick={() => setExpanded(e => !e)}
+            style={{
+              background: "#fff",
+              border: `1.5px solid ${colors.badge}`,
+              color: colors.badge,
+              borderRadius: 8,
+              padding: "7px 20px",
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: "pointer",
+              transition: "all .15s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = colors.light; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "#fff"; }}
+          >
+            {expanded ? "Show less ↑" : `Show ${remaining} more →`}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
