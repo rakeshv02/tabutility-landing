@@ -202,8 +202,20 @@ export default function App() {
 
 /* ── Compact Grid: icon + name only, colour on hover ── */
 function CompactGrid({ tools }) {
+  // If fewer than 4 tools, lay them out in a natural flex row so they don't stretch
+  if (tools.length < 4) {
+    return (
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        {tools.map(tool => (
+          <div key={tool.id} style={{ width: 120 }}>
+            <CompactCard tool={tool} />
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))", gap: 8 }}>
       {tools.map(tool => <CompactCard key={tool.id} tool={tool} />)}
     </div>
   );
