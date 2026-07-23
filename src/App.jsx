@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import toolsData from "./tools.config.json";
 
-const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "International", "Converters", "Image Tools", "Wellness"];
+const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
 
 const CATEGORY_COLORS = {
   "Calculators":     { bg: "#eef2ff", border: "#c7d2fe", badge: "#4f46e5", text: "#3730a3" },
@@ -11,6 +11,8 @@ const CATEGORY_COLORS = {
   "Converters":      { bg: "#f0f9ff", border: "#bae6fd", badge: "#0284c7", text: "#0369a1" },
   "Image Tools":     { bg: "#fff1f2", border: "#fecdd3", badge: "#e11d48", text: "#be123c" },
   "Wellness":        { bg: "#f0fdfa", border: "#99f6e4", badge: "#0d9488", text: "#0f766e" },
+  "Fun Tools":       { bg: "#fff9f0", border: "#fed7aa", badge: "#f97316", text: "#c2410c" },
+  "Productivity":    { bg: "#f0f9ff", border: "#7dd3fc", badge: "#0ea5e9", text: "#0369a1" },
 };
 
 export default function App() {
