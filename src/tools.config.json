@@ -712,5 +712,118 @@
     "emoji": "🇪🇸",
     "url": "https://spain-income-tax.tabutility.com",
     "tags": ["spain", "irpf", "spain tax", "seguridad social", "declaracion renta"]
+  },
+  {
+    "id": "stopwatch",
+    "name": "Online Stopwatch",
+    "description": "Lap timer stopwatch with colour-coded fastest and slowest splits. Runs entirely in your browser.",
+    "category": "Productivity",
+    "emoji": "⏱️",
+    "url": "https://stopwatch.tabutility.com",
+    "tags": ["stopwatch", "lap timer", "online stopwatch", "timer"],
+    "featured": true
+  },
+  {
+    "id": "countdown-timer",
+    "name": "Countdown Timer",
+    "description": "Set any time or pick a preset (1–120 min), get an audio alarm when it's done. Animated ring display.",
+    "category": "Productivity",
+    "emoji": "⏳",
+    "url": "https://countdown-timer.tabutility.com",
+    "tags": ["countdown timer", "timer", "online timer", "alarm timer"],
+    "featured": true
+  },
+  {
+    "id": "pomodoro-timer",
+    "name": "Pomodoro Timer",
+    "description": "25-minute focus sessions with short and long breaks. Customisable, session counter and audio alerts.",
+    "category": "Productivity",
+    "emoji": "🍅",
+    "url": "https://pomodoro-timer.tabutility.com",
+    "tags": ["pomodoro", "pomodoro timer", "focus timer", "productivity timer"],
+    "featured": true
+  },
+  {
+    "id": "alarm-clock",
+    "name": "Online Alarm Clock",
+    "description": "Set one or more browser alarms with labels. Animated analogue clock face with audio alert.",
+    "category": "Productivity",
+    "emoji": "🔔",
+    "url": "https://alarm-clock.tabutility.com",
+    "tags": ["alarm clock", "online alarm", "browser alarm", "wake up timer"]
+  },
+  {
+    "id": "name-picker",
+    "name": "Spin the Wheel — Name Picker",
+    "description": "Add names, spin the wheel and pick a random winner. Colour-coded segments, spin history.",
+    "category": "Fun Tools",
+    "emoji": "🎡",
+    "url": "https://name-picker.tabutility.com",
+    "tags": ["spin the wheel", "name picker", "random name", "wheel spinner", "random picker"],
+    "featured": true
+  },
+  {
+    "id": "coin-flip",
+    "name": "Coin Flip",
+    "description": "Flip a virtual coin and get heads or tails. Tracks streaks, flip history and heads/tails ratio.",
+    "category": "Fun Tools",
+    "emoji": "🪙",
+    "url": "https://coin-flip.tabutility.com",
+    "tags": ["coin flip", "heads or tails", "flip a coin", "random coin"]
+  },
+  {
+    "id": "dice-roller",
+    "name": "Dice Roller",
+    "description": "Roll D4, D6, D8, D10, D12, D20 or D100. Multiple dice, custom modifiers and roll history.",
+    "category": "Fun Tools",
+    "emoji": "🎲",
+    "url": "https://dice-roller.tabutility.com",
+    "tags": ["dice roller", "d20", "d6", "roll dice", "dnd dice", "random dice"]
+  },
+  {
+    "id": "random-number-generator",
+    "name": "Random Number Generator",
+    "description": "Generate one or thousands of random numbers in any range. No duplicates, sort, copy and stats.",
+    "category": "Fun Tools",
+    "emoji": "🔢",
+    "url": "https://random-number-generator.tabutility.com",
+    "tags": ["random number generator", "random number", "rng", "number picker", "lottery numbers"]
+  },
+  {
+    "id": "typing-speed-test",
+    "name": "Typing Speed Test",
+    "description": "Measure your WPM and accuracy with real-time feedback. Multiple passages and result history.",
+    "category": "Productivity",
+    "emoji": "⌨️",
+    "url": "https://typing-speed-test.tabutility.com",
+    "tags": ["typing speed test", "wpm test", "typing test", "words per minute", "typing practice"],
+    "featured": true
+  },
+  {
+    "id": "metronome",
+    "name": "Online Metronome",
+    "description": "Precise metronome with BPM slider, tap tempo, time signatures (2/4–8/4) and accent on beat 1.",
+    "category": "Productivity",
+    "emoji": "🎵",
+    "url": "https://metronome.tabutility.com",
+    "tags": ["metronome", "online metronome", "bpm", "tap tempo", "music practice"]
+  },
+  {
+    "id": "yes-or-no",
+    "name": "Yes or No Wheel",
+    "description": "Spin the wheel for a Yes, No or Maybe answer. Presets include 50/50 weighted and three-option.",
+    "category": "Fun Tools",
+    "emoji": "🎯",
+    "url": "https://yes-or-no.tabutility.com",
+    "tags": ["yes or no", "yes no wheel", "decision maker", "random yes no", "spin to decide"]
+  },
+  {
+    "id": "tally-counter",
+    "name": "Tally Counter",
+    "description": "Click to count. Multiple counters, custom step sizes, targets with progress bars and colour themes.",
+    "category": "Productivity",
+    "emoji": "🔢",
+    "url": "https://tally-counter.tabutility.com",
+    "tags": ["tally counter", "click counter", "count clicks", "inventory counter", "lap counter"]
   }
 ]
