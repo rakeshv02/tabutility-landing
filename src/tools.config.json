@@ -642,5 +642,110 @@
       "immigration",
       "pr"
     ]
+  },
+  {
+    "id": "ireland-income-tax",
+    "name": "Ireland Income Tax Calculator",
+    "description": "Calculate Irish take-home pay including PAYE, USC and PRSI — 2025 tax year.",
+    "category": "International",
+    "emoji": "🇮🇪",
+    "url": "https://ireland-income-tax.tabutility.com",
+    "tags": [
+      "ireland",
+      "paye",
+      "usc",
+      "prsi",
+      "irish tax"
+    ]
+  },
+  {
+    "id": "nz-income-tax-calculator",
+    "name": "New Zealand Income Tax Calculator",
+    "description": "Calculate NZ take-home pay including PAYE income tax and ACC earner levy — 2025.",
+    "category": "International",
+    "emoji": "🇳🇿",
+    "url": "https://nz-income-tax-calculator.tabutility.com",
+    "tags": [
+      "new zealand",
+      "nz",
+      "paye",
+      "acc",
+      "nz tax"
+    ]
+  },
+  {
+    "id": "germany-income-tax",
+    "name": "Germany Income Tax Calculator",
+    "description": "Calculate German take-home pay including Lohnsteuer, solidarity surcharge and social contributions — 2025.",
+    "category": "International",
+    "emoji": "🇩🇪",
+    "url": "https://germany-income-tax.tabutility.com",
+    "tags": [
+      "germany",
+      "lohnsteuer",
+      "german tax",
+      "brutto netto",
+      "sozialversicherung"
+    ]
+  },
+  {
+    "id": "netherlands-income-tax",
+    "name": "Netherlands Income Tax Calculator",
+    "description": "Calculate Dutch take-home pay with Box 1 tax, heffingskorting and arbeidskorting — 2025.",
+    "category": "International",
+    "emoji": "🇳🇱",
+    "url": "https://netherlands-income-tax.tabutility.com",
+    "tags": [
+      "netherlands",
+      "dutch tax",
+      "box 1",
+      "heffingskorting",
+      "belasting"
+    ]
+  },
+  {
+    "id": "singapore-income-tax",
+    "name": "Singapore Income Tax Calculator",
+    "description": "Calculate Singapore take-home pay including IRAS income tax and CPF contributions — YA 2025.",
+    "category": "International",
+    "emoji": "🇸🇬",
+    "url": "https://singapore-income-tax.tabutility.com",
+    "tags": [
+      "singapore",
+      "iras",
+      "cpf",
+      "ya 2025",
+      "singapore tax"
+    ]
+  },
+  {
+    "id": "south-africa-income-tax",
+    "name": "South Africa Income Tax Calculator",
+    "description": "Calculate South African take-home pay with SARS income tax, primary rebate and UIF — 2025/26.",
+    "category": "International",
+    "emoji": "🇿🇦",
+    "url": "https://south-africa-income-tax.tabutility.com",
+    "tags": [
+      "south africa",
+      "sars",
+      "uif",
+      "zar",
+      "south africa tax"
+    ]
+  },
+  {
+    "id": "spain-income-tax",
+    "name": "Spain Income Tax Calculator",
+    "description": "Calculate Spanish take-home pay including IRPF income tax and social security contributions — 2025.",
+    "category": "International",
+    "emoji": "🇪🇸",
+    "url": "https://spain-income-tax.tabutility.com",
+    "tags": [
+      "spain",
+      "irpf",
+      "spain tax",
+      "seguridad social",
+      "declaracion renta"
+    ]
   }
 ]
