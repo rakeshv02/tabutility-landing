@@ -6,7 +6,11 @@
     "category": "Calculators",
     "emoji": "📊",
     "url": "https://percentage-calculator.tabutility.com",
-    "tags": ["math", "percentage", "calculator"]
+    "tags": [
+      "math",
+      "percentage",
+      "calculator"
+    ]
   },
   {
     "id": "bmi-calculator",
@@ -15,7 +19,11 @@
     "category": "Calculators",
     "emoji": "⚖️",
     "url": "https://bmi-calculator.tabutility.com",
-    "tags": ["health", "bmi", "weight"]
+    "tags": [
+      "health",
+      "bmi",
+      "weight"
+    ]
   },
   {
     "id": "age-calculator",
@@ -24,7 +32,11 @@
     "category": "Calculators",
     "emoji": "🎂",
     "url": "https://age-calculator.tabutility.com",
-    "tags": ["age", "birthday", "date"]
+    "tags": [
+      "age",
+      "birthday",
+      "date"
+    ]
   },
   {
     "id": "tip-calculator",
@@ -33,7 +45,12 @@
     "category": "Calculators",
     "emoji": "🍽️",
     "url": "https://tip-calculator.tabutility.com",
-    "tags": ["tip", "bill", "split", "restaurant"]
+    "tags": [
+      "tip",
+      "bill",
+      "split",
+      "restaurant"
+    ]
   },
   {
     "id": "loan-calculator",
@@ -42,7 +59,12 @@
     "category": "Calculators",
     "emoji": "🏦",
     "url": "https://loan-calculator.tabutility.com",
-    "tags": ["loan", "mortgage", "interest", "amortization"],
+    "tags": [
+      "loan",
+      "mortgage",
+      "interest",
+      "amortization"
+    ],
     "featured": true
   },
   {
@@ -52,7 +74,12 @@
     "category": "Calculators",
     "emoji": "🏷️",
     "url": "https://discount-calculator.tabutility.com",
-    "tags": ["discount", "sale", "price", "savings"]
+    "tags": [
+      "discount",
+      "sale",
+      "price",
+      "savings"
+    ]
   },
   {
     "id": "mortgage-calculator",
@@ -61,7 +88,12 @@
     "category": "Calculators",
     "emoji": "🏠",
     "url": "https://mortgage-calculator.tabutility.com",
-    "tags": ["mortgage", "affordability", "dti", "home"]
+    "tags": [
+      "mortgage",
+      "affordability",
+      "dti",
+      "home"
+    ]
   },
   {
     "id": "rent-vs-buy",
@@ -70,7 +102,12 @@
     "category": "Calculators",
     "emoji": "🏡",
     "url": "https://rent-vs-buy.tabutility.com",
-    "tags": ["rent", "buy", "property", "real estate"]
+    "tags": [
+      "rent",
+      "buy",
+      "property",
+      "real estate"
+    ]
   },
   {
     "id": "compound-interest-calculator",
@@ -79,7 +116,12 @@
     "category": "Calculators",
     "emoji": "📈",
     "url": "https://compound-interest-calculator.tabutility.com",
-    "tags": ["compound interest", "savings", "investment", "growth"]
+    "tags": [
+      "compound interest",
+      "savings",
+      "investment",
+      "growth"
+    ]
   },
   {
     "id": "credit-card-payoff-calculator",
@@ -88,7 +130,12 @@
     "category": "Calculators",
     "emoji": "💳",
     "url": "https://credit-card-payoff-calculator.tabutility.com",
-    "tags": ["credit card", "debt", "payoff", "interest"]
+    "tags": [
+      "credit card",
+      "debt",
+      "payoff",
+      "interest"
+    ]
   },
   {
     "id": "savings-goal-calculator",
@@ -97,7 +144,12 @@
     "category": "Calculators",
     "emoji": "🎯",
     "url": "https://savings-goal-calculator.tabutility.com",
-    "tags": ["savings", "goal", "monthly savings", "target"]
+    "tags": [
+      "savings",
+      "goal",
+      "monthly savings",
+      "target"
+    ]
   },
   {
     "id": "retirement-calculator",
@@ -106,7 +158,13 @@
     "category": "Calculators",
     "emoji": "🔥",
     "url": "https://retirement-calculator.tabutility.com",
-    "tags": ["retirement", "fire", "pension", "savings", "financial independence"]
+    "tags": [
+      "retirement",
+      "fire",
+      "pension",
+      "savings",
+      "financial independence"
+    ]
   },
   {
     "id": "annuity-calculator",
@@ -115,7 +173,12 @@
     "category": "Calculators",
     "emoji": "📋",
     "url": "https://annuity-calculator.tabutility.com",
-    "tags": ["annuity", "pension", "retirement income", "payout"]
+    "tags": [
+      "annuity",
+      "pension",
+      "retirement income",
+      "payout"
+    ]
   },
   {
     "id": "debt-payoff",
@@ -124,7 +187,13 @@
     "category": "Calculators",
     "emoji": "💳",
     "url": "https://debt-payoff.tabutility.com",
-    "tags": ["debt", "payoff", "avalanche", "snowball", "interest"],
+    "tags": [
+      "debt",
+      "payoff",
+      "avalanche",
+      "snowball",
+      "interest"
+    ],
     "featured": true
   },
   {
@@ -134,7 +203,13 @@
     "category": "Calculators",
     "emoji": "💰",
     "url": "https://net-worth.tabutility.com",
-    "tags": ["net worth", "assets", "liabilities", "wealth", "personal finance"]
+    "tags": [
+      "net worth",
+      "assets",
+      "liabilities",
+      "wealth",
+      "personal finance"
+    ]
   },
   {
     "id": "emergency-fund",
@@ -143,7 +218,12 @@
     "category": "Calculators",
     "emoji": "🛡️",
     "url": "https://emergency-fund.tabutility.com",
-    "tags": ["emergency fund", "savings", "financial safety", "3 months expenses"]
+    "tags": [
+      "emergency fund",
+      "savings",
+      "financial safety",
+      "3 months expenses"
+    ]
   },
   {
     "id": "inflation",
@@ -152,7 +232,12 @@
     "category": "Calculators",
     "emoji": "📉",
     "url": "https://inflation.tabutility.com",
-    "tags": ["inflation", "purchasing power", "cpi", "cost of living"]
+    "tags": [
+      "inflation",
+      "purchasing power",
+      "cpi",
+      "cost of living"
+    ]
   },
   {
     "id": "roi",
@@ -161,7 +246,13 @@
     "category": "Calculators",
     "emoji": "📈",
     "url": "https://roi.tabutility.com",
-    "tags": ["roi", "return on investment", "cagr", "profit", "investment"]
+    "tags": [
+      "roi",
+      "return on investment",
+      "cagr",
+      "profit",
+      "investment"
+    ]
   },
   {
     "id": "apr",
@@ -170,7 +261,13 @@
     "category": "Calculators",
     "emoji": "🏦",
     "url": "https://apr.tabutility.com",
-    "tags": ["apr", "annual percentage rate", "loan", "interest", "fees"]
+    "tags": [
+      "apr",
+      "annual percentage rate",
+      "loan",
+      "interest",
+      "fees"
+    ]
   },
   {
     "id": "investment",
@@ -179,7 +276,13 @@
     "category": "Calculators",
     "emoji": "📊",
     "url": "https://investment.tabutility.com",
-    "tags": ["investment", "compound growth", "future value", "lump sum", "monthly contributions"]
+    "tags": [
+      "investment",
+      "compound growth",
+      "future value",
+      "lump sum",
+      "monthly contributions"
+    ]
   },
   {
     "id": "break-even",
@@ -188,7 +291,13 @@
     "category": "Calculators",
     "emoji": "⚖️",
     "url": "https://break-even.tabutility.com",
-    "tags": ["break even", "fixed costs", "variable costs", "business", "profit"]
+    "tags": [
+      "break even",
+      "fixed costs",
+      "variable costs",
+      "business",
+      "profit"
+    ]
   },
   {
     "id": "fuel-cost",
@@ -197,7 +306,14 @@
     "category": "Calculators",
     "emoji": "⛽",
     "url": "https://fuel-cost.tabutility.com",
-    "tags": ["fuel cost", "petrol", "gas", "mpg", "trip cost", "cost per mile"]
+    "tags": [
+      "fuel cost",
+      "petrol",
+      "gas",
+      "mpg",
+      "trip cost",
+      "cost per mile"
+    ]
   },
   {
     "id": "hourly-to-salary",
@@ -206,7 +322,12 @@
     "category": "Calculators",
     "emoji": "⏱️",
     "url": "https://hourly-to-salary.tabutility.com",
-    "tags": ["hourly to salary", "wage converter", "annual salary", "hourly rate"]
+    "tags": [
+      "hourly to salary",
+      "wage converter",
+      "annual salary",
+      "hourly rate"
+    ]
   },
   {
     "id": "overtime",
@@ -215,7 +336,13 @@
     "category": "Calculators",
     "emoji": "🕐",
     "url": "https://overtime.tabutility.com",
-    "tags": ["overtime", "time and a half", "double time", "overtime pay", "hourly"]
+    "tags": [
+      "overtime",
+      "time and a half",
+      "double time",
+      "overtime pay",
+      "hourly"
+    ]
   },
   {
     "id": "payrise",
@@ -224,7 +351,13 @@
     "category": "Calculators",
     "emoji": "🚀",
     "url": "https://payrise.tabutility.com",
-    "tags": ["pay rise", "salary increase", "raise", "inflation", "real wage"]
+    "tags": [
+      "pay rise",
+      "salary increase",
+      "raise",
+      "inflation",
+      "real wage"
+    ]
   },
   {
     "id": "currency-converter",
@@ -233,7 +366,14 @@
     "category": "Converters",
     "emoji": "💱",
     "url": "https://currency-converter.tabutility.com",
-    "tags": ["currency converter", "exchange rate", "forex", "usd", "gbp", "eur"],
+    "tags": [
+      "currency converter",
+      "exchange rate",
+      "forex",
+      "usd",
+      "gbp",
+      "eur"
+    ],
     "featured": true
   },
   {
@@ -243,7 +383,12 @@
     "category": "Developer Tools",
     "emoji": "{ }",
     "url": "https://json-formatter.tabutility.com",
-    "tags": ["json", "format", "validate", "developer"]
+    "tags": [
+      "json",
+      "format",
+      "validate",
+      "developer"
+    ]
   },
   {
     "id": "word-unscrambler",
@@ -252,7 +397,12 @@
     "category": "Developer Tools",
     "emoji": "🔤",
     "url": "https://word-unscrambler.tabutility.com",
-    "tags": ["words", "scrabble", "unscramble", "anagram"]
+    "tags": [
+      "words",
+      "scrabble",
+      "unscramble",
+      "anagram"
+    ]
   },
   {
     "id": "base64-encoder",
@@ -261,7 +411,12 @@
     "category": "Developer Tools",
     "emoji": "🔐",
     "url": "https://base64-encoder.tabutility.com",
-    "tags": ["base64", "encode", "decode", "developer"]
+    "tags": [
+      "base64",
+      "encode",
+      "decode",
+      "developer"
+    ]
   },
   {
     "id": "url-encoder",
@@ -270,7 +425,12 @@
     "category": "Developer Tools",
     "emoji": "🔗",
     "url": "https://url-encoder.tabutility.com",
-    "tags": ["url", "encode", "decode", "developer"]
+    "tags": [
+      "url",
+      "encode",
+      "decode",
+      "developer"
+    ]
   },
   {
     "id": "password-generator",
@@ -279,7 +439,12 @@
     "category": "Developer Tools",
     "emoji": "🔑",
     "url": "https://password-generator.tabutility.com",
-    "tags": ["password", "security", "generator", "random"]
+    "tags": [
+      "password",
+      "security",
+      "generator",
+      "random"
+    ]
   },
   {
     "id": "uuid-generator",
@@ -288,7 +453,12 @@
     "category": "Developer Tools",
     "emoji": "🆔",
     "url": "https://uuid-generator.tabutility.com",
-    "tags": ["uuid", "guid", "generator", "developer"]
+    "tags": [
+      "uuid",
+      "guid",
+      "generator",
+      "developer"
+    ]
   },
   {
     "id": "markdown-to-html",
@@ -297,7 +467,12 @@
     "category": "Developer Tools",
     "emoji": "📝",
     "url": "https://markdown-to-html.tabutility.com",
-    "tags": ["markdown", "html", "convert", "developer"]
+    "tags": [
+      "markdown",
+      "html",
+      "convert",
+      "developer"
+    ]
   },
   {
     "id": "qr-code-generator",
@@ -306,7 +481,12 @@
     "category": "Developer Tools",
     "emoji": "📱",
     "url": "https://qr-code-generator.tabutility.com",
-    "tags": ["qr", "qrcode", "generator", "scan"]
+    "tags": [
+      "qr",
+      "qrcode",
+      "generator",
+      "scan"
+    ]
   },
   {
     "id": "word-counter",
@@ -315,7 +495,12 @@
     "category": "Content Tools",
     "emoji": "✍️",
     "url": "https://word-counter.tabutility.com",
-    "tags": ["words", "count", "characters", "writing"]
+    "tags": [
+      "words",
+      "count",
+      "characters",
+      "writing"
+    ]
   },
   {
     "id": "unit-converter",
@@ -324,7 +509,12 @@
     "category": "Converters",
     "emoji": "📐",
     "url": "https://unit-converter.tabutility.com",
-    "tags": ["convert", "units", "measurement", "metric"]
+    "tags": [
+      "convert",
+      "units",
+      "measurement",
+      "metric"
+    ]
   },
   {
     "id": "image-compressor",
@@ -333,7 +523,13 @@
     "category": "Image Tools",
     "emoji": "🖼️",
     "url": "https://image-compressor.tabutility.com",
-    "tags": ["image", "compress", "optimize", "jpg", "png"]
+    "tags": [
+      "image",
+      "compress",
+      "optimize",
+      "jpg",
+      "png"
+    ]
   },
   {
     "id": "meditation-timer",
@@ -342,7 +538,12 @@
     "category": "Wellness",
     "emoji": "🧘",
     "url": "https://meditation-timer.tabutility.com",
-    "tags": ["meditation", "timer", "mindfulness", "wellness"]
+    "tags": [
+      "meditation",
+      "timer",
+      "mindfulness",
+      "wellness"
+    ]
   },
   {
     "id": "tdee-calculator",
@@ -351,7 +552,13 @@
     "category": "Wellness",
     "emoji": "🔥",
     "url": "https://tdee-calculator.tabutility.com",
-    "tags": ["tdee", "calories", "macros", "fitness", "bmr"]
+    "tags": [
+      "tdee",
+      "calories",
+      "macros",
+      "fitness",
+      "bmr"
+    ]
   },
   {
     "id": "vat-calculator",
@@ -360,7 +567,12 @@
     "category": "International",
     "emoji": "🇬🇧",
     "url": "https://vat-calculator.tabutility.com",
-    "tags": ["vat", "tax", "uk", "business"]
+    "tags": [
+      "vat",
+      "tax",
+      "uk",
+      "business"
+    ]
   },
   {
     "id": "gst-calculator",
@@ -369,7 +581,13 @@
     "category": "International",
     "emoji": "🌏",
     "url": "https://gst-calculator.tabutility.com",
-    "tags": ["gst", "tax", "india", "australia", "canada"]
+    "tags": [
+      "gst",
+      "tax",
+      "india",
+      "australia",
+      "canada"
+    ]
   },
   {
     "id": "uk-salary-calculator",
@@ -378,7 +596,13 @@
     "category": "International",
     "emoji": "💷",
     "url": "https://uk-salary-calculator.tabutility.com",
-    "tags": ["uk", "salary", "income tax", "national insurance", "take home pay"]
+    "tags": [
+      "uk",
+      "salary",
+      "income tax",
+      "national insurance",
+      "take home pay"
+    ]
   },
   {
     "id": "uk-student-loan",
@@ -387,7 +611,13 @@
     "category": "International",
     "emoji": "🎓",
     "url": "https://uk-student-loan.tabutility.com",
-    "tags": ["uk", "student loan", "plan 2", "plan 5", "repayment"]
+    "tags": [
+      "uk",
+      "student loan",
+      "plan 2",
+      "plan 5",
+      "repayment"
+    ]
   },
   {
     "id": "uk-maternity-pay",
@@ -396,7 +626,12 @@
     "category": "International",
     "emoji": "👶",
     "url": "https://uk-maternity-pay.tabutility.com",
-    "tags": ["uk", "maternity pay", "smp", "parental leave"]
+    "tags": [
+      "uk",
+      "maternity pay",
+      "smp",
+      "parental leave"
+    ]
   },
   {
     "id": "uk-capital-gains-tax",
@@ -405,7 +640,13 @@
     "category": "International",
     "emoji": "📈",
     "url": "https://uk-capital-gains-tax.tabutility.com",
-    "tags": ["uk", "capital gains tax", "cgt", "property", "shares"]
+    "tags": [
+      "uk",
+      "capital gains tax",
+      "cgt",
+      "property",
+      "shares"
+    ]
   },
   {
     "id": "uk-self-employed-tax",
@@ -414,7 +655,12 @@
     "category": "International",
     "emoji": "🧾",
     "url": "https://uk-self-employed-tax.tabutility.com",
-    "tags": ["uk", "self employed", "sole trader", "self assessment"]
+    "tags": [
+      "uk",
+      "self employed",
+      "sole trader",
+      "self assessment"
+    ]
   },
   {
     "id": "uk-ir35-calculator",
@@ -423,7 +669,13 @@
     "category": "International",
     "emoji": "🏢",
     "url": "https://uk-ir35-calculator.tabutility.com",
-    "tags": ["uk", "ir35", "contractor", "umbrella", "ltd company"]
+    "tags": [
+      "uk",
+      "ir35",
+      "contractor",
+      "umbrella",
+      "ltd company"
+    ]
   },
   {
     "id": "uk-stamp-duty-calculator",
@@ -432,7 +684,13 @@
     "category": "International",
     "emoji": "🏡",
     "url": "https://uk-stamp-duty-calculator.tabutility.com",
-    "tags": ["stamp duty", "sdlt", "uk", "property", "first time buyer"]
+    "tags": [
+      "stamp duty",
+      "sdlt",
+      "uk",
+      "property",
+      "first time buyer"
+    ]
   },
   {
     "id": "uk-dividend-tax",
@@ -441,7 +699,13 @@
     "category": "International",
     "emoji": "💷",
     "url": "https://uk-dividend-tax.tabutility.com",
-    "tags": ["uk", "dividend tax", "dividend allowance", "basic rate", "higher rate"]
+    "tags": [
+      "uk",
+      "dividend tax",
+      "dividend allowance",
+      "basic rate",
+      "higher rate"
+    ]
   },
   {
     "id": "uk-inheritance-tax",
@@ -450,7 +714,13 @@
     "category": "International",
     "emoji": "🏛️",
     "url": "https://uk-inheritance-tax.tabutility.com",
-    "tags": ["uk", "inheritance tax", "iht", "nil rate band", "estate tax"]
+    "tags": [
+      "uk",
+      "inheritance tax",
+      "iht",
+      "nil rate band",
+      "estate tax"
+    ]
   },
   {
     "id": "uk-pension-tax-relief",
@@ -459,7 +729,12 @@
     "category": "International",
     "emoji": "🏦",
     "url": "https://uk-pension-tax-relief.tabutility.com",
-    "tags": ["uk", "pension tax relief", "pension contributions", "higher rate relief"]
+    "tags": [
+      "uk",
+      "pension tax relief",
+      "pension contributions",
+      "higher rate relief"
+    ]
   },
   {
     "id": "uk-corporation-tax",
@@ -468,7 +743,13 @@
     "category": "International",
     "emoji": "🏢",
     "url": "https://uk-corporation-tax.tabutility.com",
-    "tags": ["uk", "corporation tax", "small profits rate", "marginal relief", "company tax"]
+    "tags": [
+      "uk",
+      "corporation tax",
+      "small profits rate",
+      "marginal relief",
+      "company tax"
+    ]
   },
   {
     "id": "uk-national-insurance",
@@ -477,7 +758,13 @@
     "category": "International",
     "emoji": "🇬🇧",
     "url": "https://uk-national-insurance.tabutility.com",
-    "tags": ["uk", "national insurance", "class 1 ni", "employer ni", "self employed ni"]
+    "tags": [
+      "uk",
+      "national insurance",
+      "class 1 ni",
+      "employer ni",
+      "self employed ni"
+    ]
   },
   {
     "id": "rental-yield",
@@ -486,7 +773,13 @@
     "category": "International",
     "emoji": "🏘️",
     "url": "https://rental-yield.tabutility.com",
-    "tags": ["rental yield", "buy to let", "property investment", "gross yield", "net yield"]
+    "tags": [
+      "rental yield",
+      "buy to let",
+      "property investment",
+      "gross yield",
+      "net yield"
+    ]
   },
   {
     "id": "rental-income-tax",
@@ -495,7 +788,13 @@
     "category": "International",
     "emoji": "🏠",
     "url": "https://rental-income-tax.tabutility.com",
-    "tags": ["uk", "rental income tax", "landlord tax", "section 24", "buy to let tax"]
+    "tags": [
+      "uk",
+      "rental income tax",
+      "landlord tax",
+      "section 24",
+      "buy to let tax"
+    ]
   },
   {
     "id": "buy-to-let-stamp-duty",
@@ -504,7 +803,12 @@
     "category": "International",
     "emoji": "🏘️",
     "url": "https://buy-to-let-stamp-duty.tabutility.com",
-    "tags": ["buy to let stamp duty", "additional dwellings surcharge", "second home sdlt", "landlord tax"]
+    "tags": [
+      "buy to let stamp duty",
+      "additional dwellings surcharge",
+      "second home sdlt",
+      "landlord tax"
+    ]
   },
   {
     "id": "us-paycheck-calculator",
@@ -513,7 +817,13 @@
     "category": "International",
     "emoji": "🇺🇸",
     "url": "https://us-paycheck-calculator.tabutility.com",
-    "tags": ["usa", "paycheck", "federal tax", "state tax", "take home pay"]
+    "tags": [
+      "usa",
+      "paycheck",
+      "federal tax",
+      "state tax",
+      "take home pay"
+    ]
   },
   {
     "id": "us-capital-gains-tax",
@@ -522,7 +832,13 @@
     "category": "International",
     "emoji": "🇺🇸",
     "url": "https://us-capital-gains-tax.tabutility.com",
-    "tags": ["usa", "capital gains tax", "long term capital gains", "short term", "niit"]
+    "tags": [
+      "usa",
+      "capital gains tax",
+      "long term capital gains",
+      "short term",
+      "niit"
+    ]
   },
   {
     "id": "us-self-employment-tax",
@@ -531,7 +847,14 @@
     "category": "International",
     "emoji": "💼",
     "url": "https://us-self-employment-tax.tabutility.com",
-    "tags": ["usa", "self employment tax", "se tax", "1099", "quarterly payments", "social security"]
+    "tags": [
+      "usa",
+      "self employment tax",
+      "se tax",
+      "1099",
+      "quarterly payments",
+      "social security"
+    ]
   },
   {
     "id": "us-401k",
@@ -540,7 +863,14 @@
     "category": "International",
     "emoji": "🏦",
     "url": "https://us-401k.tabutility.com",
-    "tags": ["usa", "401k", "employer match", "retirement", "tax savings", "contribution limit"]
+    "tags": [
+      "usa",
+      "401k",
+      "employer match",
+      "retirement",
+      "tax savings",
+      "contribution limit"
+    ]
   },
   {
     "id": "australian-tax-calculator",
@@ -549,7 +879,14 @@
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australian-tax-calculator.tabutility.com",
-    "tags": ["australia", "tax", "payg", "medicare", "take home pay", "ato"]
+    "tags": [
+      "australia",
+      "tax",
+      "payg",
+      "medicare",
+      "take home pay",
+      "ato"
+    ]
   },
   {
     "id": "australia-hecs-calculator",
@@ -558,7 +895,14 @@
     "category": "International",
     "emoji": "🎓",
     "url": "https://australia-hecs-calculator.tabutility.com",
-    "tags": ["australia", "hecs", "help", "student debt", "ato", "repayment"]
+    "tags": [
+      "australia",
+      "hecs",
+      "help",
+      "student debt",
+      "ato",
+      "repayment"
+    ]
   },
   {
     "id": "australia-stamp-duty",
@@ -567,7 +911,15 @@
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australia-stamp-duty.tabutility.com",
-    "tags": ["australia", "stamp duty", "transfer duty", "nsw", "vic", "qld", "first home buyer"]
+    "tags": [
+      "australia",
+      "stamp duty",
+      "transfer duty",
+      "nsw",
+      "vic",
+      "qld",
+      "first home buyer"
+    ]
   },
   {
     "id": "australia-super",
@@ -576,7 +928,14 @@
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australia-super.tabutility.com",
-    "tags": ["australia", "superannuation", "super", "sg rate", "retirement", "salary sacrifice"]
+    "tags": [
+      "australia",
+      "superannuation",
+      "super",
+      "sg rate",
+      "retirement",
+      "salary sacrifice"
+    ]
   },
   {
     "id": "australia-lmi-calculator",
@@ -585,7 +944,13 @@
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australia-lmi-calculator.tabutility.com",
-    "tags": ["australia", "lmi", "lenders mortgage insurance", "home loan", "lvr"]
+    "tags": [
+      "australia",
+      "lmi",
+      "lenders mortgage insurance",
+      "home loan",
+      "lvr"
+    ]
   },
   {
     "id": "australia-points-test",
@@ -594,7 +959,13 @@
     "category": "International",
     "emoji": "🇦🇺",
     "url": "https://australia-points-test.tabutility.com",
-    "tags": ["australia", "skilled migration", "points test", "visa", "immigration"]
+    "tags": [
+      "australia",
+      "skilled migration",
+      "points test",
+      "visa",
+      "immigration"
+    ]
   },
   {
     "id": "canadian-tax-calculator",
@@ -603,7 +974,15 @@
     "category": "International",
     "emoji": "🇨🇦",
     "url": "https://canadian-tax-calculator.tabutility.com",
-    "tags": ["canada", "tax", "cra", "cpp", "ei", "provincial tax", "take home pay"]
+    "tags": [
+      "canada",
+      "tax",
+      "cra",
+      "cpp",
+      "ei",
+      "provincial tax",
+      "take home pay"
+    ]
   },
   {
     "id": "canada-rrsp",
@@ -612,7 +991,13 @@
     "category": "International",
     "emoji": "🇨🇦",
     "url": "https://canada-rrsp.tabutility.com",
-    "tags": ["canada", "rrsp", "contribution room", "tax refund", "retirement savings"]
+    "tags": [
+      "canada",
+      "rrsp",
+      "contribution room",
+      "tax refund",
+      "retirement savings"
+    ]
   },
   {
     "id": "canada-land-transfer-tax",
@@ -621,7 +1006,13 @@
     "category": "International",
     "emoji": "🇨🇦",
     "url": "https://canada-land-transfer-tax.tabutility.com",
-    "tags": ["canada", "land transfer tax", "ontario ltt", "bc property transfer tax", "first time buyer"]
+    "tags": [
+      "canada",
+      "land transfer tax",
+      "ontario ltt",
+      "bc property transfer tax",
+      "first time buyer"
+    ]
   },
   {
     "id": "canada-express-entry",
@@ -630,7 +1021,13 @@
     "category": "International",
     "emoji": "🇨🇦",
     "url": "https://canada-express-entry.tabutility.com",
-    "tags": ["canada", "express entry", "crs score", "immigration", "pr"]
+    "tags": [
+      "canada",
+      "express entry",
+      "crs score",
+      "immigration",
+      "pr"
+    ]
   },
   {
     "id": "uae-salary-calculator",
@@ -639,7 +1036,14 @@
     "category": "International",
     "emoji": "🇦🇪",
     "url": "https://uae-salary-calculator.tabutility.com",
-    "tags": ["uae", "dubai", "salary", "tax free", "expat", "take home pay"]
+    "tags": [
+      "uae",
+      "dubai",
+      "salary",
+      "tax free",
+      "expat",
+      "take home pay"
+    ]
   },
   {
     "id": "schengen-calculator",
@@ -648,7 +1052,13 @@
     "category": "International",
     "emoji": "🇪🇺",
     "url": "https://schengen-calculator.tabutility.com",
-    "tags": ["schengen", "visa", "90 day rule", "europe", "travel"]
+    "tags": [
+      "schengen",
+      "visa",
+      "90 day rule",
+      "europe",
+      "travel"
+    ]
   },
   {
     "id": "ireland-income-tax",
@@ -657,7 +1067,13 @@
     "category": "International",
     "emoji": "🇮🇪",
     "url": "https://ireland-income-tax.tabutility.com",
-    "tags": ["ireland", "paye", "usc", "prsi", "irish tax"]
+    "tags": [
+      "ireland",
+      "paye",
+      "usc",
+      "prsi",
+      "irish tax"
+    ]
   },
   {
     "id": "nz-income-tax-calculator",
@@ -666,7 +1082,13 @@
     "category": "International",
     "emoji": "🇳🇿",
     "url": "https://nz-income-tax-calculator.tabutility.com",
-    "tags": ["new zealand", "nz", "paye", "acc", "nz tax"]
+    "tags": [
+      "new zealand",
+      "nz",
+      "paye",
+      "acc",
+      "nz tax"
+    ]
   },
   {
     "id": "germany-income-tax",
@@ -675,7 +1097,13 @@
     "category": "International",
     "emoji": "🇩🇪",
     "url": "https://germany-income-tax.tabutility.com",
-    "tags": ["germany", "lohnsteuer", "german tax", "brutto netto", "sozialversicherung"]
+    "tags": [
+      "germany",
+      "lohnsteuer",
+      "german tax",
+      "brutto netto",
+      "sozialversicherung"
+    ]
   },
   {
     "id": "netherlands-income-tax",
@@ -684,7 +1112,13 @@
     "category": "International",
     "emoji": "🇳🇱",
     "url": "https://netherlands-income-tax.tabutility.com",
-    "tags": ["netherlands", "dutch tax", "box 1", "heffingskorting", "belasting"]
+    "tags": [
+      "netherlands",
+      "dutch tax",
+      "box 1",
+      "heffingskorting",
+      "belasting"
+    ]
   },
   {
     "id": "singapore-income-tax",
@@ -693,7 +1127,13 @@
     "category": "International",
     "emoji": "🇸🇬",
     "url": "https://singapore-income-tax.tabutility.com",
-    "tags": ["singapore", "iras", "cpf", "ya 2025", "singapore tax"]
+    "tags": [
+      "singapore",
+      "iras",
+      "cpf",
+      "ya 2025",
+      "singapore tax"
+    ]
   },
   {
     "id": "south-africa-income-tax",
@@ -702,7 +1142,13 @@
     "category": "International",
     "emoji": "🇿🇦",
     "url": "https://south-africa-income-tax.tabutility.com",
-    "tags": ["south africa", "sars", "uif", "zar", "south africa tax"]
+    "tags": [
+      "south africa",
+      "sars",
+      "uif",
+      "zar",
+      "south africa tax"
+    ]
   },
   {
     "id": "spain-income-tax",
@@ -711,7 +1157,13 @@
     "category": "International",
     "emoji": "🇪🇸",
     "url": "https://spain-income-tax.tabutility.com",
-    "tags": ["spain", "irpf", "spain tax", "seguridad social", "declaracion renta"]
+    "tags": [
+      "spain",
+      "irpf",
+      "spain tax",
+      "seguridad social",
+      "declaracion renta"
+    ]
   },
   {
     "id": "stopwatch",
@@ -720,7 +1172,12 @@
     "category": "Productivity",
     "emoji": "⏱️",
     "url": "https://stopwatch.tabutility.com",
-    "tags": ["stopwatch", "lap timer", "online stopwatch", "timer"],
+    "tags": [
+      "stopwatch",
+      "lap timer",
+      "online stopwatch",
+      "timer"
+    ],
     "featured": true
   },
   {
@@ -730,7 +1187,12 @@
     "category": "Productivity",
     "emoji": "⏳",
     "url": "https://countdown-timer.tabutility.com",
-    "tags": ["countdown timer", "timer", "online timer", "alarm timer"],
+    "tags": [
+      "countdown timer",
+      "timer",
+      "online timer",
+      "alarm timer"
+    ],
     "featured": true
   },
   {
@@ -740,7 +1202,12 @@
     "category": "Productivity",
     "emoji": "🍅",
     "url": "https://pomodoro-timer.tabutility.com",
-    "tags": ["pomodoro", "pomodoro timer", "focus timer", "productivity timer"],
+    "tags": [
+      "pomodoro",
+      "pomodoro timer",
+      "focus timer",
+      "productivity timer"
+    ],
     "featured": true
   },
   {
@@ -750,7 +1217,12 @@
     "category": "Productivity",
     "emoji": "🔔",
     "url": "https://alarm-clock.tabutility.com",
-    "tags": ["alarm clock", "online alarm", "browser alarm", "wake up timer"]
+    "tags": [
+      "alarm clock",
+      "online alarm",
+      "browser alarm",
+      "wake up timer"
+    ]
   },
   {
     "id": "name-picker",
@@ -759,7 +1231,13 @@
     "category": "Fun Tools",
     "emoji": "🎡",
     "url": "https://name-picker.tabutility.com",
-    "tags": ["spin the wheel", "name picker", "random name", "wheel spinner", "random picker"],
+    "tags": [
+      "spin the wheel",
+      "name picker",
+      "random name",
+      "wheel spinner",
+      "random picker"
+    ],
     "featured": true
   },
   {
@@ -769,7 +1247,12 @@
     "category": "Fun Tools",
     "emoji": "🪙",
     "url": "https://coin-flip.tabutility.com",
-    "tags": ["coin flip", "heads or tails", "flip a coin", "random coin"]
+    "tags": [
+      "coin flip",
+      "heads or tails",
+      "flip a coin",
+      "random coin"
+    ]
   },
   {
     "id": "dice-roller",
@@ -778,7 +1261,14 @@
     "category": "Fun Tools",
     "emoji": "🎲",
     "url": "https://dice-roller.tabutility.com",
-    "tags": ["dice roller", "d20", "d6", "roll dice", "dnd dice", "random dice"]
+    "tags": [
+      "dice roller",
+      "d20",
+      "d6",
+      "roll dice",
+      "dnd dice",
+      "random dice"
+    ]
   },
   {
     "id": "random-number-generator",
@@ -787,7 +1277,13 @@
     "category": "Fun Tools",
     "emoji": "🔢",
     "url": "https://random-number-generator.tabutility.com",
-    "tags": ["random number generator", "random number", "rng", "number picker", "lottery numbers"]
+    "tags": [
+      "random number generator",
+      "random number",
+      "rng",
+      "number picker",
+      "lottery numbers"
+    ]
   },
   {
     "id": "typing-speed-test",
@@ -796,7 +1292,13 @@
     "category": "Productivity",
     "emoji": "⌨️",
     "url": "https://typing-speed-test.tabutility.com",
-    "tags": ["typing speed test", "wpm test", "typing test", "words per minute", "typing practice"],
+    "tags": [
+      "typing speed test",
+      "wpm test",
+      "typing test",
+      "words per minute",
+      "typing practice"
+    ],
     "featured": true
   },
   {
@@ -806,7 +1308,13 @@
     "category": "Productivity",
     "emoji": "🎵",
     "url": "https://metronome.tabutility.com",
-    "tags": ["metronome", "online metronome", "bpm", "tap tempo", "music practice"]
+    "tags": [
+      "metronome",
+      "online metronome",
+      "bpm",
+      "tap tempo",
+      "music practice"
+    ]
   },
   {
     "id": "yes-or-no",
@@ -815,7 +1323,13 @@
     "category": "Fun Tools",
     "emoji": "🎯",
     "url": "https://yes-or-no.tabutility.com",
-    "tags": ["yes or no", "yes no wheel", "decision maker", "random yes no", "spin to decide"]
+    "tags": [
+      "yes or no",
+      "yes no wheel",
+      "decision maker",
+      "random yes no",
+      "spin to decide"
+    ]
   },
   {
     "id": "tally-counter",
@@ -824,6 +1338,149 @@
     "category": "Productivity",
     "emoji": "🔢",
     "url": "https://tally-counter.tabutility.com",
-    "tags": ["tally counter", "click counter", "count clicks", "inventory counter", "lap counter"]
+    "tags": [
+      "tally counter",
+      "click counter",
+      "count clicks",
+      "inventory counter",
+      "lap counter"
+    ]
+  },
+  {
+    "id": "scientific-calculator",
+    "name": "Scientific Calculator",
+    "description": "Full scientific calculator with trig, logarithms, powers, roots, constants and inverse functions. Works instantly in your browser.",
+    "emoji": "🧮",
+    "category": "Calculators",
+    "url": "https://scientific-calculator.tabutility.com",
+    "tags": [
+      "sin",
+      "cos",
+      "tan",
+      "log",
+      "sqrt",
+      "pi",
+      "scientific"
+    ]
+  },
+  {
+    "id": "sales-tax-calculator",
+    "name": "Sales Tax Calculator",
+    "description": "Add or remove US sales tax from any price. All 50 state rates included. Supports custom rates too.",
+    "emoji": "🧾",
+    "category": "Calculators",
+    "url": "https://sales-tax-calculator.tabutility.com",
+    "tags": [
+      "sales tax",
+      "vat",
+      "tax",
+      "price",
+      "us tax"
+    ]
+  },
+  {
+    "id": "gpa-calculator",
+    "name": "GPA Calculator",
+    "description": "Calculate your GPA by adding courses, letter grades and credit hours. Real-time 4.0 scale result with letter grade and progress bar.",
+    "emoji": "🎓",
+    "category": "Calculators",
+    "url": "https://gpa-calculator.tabutility.com",
+    "tags": [
+      "gpa",
+      "grade point average",
+      "college",
+      "university",
+      "grades"
+    ]
+  },
+  {
+    "id": "body-fat-calculator",
+    "name": "Body Fat % Calculator",
+    "description": "Estimate your body fat percentage using the US Navy circumference method. Get your fitness category and reference ranges instantly.",
+    "emoji": "💪",
+    "category": "Wellness",
+    "url": "https://body-fat-calculator.tabutility.com",
+    "tags": [
+      "body fat",
+      "fitness",
+      "health",
+      "navy method",
+      "bmi"
+    ]
+  },
+  {
+    "id": "due-date-calculator",
+    "name": "Pregnancy Due Date Calculator",
+    "description": "Calculate your estimated due date from your last period, conception date or ultrasound. Includes trimester timeline and key milestones.",
+    "emoji": "🤰",
+    "category": "Wellness",
+    "url": "https://due-date-calculator.tabutility.com",
+    "tags": [
+      "due date",
+      "pregnancy",
+      "baby",
+      "lmp",
+      "trimester"
+    ]
+  },
+  {
+    "id": "sleep-calculator",
+    "name": "Sleep Calculator",
+    "description": "Find the best times to sleep or wake up based on 90-minute sleep cycles so you always wake feeling refreshed.",
+    "emoji": "😴",
+    "category": "Wellness",
+    "url": "https://sleep-calculator.tabutility.com",
+    "tags": [
+      "sleep",
+      "wake up",
+      "bedtime",
+      "sleep cycle",
+      "insomnia"
+    ]
+  },
+  {
+    "id": "car-lease-calculator",
+    "name": "Car Lease Calculator",
+    "description": "Calculate your monthly car lease payment, total cost and equivalent APR from cap cost, residual value and money factor.",
+    "emoji": "🚗",
+    "category": "Calculators",
+    "url": "https://car-lease-calculator.tabutility.com",
+    "tags": [
+      "car lease",
+      "lease payment",
+      "money factor",
+      "residual",
+      "auto"
+    ]
+  },
+  {
+    "id": "grade-calculator",
+    "name": "Grade Calculator",
+    "description": "Calculate your current grade, find what you need on the final exam, or compute your weighted course grade across categories.",
+    "emoji": "📝",
+    "category": "Calculators",
+    "url": "https://grade-calculator.tabutility.com",
+    "tags": [
+      "grade",
+      "final exam",
+      "weighted grade",
+      "score",
+      "percentage"
+    ]
+  },
+  {
+    "id": "water-intake-calculator",
+    "name": "Water Intake Calculator",
+    "description": "Find out how much water you should drink per day based on your weight, activity level and climate. Shows cups, bottles, ml and oz.",
+    "emoji": "💧",
+    "category": "Wellness",
+    "url": "https://water-intake-calculator.tabutility.com",
+    "tags": [
+      "water",
+      "hydration",
+      "daily water",
+      "health",
+      "wellness"
+    ]
   }
 ]
