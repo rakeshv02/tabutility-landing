@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabutility – Tool Status</title>
+  <meta name="description" content="Live status of all Tabutility tools. See which calculators and utilities are up and running right now." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #16a34a;
+      --green-bg: #f0fdf4;
+      --green-border: #bbf7d0;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+      --red-border: #fecaca;
+      --gray: #6b7280;
+      --text: #111827;
+      --subtext: #4b5563;
+      --border: #e5e7eb;
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header a {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    header span.sep { color: var(--border); font-size: 1.2rem; }
+    header span.page { font-size: 1rem; font-weight: 500; color: var(--subtext); }
+
+    main { max-width: 900px; margin: 0 auto; padding: 32px 16px 64px; }
+
+    #banner {
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    #banner.all-up {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: var(--green);
+    }
+
+    #banner.has-down {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      color: var(--red);
+    }
+
+    #banner .icon { font-size: 1.5rem; line-height: 1; }
+    #banner .meta { font-size: 0.82rem; font-weight: 400; color: var(--subtext); margin-top: 3px; }
+
+    #checked-at {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    #filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 0.82rem;
+      cursor: pointer;
+      color: var(--subtext);
+      transition: all 0.15s;
+    }
+
+    .filter-btn.active {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    #tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+
+    .tool-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-color: #d1d5db; }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot.up   { background: var(--green); box-shadow: 0 0 0 3px rgba(22,163,74,0.18); }
+    .dot.down { background: var(--red);   box-shadow: 0 0 0 3px rgba(220,38,38,0.18); }
+
+    .tool-info { flex: 1; min-width: 0; }
+    .tool-name { font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .tool-status { font-size: 0.76rem; color: var(--gray); margin-top: 2px; }
+    .tool-status.is-down { color: var(--red); }
+
+    #loading { text-align: center; padding: 64px 0; color: var(--gray); font-size: 1rem; }
+    #error   { text-align: center; padding: 64px 0; color: var(--red); }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+    }
+    footer a { color: inherit; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/">Tabutility</a>
+  <span class="sep">/</span>
+  <span class="page">Status</span>
+</header>
+
+<main>
+  <div id="loading">Loading status&hellip;</div>
+  <div id="error" hidden></div>
+
+  <div id="content" hidden>
+    <div id="banner">
+      <span class="icon"></span>
+      <div>
+        <div id="banner-text"></div>
+        <div class="meta" id="banner-meta"></div>
+      </div>
+    </div>
+
+    <div id="checked-at"></div>
+
+    <div id="filters">
+      <button class="filter-btn active" data-filter="all">All tools</button>
+      <button class="filter-btn" data-filter="up">Up only</button>
+      <button class="filter-btn" data-filter="down">Issues only</button>
+    </div>
+
+    <div id="tool-grid"></div>
+  </div>
+</main>
+
+<footer>
+  Status updated daily &middot; <a href="/">Back to Tabutility</a>
+</footer>
+
+<script>
+  var loadingEl = document.getElementById('loading');
+  var errorEl   = document.getElementById('error');
+  var contentEl = document.getElementById('content');
+  var gridEl    = document.getElementById('tool-grid');
+  var bannerEl  = document.getElementById('banner');
+
+  var allTools = [];
+  var activeFilter = 'all';
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderGrid() {
+    var filtered = activeFilter === 'all'  ? allTools
+                 : activeFilter === 'up'   ? allTools.filter(function(t){ return t.ok; })
+                 :                           allTools.filter(function(t){ return !t.ok; });
+
+    if (filtered.length === 0) {
+      gridEl.innerHTML = '<p style="color:var(--gray);font-size:.9rem;padding:16px 0;">No tools match this filter.</p>';
+      return;
+    }
+
+    gridEl.innerHTML = filtered.map(function(t) {
+      return '<a class="tool-card" href="' + escHtml(t.url) + '" target="_blank" rel="noopener">'
+        + '<span class="dot ' + (t.ok ? 'up' : 'down') + '"></span>'
+        + '<div class="tool-info">'
+        + '<div class="tool-name">' + escHtml(t.name) + '</div>'
+        + '<div class="tool-status' + (t.ok ? '' : ' is-down') + '">'
+        + (t.ok ? 'Operational' : 'Issue detected &middot; ' + escHtml(String(t.status)))
+        + '</div>'
+        + '</div>'
+        + '</a>';
+    }).join('');
+  }
+
+  document.getElementById('filters').addEventListener('click', function(e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    activeFilter = btn.dataset.filter;
+    document.querySelectorAll('.filter-btn').forEach(function(b) {
+      b.classList.toggle('active', b === btn);
+    });
+    renderGrid();
+  });
+
+  function loadStatus() {
+    fetch('/status.json?t=' + Date.now())
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function(data) {
+        allTools = data.tools || [];
+
+        // Banner
+        var iconEl      = document.querySelector('#banner .icon');
+        var bannerText  = document.getElementById('banner-text');
+        var bannerMeta  = document.getElementById('banner-meta');
+
+        if (data.allUp) {
+          bannerEl.className = 'all-up';
+          iconEl.textContent = '\u2705';
+          bannerText.textContent = 'All ' + data.totalCount + ' tools are operational';
+          bannerMeta.textContent = 'Everything is running normally';
+        } else {
+          bannerEl.className = 'has-down';
+          iconEl.textContent = '\u26a0\ufe0f';
+          bannerText.textContent = data.downCount + ' tool' + (data.downCount === 1 ? '' : 's') + ' with issues';
+          bannerMeta.textContent = data.upCount + ' of ' + data.totalCount + ' tools are operational';
+        }
+
+        // Timestamp
+        var checkedAtEl = document.getElementById('checked-at');
+        if (data.checkedAt) {
+          var d = new Date(data.checkedAt);
+          checkedAtEl.textContent = 'Last checked: ' + d.toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) + ' (local time)';
+        }
+
+        renderGrid();
+        loadingEl.hidden = true;
+        contentEl.hidden = false;
+      })
+      .catch(function(err) {
+        loadingEl.hidden = true;
+        errorEl.hidden = false;
+        errorEl.textContent = 'Could not load status data. Please try again later.';
+        console.error(err);
+      });
+  }
+
+  loadStatus();
+</script>
+</body>
+</html>
