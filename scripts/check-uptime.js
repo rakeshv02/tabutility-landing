@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
  * check-uptime.js
- * Reads tools.config.json, HTTP-checks every URL, and writes results to
- * GitHub Actions outputs so the workflow can open/close issues.
+ * Reads tools.config.json, HTTP-checks every URL, writes results to
+ * public/status.json, and sets GitHub Actions outputs for issue management.
  *
  * Output:
  *   failures  – JSON array of { id, url, status } for non-200 responses
  *               (empty string when all pass)
+ *   public/status.json – full per-tool results for the public status page
  */
 
 const fs = require('fs');
@@ -77,7 +78,8 @@ function setOutput(name, value) {
 // ── main ─────────────────────────────────────────────────────────────────────
 
 (async () => {
-  const configPath = path.join(__dirname, '..', 'tools.config.json');
+  // tools.config.json lives in src/
+  const configPath = path.join(__dirname, '..', 'src', 'tools.config.json');
   const tools = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
   console.log(`Checking ${tools.length} tools…`);
@@ -86,13 +88,30 @@ function setOutput(name, value) {
     const result = await checkUrl(tool.url);
     const ok = result.status === 200;
     console.log(`${ok ? '✅' : '❌'} [${result.status}] ${tool.url}`);
-    return { id: tool.id, url: tool.url, status: result.status, ok };
+    return { id: tool.id, name: tool.name, url: tool.url, status: result.status, ok };
   });
 
   const results = await runWithConcurrency(tasks, CONCURRENCY);
 
   const failures = results.filter((r) => !r.ok).map(({ id, url, status }) => ({ id, url, status }));
+  const upCount = results.filter((r) => r.ok).length;
+  const downCount = failures.length;
 
+  // ── Write public/status.json ─────────────────────────────────────────────
+  const statusJson = {
+    checkedAt: new Date().toISOString(),
+    allUp: downCount === 0,
+    upCount,
+    downCount,
+    totalCount: results.length,
+    tools: results.map(({ id, name, url, status, ok }) => ({ id, name, url, status, ok })),
+  };
+
+  const statusPath = path.join(__dirname, '..', 'public', 'status.json');
+  fs.writeFileSync(statusPath, JSON.stringify(statusJson, null, 2));
+  console.log(`\nWrote public/status.json (${results.length} tools, ${downCount} down)`);
+
+  // ── Set Actions outputs ──────────────────────────────────────────────────
   if (failures.length === 0) {
     console.log('\n✅ All tools are up!');
     setOutput('failures', '');
