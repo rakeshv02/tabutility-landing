@@ -1,0 +1,709 @@
+{
+  "checkedAt": null,
+  "allUp": null,
+  "upCount": null,
+  "downCount": null,
+  "totalCount": 100,
+  "tools": [
+    {
+      "id": "percentage-calculator",
+      "name": "Percentage Calculator",
+      "url": "https://percentage-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "bmi-calculator",
+      "name": "BMI Calculator",
+      "url": "https://bmi-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "age-calculator",
+      "name": "Age Calculator",
+      "url": "https://age-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "tip-calculator",
+      "name": "Tip & Bill Splitter",
+      "url": "https://tip-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "loan-calculator",
+      "name": "Loan Calculator Hub",
+      "url": "https://loan-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "discount-calculator",
+      "name": "Discount Calculator",
+      "url": "https://discount-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "mortgage-calculator",
+      "name": "Mortgage Affordability",
+      "url": "https://mortgage-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "rent-vs-buy",
+      "name": "Rent vs Buy Calculator",
+      "url": "https://rent-vs-buy.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "compound-interest-calculator",
+      "name": "Compound Interest Calculator",
+      "url": "https://compound-interest-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "credit-card-payoff-calculator",
+      "name": "Credit Card Payoff Calculator",
+      "url": "https://credit-card-payoff-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "savings-goal-calculator",
+      "name": "Savings Goal Calculator",
+      "url": "https://savings-goal-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "retirement-calculator",
+      "name": "Retirement / FIRE Calculator",
+      "url": "https://retirement-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "annuity-calculator",
+      "name": "Annuity Calculator",
+      "url": "https://annuity-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "debt-payoff",
+      "name": "Debt Payoff Calculator",
+      "url": "https://debt-payoff.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "net-worth",
+      "name": "Net Worth Calculator",
+      "url": "https://net-worth.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "emergency-fund",
+      "name": "Emergency Fund Calculator",
+      "url": "https://emergency-fund.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation Calculator",
+      "url": "https://inflation.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "roi",
+      "name": "ROI Calculator",
+      "url": "https://roi.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "apr",
+      "name": "APR Calculator",
+      "url": "https://apr.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "investment",
+      "name": "Investment Growth Calculator",
+      "url": "https://investment.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "break-even",
+      "name": "Break-Even Calculator",
+      "url": "https://break-even.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "fuel-cost",
+      "name": "Fuel Cost Calculator",
+      "url": "https://fuel-cost.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "hourly-to-salary",
+      "name": "Hourly ↔ Salary Calculator",
+      "url": "https://hourly-to-salary.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "overtime",
+      "name": "Overtime Pay Calculator",
+      "url": "https://overtime.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "payrise",
+      "name": "Pay Rise Calculator",
+      "url": "https://payrise.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "currency-converter",
+      "name": "Currency Converter",
+      "url": "https://currency-converter.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "json-formatter",
+      "name": "JSON Formatter",
+      "url": "https://json-formatter.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "word-unscrambler",
+      "name": "Word Unscrambler",
+      "url": "https://word-unscrambler.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "base64-encoder",
+      "name": "Base64 Encoder / Decoder",
+      "url": "https://base64-encoder.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "url-encoder",
+      "name": "URL Encoder / Decoder",
+      "url": "https://url-encoder.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "password-generator",
+      "name": "Password Generator",
+      "url": "https://password-generator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uuid-generator",
+      "name": "UUID Generator",
+      "url": "https://uuid-generator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "markdown-to-html",
+      "name": "Markdown to HTML",
+      "url": "https://markdown-to-html.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "qr-code-generator",
+      "name": "QR Code Generator",
+      "url": "https://qr-code-generator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "word-counter",
+      "name": "Word Counter",
+      "url": "https://word-counter.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "unit-converter",
+      "name": "Unit Converter",
+      "url": "https://unit-converter.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "image-compressor",
+      "name": "Image Compressor",
+      "url": "https://image-compressor.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "meditation-timer",
+      "name": "Meditation Timer",
+      "url": "https://meditation-timer.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "tdee-calculator",
+      "name": "TDEE & Calorie Calculator",
+      "url": "https://tdee-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "vat-calculator",
+      "name": "VAT Calculator",
+      "url": "https://vat-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "gst-calculator",
+      "name": "GST Calculator",
+      "url": "https://gst-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-salary-calculator",
+      "name": "UK Salary Calculator",
+      "url": "https://uk-salary-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-student-loan",
+      "name": "UK Student Loan Repayment Calculator",
+      "url": "https://uk-student-loan.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-maternity-pay",
+      "name": "UK Maternity Pay Calculator",
+      "url": "https://uk-maternity-pay.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-capital-gains-tax",
+      "name": "UK Capital Gains Tax Calculator",
+      "url": "https://uk-capital-gains-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-self-employed-tax",
+      "name": "UK Self-Employed Tax Calculator",
+      "url": "https://uk-self-employed-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-ir35-calculator",
+      "name": "UK IR35 / Contractor Calculator",
+      "url": "https://uk-ir35-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-stamp-duty-calculator",
+      "name": "UK Stamp Duty Calculator",
+      "url": "https://uk-stamp-duty-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-dividend-tax",
+      "name": "UK Dividend Tax Calculator",
+      "url": "https://uk-dividend-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-inheritance-tax",
+      "name": "UK Inheritance Tax Calculator",
+      "url": "https://uk-inheritance-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-pension-tax-relief",
+      "name": "UK Pension Tax Relief Calculator",
+      "url": "https://uk-pension-tax-relief.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-corporation-tax",
+      "name": "UK Corporation Tax Calculator",
+      "url": "https://uk-corporation-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uk-national-insurance",
+      "name": "UK National Insurance Calculator",
+      "url": "https://uk-national-insurance.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "rental-yield",
+      "name": "Rental Yield Calculator",
+      "url": "https://rental-yield.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "rental-income-tax",
+      "name": "UK Rental Income Tax Calculator",
+      "url": "https://rental-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "buy-to-let-stamp-duty",
+      "name": "Buy-to-Let Stamp Duty Calculator",
+      "url": "https://buy-to-let-stamp-duty.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "us-paycheck-calculator",
+      "name": "US Paycheck Calculator",
+      "url": "https://us-paycheck-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "us-capital-gains-tax",
+      "name": "US Capital Gains Tax Calculator",
+      "url": "https://us-capital-gains-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "us-self-employment-tax",
+      "name": "US Self-Employment Tax Calculator",
+      "url": "https://us-self-employment-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "us-401k",
+      "name": "401(k) Calculator 2026",
+      "url": "https://us-401k.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australian-tax-calculator",
+      "name": "Australian Tax Calculator",
+      "url": "https://australian-tax-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australia-hecs-calculator",
+      "name": "Australia HECS / HELP Calculator",
+      "url": "https://australia-hecs-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australia-stamp-duty",
+      "name": "Australia Stamp Duty Calculator",
+      "url": "https://australia-stamp-duty.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australia-super",
+      "name": "Australia Superannuation Calculator",
+      "url": "https://australia-super.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australia-lmi-calculator",
+      "name": "Australia LMI Calculator",
+      "url": "https://australia-lmi-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "australia-points-test",
+      "name": "Australia Skilled Migration Points Test",
+      "url": "https://australia-points-test.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "canadian-tax-calculator",
+      "name": "Canadian Tax Calculator",
+      "url": "https://canadian-tax-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "canada-rrsp",
+      "name": "Canada RRSP Calculator",
+      "url": "https://canada-rrsp.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "canada-land-transfer-tax",
+      "name": "Canada Land Transfer Tax Calculator",
+      "url": "https://canada-land-transfer-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "canada-express-entry",
+      "name": "Canada Express Entry CRS Calculator",
+      "url": "https://canada-express-entry.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "uae-salary-calculator",
+      "name": "UAE Salary Calculator",
+      "url": "https://uae-salary-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "schengen-calculator",
+      "name": "Schengen Days Calculator",
+      "url": "https://schengen-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "ireland-income-tax",
+      "name": "Ireland Income Tax Calculator",
+      "url": "https://ireland-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "nz-income-tax",
+      "name": "New Zealand Income Tax Calculator",
+      "url": "https://nz-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "germany-income-tax",
+      "name": "Germany Income Tax Calculator",
+      "url": "https://germany-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "netherlands-income-tax",
+      "name": "Netherlands Income Tax Calculator",
+      "url": "https://netherlands-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "singapore-income-tax",
+      "name": "Singapore Income Tax Calculator",
+      "url": "https://singapore-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "south-africa-income-tax",
+      "name": "South Africa Income Tax Calculator",
+      "url": "https://south-africa-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "spain-income-tax",
+      "name": "Spain Income Tax Calculator",
+      "url": "https://spain-income-tax.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "stopwatch",
+      "name": "Online Stopwatch",
+      "url": "https://stopwatch.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "countdown-timer",
+      "name": "Countdown Timer",
+      "url": "https://countdown-timer.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "pomodoro-timer",
+      "name": "Pomodoro Timer",
+      "url": "https://pomodoro-timer.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "alarm-clock",
+      "name": "Online Alarm Clock",
+      "url": "https://alarm-clock.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "name-picker",
+      "name": "Spin the Wheel — Name Picker",
+      "url": "https://name-picker.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "coin-flip",
+      "name": "Coin Flip",
+      "url": "https://coin-flip.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "dice-roller",
+      "name": "Dice Roller",
+      "url": "https://dice-roller.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "random-number-generator",
+      "name": "Random Number Generator",
+      "url": "https://random-number-generator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "typing-speed-test",
+      "name": "Typing Speed Test",
+      "url": "https://typing-speed-test.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "metronome",
+      "name": "Online Metronome",
+      "url": "https://metronome.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "yes-or-no",
+      "name": "Yes or No Wheel",
+      "url": "https://yes-or-no.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "tally-counter",
+      "name": "Tally Counter",
+      "url": "https://tally-counter.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "scientific-calculator",
+      "name": "Scientific Calculator",
+      "url": "https://scientific-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "sales-tax-calculator",
+      "name": "Sales Tax Calculator",
+      "url": "https://sales-tax-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "gpa-calculator",
+      "name": "GPA Calculator",
+      "url": "https://gpa-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "body-fat-calculator",
+      "name": "Body Fat % Calculator",
+      "url": "https://body-fat-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "due-date-calculator",
+      "name": "Pregnancy Due Date Calculator",
+      "url": "https://due-date-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "sleep-calculator",
+      "name": "Sleep Calculator",
+      "url": "https://sleep-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "car-lease-calculator",
+      "name": "Car Lease Calculator",
+      "url": "https://car-lease-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "grade-calculator",
+      "name": "Grade Calculator",
+      "url": "https://grade-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    },
+    {
+      "id": "water-intake-calculator",
+      "name": "Water Intake Calculator",
+      "url": "https://water-intake-calculator.tabutility.com",
+      "status": null,
+      "ok": null
+    }
+  ]
+}
