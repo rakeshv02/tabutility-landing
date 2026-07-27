@@ -1076,12 +1076,12 @@
     ]
   },
   {
-    "id": "nz-income-tax-calculator",
+    "id": "nz-income-tax",
     "name": "New Zealand Income Tax Calculator",
     "description": "Calculate NZ take-home pay including PAYE income tax and ACC earner levy — 2025.",
     "category": "International",
     "emoji": "🇳🇿",
-    "url": "https://nz-income-tax-calculator.tabutility.com",
+    "url": "https://nz-income-tax.tabutility.com",
     "tags": [
       "new zealand",
       "nz",
