@@ -394,7 +394,7 @@
     "id": "word-unscrambler",
     "name": "Word Unscrambler",
     "description": "Unscramble letters to find all possible words — great for word games.",
-    "category": "Developer Tools",
+    "category": "Fun Tools",
     "emoji": "🔤",
     "url": "https://word-unscrambler.tabutility.com",
     "tags": [
@@ -464,7 +464,7 @@
     "id": "markdown-to-html",
     "name": "Markdown to HTML",
     "description": "Convert Markdown to clean HTML with live preview.",
-    "category": "Developer Tools",
+    "category": "Content Tools",
     "emoji": "📝",
     "url": "https://markdown-to-html.tabutility.com",
     "tags": [
@@ -478,7 +478,7 @@
     "id": "qr-code-generator",
     "name": "QR Code Generator",
     "description": "Generate QR codes for URLs, text, Wi-Fi and more. Download as PNG.",
-    "category": "Developer Tools",
+    "category": "Content Tools",
     "emoji": "📱",
     "url": "https://qr-code-generator.tabutility.com",
     "tags": [
@@ -770,7 +770,7 @@
     "id": "rental-yield",
     "name": "Rental Yield Calculator",
     "description": "Calculate gross and net rental yield including all costs, void periods and mortgage.",
-    "category": "International",
+    "category": "Calculators",
     "emoji": "🏘️",
     "url": "https://rental-yield.tabutility.com",
     "tags": [
