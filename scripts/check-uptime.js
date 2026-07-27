@@ -78,8 +78,15 @@ function setOutput(name, value) {
 // ── main ─────────────────────────────────────────────────────────────────────
 
 (async () => {
-  // tools.config.json lives in src/
-  const configPath = path.join(__dirname, '..', 'src', 'tools.config.json');
+  // tools.config.json may live in src/ (GitHub repo) or at root (local workspace)
+  const srcPath  = path.join(__dirname, '..', 'src', 'tools.config.json');
+  const rootPath = path.join(__dirname, '..', 'tools.config.json');
+  const configPath = fs.existsSync(srcPath) ? srcPath : rootPath;
+  if (!fs.existsSync(configPath)) {
+    console.error(`ERROR: tools.config.json not found at ${srcPath} or ${rootPath}`);
+    process.exit(1);
+  }
+  console.log(`Loading config from: ${configPath}`);
   const tools = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
   console.log(`Checking ${tools.length} tools…`);
