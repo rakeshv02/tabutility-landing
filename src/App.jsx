@@ -17,6 +17,12 @@ const CATEGORY_COLORS = {
 
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
 
+// Inject hover styles once — replaces 100 useState hooks in ToolCard
+const HOVER_STYLES = `
+.tool-card { transition: border-color 0.15s, background 0.15s, transform 0.15s, box-shadow 0.15s; }
+.tool-card:hover { transform: translateY(-2px); box-shadow: 0 5px 16px rgba(0,0,0,0.10) !important; }
+`;
+
 export default function App() {
   const [search, setSearch]               = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
@@ -48,6 +54,7 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: "#f1f5f9", minHeight: "100vh" }}>
+      <style>{HOVER_STYLES}</style>
 
       {/* ── Hero ── */}
       <div style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)", color: "#fff", padding: "44px 20px 36px", textAlign: "center" }}>
@@ -170,7 +177,7 @@ function CategorySection({ category, tools }) {
   const remaining = tools.length - PREVIEW_COUNT;
 
   return (
-    <div style={{ marginBottom: 36 }}>
+    <div style={{ marginBottom: 36, contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
       {/* Header */}
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
         <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{category}</h2>
@@ -215,27 +222,25 @@ function ToolGrid({ tools }) {
   );
 }
 
+// No useState — hover handled by CSS class; avoids 100 hook instances
 function ToolCard({ tool }) {
   const colors = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR;
-  const [hovered, setHovered] = useState(false);
   return (
     <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
       <div
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        className="tool-card"
         style={{
-          background: hovered ? colors.light : "#fff",
+          background: "#fff",
           borderRadius: 10,
           padding: "11px 13px 10px",
-          border: `1.5px solid ${hovered ? colors.badge : "#e2e8f0"}`,
+          border: "1.5px solid #e2e8f0",
           cursor: "pointer",
-          transition: "all 0.15s",
-          transform: hovered ? "translateY(-2px)" : "none",
-          boxShadow: hovered ? `0 5px 16px rgba(0,0,0,0.08)` : "0 1px 3px rgba(0,0,0,0.04)",
           display: "flex",
           flexDirection: "column",
           height: "100%",
+          minHeight: 110,
           boxSizing: "border-box",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
         }}>
 
         {/* Icon + name row */}
