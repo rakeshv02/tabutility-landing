@@ -31,6 +31,34 @@
     <meta name="robots" content="index, follow" />
     <meta name="impact-site-verification" value="ee64fd55-0baf-45f7-9ad0-f2d01426e34f" />
 
+    <!-- Critical CSS: paints the shell before any JS loads -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:'Segoe UI',Arial,sans-serif;background:#f1f5f9;min-height:100vh}
+      #static-shell{display:block}
+      #root:not(:empty) #static-shell{display:none}
+      .s-hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:#fff;padding:44px 20px 36px;text-align:center}
+      .s-icon{font-size:40px;margin-bottom:8px}
+      .s-title{font-size:clamp(26px,5vw,44px);font-weight:900;letter-spacing:-1px;margin-bottom:10px}
+      .s-sub{font-size:16px;color:#a5b4fc;max-width:480px;margin:0 auto 24px}
+      .s-search{max-width:500px;margin:0 auto;position:relative}
+      .s-search input{width:100%;padding:13px 14px 13px 42px;border-radius:12px;border:2px solid rgba(165,180,252,0.25);background:rgba(255,255,255,0.1);color:#fff;font-size:15px;outline:none;font-family:inherit}
+      .s-search input::placeholder{color:rgba(255,255,255,0.5)}
+      .s-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none}
+      .s-bar{position:sticky;top:0;z-index:100;background:#1e293b;border-bottom:1px solid #334155;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+      .s-bar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;overflow-x:auto}
+      .s-cats{display:flex;gap:6px;flex-wrap:nowrap;min-width:max-content}
+      .s-cat{padding:7px 14px;border-radius:20px;border:none;white-space:nowrap;background:#334155;color:#94a3b8;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;font-family:inherit}
+      .s-cat.active{background:#4f46e5;color:#fff}
+      .s-cat-count{font-size:11px;opacity:0.8;background:rgba(255,255,255,0.1);border-radius:10px;padding:1px 6px}
+      .s-cat.active .s-cat-count{background:rgba(255,255,255,0.2)}
+      .s-grid-wrap{max-width:1200px;margin:24px auto 0;padding:0 20px 60px}
+      .s-skeleton-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px;margin-top:20px}
+      .s-skel{background:#fff;border-radius:10px;height:110px;border:1.5px solid #e2e8f0;position:relative;overflow:hidden}
+      .s-skel::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(241,245,249,0.8) 50%,transparent 100%);animation:shimmer 1.4s infinite}
+      @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+    </style>
+
     <!-- AdSense: async so it never blocks rendering -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
 
@@ -55,7 +83,52 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell: paints instantly, hidden once React mounts -->
+      <div id="static-shell">
+
+        <!-- Hero -->
+        <div class="s-hero">
+          <div class="s-icon">⚡</div>
+          <h1 class="s-title">Tabutility</h1>
+          <p class="s-sub">100 free browser tools. No sign-up. No downloads. Just instant results.</p>
+          <div class="s-search">
+            <span class="s-search-icon">🔍</span>
+            <input type="text" placeholder="Search 100 tools…" aria-label="Search tools" />
+          </div>
+        </div>
+
+        <!-- Sticky filter bar -->
+        <div class="s-bar">
+          <div class="s-bar-inner">
+            <div class="s-cats">
+              <button class="s-cat active">All <span class="s-cat-count">100</span></button>
+              <button class="s-cat">Calculators <span class="s-cat-count">28</span></button>
+              <button class="s-cat">Developer Tools <span class="s-cat-count">8</span></button>
+              <button class="s-cat">Content Tools <span class="s-cat-count">5</span></button>
+              <button class="s-cat">International <span class="s-cat-count">22</span></button>
+              <button class="s-cat">Converters <span class="s-cat-count">4</span></button>
+              <button class="s-cat">Image Tools <span class="s-cat-count">2</span></button>
+              <button class="s-cat">Wellness <span class="s-cat-count">6</span></button>
+              <button class="s-cat">Fun Tools <span class="s-cat-count">7</span></button>
+              <button class="s-cat">Productivity <span class="s-cat-count">10</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skeleton grid while React loads -->
+        <div class="s-grid-wrap">
+          <div class="s-skeleton-grid">
+            <div class="s-skel"></div><div class="s-skel"></div><div class="s-skel"></div>
+            <div class="s-skel"></div><div class="s-skel"></div><div class="s-skel"></div>
+            <div class="s-skel"></div><div class="s-skel"></div><div class="s-skel"></div>
+            <div class="s-skel"></div><div class="s-skel"></div><div class="s-skel"></div>
+          </div>
+        </div>
+
+      </div><!-- /static-shell -->
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
