@@ -7,6 +7,13 @@
     <meta name="description" content="100 free browser-based utility tools. Calculators, tax tools, developer utilities, wellness and more. No sign-up, no download, instant results." />
     <meta name="keywords" content="free online tools, utility tools, calculator, tax calculator, developer tools, word counter, unit converter, json formatter, password generator, tabutility" />
     <link rel="canonical" href="https://tabutility.com/" />
+
+    <!-- Preconnects: resolve DNS + TLS before scripts fire -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tabutility.com/" />
     <meta property="og:title" content="Tabutility — 100 Free Online Utility Tools" />
@@ -23,15 +30,27 @@
     <meta name="apple-mobile-web-app-title" content="Tabutility" />
     <meta name="robots" content="index, follow" />
     <meta name="impact-site-verification" value="ee64fd55-0baf-45f7-9ad0-f2d01426e34f" />
+
+    <!-- AdSense: async so it never blocks rendering -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+
+    <!-- Analytics: load after page is interactive -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-78VZWJ5B1W');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-78VZWJ5B1W');
+      });
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js');
+        });
       }
     </script>
   </head>
