@@ -85,7 +85,7 @@ export default function App() {
 
       {/* ── Sticky Filter Bar ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 100, background: "#1e293b", borderBottom: "1px solid #334155", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 20px", overflowX: "auto" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 20px", overflowX: "auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
           <div style={{ display: "flex", gap: 6, flexWrap: "nowrap", minWidth: "max-content" }}>
             {CATEGORIES.map(cat => {
               const isActive = activeCategory === cat;
@@ -107,6 +107,7 @@ export default function App() {
               );
             })}
           </div>
+          <a href="/blog/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap", textDecoration: "none", flexShrink: 0 }}>📖 Guides</a>
         </div>
       </div>
 
