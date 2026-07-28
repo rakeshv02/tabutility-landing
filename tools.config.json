@@ -1,0 +1,1532 @@
+[
+  {
+    "id": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "description": "Calculate percentages, increases, decreases and differences instantly.",
+    "category": "Calculators",
+    "emoji": "📊",
+    "url": "https://percentage-calculator.tabutility.com",
+    "tags": [
+      "math",
+      "percentage",
+      "calculator"
+    ]
+  },
+  {
+    "id": "bmi-calculator",
+    "name": "BMI Calculator",
+    "description": "Calculate your Body Mass Index with metric or imperial units.",
+    "category": "Calculators",
+    "emoji": "⚖️",
+    "url": "https://bmi-calculator.tabutility.com",
+    "tags": [
+      "health",
+      "bmi",
+      "weight"
+    ]
+  },
+  {
+    "id": "age-calculator",
+    "name": "Age Calculator",
+    "description": "Find out your exact age in years, months, days and more.",
+    "category": "Calculators",
+    "emoji": "🎂",
+    "url": "https://age-calculator.tabutility.com",
+    "tags": [
+      "age",
+      "birthday",
+      "date"
+    ]
+  },
+  {
+    "id": "tip-calculator",
+    "name": "Tip & Bill Splitter",
+    "description": "Calculate tips and split bills evenly between any number of people.",
+    "category": "Calculators",
+    "emoji": "🍽️",
+    "url": "https://tip-calculator.tabutility.com",
+    "tags": [
+      "tip",
+      "bill",
+      "split",
+      "restaurant"
+    ]
+  },
+  {
+    "id": "loan-calculator",
+    "name": "Loan Calculator Hub",
+    "description": "Full loan suite — monthly payments, amortization, rate comparison and more.",
+    "category": "Calculators",
+    "emoji": "🏦",
+    "url": "https://loan-calculator.tabutility.com",
+    "tags": [
+      "loan",
+      "mortgage",
+      "interest",
+      "amortization"
+    ],
+    "featured": true
+  },
+  {
+    "id": "discount-calculator",
+    "name": "Discount Calculator",
+    "description": "Find the sale price, discount amount or original price in seconds.",
+    "category": "Calculators",
+    "emoji": "🏷️",
+    "url": "https://discount-calculator.tabutility.com",
+    "tags": [
+      "discount",
+      "sale",
+      "price",
+      "savings"
+    ]
+  },
+  {
+    "id": "mortgage-calculator",
+    "name": "Mortgage Affordability",
+    "description": "How much house can you afford? DTI gauges, scenarios and monthly breakdown.",
+    "category": "Calculators",
+    "emoji": "🏠",
+    "url": "https://mortgage-calculator.tabutility.com",
+    "tags": [
+      "mortgage",
+      "affordability",
+      "dti",
+      "home"
+    ]
+  },
+  {
+    "id": "rent-vs-buy",
+    "name": "Rent vs Buy Calculator",
+    "description": "Total cost comparison, break-even point and opportunity cost analysis.",
+    "category": "Calculators",
+    "emoji": "🏡",
+    "url": "https://rent-vs-buy.tabutility.com",
+    "tags": [
+      "rent",
+      "buy",
+      "property",
+      "real estate"
+    ]
+  },
+  {
+    "id": "compound-interest-calculator",
+    "name": "Compound Interest Calculator",
+    "description": "See how your money grows over time with compound interest — daily, monthly or annual compounding.",
+    "category": "Calculators",
+    "emoji": "📈",
+    "url": "https://compound-interest-calculator.tabutility.com",
+    "tags": [
+      "compound interest",
+      "savings",
+      "investment",
+      "growth"
+    ]
+  },
+  {
+    "id": "credit-card-payoff-calculator",
+    "name": "Credit Card Payoff Calculator",
+    "description": "Find out how long it takes to pay off your credit card and how much interest you'll pay.",
+    "category": "Calculators",
+    "emoji": "💳",
+    "url": "https://credit-card-payoff-calculator.tabutility.com",
+    "tags": [
+      "credit card",
+      "debt",
+      "payoff",
+      "interest"
+    ]
+  },
+  {
+    "id": "savings-goal-calculator",
+    "name": "Savings Goal Calculator",
+    "description": "Work out how much to save each month to hit your target by a set date.",
+    "category": "Calculators",
+    "emoji": "🎯",
+    "url": "https://savings-goal-calculator.tabutility.com",
+    "tags": [
+      "savings",
+      "goal",
+      "monthly savings",
+      "target"
+    ]
+  },
+  {
+    "id": "retirement-calculator",
+    "name": "Retirement / FIRE Calculator",
+    "description": "Project your retirement pot, FIRE number and how long your savings will last.",
+    "category": "Calculators",
+    "emoji": "🔥",
+    "url": "https://retirement-calculator.tabutility.com",
+    "tags": [
+      "retirement",
+      "fire",
+      "pension",
+      "savings",
+      "financial independence"
+    ]
+  },
+  {
+    "id": "annuity-calculator",
+    "name": "Annuity Calculator",
+    "description": "Calculate annuity payments, present value, future value and payout schedules.",
+    "category": "Calculators",
+    "emoji": "📋",
+    "url": "https://annuity-calculator.tabutility.com",
+    "tags": [
+      "annuity",
+      "pension",
+      "retirement income",
+      "payout"
+    ]
+  },
+  {
+    "id": "debt-payoff",
+    "name": "Debt Payoff Calculator",
+    "description": "Compare avalanche vs snowball debt payoff strategies — see how long it takes and how much interest you save.",
+    "category": "Calculators",
+    "emoji": "💳",
+    "url": "https://debt-payoff.tabutility.com",
+    "tags": [
+      "debt",
+      "payoff",
+      "avalanche",
+      "snowball",
+      "interest"
+    ],
+    "featured": true
+  },
+  {
+    "id": "net-worth",
+    "name": "Net Worth Calculator",
+    "description": "Add all your assets and liabilities to see your true financial picture instantly.",
+    "category": "Calculators",
+    "emoji": "💰",
+    "url": "https://net-worth.tabutility.com",
+    "tags": [
+      "net worth",
+      "assets",
+      "liabilities",
+      "wealth",
+      "personal finance"
+    ]
+  },
+  {
+    "id": "emergency-fund",
+    "name": "Emergency Fund Calculator",
+    "description": "Calculate your ideal emergency fund size and how long it will take to build it.",
+    "category": "Calculators",
+    "emoji": "🛡️",
+    "url": "https://emergency-fund.tabutility.com",
+    "tags": [
+      "emergency fund",
+      "savings",
+      "financial safety",
+      "3 months expenses"
+    ]
+  },
+  {
+    "id": "inflation",
+    "name": "Inflation Calculator",
+    "description": "See how inflation erodes purchasing power — what money was worth then vs now.",
+    "category": "Calculators",
+    "emoji": "📉",
+    "url": "https://inflation.tabutility.com",
+    "tags": [
+      "inflation",
+      "purchasing power",
+      "cpi",
+      "cost of living"
+    ]
+  },
+  {
+    "id": "roi",
+    "name": "ROI Calculator",
+    "description": "Calculate return on investment, annualised CAGR and profit/loss for any investment.",
+    "category": "Calculators",
+    "emoji": "📈",
+    "url": "https://roi.tabutility.com",
+    "tags": [
+      "roi",
+      "return on investment",
+      "cagr",
+      "profit",
+      "investment"
+    ]
+  },
+  {
+    "id": "apr",
+    "name": "APR Calculator",
+    "description": "Calculate the true Annual Percentage Rate of a loan including fees — the real cost of borrowing.",
+    "category": "Calculators",
+    "emoji": "🏦",
+    "url": "https://apr.tabutility.com",
+    "tags": [
+      "apr",
+      "annual percentage rate",
+      "loan",
+      "interest",
+      "fees"
+    ]
+  },
+  {
+    "id": "investment",
+    "name": "Investment Growth Calculator",
+    "description": "Project future investment value with lump sum and monthly contributions. See compound growth over time.",
+    "category": "Calculators",
+    "emoji": "📊",
+    "url": "https://investment.tabutility.com",
+    "tags": [
+      "investment",
+      "compound growth",
+      "future value",
+      "lump sum",
+      "monthly contributions"
+    ]
+  },
+  {
+    "id": "break-even",
+    "name": "Break-Even Calculator",
+    "description": "Calculate how many units you need to sell to break even and start making profit.",
+    "category": "Calculators",
+    "emoji": "⚖️",
+    "url": "https://break-even.tabutility.com",
+    "tags": [
+      "break even",
+      "fixed costs",
+      "variable costs",
+      "business",
+      "profit"
+    ]
+  },
+  {
+    "id": "fuel-cost",
+    "name": "Fuel Cost Calculator",
+    "description": "Calculate trip and monthly fuel costs in miles or km, MPG or L/100km.",
+    "category": "Calculators",
+    "emoji": "⛽",
+    "url": "https://fuel-cost.tabutility.com",
+    "tags": [
+      "fuel cost",
+      "petrol",
+      "gas",
+      "mpg",
+      "trip cost",
+      "cost per mile"
+    ]
+  },
+  {
+    "id": "hourly-to-salary",
+    "name": "Hourly ↔ Salary Calculator",
+    "description": "Convert hourly wage to annual salary or annual salary to hourly rate instantly.",
+    "category": "Calculators",
+    "emoji": "⏱️",
+    "url": "https://hourly-to-salary.tabutility.com",
+    "tags": [
+      "hourly to salary",
+      "wage converter",
+      "annual salary",
+      "hourly rate"
+    ]
+  },
+  {
+    "id": "overtime",
+    "name": "Overtime Pay Calculator",
+    "description": "Calculate time and a half, double time and custom overtime rates. See gross pay with overtime.",
+    "category": "Calculators",
+    "emoji": "🕐",
+    "url": "https://overtime.tabutility.com",
+    "tags": [
+      "overtime",
+      "time and a half",
+      "double time",
+      "overtime pay",
+      "hourly"
+    ]
+  },
+  {
+    "id": "payrise",
+    "name": "Pay Rise Calculator",
+    "description": "See exactly what a pay rise is worth per year, month and week — and the real increase after inflation.",
+    "category": "Calculators",
+    "emoji": "🚀",
+    "url": "https://payrise.tabutility.com",
+    "tags": [
+      "pay rise",
+      "salary increase",
+      "raise",
+      "inflation",
+      "real wage"
+    ]
+  },
+  {
+    "id": "currency-converter",
+    "name": "Currency Converter",
+    "description": "Convert between 30+ currencies with reference exchange rates. USD, GBP, EUR, AUD, CAD and more.",
+    "category": "Converters",
+    "emoji": "💱",
+    "url": "https://currency-converter.tabutility.com",
+    "tags": [
+      "currency converter",
+      "exchange rate",
+      "forex",
+      "usd",
+      "gbp",
+      "eur"
+    ],
+    "featured": true
+  },
+  {
+    "id": "json-formatter",
+    "name": "JSON Formatter",
+    "description": "Beautify, minify and validate JSON instantly in your browser.",
+    "category": "Developer Tools",
+    "emoji": "{ }",
+    "url": "https://json-formatter.tabutility.com",
+    "tags": [
+      "json",
+      "format",
+      "validate",
+      "developer"
+    ]
+  },
+  {
+    "id": "word-unscrambler",
+    "name": "Word Unscrambler",
+    "description": "Unscramble letters to find all possible words — great for word games.",
+    "category": "Fun Tools",
+    "emoji": "🔤",
+    "url": "https://word-unscrambler.tabutility.com",
+    "tags": [
+      "words",
+      "scrabble",
+      "unscramble",
+      "anagram"
+    ]
+  },
+  {
+    "id": "base64-encoder",
+    "name": "Base64 Encoder / Decoder",
+    "description": "Encode and decode Base64 strings instantly.",
+    "category": "Developer Tools",
+    "emoji": "🔐",
+    "url": "https://base64-encoder.tabutility.com",
+    "tags": [
+      "base64",
+      "encode",
+      "decode",
+      "developer"
+    ]
+  },
+  {
+    "id": "url-encoder",
+    "name": "URL Encoder / Decoder",
+    "description": "Encode or decode URLs and query strings for use in web applications.",
+    "category": "Developer Tools",
+    "emoji": "🔗",
+    "url": "https://url-encoder.tabutility.com",
+    "tags": [
+      "url",
+      "encode",
+      "decode",
+      "developer"
+    ]
+  },
+  {
+    "id": "password-generator",
+    "name": "Password Generator",
+    "description": "Generate strong, secure passwords with custom length and character sets.",
+    "category": "Developer Tools",
+    "emoji": "🔑",
+    "url": "https://password-generator.tabutility.com",
+    "tags": [
+      "password",
+      "security",
+      "generator",
+      "random"
+    ]
+  },
+  {
+    "id": "uuid-generator",
+    "name": "UUID Generator",
+    "description": "Generate v4 UUIDs instantly — single or bulk, ready to copy.",
+    "category": "Developer Tools",
+    "emoji": "🆔",
+    "url": "https://uuid-generator.tabutility.com",
+    "tags": [
+      "uuid",
+      "guid",
+      "generator",
+      "developer"
+    ]
+  },
+  {
+    "id": "markdown-to-html",
+    "name": "Markdown to HTML",
+    "description": "Convert Markdown to clean HTML with live preview.",
+    "category": "Content Tools",
+    "emoji": "📝",
+    "url": "https://markdown-to-html.tabutility.com",
+    "tags": [
+      "markdown",
+      "html",
+      "convert",
+      "developer"
+    ]
+  },
+  {
+    "id": "qr-code-generator",
+    "name": "QR Code Generator",
+    "description": "Generate QR codes for URLs, text, Wi-Fi and more. Download as PNG.",
+    "category": "Content Tools",
+    "emoji": "📱",
+    "url": "https://qr-code-generator.tabutility.com",
+    "tags": [
+      "qr",
+      "qrcode",
+      "generator",
+      "scan"
+    ]
+  },
+  {
+    "id": "word-counter",
+    "name": "Word Counter",
+    "description": "Count words, characters, sentences and estimate reading time.",
+    "category": "Content Tools",
+    "emoji": "✍️",
+    "url": "https://word-counter.tabutility.com",
+    "tags": [
+      "words",
+      "count",
+      "characters",
+      "writing"
+    ]
+  },
+  {
+    "id": "unit-converter",
+    "name": "Unit Converter",
+    "description": "Convert length, weight, temperature, area, volume and more.",
+    "category": "Converters",
+    "emoji": "📐",
+    "url": "https://unit-converter.tabutility.com",
+    "tags": [
+      "convert",
+      "units",
+      "measurement",
+      "metric"
+    ]
+  },
+  {
+    "id": "image-compressor",
+    "name": "Image Compressor",
+    "description": "Compress images in your browser — no upload, no server, 100% private.",
+    "category": "Image Tools",
+    "emoji": "🖼️",
+    "url": "https://image-compressor.tabutility.com",
+    "tags": [
+      "image",
+      "compress",
+      "optimize",
+      "jpg",
+      "png"
+    ]
+  },
+  {
+    "id": "meditation-timer",
+    "name": "Meditation Timer",
+    "description": "Customisable meditation timer with ambient sounds and interval bells.",
+    "category": "Wellness",
+    "emoji": "🧘",
+    "url": "https://meditation-timer.tabutility.com",
+    "tags": [
+      "meditation",
+      "timer",
+      "mindfulness",
+      "wellness"
+    ]
+  },
+  {
+    "id": "tdee-calculator",
+    "name": "TDEE & Calorie Calculator",
+    "description": "Calculate BMR, TDEE and daily macros for your fitness goal.",
+    "category": "Wellness",
+    "emoji": "🔥",
+    "url": "https://tdee-calculator.tabutility.com",
+    "tags": [
+      "tdee",
+      "calories",
+      "macros",
+      "fitness",
+      "bmr"
+    ]
+  },
+  {
+    "id": "vat-calculator",
+    "name": "VAT Calculator",
+    "description": "Add or remove UK VAT at 20%, 5% or 0%. Custom rates supported.",
+    "category": "International",
+    "emoji": "🇬🇧",
+    "url": "https://vat-calculator.tabutility.com",
+    "tags": [
+      "vat",
+      "tax",
+      "uk",
+      "business"
+    ]
+  },
+  {
+    "id": "gst-calculator",
+    "name": "GST Calculator",
+    "description": "GST calculator for India (all slabs + CGST/SGST), Australia and Canada.",
+    "category": "International",
+    "emoji": "🌏",
+    "url": "https://gst-calculator.tabutility.com",
+    "tags": [
+      "gst",
+      "tax",
+      "india",
+      "australia",
+      "canada"
+    ]
+  },
+  {
+    "id": "uk-salary-calculator",
+    "name": "UK Salary Calculator",
+    "description": "2025/26 income tax, National Insurance, pension and student loan.",
+    "category": "International",
+    "emoji": "💷",
+    "url": "https://uk-salary-calculator.tabutility.com",
+    "tags": [
+      "uk",
+      "salary",
+      "income tax",
+      "national insurance",
+      "take home pay"
+    ]
+  },
+  {
+    "id": "uk-student-loan",
+    "name": "UK Student Loan Repayment Calculator",
+    "description": "Plans 1, 2, 4, 5 and Postgrad — repayment thresholds, interest rates and payoff timeline.",
+    "category": "International",
+    "emoji": "🎓",
+    "url": "https://uk-student-loan.tabutility.com",
+    "tags": [
+      "uk",
+      "student loan",
+      "plan 2",
+      "plan 5",
+      "repayment"
+    ]
+  },
+  {
+    "id": "uk-maternity-pay",
+    "name": "UK Maternity Pay Calculator",
+    "description": "Statutory Maternity Pay week-by-week — SMP at £194.32/week, enhanced pay and leave planner.",
+    "category": "International",
+    "emoji": "👶",
+    "url": "https://uk-maternity-pay.tabutility.com",
+    "tags": [
+      "uk",
+      "maternity pay",
+      "smp",
+      "parental leave"
+    ]
+  },
+  {
+    "id": "uk-capital-gains-tax",
+    "name": "UK Capital Gains Tax Calculator",
+    "description": "Calculate CGT on property, shares and other assets — 2025/26 rates and annual exempt amount.",
+    "category": "International",
+    "emoji": "📈",
+    "url": "https://uk-capital-gains-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "capital gains tax",
+      "cgt",
+      "property",
+      "shares"
+    ]
+  },
+  {
+    "id": "uk-self-employed-tax",
+    "name": "UK Self-Employed Tax Calculator",
+    "description": "Income tax, Class 2 and Class 4 NI for sole traders — 2025/26 self-assessment.",
+    "category": "International",
+    "emoji": "🧾",
+    "url": "https://uk-self-employed-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "self employed",
+      "sole trader",
+      "self assessment"
+    ]
+  },
+  {
+    "id": "uk-ir35-calculator",
+    "name": "UK IR35 / Contractor Calculator",
+    "description": "Compare inside vs outside IR35 take-home pay — day rate to annual salary.",
+    "category": "International",
+    "emoji": "🏢",
+    "url": "https://uk-ir35-calculator.tabutility.com",
+    "tags": [
+      "uk",
+      "ir35",
+      "contractor",
+      "umbrella",
+      "ltd company"
+    ]
+  },
+  {
+    "id": "uk-stamp-duty-calculator",
+    "name": "UK Stamp Duty Calculator",
+    "description": "SDLT, LBTT and LTT for first-time buyers, home movers and buy-to-let — April 2025 thresholds.",
+    "category": "International",
+    "emoji": "🏡",
+    "url": "https://uk-stamp-duty-calculator.tabutility.com",
+    "tags": [
+      "stamp duty",
+      "sdlt",
+      "uk",
+      "property",
+      "first time buyer"
+    ]
+  },
+  {
+    "id": "uk-dividend-tax",
+    "name": "UK Dividend Tax Calculator",
+    "description": "Calculate dividend tax for 2025/26 — £500 allowance, 8.75%/33.75%/39.38% rates.",
+    "category": "International",
+    "emoji": "💷",
+    "url": "https://uk-dividend-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "dividend tax",
+      "dividend allowance",
+      "basic rate",
+      "higher rate"
+    ]
+  },
+  {
+    "id": "uk-inheritance-tax",
+    "name": "UK Inheritance Tax Calculator",
+    "description": "Calculate IHT including nil rate band, residence NRB, spouse transfer and charitable relief — 2025/26.",
+    "category": "International",
+    "emoji": "🏛️",
+    "url": "https://uk-inheritance-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "inheritance tax",
+      "iht",
+      "nil rate band",
+      "estate tax"
+    ]
+  },
+  {
+    "id": "uk-pension-tax-relief",
+    "name": "UK Pension Tax Relief Calculator",
+    "description": "See how much the government tops up your pension — basic, higher and additional rate relief 2025/26.",
+    "category": "International",
+    "emoji": "🏦",
+    "url": "https://uk-pension-tax-relief.tabutility.com",
+    "tags": [
+      "uk",
+      "pension tax relief",
+      "pension contributions",
+      "higher rate relief"
+    ]
+  },
+  {
+    "id": "uk-corporation-tax",
+    "name": "UK Corporation Tax Calculator",
+    "description": "Calculate corporation tax for 2025/26 — small profits 19%, main rate 25%, marginal relief.",
+    "category": "International",
+    "emoji": "🏢",
+    "url": "https://uk-corporation-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "corporation tax",
+      "small profits rate",
+      "marginal relief",
+      "company tax"
+    ]
+  },
+  {
+    "id": "uk-national-insurance",
+    "name": "UK National Insurance Calculator",
+    "description": "Calculate Class 1, Class 4 and employer NI contributions for 2025/26.",
+    "category": "International",
+    "emoji": "🇬🇧",
+    "url": "https://uk-national-insurance.tabutility.com",
+    "tags": [
+      "uk",
+      "national insurance",
+      "class 1 ni",
+      "employer ni",
+      "self employed ni"
+    ]
+  },
+  {
+    "id": "rental-yield",
+    "name": "Rental Yield Calculator",
+    "description": "Calculate gross and net rental yield including all costs, void periods and mortgage.",
+    "category": "Calculators",
+    "emoji": "🏘️",
+    "url": "https://rental-yield.tabutility.com",
+    "tags": [
+      "rental yield",
+      "buy to let",
+      "property investment",
+      "gross yield",
+      "net yield"
+    ]
+  },
+  {
+    "id": "rental-income-tax",
+    "name": "UK Rental Income Tax Calculator",
+    "description": "Calculate tax on rental income including Section 24 mortgage credit and allowable expenses — 2025/26.",
+    "category": "International",
+    "emoji": "🏠",
+    "url": "https://rental-income-tax.tabutility.com",
+    "tags": [
+      "uk",
+      "rental income tax",
+      "landlord tax",
+      "section 24",
+      "buy to let tax"
+    ]
+  },
+  {
+    "id": "buy-to-let-stamp-duty",
+    "name": "Buy-to-Let Stamp Duty Calculator",
+    "description": "SDLT on buy-to-let and second properties including the 5% additional dwellings surcharge — 2025.",
+    "category": "International",
+    "emoji": "🏘️",
+    "url": "https://buy-to-let-stamp-duty.tabutility.com",
+    "tags": [
+      "buy to let stamp duty",
+      "additional dwellings surcharge",
+      "second home sdlt",
+      "landlord tax"
+    ]
+  },
+  {
+    "id": "us-paycheck-calculator",
+    "name": "US Paycheck Calculator",
+    "description": "Federal + state taxes, FICA and 401(k) for all 50 states — 2026 tax year.",
+    "category": "International",
+    "emoji": "🇺🇸",
+    "url": "https://us-paycheck-calculator.tabutility.com",
+    "tags": [
+      "usa",
+      "paycheck",
+      "federal tax",
+      "state tax",
+      "take home pay"
+    ]
+  },
+  {
+    "id": "us-capital-gains-tax",
+    "name": "US Capital Gains Tax Calculator",
+    "description": "Calculate short and long-term capital gains tax for 2026 including NIIT and state tax.",
+    "category": "International",
+    "emoji": "🇺🇸",
+    "url": "https://us-capital-gains-tax.tabutility.com",
+    "tags": [
+      "usa",
+      "capital gains tax",
+      "long term capital gains",
+      "short term",
+      "niit"
+    ]
+  },
+  {
+    "id": "us-self-employment-tax",
+    "name": "US Self-Employment Tax Calculator",
+    "description": "Calculate SE tax — Social Security, Medicare, income tax and quarterly estimated payments for 2026.",
+    "category": "International",
+    "emoji": "💼",
+    "url": "https://us-self-employment-tax.tabutility.com",
+    "tags": [
+      "usa",
+      "self employment tax",
+      "se tax",
+      "1099",
+      "quarterly payments",
+      "social security"
+    ]
+  },
+  {
+    "id": "us-401k",
+    "name": "401(k) Calculator 2026",
+    "description": "Calculate 401k contributions, employer match, tax savings and projected retirement balance.",
+    "category": "International",
+    "emoji": "🏦",
+    "url": "https://us-401k.tabutility.com",
+    "tags": [
+      "usa",
+      "401k",
+      "employer match",
+      "retirement",
+      "tax savings",
+      "contribution limit"
+    ]
+  },
+  {
+    "id": "australian-tax-calculator",
+    "name": "Australian Tax Calculator",
+    "description": "PAYG withholding, Medicare levy and take-home pay — 2025–26 ATO rates.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australian-tax-calculator.tabutility.com",
+    "tags": [
+      "australia",
+      "tax",
+      "payg",
+      "medicare",
+      "take home pay",
+      "ato"
+    ]
+  },
+  {
+    "id": "australia-hecs-calculator",
+    "name": "Australia HECS / HELP Calculator",
+    "description": "Compulsory repayments under the 2025–26 marginal rate system, with payoff timeline.",
+    "category": "International",
+    "emoji": "🎓",
+    "url": "https://australia-hecs-calculator.tabutility.com",
+    "tags": [
+      "australia",
+      "hecs",
+      "help",
+      "student debt",
+      "ato",
+      "repayment"
+    ]
+  },
+  {
+    "id": "australia-stamp-duty",
+    "name": "Australia Stamp Duty Calculator",
+    "description": "Calculate transfer duty for all Australian states and territories — NSW, VIC, QLD, WA and more. FHB concessions included.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australia-stamp-duty.tabutility.com",
+    "tags": [
+      "australia",
+      "stamp duty",
+      "transfer duty",
+      "nsw",
+      "vic",
+      "qld",
+      "first home buyer"
+    ]
+  },
+  {
+    "id": "australia-super",
+    "name": "Australia Superannuation Calculator",
+    "description": "Calculate SG contributions (11.5%), concessional caps and projected super balance at retirement.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australia-super.tabutility.com",
+    "tags": [
+      "australia",
+      "superannuation",
+      "super",
+      "sg rate",
+      "retirement",
+      "salary sacrifice"
+    ]
+  },
+  {
+    "id": "australia-lmi-calculator",
+    "name": "Australia LMI Calculator",
+    "description": "Calculate Lenders Mortgage Insurance costs for Australian home loans based on LVR and loan size.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australia-lmi-calculator.tabutility.com",
+    "tags": [
+      "australia",
+      "lmi",
+      "lenders mortgage insurance",
+      "home loan",
+      "lvr"
+    ]
+  },
+  {
+    "id": "australia-points-test",
+    "name": "Australia Skilled Migration Points Test",
+    "description": "Calculate your points score for Australian skilled migration — see if you meet the threshold.",
+    "category": "International",
+    "emoji": "🇦🇺",
+    "url": "https://australia-points-test.tabutility.com",
+    "tags": [
+      "australia",
+      "skilled migration",
+      "points test",
+      "visa",
+      "immigration"
+    ]
+  },
+  {
+    "id": "canadian-tax-calculator",
+    "name": "Canadian Tax Calculator",
+    "description": "Federal + provincial tax, CPP and EI for all 13 provinces — 2026 rates.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canadian-tax-calculator.tabutility.com",
+    "tags": [
+      "canada",
+      "tax",
+      "cra",
+      "cpp",
+      "ei",
+      "provincial tax",
+      "take home pay"
+    ]
+  },
+  {
+    "id": "canada-rrsp",
+    "name": "Canada RRSP Calculator",
+    "description": "Calculate RRSP contribution room, tax refund and projected retirement balance — 2025 limit $31,560.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canada-rrsp.tabutility.com",
+    "tags": [
+      "canada",
+      "rrsp",
+      "contribution room",
+      "tax refund",
+      "retirement savings"
+    ]
+  },
+  {
+    "id": "canada-land-transfer-tax",
+    "name": "Canada Land Transfer Tax Calculator",
+    "description": "Calculate land transfer tax for all provinces plus Toronto municipal LTT. First-time buyer rebates included.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canada-land-transfer-tax.tabutility.com",
+    "tags": [
+      "canada",
+      "land transfer tax",
+      "ontario ltt",
+      "bc property transfer tax",
+      "first time buyer"
+    ]
+  },
+  {
+    "id": "canada-express-entry",
+    "name": "Canada Express Entry CRS Calculator",
+    "description": "Calculate your Comprehensive Ranking System score for Canadian Express Entry immigration.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canada-express-entry.tabutility.com",
+    "tags": [
+      "canada",
+      "express entry",
+      "crs score",
+      "immigration",
+      "pr"
+    ]
+  },
+  {
+    "id": "uae-salary-calculator",
+    "name": "UAE Salary Calculator",
+    "description": "0% income tax for expats. See your full take-home vs UK, US and Australia.",
+    "category": "International",
+    "emoji": "🇦🇪",
+    "url": "https://uae-salary-calculator.tabutility.com",
+    "tags": [
+      "uae",
+      "dubai",
+      "salary",
+      "tax free",
+      "expat",
+      "take home pay"
+    ]
+  },
+  {
+    "id": "schengen-calculator",
+    "name": "Schengen Days Calculator",
+    "description": "Track your 90/180-day Schengen rule — enter your trips and see how many days you have left.",
+    "category": "International",
+    "emoji": "🇪🇺",
+    "url": "https://schengen-calculator.tabutility.com",
+    "tags": [
+      "schengen",
+      "visa",
+      "90 day rule",
+      "europe",
+      "travel"
+    ]
+  },
+  {
+    "id": "ireland-income-tax",
+    "name": "Ireland Income Tax Calculator",
+    "description": "Calculate Irish take-home pay including PAYE, USC and PRSI — 2025 tax year.",
+    "category": "International",
+    "emoji": "🇮🇪",
+    "url": "https://ireland-income-tax.tabutility.com",
+    "tags": [
+      "ireland",
+      "paye",
+      "usc",
+      "prsi",
+      "irish tax"
+    ]
+  },
+  {
+    "id": "nz-income-tax",
+    "name": "New Zealand Income Tax Calculator",
+    "description": "Calculate NZ take-home pay including PAYE income tax and ACC earner levy — 2025.",
+    "category": "International",
+    "emoji": "🇳🇿",
+    "url": "https://nz-income-tax.tabutility.com",
+    "tags": [
+      "new zealand",
+      "nz",
+      "paye",
+      "acc",
+      "nz tax"
+    ]
+  },
+  {
+    "id": "germany-income-tax",
+    "name": "Germany Income Tax Calculator",
+    "description": "Calculate German take-home pay including Lohnsteuer, solidarity surcharge and social contributions — 2025.",
+    "category": "International",
+    "emoji": "🇩🇪",
+    "url": "https://germany-income-tax.tabutility.com",
+    "tags": [
+      "germany",
+      "lohnsteuer",
+      "german tax",
+      "brutto netto",
+      "sozialversicherung"
+    ]
+  },
+  {
+    "id": "netherlands-income-tax",
+    "name": "Netherlands Income Tax Calculator",
+    "description": "Calculate Dutch take-home pay with Box 1 tax, heffingskorting and arbeidskorting — 2025.",
+    "category": "International",
+    "emoji": "🇳🇱",
+    "url": "https://netherlands-income-tax.tabutility.com",
+    "tags": [
+      "netherlands",
+      "dutch tax",
+      "box 1",
+      "heffingskorting",
+      "belasting"
+    ]
+  },
+  {
+    "id": "singapore-income-tax",
+    "name": "Singapore Income Tax Calculator",
+    "description": "Calculate Singapore take-home pay including IRAS income tax and CPF contributions — YA 2025.",
+    "category": "International",
+    "emoji": "🇸🇬",
+    "url": "https://singapore-income-tax.tabutility.com",
+    "tags": [
+      "singapore",
+      "iras",
+      "cpf",
+      "ya 2025",
+      "singapore tax"
+    ]
+  },
+  {
+    "id": "south-africa-income-tax",
+    "name": "South Africa Income Tax Calculator",
+    "description": "Calculate South African take-home pay with SARS income tax, primary rebate and UIF — 2025/26.",
+    "category": "International",
+    "emoji": "🇿🇦",
+    "url": "https://south-africa-income-tax.tabutility.com",
+    "tags": [
+      "south africa",
+      "sars",
+      "uif",
+      "zar",
+      "south africa tax"
+    ]
+  },
+  {
+    "id": "spain-income-tax",
+    "name": "Spain Income Tax Calculator",
+    "description": "Calculate Spanish take-home pay including IRPF income tax and social security contributions — 2025.",
+    "category": "International",
+    "emoji": "🇪🇸",
+    "url": "https://spain-income-tax.tabutility.com",
+    "tags": [
+      "spain",
+      "irpf",
+      "spain tax",
+      "seguridad social",
+      "declaracion renta"
+    ]
+  },
+  {
+    "id": "stopwatch",
+    "name": "Online Stopwatch",
+    "description": "Lap timer stopwatch with colour-coded fastest and slowest splits. Runs entirely in your browser.",
+    "category": "Productivity",
+    "emoji": "⏱️",
+    "url": "https://stopwatch.tabutility.com",
+    "tags": [
+      "stopwatch",
+      "lap timer",
+      "online stopwatch",
+      "timer"
+    ],
+    "featured": true
+  },
+  {
+    "id": "countdown-timer",
+    "name": "Countdown Timer",
+    "description": "Set any time or pick a preset (1–120 min), get an audio alarm when it's done. Animated ring display.",
+    "category": "Productivity",
+    "emoji": "⏳",
+    "url": "https://countdown-timer.tabutility.com",
+    "tags": [
+      "countdown timer",
+      "timer",
+      "online timer",
+      "alarm timer"
+    ],
+    "featured": true
+  },
+  {
+    "id": "pomodoro-timer",
+    "name": "Pomodoro Timer",
+    "description": "25-minute focus sessions with short and long breaks. Customisable, session counter and audio alerts.",
+    "category": "Productivity",
+    "emoji": "🍅",
+    "url": "https://pomodoro-timer.tabutility.com",
+    "tags": [
+      "pomodoro",
+      "pomodoro timer",
+      "focus timer",
+      "productivity timer"
+    ],
+    "featured": true
+  },
+  {
+    "id": "alarm-clock",
+    "name": "Online Alarm Clock",
+    "description": "Set one or more browser alarms with labels. Animated analogue clock face with audio alert.",
+    "category": "Productivity",
+    "emoji": "🔔",
+    "url": "https://alarm-clock.tabutility.com",
+    "tags": [
+      "alarm clock",
+      "online alarm",
+      "browser alarm",
+      "wake up timer"
+    ]
+  },
+  {
+    "id": "name-picker",
+    "name": "Spin the Wheel — Name Picker",
+    "description": "Add names, spin the wheel and pick a random winner. Colour-coded segments, spin history.",
+    "category": "Fun Tools",
+    "emoji": "🎡",
+    "url": "https://name-picker.tabutility.com",
+    "tags": [
+      "spin the wheel",
+      "name picker",
+      "random name",
+      "wheel spinner",
+      "random picker"
+    ],
+    "featured": true
+  },
+  {
+    "id": "coin-flip",
+    "name": "Coin Flip",
+    "description": "Flip a virtual coin and get heads or tails. Tracks streaks, flip history and heads/tails ratio.",
+    "category": "Fun Tools",
+    "emoji": "🪙",
+    "url": "https://coin-flip.tabutility.com",
+    "tags": [
+      "coin flip",
+      "heads or tails",
+      "flip a coin",
+      "random coin"
+    ]
+  },
+  {
+    "id": "dice-roller",
+    "name": "Dice Roller",
+    "description": "Roll D4, D6, D8, D10, D12, D20 or D100. Multiple dice, custom modifiers and roll history.",
+    "category": "Fun Tools",
+    "emoji": "🎲",
+    "url": "https://dice-roller.tabutility.com",
+    "tags": [
+      "dice roller",
+      "d20",
+      "d6",
+      "roll dice",
+      "dnd dice",
+      "random dice"
+    ]
+  },
+  {
+    "id": "random-number-generator",
+    "name": "Random Number Generator",
+    "description": "Generate one or thousands of random numbers in any range. No duplicates, sort, copy and stats.",
+    "category": "Fun Tools",
+    "emoji": "🔢",
+    "url": "https://random-number-generator.tabutility.com",
+    "tags": [
+      "random number generator",
+      "random number",
+      "rng",
+      "number picker",
+      "lottery numbers"
+    ]
+  },
+  {
+    "id": "typing-speed-test",
+    "name": "Typing Speed Test",
+    "description": "Measure your WPM and accuracy with real-time feedback. Multiple passages and result history.",
+    "category": "Productivity",
+    "emoji": "⌨️",
+    "url": "https://typing-speed-test.tabutility.com",
+    "tags": [
+      "typing speed test",
+      "wpm test",
+      "typing test",
+      "words per minute",
+      "typing practice"
+    ],
+    "featured": true
+  },
+  {
+    "id": "metronome",
+    "name": "Online Metronome",
+    "description": "Precise metronome with BPM slider, tap tempo, time signatures (2/4–8/4) and accent on beat 1.",
+    "category": "Productivity",
+    "emoji": "🎵",
+    "url": "https://metronome.tabutility.com",
+    "tags": [
+      "metronome",
+      "online metronome",
+      "bpm",
+      "tap tempo",
+      "music practice"
+    ]
+  },
+  {
+    "id": "yes-or-no",
+    "name": "Yes or No Wheel",
+    "description": "Spin the wheel for a Yes, No or Maybe answer. Presets include 50/50 weighted and three-option.",
+    "category": "Fun Tools",
+    "emoji": "🎯",
+    "url": "https://yes-or-no.tabutility.com",
+    "tags": [
+      "yes or no",
+      "yes no wheel",
+      "decision maker",
+      "random yes no",
+      "spin to decide"
+    ]
+  },
+  {
+    "id": "tally-counter",
+    "name": "Tally Counter",
+    "description": "Click to count. Multiple counters, custom step sizes, targets with progress bars and colour themes.",
+    "category": "Productivity",
+    "emoji": "🔢",
+    "url": "https://tally-counter.tabutility.com",
+    "tags": [
+      "tally counter",
+      "click counter",
+      "count clicks",
+      "inventory counter",
+      "lap counter"
+    ]
+  },
+  {
+    "id": "scientific-calculator",
+    "name": "Scientific Calculator",
+    "description": "Full scientific calculator with trig, logarithms, powers, roots, constants and inverse functions. Works instantly in your browser.",
+    "emoji": "🧮",
+    "category": "Calculators",
+    "url": "https://scientific-calculator.tabutility.com",
+    "tags": [
+      "sin",
+      "cos",
+      "tan",
+      "log",
+      "sqrt",
+      "pi",
+      "scientific"
+    ]
+  },
+  {
+    "id": "sales-tax-calculator",
+    "name": "Sales Tax Calculator",
+    "description": "Add or remove US sales tax from any price. All 50 state rates included. Supports custom rates too.",
+    "emoji": "🧾",
+    "category": "Calculators",
+    "url": "https://sales-tax-calculator.tabutility.com",
+    "tags": [
+      "sales tax",
+      "vat",
+      "tax",
+      "price",
+      "us tax"
+    ]
+  },
+  {
+    "id": "gpa-calculator",
+    "name": "GPA Calculator",
+    "description": "Calculate your GPA by adding courses, letter grades and credit hours. Real-time 4.0 scale result with letter grade and progress bar.",
+    "emoji": "🎓",
+    "category": "Calculators",
+    "url": "https://gpa-calculator.tabutility.com",
+    "tags": [
+      "gpa",
+      "grade point average",
+      "college",
+      "university",
+      "grades"
+    ]
+  },
+  {
+    "id": "body-fat-calculator",
+    "name": "Body Fat % Calculator",
+    "description": "Estimate your body fat percentage using the US Navy circumference method. Get your fitness category and reference ranges instantly.",
+    "emoji": "💪",
+    "category": "Wellness",
+    "url": "https://body-fat-calculator.tabutility.com",
+    "tags": [
+      "body fat",
+      "fitness",
+      "health",
+      "navy method",
+      "bmi"
+    ]
+  },
+  {
+    "id": "due-date-calculator",
+    "name": "Pregnancy Due Date Calculator",
+    "description": "Calculate your estimated due date from your last period, conception date or ultrasound. Includes trimester timeline and key milestones.",
+    "emoji": "🤰",
+    "category": "Wellness",
+    "url": "https://due-date-calculator.tabutility.com",
+    "tags": [
+      "due date",
+      "pregnancy",
+      "baby",
+      "lmp",
+      "trimester"
+    ]
+  },
+  {
+    "id": "sleep-calculator",
+    "name": "Sleep Calculator",
+    "description": "Find the best times to sleep or wake up based on 90-minute sleep cycles so you always wake feeling refreshed.",
+    "emoji": "😴",
+    "category": "Wellness",
+    "url": "https://sleep-calculator.tabutility.com",
+    "tags": [
+      "sleep",
+      "wake up",
+      "bedtime",
+      "sleep cycle",
+      "insomnia"
+    ]
+  },
+  {
+    "id": "car-lease-calculator",
+    "name": "Car Lease Calculator",
+    "description": "Calculate your monthly car lease payment, total cost and equivalent APR from cap cost, residual value and money factor.",
+    "emoji": "🚗",
+    "category": "Calculators",
+    "url": "https://car-lease-calculator.tabutility.com",
+    "tags": [
+      "car lease",
+      "lease payment",
+      "money factor",
+      "residual",
+      "auto"
+    ]
+  },
+  {
+    "id": "grade-calculator",
+    "name": "Grade Calculator",
+    "description": "Calculate your current grade, find what you need on the final exam, or compute your weighted course grade across categories.",
+    "emoji": "📝",
+    "category": "Calculators",
+    "url": "https://grade-calculator.tabutility.com",
+    "tags": [
+      "grade",
+      "final exam",
+      "weighted grade",
+      "score",
+      "percentage"
+    ]
+  },
+  {
+    "id": "water-intake-calculator",
+    "name": "Water Intake Calculator",
+    "description": "Find out how much water you should drink per day based on your weight, activity level and climate. Shows cups, bottles, ml and oz.",
+    "emoji": "💧",
+    "category": "Wellness",
+    "url": "https://water-intake-calculator.tabutility.com",
+    "tags": [
+      "water",
+      "hydration",
+      "daily water",
+      "health",
+      "wellness"
+    ]
+  },
+  {
+    "id": "mortgage-overpayment-calculator",
+    "name": "Mortgage Overpayment Calculator",
+    "description": "See how much interest you save and how early you pay off your mortgage by overpaying each month.",
+    "emoji": "🏠",
+    "category": "Calculators",
+    "url": "https://mortgage-overpayment-calculator.tabutility.com",
+    "tags": [
+      "mortgage overpayment",
+      "mortgage",
+      "interest saved",
+      "pay off early",
+      "uk mortgage"
+    ]
+  },
+  {
+    "id": "budget-planner",
+    "name": "50/30/20 Budget Planner",
+    "description": "Plan your monthly budget using the 50/30/20 rule — needs, wants and savings. Adjust the split with sliders to match your goals.",
+    "emoji": "💰",
+    "category": "Calculators",
+    "url": "https://budget-planner.tabutility.com",
+    "tags": [
+      "budget planner",
+      "50 30 20",
+      "budget calculator",
+      "monthly budget",
+      "personal finance"
+    ],
+    "featured": true
+  },
+  {
+    "id": "crypto-tax-calculator",
+    "name": "UK Crypto Tax Calculator",
+    "description": "Calculate UK capital gains tax on Bitcoin, Ethereum and crypto disposals for 2025/26. Supports multiple trades and the £3,000 annual exemption.",
+    "emoji": "₿",
+    "category": "International",
+    "url": "https://crypto-tax-calculator.tabutility.com",
+    "tags": [
+      "crypto tax",
+      "bitcoin tax uk",
+      "cryptocurrency cgt",
+      "hmrc crypto",
+      "capital gains crypto"
+    ]
+  }
+]
