@@ -1482,5 +1482,51 @@
       "health",
       "wellness"
     ]
+  },
+  {
+    "id": "mortgage-overpayment-calculator",
+    "name": "Mortgage Overpayment Calculator",
+    "description": "See how much interest you save and how early you pay off your mortgage by overpaying each month.",
+    "emoji": "🏠",
+    "category": "Calculators",
+    "url": "https://mortgage-overpayment-calculator.tabutility.com",
+    "tags": [
+      "mortgage overpayment",
+      "mortgage",
+      "interest saved",
+      "pay off early",
+      "uk mortgage"
+    ]
+  },
+  {
+    "id": "budget-planner",
+    "name": "50/30/20 Budget Planner",
+    "description": "Plan your monthly budget using the 50/30/20 rule — needs, wants and savings. Adjust the split with sliders to match your goals.",
+    "emoji": "💰",
+    "category": "Calculators",
+    "url": "https://budget-planner.tabutility.com",
+    "tags": [
+      "budget planner",
+      "50 30 20",
+      "budget calculator",
+      "monthly budget",
+      "personal finance"
+    ],
+    "featured": true
+  },
+  {
+    "id": "crypto-tax-calculator",
+    "name": "UK Crypto Tax Calculator",
+    "description": "Calculate UK capital gains tax on Bitcoin, Ethereum and crypto disposals for 2025/26. Supports multiple trades and the £3,000 annual exemption.",
+    "emoji": "₿",
+    "category": "International",
+    "url": "https://crypto-tax-calculator.tabutility.com",
+    "tags": [
+      "crypto tax",
+      "bitcoin tax uk",
+      "cryptocurrency cgt",
+      "hmrc crypto",
+      "capital gains crypto"
+    ]
   }
 ]
