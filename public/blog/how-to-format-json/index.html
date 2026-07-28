@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Format JSON: A Developer's Complete Guide | Tabutility</title>
+  <meta name="description" content="JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language." />
+  <link rel="canonical" href="https://tabutility.com/blog/how-to-format-json/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tabutility.com/blog/how-to-format-json/" />
+  <meta property="og:title" content="How to Format JSON: A Developer's Complete Guide" />
+  <meta property="og:description" content="JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language." />
+  <meta property="og:site_name" content="Tabutility" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="How to Format JSON: A Developer's Complete Guide" />
+  <meta name="twitter:description" content="JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <meta name="theme-color" content="#1a1a2e" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Format JSON: A Developer's Complete Guide","description":"JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"url":"https://tabutility.com/blog/how-to-format-json/","mainEntityOfPage":"https://tabutility.com/blog/how-to-format-json/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between JSON and JavaScript objects?","acceptedAnswer":{"@type":"Answer","text":"JSON is a text format — a string. JavaScript objects are in-memory data structures. JSON requires double quotes around all keys and string values; JavaScript objects allow single quotes and unquoted keys. JSON does not support undefined, functions, or comments. JSON.parse() converts a JSON string to a JS object; JSON.stringify() does the reverse."}},{"@type":"Question","name":"Can JSON have comments?","acceptedAnswer":{"@type":"Answer","text":"No — standard JSON (RFC 8259) does not support comments. This is a common frustration, especially in config files. JSON5 and JSONC are unofficial extensions that add comment support, but they are not standard JSON and require a custom parser."}},{"@type":"Question","name":"What causes 'Unexpected token' errors in JSON?","acceptedAnswer":{"@type":"Answer","text":"The most common causes are: trailing commas after the last item in an array or object, single quotes instead of double quotes, unquoted keys, and control characters in string values. A JSON formatter/validator instantly identifies the problematic line."}},{"@type":"Question","name":"What is the difference between pretty-printed and minified JSON?","acceptedAnswer":{"@type":"Answer","text":"Pretty-printed JSON uses indentation and newlines for human readability. Minified JSON removes all unnecessary whitespace to reduce file size. For APIs and production use, minified is preferred for performance. For config files and debugging, pretty-printed is far easier to read."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tabutility.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Format JSON","item":"https://tabutility.com/blog/how-to-format-json/"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+    a{color:#4f46e5;text-decoration:none}
+    a:hover{text-decoration:underline}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .nav-links{display:flex;gap:20px}
+    .nav-links a{color:#94a3b8;font-size:13px;font-weight:600;text-decoration:none}
+    .nav-links a:hover{color:#fff}
+    .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc;margin-bottom:12px}
+    .hero h1{font-size:clamp(22px,4vw,38px);font-weight:900;max-width:740px;margin:0 auto 14px;line-height:1.25;letter-spacing:-.5px}
+    .hero-meta{font-size:13px;color:#94a3b8}
+    .container{max-width:740px;margin:0 auto;padding:32px 20px 60px}
+    h2{font-size:22px;font-weight:800;color:#0f172a;margin:36px 0 12px;padding-top:8px}
+    h3{font-size:17px;font-weight:700;color:#1e293b;margin:24px 0 8px}
+    p{margin:0 0 16px;color:#334155}
+    ul,ol{margin:0 0 16px;padding-left:24px}
+    li{margin-bottom:6px;color:#334155}
+    .code-block{background:#1e293b;color:#e2e8f0;font-family:monospace;font-size:13px;padding:16px 20px;border-radius:8px;margin:16px 0;overflow-x:auto;line-height:1.6}
+    .code-block .key{color:#7dd3fc}
+    .code-block .str{color:#86efac}
+    .code-block .num{color:#fbbf24}
+    .code-block .bool{color:#f472b6}
+    .code-block .comment{color:#64748b;font-style:italic}
+    table{width:100%;border-collapse:collapse;margin:16px 0 24px}
+    th{background:#f1f5f9;color:#0f172a;font-weight:700;text-align:left;padding:10px 12px;font-size:13px}
+    td{padding:9px 12px;font-size:14px;color:#334155;border-top:1px solid #e2e8f0}
+    tr:hover td{background:#f8fafc}
+    .cta-box{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:14px;padding:24px 28px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .cta-text{color:#fff}
+    .cta-text strong{display:block;font-size:18px;margin-bottom:4px}
+    .cta-text span{font-size:13px;color:#c4b5fd}
+    .cta-btn{background:#fff;color:#4f46e5;padding:11px 24px;border-radius:8px;font-weight:800;font-size:14px;white-space:nowrap;text-decoration:none;display:inline-block}
+    .cta-btn:hover{background:#eef2ff;text-decoration:none}
+    .faq{margin-top:12px}
+    .faq-item{border-top:1px solid #e2e8f0;padding:16px 0}
+    .faq-item h3{font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px}
+    .faq-item p{margin:0;font-size:14px;color:#475569}
+    .ad-slot{margin:28px 0;min-height:90px;text-align:center}
+    footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
+    footer a{color:#94a3b8}
+    .breadcrumb{font-size:12px;color:#94a3b8;margin-bottom:24px}
+    .breadcrumb a{color:#94a3b8}
+    .breadcrumb span{margin:0 6px}
+    code{background:#f1f5f9;color:#0f172a;padding:2px 6px;border-radius:4px;font-size:13px;font-family:monospace}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">📖 Tabutility Guide</div>
+  <h1>How to Format JSON: A Developer's Complete Guide</h1>
+  <div class="hero-meta">Published 28 July 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="https://tabutility.com">Home</a>
+    <span>›</span>
+    <a href="https://tabutility.com/blog/">Blog</a>
+    <span>›</span>
+    How to Format JSON
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+<h2>What Is JSON?</h2>
+<p>JSON (JavaScript Object Notation) is a lightweight text format for storing and exchanging data. Introduced by Douglas Crockford in the early 2000s and formalised as RFC 8259, it has become the dominant data interchange format for APIs, configuration files, and web applications worldwide.</p>
+<p>JSON is language-independent — it can be parsed in Python, Java, Ruby, Go, PHP, Swift, or any other mainstream language. Its simplicity and human-readability made it replace XML in most web API contexts over the past 15 years.</p>
+
+<h2>The 6 JSON Data Types</h2>
+<table>
+  <tr><th>Type</th><th>Example</th><th>Notes</th></tr>
+  <tr><td>String</td><td><code>"hello"</code></td><td>Must use double quotes — never single quotes</td></tr>
+  <tr><td>Number</td><td><code>42</code>, <code>3.14</code>, <code>-7</code></td><td>No distinction between integers and floats</td></tr>
+  <tr><td>Boolean</td><td><code>true</code>, <code>false</code></td><td>Lowercase only — <code>True</code> is invalid</td></tr>
+  <tr><td>Null</td><td><code>null</code></td><td>Lowercase only — <code>NULL</code> is invalid</td></tr>
+  <tr><td>Array</td><td><code>[1, "two", true]</code></td><td>Ordered list of any JSON values</td></tr>
+  <tr><td>Object</td><td><code>{"key": "value"}</code></td><td>Unordered key-value pairs; keys must be strings</td></tr>
+</table>
+
+<h2>Valid JSON — A Complete Example</h2>
+<div class="code-block">
+{<br>
+&nbsp;&nbsp;<span class="key">"user"</span>: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id"</span>: <span class="num">1042</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"Alice Johnson"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"email"</span>: <span class="str">"alice@example.com"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"active"</span>: <span class="bool">true</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"score"</span>: <span class="num">98.5</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nickname"</span>: <span class="bool">null</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tags"</span>: [<span class="str">"admin"</span>, <span class="str">"verified"</span>]<br>
+&nbsp;&nbsp;}<br>
+}
+</div>
+
+<h2>The Most Common JSON Errors</h2>
+<h3>1. Trailing commas</h3>
+<p>The most frequent JSON error. JSON does not allow a comma after the last item in an object or array:</p>
+<div class="code-block">
+<span class="comment">// INVALID — trailing comma after "blue"</span><br>
+{ <span class="key">"colors"</span>: [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>,] }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"colors"</span>: [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>] }
+</div>
+
+<h3>2. Single quotes</h3>
+<p>JSON requires double quotes for both keys and string values. Single quotes are not valid JSON:</p>
+<div class="code-block">
+<span class="comment">// INVALID</span><br>
+{ <span class="key">'name'</span>: <span class="str">'Alice'</span> }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"name"</span>: <span class="str">"Alice"</span> }
+</div>
+
+<h3>3. Unquoted keys</h3>
+<div class="code-block">
+<span class="comment">// INVALID — keys must be quoted strings</span><br>
+{ name: <span class="str">"Alice"</span> }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"name"</span>: <span class="str">"Alice"</span> }
+</div>
+
+<h3>4. Comments</h3>
+<p>Standard JSON does not support comments. <code>// comment</code> or <code>/* comment */</code> will cause a parse error. If you need comments in config files, consider JSONC or JSON5 (which require specific parsers), or move to YAML/TOML for configuration.</p>
+
+<h3>5. Undefined and functions</h3>
+<p>JSON has no concept of <code>undefined</code>, functions, dates (as objects), or <code>NaN</code>/<code>Infinity</code>. These JavaScript-specific values cannot be serialised to JSON.</p>
+
+<h2>Pretty-Printing vs Minifying</h2>
+<p><strong>Pretty-printed JSON</strong> uses indentation (typically 2 or 4 spaces) and newlines for human readability — ideal for config files, debugging, and version control.</p>
+<p><strong>Minified JSON</strong> removes all unnecessary whitespace to reduce file size — ideal for API responses and production builds where bandwidth matters.</p>
+<p>In JavaScript: <code>JSON.stringify(data, null, 2)</code> pretty-prints with 2-space indentation. <code>JSON.stringify(data)</code> minifies.</p>
+<p>A 10KB pretty-printed JSON file typically minifies to 6–7KB — a 30–40% reduction. For large payloads delivered over mobile connections, this matters.</p>
+
+<h2>Working With JSON in Code</h2>
+<h3>JavaScript</h3>
+<div class="code-block">
+<span class="comment">// Parse (string → object)</span><br>
+const obj = JSON.parse('<span class="str">{"name":"Alice"}</span>');<br><br>
+<span class="comment">// Stringify (object → string)</span><br>
+const json = JSON.stringify(obj, null, 2); <span class="comment">// pretty, 2 spaces</span>
+</div>
+
+<h3>Python</h3>
+<div class="code-block">
+import json<br><br>
+<span class="comment"># Parse</span><br>
+obj = json.loads('<span class="str">{"name": "Alice"}</span>')<br><br>
+<span class="comment"># Stringify</span><br>
+json_str = json.dumps(obj, indent=2)
+</div>
+
+<h3>Command line (with jq)</h3>
+<div class="code-block">
+<span class="comment"># Pretty-print any JSON file</span><br>
+cat data.json | jq '.'<br><br>
+<span class="comment"># Extract a field</span><br>
+cat data.json | jq '.user.name'
+</div>
+
+<h2>Validating JSON</h2>
+<p>JSON validators check that your text conforms to the JSON specification and report the exact location of any errors. You should validate JSON whenever you:</p>
+<ul>
+  <li>Receive JSON from an external API and need to debug a parse error</li>
+  <li>Hand-write JSON configuration files</li>
+  <li>Copy JSON from documentation or a browser network panel</li>
+  <li>Need to confirm generated JSON is well-formed before shipping</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is the difference between JSON and JavaScript objects?</h3><p>JSON is a text format — it is always a string. JavaScript objects are in-memory data structures. Key differences: JSON requires double quotes around all keys and string values; JS objects allow single quotes and unquoted keys. JSON does not support <code>undefined</code>, functions, Date objects, or comments. <code>JSON.parse()</code> converts a JSON string to a JS object; <code>JSON.stringify()</code> converts a JS object to a JSON string.</p></div>
+  <div class="faq-item"><h3>Can JSON have comments?</h3><p>No — standard JSON (RFC 8259) explicitly does not support comments. This was a deliberate design decision by Douglas Crockford to keep the format simple and interoperable. JSON5 and JSONC are unofficial supersets that add comment support, but they require custom parsers and are not universally supported. For config files requiring comments, consider YAML or TOML instead.</p></div>
+  <div class="faq-item"><h3>What causes 'Unexpected token' errors in JSON?</h3><p>The most common causes are: (1) trailing commas after the last element in an array or object, (2) single quotes instead of double quotes around keys or strings, (3) unquoted keys, (4) control characters (tab, newline) embedded literally inside strings instead of escaped as \t or \n, and (5) <code>undefined</code> values (which JSON has no equivalent for). Paste into a JSON formatter to immediately identify the line and character position of the error.</p></div>
+  <div class="faq-item"><h3>What is the difference between pretty-printed and minified JSON?</h3><p>Pretty-printed JSON uses indentation and newlines for readability — ideal for config files, logs, and debugging. Minified JSON removes all whitespace to reduce file size — typically 30–40% smaller. For APIs, minified is preferred for performance. Use <code>JSON.stringify(data, null, 2)</code> in JavaScript or <code>json.dumps(data, indent=2)</code> in Python for pretty output; omit the indent argument for minified output.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the JSON Formatter & Validator</strong>
+      <span>Paste, format, validate, and minify JSON instantly in your browser</span>
+    </div>
+    <a href="https://json-formatter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
+  <div>© 2026 Tabutility · No sign-up required · Your data never leaves your device</div>
+</footer>
+
+<script>
+(function(){
+  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
+  var belowFold=Array.from(ins).slice(1);
+  if(!belowFold.length)return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries,obs){entries.forEach(function(e){if(e.isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});e.target.setAttribute('data-lazy-done','1');obs.unobserve(e.target);}});},{rootMargin:'200px'});
+    belowFold.forEach(function(el){io.observe(el);});
+  } else { belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});}); }
+})();
+</script>
+
+</body>
+</html>

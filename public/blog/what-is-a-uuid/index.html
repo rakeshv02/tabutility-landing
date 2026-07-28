@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is a UUID? How Unique IDs Are Generated and When to Use Them | Tabutility</title>
+  <meta name="description" content="UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them." />
+  <link rel="canonical" href="https://tabutility.com/blog/what-is-a-uuid/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tabutility.com/blog/what-is-a-uuid/" />
+  <meta property="og:title" content="What Is a UUID? How Unique IDs Are Generated and When to Use Them" />
+  <meta property="og:description" content="UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them." />
+  <meta property="og:site_name" content="Tabutility" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="What Is a UUID? How Unique IDs Are Generated and When to Use Them" />
+  <meta name="twitter:description" content="UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <meta name="theme-color" content="#1a1a2e" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is a UUID? How Unique IDs Are Generated and When to Use Them","description":"UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"url":"https://tabutility.com/blog/what-is-a-uuid/","mainEntityOfPage":"https://tabutility.com/blog/what-is-a-uuid/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are UUIDs truly unique?","acceptedAnswer":{"@type":"Answer","text":"In practice, yes. The probability of generating a duplicate UUID v4 is astronomically small — roughly 1 in 5.3 undecillion. You would need to generate billions of UUIDs per second for trillions of years to have a realistic collision chance."}},{"@type":"Question","name":"What is the difference between UUID v4 and v7?","acceptedAnswer":{"@type":"Answer","text":"UUID v4 is randomly generated with no time component, making it non-sortable. UUID v7 (ratified 2022) embeds a millisecond-precision Unix timestamp in the first 48 bits, making UUIDs sortable by creation time — ideal for database primary keys."}},{"@type":"Question","name":"Should I use UUIDs or auto-increment integers for database IDs?","acceptedAnswer":{"@type":"Answer","text":"It depends. Auto-increment integers are smaller, faster to index, and human-readable. UUIDs are better when you need decentralised ID generation (multiple servers or clients generating IDs without coordination), when you want to avoid exposing sequential record counts, or when merging data from multiple systems."}},{"@type":"Question","name":"What does the version number in a UUID mean?","acceptedAnswer":{"@type":"Answer","text":"The version number (v1, v4, v5, v7, etc.) defines how the UUID was generated — from a timestamp and MAC address (v1), random data (v4), a hash of a name (v5), or a timestamp with random data (v7). The version digit appears as the first digit of the third group: xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx for v4."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tabutility.com/blog/"},{"@type":"ListItem","position":3,"name":"What Is a UUID?","item":"https://tabutility.com/blog/what-is-a-uuid/"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+    a{color:#4f46e5;text-decoration:none}
+    a:hover{text-decoration:underline}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .nav-links{display:flex;gap:20px}
+    .nav-links a{color:#94a3b8;font-size:13px;font-weight:600;text-decoration:none}
+    .nav-links a:hover{color:#fff}
+    .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc;margin-bottom:12px}
+    .hero h1{font-size:clamp(22px,4vw,38px);font-weight:900;max-width:740px;margin:0 auto 14px;line-height:1.25;letter-spacing:-.5px}
+    .hero-meta{font-size:13px;color:#94a3b8}
+    .container{max-width:740px;margin:0 auto;padding:32px 20px 60px}
+    h2{font-size:22px;font-weight:800;color:#0f172a;margin:36px 0 12px;padding-top:8px}
+    h3{font-size:17px;font-weight:700;color:#1e293b;margin:24px 0 8px}
+    p{margin:0 0 16px;color:#334155}
+    ul,ol{margin:0 0 16px;padding-left:24px}
+    li{margin-bottom:6px;color:#334155}
+    .formula{background:#1e293b;color:#38bdf8;font-family:monospace;font-size:15px;padding:14px 20px;border-radius:8px;margin:16px 0;text-align:center;font-weight:700}
+    table{width:100%;border-collapse:collapse;margin:16px 0 24px}
+    th{background:#f1f5f9;color:#0f172a;font-weight:700;text-align:left;padding:10px 12px;font-size:13px}
+    td{padding:9px 12px;font-size:14px;color:#334155;border-top:1px solid #e2e8f0}
+    tr:hover td{background:#f8fafc}
+    .cta-box{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:14px;padding:24px 28px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .cta-text{color:#fff}
+    .cta-text strong{display:block;font-size:18px;margin-bottom:4px}
+    .cta-text span{font-size:13px;color:#c4b5fd}
+    .cta-btn{background:#fff;color:#4f46e5;padding:11px 24px;border-radius:8px;font-weight:800;font-size:14px;white-space:nowrap;text-decoration:none;display:inline-block}
+    .cta-btn:hover{background:#eef2ff;text-decoration:none}
+    .faq{margin-top:12px}
+    .faq-item{border-top:1px solid #e2e8f0;padding:16px 0}
+    .faq-item h3{font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px}
+    .faq-item p{margin:0;font-size:14px;color:#475569}
+    .ad-slot{margin:28px 0;min-height:90px;text-align:center}
+    footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
+    footer a{color:#94a3b8}
+    .breadcrumb{font-size:12px;color:#94a3b8;margin-bottom:24px}
+    .breadcrumb a{color:#94a3b8}
+    .breadcrumb span{margin:0 6px}
+    code{background:#f1f5f9;color:#0f172a;padding:2px 6px;border-radius:4px;font-size:13px;font-family:monospace}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">📖 Tabutility Guide</div>
+  <h1>What Is a UUID? How Unique IDs Are Generated and When to Use Them</h1>
+  <div class="hero-meta">Published 28 July 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="https://tabutility.com">Home</a>
+    <span>›</span>
+    <a href="https://tabutility.com/blog/">Blog</a>
+    <span>›</span>
+    What Is a UUID?
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+<h2>What Is a UUID?</h2>
+<p>A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify information in computer systems. It is represented as 32 hexadecimal digits displayed in five groups separated by hyphens:</p>
+<div class="formula">550e8400-e29b-41d4-a716-446655440000</div>
+<p>The format is <code>8-4-4-4-12</code> characters, always 36 characters in total including the four hyphens. UUIDs are also called GUIDs (Globally Unique Identifiers), especially in Microsoft environments — they are the same thing.</p>
+
+<h2>UUID Versions Explained</h2>
+<table>
+  <tr><th>Version</th><th>How Generated</th><th>Sortable?</th><th>Best For</th></tr>
+  <tr><td>v1</td><td>Timestamp + MAC address</td><td>Yes (but exposes MAC address)</td><td>Legacy systems</td></tr>
+  <tr><td>v3</td><td>MD5 hash of a name + namespace</td><td>No</td><td>Deterministic IDs from names</td></tr>
+  <tr><td>v4</td><td>Randomly generated</td><td>No</td><td>General purpose — most widely used</td></tr>
+  <tr><td>v5</td><td>SHA-1 hash of a name + namespace</td><td>No</td><td>Deterministic IDs (more secure than v3)</td></tr>
+  <tr><td>v7</td><td>Unix timestamp + random bits</td><td>Yes ✓</td><td>Database primary keys (recommended)</td></tr>
+</table>
+
+<h3>UUID v4 — the default choice</h3>
+<p>UUID v4 is generated entirely from random or pseudo-random data. 122 bits are random; 6 bits are fixed for version/variant markers. It is the most commonly used version because it requires no coordination between systems, exposes no information about when or where it was generated, and has an effectively zero chance of collision.</p>
+
+<h3>UUID v7 — the modern choice for databases</h3>
+<p>Ratified in RFC 9562 (2022), UUID v7 embeds a Unix millisecond timestamp in the most significant 48 bits. This means UUIDs sort chronologically, which is a major database performance advantage — most database B-tree indexes benefit significantly from monotonically increasing keys, avoiding page splits and fragmentation.</p>
+<p>If you're choosing a UUID type for new database primary keys, v7 is the current best practice recommendation from PostgreSQL and database performance experts.</p>
+
+<h2>How Unique Are UUIDs Really?</h2>
+<p>UUID v4 has 122 random bits. The total number of possible UUID v4 values is 2¹²² ≈ <strong>5.3 × 10³⁶</strong> (5.3 undecillion).</p>
+<p>The probability of a collision when generating <em>n</em> UUIDs follows the birthday problem formula. To reach even a 50% probability of a single collision, you would need to generate approximately <strong>2.7 × 10¹⁸</strong> UUIDs — roughly 2.7 billion billion. At 1 billion UUIDs per second, that would take 85 years.</p>
+<p>In practice, UUID v4 collisions are a theoretical concern only. Systems generating UUIDs at any realistic scale are safe to treat them as unique.</p>
+
+<h2>UUIDs vs Auto-Increment Integers</h2>
+<p>Both are valid approaches for database primary keys. The choice depends on your requirements:</p>
+<ul>
+  <li><strong>Auto-increment integers</strong> are smaller (4–8 bytes vs 16 bytes), cheaper to index, human-readable in logs, and increment predictably. Their drawback: they require a central counter, making them hard to generate across distributed systems, and they reveal your record count to anyone who can see an ID.</li>
+  <li><strong>UUIDs</strong> can be generated by any client without coordination, don't reveal record counts or business metrics through IDs, and allow safe merging of data from multiple databases. Their drawback: larger storage footprint and, for v4, poor database index locality (random inserts cause B-tree fragmentation).</li>
+</ul>
+<p>The modern consensus: use UUID v7 for new systems where you want the benefits of UUIDs — sortable by time, good index performance, distributed generation, and no information leakage.</p>
+
+<h2>Generating UUIDs in Code</h2>
+<h3>JavaScript / Node.js</h3>
+<div class="formula">crypto.randomUUID()  // Built-in since Node 15.6, browser since Chrome 92<br>// → "550e8400-e29b-41d4-a716-446655440000"</div>
+<h3>Python</h3>
+<div class="formula">import uuid<br>str(uuid.uuid4())  # → "550e8400-e29b-41d4-a716-446655440000"</div>
+<h3>PostgreSQL</h3>
+<div class="formula">SELECT gen_random_uuid();  -- UUID v4, built-in since PostgreSQL 13</div>
+<h3>SQL Server</h3>
+<div class="formula">SELECT NEWID();  -- Generates a GUID (UUID v4)</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Are UUIDs truly unique?</h3><p>In practice, yes. The probability of generating a duplicate UUID v4 is approximately 1 in 5.3 undecillion. To have a 50% chance of a collision, you would need to generate 2.7 × 10¹⁸ UUIDs — an entirely theoretical concern at any realistic generation rate. Systems treat UUID v4 as functionally unique without any practical caveats.</p></div>
+  <div class="faq-item"><h3>What is the difference between UUID v4 and v7?</h3><p>UUID v4 is entirely random with no time component, making it non-sortable. UUID v7 (ratified RFC 9562, 2022) embeds a millisecond-precision Unix timestamp in the first 48 bits, making UUIDs sort chronologically. This makes v7 significantly better for database primary keys where sorted insertion reduces index fragmentation and improves query performance.</p></div>
+  <div class="faq-item"><h3>Should I use UUIDs or auto-increment integers for database IDs?</h3><p>It depends on your architecture. Auto-increment integers are smaller, faster to index, and simpler. UUIDs work better for distributed systems (multiple servers generating IDs independently), when merging data from multiple databases, or when you don't want to expose record counts through predictable sequential IDs. For new systems, UUID v7 gives you the benefits of UUIDs with much better database performance than v4.</p></div>
+  <div class="faq-item"><h3>What does the version number in a UUID mean?</h3><p>The version digit defines how the UUID was generated. It appears as the first digit of the third group: <code>xxxxxxxx-xxxx-<strong>4</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v4, <code>xxxxxxxx-xxxx-<strong>7</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v7. The variant bits in the fourth group identify it as a standard RFC 4122/9562 UUID rather than older proprietary formats.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the UUID Generator</strong>
+      <span>Generate v4 and v7 UUIDs instantly in your browser</span>
+    </div>
+    <a href="https://uuid-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
+  <div>© 2026 Tabutility · No sign-up required · Your data never leaves your device</div>
+</footer>
+
+<script>
+(function(){
+  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
+  var belowFold=Array.from(ins).slice(1);
+  if(!belowFold.length)return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries,obs){entries.forEach(function(e){if(e.isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});e.target.setAttribute('data-lazy-done','1');obs.unobserve(e.target);}});},{rootMargin:'200px'});
+    belowFold.forEach(function(el){io.observe(el);});
+  } else { belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});}); }
+})();
+</script>
+
+</body>
+</html>

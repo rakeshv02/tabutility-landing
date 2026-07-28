@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Base64 Encoding and How Does It Work? | Tabutility</title>
+  <meta name="description" content="Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly." />
+  <link rel="canonical" href="https://tabutility.com/blog/what-is-base64-encoding/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tabutility.com/blog/what-is-base64-encoding/" />
+  <meta property="og:title" content="What Is Base64 Encoding and How Does It Work?" />
+  <meta property="og:description" content="Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly." />
+  <meta property="og:site_name" content="Tabutility" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="What Is Base64 Encoding and How Does It Work?" />
+  <meta name="twitter:description" content="Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <meta name="theme-color" content="#1a1a2e" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is Base64 Encoding and How Does It Work?","description":"Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"url":"https://tabutility.com/blog/what-is-base64-encoding/","mainEntityOfPage":"https://tabutility.com/blog/what-is-base64-encoding/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Base64 a form of encryption?","acceptedAnswer":{"@type":"Answer","text":"No. Base64 is an encoding scheme, not encryption. Anyone who receives Base64-encoded data can decode it instantly without a key. It provides no confidentiality — it exists purely to make binary data safe for text-based transmission."}},{"@type":"Question","name":"How much larger does Base64 make the data?","acceptedAnswer":{"@type":"Answer","text":"Base64 increases data size by approximately 33%. Every 3 bytes of binary input become 4 characters of Base64 output. A 1MB image embedded as Base64 in HTML becomes approximately 1.37MB of text."}},{"@type":"Question","name":"What is the difference between Base64 and Base64url?","acceptedAnswer":{"@type":"Answer","text":"Standard Base64 uses + and / characters which have special meaning in URLs. Base64url substitutes - for + and _ for /, making it safe to use in URLs and filenames without encoding. JWTs use Base64url."}},{"@type":"Question","name":"When should I use Base64 for images?","acceptedAnswer":{"@type":"Answer","text":"Inline Base64 images make sense for very small images (icons under 1–2KB) where the HTTP request overhead exceeds the size increase. For larger images, a CDN-hosted file is always more efficient."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tabutility.com/blog/"},{"@type":"ListItem","position":3,"name":"What Is Base64 Encoding and How Does It Work?","item":"https://tabutility.com/blog/what-is-base64-encoding/"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+    a{color:#4f46e5;text-decoration:none}
+    a:hover{text-decoration:underline}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px}
+    .nav-links{display:flex;gap:20px}
+    .nav-links a{color:#94a3b8;font-size:13px;font-weight:600;text-decoration:none}
+    .nav-links a:hover{color:#fff}
+    .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc;margin-bottom:12px}
+    .hero h1{font-size:clamp(22px,4vw,38px);font-weight:900;max-width:740px;margin:0 auto 14px;line-height:1.25;letter-spacing:-.5px}
+    .hero-meta{font-size:13px;color:#94a3b8}
+    .container{max-width:740px;margin:0 auto;padding:32px 20px 60px}
+    h2{font-size:22px;font-weight:800;color:#0f172a;margin:36px 0 12px;padding-top:8px}
+    h3{font-size:17px;font-weight:700;color:#1e293b;margin:24px 0 8px}
+    p{margin:0 0 16px;color:#334155}
+    ul,ol{margin:0 0 16px;padding-left:24px}
+    li{margin-bottom:6px;color:#334155}
+    .formula{background:#1e293b;color:#38bdf8;font-family:monospace;font-size:14px;padding:14px 20px;border-radius:8px;margin:16px 0;word-break:break-all;line-height:1.5}
+    .cta-box{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:14px;padding:24px 28px;margin:40px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .cta-text{color:#fff}
+    .cta-text strong{display:block;font-size:18px;margin-bottom:4px}
+    .cta-text span{font-size:13px;color:#c4b5fd}
+    .cta-btn{background:#fff;color:#4f46e5;padding:11px 24px;border-radius:8px;font-weight:800;font-size:14px;white-space:nowrap;text-decoration:none;display:inline-block}
+    .cta-btn:hover{background:#eef2ff;text-decoration:none}
+    .faq{margin-top:12px}
+    .faq-item{border-top:1px solid #e2e8f0;padding:16px 0}
+    .faq-item h3{font-size:15px;font-weight:700;color:#0f172a;margin:0 0 6px}
+    .faq-item p{margin:0;font-size:14px;color:#475569}
+    .ad-slot{margin:28px 0;min-height:90px;text-align:center}
+    footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
+    footer a{color:#94a3b8}
+    .breadcrumb{font-size:12px;color:#94a3b8;margin-bottom:24px}
+    .breadcrumb a{color:#94a3b8}
+    .breadcrumb span{margin:0 6px}
+    code{background:#f1f5f9;color:#0f172a;padding:2px 6px;border-radius:4px;font-size:13px;font-family:monospace}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">📖 Tabutility Guide</div>
+  <h1>What Is Base64 Encoding and How Does It Work?</h1>
+  <div class="hero-meta">Published 28 July 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="https://tabutility.com">Home</a>
+    <span>›</span>
+    <a href="https://tabutility.com/blog/">Blog</a>
+    <span>›</span>
+    What Is Base64 Encoding?
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+<h2>The Problem Base64 Solves</h2>
+<p>Computers store everything as binary — sequences of 0s and 1s. When you need to send binary data (an image, a PDF, a certificate) through a system designed to handle text — an email, an HTTP header, a JSON API, an XML document — you have a problem. Many text-based protocols cannot reliably handle arbitrary binary bytes. Characters like null bytes, control characters, or bytes above 127 can corrupt or terminate the transmission.</p>
+<p>Base64 solves this by converting binary data into a safe subset of 64 printable ASCII characters that travel reliably through any text-based system.</p>
+
+<h2>How Base64 Works</h2>
+<p>Base64 uses a 64-character alphabet: <strong>A–Z</strong> (26), <strong>a–z</strong> (26), <strong>0–9</strong> (10), plus <strong>+</strong> and <strong>/</strong> (2). The encoding process works in three steps:</p>
+<ol>
+  <li>Take the binary input and group it into chunks of <strong>3 bytes (24 bits)</strong>.</li>
+  <li>Split each 24-bit chunk into <strong>four 6-bit groups</strong>.</li>
+  <li>Map each 6-bit value (0–63) to the corresponding character in the Base64 alphabet.</li>
+</ol>
+<p>If the input is not divisible by 3, padding characters (<code>=</code>) are added to make the output length a multiple of 4.</p>
+
+<h3>A worked example</h3>
+<p>Encoding the text "Man":</p>
+<div class="formula">
+  Text:   M         a         n<br>
+  ASCII:  77        97        110<br>
+  Binary: 01001101  01100001  01101110<br>
+  Groups: 010011 | 010110 | 000101 | 101110<br>
+  Values: 19     | 22     | 5      | 46<br>
+  Base64: T      | W      | F      | u  → <strong>TWFu</strong>
+</div>
+<p>Every 3 bytes of input becomes exactly 4 characters of Base64 output — a 33% size increase.</p>
+
+<h2>Where You'll See Base64 in the Wild</h2>
+<ul>
+  <li><strong>Email attachments</strong> — MIME encoding uses Base64 to attach files (images, PDFs, spreadsheets) to email messages that only support ASCII text in transit.</li>
+  <li><strong>Data URIs</strong> — inline images in HTML/CSS: <code>src="data:image/png;base64,iVBORw0KGgo..."</code> — avoids an extra HTTP request for small icons.</li>
+  <li><strong>JSON Web Tokens (JWTs)</strong> — the header and payload sections of a JWT are Base64url-encoded (a URL-safe variant). This is why JWTs look like garbled text with dots.</li>
+  <li><strong>HTTP Basic Authentication</strong> — credentials in the format <code>username:password</code> are Base64-encoded in the Authorization header.</li>
+  <li><strong>Cryptographic certificates</strong> — PEM files (SSL/TLS certificates, SSH keys) are Base64-encoded DER format wrapped in <code>-----BEGIN CERTIFICATE-----</code> headers.</li>
+  <li><strong>API responses</strong> — some APIs return binary data (images, audio) as Base64 strings embedded in JSON to avoid multipart responses.</li>
+</ul>
+
+<h2>Base64 Is Not Encryption</h2>
+<p>This is the most common misconception. Base64 is purely an encoding scheme — it is completely reversible by anyone without any key or secret. Seeing Base64 in an HTTP header does not mean credentials are protected. HTTP Basic Auth, for example, encodes credentials in Base64 but is effectively plaintext unless the connection uses HTTPS.</p>
+<p>For actual confidentiality, you need encryption (AES, RSA, etc.). Base64 just makes binary data text-safe.</p>
+
+<h2>Base64url: The URL-Safe Variant</h2>
+<p>Standard Base64 uses <code>+</code> and <code>/</code>, which have special meanings in URLs (<code>+</code> = space, <code>/</code> = path separator). Base64url substitutes:</p>
+<ul>
+  <li><code>+</code> → <code>-</code></li>
+  <li><code>/</code> → <code>_</code></li>
+  <li>Padding <code>=</code> is often omitted</li>
+</ul>
+<p>This makes Base64url safe to use in URLs, filenames, and query parameters without percent-encoding. JWTs, OAuth tokens, and many modern APIs use Base64url rather than standard Base64.</p>
+
+<h2>Encoding and Decoding in Code</h2>
+<h3>JavaScript (browser)</h3>
+<div class="formula">
+  btoa("Hello, World!")  // → "SGVsbG8sIFdvcmxkIQ=="<br>
+  atob("SGVsbG8sIFdvcmxkIQ==")  // → "Hello, World!"
+</div>
+<h3>Python</h3>
+<div class="formula">
+  import base64<br>
+  base64.b64encode(b"Hello")  # → b'SGVsbG8='<br>
+  base64.b64decode("SGVsbG8=")  # → b'Hello'
+</div>
+<h3>Command line</h3>
+<div class="formula">
+  echo -n "Hello" | base64  # → SGVsbG8=<br>
+  echo "SGVsbG8=" | base64 --decode  # → Hello
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is Base64 a form of encryption?</h3><p>No. Base64 is encoding, not encryption. Anyone who receives Base64 data can decode it instantly without any key. It provides zero security or confidentiality — it exists purely to represent binary data safely as printable ASCII text. Never use Base64 to protect sensitive information.</p></div>
+  <div class="faq-item"><h3>How much larger does Base64 make the data?</h3><p>Exactly 33% larger. Every 3 bytes of input produce 4 characters of output (plus padding). A 1MB image embedded as Base64 in HTML becomes approximately 1.37MB of text. This is why inline Base64 images are only efficient for very small assets like icons.</p></div>
+  <div class="faq-item"><h3>What is the difference between Base64 and Base64url?</h3><p>Standard Base64 uses + and / which are special URL characters. Base64url substitutes - for + and _ for /, making it safe in URLs and filenames without percent-encoding. It also usually omits the = padding. JWTs and most modern OAuth tokens use Base64url.</p></div>
+  <div class="faq-item"><h3>When should I use Base64 for images?</h3><p>Inline Base64 images make sense for very small assets (icons under ~1–2KB) where the HTTP request round-trip overhead outweighs the 33% size increase. For anything larger, serving images from a CDN is more efficient — browsers cache them, they compress well with HTTP/2, and they don't bloat HTML/CSS file sizes.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Base64 Encoder / Decoder</strong>
+      <span>Instant encode and decode — runs entirely in your browser</span>
+    </div>
+    <a href="https://base64-encoder.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
+  <div>© 2026 Tabutility · No sign-up required · Your data never leaves your device</div>
+</footer>
+
+<script>
+(function(){
+  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
+  var belowFold=Array.from(ins).slice(1);
+  if(!belowFold.length)return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries,obs){entries.forEach(function(e){if(e.isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});e.target.setAttribute('data-lazy-done','1');obs.unobserve(e.target);}});},{rootMargin:'200px'});
+    belowFold.forEach(function(el){io.observe(el);});
+  } else { belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});}); }
+})();
+</script>
+
+</body>
+</html>
