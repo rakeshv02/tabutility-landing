@@ -160,6 +160,9 @@ export default function App() {
       <div style={{ background: "#1a1a2e", color: "#94a3b8", textAlign: "center", padding: "28px 20px", fontSize: 13 }}>
         <div style={{ fontSize: 18, marginBottom: 6 }}>⚡ Tabutility</div>
         <div style={{ marginBottom: 6 }}>{totalTools} free browser-based utility tools. No sign-up required.</div>
+        <div style={{ marginBottom: 10 }}>
+          <a href="/blog/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>📖 Read our guides →</a>
+        </div>
         <div style={{ color: "#4b5563", fontSize: 12 }}>© {new Date().getFullYear()} Tabutility · All tools run in your browser · Your data never leaves your device</div>
       </div>
 
