@@ -3,115 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Free Finance & Utility Guides | Tabutility</title>
-  <meta name="description" content="Free guides on personal finance, tax, property, health, and more. Written by the team behind Tabutility's 100 free browser tools." />
+  <title>Tabutility Blog – Guides, Tips & Calculator Explainers</title>
+  <meta name="description" content="Free guides on compound interest, mortgage repayments, BMI, salary tax, rental yield, debt payoff, retirement savings, VAT, currency conversion and more." />
   <link rel="canonical" href="https://tabutility.com/blog/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tabutility Blog – Free Financial & Utility Guides" />
+  <meta property="og:description" content="Practical guides to help you understand and calculate compound interest, mortgages, BMI, taxes, and more — all free." />
   <meta property="og:url" content="https://tabutility.com/blog/" />
-  <meta property="og:title" content="Blog — Free Finance & Utility Guides | Tabutility" />
-  <meta property="og:description" content="Free guides on personal finance, tax, property, health, and more." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-  <meta name="theme-color" content="#1a1a2e" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://tabutility.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <style>
-    *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b}
-    a{color:inherit;text-decoration:none}
-    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-    .nav-brand{color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px}
-    .nav-links a{color:#94a3b8;font-size:13px;font-weight:600;margin-left:20px}
-    .nav-links a:hover{color:#fff}
-    .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:44px 20px 36px;text-align:center}
-    .hero h1{font-size:clamp(24px,5vw,42px);font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
-    .hero p{font-size:16px;color:#a5b4fc;margin:0;max-width:500px;margin:0 auto}
-    .grid{max-width:1100px;margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-    .card{background:#fff;border-radius:14px;padding:22px 24px;border:1.5px solid #e2e8f0;display:flex;flex-direction:column;gap:10px;transition:border-color .15s,box-shadow .15s;cursor:pointer}
-    .card:hover{border-color:#4f46e5;box-shadow:0 4px 20px rgba(79,70,229,0.1)}
-    .card-tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4f46e5}
-    .card h2{font-size:16px;font-weight:800;color:#0f172a;margin:0;line-height:1.3}
-    .card p{font-size:13px;color:#64748b;margin:0;line-height:1.55;flex:1}
-    .card-tool{font-size:12px;color:#4f46e5;font-weight:700}
-    footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
-    footer a{color:#94a3b8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:#f1f5f9;color:#1e293b}
+    nav{background:#1e293b;padding:14px 20px;display:flex;align-items:center;gap:16px}
+    nav a{color:#a5b4fc;text-decoration:none;font-size:14px}
+    nav a:first-child{font-size:18px;font-weight:900;color:#fff}
+    nav a:hover{color:#fff}
+    .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:#fff;padding:52px 20px 44px;text-align:center}
+    .hero h1{font-size:clamp(24px,4vw,40px);font-weight:900;margin-bottom:12px}
+    .hero p{color:#a5b4fc;font-size:16px;max-width:520px;margin:0 auto}
+    .container{max-width:900px;margin:0 auto;padding:40px 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+    .card{background:#fff;border-radius:12px;border:1.5px solid #e2e8f0;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+    .card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+    .card-body{padding:20px}
+    .card-emoji{font-size:32px;margin-bottom:10px}
+    .card h2{font-size:16px;font-weight:700;margin-bottom:8px;color:#1e293b;line-height:1.4}
+    .card p{font-size:13px;color:#64748b;line-height:1.6}
+    .card-meta{padding:10px 20px;background:#f8fafc;border-top:1px solid #f1f5f9;font-size:11px;color:#94a3b8;font-weight:600}
+    footer{text-align:center;padding:32px 20px;color:#64748b;font-size:13px}
+    footer a{color:#4f46e5;text-decoration:none}
+    .ad-banner{text-align:center;padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin:24px 0;min-height:90px}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Tabutility Blog",
+    "url": "https://tabutility.com/blog/",
+    "description": "Free guides and explainers on personal finance, health, taxes, and productivity tools.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tabutility",
+      "url": "https://tabutility.com"
+    }
+  }
+  </script>
 </head>
 <body>
-<nav>
-  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
-  <div class="nav-links">
+  <nav>
+    <a href="https://tabutility.com">⚡ Tabutility</a>
     <a href="https://tabutility.com">All Tools</a>
-    <a href="/blog/">Blog</a>
+    <a href="https://tabutility.com/blog/" style="color:#fff">Blog</a>
+  </nav>
+
+  <div class="hero">
+    <div style="font-size:40px;margin-bottom:12px">📝</div>
+    <h1>Tabutility Blog</h1>
+    <p>Practical guides to help you understand the maths behind money, health, and productivity — with free tools to do the hard work for you.</p>
   </div>
-</nav>
-<div class="hero">
-  <h1>📖 Tabutility Guides</h1>
-  <p>Plain-English guides on personal finance, tax, property and more — with free tools to put the knowledge into action.</p>
-</div>
-<div class="grid">
-    <a href="/blog/how-compound-interest-works/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>How Compound Interest Works (And How to Use It to Build Wealth)</h2>
-      <p>Compound interest is one of the most powerful forces in personal finance. Learn how it works, the formula behind it, and how to use it to grow your savings faster.</p>
-      <div class="card-tool">→ Uses: Compound Interest Calculator</div>
-    </a>
-    <a href="/blog/what-is-good-rental-yield-uk/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>What Is a Good Rental Yield in the UK? A Landlord's Guide</h2>
-      <p>Rental yield is the key metric every UK landlord needs to know. Learn what counts as a good yield, how to calculate it, and which UK cities offer the best returns.</p>
-      <div class="card-tool">→ Uses: Rental Yield Calculator</div>
-    </a>
-    <a href="/blog/how-to-pay-off-debt-fast/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>How to Pay Off Debt Fast: Snowball vs Avalanche (and Which Actually Works)</h2>
-      <p>Two proven methods for paying off debt faster — the debt snowball and debt avalanche. Learn how each works, which saves more money, and which one you'll actually stick to.</p>
-      <div class="card-tool">→ Uses: Debt Payoff Calculator</div>
-    </a>
-    <a href="/blog/ir35-explained-uk-contractors/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>IR35 Explained: What Every UK Contractor Needs to Know</h2>
-      <p>IR35 is one of the most misunderstood tax rules for UK contractors. This guide explains what it is, how HMRC determines your status, and what you can do about it.</p>
-      <div class="card-tool">→ Uses: IR35 Calculator</div>
-    </a>
-    <a href="/blog/how-much-to-retire-uk/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>How Much Do You Need to Retire in the UK? A Realistic Guide</h2>
-      <p>How much money do you actually need to retire comfortably in the UK? This guide covers the PLSA retirement standards, the 4% rule, and how to calculate your own target.</p>
-      <div class="card-tool">→ Uses: Retirement Calculator</div>
-    </a>
-    <a href="/blog/how-to-calculate-bmi/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>How to Calculate BMI and What Your Number Actually Means</h2>
-      <p>BMI is the most widely used health screening tool in the world. Learn how to calculate it, what the ranges mean, and where it falls short as a health measure.</p>
-      <div class="card-tool">→ Uses: BMI Calculator</div>
-    </a>
-    <a href="/blog/uk-stamp-duty-guide/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>UK Stamp Duty in 2025: How Much Will You Pay When Buying a Home?</h2>
-      <p>Stamp Duty Land Tax (SDLT) is one of the biggest costs of buying property in England. This guide explains the current rates, thresholds, and who qualifies for relief.</p>
-      <div class="card-tool">→ Uses: UK Stamp Duty Calculator</div>
-    </a>
-    <a href="/blog/best-currency-exchange-rate/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>How to Get the Best Exchange Rate When Sending Money Abroad</h2>
-      <p>Banks charge far more than they should for currency exchange. Learn how exchange rates work, where the hidden fees are, and how to get the best rate when sending money internationally.</p>
-      <div class="card-tool">→ Uses: Currency Converter</div>
-    </a>
-    <a href="/blog/why-word-count-matters/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>Why Word Count Matters: A Guide for Writers, Students and Content Creators</h2>
-      <p>Whether you're writing an essay, a blog post, or a job application, word count affects how your work is received. Learn the ideal word counts for every type of writing.</p>
-      <div class="card-tool">→ Uses: Word Counter</div>
-    </a>
-    <a href="/blog/apr-explained/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>APR Explained: The Only Number That Really Matters When Borrowing</h2>
-      <p>APR (Annual Percentage Rate) is the single most important number when comparing loans, credit cards, and mortgages. Here's what it means and how to use it.</p>
-      <div class="card-tool">→ Uses: APR Calculator</div>
-    </a></div>
-<footer>
-  <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
-  <div>© 2026 Tabutility</div>
-</footer>
+
+  <div class="container">
+    <div class="ad-banner">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+    <div class="grid">
+
+      <a class="card" href="https://tabutility.com/blog/how-to-calculate-compound-interest/">
+        <div class="card-body">
+          <div class="card-emoji">💰</div>
+          <h2>How to Calculate Compound Interest: The Eighth Wonder of the World</h2>
+          <p>Understand why Einstein supposedly called compound interest the most powerful force in the universe — and how to make it work for you.</p>
+        </div>
+        <div class="card-meta">Calculators · 8 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-to-calculate-mortgage-repayments/">
+        <div class="card-body">
+          <div class="card-emoji">🏠</div>
+          <h2>How to Calculate Mortgage Repayments: A Complete Guide</h2>
+          <p>Monthly payment formulas, affordability rules, and what really happens when you overpay your mortgage.</p>
+        </div>
+        <div class="card-meta">Calculators · 9 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/what-is-a-healthy-bmi/">
+        <div class="card-body">
+          <div class="card-emoji">⚖️</div>
+          <h2>What Is a Healthy BMI? A Complete Guide to Body Mass Index</h2>
+          <p>What the BMI scale actually means, its limitations, and what to do with your number once you have it.</p>
+        </div>
+        <div class="card-meta">Health · 7 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-to-calculate-salary-after-tax/">
+        <div class="card-body">
+          <div class="card-emoji">💼</div>
+          <h2>How to Calculate Your Salary After Tax: UK & US Guide</h2>
+          <p>What the tax bands mean in practice, how National Insurance works, and why your take-home is lower than you expected.</p>
+        </div>
+        <div class="card-meta">Tax · 8 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/what-is-a-good-rental-yield/">
+        <div class="card-body">
+          <div class="card-emoji">🏘️</div>
+          <h2>What Is a Good Rental Yield? UK Property Investment Guide</h2>
+          <p>Gross vs net yield, what counts as a good return, and how to spot a buy-to-let that actually makes money.</p>
+        </div>
+        <div class="card-meta">Property · 8 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-to-pay-off-debt-faster/">
+        <div class="card-body">
+          <div class="card-emoji">🧹</div>
+          <h2>How to Pay Off Debt Faster: Snowball vs Avalanche Method</h2>
+          <p>The two battle-tested strategies for debt freedom, compared side-by-side with real numbers.</p>
+        </div>
+        <div class="card-meta">Finance · 7 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-much-do-you-need-to-retire/">
+        <div class="card-body">
+          <div class="card-emoji">🌴</div>
+          <h2>How Much Do You Need to Retire? A Complete Savings Guide</h2>
+          <p>The 4% rule, the 25x formula, and how to actually figure out your retirement number.</p>
+        </div>
+        <div class="card-meta">Retirement · 9 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-to-calculate-vat/">
+        <div class="card-body">
+          <div class="card-emoji">🧾</div>
+          <h2>How to Calculate VAT: A Simple Guide for UK Businesses</h2>
+          <p>Adding, removing, and checking VAT — the formulas, the thresholds, and the common mistakes.</p>
+        </div>
+        <div class="card-meta">Tax · 6 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/how-currency-exchange-rates-work/">
+        <div class="card-body">
+          <div class="card-emoji">💱</div>
+          <h2>How Currency Exchange Rates Work: A Beginner's Guide</h2>
+          <p>Spot rates, mid-market rates, bank spreads, and how to get the best rate when sending money abroad.</p>
+        </div>
+        <div class="card-meta">Finance · 7 min read</div>
+      </a>
+
+      <a class="card" href="https://tabutility.com/blog/word-count-for-seo/">
+        <div class="card-body">
+          <div class="card-emoji">📄</div>
+          <h2>Word Count for SEO: How Long Should Your Content Be?</h2>
+          <p>The data on content length vs rankings, character counts for social media, and what "thin content" actually means.</p>
+        </div>
+        <div class="card-meta">Content · 7 min read</div>
+      </a>
+
+    </div>
+
+    <div class="ad-banner" style="margin-top:32px">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 <a href="https://tabutility.com">Tabutility</a> · <a href="https://tabutility.com/privacy-policy">Privacy Policy</a> · <a href="https://tabutility.com/terms-of-service">Terms</a></p>
+  </footer>
 </body>
 </html>
