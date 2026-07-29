@@ -6,7 +6,13 @@
     "category": "Calculators",
     "emoji": "📅",
     "url": "https://date-difference-calculator.tabutility.com",
-    "tags": ["date","days","calendar","difference","countdown"]
+    "tags": [
+      "date",
+      "days",
+      "calendar",
+      "difference",
+      "countdown"
+    ]
   },
   {
     "id": "percentage-change-calculator",
@@ -15,7 +21,13 @@
     "category": "Calculators",
     "emoji": "📈",
     "url": "https://percentage-change-calculator.tabutility.com",
-    "tags": ["percentage","increase","decrease","change","math"]
+    "tags": [
+      "percentage",
+      "increase",
+      "decrease",
+      "change",
+      "math"
+    ]
   },
   {
     "id": "amortization-schedule",
@@ -24,7 +36,13 @@
     "category": "Calculators",
     "emoji": "📊",
     "url": "https://amortization-schedule.tabutility.com",
-    "tags": ["loan","mortgage","amortization","payment","finance"]
+    "tags": [
+      "loan",
+      "mortgage",
+      "amortization",
+      "payment",
+      "finance"
+    ]
   },
   {
     "id": "split-bill-calculator",
@@ -33,7 +51,13 @@
     "category": "Calculators",
     "emoji": "🍽️",
     "url": "https://split-bill-calculator.tabutility.com",
-    "tags": ["split","bill","tip","restaurant","friends"]
+    "tags": [
+      "split",
+      "bill",
+      "tip",
+      "restaurant",
+      "friends"
+    ]
   },
   {
     "id": "mortgage-affordability-calculator",
@@ -42,7 +66,13 @@
     "category": "International",
     "emoji": "🏠",
     "url": "https://mortgage-affordability-calculator.tabutility.com",
-    "tags": ["mortgage","affordability","borrow","uk","property"]
+    "tags": [
+      "mortgage",
+      "affordability",
+      "borrow",
+      "uk",
+      "property"
+    ]
   },
   {
     "id": "uk-child-benefit-calculator",
@@ -51,7 +81,13 @@
     "category": "International",
     "emoji": "👶",
     "url": "https://uk-child-benefit-calculator.tabutility.com",
-    "tags": ["uk","child benefit","high income","hmrc","tax charge"]
+    "tags": [
+      "uk",
+      "child benefit",
+      "high income",
+      "hmrc",
+      "tax charge"
+    ]
   },
   {
     "id": "time-zone-converter",
@@ -60,7 +96,13 @@
     "category": "Converters",
     "emoji": "🌍",
     "url": "https://time-zone-converter.tabutility.com",
-    "tags": ["timezone","convert","EST","GMT","world clock"]
+    "tags": [
+      "timezone",
+      "convert",
+      "EST",
+      "GMT",
+      "world clock"
+    ]
   },
   {
     "id": "hex-to-rgb",
@@ -69,7 +111,13 @@
     "category": "Developer Tools",
     "emoji": "🎨",
     "url": "https://hex-to-rgb.tabutility.com",
-    "tags": ["hex","rgb","color","css","developer"]
+    "tags": [
+      "hex",
+      "rgb",
+      "color",
+      "css",
+      "developer"
+    ]
   },
   {
     "id": "calorie-deficit-calculator",
@@ -78,7 +126,13 @@
     "category": "Wellness",
     "emoji": "🥗",
     "url": "https://calorie-deficit-calculator.tabutility.com",
-    "tags": ["calories","deficit","weight loss","diet","nutrition"]
+    "tags": [
+      "calories",
+      "deficit",
+      "weight loss",
+      "diet",
+      "nutrition"
+    ]
   },
   {
     "id": "period-calculator",
@@ -87,7 +141,13 @@
     "category": "Wellness",
     "emoji": "🩸",
     "url": "https://period-calculator.tabutility.com",
-    "tags": ["period","menstrual cycle","ovulation","fertility","health"]
+    "tags": [
+      "period",
+      "menstrual cycle",
+      "ovulation",
+      "fertility",
+      "health"
+    ]
   },
   {
     "id": "percentage-calculator",
@@ -1618,5 +1678,58 @@
       "hmrc crypto",
       "capital gains crypto"
     ]
+  },
+  {
+    "id": "regex-tester",
+    "name": "Regex Tester",
+    "description": "Test regular expressions against any string in real-time. View matches, groups and flags.",
+    "category": "Developer Tools",
+    "tags": [
+      "regex",
+      "developer",
+      "pattern",
+      "match"
+    ],
+    "emoji": "🔍"
+  },
+  {
+    "id": "invoice-generator",
+    "name": "Free Invoice Generator",
+    "description": "Create professional invoices in seconds. Fill in details, add line items, print or save as PDF.",
+    "category": "Content Tools",
+    "tags": [
+      "invoice",
+      "billing",
+      "freelance",
+      "pdf"
+    ],
+    "emoji": "🧾"
+  },
+  {
+    "id": "us-tax-bracket-calculator",
+    "name": "US Tax Bracket Calculator",
+    "description": "Calculate your 2024 US federal income tax by bracket. See exactly how much tax you owe at each rate.",
+    "category": "International",
+    "tags": [
+      "tax",
+      "US",
+      "federal",
+      "IRS",
+      "2024"
+    ],
+    "emoji": "🇺🇸"
+  },
+  {
+    "id": "ovulation-calculator",
+    "name": "Ovulation Calculator",
+    "description": "Find your fertile window and predicted ovulation date based on your menstrual cycle.",
+    "category": "Wellness",
+    "tags": [
+      "ovulation",
+      "fertility",
+      "period",
+      "cycle"
+    ],
+    "emoji": "🌸"
   }
 ]
