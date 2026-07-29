@@ -59,6 +59,7 @@ export default function App() {
       {/* ── Top Nav ── */}
       <div style={{ background: "#1a1a2e", padding: "11px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #263350" }}>
         <div style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>⚡ Tabutility</div>
+        <a href="/tools/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>🗂️ All Tools</a>
         <a href="/blog/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 700, textDecoration: "none" }}>📖 Blog</a>
       </div>
 
