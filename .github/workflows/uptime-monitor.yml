@@ -1,0 +1,138 @@
+name: Uptime Monitor
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # every 15 minutes
+  workflow_dispatch:           # allow manual trigger
+
+jobs:
+  check-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check all 103 tool subdomains
+        id: check
+        run: |
+          TOOLS=(
+            percentage-calculator bmi-calculator age-calculator tip-calculator
+            loan-calculator discount-calculator mortgage-calculator rent-vs-buy
+            compound-interest-calculator credit-card-payoff-calculator
+            savings-goal-calculator retirement-calculator annuity-calculator
+            debt-payoff net-worth emergency-fund inflation roi apr investment
+            break-even fuel-cost hourly-to-salary overtime payrise
+            currency-converter json-formatter word-unscrambler base64-encoder
+            url-encoder password-generator uuid-generator markdown-to-html
+            qr-code-generator word-counter unit-converter image-compressor
+            meditation-timer tdee-calculator vat-calculator gst-calculator
+            uk-salary-calculator uk-student-loan uk-maternity-pay
+            uk-capital-gains-tax uk-self-employed-tax uk-ir35-calculator
+            uk-stamp-duty-calculator uk-dividend-tax uk-inheritance-tax
+            uk-pension-tax-relief uk-corporation-tax uk-national-insurance
+            rental-yield rental-income-tax buy-to-let-stamp-duty
+            us-paycheck-calculator us-capital-gains-tax us-self-employment-tax
+            us-401k australian-tax-calculator australia-hecs-calculator
+            australia-stamp-duty australia-super australia-lmi-calculator
+            australia-points-test canadian-tax-calculator canada-rrsp
+            canada-land-transfer-tax canada-express-entry uae-salary-calculator
+            schengen-calculator ireland-income-tax nz-income-tax
+            germany-income-tax netherlands-income-tax singapore-income-tax
+            south-africa-income-tax spain-income-tax stopwatch countdown-timer
+            pomodoro-timer alarm-clock name-picker coin-flip dice-roller
+            random-number-generator typing-speed-test metronome yes-or-no
+            tally-counter scientific-calculator sales-tax-calculator
+            gpa-calculator body-fat-calculator due-date-calculator
+            sleep-calculator car-lease-calculator grade-calculator
+            water-intake-calculator mortgage-overpayment-calculator
+            budget-planner crypto-tax-calculator
+          )
+
+          BROKEN=()
+          for tool in "${TOOLS[@]}"; do
+            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "https://$tool.tabutility.com")
+            if [ "$status" != "200" ]; then
+              BROKEN+=("$tool (HTTP $status)")
+              echo "❌ $tool → $status"
+            else
+              echo "✅ $tool → 200"
+            fi
+          done
+
+          if [ ${#BROKEN[@]} -gt 0 ]; then
+            echo "broken_count=${#BROKEN[@]}" >> $GITHUB_OUTPUT
+            printf '%s\n' "${BROKEN[@]}" > /tmp/broken.txt
+            echo "has_broken=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_broken=false" >> $GITHUB_OUTPUT
+            echo "broken_count=0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open GitHub Issue if tools are down
+        if: steps.check.outputs.has_broken == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const broken = fs.readFileSync('/tmp/broken.txt', 'utf8').trim().split('\n');
+            const count = broken.length;
+            const list = broken.map(t => `- [ ] \`${t}\``).join('\n');
+            const now = new Date().toUTCString();
+
+            // Check if there's already an open issue for today's outage
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'uptime-alert',
+            });
+
+            // Only open one issue per outage window (avoid spam)
+            const recentIssue = issues.data.find(i => {
+              const age = Date.now() - new Date(i.created_at).getTime();
+              return age < 30 * 60 * 1000; // opened within last 30 minutes
+            });
+
+            if (recentIssue) {
+              // Update existing issue with latest status
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: recentIssue.number,
+                body: `**Update ${now}** — ${count} tool(s) still down:\n${list}`,
+              });
+              console.log(`Updated existing issue #${recentIssue.number}`);
+            } else {
+              // Open a fresh issue
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🚨 ${count} Tabutility tool(s) are DOWN — ${now}`,
+                body: `## Tools returning errors\n\n${list}\n\n---\n_Detected by the uptime monitor at ${now}. This issue will auto-close when all tools are back up._`,
+                labels: ['uptime-alert'],
+              });
+              console.log('Opened new uptime alert issue');
+            }
+
+      - name: Close resolved issue if everything is back up
+        if: steps.check.outputs.has_broken == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'uptime-alert',
+            });
+            for (const issue of issues.data) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `✅ All tools are back up — auto-closing.`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+              });
+            }
