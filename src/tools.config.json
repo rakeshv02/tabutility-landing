@@ -1,5 +1,95 @@
 [
   {
+    "id": "date-difference-calculator",
+    "name": "Days Between Dates Calculator",
+    "description": "Calculate the exact number of days, weeks, months and years between any two dates.",
+    "category": "Calculators",
+    "emoji": "📅",
+    "url": "https://date-difference-calculator.tabutility.com",
+    "tags": ["date","days","calendar","difference","countdown"]
+  },
+  {
+    "id": "percentage-change-calculator",
+    "name": "Percentage Change Calculator",
+    "description": "Calculate percentage increase, decrease or change between any two values instantly.",
+    "category": "Calculators",
+    "emoji": "📈",
+    "url": "https://percentage-change-calculator.tabutility.com",
+    "tags": ["percentage","increase","decrease","change","math"]
+  },
+  {
+    "id": "amortization-schedule",
+    "name": "Amortization Schedule",
+    "description": "Generate a full payment-by-payment amortization table for any loan.",
+    "category": "Calculators",
+    "emoji": "📊",
+    "url": "https://amortization-schedule.tabutility.com",
+    "tags": ["loan","mortgage","amortization","payment","finance"]
+  },
+  {
+    "id": "split-bill-calculator",
+    "name": "Split Bill Calculator",
+    "description": "Divide a restaurant bill or any expense equally between friends, with tip.",
+    "category": "Calculators",
+    "emoji": "🍽️",
+    "url": "https://split-bill-calculator.tabutility.com",
+    "tags": ["split","bill","tip","restaurant","friends"]
+  },
+  {
+    "id": "mortgage-affordability-calculator",
+    "name": "Mortgage Affordability Calculator",
+    "description": "Find out how much you can borrow for a mortgage based on your income and deposit.",
+    "category": "International",
+    "emoji": "🏠",
+    "url": "https://mortgage-affordability-calculator.tabutility.com",
+    "tags": ["mortgage","affordability","borrow","uk","property"]
+  },
+  {
+    "id": "uk-child-benefit-calculator",
+    "name": "UK Child Benefit Calculator",
+    "description": "Calculate your 2024/25 Child Benefit and High Income Tax Charge.",
+    "category": "International",
+    "emoji": "👶",
+    "url": "https://uk-child-benefit-calculator.tabutility.com",
+    "tags": ["uk","child benefit","high income","hmrc","tax charge"]
+  },
+  {
+    "id": "time-zone-converter",
+    "name": "Time Zone Converter",
+    "description": "Instantly convert times between any two time zones worldwide.",
+    "category": "Converters",
+    "emoji": "🌍",
+    "url": "https://time-zone-converter.tabutility.com",
+    "tags": ["timezone","convert","EST","GMT","world clock"]
+  },
+  {
+    "id": "hex-to-rgb",
+    "name": "HEX to RGB Color Converter",
+    "description": "Convert HEX colour codes to RGB, HSL and CSS values with a live preview.",
+    "category": "Developer Tools",
+    "emoji": "🎨",
+    "url": "https://hex-to-rgb.tabutility.com",
+    "tags": ["hex","rgb","color","css","developer"]
+  },
+  {
+    "id": "calorie-deficit-calculator",
+    "name": "Calorie Deficit Calculator",
+    "description": "Find out exactly how many calories to eat per day to reach your goal weight.",
+    "category": "Wellness",
+    "emoji": "🥗",
+    "url": "https://calorie-deficit-calculator.tabutility.com",
+    "tags": ["calories","deficit","weight loss","diet","nutrition"]
+  },
+  {
+    "id": "period-calculator",
+    "name": "Period Calculator",
+    "description": "Predict your next period and track your menstrual cycle. Private, instant, free.",
+    "category": "Wellness",
+    "emoji": "🩸",
+    "url": "https://period-calculator.tabutility.com",
+    "tags": ["period","menstrual cycle","ovulation","fertility","health"]
+  },
+  {
     "id": "percentage-calculator",
     "name": "Percentage Calculator",
     "description": "Calculate percentages, increases, decreases and differences instantly.",
