@@ -9,7 +9,7 @@ jobs:
   check-tools:
     runs-on: ubuntu-latest
     steps:
-      - name: Check all 103 tool subdomains
+      - name: Check all 113 tool subdomains
         id: check
         run: |
           TOOLS=(
@@ -43,6 +43,10 @@ jobs:
             sleep-calculator car-lease-calculator grade-calculator
             water-intake-calculator mortgage-overpayment-calculator
             budget-planner crypto-tax-calculator
+            date-difference-calculator percentage-change-calculator
+            time-zone-converter hex-to-rgb split-bill-calculator
+            calorie-deficit-calculator period-calculator amortization-schedule
+            mortgage-affordability-calculator uk-child-benefit-calculator
           )
 
           BROKEN=()
@@ -59,80 +63,72 @@ jobs:
           if [ ${#BROKEN[@]} -gt 0 ]; then
             echo "broken_count=${#BROKEN[@]}" >> $GITHUB_OUTPUT
             printf '%s\n' "${BROKEN[@]}" > /tmp/broken.txt
-            echo "has_broken=true" >> $GITHUB_OUTPUT
+            echo "broken_list<<EOF" >> $GITHUB_OUTPUT
+            cat /tmp/broken.txt >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
           else
-            echo "has_broken=false" >> $GITHUB_OUTPUT
             echo "broken_count=0" >> $GITHUB_OUTPUT
           fi
 
-      - name: Open GitHub Issue if tools are down
-        if: steps.check.outputs.has_broken == 'true'
+      - name: Open issue if tools are down
+        if: steps.check.outputs.broken_count > 0
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const broken = fs.readFileSync('/tmp/broken.txt', 'utf8').trim().split('\n');
-            const count = broken.length;
-            const list = broken.map(t => `- [ ] \`${t}\``).join('\n');
-            const now = new Date().toUTCString();
+            const brokenCount = ${{ steps.check.outputs.broken_count }};
+            const brokenList = `${{ steps.check.outputs.broken_list }}`;
+            const title = `🚨 ${brokenCount} tool(s) down – ${new Date().toISOString().slice(0,16)} UTC`;
+            const body = `## Tools returning non-200 responses\n\n\`\`\`\n${brokenList}\n\`\`\`\n\nCheck Vercel dashboard and Cloudflare DNS. This issue auto-closes when all tools are back to 200.`;
 
-            // Check if there's already an open issue for today's outage
+            // Check if there's already an open uptime issue
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              state: 'open',
               labels: 'uptime-alert',
+              state: 'open'
             });
 
-            // Only open one issue per outage window (avoid spam)
-            const recentIssue = issues.data.find(i => {
-              const age = Date.now() - new Date(i.created_at).getTime();
-              return age < 30 * 60 * 1000; // opened within last 30 minutes
-            });
-
-            if (recentIssue) {
-              // Update existing issue with latest status
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: recentIssue.number,
-                body: `**Update ${now}** — ${count} tool(s) still down:\n${list}`,
-              });
-              console.log(`Updated existing issue #${recentIssue.number}`);
-            } else {
-              // Open a fresh issue
+            if (issues.data.length === 0) {
               await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: `🚨 ${count} Tabutility tool(s) are DOWN — ${now}`,
-                body: `## Tools returning errors\n\n${list}\n\n---\n_Detected by the uptime monitor at ${now}. This issue will auto-close when all tools are back up._`,
-                labels: ['uptime-alert'],
+                title,
+                body,
+                labels: ['uptime-alert']
               });
-              console.log('Opened new uptime alert issue');
+            } else {
+              // Update existing issue
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                body: `**Update ${new Date().toISOString().slice(0,16)} UTC** — still down:\n\`\`\`\n${brokenList}\n\`\`\``
+              });
             }
 
-      - name: Close resolved issue if everything is back up
-        if: steps.check.outputs.has_broken == 'false'
+      - name: Close resolved issue if all tools are up
+        if: steps.check.outputs.broken_count == 0
         uses: actions/github-script@v7
         with:
           script: |
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              state: 'open',
               labels: 'uptime-alert',
+              state: 'open'
             });
+
             for (const issue of issues.data) {
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
-                body: `✅ All tools are back up — auto-closing.`,
+                body: `✅ All 113 tools are back to HTTP 200 as of ${new Date().toISOString().slice(0,16)} UTC. Closing.`
               });
               await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
-                state: 'closed',
+                state: 'closed'
               });
             }
