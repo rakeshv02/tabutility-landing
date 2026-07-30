@@ -1890,7 +1890,8 @@
       "article",
       "SEO"
     ],
-    "emoji": "📖"
+    "emoji": "📖",
+    "url": "https://reading-time-calculator.tabutility.com"
   },
   {
     "id": "dividend-yield-calculator",
@@ -1906,7 +1907,8 @@
       "passive",
       "shares"
     ],
-    "emoji": "💰"
+    "emoji": "💰",
+    "url": "https://dividend-yield-calculator.tabutility.com"
   },
   {
     "id": "nri-tax-calculator",
@@ -1921,6 +1923,7 @@
       "dtaa",
       "fbar"
     ],
-    "emoji": "🌏"
+    "emoji": "🌏",
+    "url": "https://nri-tax-calculator.tabutility.com"
   }
 ]
