@@ -1731,5 +1731,165 @@
       "cycle"
     ],
     "emoji": "🌸"
+  },
+  {
+    "id": "macro-calculator",
+    "name": "Macro Calculator",
+    "description": "Calculate your daily protein, carbs and fat targets based on your goal, weight and activity level.",
+    "category": "Wellness",
+    "tags": [
+      "macros",
+      "protein",
+      "carbs",
+      "fat",
+      "calories",
+      "IIFYM",
+      "fitness",
+      "diet"
+    ],
+    "emoji": "🥗"
+  },
+  {
+    "id": "square-footage-calculator",
+    "name": "Square Footage Calculator",
+    "description": "Calculate the square footage of rooms and spaces. Add multiple areas and get the running total.",
+    "category": "Calculators",
+    "tags": [
+      "square footage",
+      "area",
+      "room",
+      "flooring",
+      "home",
+      "sq ft",
+      "measurement"
+    ],
+    "emoji": "📐"
+  },
+  {
+    "id": "roth-ira-calculator",
+    "name": "Roth IRA Calculator",
+    "description": "Project your Roth IRA balance at retirement. See the power of tax-free compound growth over time.",
+    "category": "International",
+    "tags": [
+      "roth",
+      "IRA",
+      "retirement",
+      "savings",
+      "tax-free",
+      "compound interest"
+    ],
+    "emoji": "🏦"
+  },
+  {
+    "id": "unix-timestamp-converter",
+    "name": "Unix Timestamp Converter",
+    "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports milliseconds and seconds.",
+    "category": "Developer Tools",
+    "tags": [
+      "unix",
+      "timestamp",
+      "epoch",
+      "date",
+      "time",
+      "developer",
+      "convert"
+    ],
+    "emoji": "⏱️"
+  },
+  {
+    "id": "debt-to-income-calculator",
+    "name": "Debt-to-Income Ratio Calculator",
+    "description": "Calculate your DTI ratio. Lenders use it to decide if you qualify for a mortgage or personal loan.",
+    "category": "Calculators",
+    "tags": [
+      "DTI",
+      "debt",
+      "income",
+      "mortgage",
+      "loan",
+      "ratio",
+      "qualify"
+    ],
+    "emoji": "📊"
+  },
+  {
+    "id": "password-strength-checker",
+    "name": "Password Strength Checker",
+    "description": "Check how strong your password is instantly. See time-to-crack estimates and tips to make it unbreakable.",
+    "category": "Developer Tools",
+    "tags": [
+      "password",
+      "security",
+      "strength",
+      "checker",
+      "hack",
+      "safe",
+      "secure"
+    ],
+    "emoji": "🔒"
+  },
+  {
+    "id": "protein-calculator",
+    "name": "Protein Intake Calculator",
+    "description": "Calculate your optimal daily protein intake based on your weight, goal and activity level.",
+    "category": "Wellness",
+    "tags": [
+      "protein",
+      "intake",
+      "fitness",
+      "muscle",
+      "diet",
+      "gym",
+      "nutrition"
+    ],
+    "emoji": "💪"
+  },
+  {
+    "id": "cron-generator",
+    "name": "Cron Expression Generator",
+    "description": "Build and explain cron job expressions visually. See the next scheduled run times for any cron schedule.",
+    "category": "Developer Tools",
+    "tags": [
+      "cron",
+      "crontab",
+      "schedule",
+      "job",
+      "developer",
+      "linux",
+      "automation"
+    ],
+    "emoji": "⏰"
+  },
+  {
+    "id": "loan-to-value-calculator",
+    "name": "Loan-to-Value (LTV) Calculator",
+    "description": "Calculate your LTV ratio to understand your equity position and mortgage rate eligibility.",
+    "category": "Calculators",
+    "tags": [
+      "LTV",
+      "loan",
+      "mortgage",
+      "property",
+      "equity",
+      "PMI",
+      "down payment"
+    ],
+    "emoji": "🏠"
+  },
+  {
+    "id": "reading-time-calculator",
+    "name": "Reading Time Calculator",
+    "description": "Paste any text to get the estimated reading time, word count, character count and more.",
+    "category": "Content Tools",
+    "tags": [
+      "reading time",
+      "word count",
+      "content",
+      "writing",
+      "blog",
+      "article",
+      "SEO"
+    ],
+    "emoji": "📖"
   }
 ]
