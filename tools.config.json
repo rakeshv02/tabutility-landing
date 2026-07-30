@@ -1891,5 +1891,21 @@
       "SEO"
     ],
     "emoji": "📖"
+  },
+  {
+    "id": "dividend-yield-calculator",
+    "name": "Dividend Yield Calculator",
+    "description": "Calculate dividend yield percentage and annual dividend income from any number of shares.",
+    "category": "Calculators",
+    "tags": [
+      "dividend",
+      "yield",
+      "stocks",
+      "investing",
+      "income",
+      "passive",
+      "shares"
+    ],
+    "emoji": "💰"
   }
 ]
