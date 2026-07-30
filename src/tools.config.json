@@ -1907,5 +1907,20 @@
       "shares"
     ],
     "emoji": "💰"
+  },
+  {
+    "id": "nri-tax-calculator",
+    "name": "NRI Tax Calculator",
+    "description": "Dual tax calculator for Indians in the US or UK with income in India. DTAA relief, FBAR, Form 1116.",
+    "category": "International",
+    "tags": [
+      "nri",
+      "india",
+      "us",
+      "uk",
+      "dtaa",
+      "fbar"
+    ],
+    "emoji": "🌏"
   }
 ]
