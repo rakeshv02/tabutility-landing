@@ -1925,5 +1925,203 @@
     ],
     "emoji": "🌏",
     "url": "https://nri-tax-calculator.tabutility.com"
+  },
+  {
+    "id": "solar-panel-calculator",
+    "name": "Solar Panel Savings Calculator",
+    "description": "Calculate solar panel payback period, annual savings, and 25-year ROI before getting a quote.",
+    "category": "Calculators",
+    "tags": [
+      "solar",
+      "energy",
+      "savings",
+      "roi",
+      "payback",
+      "green",
+      "renewable"
+    ],
+    "emoji": "☀️",
+    "url": "https://solar-panel-calculator.tabutility.com"
+  },
+  {
+    "id": "india-income-tax-calculator",
+    "name": "India Income Tax Calculator 2024-25",
+    "description": "Compare new vs old tax regime for FY 2024-25. See slab breakdown, cess, and which regime saves you more.",
+    "category": "Calculators",
+    "tags": [
+      "india",
+      "income tax",
+      "new regime",
+      "old regime",
+      "fy 2024-25",
+      "slab",
+      "tax"
+    ],
+    "emoji": "🇮🇳",
+    "url": "https://india-income-tax-calculator.tabutility.com"
+  },
+  {
+    "id": "jwt-decoder",
+    "name": "JWT Decoder",
+    "description": "Decode any JSON Web Token instantly. See header, payload, expiry, and claims. 100% client-side.",
+    "category": "Developer Tools",
+    "tags": [
+      "jwt",
+      "json web token",
+      "decoder",
+      "authentication",
+      "api",
+      "security"
+    ],
+    "emoji": "🔑",
+    "url": "https://jwt-decoder.tabutility.com"
+  },
+  {
+    "id": "us-student-loan-calculator",
+    "name": "US Student Loan Payoff Calculator",
+    "description": "Calculate your student loan payoff date, total interest, and how extra payments save you thousands.",
+    "category": "Calculators",
+    "tags": [
+      "student loan",
+      "usa",
+      "payoff",
+      "repayment",
+      "federal loans",
+      "interest"
+    ],
+    "emoji": "🎓",
+    "url": "https://us-student-loan-calculator.tabutility.com"
+  },
+  {
+    "id": "hash-generator",
+    "name": "Hash Generator",
+    "description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes instantly. 100% client-side — nothing sent to servers.",
+    "category": "Developer Tools",
+    "tags": [
+      "hash",
+      "md5",
+      "sha256",
+      "sha512",
+      "sha1",
+      "cryptography",
+      "checksum"
+    ],
+    "emoji": "#️⃣",
+    "url": "https://hash-generator.tabutility.com"
+  },
+  {
+    "id": "electricity-cost-calculator",
+    "name": "Electricity Cost Calculator",
+    "description": "See the hourly, daily, monthly, and annual running cost of any appliance. Works for any country.",
+    "category": "Calculators",
+    "tags": [
+      "electricity",
+      "energy",
+      "cost",
+      "appliance",
+      "kWh",
+      "bill",
+      "utilities"
+    ],
+    "emoji": "⚡",
+    "url": "https://electricity-cost-calculator.tabutility.com"
+  },
+  {
+    "id": "freelancer-rate-calculator",
+    "name": "Freelancer Day Rate Calculator",
+    "description": "Calculate your freelance day rate from your target salary, accounting for tax, holidays, and non-billable time.",
+    "category": "Calculators",
+    "tags": [
+      "freelancer",
+      "day rate",
+      "contractor",
+      "salary",
+      "self-employed",
+      "consulting"
+    ],
+    "emoji": "💼",
+    "url": "https://freelancer-rate-calculator.tabutility.com"
+  },
+  {
+    "id": "w4-calculator",
+    "name": "W-4 Withholding Calculator 2024",
+    "description": "Estimate how much federal tax should be withheld from each paycheck and whether you will get a refund.",
+    "category": "Calculators",
+    "tags": [
+      "w4",
+      "withholding",
+      "federal tax",
+      "paycheck",
+      "irs",
+      "refund",
+      "usa"
+    ],
+    "emoji": "🇺🇸",
+    "url": "https://w4-calculator.tabutility.com"
+  },
+  {
+    "id": "hsa-calculator",
+    "name": "HSA Calculator 2024",
+    "description": "Model your Health Savings Account growth over time with contributions, employer match, and investment returns.",
+    "category": "Calculators",
+    "tags": [
+      "hsa",
+      "health savings account",
+      "usa",
+      "tax-free",
+      "medical",
+      "hdhp"
+    ],
+    "emoji": "🏥",
+    "url": "https://hsa-calculator.tabutility.com"
+  },
+  {
+    "id": "carbon-footprint-calculator",
+    "name": "Carbon Footprint Calculator",
+    "description": "Calculate your annual CO₂ emissions from home energy, transport, flights, and diet. See how to reduce it.",
+    "category": "Calculators",
+    "tags": [
+      "carbon footprint",
+      "co2",
+      "emissions",
+      "climate",
+      "sustainability",
+      "environment"
+    ],
+    "emoji": "🌍",
+    "url": "https://carbon-footprint-calculator.tabutility.com"
+  },
+  {
+    "id": "number-base-converter",
+    "name": "Number Base Converter",
+    "description": "Convert between binary, octal, decimal, and hexadecimal instantly. Type in any field and all others update live.",
+    "category": "Developer Tools",
+    "tags": [
+      "binary",
+      "hexadecimal",
+      "octal",
+      "decimal",
+      "base converter",
+      "programming"
+    ],
+    "emoji": "🔢",
+    "url": "https://number-base-converter.tabutility.com"
+  },
+  {
+    "id": "india-hra-calculator",
+    "name": "India HRA Exemption Calculator 2024-25",
+    "description": "Calculate your HRA tax exemption under Section 10(13A) for FY 2024-25. Find your tax-free amount instantly.",
+    "category": "Calculators",
+    "tags": [
+      "hra",
+      "india",
+      "tax exemption",
+      "rent",
+      "section 10",
+      "salary",
+      "tax"
+    ],
+    "emoji": "🏠",
+    "url": "https://india-hra-calculator.tabutility.com"
   }
 ]
