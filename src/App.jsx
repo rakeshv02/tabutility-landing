@@ -191,7 +191,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* ── Footer ── */
+      {/* ── Footer ── */}
       <div style={{ background: "#1a1a2e", color: "#94a3b8", textAlign: "center", padding: "28px 20px", fontSize: 13 }}>
         <div style={{ fontSize: 18, marginBottom: 6 }}>⚡ Tabutility</div>
         <div style={{ marginBottom: 6 }}>{totalTools} free browser-based utility tools. No sign-up required.</div>
