@@ -1,11 +1,11 @@
 {
   "name": "tabutility-landing",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/update-count.js && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
