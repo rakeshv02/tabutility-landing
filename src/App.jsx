@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import toolsData from "./tools.config.json";
 
 const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
@@ -22,6 +22,17 @@ const HOVER_STYLES = `
 .tool-card { transition: border-color 0.15s, background 0.15s, transform 0.15s, box-shadow 0.15s; }
 .tool-card:hover { transform: translateY(-2px); box-shadow: 0 5px 16px rgba(0,0,0,0.10) !important; }
 `;
+
+// Track recently used tools (Task #46)
+function trackRecentTool(tool) {
+  try {
+    const stored = JSON.parse(localStorage.getItem('tab_recent') || '[]');
+    const entry = { id: tool.id, name: tool.name, emoji: tool.emoji, url: tool.url };
+    const updated = [entry, ...stored.filter(t => t.id !== tool.id)].slice(0, 8);
+    localStorage.setItem('tab_recent', JSON.stringify(updated));
+    window.dispatchEvent(new CustomEvent('tab_recent_updated'));
+  } catch {}
+}
 
 export default function App() {
   const [search, setSearch]               = useState("");
@@ -51,6 +62,31 @@ export default function App() {
   }, [isFiltered]);
 
   const totalTools = toolsData.length;
+
+  // Task #46: recently used state
+  const [recentTools, setRecentTools] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('tab_recent') || '[]'); } catch { return []; }
+  });
+
+  // Task #45: dynamic page title
+  useEffect(() => {
+    if (search.trim()) {
+      document.title = `"${search}" — Tabutility`;
+    } else if (activeCategory !== "All") {
+      const count = toolsData.filter(t => t.category === activeCategory).length;
+      document.title = `${activeCategory} — ${count} Free Tools | Tabutility`;
+    } else {
+      document.title = `Tabutility — ${totalTools} Free Online Utility Tools | No Sign-up`;
+    }
+  }, [search, activeCategory, totalTools]);
+
+  // Task #46: sync recent tray when returning to tab
+  useEffect(() => {
+    const sync = () => { try { setRecentTools(JSON.parse(localStorage.getItem('tab_recent') || '[]')); } catch {} };
+    window.addEventListener('tab_recent_updated', sync);
+    window.addEventListener('focus', sync);
+    return () => { window.removeEventListener('tab_recent_updated', sync); window.removeEventListener('focus', sync); };
+  }, []);
 
   return (
     <div style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: "#f1f5f9", minHeight: "100vh" }}>
@@ -82,6 +118,25 @@ export default function App() {
           )}
         </div>
       </div>
+
+      {/* Task #46: Recently used tray */}
+      {recentTools.length > 0 && (
+        <div style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)", padding: "0 20px 14px" }}>
+          <div style={{ maxWidth: 540, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
+            <span style={{ fontSize: 11, color: "#64748b", fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" }}>Recent:</span>
+            {recentTools.slice(0, 6).map(t => (
+              <a key={t.id} href={t.url} target="_blank" rel="noopener noreferrer"
+                onClick={() => trackRecentTool(t)}
+                style={{ display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(165,180,252,0.2)", borderRadius: 20, padding: "4px 11px", fontSize: 12, color: "#e2e8f0", textDecoration: "none", fontWeight: 600 }}>
+                <span>{t.emoji}</span>
+                <span style={{ maxWidth: 110, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t.name}</span>
+              </a>
+            ))}
+            <button onClick={() => { localStorage.removeItem('tab_recent'); setRecentTools([]); }}
+              style={{ background: "none", border: "none", color: "#475569", fontSize: 11, cursor: "pointer", padding: "2px 4px" }}>✕ clear</button>
+          </div>
+        </div>
+      )}
 
       {/* ── Sticky Filter Bar ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 100, background: "#1e293b", borderBottom: "1px solid #334155", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
@@ -264,7 +319,7 @@ function ToolGrid({ tools }) {
 function ToolCard({ tool }) {
   const colors = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR;
   return (
-    <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+    <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }} onClick={() => trackRecentTool(tool)}>
       <div
         className="tool-card"
         style={{
