@@ -1818,7 +1818,8 @@
       "ratio",
       "qualify"
     ],
-    "emoji": "📊"
+    "emoji": "📊",
+    "url": "https://debt-to-income-calculator.tabutility.com"
   },
   {
     "id": "password-strength-checker",
@@ -1851,7 +1852,8 @@
       "gym",
       "nutrition"
     ],
-    "emoji": "💪"
+    "emoji": "💪",
+    "url": "https://protein-calculator.tabutility.com"
   },
   {
     "id": "cron-generator",
@@ -1867,7 +1869,8 @@
       "linux",
       "automation"
     ],
-    "emoji": "⏰"
+    "emoji": "⏰",
+    "url": "https://cron-generator.tabutility.com"
   },
   {
     "id": "loan-to-value-calculator",
