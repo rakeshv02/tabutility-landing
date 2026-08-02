@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/update-count.js && vite build",
+    "build": "node scripts/update-count.cjs && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
