@@ -2123,5 +2123,23 @@
     ],
     "emoji": "🏠",
     "url": "https://india-hra-calculator.tabutility.com"
+  },
+  {
+    "id": "social-security-calculator",
+    "name": "Social Security Benefits Estimator",
+    "description": "Estimate your monthly Social Security benefit at any retirement age (62–70). See delayed retirement credits, breakeven age, and compare claiming strategies.",
+    "category": "Calculators",
+    "tags": [
+      "social security",
+      "retirement",
+      "benefits",
+      "ssa",
+      "monthly benefit",
+      "breakeven",
+      "delayed retirement",
+      "usa"
+    ],
+    "emoji": "🇺🇸",
+    "url": "https://social-security-calculator.tabutility.com"
   }
 ]
