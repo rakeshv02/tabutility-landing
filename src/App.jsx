@@ -17,6 +17,16 @@ const CATEGORY_COLORS = {
 
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
 
+// Blog posts shown on the homepage, tagged with the tool categories they relate to (Task #48)
+const BLOG_POSTS = [
+  { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/", categories: ["Calculators"] },
+  { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/", categories: ["Calculators", "International"] },
+  { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/", categories: ["Calculators"] },
+  { title: "IR35 Explained", desc: "What every UK contractor needs to know about off-payroll working rules in plain English.", url: "/blog/ir35-explained-uk-contractors/", categories: ["International", "Calculators"] },
+  { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/", categories: ["Calculators", "International"] },
+  { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/", categories: ["Calculators", "Converters"] },
+];
+
 // Inject hover styles once — replaces 100 useState hooks in ToolCard
 const HOVER_STYLES = `
 .tool-card { transition: border-color 0.15s, background 0.15s, transform 0.15s, box-shadow 0.15s; }
@@ -215,24 +225,26 @@ export default function App() {
       </div>
 
 
-      {/* ── Blog Section — always visible ── */}
+      {/* ── Blog Section — always visible, filtered by active category (Task #48) ── */}
+      {(() => {
+        const categoryPosts = activeCategory !== "All"
+          ? BLOG_POSTS.filter(p => p.categories.includes(activeCategory))
+          : [];
+        const visiblePosts = categoryPosts.length > 0 ? categoryPosts : BLOG_POSTS;
+        const heading = categoryPosts.length > 0
+          ? `${activeCategory.replace(/s$/, "")} guides from the blog`
+          : "Free guides to help you understand the numbers";
+        return (
       <div style={{ maxWidth: 1200, margin: "8px auto 0", padding: "0 20px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 4 }}>📖 From the Blog</div>
-            <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>Free guides to help you understand the numbers</h2>
+            <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{heading}</h2>
           </div>
           <a href="/blog/" style={{ fontSize: 13, fontWeight: 700, color: "#4f46e5", textDecoration: "none", whiteSpace: "nowrap", marginLeft: 16 }}>View all →</a>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-          {[
-            { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/" },
-            { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/" },
-            { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/" },
-            { title: "IR35 Explained", desc: "What every UK contractor needs to know about off-payroll working rules in plain English.", url: "/blog/ir35-explained-uk-contractors/" },
-            { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/" },
-            { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/" },
-          ].map(post => (
+          {visiblePosts.map(post => (
             <a key={post.url} href={post.url} style={{ textDecoration: "none" }}>
               <div style={{ background: "#fff", borderRadius: 10, padding: "14px 16px", border: "1.5px solid #e2e8f0", height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 6, transition: "border-color .15s, box-shadow .15s" }}
                 className="tool-card">
@@ -245,6 +257,8 @@ export default function App() {
           ))}
         </div>
       </div>
+        );
+      })()}
 
       {/* ── Footer ── */}
       <div style={{ background: "#1a1a2e", color: "#94a3b8", textAlign: "center", padding: "28px 20px", fontSize: 13 }}>
