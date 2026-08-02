@@ -40,6 +40,13 @@
     .card-views{font-size:10px;color:#94a3b8;margin-top:2px}
     footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
     footer a{color:#94a3b8}
+    .search-wrap{max-width:1100px;margin:28px auto -8px;padding:0 20px;position:relative}
+    .search-wrap input{width:100%;padding:13px 16px 13px 44px;font-size:15px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#1e293b;outline:none;transition:border-color .15s,box-shadow .15s}
+    .search-wrap input:focus{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+    .search-wrap input::placeholder{color:#94a3b8}
+    .search-wrap svg{position:absolute;left:34px;top:50%;transform:translateY(-50%);pointer-events:none;color:#94a3b8}
+    .no-results{display:none;text-align:center;padding:48px 20px 60px;color:#64748b}
+    .no-results strong{display:block;font-size:18px;color:#1e293b;margin-bottom:8px}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Tabutility Guides","url":"https://tabutility.com/blog/","numberOfItems":20,"itemListElement":[{"@type":"ListItem","position":1,"name":"How Compound Interest Works (And How to Use It to Build Wealth)","url":"https://tabutility.com/blog/how-compound-interest-works/"},{"@type":"ListItem","position":2,"name":"What Is a Good Rental Yield in the UK? A Landlord's Guide","url":"https://tabutility.com/blog/what-is-good-rental-yield-uk/"},{"@type":"ListItem","position":3,"name":"How to Pay Off Debt Fast: Snowball vs Avalanche","url":"https://tabutility.com/blog/how-to-pay-off-debt-fast/"},{"@type":"ListItem","position":4,"name":"IR35 Explained: What Every UK Contractor Needs to Know","url":"https://tabutility.com/blog/ir35-explained-uk-contractors/"},{"@type":"ListItem","position":5,"name":"How Much Do You Need to Retire in the UK?","url":"https://tabutility.com/blog/how-much-to-retire-uk/"},{"@type":"ListItem","position":6,"name":"How to Calculate BMI and What Your Number Actually Means","url":"https://tabutility.com/blog/how-to-calculate-bmi/"},{"@type":"ListItem","position":7,"name":"UK Stamp Duty: How Much Will You Pay When Buying a Home?","url":"https://tabutility.com/blog/uk-stamp-duty-guide/"},{"@type":"ListItem","position":8,"name":"How to Get the Best Exchange Rate When Sending Money Abroad","url":"https://tabutility.com/blog/best-currency-exchange-rate/"},{"@type":"ListItem","position":9,"name":"Why Word Count Matters: A Guide for Writers, Students and Content Creators","url":"https://tabutility.com/blog/why-word-count-matters/"},{"@type":"ListItem","position":10,"name":"APR Explained: The Only Number That Really Matters When Borrowing","url":"https://tabutility.com/blog/apr-explained/"},{"@type":"ListItem","position":11,"name":"How to Calculate Body Fat Percentage (And What It Actually Means)","url":"https://tabutility.com/blog/how-to-calculate-body-fat-percentage/"},{"@type":"ListItem","position":12,"name":"How Much Water Should You Drink Per Day? The Real Answer","url":"https://tabutility.com/blog/how-much-water-should-you-drink-per-day/"},{"@type":"ListItem","position":13,"name":"Best Sleep Schedule by Age: How Much Sleep Do You Actually Need?","url":"https://tabutility.com/blog/best-sleep-schedule-by-age/"},{"@type":"ListItem","position":14,"name":"How to Calculate Your Due Date: Pregnancy Weeks Explained","url":"https://tabutility.com/blog/how-to-calculate-your-due-date/"},{"@type":"ListItem","position":15,"name":"What Is Base64 Encoding and How Does It Work?","url":"https://tabutility.com/blog/what-is-base64-encoding/"},{"@type":"ListItem","position":16,"name":"What Is a UUID? How Unique IDs Are Generated and When to Use Them","url":"https://tabutility.com/blog/what-is-a-uuid/"},{"@type":"ListItem","position":17,"name":"How to Generate a Strong Password (And Actually Remember It)","url":"https://tabutility.com/blog/how-to-generate-a-strong-password/"},{"@type":"ListItem","position":18,"name":"How to Format JSON: A Developer's Complete Guide","url":"https://tabutility.com/blog/how-to-format-json/"},{"@type":"ListItem","position":19,"name":"Celsius to Fahrenheit: How Temperature Conversion Works","url":"https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/"},{"@type":"ListItem","position":20,"name":"Miles to Kilometres: Distance Conversion Guide","url":"https://tabutility.com/blog/miles-to-kilometres-distance-conversion/"}]}</script>
 </head>
@@ -55,7 +62,11 @@
   <h1>📖 Tabutility Guides</h1>
   <p>Plain-English guides on personal finance, tax, property and more — with free tools to put the knowledge into action.</p>
 </div>
-<div class="grid">
+<div class="search-wrap">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <input type="search" id="blog-search" placeholder="Search guides by title, topic, or tag…" aria-label="Search blog articles" autocomplete="off" />
+</div>
+<div class="grid" id="article-grid">
     <a href="/blog/how-compound-interest-works/" class="card" style="text-decoration:none">
       <div class="card-tag">📖 Blog</div>
       <h2>How Compound Interest Works (And How to Use It to Build Wealth)</h2>
@@ -196,9 +207,36 @@
       <div class="card-tool">→ Uses: Length &amp; Distance Converter</div>
       <div class="card-views">👁️ 843 views</div>
     </a></div>
+<div class="no-results" id="no-results">
+  <div style="font-size:36px;margin-bottom:12px">🔍</div>
+  <strong>No guides match your search</strong>
+  <p>Try a different keyword — or browse all guides by clearing the search box.</p>
+</div>
 <footer>
   <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
   <div>© 2026 Tabutility</div>
 </footer>
+<script>
+(function(){
+  var input=document.getElementById('blog-search');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#article-grid .card'));
+  var noResults=document.getElementById('no-results');
+  var index=cards.map(function(card){
+    return card.textContent.replace(/\s+/g,' ').toLowerCase();
+  });
+  function filter(){
+    var terms=input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var visible=0;
+    cards.forEach(function(card,i){
+      var match=terms.every(function(t){return index[i].indexOf(t)!==-1;});
+      card.style.display=match?'':'none';
+      if(match)visible++;
+    });
+    noResults.style.display=visible===0?'block':'none';
+  }
+  input.addEventListener('input',filter);
+  input.addEventListener('search',filter);
+})();
+</script>
 </body>
 </html>
