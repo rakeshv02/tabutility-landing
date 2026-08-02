@@ -1690,8 +1690,7 @@
       "pattern",
       "match"
     ],
-    "emoji": "🔍",
-    "url": "https://regex-tester.tabutility.com"
+    "emoji": "🔍"
   },
   {
     "id": "invoice-generator",
@@ -1704,8 +1703,7 @@
       "freelance",
       "pdf"
     ],
-    "emoji": "🧾",
-    "url": "https://invoice-generator.tabutility.com"
+    "emoji": "🧾"
   },
   {
     "id": "us-tax-bracket-calculator",
@@ -1719,8 +1717,7 @@
       "IRS",
       "2024"
     ],
-    "emoji": "🇺🇸",
-    "url": "https://us-tax-bracket-calculator.tabutility.com"
+    "emoji": "🇺🇸"
   },
   {
     "id": "ovulation-calculator",
@@ -1733,8 +1730,7 @@
       "period",
       "cycle"
     ],
-    "emoji": "🌸",
-    "url": "https://ovulation-calculator.tabutility.com"
+    "emoji": "🌸"
   },
   {
     "id": "macro-calculator",
@@ -1751,8 +1747,7 @@
       "fitness",
       "diet"
     ],
-    "emoji": "🥗",
-    "url": "https://macro-calculator.tabutility.com"
+    "emoji": "🥗"
   },
   {
     "id": "square-footage-calculator",
@@ -1768,8 +1763,7 @@
       "sq ft",
       "measurement"
     ],
-    "emoji": "📐",
-    "url": "https://square-footage-calculator.tabutility.com"
+    "emoji": "📐"
   },
   {
     "id": "roth-ira-calculator",
@@ -1784,8 +1778,7 @@
       "tax-free",
       "compound interest"
     ],
-    "emoji": "🏦",
-    "url": "https://roth-ira-calculator.tabutility.com"
+    "emoji": "🏦"
   },
   {
     "id": "unix-timestamp-converter",
@@ -1801,8 +1794,7 @@
       "developer",
       "convert"
     ],
-    "emoji": "⏱️",
-    "url": "https://unix-timestamp-converter.tabutility.com"
+    "emoji": "⏱️"
   },
   {
     "id": "debt-to-income-calculator",
@@ -1818,8 +1810,7 @@
       "ratio",
       "qualify"
     ],
-    "emoji": "📊",
-    "url": "https://debt-to-income-calculator.tabutility.com"
+    "emoji": "📊"
   },
   {
     "id": "password-strength-checker",
@@ -1835,8 +1826,7 @@
       "safe",
       "secure"
     ],
-    "emoji": "🔒",
-    "url": "https://password-strength-checker.tabutility.com"
+    "emoji": "🔒"
   },
   {
     "id": "protein-calculator",
@@ -1852,8 +1842,7 @@
       "gym",
       "nutrition"
     ],
-    "emoji": "💪",
-    "url": "https://protein-calculator.tabutility.com"
+    "emoji": "💪"
   },
   {
     "id": "cron-generator",
@@ -1869,8 +1858,7 @@
       "linux",
       "automation"
     ],
-    "emoji": "⏰",
-    "url": "https://cron-generator.tabutility.com"
+    "emoji": "⏰"
   },
   {
     "id": "loan-to-value-calculator",
@@ -1886,8 +1874,7 @@
       "PMI",
       "down payment"
     ],
-    "emoji": "🏠",
-    "url": "https://loan-to-value-calculator.tabutility.com"
+    "emoji": "🏠"
   },
   {
     "id": "reading-time-calculator",
@@ -2136,5 +2123,23 @@
     ],
     "emoji": "🏠",
     "url": "https://india-hra-calculator.tabutility.com"
+  },
+  {
+    "id": "social-security-calculator",
+    "name": "Social Security Benefits Estimator",
+    "description": "Estimate your monthly Social Security benefit at any retirement age (62–70). See delayed retirement credits, breakeven age, and compare claiming strategies.",
+    "category": "Calculators",
+    "tags": [
+      "social security",
+      "retirement",
+      "benefits",
+      "ssa",
+      "monthly benefit",
+      "breakeven",
+      "delayed retirement",
+      "usa"
+    ],
+    "emoji": "🇺🇸",
+    "url": "https://social-security-calculator.tabutility.com"
   }
 ]
