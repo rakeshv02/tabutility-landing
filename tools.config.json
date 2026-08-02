@@ -1690,7 +1690,8 @@
       "pattern",
       "match"
     ],
-    "emoji": "🔍"
+    "emoji": "🔍",
+    "url": "https://regex-tester.tabutility.com/"
   },
   {
     "id": "invoice-generator",
@@ -1703,7 +1704,8 @@
       "freelance",
       "pdf"
     ],
-    "emoji": "🧾"
+    "emoji": "🧾",
+    "url": "https://invoice-generator.tabutility.com/"
   },
   {
     "id": "us-tax-bracket-calculator",
@@ -1717,7 +1719,8 @@
       "IRS",
       "2024"
     ],
-    "emoji": "🇺🇸"
+    "emoji": "🇺🇸",
+    "url": "https://us-tax-bracket-calculator.tabutility.com/"
   },
   {
     "id": "ovulation-calculator",
@@ -1730,7 +1733,8 @@
       "period",
       "cycle"
     ],
-    "emoji": "🌸"
+    "emoji": "🌸",
+    "url": "https://ovulation-calculator.tabutility.com/"
   },
   {
     "id": "macro-calculator",
@@ -1747,7 +1751,8 @@
       "fitness",
       "diet"
     ],
-    "emoji": "🥗"
+    "emoji": "🥗",
+    "url": "https://macro-calculator.tabutility.com/"
   },
   {
     "id": "square-footage-calculator",
@@ -1763,7 +1768,8 @@
       "sq ft",
       "measurement"
     ],
-    "emoji": "📐"
+    "emoji": "📐",
+    "url": "https://square-footage-calculator.tabutility.com/"
   },
   {
     "id": "roth-ira-calculator",
@@ -1778,7 +1784,8 @@
       "tax-free",
       "compound interest"
     ],
-    "emoji": "🏦"
+    "emoji": "🏦",
+    "url": "https://roth-ira-calculator.tabutility.com/"
   },
   {
     "id": "unix-timestamp-converter",
@@ -1794,7 +1801,8 @@
       "developer",
       "convert"
     ],
-    "emoji": "⏱️"
+    "emoji": "⏱️",
+    "url": "https://unix-timestamp-converter.tabutility.com/"
   },
   {
     "id": "debt-to-income-calculator",
@@ -1810,7 +1818,8 @@
       "ratio",
       "qualify"
     ],
-    "emoji": "📊"
+    "emoji": "📊",
+    "url": "https://debt-to-income-calculator.tabutility.com/"
   },
   {
     "id": "password-strength-checker",
@@ -1826,7 +1835,8 @@
       "safe",
       "secure"
     ],
-    "emoji": "🔒"
+    "emoji": "🔒",
+    "url": "https://password-strength-checker.tabutility.com/"
   },
   {
     "id": "protein-calculator",
@@ -1842,7 +1852,8 @@
       "gym",
       "nutrition"
     ],
-    "emoji": "💪"
+    "emoji": "💪",
+    "url": "https://protein-calculator.tabutility.com/"
   },
   {
     "id": "cron-generator",
@@ -1858,7 +1869,8 @@
       "linux",
       "automation"
     ],
-    "emoji": "⏰"
+    "emoji": "⏰",
+    "url": "https://cron-generator.tabutility.com/"
   },
   {
     "id": "loan-to-value-calculator",
@@ -1874,7 +1886,8 @@
       "PMI",
       "down payment"
     ],
-    "emoji": "🏠"
+    "emoji": "🏠",
+    "url": "https://loan-to-value-calculator.tabutility.com/"
   },
   {
     "id": "reading-time-calculator",
