@@ -1,4 +1,3 @@
-// build: 1785413921785
 import { useState, useMemo } from "react";
 import toolsData from "./tools.config.json";
 
@@ -60,7 +59,6 @@ export default function App() {
       {/* ── Top Nav ── */}
       <div style={{ background: "#1a1a2e", padding: "11px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid #263350" }}>
         <div style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>⚡ Tabutility</div>
-        <a href="/tools/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>🗂️ All Tools</a>
         <a href="/blog/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 700, textDecoration: "none" }}>📖 Blog</a>
       </div>
 
@@ -203,6 +201,11 @@ export default function App() {
       <div style={{ background: "#1a1a2e", color: "#94a3b8", textAlign: "center", padding: "28px 20px", fontSize: 13 }}>
         <div style={{ fontSize: 18, marginBottom: 6 }}>⚡ Tabutility</div>
         <div style={{ marginBottom: 6 }}>{totalTools} free browser-based utility tools. No sign-up required.</div>
+        <div style={{ marginBottom: 8, display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+          <a href="/uk-tax/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>🇬🇧 UK Tax Calculators</a>
+          <a href="/us-tax/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>🇺🇸 US Tax Calculators</a>
+          <a href="/australia-tax/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>🇦🇺 Australia Tax Calculators</a>
+        </div>
         <div style={{ marginBottom: 10 }}>
           <a href="/blog/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>📖 Read our blog →</a>
         </div>
