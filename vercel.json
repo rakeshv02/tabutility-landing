@@ -7,5 +7,37 @@
       "source": "/((?!ads\\.txt|sitemap\\.xml|robots\\.txt|status\\.json|status\\.html).*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/us",
+      "destination": "/us-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/uk",
+      "destination": "/uk-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/au",
+      "destination": "/au-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/us/",
+      "destination": "/us-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/",
+      "destination": "/uk-tools/",
+      "permanent": true
+    },
+    {
+      "source": "/au/",
+      "destination": "/au-tools/",
+      "permanent": true
+    }
   ]
 }
