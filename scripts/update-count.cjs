@@ -58,18 +58,51 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Hub pages are discovered from public/ — any subdirectory with an
+// index.html is a hub. Known slugs get a friendly label; new hubs fall back
+// to a label derived from the page <title>, so adding a hub dir under
+// public/ automatically adds it to the homepage static links.
+const HUB_LABELS = {
+  'tools': 'All Tools Directory',
+  'blog': 'Blog & Guides',
+  'uk-tools': 'UK Tools',
+  'us-tools': 'US Tools',
+  'au-tools': 'Australia Tools',
+  'uk-tax': 'UK Tax Hub',
+  'us-tax': 'US Tax Hub',
+  'australia-tax': 'Australia Tax Hub',
+  'uk-salary': 'UK Salary Guides',
+};
+
+function hubLabelFromTitle(indexFile, slug) {
+  try {
+    const html = fs.readFileSync(indexFile, 'utf8');
+    const m = html.match(/<title>([^<]+)<\/title>/i);
+    if (m) {
+      // "Free UK Tax Calculators 2025/26 — Income Tax ... | Tabutility"
+      let t = m[1].split('|')[0].split(/—|–/)[0].trim();
+      if (t) return t;
+    }
+  } catch (e) { /* fall through */ }
+  return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function discoverHubs() {
+  const pubDir = path.join(root, 'public');
+  const slugs = fs.readdirSync(pubDir, { withFileTypes: true })
+    .filter(d => d.isDirectory() && fs.existsSync(path.join(pubDir, d.name, 'index.html')))
+    .map(d => d.name);
+  // Stable order: tools first, blog second, then alphabetical.
+  const rank = s => (s === 'tools' ? 0 : s === 'blog' ? 1 : 2);
+  slugs.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  return slugs.map(slug => [
+    '/' + slug + '/',
+    HUB_LABELS[slug] || hubLabelFromTitle(path.join(pubDir, slug, 'index.html'), slug),
+  ]);
+}
+
 function buildStaticLinks() {
-  const hubs = [
-    ['/tools/', 'All Tools Directory'],
-    ['/blog/', 'Blog & Guides'],
-    ['/uk-tools/', 'UK Tools'],
-    ['/us-tools/', 'US Tools'],
-    ['/au-tools/', 'Australia Tools'],
-    ['/uk-tax/', 'UK Tax Hub'],
-    ['/us-tax/', 'US Tax Hub'],
-    ['/australia-tax/', 'Australia Tax Hub'],
-    ['/uk-salary/', 'UK Salary Guides'],
-  ];
+  const hubs = discoverHubs();
   const hubHtml = '<nav class="s-hub-row" aria-label="Site sections">' +
     hubs.map(([href, label]) => '<a href="' + href + '">' + esc(label) + '</a>').join('') +
     '</nav>';
