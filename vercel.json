@@ -4,7 +4,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/((?!ads\\.txt|sitemap\\.xml|robots\\.txt|status\\.json|status\\.html).*)",
+      "source": "/((?!.*\\.txt$|sitemap\\.xml|status\\.json|status\\.html).*)",
       "destination": "/index.html"
     }
   ],
