@@ -24,7 +24,7 @@ jobs:
             url="$1"
             tool="${url#https://}"
             tool="${tool%%.tabutility.com*}"
-            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 --retry 1 "$url")
+            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 8 "$url")
             if [ "$status" != "200" ]; then
               echo "BROKEN $tool (HTTP $status)"
             else
@@ -33,7 +33,7 @@ jobs:
           }
           export -f check_url
 
-          xargs -a /tmp/urls.txt -P 20 -I{} bash -c 'check_url "$@"' _ {} > /tmp/results.txt
+          xargs -a /tmp/urls.txt -P 40 -I{} bash -c 'check_url "$@"' _ {} > /tmp/results.txt
 
           grep '^OK '     /tmp/results.txt | sed 's/^OK /✅ /' || true
           grep '^BROKEN ' /tmp/results.txt | sed 's/^BROKEN /❌ /' || true
