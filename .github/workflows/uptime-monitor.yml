@@ -9,60 +9,48 @@ jobs:
   check-tools:
     runs-on: ubuntu-latest
     steps:
-      - name: Check all 113 tool subdomains
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Check all tool URLs from tools.config.json
         id: check
         run: |
-          TOOLS=(
-            percentage-calculator bmi-calculator age-calculator tip-calculator
-            loan-calculator discount-calculator mortgage-calculator rent-vs-buy
-            compound-interest-calculator credit-card-payoff-calculator
-            savings-goal-calculator retirement-calculator annuity-calculator
-            debt-payoff net-worth emergency-fund inflation roi apr investment
-            break-even fuel-cost hourly-to-salary overtime payrise
-            currency-converter json-formatter word-unscrambler base64-encoder
-            url-encoder password-generator uuid-generator markdown-to-html
-            qr-code-generator word-counter unit-converter image-compressor
-            meditation-timer tdee-calculator vat-calculator gst-calculator
-            uk-salary-calculator uk-student-loan uk-maternity-pay
-            uk-capital-gains-tax uk-self-employed-tax uk-ir35-calculator
-            uk-stamp-duty-calculator uk-dividend-tax uk-inheritance-tax
-            uk-pension-tax-relief uk-corporation-tax uk-national-insurance
-            rental-yield rental-income-tax buy-to-let-stamp-duty
-            us-paycheck-calculator us-capital-gains-tax us-self-employment-tax
-            us-401k australian-tax-calculator australia-hecs-calculator
-            australia-stamp-duty australia-super australia-lmi-calculator
-            australia-points-test canadian-tax-calculator canada-rrsp
-            canada-land-transfer-tax canada-express-entry uae-salary-calculator
-            schengen-calculator ireland-income-tax nz-income-tax
-            germany-income-tax netherlands-income-tax singapore-income-tax
-            south-africa-income-tax spain-income-tax stopwatch countdown-timer
-            pomodoro-timer alarm-clock name-picker coin-flip dice-roller
-            random-number-generator typing-speed-test metronome yes-or-no
-            tally-counter scientific-calculator sales-tax-calculator
-            gpa-calculator body-fat-calculator due-date-calculator
-            sleep-calculator car-lease-calculator grade-calculator
-            water-intake-calculator mortgage-overpayment-calculator
-            budget-planner crypto-tax-calculator
-            date-difference-calculator percentage-change-calculator
-            time-zone-converter hex-to-rgb split-bill-calculator
-            calorie-deficit-calculator period-calculator amortization-schedule
-            mortgage-affordability-calculator uk-child-benefit-calculator
-          )
+          # Derive tool list from tools.config.json so it never goes stale
+          jq -r '.[] | .url' tools.config.json > /tmp/urls.txt
+          TOTAL=$(wc -l < /tmp/urls.txt)
+          echo "Checking $TOTAL tools in parallel..."
 
-          BROKEN=()
-          for tool in "${TOOLS[@]}"; do
-            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "https://$tool.tabutility.com")
+          check_url() {
+            url="$1"
+            tool="${url#https://}"
+            tool="${tool%%.tabutility.com*}"
+            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 --retry 1 "$url")
             if [ "$status" != "200" ]; then
-              BROKEN+=("$tool (HTTP $status)")
-              echo "❌ $tool → $status"
+              echo "BROKEN $tool (HTTP $status)"
             else
-              echo "✅ $tool → 200"
+              echo "OK $tool"
             fi
-          done
+          }
+          export -f check_url
 
-          if [ ${#BROKEN[@]} -gt 0 ]; then
-            echo "broken_count=${#BROKEN[@]}" >> $GITHUB_OUTPUT
-            printf '%s\n' "${BROKEN[@]}" > /tmp/broken.txt
+          xargs -a /tmp/urls.txt -P 20 -I{} bash -c 'check_url "$@"' _ {} > /tmp/results.txt
+
+          grep '^OK '     /tmp/results.txt | sed 's/^OK /✅ /' || true
+          grep '^BROKEN ' /tmp/results.txt | sed 's/^BROKEN /❌ /' || true
+
+          CHECKED=$(wc -l < /tmp/results.txt)
+          echo "Checked $CHECKED of $TOTAL tools."
+          if [ "$CHECKED" != "$TOTAL" ]; then
+            echo "::error::Only $CHECKED of $TOTAL tools were checked"
+            exit 1
+          fi
+
+          grep '^BROKEN ' /tmp/results.txt | sed 's/^BROKEN //' | sort > /tmp/broken.txt || true
+          BROKEN_COUNT=$(wc -l < /tmp/broken.txt)
+
+          echo "total_count=$TOTAL" >> $GITHUB_OUTPUT
+          if [ "$BROKEN_COUNT" -gt 0 ]; then
+            echo "broken_count=$BROKEN_COUNT" >> $GITHUB_OUTPUT
             echo "broken_list<<EOF" >> $GITHUB_OUTPUT
             cat /tmp/broken.txt >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
@@ -111,6 +99,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const totalCount = `${{ steps.check.outputs.total_count }}`;
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -123,7 +112,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
-                body: `✅ All 113 tools are back to HTTP 200 as of ${new Date().toISOString().slice(0,16)} UTC. Closing.`
+                body: `✅ All ${totalCount} tools are back to HTTP 200 as of ${new Date().toISOString().slice(0,16)} UTC. Closing.`
               });
               await github.rest.issues.update({
                 owner: context.repo.owner,
