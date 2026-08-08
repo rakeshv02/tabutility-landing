@@ -22,59 +22,60 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Take-Home Pay Compared Across 14 Countries (2026)","url":"https://tabutility.com/take-home-pay-by-country/","description":"Compare 2026 take-home pay across 14 countries using Tabutility's live salary and income tax calculators.","publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Take-Home Pay by Country","item":"https://tabutility.com/take-home-pay-by-country/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which country has the highest take-home pay?","acceptedAnswer":{"@type":"Answer","text":"Among the 14 countries compared, the UAE (for expats) keeps 100% of gross pay because there is no personal income tax. Singapore and the United States also rank high, while Germany and Spain sit at the lower end once income tax and social contributions are included."}},{"@type":"Question","name":"How is take-home pay calculated?","acceptedAnswer":{"@type":"Answer","text":"Each figure comes from Tabutility's live country calculator, which subtracts income tax, social security or national insurance and other mandatory employee deductions from gross salary. We apply each tool's default assumptions — a single employee with no extra deductions — and convert results to and from USD using fixed reference exchange rates."}},{"@type":"Question","name":"What assumptions does this comparison use?","acceptedAnswer":{"@type":"Answer","text":"A single person, employed (not self-employed), with no pension or voluntary contributions. The US uses single filing status in a no-income-tax state (Texas), Germany uses tax class 1, and Australia treats employer superannuation as a separate cost rather than a payslip deduction. Full details are in the methodology section."}},{"@type":"Question","name":"Are the exchange rates live?","acceptedAnswer":{"@type":"Answer","text":"No. We use a fixed reference exchange rate table as of August 2026 so the comparison stays stable. Real mid-market rates move daily — use a currency service for the exact rate on the day you convert money."}}]}</script>
+<link rel="stylesheet" href="/styles/tabutility.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#334155;line-height:1.6;min-height:100vh}
-a{color:#4f46e5;text-decoration:none}
+body{font-family:var(--tab-font,'Segoe UI',system-ui,Arial,sans-serif);background:var(--tab-bg,#f8fafc);color:var(--tab-text,#334155);line-height:1.6;min-height:100vh}
+a{color:var(--tab-accent,#4f46e5);text-decoration:none}
 a:hover{text-decoration:underline}
-nav{background:#1a1a2e;padding:14px 24px;display:flex;align-items:center;gap:20px}
+nav{background:var(--tab-navy,#1a1a2e);padding:14px 24px;display:flex;align-items:center;gap:20px}
 nav .brand{color:#fff;font-weight:800;font-size:18px}
-nav a{color:#94a3b8;font-size:14px}
+nav a{color:var(--tab-faint,#94a3b8);font-size:14px}
 nav a:hover{color:#fff;text-decoration:none}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px 60px}
 header.hero{text-align:center;padding:36px 0 8px}
-h1{font-size:30px;font-weight:800;color:#0f172a;margin-bottom:10px}
-.sub{color:#64748b;font-size:15px;max-width:620px;margin:0 auto}
-h2{font-size:22px;font-weight:700;margin:36px 0 14px;color:#0f172a}
-h3{font-size:16px;font-weight:700;margin:0 0 6px;color:#0f172a}
-p{color:#475569;margin-bottom:14px}
-.card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;margin-bottom:18px}
-.controls-label{font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+h1{font-size:30px;font-weight:800;color:var(--tab-heading,#0f172a);margin-bottom:10px}
+.sub{color:var(--tab-muted,#64748b);font-size:15px;max-width:620px;margin:0 auto}
+h2{font-size:22px;font-weight:700;margin:36px 0 14px;color:var(--tab-heading,#0f172a)}
+h3{font-size:16px;font-weight:700;margin:0 0 6px;color:var(--tab-heading,#0f172a)}
+p{color:var(--tab-text-2,#475569);margin-bottom:14px}
+.card{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:14px;padding:22px;margin-bottom:18px}
+.controls-label{font-size:12px;font-weight:600;color:var(--tab-muted,#64748b);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
 .btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.sal-btn{background:#f1f5f9;border:1px solid #e2e8f0;color:#334155;padding:9px 16px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
-.sal-btn:hover{border-color:#4f46e5}
-.sal-btn.active{background:#4f46e5;color:#fff;border-color:#4f46e5}
+.sal-btn{background:var(--tab-bg-alt,#f1f5f9);border:1px solid var(--tab-border,#e2e8f0);color:var(--tab-text,#334155);padding:9px 16px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
+.sal-btn:hover{border-color:var(--tab-accent,#4f46e5)}
+.sal-btn.active{background:var(--tab-accent,#4f46e5);color:#fff;border-color:var(--tab-accent,#4f46e5)}
 .custom-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.custom-row label{font-size:13px;color:#64748b}
-.custom-row input{background:#fff;border:1px solid #e2e8f0;color:#1e293b;padding:9px 12px;border-radius:8px;font-size:15px;width:150px}
-.custom-row input:focus{outline:none;border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+.custom-row label{font-size:13px;color:var(--tab-muted,#64748b)}
+.custom-row input{background:#fff;border:1px solid var(--tab-border,#e2e8f0);color:#1e293b;padding:9px 12px;border-radius:8px;font-size:15px;width:150px}
+.custom-row input:focus{outline:none;border-color:var(--tab-accent,#4f46e5);box-shadow:0 0 0 3px rgba(79,70,229,.12)}
 .chart{margin-top:6px}
 .bar-row{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:12px;margin-bottom:9px}
 .bar-country{font-size:13px;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar-track{background:#f1f5f9;border-radius:6px;height:26px;position:relative;overflow:hidden;border:1px solid #e2e8f0}
-.bar-fill{height:100%;background:linear-gradient(90deg,#4338ca,#4f46e5);border-radius:5px 0 0 5px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:44px;transition:width .4s ease}
+.bar-track{background:var(--tab-bg-alt,#f1f5f9);border-radius:6px;height:26px;position:relative;overflow:hidden;border:1px solid var(--tab-border,#e2e8f0)}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--tab-accent-hover,#4338ca),var(--tab-accent,#4f46e5));border-radius:5px 0 0 5px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:44px;transition:width .4s ease}
 .bar-fill span{font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
 table{width:100%;border-collapse:collapse;font-size:13px}
 .table-scroll{overflow-x:auto}
-th,td{padding:10px 8px;text-align:right;border-bottom:1px solid #e2e8f0;white-space:nowrap}
+th,td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--tab-border,#e2e8f0);white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
-th{color:#64748b;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+th{color:var(--tab-muted,#64748b);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
 td{color:#1e293b}
 tr:hover td{background:rgba(79,70,229,0.05)}
-.note{font-size:12px;color:#94a3b8;margin-top:10px}
+.note{font-size:12px;color:var(--tab-faint,#94a3b8);margin-top:10px}
 ul.findings{list-style:none;margin:0 0 14px}
-ul.findings li{padding:8px 0 8px 26px;position:relative;color:#475569;border-bottom:1px solid #e2e8f0}
-ul.findings li:before{content:"▸";position:absolute;left:4px;color:#4f46e5;font-weight:700}
+ul.findings li{padding:8px 0 8px 26px;position:relative;color:var(--tab-text-2,#475569);border-bottom:1px solid var(--tab-border,#e2e8f0)}
+ul.findings li:before{content:"▸";position:absolute;left:4px;color:var(--tab-accent,#4f46e5);font-weight:700}
 .country-notes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.cn{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px}
+.cn{background:var(--tab-bg,#f8fafc);border:1px solid var(--tab-border,#e2e8f0);border-radius:10px;padding:14px}
 .cn h3{font-size:14px}
-.cn p{font-size:12px;color:#64748b;margin:0}
-.faq-item{border-bottom:1px solid #e2e8f0;padding:14px 0}
+.cn p{font-size:12px;color:var(--tab-muted,#64748b);margin:0}
+.faq-item{border-bottom:1px solid var(--tab-border,#e2e8f0);padding:14px 0}
 .faq-item:last-child{border-bottom:none}
 .faq-item h3{font-size:15px;margin-bottom:6px}
-.faq-item p{font-size:13px;color:#64748b;margin:0}
-footer{background:#1a1a2e;padding:24px 16px;text-align:center;color:#64748b;font-size:13px}
-footer a{color:#94a3b8}
+.faq-item p{font-size:13px;color:var(--tab-muted,#64748b);margin:0}
+footer{background:var(--tab-navy,#1a1a2e);padding:24px 16px;text-align:center;color:var(--tab-muted,#64748b);font-size:13px}
+footer a{color:var(--tab-faint,#94a3b8)}
 @media(max-width:600px){
   .country-notes{grid-template-columns:1fr}
   .bar-row{grid-template-columns:110px 1fr;gap:8px}

@@ -31,6 +31,7 @@ Code/monospace: `'Courier New',monospace`.
 - Soft/on-dark: `#818cf8` · tint `#e0e7ff`
 - Focus ring: `box-shadow:0 0 0 3px rgba(79,70,229,.12)`
 - Button text on indigo is always `#fff`
+- CTA gradient (the one sanctioned use of violet, used on CTA panels sitewide): `linear-gradient(135deg,#4f46e5,#7c3aed)`
 
 ### Light theme (content pages)
 - Page background `#f8fafc` (alt wells/inputs `#f1f5f9`)
@@ -45,8 +46,15 @@ Code/monospace: `'Courier New',monospace`.
 
 ### Status colors (both themes)
 - Success: `#16a34a` on light / `#34d399` on dark (tints `#f0fdf4` / `#dcfce7`, border `#bbf7d0`)
-- Warning: `#f59e0b` (tint `#fef3c7`)
+- Warning: `#f59e0b` (tint `#fef3c7`); warn boxes on light pages: bg `#fff7ed`, border `#fed7aa`, strong text `#c2410c`
 - Info tint: `#eff6ff`
+
+## Using the tokens
+Every content page must load the shared token sheet in `<head>`, before its page CSS:
+```html
+<link rel="stylesheet" href="/styles/tabutility.css">
+```
+Page CSS should reference tokens as `var(--tab-accent,#4f46e5)` (var + literal fallback) rather than repeating raw hex values, so a palette change in `tabutility.css` propagates. The salary/blog generators must emit this link on every new page.
 
 ## Header + footer pattern (content pages)
 ```html

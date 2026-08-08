@@ -17,44 +17,45 @@
 {"@type":"Question","name":"Will the widget slow my pages down?","acceptedAnswer":{"@type":"Answer","text":"No. It is a single static HTML file under 15 KB with no external libraries, no cookies and no tracking of your visitors, served from a global CDN. Use loading=\"lazy\" on the iframe and it will not affect your page speed scores at all."}}
 ]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<link rel="stylesheet" href="/styles/tabutility.css">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f8fafc;color:#334155;font-family:'Segoe UI',system-ui,Arial,sans-serif;line-height:1.55}
-nav{background:#1a1a2e;padding:14px 20px}nav a{color:#fff;text-decoration:none;font-weight:700}
-nav span{color:#64748b;font-size:13px;margin-left:10px}
+body{margin:0;background:var(--tab-bg,#f8fafc);color:var(--tab-text,#334155);font-family:var(--tab-font,'Segoe UI',system-ui,Arial,sans-serif);line-height:1.55}
+nav{background:var(--tab-navy,#1a1a2e);padding:14px 20px}nav a{color:#fff;text-decoration:none;font-weight:700}
+nav span{color:var(--tab-muted,#64748b);font-size:13px;margin-left:10px}
 main{max-width:880px;margin:0 auto;padding:28px 16px 40px}
-h1{font-size:30px;line-height:1.2;margin:0 0 10px;color:#0f172a}
-h2{font-size:20px;margin:36px 0 10px;color:#0f172a}
-p.lead{color:#64748b;font-size:16px;max-width:640px;margin:0 0 6px}
+h1{font-size:30px;line-height:1.2;margin:0 0 10px;color:var(--tab-heading,#0f172a)}
+h2{font-size:20px;margin:36px 0 10px;color:var(--tab-heading,#0f172a)}
+p.lead{color:var(--tab-muted,#64748b);font-size:16px;max-width:640px;margin:0 0 6px}
 .pill{display:inline-block;background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;border-radius:20px;font-size:12px;font-weight:700;padding:4px 12px;margin-bottom:14px}
 .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
 @media(max-width:760px){.hero{grid-template-columns:1fr}}
-.demo{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:14px}
+.demo{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:14px;padding:14px}
 .demo iframe{border:0;width:100%;height:320px;border-radius:10px}
-.demo .cap{font-size:11px;color:#94a3b8;text-align:center;margin-top:6px}
+.demo .cap{font-size:11px;color:var(--tab-faint,#94a3b8);text-align:center;margin-top:6px}
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:18px 0}
-.ben{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
-.ben b{display:block;color:#0f172a;margin-bottom:4px;font-size:14px}
-.ben span{font-size:13px;color:#64748b}
-.builder{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:18px}
-.builder label{font-size:12px;color:#64748b;font-weight:700;display:block;margin:10px 0 4px}
-.builder select,.builder input{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#1e293b;font-size:14px;padding:8px 10px;width:100%}
+.ben{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:12px;padding:14px 16px}
+.ben b{display:block;color:var(--tab-heading,#0f172a);margin-bottom:4px;font-size:14px}
+.ben span{font-size:13px;color:var(--tab-muted,#64748b)}
+.builder{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:14px;padding:18px}
+.builder label{font-size:12px;color:var(--tab-muted,#64748b);font-weight:700;display:block;margin:10px 0 4px}
+.builder select,.builder input{background:var(--tab-bg,#f8fafc);border:1px solid var(--tab-border,#e2e8f0);border-radius:8px;color:#1e293b;font-size:14px;padding:8px 10px;width:100%}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:560px){.row2{grid-template-columns:1fr}}
-pre.code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-size:11px;color:#4338ca;white-space:pre-wrap;word-break:break-all;margin:12px 0 8px}
-.btn{background:#4f46e5;color:#fff;border:0;border-radius:8px;font-weight:700;font-size:13px;padding:9px 16px;cursor:pointer}
-.btn:hover{background:#4338ca}
-ul{color:#475569;font-size:14px;padding-left:20px}
+pre.code{background:var(--tab-bg-alt,#f1f5f9);border:1px solid var(--tab-border,#e2e8f0);border-radius:8px;padding:12px;font-size:11px;color:var(--tab-accent-hover,#4338ca);white-space:pre-wrap;word-break:break-all;margin:12px 0 8px}
+.btn{background:var(--tab-accent,#4f46e5);color:#fff;border:0;border-radius:8px;font-weight:700;font-size:13px;padding:9px 16px;cursor:pointer}
+.btn:hover{background:var(--tab-accent-hover,#4338ca)}
+ul{color:var(--tab-text-2,#475569);font-size:14px;padding-left:20px}
 li{margin:5px 0}
-a{color:#4f46e5}
+a{color:var(--tab-accent,#4f46e5)}
 table{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}
-td,th{border:1px solid #e2e8f0;padding:7px 10px;text-align:left}
-th{background:#f1f5f9;color:#64748b;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
-.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:4px 18px;margin:10px 0}
-.faq h3{font-size:15px;color:#0f172a;margin:14px 0 6px}
-.faq p{font-size:13.5px;color:#64748b;margin:0 0 14px}
-footer{background:#1a1a2e;color:#64748b;font-size:12px;text-align:center;padding:20px;margin-top:32px}
-footer a{color:#94a3b8}
+td,th{border:1px solid var(--tab-border,#e2e8f0);padding:7px 10px;text-align:left}
+th{background:var(--tab-bg-alt,#f1f5f9);color:var(--tab-muted,#64748b);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.faq{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:12px;padding:4px 18px;margin:10px 0}
+.faq h3{font-size:15px;color:var(--tab-heading,#0f172a);margin:14px 0 6px}
+.faq p{font-size:13.5px;color:var(--tab-muted,#64748b);margin:0 0 14px}
+footer{background:var(--tab-navy,#1a1a2e);color:var(--tab-muted,#64748b);font-size:12px;text-align:center;padding:20px;margin-top:32px}
+footer a{color:var(--tab-faint,#94a3b8)}
 </style></head>
 <body>
 <nav><a href="https://tabutility.com/">← Tabutility</a><span>·</span><a href="https://tabutility.com/embed/" style="font-weight:400;font-size:13px">All embeddable tools</a></nav>
