@@ -1,0 +1,43 @@
+/* Tabutility shared design tokens — see STYLE.md. Served at https://tabutility.com/styles/tabutility.css */
+:root{
+  /* font */
+  --tab-font:'Segoe UI',system-ui,Arial,sans-serif;
+  --tab-font-mono:'Courier New',monospace;
+  /* navy family (nav / hero / footer) */
+  --tab-navy:#1a1a2e;
+  --tab-navy-2:#16213e;
+  --tab-navy-3:#0f3460;
+  --tab-hero-gradient:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);
+  --tab-on-navy:#fff;
+  --tab-on-navy-sub:#a5b4fc;
+  --tab-on-navy-muted:#94a3b8;
+  /* accent — indigo */
+  --tab-accent:#4f46e5;
+  --tab-accent-hover:#4338ca;
+  --tab-accent-soft:#818cf8;
+  --tab-accent-tint:#e0e7ff;
+  --tab-focus-ring:0 0 0 3px rgba(79,70,229,.12);
+  /* light theme (content pages) */
+  --tab-bg:#f8fafc;
+  --tab-bg-alt:#f1f5f9;
+  --tab-card:#fff;
+  --tab-border:#e2e8f0;
+  --tab-radius:12px;
+  --tab-heading:#0f172a;
+  --tab-text:#334155;
+  --tab-text-2:#475569;
+  --tab-muted:#64748b;
+  --tab-faint:#94a3b8;
+  /* dark theme (tools + embeddable widgets) */
+  --tab-dark-bg:#0f172a;
+  --tab-dark-panel:#1e293b;
+  --tab-dark-border:#334155;
+  --tab-dark-heading:#f1f5f9;
+  --tab-dark-text:#cbd5e1;
+  /* status */
+  --tab-success:#16a34a;
+  --tab-success-dark:#34d399;
+  --tab-success-tint:#f0fdf4;
+  --tab-warn:#f59e0b;
+  --tab-warn-tint:#fef3c7;
+}
