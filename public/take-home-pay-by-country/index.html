@@ -128,7 +128,7 @@ footer{border-top:1px solid #334155;padding:24px 16px;text-align:center;color:#6
   <div class="country-notes" id="countryNotes"></div>
 
   <h2>Methodology</h2>
-  <p>Every net-pay figure on this page is produced by porting the exact 2026 tax logic from Tabutility's individual country calculators. We do not use rounded averages or third-party estimates — the numbers match what you would get by opening each calculator and entering the same salary.</p>
+  <p>Every net-pay figure on this page is produced by porting the exact tax logic from Tabutility's individual country calculators — each uses the latest tax year implemented in that country's live tool as of August 2026 (for example, the UK figures use the 2025/26 tax year). We do not use rounded averages or third-party estimates — the numbers match what you would get by opening each calculator and entering the same salary.</p>
   <p>To keep the comparison fair, we apply each tool's <strong>default assumptions</strong>: a single person, employed (not self-employed), with no pension, retirement or voluntary contributions and no dependants. Where a country's default profile requires a specific choice, we use it — for example the US calculator defaults to <em>single</em> filing status in <em>Texas</em>, a state with no income tax, so the US figure excludes state income tax. Germany uses <em>tax class 1</em>. Australia treats employer superannuation as a separate on-top cost, not a payslip deduction, so it is not subtracted from take-home pay. India's figure uses the <em>new tax regime</em> (its default winner) and, like the source tool, reflects income tax only. The UAE figure assumes an <em>expat</em> employee, for whom there is no personal income tax and no mandatory social contribution.</p>
   <p>Salaries are entered in US dollars and converted to each local currency using a fixed reference exchange-rate table <strong>as of August 2026</strong>. Net pay is then calculated in local currency and converted back to USD for the comparison. Because the rates are fixed rather than live, the ranking stays stable over time; for an exact conversion on any given day, check a live currency service. These figures are estimates for comparison and general information — they are not personal tax advice.</p>
 
@@ -389,7 +389,7 @@ buildFindings();
 setSalary(75000);
 document.getElementById('customSal').addEventListener('input', function(){
   var v = parseFloat(this.value);
-  if(!isNaN(v) && v > 0){
+  if(Number.isFinite(v) && v > 0 && v <= 10000000){
     document.querySelectorAll('.sal-btn').forEach(function(b){ b.classList.remove('active'); });
     currentUSD = v;
     render();
