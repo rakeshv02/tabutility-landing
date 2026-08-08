@@ -2154,5 +2154,23 @@
     ],
     "emoji": "🇺🇸",
     "url": "https://social-security-calculator.tabutility.com"
+  },
+  {
+    "id": "japan-income-tax",
+    "name": "Japan Income Tax Calculator",
+    "description": "Calculate Japanese take-home pay including national income tax, resident tax (juminzei) and social insurance (shakai hoken) — 2025.",
+    "category": "International",
+    "tags": [
+      "japan",
+      "income tax",
+      "salary",
+      "take home pay",
+      "shakai hoken",
+      "juminzei",
+      "expat",
+      "jpy"
+    ],
+    "emoji": "🇯🇵",
+    "url": "https://japan-income-tax.tabutility.com"
   }
 ]
