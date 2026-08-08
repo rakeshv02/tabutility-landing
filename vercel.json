@@ -4,7 +4,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/((?!.*\\.txt$|sitemap\\.xml|status\\.json|status\\.html|embed(?:/.*)?$|take-home-pay-by-country(?:/.*)?$).*)",
+      "source": "/((?!.*\\.txt$|sitemap\\.xml|status\\.json|status\\.html|embed(?:/.*)?$|take-home-pay-by-country(?:/.*)?$|widget(?:/.*)?$|salary-widget(?:/.*)?$).*)",
       "destination": "/index.html"
     }
   ],

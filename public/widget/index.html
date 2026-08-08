@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salary in Your Pocket — Take-Home Pay Widget by Tabutility</title>
+<meta name="robots" content="noindex,follow">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:transparent;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+.tw{max-width:340px;margin:0 auto;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:12px;padding:16px 18px 12px}
+.tw-top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.tw-flag{font-size:20px;line-height:1}
+.tw-title{font-size:12px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.04em}
+.tw-salrow{display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.tw-sym{font-size:15px;font-weight:700;color:#94a3b8}
+.tw-sal{flex:1;background:#1e293b;border:1px solid #334155;border-radius:8px;color:#f1f5f9;font-size:15px;font-weight:700;padding:7px 10px;width:100%;outline:none}
+.tw-sal:focus{border-color:#38bdf8}
+.tw-net{font-size:26px;font-weight:800;color:#34d399;line-height:1.1}
+.tw-netlbl{font-size:11px;color:#94a3b8;margin-top:2px;margin-bottom:10px}
+.tw-row{display:flex;justify-content:space-between;font-size:12px;color:#cbd5e1;padding:3px 0;border-top:1px solid #1e293b}
+.tw-row b{color:#f1f5f9;font-weight:700}
+.tw-note{font-size:9.5px;color:#475569;margin-top:8px;line-height:1.35}
+.tw-credit{font-size:10px;color:#64748b;margin-top:6px;padding-top:6px;border-top:1px solid #1e293b}
+.tw-credit a{color:#38bdf8;text-decoration:none;font-weight:600}
+</style></head>
+<body>
+<div class="tw">
+  <div class="tw-top"><span class="tw-flag" id="flag">💼</span><span class="tw-title" id="ttl">Take-Home Pay</span></div>
+  <div class="tw-salrow"><span class="tw-sym" id="sym">£</span><input class="tw-sal" id="sal" type="text" inputmode="numeric" aria-label="Annual gross salary"></div>
+  <div class="tw-net" id="netMo">—</div>
+  <div class="tw-netlbl">estimated take-home per month</div>
+  <div class="tw-row"><span>Annual take-home</span><b id="netYr">—</b></div>
+  <div class="tw-row"><span>Weekly take-home</span><b id="netWk">—</b></div>
+  <div class="tw-row"><span>Total deductions</span><b id="ded">—</b></div>
+  <div class="tw-note" id="note"></div>
+  <div class="tw-credit">Powered by <a id="toolLink" href="https://tabutility.com/" target="_blank" rel="noopener">Tabutility</a> · <a id="fullLink" href="https://tabutility.com/" target="_blank" rel="noopener">Full calculator →</a></div>
+</div>
+<script>
+var CALC = {
+  uk: function(gross){
+    var pa=12570, br=50270, hr=125140;
+    function incomeTax(t){ if(t<=pa) return 0; var ePA=pa; if(t>100000) ePA=Math.max(0,pa-(t-100000)/2); var adj=t-ePA; if(adj<=0) return 0; var tax=0; var basic=Math.min(adj,br-pa); tax+=Math.max(0,basic)*0.20; var higher=Math.min(Math.max(adj-(br-pa),0),hr-br); tax+=higher*0.40; var add=Math.max(adj-(hr-pa),0); tax+=add*0.45; return tax; }
+    function ni(g){ var lo=12570,up=50270; if(g<=lo) return 0; var n=(Math.min(g,up)-lo)*0.08; if(g>up) n+=(g-up)*0.02; return n; }
+    return gross - incomeTax(gross) - ni(gross);
+  },
+  us: function(gross){
+    var brackets=[[0,12400,0.10],[12400,50400,0.12],[50400,105700,0.22],[105700,201775,0.24],[201775,256225,0.32],[256225,640600,0.35],[640600,Infinity,0.37]];
+    var taxable=Math.max(0,gross-16100), fed=0;
+    for(var i=0;i<brackets.length;i++){ var b=brackets[i]; if(taxable<=b[0]) break; fed+=(Math.min(taxable,b[1])-b[0])*b[2]; }
+    var ss=Math.min(gross,184500)*0.062;
+    var medicare=gross*0.0145+Math.max(0,gross-200000)*0.009;
+    return gross - fed - ss - medicare; // Texas: no state income tax
+  },
+  au: function(gross){
+    var brackets=[[0,18200,0],[18200,45000,0.16],[45000,135000,0.30],[135000,190000,0.37],[190000,Infinity,0.45]], tax=0;
+    for(var i=0;i<brackets.length;i++){ var b=brackets[i]; if(gross<=b[0]) break; tax+=(Math.min(gross,b[1])-b[0])*b[2]; }
+    var lito=0; if(gross<=37500) lito=700; else if(gross<=45000) lito=700-((gross-37500)*0.05); else if(gross<=66667) lito=325-((gross-45000)*0.015);
+    var taxAfter=Math.max(0,tax-lito);
+    var medicare=0, shade=26000, full=32500;
+    if(gross<=shade) medicare=0; else if(gross<=full) medicare=(gross-shade)*0.1; else medicare=gross*0.02;
+    return gross - taxAfter - medicare; // super is employer-paid, not deducted
+  },
+  ca: function(gross){
+    var FED=[[0,58523,0.14],[58523,117045,0.205],[117045,181440,0.26],[181440,258482,0.29],[258482,Infinity,0.33]];
+    var ON=[[0,53891,0.0505],[53891,107785,0.0915],[107785,150000,0.1116],[150000,220000,0.1216],[220000,Infinity,0.1316]];
+    function tax(income,brackets,exemption){ var t=Math.max(0,income-exemption), x=0; for(var i=0;i<brackets.length;i++){ var b=brackets[i]; if(t<=b[0]) break; x+=(Math.min(t,b[1])-b[0])*b[2]; } return x; }
+    var fed=tax(gross,FED,16600), prov=tax(gross,ON,10000);
+    var cpp=Math.min(Math.max(0,gross-3500),73200-3500)*0.0595;
+    var ei=Math.min(gross,67700)*0.0164;
+    return gross - fed - prov - cpp - ei; // Ontario
+  },
+  ie: function(gross){
+    var cutoff=42000, atStd=Math.min(gross,cutoff), atHigh=Math.max(0,gross-cutoff);
+    var paye=atStd*0.20+atHigh*0.40; paye=Math.max(0,paye-(1875+1875));
+    var usc=0;
+    if(gross>13000){ var bands=[[12012,0.005],[25760,0.02],[70044,0.04],[Infinity,0.08]], rem=gross, prev=0;
+      for(var i=0;i<bands.length;i++){ var slice=Math.min(rem,bands[i][0]-prev); usc+=slice*bands[i][1]; rem-=slice; prev=bands[i][0]; if(rem<=0) break; } }
+    var prsi = gross>=352*52 ? gross*0.041 : 0;
+    return gross - paye - usc - prsi;
+  },
+  nz: function(gross){
+    var bands=[[15600,0.105],[53500,0.175],[78100,0.30],[180000,0.33],[Infinity,0.39]], tax=0, prev=0;
+    for(var i=0;i<bands.length;i++){ var slice=Math.min(Math.max(0,gross-prev),bands[i][0]-prev); tax+=slice*bands[i][1]; prev=bands[i][0]; if(prev>=gross) break; }
+    var acc=Math.min(gross,142283)*0.016;
+    return gross - tax - acc;
+  },
+  de: function(gross){
+    var gf=12096, it=0;
+    if(gross<=gf) it=0;
+    else if(gross<=17005){ var y=(gross-gf)/10000; it=(979.18*y+1400)*y; }
+    else if(gross<=66760){ var z=(gross-17005)/10000; it=(192.59*z+2397)*z+1025; }
+    else if(gross<=277825){ it=0.42*gross-10602; }
+    else { it=0.45*gross-18936; }
+    it=Math.max(0,it);
+    var soli = it>18130 ? it*0.055 : 0;
+    var social=Math.min(gross,96600)*0.093 + Math.min(gross,66150)*0.073 + Math.min(gross,66150)*0.017 + Math.min(gross,96600)*0.013 + Math.min(gross,66150)*0.018;
+    return gross - it - soli - social; // tax class 1
+  },
+  nl: function(gross){
+    var b1=75518, tax = gross<=b1 ? gross*0.3697 : b1*0.3697+(gross-b1)*0.4950;
+    var hk=0; if(gross<=24812) hk=3362; else if(gross<=75518) hk=Math.max(0,3362-(gross-24812)*0.06095);
+    var ak=0;
+    if(gross<=11491) ak=gross*0.08425;
+    else if(gross<=25187) ak=968+(gross-11491)*0.31433;
+    else if(gross<=43071) ak=5158;
+    else if(gross<=124935) ak=Math.max(0,5158-(gross-43071)*0.06510);
+    var netTax=Math.max(0,tax-hk-ak);
+    return gross - netTax;
+  },
+  sg: function(gross){
+    var B=[[20000,0,0],[30000,0.02,0],[40000,0.035,200],[80000,0.07,550],[120000,0.115,3350],[160000,0.15,7950],[200000,0.18,13950],[240000,0.19,21150],[280000,0.195,28750],[320000,0.20,36550],[Infinity,0.22,44550]];
+    function incTax(income){ for(var i=0;i<B.length;i++){ var prev=i===0?0:B[i-1][0]; if(income<=B[i][0]) return B[i][2]+(income-prev)*B[i][1]; } return 0; }
+    var cpf=Math.min(gross/12,6800)*0.20*12; // under 55
+    return gross - incTax(gross) - cpf;
+  },
+  za: function(gross){
+    var B=[[237100,0.18,0],[370500,0.26,42678],[512800,0.31,77362],[673000,0.36,121475],[857900,0.39,179147],[1817000,0.41,251258],[Infinity,0.45,644489]];
+    function saTax(income){ for(var i=0;i<B.length;i++){ var prev=i===0?0:B[i-1][0]; if(income<=B[i][0]) return B[i][2]+(income-prev)*B[i][1]; } return 0; }
+    var incomeTax=Math.max(0,saTax(gross)-17235); // primary rebate, under 65
+    var uif=Math.min(gross,17712*12)*0.01;
+    return gross - incomeTax - uif;
+  },
+  es: function(gross){
+    var pa=5550, wr=0; if(gross<=14852) wr=5565; else if(gross<=17673) wr=Math.max(0,5565-1.5*(gross-14852));
+    var base=Math.max(0,gross-pa-wr);
+    var bands=[[12450,0.19],[20200,0.24],[35200,0.30],[60000,0.37],[300000,0.45],[Infinity,0.47]], irpf=0, prev=0;
+    for(var i=0;i<bands.length;i++){ if(base<=prev) break; var slice=Math.min(base-prev,bands[i][0]-prev); irpf+=slice*bands[i][1]; prev=bands[i][0]; }
+    var ss=gross*(0.047+0.0155+0.001);
+    return gross - irpf - ss;
+  },
+  jp: function(gross){
+    function empDed(g){ if(g<=1900000) return 650000; if(g<=3600000) return g*0.30+80000; if(g<=6600000) return g*0.20+440000; if(g<=8500000) return g*0.10+1100000; return 1950000; }
+    function basicDed(net,type){ if(type==='national'){ if(net<=23500000) return 580000; if(net<=24000000) return 480000; if(net<=24500000) return 320000; if(net<=25000000) return 160000; return 0; } if(net<=24000000) return 430000; if(net<=24500000) return 290000; if(net<=25000000) return 150000; return 0; }
+    function natTax(t){ if(t<=0) return 0; if(t<=1950000) return t*0.05; if(t<=3300000) return t*0.10-97500; if(t<=6950000) return t*0.20-427500; if(t<=9000000) return t*0.23-636000; if(t<=18000000) return t*0.33-1536000; if(t<=40000000) return t*0.40-2796000; return t*0.45-4796000; }
+    var health=Math.min(gross,16680000)*0.0499;
+    var pension=Math.min(gross,7800000)*0.0915;
+    var emp=gross*0.0055;
+    var social=health+pension+emp; // under 40: no nursing-care premium
+    var netIncome=gross-empDed(gross);
+    var taxableNat=Math.max(0,netIncome-social-basicDed(netIncome,'national'));
+    taxableNat=Math.floor(taxableNat/1000)*1000;
+    var incomeTax=Math.max(0,natTax(taxableNat));
+    var surtax=incomeTax*0.021;
+    var taxableRes=Math.max(0,netIncome-social-basicDed(netIncome,'resident'));
+    var resident=taxableRes>0?taxableRes*0.10+5000:0;
+    return gross - incomeTax - surtax - resident - social;
+  },
+  in: function(gross){
+    var taxable=Math.max(0,gross-75000);
+    if(taxable<=700000) return gross; // 87A rebate -> zero tax (new regime)
+    var slabs=[[300000,0],[600000,0.05],[900000,0.1],[1200000,0.15],[1500000,0.2],[Infinity,0.3]], tax=0, prev=0;
+    for(var i=0;i<slabs.length;i++){ if(taxable<=prev) break; tax+=Math.min(taxable-prev,slabs[i][0]-prev)*slabs[i][1]; prev=slabs[i][0]; }
+    return gross - tax*1.04; // 4% cess
+  },
+  ae: function(gross){ return gross; } // expat: no income tax, no social contribution
+};
+var META = {
+  us:{name:'United States',flag:'🇺🇸',cur:'$',tool:'us-paycheck-calculator',def:75000,note:'Single filer, no state income tax (Texas basis). 2026 federal brackets + Social Security + Medicare.'},
+  uk:{name:'United Kingdom',flag:'🇬🇧',cur:'£',tool:'uk-salary-calculator',def:35000,note:'2025/26 rates: income tax + Class 1 National Insurance. No pension or student loan.'},
+  au:{name:'Australia',flag:'🇦🇺',cur:'A$',tool:'australian-tax-calculator',def:85000,note:'Resident, 2025–26 brackets, LITO + 2% Medicare levy. Super is employer-paid on top.'},
+  ca:{name:'Canada',flag:'🇨🇦',cur:'C$',tool:'canadian-tax-calculator',def:70000,note:'Ontario resident. 2026 federal + provincial tax, CPP and EI.'},
+  ie:{name:'Ireland',flag:'🇮🇪',cur:'€',tool:'ireland-income-tax',def:45000,note:'Single. PAYE less credits, plus USC and PRSI.'},
+  nz:{name:'New Zealand',flag:'🇳🇿',cur:'NZ$',tool:'nz-income-tax',def:70000,note:'PAYE on 2025 bands plus ACC earner levy. No KiwiSaver.'},
+  de:{name:'Germany',flag:'🇩🇪',cur:'€',tool:'germany-income-tax',def:55000,note:'Tax class 1. Income tax, solidarity surcharge and full employee social insurance.'},
+  nl:{name:'Netherlands',flag:'🇳🇱',cur:'€',tool:'netherlands-income-tax',def:50000,note:'Box 1 income tax (2025) with general and labour tax credits.'},
+  sg:{name:'Singapore',flag:'🇸🇬',cur:'S$',tool:'singapore-income-tax',def:72000,note:'Resident under 55. YA 2025 income tax + 20% employee CPF (capped).'},
+  za:{name:'South Africa',flag:'🇿🇦',cur:'R',tool:'south-africa-income-tax',def:420000,note:'Under 65. 2025/26 brackets less primary rebate, plus capped UIF.'},
+  es:{name:'Spain',flag:'🇪🇸',cur:'€',tool:'spain-income-tax',def:35000,note:'Single. Combined state + average regional IRPF plus employee social security.'},
+  jp:{name:'Japan',flag:'🇯🇵',cur:'¥',tool:'japan-income-tax',def:5000000,note:'Under 40. National + resident tax, surtax and employee social insurance.'},
+  in:{name:'India',flag:'🇮🇳',cur:'₹',tool:'india-income-tax-calculator',def:1200000,note:'New regime, ₹75,000 standard deduction, 87A rebate + 4% cess. EPF not modelled.'},
+  ae:{name:'United Arab Emirates',flag:'🇦🇪',cur:'AED',tool:'uae-salary-calculator',def:180000,note:'Expat employee: no personal income tax, no mandatory social contribution.'}
+};
+var P = new URLSearchParams(location.search);
+var cc = (P.get('c')||'uk').toLowerCase();
+if(!META[cc]) cc='uk';
+var m = META[cc];
+var gross = parseInt(String(P.get('s')||'').replace(/[^0-9]/g,''),10);
+if(!gross || gross<1000 || gross>100000000) gross = m.def;
+document.getElementById('flag').textContent=m.flag;
+document.getElementById('ttl').textContent='Take-Home Pay · '+m.name;
+document.getElementById('sym').textContent=m.cur;
+var toolUrl='https://'+m.tool+'.tabutility.com/?utm_source=widget&utm_medium=embed';
+document.getElementById('toolLink').href='https://tabutility.com/?utm_source=widget&utm_medium=embed';
+document.getElementById('fullLink').href=toolUrl;
+document.getElementById('note').textContent=m.note+' Estimate only — not tax advice.';
+var sal=document.getElementById('sal');
+function fmt(n){ return m.cur + Math.round(n).toLocaleString('en-US'); }
+function render(g){
+  var net=Math.max(0,CALC[cc](g));
+  document.getElementById('netMo').textContent=fmt(net/12);
+  document.getElementById('netYr').textContent=fmt(net);
+  document.getElementById('netWk').textContent=fmt(net/52);
+  var dd=g-net;
+  document.getElementById('ded').textContent=fmt(dd)+' ('+(g>0?(dd/g*100).toFixed(1):'0.0')+'%)';
+}
+sal.value=gross.toLocaleString('en-US');
+sal.addEventListener('input',function(){
+  var v=parseInt(sal.value.replace(/[^0-9]/g,''),10);
+  if(v>0 && v<=100000000) render(v);
+});
+render(gross);
+</script>
+</body></html>

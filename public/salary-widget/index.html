@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Salary Take-Home Widget for Job Boards &amp; Recruiters — Tabutility</title>
+<meta name="description" content="Embed a free 'salary in your pocket' widget next to any job listing. Shows real monthly take-home pay for 14 countries. Copy-paste one line of code — no signup, no cost.">
+<link rel="canonical" href="https://tabutility.com/salary-widget/">
+<meta property="og:title" content="Salary Take-Home Widget for Job Boards — Tabutility">
+<meta property="og:description" content="Show candidates their real monthly take-home pay next to every job listing. Free embed, 14 countries.">
+<meta property="og:url" content="https://tabutility.com/salary-widget/"><meta property="og:type" content="website">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Salary Take-Home Widget for Job Boards — Tabutility"><meta name="twitter:description" content="Show candidates their real monthly take-home pay next to every job listing. Free embed, 14 countries.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Salary in Your Pocket Widget","url":"https://tabutility.com/salary-widget/","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free embeddable widget that shows monthly take-home pay next to any job listing, for 14 countries."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com/"},{"@type":"ListItem","position":2,"name":"Embed Tools","item":"https://tabutility.com/embed/"},{"@type":"ListItem","position":3,"name":"Salary Widget","item":"https://tabutility.com/salary-widget/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is the salary take-home widget really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The widget is completely free for job boards, recruiters, staffing agencies and careers pages. There is no signup, no API key and no usage limit. We only ask that you keep the small credit link under the widget."}},
+{"@type":"Question","name":"Which countries does the widget support?","acceptedAnswer":{"@type":"Answer","text":"14 countries: the United States, United Kingdom, Australia, Canada, Ireland, New Zealand, Germany, Netherlands, Singapore, South Africa, Spain, Japan, India and the United Arab Emirates. Pick the country with the c= URL parameter."}},
+{"@type":"Question","name":"How accurate are the take-home figures?","acceptedAnswer":{"@type":"Answer","text":"The widget uses the same tax logic as Tabutility's live 2026 salary calculators — current-year brackets, social contributions and standard credits for a typical single employee. Figures are estimates for guidance, not tax advice, and assumptions are stated inside the widget."}},
+{"@type":"Question","name":"Can I preset the salary from my job listing?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pass the advertised salary with the s= URL parameter, for example /widget/?c=uk&s=50000. If your job board is templated, inject the listing's salary into the iframe URL and every posting gets its own personalised widget. Candidates can also edit the salary inside the widget."}},
+{"@type":"Question","name":"Will the widget slow my pages down?","acceptedAnswer":{"@type":"Answer","text":"No. It is a single static HTML file under 15 KB with no external libraries, no cookies and no tracking of your visitors, served from a global CDN. Use loading=\"lazy\" on the iframe and it will not affect your page speed scores at all."}}
+]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.55}
+nav{background:#1e293b;padding:14px 20px}nav a{color:#38bdf8;text-decoration:none;font-weight:700}
+nav span{color:#475569;font-size:13px;margin-left:10px}
+main{max-width:880px;margin:0 auto;padding:28px 16px 40px}
+h1{font-size:30px;line-height:1.2;margin:0 0 10px}
+h2{font-size:20px;margin:36px 0 10px}
+p.lead{color:#94a3b8;font-size:16px;max-width:640px;margin:0 0 6px}
+.pill{display:inline-block;background:#132f21;color:#34d399;border:1px solid #14532d;border-radius:20px;font-size:12px;font-weight:700;padding:4px 12px;margin-bottom:14px}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.demo{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:14px}
+.demo iframe{border:0;width:100%;height:320px;border-radius:10px}
+.demo .cap{font-size:11px;color:#64748b;text-align:center;margin-top:6px}
+.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:18px 0}
+.ben{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px 16px}
+.ben b{display:block;color:#f1f5f9;margin-bottom:4px;font-size:14px}
+.ben span{font-size:13px;color:#94a3b8}
+.builder{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:18px}
+.builder label{font-size:12px;color:#94a3b8;font-weight:700;display:block;margin:10px 0 4px}
+.builder select,.builder input{background:#0f172a;border:1px solid #334155;border-radius:8px;color:#f1f5f9;font-size:14px;padding:8px 10px;width:100%}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+pre.code{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-size:11px;color:#7dd3fc;white-space:pre-wrap;word-break:break-all;margin:12px 0 8px}
+.btn{background:#38bdf8;color:#0f172a;border:0;border-radius:8px;font-weight:700;font-size:13px;padding:9px 16px;cursor:pointer}
+.btn:hover{background:#7dd3fc}
+ul{color:#cbd5e1;font-size:14px;padding-left:20px}
+li{margin:5px 0}
+a{color:#38bdf8}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}
+td,th{border:1px solid #334155;padding:7px 10px;text-align:left}
+th{background:#1e293b;color:#94a3b8;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.faq{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:4px 18px;margin:10px 0}
+.faq h3{font-size:15px;color:#f1f5f9;margin:14px 0 6px}
+.faq p{font-size:13.5px;color:#94a3b8;margin:0 0 14px}
+footer{border-top:1px solid #1e293b;color:#475569;font-size:12px;text-align:center;padding:20px}
+footer a{color:#64748b}
+</style></head>
+<body>
+<nav><a href="https://tabutility.com/">← Tabutility</a><span>·</span><a href="https://tabutility.com/embed/" style="font-weight:400;font-size:13px">All embeddable tools</a></nav>
+<main>
+<div class="hero">
+<div>
+<div class="pill">Free for job boards &amp; recruiters</div>
+<h1>Salary in your pocket — show real take-home pay next to every job listing</h1>
+<p class="lead">"£50,000" means nothing until a candidate knows what lands in their bank account. This tiny widget turns any advertised salary into an instant monthly take-home figure — for 14 countries, using Tabutility's live 2026 tax calculators.</p>
+<div class="benefits">
+<div class="ben"><b>One line of code</b><span>Copy-paste an iframe. No signup, no API key, no cost, no limit.</span></div>
+<div class="ben"><b>Per-listing salaries</b><span>Preset country and salary via URL params — template it into every posting.</span></div>
+<div class="ben"><b>Fast &amp; private</b><span>Single static file under 15&nbsp;KB. No cookies, no tracking of your visitors.</span></div>
+<div class="ben"><b>Candidates stay longer</b><span>Interactive — applicants can adjust the salary and compare offers on your page.</span></div>
+</div>
+</div>
+<div class="demo">
+<iframe src="/widget/?c=uk&amp;s=50000" title="Salary take-home widget demo — UK £50,000" loading="lazy"></iframe>
+<div class="cap">Live demo: UK, £50,000 — try editing the salary</div>
+</div>
+</div>
+
+<h2>Get your embed code</h2>
+<div class="builder">
+<div class="row2">
+<div><label for="bCountry">Country</label><select id="bCountry"></select></div>
+<div><label for="bSalary">Advertised salary (annual, local currency)</label><input id="bSalary" type="text" inputmode="numeric" value="50000"></div>
+</div>
+<pre class="code" id="bCode"></pre>
+<button class="btn" onclick="copyCode(this)">Copy Embed Code</button>
+<p style="font-size:12px;color:#64748b;margin:10px 0 0">Templating a job board? Replace the salary with your template variable, e.g. <code style="color:#7dd3fc">s={{job.salary}}</code>. Please keep the credit line — it's how we keep the widget free.</p>
+</div>
+
+<h2>Supported countries</h2>
+<table>
+<tr><th>Country</th><th>Code</th><th>Basis (2026 season)</th></tr>
+<tr><td>🇺🇸 United States</td><td>us</td><td>Single filer, federal + FICA, no state tax (Texas basis)</td></tr>
+<tr><td>🇬🇧 United Kingdom</td><td>uk</td><td>2025/26 income tax + Class 1 National Insurance</td></tr>
+<tr><td>🇦🇺 Australia</td><td>au</td><td>Resident 2025–26, LITO + Medicare levy</td></tr>
+<tr><td>🇨🇦 Canada</td><td>ca</td><td>Ontario, federal + provincial + CPP + EI</td></tr>
+<tr><td>🇮🇪 Ireland</td><td>ie</td><td>PAYE + USC + PRSI, single credits</td></tr>
+<tr><td>🇳🇿 New Zealand</td><td>nz</td><td>2025 PAYE bands + ACC levy</td></tr>
+<tr><td>🇩🇪 Germany</td><td>de</td><td>Tax class 1 + full employee social insurance</td></tr>
+<tr><td>🇳🇱 Netherlands</td><td>nl</td><td>Box 1 with general + labour credits</td></tr>
+<tr><td>🇸🇬 Singapore</td><td>sg</td><td>YA 2025 tax + employee CPF (capped)</td></tr>
+<tr><td>🇿🇦 South Africa</td><td>za</td><td>2025/26 brackets + UIF</td></tr>
+<tr><td>🇪🇸 Spain</td><td>es</td><td>IRPF + employee social security</td></tr>
+<tr><td>🇯🇵 Japan</td><td>jp</td><td>National + resident tax + social insurance</td></tr>
+<tr><td>🇮🇳 India</td><td>in</td><td>New regime + cess (EPF not modelled)</td></tr>
+<tr><td>🇦🇪 UAE</td><td>ae</td><td>No personal income tax</td></tr>
+</table>
+<p style="font-size:13px;color:#94a3b8">Need the full picture? Point candidates at the matching <a href="https://tabutility.com/">Tabutility salary calculator</a> or the <a href="https://tabutility.com/take-home-pay-by-country/">take-home pay by country comparison</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<h3>Is the widget really free?</h3>
+<p>Yes — free for job boards, recruiters, staffing agencies and careers pages. No signup, no API key, no usage limit. We only ask that you keep the small credit link under the widget.</p>
+<h3>How accurate are the figures?</h3>
+<p>The widget runs the same tax logic as Tabutility's live 2026 salary calculators: current-year brackets, social contributions and standard credits for a typical single employee. Assumptions are stated inside the widget. Figures are estimates for guidance, not tax advice.</p>
+<h3>Can I preset the salary from my listing?</h3>
+<p>Yes — pass it in the URL: <code style="color:#7dd3fc">/widget/?c=uk&amp;s=50000</code>. On a templated job board, inject each listing's salary into the iframe URL and every posting gets its own personalised widget. Candidates can also edit the number inside the widget.</p>
+<h3>Will it slow my pages down?</h3>
+<p>No. It's one static HTML file under 15&nbsp;KB, no external libraries, no cookies, served from a global CDN. With <code style="color:#7dd3fc">loading="lazy"</code> it has zero impact on your page speed scores.</p>
+<h3>Can you add a country or a custom style?</h3>
+<p>Probably! The widget is built from Tabutility's country calculators — if we cover the country, we can widget it. <a href="https://tabutility.com/">Get in touch via tabutility.com</a>.</p>
+</div>
+</main>
+<footer>© 2026 Tabutility · <a href="https://tabutility.com/">All 143 free tools</a> · <a href="https://tabutility.com/embed/">Embed gallery</a> · Estimates only, not tax advice</footer>
+<script>
+var CL=[["uk","🇬🇧 United Kingdom",50000],["us","🇺🇸 United States",75000],["au","🇦🇺 Australia",85000],["ca","🇨🇦 Canada",70000],["ie","🇮🇪 Ireland",45000],["nz","🇳🇿 New Zealand",70000],["de","🇩🇪 Germany",55000],["nl","🇳🇱 Netherlands",50000],["sg","🇸🇬 Singapore",72000],["za","🇿🇦 South Africa",420000],["es","🇪🇸 Spain",35000],["jp","🇯🇵 Japan",5000000],["in","🇮🇳 India",1200000],["ae","🇦🇪 United Arab Emirates",180000]];
+var sel=document.getElementById('bCountry'), inp=document.getElementById('bSalary'), out=document.getElementById('bCode');
+CL.forEach(function(c){var o=document.createElement('option');o.value=c[0];o.textContent=c[1];sel.appendChild(o);});
+var NAMES={};CL.forEach(function(c){NAMES[c[0]]=c[1].slice(c[1].indexOf(' ')+1);});
+function upd(){
+  var c=sel.value, s=parseInt(inp.value.replace(/[^0-9]/g,''),10)||CL.find(function(x){return x[0]===c;})[2];
+  var u='https://tabutility.com/widget/?c='+c+'&s='+s;
+  out.textContent='<iframe src="'+u+'" width="340" height="320" frameborder="0" loading="lazy" style="border-radius:12px" title="Take-home pay widget by Tabutility"></iframe>\n<p style="font-size:11px"><a href="https://tabutility.com/salary-widget/" target="_blank" rel="noopener">Take-home pay widget</a> by <a href="https://tabutility.com/" target="_blank" rel="noopener">Tabutility</a></p>';
+}
+sel.addEventListener('change',function(){inp.value=String(CL.find(function(x){return x[0]===sel.value;})[2]);upd();});
+inp.addEventListener('input',upd);
+upd();
+function copyCode(b){navigator.clipboard.writeText(out.textContent).then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy Embed Code';},2000);});}
+</script>
+</body></html>
