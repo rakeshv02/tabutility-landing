@@ -56,11 +56,24 @@ const CALC = {
     const medicare = gross <= 26000 ? 0 : gross <= 32500 ? (gross - 26000) * .1 : gross * .02;
     return gross - Math.max(0, tax - lito) - medicare;
   },
+  jp: gross => {
+    function empDed(g) { if (g <= 1900000) return 650000; if (g <= 3600000) return g * 0.30 + 80000; if (g <= 6600000) return g * 0.20 + 440000; if (g <= 8500000) return g * 0.10 + 1100000; return 1950000; }
+    function basicDed(net, type) { if (type === "national") { if (net <= 23500000) return 580000; if (net <= 24000000) return 480000; if (net <= 24500000) return 320000; if (net <= 25000000) return 160000; return 0; } if (net <= 24000000) return 430000; if (net <= 24500000) return 290000; if (net <= 25000000) return 150000; return 0; }
+    function natTax(t) { if (t <= 0) return 0; if (t <= 1950000) return t * 0.05; if (t <= 3300000) return t * 0.10 - 97500; if (t <= 6950000) return t * 0.20 - 427500; if (t <= 9000000) return t * 0.23 - 636000; if (t <= 18000000) return t * 0.33 - 1536000; if (t <= 40000000) return t * 0.40 - 2796000; return t * 0.45 - 4796000; }
+    const health = Math.min(gross, 16680000) * 0.0499, pension = Math.min(gross, 7800000) * 0.0915, emp = gross * 0.0055, social = health + pension + emp;
+    const netIncome = gross - empDed(gross);
+    const taxableNat = Math.floor(Math.max(0, netIncome - social - basicDed(netIncome, "national")) / 1000) * 1000;
+    const incomeTax = Math.max(0, natTax(taxableNat)), surtax = incomeTax * 0.021;
+    const taxableRes = Math.max(0, netIncome - social - basicDed(netIncome, "resident"));
+    const resident = taxableRes > 0 ? taxableRes * 0.10 + 5000 : 0;
+    return gross - incomeTax - surtax - resident - social;
+  },
 };
 const COUNTRIES = {
   uk: { flag: "🇬🇧", label: "UK", sym: "£", min: 20000, max: 200000, year: "2025/26", slug: "uk-salary", hub: "https://uk-salary-calculator.tabutility.com" },
   us: { flag: "🇺🇸", label: "US", sym: "$", min: 30000, max: 300000, year: "2026", slug: "us-salary", hub: "https://us-paycheck-calculator.tabutility.com" },
   au: { flag: "🇦🇺", label: "AU", sym: "A$", min: 40000, max: 250000, year: "2025–26", slug: "au-salary", hub: "https://australian-tax-calculator.tabutility.com" },
+  jp: { flag: "🇯🇵", label: "JP", sym: "¥", min: 3000000, max: 20000000, year: "2026", slug: null, hub: "https://japan-income-tax.tabutility.com" },
 };
 function money(c, n) { return `${c.sym}${Math.round(n).toLocaleString("en-US")}`; }
 
@@ -83,7 +96,7 @@ export default function App() {
       <div style={styles.searchWrap}><span style={styles.searchIcon}>⌕</span><input aria-label="Search tools" placeholder={`Search ${toolsData.length} tools…`} value={search} onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />{search && <button onClick={() => setSearch("")} style={styles.clear}>×</button>}</div>
       <div style={styles.questions}>{[
         ["How much of my salary do I keep?", "#take-home", "Calculate take-home"],
-        ["Is my raise worth it?", `/${country === "all" ? "uk" : country}-salary/compare/`, "Compare the net gain"],
+        ["Is my raise worth it?", `/${["uk", "us", "au"].includes(country) ? country : "uk"}-salary/compare/`, "Compare the net gain"],
         ["What does a loan really cost?", "https://loan-calculator.tabutility.com", "See the full cost"],
         ["How do countries compare?", "/global-take-home-pay-report-2026/", "Read the report"],
         ["Need a quick dev tool?", "#developer-tools", "Browse developer tools"],
@@ -99,10 +112,9 @@ export default function App() {
 }
 
 function HomeContent({ country, c }) {
-  const salary = country === "all" || country === "jp" ? 50000 : country === "us" ? 85000 : country === "au" ? 90000 : 50000;
-  const net = CALC[country === "all" || country === "jp" ? "uk" : country](salary);
-  const moneyCountry = country === "all" || country === "jp" ? "uk" : country;
-  return <main><TakeHome country={moneyCountry} c={country === "all" || country === "jp" ? COUNTRIES.uk : c} salary={salary} /><section style={styles.content}><div style={styles.sectionKicker}>THE MONEY DESK</div><h2 style={styles.sectionTitle}>Money & Tax</h2><div style={styles.featureGrid}>{[
+  const widgetCountry = country === "all" ? "uk" : country;
+  const salary = country === "jp" ? 5000000 : country === "us" ? 85000 : country === "au" ? 90000 : 50000;
+  return <main><TakeHome country={widgetCountry} c={COUNTRIES[widgetCountry]} salary={salary} /><section style={styles.content}><div style={styles.sectionKicker}>THE MONEY DESK</div><h2 style={styles.sectionTitle}>Money & Tax</h2><div style={styles.featureGrid}>{[
     ["◎", "Global Take-Home Pay Report 2026", "A clear view of what salaries are worth after tax around the world.", "/global-take-home-pay-report-2026/"],
     ["◈", "Take-Home Pay by Country", "Compare the same salary across borders, with the assumptions visible.", "/take-home-pay-by-country/"],
     ["£$", "Salary guides that answer the next question", "Browse country-by-country take-home pay and raise comparisons.", country === "all" || country === "jp" ? "/uk-salary/" : `/${country}-salary/`],
@@ -112,8 +124,8 @@ function HomeContent({ country, c }) {
 function TakeHome({ country: initial, c: initialC, salary: initialSalary }) {
   const [country, setCountry] = useState(initial); const [salary, setSalary] = useState(initialSalary);
   useEffect(() => { setCountry(initial); setSalary(initialSalary); }, [initial, initialSalary]);
-  const c = COUNTRIES[country]; const net = CALC[country](salary); const rounded = Math.round(salary / 5000) * 5000;
-  return <section id="take-home" style={styles.takeSection}><div style={styles.takeCard}><div style={styles.takeHead}><div><div style={styles.sectionKicker}>THE NUMBER THAT MATTERS</div><h2 style={{ ...styles.sectionTitle, color: "#fff", marginBottom: 7 }}>What lands in your account?</h2><p style={styles.muted}>A live estimate after tax and mandatory deductions.</p></div><div style={styles.toggle}>{Object.keys(COUNTRIES).map(id => <button key={id} onClick={() => { setCountry(id); setSalary(COUNTRIES[id].min + Math.round((salary - c.min) / 1000) * 1000); }} style={{ ...styles.toggleButton, ...(country === id ? styles.toggleActive : {}) }}>{COUNTRIES[id].label}</button>)}</div></div><div style={styles.salaryLine}><span>Gross yearly salary</span><strong>{money(c, salary)}</strong></div><input aria-label="Gross yearly salary" type="range" min={c.min} max={c.max} step="1000" value={Math.min(c.max, Math.max(c.min, salary))} onChange={e => setSalary(Number(e.target.value))} style={styles.range} /><div style={styles.rangeLabels}><span>{money(c, c.min)}</span><span>{money(c, c.max)}</span></div><div style={styles.netResult}><div style={styles.statBlock}><small>ESTIMATED TAKE-HOME / YEAR</small><strong>{money(c, net)}</strong></div><div style={styles.statBlock}><small>PER MONTH</small><strong>{money(c, net / 12)}</strong></div><div style={{ ...styles.statBlock, ...styles.rate }}><small>EFFECTIVE RATE</small><strong>{((salary - net) / salary * 100).toFixed(1)}%</strong></div></div><div style={styles.takeLinks}><a href={`/${c.slug}/${rounded}/`}>Full breakdown →</a><a href={c.hub}>Open full calculator ↗</a><span>{c.label} {c.year} tax year · estimate, not advice</span></div></div></section>;
+  const c = COUNTRIES[country]; const net = CALC[country](salary); const step = country === "jp" ? 100000 : 1000; const rounded = Math.round(salary / (country === "jp" ? 100000 : 5000)) * (country === "jp" ? 100000 : 5000);
+  return <section id="take-home" style={styles.takeSection}><div style={styles.takeCard}><div style={styles.takeHead}><div><div style={styles.sectionKicker}>THE NUMBER THAT MATTERS</div><h2 style={{ ...styles.sectionTitle, color: "#fff", marginBottom: 7 }}>What lands in your account?</h2><p style={styles.muted}>A live estimate after tax and mandatory deductions.</p></div><div style={styles.toggle}>{Object.keys(COUNTRIES).map(id => <button key={id} onClick={() => { setCountry(id); setSalary(COUNTRIES[id].min + Math.round((salary - c.min) / 1000) * 1000); }} style={{ ...styles.toggleButton, ...(country === id ? styles.toggleActive : {}) }}>{COUNTRIES[id].label}</button>)}</div></div><div style={styles.salaryLine}><span>Gross yearly salary</span><strong>{money(c, salary)}</strong></div><input aria-label="Gross yearly salary" type="range" min={c.min} max={c.max} step={step} value={Math.min(c.max, Math.max(c.min, salary))} onChange={e => setSalary(Number(e.target.value))} style={styles.range} /><div style={styles.rangeLabels}><span>{money(c, c.min)}</span><span>{money(c, c.max)}</span></div><div style={styles.netResult}><div style={styles.statBlock}><small>ESTIMATED TAKE-HOME / YEAR</small><strong>{money(c, net)}</strong></div><div style={styles.statBlock}><small>PER MONTH</small><strong>{money(c, net / 12)}</strong></div><div style={{ ...styles.statBlock, ...styles.rate }}><small>EFFECTIVE RATE</small><strong>{((salary - net) / salary * 100).toFixed(1)}%</strong></div></div><div style={styles.takeLinks}>{c.slug && <a href={`/${c.slug}/${rounded}/`}>Full breakdown →</a>}<a href={c.hub}>Open full calculator ↗</a><span>{c.label} {c.year} tax year · estimate, not advice</span></div></div></section>;
 }
 
 function CategorySection({ category, tools }) { const [expanded, setExpanded] = useState(false); const color = CATEGORY_COLORS[category] || DEFAULT_COLOR; const visible = expanded ? tools : tools.slice(0, 10); return <section id={category === "Developer Tools" ? "developer-tools" : undefined} style={styles.category}><div style={styles.categoryHead}><h3>{category} <small style={{ background: color.badge }}>{tools.length}</small></h3>{tools.length > 10 && <button onClick={() => setExpanded(!expanded)} style={{ ...styles.more, color: color.badge }}>{expanded ? "Show less ↑" : `Show ${tools.length - 10} more →`}</button>}</div><ToolGrid tools={visible} /></section>; }
