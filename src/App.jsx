@@ -1,23 +1,21 @@
-import { useState, useMemo, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import toolsData from "./tools.config.json";
 
 const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
-
 const CATEGORY_COLORS = {
-  "Calculators":     { badge: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
+  Calculators: { badge: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
   "Developer Tools": { badge: "#16a34a", light: "#f0fdf4", text: "#15803d" },
-  "Content Tools":   { badge: "#ea580c", light: "#fff7ed", text: "#c2410c" },
-  "International":   { badge: "#7c3aed", light: "#faf5ff", text: "#6d28d9" },
-  "Converters":      { badge: "#0284c7", light: "#f0f9ff", text: "#0369a1" },
-  "Image Tools":     { badge: "#e11d48", light: "#fff1f2", text: "#be123c" },
-  "Wellness":        { badge: "#0d9488", light: "#f0fdfa", text: "#0f766e" },
-  "Fun Tools":       { badge: "#f97316", light: "#fff7ed", text: "#c2410c" },
-  "Productivity":    { badge: "#0ea5e9", light: "#f0f9ff", text: "#0369a1" },
+  "Content Tools": { badge: "#ea580c", light: "#fff7ed", text: "#c2410c" },
+  International: { badge: "#7c3aed", light: "#faf5ff", text: "#6d28d9" },
+  Converters: { badge: "#0284c7", light: "#f0f9ff", text: "#0369a1" },
+  "Image Tools": { badge: "#e11d48", light: "#fff1f2", text: "#be123c" },
+  Wellness: { badge: "#0d9488", light: "#f0fdfa", text: "#0f766e" },
+  "Fun Tools": { badge: "#f97316", light: "#fff7ed", text: "#c2410c" },
+  Productivity: { badge: "#0ea5e9", light: "#f0f9ff", text: "#0369a1" },
+  toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" },
+  statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
 };
-
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
-
-// Blog posts shown on the homepage, tagged with the tool categories they relate to (Task #48)
 const BLOG_POSTS = [
   { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/", categories: ["Calculators"] },
   { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/", categories: ["Calculators", "International"] },
@@ -26,345 +24,123 @@ const BLOG_POSTS = [
   { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/", categories: ["Calculators", "International"] },
   { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/", categories: ["Calculators", "Converters"] },
 ];
-
-// Inject hover styles once — replaces 100 useState hooks in ToolCard
-const HOVER_STYLES = `
-.tool-card { transition: border-color 0.15s, background 0.15s, transform 0.15s, box-shadow 0.15s; }
-.tool-card:hover { transform: translateY(-2px); box-shadow: 0 5px 16px rgba(0,0,0,0.10) !important; }
-`;
-
-// Track recently used tools (Task #46)
+const HOVER_STYLES = `.tool-card{transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.tool-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.1)!important}.question-card{transition:transform .18s,background .18s}.question-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.16)!important}`;
 function trackRecentTool(tool) {
   try {
-    const stored = JSON.parse(localStorage.getItem('tab_recent') || '[]');
-    const entry = { id: tool.id, name: tool.name, emoji: tool.emoji, url: tool.url };
-    const updated = [entry, ...stored.filter(t => t.id !== tool.id)].slice(0, 8);
-    localStorage.setItem('tab_recent', JSON.stringify(updated));
-    window.dispatchEvent(new CustomEvent('tab_recent_updated'));
+    const stored = JSON.parse(localStorage.getItem("tab_recent") || "[]");
+    localStorage.setItem("tab_recent", JSON.stringify([{ id: tool.id, name: tool.name, emoji: tool.emoji, url: tool.url }, ...stored.filter(t => t.id !== tool.id)].slice(0, 8)));
+    window.dispatchEvent(new CustomEvent("tab_recent_updated"));
   } catch {}
 }
 
+const CALC = {
+  uk: gross => {
+    const pa = 12570, br = 50270, hr = 125140;
+    let ePA = gross > 100000 ? Math.max(0, pa - (gross - 100000) / 2) : pa, t = Math.max(0, gross - ePA);
+    const tax = Math.min(t, br - pa) * .2 + Math.min(Math.max(t - (br - pa), 0), hr - br) * .4 + Math.max(t - (hr - pa), 0) * .45;
+    const ni = gross > 12570 ? (Math.min(gross, 50270) - 12570) * .08 + Math.max(gross - 50270, 0) * .02 : 0;
+    return gross - tax - ni;
+  },
+  us: gross => {
+    const brackets = [[0, 12400, .1], [12400, 50400, .12], [50400, 105700, .22], [105700, 201775, .24], [201775, 256225, .32], [256225, 640600, .35], [640600, Infinity, .37]];
+    const taxable = Math.max(0, gross - 16100);
+    let fed = 0;
+    brackets.forEach(([lo, hi, rate]) => { if (taxable > lo) fed += (Math.min(taxable, hi) - lo) * rate; });
+    return gross - fed - Math.min(gross, 184500) * .062 - gross * .0145 - Math.max(0, gross - 200000) * .009;
+  },
+  au: gross => {
+    const brackets = [[0, 18200, 0], [18200, 45000, .16], [45000, 135000, .3], [135000, 190000, .37], [190000, Infinity, .45]];
+    let tax = 0;
+    brackets.forEach(([lo, hi, rate]) => { if (gross > lo) tax += (Math.min(gross, hi) - lo) * rate; });
+    const lito = gross <= 37500 ? 700 : gross <= 45000 ? 700 - (gross - 37500) * .05 : gross <= 66667 ? 325 - (gross - 45000) * .015 : 0;
+    const medicare = gross <= 26000 ? 0 : gross <= 32500 ? (gross - 26000) * .1 : gross * .02;
+    return gross - Math.max(0, tax - lito) - medicare;
+  },
+  jp: gross => {
+    function empDed(g) { if (g <= 1900000) return 650000; if (g <= 3600000) return g * 0.30 + 80000; if (g <= 6600000) return g * 0.20 + 440000; if (g <= 8500000) return g * 0.10 + 1100000; return 1950000; }
+    function basicDed(net, type) { if (type === "national") { if (net <= 23500000) return 580000; if (net <= 24000000) return 480000; if (net <= 24500000) return 320000; if (net <= 25000000) return 160000; return 0; } if (net <= 24000000) return 430000; if (net <= 24500000) return 290000; if (net <= 25000000) return 150000; return 0; }
+    function natTax(t) { if (t <= 0) return 0; if (t <= 1950000) return t * 0.05; if (t <= 3300000) return t * 0.10 - 97500; if (t <= 6950000) return t * 0.20 - 427500; if (t <= 9000000) return t * 0.23 - 636000; if (t <= 18000000) return t * 0.33 - 1536000; if (t <= 40000000) return t * 0.40 - 2796000; return t * 0.45 - 4796000; }
+    const health = Math.min(gross, 16680000) * 0.0499, pension = Math.min(gross, 7800000) * 0.0915, emp = gross * 0.0055, social = health + pension + emp;
+    const netIncome = gross - empDed(gross);
+    const taxableNat = Math.floor(Math.max(0, netIncome - social - basicDed(netIncome, "national")) / 1000) * 1000;
+    const incomeTax = Math.max(0, natTax(taxableNat)), surtax = incomeTax * 0.021;
+    const taxableRes = Math.max(0, netIncome - social - basicDed(netIncome, "resident"));
+    const resident = taxableRes > 0 ? taxableRes * 0.10 + 5000 : 0;
+    return gross - incomeTax - surtax - resident - social;
+  },
+};
+const COUNTRIES = {
+  uk: { flag: "🇬🇧", label: "UK", sym: "£", min: 20000, max: 200000, year: "2025/26", slug: "uk-salary", hub: "https://uk-salary-calculator.tabutility.com" },
+  us: { flag: "🇺🇸", label: "US", sym: "$", min: 30000, max: 300000, year: "2026", slug: "us-salary", hub: "https://us-paycheck-calculator.tabutility.com" },
+  au: { flag: "🇦🇺", label: "AU", sym: "A$", min: 40000, max: 250000, year: "2025–26", slug: "au-salary", hub: "https://australian-tax-calculator.tabutility.com" },
+  jp: { flag: "🇯🇵", label: "JP", sym: "¥", min: 3000000, max: 20000000, year: "2026", slug: null, hub: "https://japan-income-tax.tabutility.com" },
+};
+function money(c, n) { return `${c.sym}${Math.round(n).toLocaleString("en-US")}`; }
+
 export default function App() {
-  const [search, setSearch]               = useState("");
+  const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
-
+  const [country, setCountry] = useState(() => { try { return localStorage.getItem("tab_country") || "all"; } catch { return "all"; } });
+  const [recentTools, setRecentTools] = useState(() => { try { return JSON.parse(localStorage.getItem("tab_recent") || "[]"); } catch { return []; } });
   const isFiltered = search.trim() !== "" || activeCategory !== "All";
-
-  const filtered = useMemo(() => {
-    return toolsData.filter(tool => {
-      const matchCat = activeCategory === "All" || tool.category === activeCategory;
-      const q = search.toLowerCase();
-      const matchSearch = !q ||
-        tool.name.toLowerCase().includes(q) ||
-        tool.description.toLowerCase().includes(q) ||
-        (tool.tags || []).some(t => t.includes(q));
-      return matchCat && matchSearch;
-    });
-  }, [search, activeCategory]);
-
-  const grouped = useMemo(() => {
-    if (isFiltered) return null;
-    return CATEGORIES.slice(1).reduce((acc, cat) => {
-      const tools = toolsData.filter(t => t.category === cat);
-      if (tools.length) acc[cat] = tools;
-      return acc;
-    }, {});
-  }, [isFiltered]);
-
-  const totalTools = toolsData.length;
-
-  // Task #46: recently used state
-  const [recentTools, setRecentTools] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('tab_recent') || '[]'); } catch { return []; }
-  });
-
-  // Task #45: dynamic page title
-  useEffect(() => {
-    if (search.trim()) {
-      document.title = `"${search}" — Tabutility`;
-    } else if (activeCategory !== "All") {
-      const count = toolsData.filter(t => t.category === activeCategory).length;
-      document.title = `${activeCategory} — ${count} Free Tools | Tabutility`;
-    } else {
-      document.title = `Tabutility — ${totalTools} Free Online Utility Tools | No Sign-up`;
-    }
-  }, [search, activeCategory, totalTools]);
-
-  // Task #46: sync recent tray when returning to tab
-  useEffect(() => {
-    const sync = () => { try { setRecentTools(JSON.parse(localStorage.getItem('tab_recent') || '[]')); } catch {} };
-    window.addEventListener('tab_recent_updated', sync);
-    window.addEventListener('focus', sync);
-    return () => { window.removeEventListener('tab_recent_updated', sync); window.removeEventListener('focus', sync); };
-  }, []);
-
-  return (
-    <div style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: "#f1f5f9", minHeight: "100vh" }}>
-      <style>{HOVER_STYLES}</style>
-
-      {/* ── Hero ── */}
-      <div style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)", color: "#fff", padding: "44px 20px 36px", textAlign: "center" }}>
-        <div style={{ fontSize: 40, marginBottom: 8 }}>⚡</div>
-        <h1 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 5vw, 44px)", fontWeight: 900, letterSpacing: -1 }}>
-          Tabutility
-        </h1>
-        <p style={{ margin: "0 0 24px", fontSize: 16, color: "#a5b4fc", maxWidth: 480, marginLeft: "auto", marginRight: "auto" }}>
-          {totalTools} free browser tools. No sign-up. No downloads. Just instant results.
-        </p>
-
-        {/* Search */}
-        <div style={{ maxWidth: 500, margin: "0 auto", position: "relative" }}>
-          <span style={{ position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)", fontSize: 16, pointerEvents: "none" }}>🔍</span>
-          <input
-            type="text"
-            placeholder={`Search ${totalTools} tools…`}
-            value={search}
-            onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }}
-            style={{ width: "100%", padding: "13px 14px 13px 42px", borderRadius: 12, border: "2px solid rgba(165,180,252,0.25)", background: "rgba(255,255,255,0.1)", color: "#fff", fontSize: 15, outline: "none", boxSizing: "border-box" }}
-          />
-          {search && (
-            <button onClick={() => setSearch("")}
-              style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#a5b4fc", fontSize: 18, cursor: "pointer", padding: 0, lineHeight: 1 }}>✕</button>
-          )}
-        </div>
-      </div>
-
-      {/* Task #46: Recently used tray */}
-      {recentTools.length > 0 && (
-        <div style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)", padding: "0 20px 14px" }}>
-          <div style={{ maxWidth: 540, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
-            <span style={{ fontSize: 11, color: "#64748b", fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" }}>Recent:</span>
-            {recentTools.slice(0, 6).map(t => (
-              <a key={t.id} href={t.url} target="_blank" rel="noopener noreferrer"
-                onClick={() => trackRecentTool(t)}
-                style={{ display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(165,180,252,0.2)", borderRadius: 20, padding: "4px 11px", fontSize: 12, color: "#e2e8f0", textDecoration: "none", fontWeight: 600 }}>
-                <span>{t.emoji}</span>
-                <span style={{ maxWidth: 110, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t.name}</span>
-              </a>
-            ))}
-            <button onClick={() => { localStorage.removeItem('tab_recent'); setRecentTools([]); }}
-              style={{ background: "none", border: "none", color: "#475569", fontSize: 11, cursor: "pointer", padding: "2px 4px" }}>✕ clear</button>
-          </div>
-        </div>
-      )}
-
-      {/* ── Sticky Filter Bar ── */}
-      <div style={{ position: "sticky", top: 0, zIndex: 100, background: "#1e293b", borderBottom: "1px solid #334155", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 20px", overflowX: "auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-          <div style={{ display: "flex", gap: 6, flexWrap: "nowrap", minWidth: "max-content" }}>
-            {CATEGORIES.map(cat => {
-              const isActive = activeCategory === cat;
-              const colors = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
-              const count = cat === "All" ? totalTools : toolsData.filter(t => t.category === cat).length;
-              return (
-                <button key={cat}
-                  onClick={() => { setActiveCategory(cat); setSearch(""); }}
-                  style={{
-                    padding: "7px 14px", borderRadius: 20, border: "none", whiteSpace: "nowrap",
-                    background: isActive ? colors.badge : "#334155",
-                    color: isActive ? "#fff" : "#94a3b8",
-                    fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .15s",
-                    display: "flex", alignItems: "center", gap: 5
-                  }}>
-                  {cat}
-                  <span style={{ fontSize: 11, opacity: 0.8, background: isActive ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.1)", borderRadius: 10, padding: "1px 6px" }}>{count}</span>
-                </button>
-              );
-            })}
-          </div>
-          <a href="/blog/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap", textDecoration: "none", flexShrink: 0, background: "#334155", padding: "6px 14px", borderRadius: 20 }}>📖 Blog</a>
-        </div>
-      </div>
-
-      {/* ── Featured Banner ── */}
-      {!isFiltered && (
-        <div style={{ maxWidth: 1200, margin: "24px auto 0", padding: "0 20px" }}>
-          <a href="https://loan-calculator.tabutility.com" style={{ textDecoration: "none" }}>
-            <div style={{ background: "linear-gradient(135deg, #4f46e5, #7c3aed)", borderRadius: 14, padding: "18px 22px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, boxShadow: "0 4px 20px rgba(79,70,229,0.25)" }}>
-              <div>
-                <div style={{ fontSize: 11, color: "#c4b5fd", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", marginBottom: 3 }}>⭐ Featured</div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: "#fff", marginBottom: 2 }}>🏦 Loan Calculator Hub</div>
-                <div style={{ fontSize: 13, color: "#ddd6fe" }}>Monthly payments · Amortization · Rate comparison · Extra payment simulator</div>
-              </div>
-              <div style={{ background: "rgba(255,255,255,0.15)", color: "#fff", padding: "8px 18px", borderRadius: 8, fontWeight: 700, fontSize: 14, whiteSpace: "nowrap" }}>Try free →</div>
-            </div>
-          </a>
-        </div>
-      )}
-
-
-
-      {/* ── Tool Grid ── */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px 60px" }}>
-
-        {/* Search / filter result header */}
-        {isFiltered && (
-          <div style={{ marginBottom: 16, fontSize: 14, color: "#64748b" }}>
-            {filtered.length === 0
-              ? `No tools found for "${search}"`
-              : `${filtered.length} tool${filtered.length !== 1 ? "s" : ""}${search ? ` matching "${search}"` : ""}${activeCategory !== "All" ? ` in ${activeCategory}` : ""}`}
-          </div>
-        )}
-
-        {/* Flat grid (search / category filter) */}
-        {isFiltered && filtered.length > 0 && <ToolGrid tools={filtered} />}
-
-        {/* No results */}
-        {isFiltered && filtered.length === 0 && (
-          <div style={{ textAlign: "center", padding: "60px 20px", color: "#94a3b8" }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>🔍</div>
-            <div style={{ fontSize: 16, fontWeight: 600 }}>Nothing found</div>
-            <div style={{ fontSize: 14, marginTop: 6 }}>Try a different search or browse a category above</div>
-          </div>
-        )}
-
-        {/* Grouped view (All, no search) */}
-        {!isFiltered && grouped && Object.entries(grouped).map(([category, tools]) => (
-          <CategorySection key={category} category={category} tools={tools} />
-        ))}
-      </div>
-
-
-      {/* ── Blog Section — always visible, filtered by active category (Task #48) ── */}
-      {(() => {
-        const categoryPosts = activeCategory !== "All"
-          ? BLOG_POSTS.filter(p => p.categories.includes(activeCategory))
-          : [];
-        const visiblePosts = categoryPosts.length > 0 ? categoryPosts : BLOG_POSTS;
-        const heading = categoryPosts.length > 0
-          ? `${activeCategory.replace(/s$/, "")} guides from the blog`
-          : "Free guides to help you understand the numbers";
-        return (
-      <div style={{ maxWidth: 1200, margin: "8px auto 0", padding: "0 20px" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-          <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 4 }}>📖 From the Blog</div>
-            <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{heading}</h2>
-          </div>
-          <a href="/blog/" style={{ fontSize: 13, fontWeight: 700, color: "#4f46e5", textDecoration: "none", whiteSpace: "nowrap", marginLeft: 16 }}>View all →</a>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-          {visiblePosts.map(post => (
-            <a key={post.url} href={post.url} style={{ textDecoration: "none" }}>
-              <div style={{ background: "#fff", borderRadius: 10, padding: "14px 16px", border: "1.5px solid #e2e8f0", height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 6, transition: "border-color .15s, box-shadow .15s" }}
-                className="tool-card">
-                <div style={{ fontSize: 10, fontWeight: 700, color: "#4f46e5", textTransform: "uppercase", letterSpacing: ".06em" }}>📖 Guide</div>
-                <div style={{ fontSize: 13, fontWeight: 800, color: "#0f172a", lineHeight: 1.3 }}>{post.title}</div>
-                <div style={{ fontSize: 12, color: "#64748b", lineHeight: 1.5, flex: 1 }}>{post.desc}</div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#4f46e5" }}>Read →</div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-        );
-      })()}
-
-      {/* ── Footer ── */}
-      <div style={{ background: "#1a1a2e", color: "#94a3b8", textAlign: "center", padding: "28px 20px", fontSize: 13 }}>
-        <div style={{ fontSize: 18, marginBottom: 6 }}>⚡ Tabutility</div>
-        <div style={{ marginBottom: 6 }}>{totalTools} free browser-based utility tools. No sign-up required.</div>
-        <div style={{ marginBottom: 10 }}>
-          <a href="/blog/" style={{ color: "#a5b4fc", fontWeight: 700, textDecoration: "none" }}>📖 Read our guides →</a>
-        </div>
-        <div style={{ color: "#4b5563", fontSize: 12 }}>© {new Date().getFullYear()} Tabutility · All tools run in your browser · Your data never leaves your device</div>
-      </div>
-
-    </div>
-  );
+  const filtered = useMemo(() => toolsData.filter(t => (activeCategory === "All" || t.category === activeCategory) && (!search.trim() || `${t.name} ${t.description} ${(t.tags || []).join(" ")}`.toLowerCase().includes(search.toLowerCase()))), [search, activeCategory]);
+  useEffect(() => { document.title = search.trim() ? `"${search}" — Tabutility` : activeCategory !== "All" ? `${activeCategory} — ${toolsData.filter(t => t.category === activeCategory).length} Free Tools | Tabutility` : `Tabutility — ${toolsData.length} Free Online Utility Tools | No Sign-up`; }, [search, activeCategory]);
+  useEffect(() => { const sync = () => { try { setRecentTools(JSON.parse(localStorage.getItem("tab_recent") || "[]")); } catch {} }; window.addEventListener("tab_recent_updated", sync); window.addEventListener("focus", sync); return () => { window.removeEventListener("tab_recent_updated", sync); window.removeEventListener("focus", sync); }; }, []);
+  const setNation = id => { setCountry(id); try { localStorage.setItem("tab_country", id); } catch {} };
+  const c = COUNTRIES[country] || COUNTRIES.uk;
+  return <div style={styles.page}><style>{HOVER_STYLES}</style>
+    <header style={styles.hero}>
+      <div style={styles.brand}>⚡ <span>Tabutility</span></div>
+      <h1 style={styles.heroTitle}>Instant answers to everyday questions.</h1>
+      <p style={styles.heroSub}>{toolsData.length} free tools — money, dev, health and more. No sign-up.</p>
+      <div style={styles.searchWrap}><span style={styles.searchIcon}>⌕</span><input aria-label="Search tools" placeholder={`Search ${toolsData.length} tools…`} value={search} onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />{search && <button onClick={() => setSearch("")} style={styles.clear}>×</button>}</div>
+      <div style={styles.questions}>{[
+        ["How much of my salary do I keep?", "#take-home", "Calculate take-home"],
+        ["Is my raise worth it?", `/${["uk", "us", "au"].includes(country) ? country : "uk"}-salary/compare/`, "Compare the net gain"],
+        ["What does a loan really cost?", "https://loan-calculator.tabutility.com", "See the full cost"],
+        ["How do countries compare?", "/global-take-home-pay-report-2026/", "Read the report"],
+        ["Need a quick dev tool?", "#developer-tools", "Browse developer tools"],
+        ["Am I a healthy weight?", "https://bmi-calculator.tabutility.com", "Check your BMI"],
+      ].map(([q, href, label]) => <a key={q} className="question-card" href={href} style={styles.question}><b>{q}</b><span>{label} ↗</span></a>)}</div>
+    </header>
+    <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
+    {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
+    <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? toolsData.length : toolsData.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
+    {isFiltered ? <main style={styles.content}><div style={styles.result}>{filtered.length ? `${filtered.length} tools${search ? ` matching “${search}”` : ""}` : `No tools found for “${search}”`}</div>{filtered.length ? <ToolGrid tools={filtered} /> : <div style={styles.empty}>⌕<strong>Nothing found</strong><span>Try a different search or browse a category above.</span></div>}</main> : <HomeContent country={country} c={c} />}
+    <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>{toolsData.length} free browser-based utility tools. No sign-up required.</div><a href="/blog/">▣ Read our guides →</a><small>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
+  </div>;
 }
 
-const PREVIEW_COUNT = 10;
-
-function CategorySection({ category, tools }) {
-  const colors = CATEGORY_COLORS[category] || DEFAULT_COLOR;
-  const [expanded, setExpanded] = useState(false);
-  const showAll = expanded || tools.length <= PREVIEW_COUNT;
-  const visible = showAll ? tools : tools.slice(0, PREVIEW_COUNT);
-  const remaining = tools.length - PREVIEW_COUNT;
-
-  return (
-    <div style={{ marginBottom: 36, contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
-      {/* Header */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-        <h2 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#1e293b" }}>{category}</h2>
-        <span style={{ background: colors.badge, color: "#fff", fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 20 }}>{tools.length}</span>
-      </div>
-
-      {/* Cards */}
-      <ToolGrid tools={visible} />
-
-      {/* Show more / less */}
-      {tools.length > PREVIEW_COUNT && (
-        <div style={{ marginTop: 12, textAlign: "center" }}>
-          <button
-            onClick={() => setExpanded(e => !e)}
-            style={{
-              background: "#fff",
-              border: `1.5px solid ${colors.badge}`,
-              color: colors.badge,
-              borderRadius: 8,
-              padding: "7px 20px",
-              fontSize: 13,
-              fontWeight: 700,
-              cursor: "pointer",
-              transition: "all .15s",
-            }}
-            onMouseEnter={e => { e.currentTarget.style.background = colors.light; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "#fff"; }}
-          >
-            {expanded ? "Show less ↑" : `Show ${remaining} more →`}
-          </button>
-        </div>
-      )}
-    </div>
-  );
+function HomeContent({ country, c }) {
+  const widgetCountry = country === "all" ? "uk" : country;
+  const salary = country === "jp" ? 5000000 : country === "us" ? 85000 : country === "au" ? 90000 : 50000;
+  return <main><TakeHome country={widgetCountry} c={COUNTRIES[widgetCountry]} salary={salary} /><section style={styles.content}><div style={styles.sectionKicker}>THE MONEY DESK</div><h2 style={styles.sectionTitle}>Money & Tax</h2><div style={styles.featureGrid}>{[
+    ["◎", "Global Take-Home Pay Report 2026", "A clear view of what salaries are worth after tax around the world.", "/global-take-home-pay-report-2026/"],
+    ["◈", "Take-Home Pay by Country", "Compare the same salary across borders, with the assumptions visible.", "/take-home-pay-by-country/"],
+    ["£$", "Salary guides that answer the next question", "Browse country-by-country take-home pay and raise comparisons.", country === "all" || country === "jp" ? "/uk-salary/" : `/${country}-salary/`],
+  ].map(([icon, title, desc, href]) => <a href={href} key={title} style={styles.feature}><span style={styles.featureIcon}>{icon}</span><div><h3>{title}</h3><p>{desc}</p><b>Explore →</b></div></a>)}</div><a href="https://loan-calculator.tabutility.com" style={styles.loan}><span><i>FEATURED</i><strong>Loan Calculator Hub</strong><small>Monthly payments · amortization · rate comparison · extra payment simulator</small></span><b>Try free →</b></a><h2 style={{ ...styles.sectionTitle, marginTop: 44 }}>More handy tools</h2>{["Calculators", "International", "Developer Tools", "Content Tools", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"].map(cat => <CategorySection key={cat} category={cat} tools={toolsData.filter(t => t.category === cat)} />)}</section></main>;
 }
 
-function ToolGrid({ tools }) {
-  return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(175px, 1fr))", gap: 10 }}>
-      {tools.map(tool => <ToolCard key={tool.id} tool={tool} />)}
-    </div>
-  );
+function TakeHome({ country: initial, c: initialC, salary: initialSalary }) {
+  const [country, setCountry] = useState(initial); const [salary, setSalary] = useState(initialSalary);
+  useEffect(() => { setCountry(initial); setSalary(initialSalary); }, [initial, initialSalary]);
+  const c = COUNTRIES[country]; const net = CALC[country](salary); const step = country === "jp" ? 100000 : 1000; const rounded = Math.round(salary / (country === "jp" ? 100000 : 5000)) * (country === "jp" ? 100000 : 5000);
+  return <section id="take-home" style={styles.takeSection}><div style={styles.takeCard}><div style={styles.takeHead}><div><div style={styles.sectionKicker}>THE NUMBER THAT MATTERS</div><h2 style={{ ...styles.sectionTitle, color: "#fff", marginBottom: 7 }}>What lands in your account?</h2><p style={styles.muted}>A live estimate after tax and mandatory deductions.</p></div><div style={styles.toggle}>{Object.keys(COUNTRIES).map(id => <button key={id} onClick={() => { setCountry(id); setSalary(COUNTRIES[id].min + Math.round((salary - c.min) / 1000) * 1000); }} style={{ ...styles.toggleButton, ...(country === id ? styles.toggleActive : {}) }}>{COUNTRIES[id].label}</button>)}</div></div><div style={styles.salaryLine}><span>Gross yearly salary</span><strong>{money(c, salary)}</strong></div><input aria-label="Gross yearly salary" type="range" min={c.min} max={c.max} step={step} value={Math.min(c.max, Math.max(c.min, salary))} onChange={e => setSalary(Number(e.target.value))} style={styles.range} /><div style={styles.rangeLabels}><span>{money(c, c.min)}</span><span>{money(c, c.max)}</span></div><div style={styles.netResult}><div style={styles.statBlock}><small>ESTIMATED TAKE-HOME / YEAR</small><strong>{money(c, net)}</strong></div><div style={styles.statBlock}><small>PER MONTH</small><strong>{money(c, net / 12)}</strong></div><div style={{ ...styles.statBlock, ...styles.rate }}><small>EFFECTIVE RATE</small><strong>{((salary - net) / salary * 100).toFixed(1)}%</strong></div></div><div style={styles.takeLinks}>{c.slug && <a href={`/${c.slug}/${rounded}/`}>Full breakdown →</a>}<a href={c.hub}>Open full calculator ↗</a><span>{c.label} {c.year} tax year · estimate, not advice</span></div></div></section>;
 }
 
-// No useState — hover handled by CSS class; avoids 100 hook instances
-function ToolCard({ tool }) {
-  const colors = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR;
-  return (
-    <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }} onClick={() => trackRecentTool(tool)}>
-      <div
-        className="tool-card"
-        style={{
-          background: "#fff",
-          borderRadius: 10,
-          padding: "11px 13px 10px",
-          border: "1.5px solid #e2e8f0",
-          cursor: "pointer",
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-          minHeight: 110,
-          boxSizing: "border-box",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-        }}>
+function CategorySection({ category, tools }) { const [expanded, setExpanded] = useState(false); const color = CATEGORY_COLORS[category] || DEFAULT_COLOR; const visible = expanded ? tools : tools.slice(0, 10); return <section id={category === "Developer Tools" ? "developer-tools" : undefined} style={styles.category}><div style={styles.categoryHead}><h3>{category} <small style={{ background: color.badge }}>{tools.length}</small></h3>{tools.length > 10 && <button onClick={() => setExpanded(!expanded)} style={{ ...styles.more, color: color.badge }}>{expanded ? "Show less ↑" : `Show ${tools.length - 10} more →`}</button>}</div><ToolGrid tools={visible} /></section>; }
+function ToolGrid({ tools }) { return <div style={styles.grid}>{tools.map(tool => <ToolCard key={tool.id} tool={tool} />)}</div>; }
+function ToolCard({ tool }) { const color = CATEGORY_COLORS[tool.category] || DEFAULT_COLOR; return <a href={tool.url} target="_blank" rel="noopener noreferrer" onClick={() => trackRecentTool(tool)} style={{ textDecoration: "none" }}><div className="tool-card" style={styles.toolCard}><div style={styles.toolName}><span>{tool.emoji}</span><b>{tool.name}</b></div><em style={{ background: color.light, color: color.text }}>{tool.category}</em><p>{tool.description}</p><strong style={{ color: color.badge }}>Open →</strong></div></a>; }
+function BlogSection({ activeCategory }) { const posts = BLOG_POSTS.filter(p => activeCategory === "All" || p.categories.includes(activeCategory)); const visible = posts.length ? posts : BLOG_POSTS; return <section style={styles.blog}><div style={styles.sectionKicker}>FROM THE BLOG</div><div style={styles.blogHead}><h2>Free guides to help you understand the numbers</h2><a href="/blog/">View all →</a></div><div style={styles.blogGrid}>{visible.map(p => <a href={p.url} key={p.url} className="tool-card" style={styles.post}><em>GUIDE</em><b>{p.title}</b><p>{p.desc}</p><strong>Read →</strong></a>)}</div></section>; }
 
-        {/* Icon + name row */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 5 }}>
-          <span style={{ fontSize: 20, lineHeight: 1, flexShrink: 0 }}>{tool.emoji}</span>
-          <span style={{ fontSize: 12.5, fontWeight: 700, color: "#1e293b", lineHeight: 1.25, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>{tool.name}</span>
-        </div>
-
-        {/* Category badge */}
-        <span style={{ fontSize: 10, background: colors.light, color: colors.text, border: `1px solid ${colors.badge}33`, borderRadius: 4, padding: "1px 5px", fontWeight: 600, display: "inline-block", alignSelf: "flex-start", marginBottom: 6 }}>{tool.category}</span>
-
-        {/* Description — 2 lines max */}
-        <p style={{ margin: "0 0 8px", fontSize: 11, color: "#64748b", lineHeight: 1.45, flex: 1, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{tool.description}</p>
-
-        {/* Open link */}
-        <div style={{ fontSize: 11, color: colors.badge, fontWeight: 700 }}>Open →</div>
-      </div>
-    </a>
-  );
-}
+const styles = {
+  page: { fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#f1f5f9", color: "#1e293b", minHeight: "100vh" },
+  hero: { background: "linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%)", color: "#fff", padding: "26px 20px 30px", textAlign: "center" },
+  brand: { fontSize: 21, fontWeight: 900, letterSpacing: "-.5px", marginBottom: 22 }, heroTitle: { margin: 0, fontSize: "clamp(30px,6vw,50px)", letterSpacing: -2, lineHeight: 1.05 }, heroSub: { color: "#a5b4fc", margin: "12px auto 22px", fontSize: 15 },
+  searchWrap: { maxWidth: 560, margin: "0 auto", position: "relative" }, searchIcon: { position: "absolute", left: 15, top: 8, fontSize: 25, color: "#c7d2fe" }, search: { width: "100%", boxSizing: "border-box", padding: "14px 42px", borderRadius: 12, border: "2px solid rgba(165,180,252,.3)", background: "rgba(255,255,255,.1)", color: "#fff", fontSize: 16, outline: "none" }, clear: { position: "absolute", right: 13, top: 9, background: "none", border: 0, color: "#a5b4fc", fontSize: 23, cursor: "pointer" },
+  questions: { maxWidth: 920, margin: "22px auto 0", display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: 9 }, question: { textAlign: "left", color: "#fff", textDecoration: "none", background: "rgba(255,255,255,.09)", border: "1px solid rgba(199,210,254,.22)", borderRadius: 12, padding: "13px 14px", minHeight: 67, boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 7 }, questionSpan: { color: "#a5b4fc" },
+   toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }, statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
+   countryBar: { background: "#fff", borderBottom: "1px solid #e2e8f0" }, countryInner: { maxWidth: 1200, margin: "auto", padding: "10px 20px", display: "flex", gap: 7, alignItems: "center", overflowX: "auto" }, countryLabel: { fontSize: 12, color: "#64748b", fontWeight: 700, whiteSpace: "nowrap", marginRight: 4 }, countryButton: { border: "1px solid #e2e8f0", background: "#f8fafc", color: "#475569", padding: "7px 13px", borderRadius: 20, fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, countryActive: { background: "#eef2ff", color: "#4338ca", borderColor: "#818cf8" },
+  recent: { background: "#1a1a2e", color: "#64748b", padding: "9px 20px", display: "flex", flexWrap: "wrap", gap: 7, alignItems: "center", fontSize: 12 }, filter: { position: "sticky", top: 0, zIndex: 5, background: "#1e293b", boxShadow: "0 2px 8px #0002" }, filterInner: { maxWidth: 1200, margin: "auto", padding: "9px 20px", display: "flex", gap: 6, overflowX: "auto", alignItems: "center" }, pill: { border: 0, borderRadius: 20, padding: "7px 12px", fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, blogLink: { color: "#c7d2fe", textDecoration: "none", marginLeft: "auto", whiteSpace: "nowrap", padding: "7px 12px" },
+  takeSection: { background: "#17213b", padding: "44px 20px" }, takeCard: { maxWidth: 900, margin: "auto", background: "linear-gradient(135deg,#202b51,#16213e)", border: "1px solid #3d4c7c", borderRadius: 18, padding: "25px clamp(18px,4vw,42px)", color: "#fff", boxShadow: "0 12px 35px #0f172a55" }, takeHead: { display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }, sectionKicker: { color: "#818cf8", fontSize: 11, letterSpacing: 1.5, fontWeight: 800 }, sectionTitle: { fontSize: 26, letterSpacing: -.7, margin: "5px 0 18px", color: "#1e293b" }, muted: { color: "#a5b4fc", margin: 0, fontSize: 13 }, toggle: { display: "flex", background: "#111a31", padding: 4, borderRadius: 9, height: "fit-content" }, toggleActive: { background: "#4f46e5", color: "#fff" }, salaryLine: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 30, color: "#c7d2fe", fontSize: 14 }, salaryLineStrong: {}, range: { width: "100%", accentColor: "#818cf8", margin: "15px 0 3px", cursor: "pointer", minHeight: 30 }, rangeLabels: { display: "flex", justifyContent: "space-between", color: "#64748b", fontSize: 11 }, netResult: { display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: 25, paddingTop: 22, borderTop: "1px solid #ffffff1c" }, netResultStrong: {}, rate: { textAlign: "right", color: "#c7d2fe" }, takeLinks: { display: "flex", gap: 18, flexWrap: "wrap", marginTop: 25, fontSize: 13 }, content: { maxWidth: 1200, margin: "auto", padding: "38px 20px 55px" }, featureGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 12 }, feature: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: 20, display: "flex", gap: 14, textDecoration: "none", boxShadow: "0 2px 6px #0f172a08" }, featureIcon: { fontSize: 28, color: "#4f46e5" }, loan: { margin: "18px 0 38px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap", background: "linear-gradient(135deg,#4f46e5,#7c3aed)", color: "#fff", borderRadius: 14, padding: "20px 23px", textDecoration: "none" }, grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(175px,1fr))", gap: 10 }, category: { marginBottom: 36 }, categoryHead: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }, more: { background: "none", border: 0, fontWeight: 700, cursor: "pointer" }, toolCard: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 10, padding: "12px 13px", minHeight: 116, boxSizing: "border-box", display: "flex", flexDirection: "column", boxShadow: "0 1px 3px #0f172a08" }, toolName: { display: "flex", gap: 8, alignItems: "center", fontSize: 13 }, toolCardCategory: { alignSelf: "flex-start", fontStyle: "normal", fontSize: 10, padding: "2px 5px", borderRadius: 4, margin: "7px 0 5px" }, toolCardDescription: { fontSize: 11, color: "#64748b", lineHeight: 1.4, margin: "0 0 8px", flex: 1 }, result: { color: "#64748b", marginBottom: 15 }, empty: { minHeight: 240, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: "#94a3b8", fontSize: 34 }, blog: { maxWidth: 1200, margin: "0 auto", padding: "10px 20px 60px" }, blogHead: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: 15 }, blogGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 12 }, post: { textDecoration: "none", minHeight: 150 }, footer: { background: "#1a1a2e", color: "#94a3b8", padding: "30px 20px", textAlign: "center", display: "flex", flexDirection: "column", gap: 7, fontSize: 13 },
+};
