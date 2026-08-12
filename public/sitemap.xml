@@ -636,6 +636,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+<url>
+    <loc>https://tabutility.com/blog/side-hustle-tax-uk/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://tabutility.com/blog/how-much-to-retire-uk/</loc>
     <lastmod>2026-07-28</lastmod>
@@ -1429,10 +1435,4 @@
   <url><loc>https://tabutility.com/uk-tax-changes-2027/</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tabutility.com/us-tax-changes-2027/</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tabutility.com/au-tax-changes-2027/</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url>
-    <loc>https://tabutility.com/blog/second-job-tax-uk/</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
