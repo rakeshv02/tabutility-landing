@@ -4,7 +4,7 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/((?!.*\\.txt$|sitemap\\.xml|status\\.json|status\\.html|embed(?:/.*)?$|take-home-pay-by-country(?:/.*)?$|widget(?:/.*)?$|salary-widget(?:/.*)?$|uk-tax-changes-2027(?:/.*)?$|us-tax-changes-2027(?:/.*)?$|au-tax-changes-2027(?:/.*)?$).*)",
+      "source": "/((?!.*\\.txt$|.*\\.xml$|sitemap\\.xml|status\\.json|status\\.html|embed(?:/.*)?$|take-home-pay-by-country(?:/.*)?$|widget(?:/.*)?$|salary-widget(?:/.*)?$|uk-tax-changes-2027(?:/.*)?$|us-tax-changes-2027(?:/.*)?$|au-tax-changes-2027(?:/.*)?$).*)",
       "destination": "/index.html"
     }
   ],
