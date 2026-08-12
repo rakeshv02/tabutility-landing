@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tabutility Blog</title>
     <link>https://tabutility.com/blog/</link>
@@ -11,6 +11,81 @@
     <title>Side Hustle Tax UK: When You Must Register for Self Assessment</title>
     <link>https://tabutility.com/blog/side-hustle-tax-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/side-hustle-tax-uk/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <p>Selling on Vinted, freelancing on the weekend, renting out a parking space, delivering food after work — millions of people in the UK now earn money on the side. What many don't realise is that HMRC has a clear line for when that income becomes taxable, and since 2025 the online platforms themselves report your sales directly to HMRC. This guide explains exactly when you need to register, what you'll pay, and the one deadline you can't afford to miss: <strong>5 October</strong>.</p>
+
+<h2>The £1,000 Trading Allowance: Your Tax-Free Buffer</h2>
+<p>Every individual gets a <strong>£1,000 trading allowance</strong> per tax year (6 April to 5 April). If your total gross side-hustle income — before any expenses — is £1,000 or less, you owe no tax on it and usually don't need to tell HMRC at all.</p>
+<p>Two important details people miss:</p>
+<ul>
+  <li>It's £1,000 of <strong>turnover, not profit</strong>. If you sold £1,200 of handmade candles that cost you £800 in materials, you're over the allowance even though your profit was only £400.</li>
+  <li>It's £1,000 across <strong>all</strong> your side hustles combined — not £1,000 per platform or per activity.</li>
+</ul>
+<p>There's a separate £1,000 <strong>property allowance</strong> for rental-type income (like renting out your driveway), so you could use both in the same year.</p>
+
+<h2>When You Must Register — and the 5 October Deadline</h2>
+<p>Once your gross trading income passes £1,000 in a tax year, you must register for Self Assessment. The deadline is <strong>5 October following the end of that tax year</strong>.</p>
+<p>Concretely: if your side hustle first passed £1,000 between 6 April 2025 and 5 April 2026, you must register by <strong>5 October 2026</strong>. Your first tax return and payment are then due by <strong>31 January 2027</strong> (online filing).</p>
+<p>Registering is free and takes about ten minutes on GOV.UK — you'll get a Unique Taxpayer Reference (UTR) by post. Register late and you risk "failure to notify" penalties on top of any tax owed.</p>
+
+<h2>How Much Tax Will You Actually Pay?</h2>
+<p>Side-hustle profit is added on top of your salary, so it's taxed at your <em>marginal</em> rate — the rate on your last pound of income, not your average rate.</p>
+<table>
+  <tr><th>Your total income sits in…</th><th>Income Tax on side-hustle profit</th><th>Class 4 NI</th></tr>
+  <tr><td>Below £12,570 (personal allowance)</td><td>0%</td><td>0%</td></tr>
+  <tr><td>£12,570 – £50,270 (basic rate)</td><td>20%</td><td>6%</td></tr>
+  <tr><td>£50,270 – £125,140 (higher rate)</td><td>40%</td><td>2%</td></tr>
+  <tr><td>Over £125,140 (additional rate)</td><td>45%</td><td>2%</td></tr>
+</table>
+<p>Example: you earn £35,000 in your day job and make £4,000 profit from freelance design. That £4,000 sits in the basic-rate band, so you'd pay roughly 20% tax + 6% Class 4 National Insurance = about <strong>£1,040</strong>. Run your own numbers with the <a href="https://uk-self-employed-tax.tabutility.com">UK Self-Employed Tax Calculator</a>, and check how your day-job salary is taxed with the <a href="https://uk-salary-calculator.tabutility.com">UK Salary Calculator</a>.</p>
+<p>Since April 2024 there's no compulsory Class 2 National Insurance — small side hustles only pay Class 4 on profits above £12,570. The <a href="https://uk-national-insurance.tabutility.com">UK National Insurance Calculator</a> breaks this down.</p>
+
+<h2>Expenses vs the Trading Allowance: Pick One</h2>
+<p>When you file, you choose <strong>one</strong> of these — whichever leaves you with less taxable profit:</p>
+<ul>
+  <li><strong>Deduct the £1,000 trading allowance</strong> from your gross income (simple, no receipts needed), or</li>
+  <li><strong>Deduct your actual business expenses</strong> — materials, postage, platform fees, mileage, a share of home-office costs.</li>
+</ul>
+<p>Rule of thumb: if your expenses are under £1,000, take the allowance. If you're buying stock or equipment, actual expenses usually win — keep every receipt.</p>
+
+<h2>Yes, HMRC Can See Your Platform Income</h2>
+<p>Since <strong>January 2025</strong>, UK digital platforms — eBay, Vinted, Etsy, Airbnb, Uber, Deliveroo, TaskRabbit and others — must report seller information to HMRC under OECD rules. Platforms report you if you make roughly <strong>30 or more sales</strong> or earn around <strong>€2,000 (~£1,700)</strong> in a calendar year.</p>
+<p>Important nuance: <strong>selling your own second-hand belongings is not trading</strong>. Clearing out your wardrobe on Vinted isn't taxable, no matter the amount (though items sold for over £6,000 each can trigger Capital Gains Tax). Tax applies when you buy or make things <em>in order to</em> sell them, or you're paid for services. If HMRC's data shows income you haven't declared, expect a "nudge letter" — far better to register first.</p>
+
+<h2>Pricing Your Side Hustle Properly</h2>
+<p>If tax will take 26–42% of every extra pound you earn, your rates need to reflect that. A freelancer charging £150 a day in the basic-rate band keeps roughly £111 after tax and NI. The <a href="https://freelancer-rate-calculator.tabutility.com">Freelancer Day Rate Calculator</a> works backwards from the take-home pay you want to the rate you should charge.</p>
+
+<h2>What's Coming: Making Tax Digital</h2>
+<p>From <strong>April 2026</strong>, self-employed people and landlords with combined gross income over <strong>£50,000</strong> must keep digital records and send quarterly updates to HMRC under Making Tax Digital for Income Tax. The threshold drops to <strong>£30,000 in April 2027</strong>. Most casual side hustlers are below these thresholds for now, but if your hustle is growing, it's worth knowing the paperwork gets more frequent — not just annual.</p>
+
+<h2>Quick Checklist</h2>
+<ol>
+  <li>Add up your gross side income for the tax year — over £1,000? You need to register.</li>
+  <li>Register for Self Assessment by <strong>5 October</strong> after the tax year ends.</li>
+  <li>Keep records of income and expenses as you go (a spreadsheet is fine).</li>
+  <li>Choose trading allowance <em>or</em> actual expenses — whichever saves more.</li>
+  <li>File and pay by <strong>31 January</strong>. Set aside 25–30% of profits as you earn so the bill never hurts.</li>
+</ol>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Do I pay tax if I earn less than £1,000 from a side hustle?</h3><p>No. The trading allowance covers your first £1,000 of gross trading income each tax year. Below that you owe nothing and usually don't need to register or tell HMRC — though you can register voluntarily, for example to pay voluntary NI or claim a loss.</p></div>
+  <div class="faq-item"><h3>When is the deadline to register for Self Assessment?</h3><p>5 October following the end of the tax year in which your side income first passed £1,000. For income earned during 2025/26 (6 April 2025 – 5 April 2026), the registration deadline is 5 October 2026, with the return and payment due by 31 January 2027.</p></div>
+  <div class="faq-item"><h3>Does HMRC know about my eBay or Vinted sales?</h3><p>Yes. Since January 2025, digital platforms must report sellers who make roughly 30+ sales or earn around €2,000 in a calendar year directly to HMRC, including your name, address and payment details. HMRC matches this against tax returns.</p></div>
+  <div class="faq-item"><h3>Is selling my own second-hand belongings taxable?</h3><p>Generally no. Selling your own used clothes, books or furniture isn't trading, regardless of the amount. Tax applies when you buy or make items specifically to resell at a profit, or when you're paid for work or services. Individual items sold for over £6,000 can trigger Capital Gains Tax.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the UK Self-Employed Tax Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://uk-self-employed-tax.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>Earning from a side hustle in the UK? Learn when the £1,000 trading allowance runs out, the 5 October registration deadline, how much tax you'll actually pay, and what HMRC already knows from selling platforms.</description>
     <pubDate>Wed, 12 Aug 2026 09:00:00 +0000</pubDate>
   </item>
@@ -18,6 +93,64 @@
     <title>Second Job Tax UK: How Much Tax Will You Pay in 2025/26?</title>
     <link>https://tabutility.com/blog/second-job-tax-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/second-job-tax-uk/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <p>More than 1.2 million people in the UK now work a second job, and the single biggest worry is always the same: <strong>"will I get hammered on tax?"</strong> The short answer is no — a second job doesn't attract any extra tax. But the way it's <em>collected</em> is different, and that's where the confusion (and the scary-looking payslips) come from.</p>
+
+<h2>The Big Myth: "Second Jobs Are Taxed at a Higher Rate"</h2>
+<p>They aren't. HMRC taxes your <strong>total income</strong> for the year, no matter how many jobs it comes from. Someone earning £25,000 from one job pays exactly the same Income Tax as someone earning £18,000 from one job and £7,000 from another.</p>
+<p>The myth exists because of tax codes. Your tax-free personal allowance (£12,570 in 2025/26) is normally applied entirely to your main job. Your second job then gets tax code <strong>BR</strong> — meaning every pound is taxed at the basic rate of 20% from the first payslip. It <em>feels</em> like a penalty, but it's just your allowance being used up elsewhere.</p>
+
+<h2>Tax Codes for Second Jobs Explained</h2>
+<ul>
+  <li><strong>BR</strong> — all income taxed at 20%. The standard code for a second job when your main job pays over £12,570 but keeps you in the basic rate band.</li>
+  <li><strong>D0</strong> — all income taxed at 40%. Applied when your main job already pushes you into the higher-rate band (over £50,270 total).</li>
+  <li><strong>D1</strong> — all income taxed at 45%. For additional-rate taxpayers (over £125,140).</li>
+  <li><strong>Split allowance</strong> — if your main job pays <em>less</em> than £12,570, you can call HMRC and ask them to split your personal allowance across both jobs so you're not overpaying during the year.</li>
+</ul>
+
+<h2>Worked Example: £24,000 Main Job + £8,000 Second Job</h2>
+<p>Meet Sam, who earns £24,000 in an office job and picks up £8,000 a year of weekend bar work in 2025/26:</p>
+<ul>
+  <li><strong>Main job:</strong> £24,000 − £12,570 allowance = £11,430 taxed at 20% = <strong>£2,286</strong></li>
+  <li><strong>Second job (BR code):</strong> £8,000 × 20% = <strong>£1,600</strong></li>
+  <li><strong>Total Income Tax: £3,886</strong> — exactly what a single £32,000 job would pay.</li>
+</ul>
+<p>National Insurance works slightly differently — and here's a quirk that actually works in your favour.</p>
+
+<h2>National Insurance: The Two-Job Advantage</h2>
+<p>Unlike Income Tax, employee National Insurance is calculated <strong>per job, not on your combined income</strong>. Each employment gets its own £12,570 threshold before the 8% rate kicks in.</p>
+<p>For Sam above: the main job pays NI on £11,430 (£914), but the £8,000 bar job is <em>below</em> its own NI threshold — so it pays <strong>zero National Insurance</strong>. Someone earning the same £32,000 in one job would pay £1,554. Sam saves about £640 a year purely because the income is split across two employments.</p>
+
+<h2>Watch Out For These</h2>
+<ul>
+  <li><strong>Crossing the higher-rate line.</strong> If your combined income passes £50,270, some of your second-job income should be taxed at 40% — but a BR code only collects 20%. HMRC usually catches this and adjusts your code or sends a bill later, so set something aside.</li>
+  <li><strong>Student loans.</strong> Each PAYE job only triggers repayments if that job alone crosses the threshold — but if you complete Self Assessment for any reason, your combined income is used.</li>
+  <li><strong>Emergency tax on your first payslip.</strong> Tick the correct box on your starter checklist ("this is not my only job") to get BR from day one instead of an emergency code.</li>
+  <li><strong>Side hustles aren't second jobs.</strong> Freelancing or selling online goes through Self Assessment instead. You get a £1,000 trading allowance first — below that, there's usually nothing to do at all.</li>
+</ul>
+
+<h2>How to Check Your Numbers</h2>
+<p>The quickest way to see your real combined position: run your total income through the <a href="https://uk-salary-calculator.tabutility.com">UK Salary Calculator</a> to see what you <em>should</em> pay for the year, then compare it with what your two payslips are actually deducting. If you're self-employed on the side, the <a href="https://uk-self-employed-tax.tabutility.com">UK Self-Employed Tax Calculator</a> handles that piece, and the <a href="https://uk-national-insurance.tabutility.com">UK National Insurance Calculator</a> shows the per-job NI picture. Paid hourly? Convert with the <a href="https://hourly-to-salary.tabutility.com">Hourly ↔ Salary Calculator</a> first.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Do I pay more tax overall because I have two jobs?</h3><p>No. Your total tax bill is identical to earning the combined amount from one job. The BR code just collects the second job's share at a flat 20% because your allowance is already used by your main job.</p></div>
+  <div class="faq-item"><h3>What tax code should my second job have?</h3><p>Usually BR. If your main job already puts you in the higher-rate band, expect D0. If your main job pays under £12,570, call HMRC (0300 200 3300) and ask them to split your personal allowance between the two jobs.</p></div>
+  <div class="faq-item"><h3>Do I need to tell HMRC about a second job?</h3><p>Not directly — your new employer's starter checklist does it automatically. Just make sure you tick that it isn't your only job. Check your tax codes at gov.uk/check-income-tax-current-year after your first payslip.</p></div>
+  <div class="faq-item"><h3>Is a side hustle taxed like a second job?</h3><p>No. Self-employed income goes through Self Assessment, not PAYE. The first £1,000 of trading income each year is covered by the trading allowance — below that you normally don't even need to register.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the UK Salary Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://uk-salary-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>How tax codes, Income Tax and National Insurance actually work across two jobs in the UK — with worked examples and common myths debunked.</description>
     <pubDate>Wed, 12 Aug 2026 09:00:00 +0000</pubDate>
   </item>
@@ -25,6 +158,296 @@
     <title>How Compound Interest Works (And How to Use It to Build Wealth)</title>
     <link>https://tabutility.com/blog/how-compound-interest-works/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-compound-interest-works/</guid>
+    <content:encoded><![CDATA[<p class="lead">Compound interest is the single most important concept in personal finance — and one of the least understood. Whether it's working for you in your savings account or against you on a credit card, understanding exactly how it works can be worth tens of thousands of pounds over your lifetime.</p>
+
+  <div class="toc">
+    <h3>In this guide</h3>
+    <ol>
+      <li><a href="#what-is">What compound interest actually is</a></li>
+      <li><a href="#formula">The formula — and how to use it</a></li>
+      <li><a href="#worked-example">Worked example: £10,000 over 20 years</a></li>
+      <li><a href="#frequency">How compounding frequency affects your money</a></li>
+      <li><a href="#rule-of-72">The rule of 72: a mental shortcut</a></li>
+      <li><a href="#contributions">The power of regular contributions</a></li>
+      <li><a href="#time-vs-money">Why time beats money every time</a></li>
+      <li><a href="#inflation">Compound interest vs inflation</a></li>
+      <li><a href="#uk-options">UK savings options that use compound interest</a></li>
+      <li><a href="#against-you">When compound interest works against you</a></li>
+      <li><a href="#mistakes">Common mistakes people make</a></li>
+    </ol>
+  </div>
+
+  <!-- Ad slot -->
+  <h2 id="what-is">What Compound Interest Actually Is</h2>
+  <p>Compound interest is interest calculated on both your original deposit <em>and</em> the interest you've already earned. This is different from simple interest, which only ever calculates on your original amount.</p>
+  <p>Here's the simplest possible illustration. Imagine you put £1,000 in a savings account paying 10% per year (a nice round number for the maths):</p>
+
+  <table>
+    <tr><th>Year</th><th>Simple Interest</th><th>Compound Interest</th><th>Difference</th></tr>
+    <tr><td>1</td><td>£1,100</td><td>£1,100</td><td>£0</td></tr>
+    <tr><td>5</td><td>£1,500</td><td>£1,611</td><td>£111</td></tr>
+    <tr><td>10</td><td>£2,000</td><td>£2,594</td><td>£594</td></tr>
+    <tr><td>20</td><td>£3,000</td><td>£6,727</td><td>£3,727</td></tr>
+    <tr class="highlight-row"><td>30</td><td>£4,000</td><td>£17,449</td><td>£13,449</td></tr>
+  </table>
+
+  <p>By year 30, compound interest has given you more than four times what simple interest would have. That's the power of earning interest on your interest — it starts slowly but accelerates sharply over time.</p>
+
+  <div class="callout">
+    <strong>Why Albert Einstein (allegedly) cared</strong>
+    <p>Einstein is often credited with calling compound interest "the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it." Whether he said it or not, the sentiment is exactly right — compound interest either builds your wealth or drains it, depending on which side of the transaction you're on.</p>
+  </div>
+
+  <h2 id="formula">The Formula — And How to Use It</h2>
+  <p>The standard compound interest formula is:</p>
+  <div class="formula-box">
+    <div class="formula">A = P(1 + r/n)<sup>nt</sup></div>
+    <div class="formula-vars">A = final amount &nbsp;·&nbsp; P = principal &nbsp;·&nbsp; r = annual rate (decimal) &nbsp;·&nbsp; n = compounds per year &nbsp;·&nbsp; t = years</div>
+  </div>
+
+  <p>Let's break this down with a real example. You invest £5,000 at a 6% annual interest rate, compounded monthly, for 15 years:</p>
+  <ul>
+    <li><strong>P</strong> = £5,000 (your starting amount)</li>
+    <li><strong>r</strong> = 0.06 (6% expressed as a decimal)</li>
+    <li><strong>n</strong> = 12 (monthly compounding)</li>
+    <li><strong>t</strong> = 15 (years)</li>
+  </ul>
+  <p>A = 5,000 × (1 + 0.06/12)^(12×15) = 5,000 × (1.005)^180 = <strong>£12,293</strong></p>
+  <p>Your £5,000 grows to £12,293 — more than doubling — without you adding another penny. Of that £12,293, only £5,000 was your money. The other <strong>£7,293 was interest on interest</strong>.</p>
+
+  <h2 id="worked-example">Worked Example: £10,000 Over 20 Years</h2>
+  <p>Let's see how the same £10,000 lump sum grows at different interest rates over 20 years, compounded annually:</p>
+
+  <table>
+    <tr><th>Interest Rate</th><th>After 5 Years</th><th>After 10 Years</th><th>After 20 Years</th><th>Total Gain</th></tr>
+    <tr><td>2% (savings account)</td><td>£11,041</td><td>£12,190</td><td>£14,859</td><td>£4,859</td></tr>
+    <tr><td>4% (bonds/gilts)</td><td>£12,167</td><td>£14,802</td><td>£21,911</td><td>£11,911</td></tr>
+    <tr><td>6% (balanced fund)</td><td>£13,382</td><td>£17,908</td><td>£32,071</td><td>£22,071</td></tr>
+    <tr class="highlight-row"><td>8% (equity fund)</td><td>£14,693</td><td>£21,589</td><td>£46,610</td><td>£36,610</td></tr>
+    <tr><td>10% (aggressive growth)</td><td>£16,105</td><td>£25,937</td><td>£67,275</td><td>£57,275</td></tr>
+  </table>
+
+  <p>The difference between a 2% savings account and an 8% equity fund isn't just a small gap — after 20 years, the equity fund turns your £10,000 into £46,610 versus £14,859 from the savings account. That's a £31,751 difference from the same original investment.</p>
+
+  <div class="callout">
+    <strong>Important caveat</strong>
+    <p>Higher expected returns come with higher risk. Stock markets can fall significantly in the short term. The 8–10% figures represent long-term historical averages for equity funds — in any given year, returns could be negative. For money you need within 5 years, use lower-risk options.</p>
+  </div>
+
+  <h2 id="frequency">How Compounding Frequency Affects Your Money</h2>
+  <p>The formula includes <em>n</em>, the number of times interest compounds per year. More frequent compounding means slightly faster growth, because you start earning interest on your interest sooner.</p>
+
+  <p>How much does it actually matter? Here's £10,000 at 5% over 20 years with different compounding frequencies:</p>
+
+  <table>
+    <tr><th>Compounding Frequency</th><th>Times per Year</th><th>Final Balance</th></tr>
+    <tr><td>Annually</td><td>1</td><td>£26,533</td></tr>
+    <tr><td>Quarterly</td><td>4</td><td>£26,851</td></tr>
+    <tr><td>Monthly</td><td>12</td><td>£26,927</td></tr>
+    <tr class="highlight-row"><td>Daily</td><td>365</td><td>£27,180</td></tr>
+  </table>
+
+  <p>The difference between annual and daily compounding on this £10,000 over 20 years is <strong>£647</strong> — meaningful, but far less important than the interest rate itself. A 0.5% difference in your interest rate matters much more than going from monthly to daily compounding.</p>
+
+  <h3>What this means in practice</h3>
+  <p>Don't chase accounts just because they advertise "daily compounding." Focus first on finding the highest interest rate or return. Compounding frequency is a secondary consideration — still worth noting, but not worth sacrificing a better rate for.</p>
+
+  <h2 id="rule-of-72">The Rule of 72: A Mental Shortcut</h2>
+  <p>The Rule of 72 is a simple formula that estimates how many years it takes money to double at a given compound interest rate:</p>
+  <div class="formula-box">
+    <div class="formula">Years to double = 72 ÷ Interest Rate</div>
+  </div>
+
+  <table>
+    <tr><th>Interest Rate</th><th>Years to Double</th><th>Real World Example</th></tr>
+    <tr><td>2%</td><td>36 years</td><td>Low-rate savings account</td></tr>
+    <tr><td>4%</td><td>18 years</td><td>UK government bonds</td></tr>
+    <tr><td>6%</td><td>12 years</td><td>Balanced investment fund</td></tr>
+    <tr class="highlight-row"><td>8%</td><td>9 years</td><td>Global equity tracker fund</td></tr>
+    <tr><td>10%</td><td>7.2 years</td><td>High-growth equities</td></tr>
+    <tr><td>20%</td><td>3.6 years</td><td>Credit card interest (working against you)</td></tr>
+  </table>
+
+  <p>The Rule of 72 works in reverse too. If you owe £3,000 on a credit card at 20% APR, that debt effectively doubles to £6,000 in under 4 years if you make no payments. This is why clearing high-interest debt is often the highest-return "investment" you can make.</p>
+
+  <h2 id="contributions">The Power of Regular Contributions</h2>
+  <p>Compound interest is powerful with a lump sum, but it becomes extraordinary when you add regular contributions. Here's what happens when you invest £200 per month at 7% annual return, compounded monthly:</p>
+
+  <table>
+    <tr><th>After</th><th>Total Contributed</th><th>Total Value</th><th>Interest Earned</th></tr>
+    <tr><td>5 years</td><td>£12,000</td><td>£14,398</td><td>£2,398</td></tr>
+    <tr><td>10 years</td><td>£24,000</td><td>£34,616</td><td>£10,616</td></tr>
+    <tr><td>20 years</td><td>£48,000</td><td>£104,185</td><td>£56,185</td></tr>
+    <tr class="highlight-row"><td>30 years</td><td>£72,000</td><td>£243,994</td><td>£171,994</td></tr>
+    <tr><td>40 years</td><td>£96,000</td><td>£528,738</td><td>£432,738</td></tr>
+  </table>
+
+  <p>After 40 years of investing £200 per month, you've contributed £96,000 of your own money — but your investment is worth £528,738. Over <strong>£432,000 came from compound interest alone</strong>. Your own contributions are less than 20% of the final total.</p>
+
+  <div class="example-box">
+    <h3>💡 Real-world scenario: a pension</h3>
+    <p>If you're 25 years old and start contributing £250/month into a pension invested in a global index fund (assumed 7% average annual return):</p>
+    <ul>
+      <li>By age 55 (30 years): estimated pot of £304,992</li>
+      <li>By age 65 (40 years): estimated pot of £660,923</li>
+      <li>Your total contributions by age 65: £120,000</li>
+      <li>Compound growth: approximately £540,000</li>
+    </ul>
+    <p>This doesn't include employer contributions or pension tax relief, both of which would increase the pot further.</p>
+  </div>
+
+  <h2 id="time-vs-money">Why Time Beats Money Every Single Time</h2>
+  <p>This is the hardest lesson for people to internalise, but it's the most important one in personal finance. The amount of time your money compounds matters far more than the amount you invest.</p>
+
+  <p>Consider three people who all invest at 7% annual return:</p>
+
+  <table>
+    <tr><th>Person</th><th>Invests</th><th>When</th><th>For How Long</th><th>Total Invested</th><th>At Age 65</th></tr>
+    <tr><td><strong>Amy</strong></td><td>£300/month</td><td>Age 25–35</td><td>10 years</td><td>£36,000</td><td>£399,270</td></tr>
+    <tr><td><strong>Ben</strong></td><td>£300/month</td><td>Age 35–65</td><td>30 years</td><td>£108,000</td><td>£363,672</td></tr>
+    <tr class="highlight-row"><td><strong>Claire</strong></td><td>£300/month</td><td>Age 25–65</td><td>40 years</td><td>£144,000</td><td>£792,944</td></tr>
+  </table>
+
+  <p>Amy invested for only 10 years — then stopped completely for 30 years — yet ends up with <strong>more money than Ben</strong> who invested consistently for 30 years. Amy invested a third of what Ben did, but started 10 years earlier. Time is the most valuable ingredient.</p>
+
+  <div class="callout">
+    <strong>The key takeaway</strong>
+    <p>If you're in your 20s or early 30s, the most valuable financial decision you can make isn't finding a higher return — it's simply starting now, with whatever you can afford. Even £50 per month invested at 25 is worth far more than £500 per month invested at 45.</p>
+  </div>
+
+  <!-- Second ad slot -->
+  <h2 id="inflation">Compound Interest vs Inflation: The Real Return</h2>
+  <p>Compound interest grows your money in nominal terms. But inflation erodes purchasing power — £1 today buys more than £1 will in 10 years. To understand real growth, you need to look at the <strong>real rate of return</strong>: your interest rate minus inflation.</p>
+
+  <p>Example: Your savings account pays 4.5% interest. UK inflation is running at 3%. Your real return is approximately 1.5%. Your money is growing, but much more slowly in real terms than the headline number suggests.</p>
+
+  <table>
+    <tr><th>Nominal Rate</th><th>Inflation</th><th>Real Return</th><th>£10k after 20 years (real)</th></tr>
+    <tr><td>2%</td><td>3%</td><td class="warning" style="background:none;border:none;padding:10px 14px">-1%</td><td>£8,171 (losing value)</td></tr>
+    <tr><td>4%</td><td>3%</td><td>1%</td><td>£12,202</td></tr>
+    <tr><td>6%</td><td>3%</td><td>3%</td><td>£18,061</td></tr>
+    <tr class="highlight-row"><td>8%</td><td>3%</td><td>5%</td><td>£26,533</td></tr>
+  </table>
+
+  <p>This is why keeping money in a low-interest savings account long-term is not actually "safe" — you're slowly losing real purchasing power to inflation. Over 20 years at 2% interest with 3% inflation, your £10,000 is worth less in real terms than when you started.</p>
+
+  <h2 id="uk-options">UK Savings Options That Use Compound Interest</h2>
+  <p>Here's a practical overview of where UK residents can put compound interest to work:</p>
+
+  <h3>Cash savings accounts</h3>
+  <p>Standard savings accounts, easy-access accounts, and fixed-term deposits all use compound interest. The compounding frequency varies — most UK bank accounts compound monthly or annually. Interest is paid net of 20% tax unless held in an ISA.</p>
+
+  <h3>Cash ISA</h3>
+  <p>Same as a savings account but any interest is completely tax-free. You can deposit up to £20,000 per tax year. For higher-rate taxpayers or anyone with substantial savings, a Cash ISA is almost always preferable to a standard savings account.</p>
+
+  <h3>Stocks and Shares ISA</h3>
+  <p>Invest in funds, shares, and bonds completely tax-free. Returns compound through price growth plus reinvested dividends. Historically, UK equity markets have returned around 7–9% annually over long periods, though past performance doesn't guarantee future results. The same £20,000 annual allowance applies.</p>
+
+  <h3>Pension (SIPP or workplace pension)</h3>
+  <p>The most tax-efficient way to compound wealth in the UK. You get tax relief on contributions (20% for basic rate taxpayers, 40% for higher rate) and returns compound completely free of income tax and capital gains tax. You can access from age 55 (rising to 57 in 2028). For most people, maximising pension contributions before investing in a Stocks and Shares ISA makes mathematical sense due to the tax relief uplift.</p>
+
+  <h3>Lifetime ISA (LISA)</h3>
+  <p>For those under 40 buying their first home or saving for retirement. The government adds a 25% bonus on contributions up to £4,000/year — that's an instant 25% return before any investment growth. Contributions must go into a cash or stocks-and-shares LISA. Withdrawal restrictions apply (must be for first home purchase or retirement), so it's not suitable for all uses.</p>
+
+  <h2 id="against-you">When Compound Interest Works Against You</h2>
+  <p>Every mechanism that makes compound interest so powerful for savings works equally powerfully against you when you're the borrower.</p>
+
+  <h3>Credit cards</h3>
+  <p>Most UK credit cards compound interest daily, then charge it monthly. A typical credit card APR of 20–25% is devastating if you carry a balance. Let's look at the true cost of a £3,000 balance:</p>
+
+  <table>
+    <tr><th>Scenario</th><th>Monthly Payment</th><th>Time to Clear</th><th>Total Interest Paid</th></tr>
+    <tr><td>Minimum payments (2% balance)</td><td>£60 → shrinking</td><td>27+ years</td><td>£4,700+</td></tr>
+    <tr><td>Fixed £100/month</td><td>£100</td><td>3 years 9 months</td><td>£1,435</td></tr>
+    <tr><td>Fixed £200/month</td><td>£200</td><td>1 year 6 months</td><td>£560</td></tr>
+    <tr class="highlight-row"><td>Pay in full each month</td><td>Variable</td><td>N/A</td><td>£0</td></tr>
+  </table>
+
+  <h3>Personal loans and overdrafts</h3>
+  <p>Authorised overdrafts often run at 39.9% APR. Even "lower" personal loan rates of 8–15% mean compound interest is working against you. The priority order for most people should be: clear high-interest debt first, then build an emergency fund, then invest.</p>
+
+  <div class="warning">
+    <strong>The minimum payment trap</strong>
+    <p>Credit card companies set minimum payments at 1–2% of your balance deliberately — it maximises the interest they earn. Making only minimum payments on a £3,000 balance at 20% APR could take over 27 years to clear and cost more than £4,700 in interest. Always pay more than the minimum.</p>
+  </div>
+
+  <h2 id="mistakes">Common Mistakes People Make</h2>
+
+  <div class="key-point">
+    <div class="icon">⏳</div>
+    <div class="text">
+      <strong>Waiting for the "right time" to start</strong>
+      <span>There is no right time. Every year you delay investing costs you years of compound growth. Starting with £50 per month now beats starting with £200 per month in 5 years.</span>
+    </div>
+  </div>
+
+  <div class="key-point">
+    <div class="icon">💸</div>
+    <div class="text">
+      <strong>Withdrawing savings when markets dip</strong>
+      <span>Selling investments during a market drop turns a paper loss into a real one and breaks the compound growth chain. Time in the market almost always beats timing the market.</span>
+    </div>
+  </div>
+
+  <div class="key-point">
+    <div class="icon">🔄</div>
+    <div class="text">
+      <strong>Not reinvesting dividends</strong>
+      <span>If your investment fund pays dividends and you take them as cash, you lose the compound effect on that income. Choose "accumulation" (Acc) units in funds, not "income" (Inc) units, to ensure returns are automatically reinvested.</span>
+    </div>
+  </div>
+
+  <div class="key-point">
+    <div class="icon">💳</div>
+    <div class="text">
+      <strong>Investing while carrying high-interest debt</strong>
+      <span>Investing for a 7% return while paying 20% credit card interest is mathematically backwards. Clear high-rate debt first — that's a guaranteed 20% return, far better than any investment.</span>
+    </div>
+  </div>
+
+  <div class="key-point">
+    <div class="icon">📊</div>
+    <div class="text">
+      <strong>Focusing on rate instead of fees</strong>
+      <span>A fund charging 1.5% annual fees versus one charging 0.2% costs you over £50,000 in lost compound growth on a £100,000 portfolio over 20 years. Low-cost index funds typically outperform actively managed funds over the long term.</span>
+    </div>
+  </div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Calculate your own compound interest</strong>
+      <span>Enter your starting amount, monthly contributions, rate and time period — see year-by-year growth instantly</span>
+    </div>
+    <a href="https://compound-interest-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Calculator →</a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Is compound interest the same as APR?</h3>
+      <p>No. APR (Annual Percentage Rate) is the total cost of borrowing including interest and mandatory fees, expressed as a yearly percentage. Compound interest is just the method of calculating interest on a growing balance. A product can use compound interest, but its APR will be higher than the interest rate once fees are included.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I get compound interest on my savings in the UK?</h3>
+      <p>Look for savings accounts or ISAs that state interest is compounded monthly or daily. For investments, choose accumulation (Acc) fund units which automatically reinvest dividends and income. Workplace pensions and SIPPs also compound returns within the fund.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the difference between compound and simple interest?</h3>
+      <p>Simple interest only calculates on the original principal each period. Compound interest calculates on the principal plus all previously accumulated interest. Over short periods the difference is small; over decades, it becomes enormous. Compound interest grows exponentially; simple interest grows linearly.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I calculate compound interest with monthly contributions?</h3>
+      <p>Yes — this uses the future value of annuity formula. Our calculator handles this automatically: enter your starting amount, monthly contribution, annual interest rate, compounding frequency, and time period to see the full year-by-year projection.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the best compounding frequency?</h3>
+      <p>Daily compounding is theoretically best, but the difference between monthly and daily is small on typical savings balances. The interest rate itself matters far more than compounding frequency. Don't sacrifice a higher rate for more frequent compounding — it won't compensate for the rate difference.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does compound interest work against me on debt?</h3>
+      <p>Yes. Credit cards, overdrafts, and many personal loans use compound interest working against you. A £1,000 credit card balance at 20% APR can cost thousands in interest if only minimum payments are made. The Rule of 72 shows that a 20% APR debt doubles roughly every 3.6 years if left unpaid.</p>
+    ]]></content:encoded>
     <description>A complete guide to compound interest with real worked examples, the rule of 72, and UK savings options.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -32,6 +455,69 @@
     <title>What Is a Good Rental Yield in the UK? A Landlord's Guide</title>
     <link>https://tabutility.com/blog/what-is-good-rental-yield-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-good-rental-yield-uk/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>What Is Rental Yield?</h2>
+<p>Rental yield is the annual income you earn from a property expressed as a percentage of its value. It's the primary way landlords measure whether a buy-to-let investment is worth making — before factoring in capital growth.</p>
+<p>There are two types:</p>
+<ul>
+  <li><strong>Gross yield</strong> — annual rent ÷ property value × 100. Quick and easy, but ignores costs.</li>
+  <li><strong>Net yield</strong> — (annual rent − running costs) ÷ property value × 100. More accurate, accounts for mortgage, management fees, maintenance, and voids.</li>
+</ul>
+
+<h2>What Is a Good Rental Yield in the UK?</h2>
+<p>As a general rule:</p>
+<ul>
+  <li><strong>Below 4%</strong> — weak. Common in prime London postcodes. Only makes sense if you're banking on strong capital growth.</li>
+  <li><strong>4–6%</strong> — average. Acceptable if mortgage rates are low and the area has good growth potential.</li>
+  <li><strong>6–8%</strong> — good. Likely to cover costs and generate positive cash flow.</li>
+  <li><strong>Above 8%</strong> — excellent, but investigate carefully. Very high yields sometimes signal high vacancy rates or management headaches.</li>
+</ul>
+
+<h2>Rental Yield by UK City (2025)</h2>
+<p>Property values and rents vary enormously across the UK. Based on current market data:</p>
+<ul>
+  <li><strong>Liverpool</strong> — 7–10% gross yield. Consistently one of the highest-yielding cities in England.</li>
+  <li><strong>Manchester</strong> — 5–8%. Strong rental demand from students and young professionals.</li>
+  <li><strong>Glasgow</strong> — 6–9%. Scotland's largest city with solid fundamentals.</li>
+  <li><strong>Nottingham</strong> — 6–8%. Large student population drives demand.</li>
+  <li><strong>Birmingham</strong> — 5–7%. Growing city with ongoing regeneration.</li>
+  <li><strong>Leeds</strong> — 5–7%. Strong employment market and university towns.</li>
+  <li><strong>London (outer zones)</strong> — 4–6%. Better than prime London but still capital-growth led.</li>
+  <li><strong>London (prime)</strong> — 2–4%. Almost entirely a capital appreciation play.</li>
+</ul>
+
+<h2>How to Improve Your Rental Yield</h2>
+<p>You can improve yield by increasing income or reducing costs:</p>
+<ul>
+  <li><strong>HMOs (Houses in Multiple Occupation)</strong> — renting by the room typically generates 20–40% more rent than letting the whole property to one household.</li>
+  <li><strong>Furnished lettings</strong> — can command higher rents in urban areas and short-term rentals.</li>
+  <li><strong>Self-management</strong> — cutting out a letting agent saves 8–15% of monthly rent.</li>
+  <li><strong>Reduce voids</strong> — every empty month costs you 8.3% of your annual yield. Good tenant screening and prompt maintenance reduce turnover.</li>
+</ul>
+
+<h2>Yield vs Capital Growth: Which Matters More?</h2>
+<p>It depends on your goal. High-yield properties (typically in northern cities) generate monthly cash flow but may see slower price appreciation. Low-yield properties (prime London) may increase substantially in value over a decade but generate little or no monthly income — and can cost you money each month if mortgage payments exceed rent.</p>
+<p>Most experienced landlords aim for a balance: a yield high enough to cover costs, in an area with reasonable growth prospects.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is the average rental yield in the UK?</h3><p>The UK average gross rental yield is approximately 5–6% as of 2025, though this varies significantly by region. Northern cities typically offer 6–9%, while London averages 3–5%.</p></div>
+  <div class="faq-item"><h3>Is a 7% rental yield good?</h3><p>Yes — a 7% gross yield is considered strong in the UK market. After costs (management, maintenance, mortgage, voids), you would typically net 4–5%, which is healthy cash flow for most landlords.</p></div>
+  <div class="faq-item"><h3>Does rental yield include mortgage payments?</h3><p>Gross yield doesn't. Net yield can include mortgage interest as a cost, but this varies. When assessing cash flow, always model your specific mortgage payment against expected rent to understand your monthly position.</p></div>
+  <div class="faq-item"><h3>What rental yield do I need to cover costs?</h3><p>At current UK mortgage rates (around 4–5%), you typically need a gross yield of at least 6–7% to break even after mortgage, management fees, and maintenance. Below this, the property may cost you money monthly.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Rental Yield Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://rental-yield.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>Rental yield is the key metric every UK landlord needs to know. Learn what counts as a good yield, how to calculate it, and which UK cities offer the best returns.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -39,6 +525,264 @@
     <title>How to Pay Off Debt Fast: Snowball vs Avalanche</title>
     <link>https://tabutility.com/blog/how-to-pay-off-debt-fast/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-pay-off-debt-fast/</guid>
+    <content:encoded><![CDATA[<p class="lead">Debt doesn't just cost you money — it costs you sleep, stress, and financial freedom. This guide gives you two proven strategies for clearing it, real worked examples showing exactly how much each saves you, and practical tactics to accelerate your payoff regardless of which method you choose.</p>
+
+  <div class="toc">
+    <h3>In this guide</h3>
+    <ol>
+      <li><a href="#minimum-trap">The minimum payment trap</a></li>
+      <li><a href="#snowball">Method 1: The Debt Snowball</a></li>
+      <li><a href="#avalanche">Method 2: The Debt Avalanche</a></li>
+      <li><a href="#comparison">Side-by-side comparison with real numbers</a></li>
+      <li><a href="#which">Which method should you choose?</a></li>
+      <li><a href="#balance-transfer">The balance transfer shortcut</a></li>
+      <li><a href="#find-money">How to find extra money to pay debt</a></li>
+      <li><a href="#step-by-step">Step-by-step debt payoff plan</a></li>
+      <li><a href="#save-or-invest">Should you save or invest while in debt?</a></li>
+      <li><a href="#credit-score">How debt payoff affects your credit score</a></li>
+      <li><a href="#uk-help">UK debt help resources</a></li>
+    </ol>
+  </div>
+
+  <h2 id="minimum-trap">The Minimum Payment Trap</h2>
+  <p>Before we get into strategies, it's important to understand just how destructive minimum payments are. Credit card companies set minimum payments at 1–2% of your balance or a small fixed amount — whichever is higher. This is deliberate: it maximises the interest you pay them.</p>
+
+  <table>
+    <tr><th>Balance</th><th>APR</th><th>Min Payment Strategy</th><th>Time to Clear</th><th>Total Interest</th></tr>
+    <tr><td>£1,000</td><td>20%</td><td>Minimum (2%)</td><td>9 years 3 months</td><td>£881</td></tr>
+    <tr><td>£3,000</td><td>20%</td><td>Minimum (2%)</td><td>14 years 2 months</td><td>£2,930</td></tr>
+    <tr><td>£5,000</td><td>20%</td><td>Minimum (2%)</td><td>17 years 5 months</td><td>£5,265</td></tr>
+    <tr class="highlight-row"><td>£5,000</td><td>20%</td><td>Fixed £200/month</td><td>2 years 5 months</td><td>£766</td></tr>
+  </table>
+
+  <p>The difference between minimum payments and a fixed £200/month on a £5,000 balance: <strong>15 years less time</strong> and over <strong>£4,500 less interest</strong>. The math is brutal — never, ever make only minimum payments.</p>
+
+  <div class="warning">
+    <strong>The psychological trick credit card companies use</strong>
+    <p>When your balance falls, so does the minimum payment. This means minimum-only payments get smaller over time, which extends your repayment period and maximises total interest paid. Always set a fixed monthly payment, not a percentage of the balance.</p>
+  </div>
+
+  <h2 id="snowball">Method 1: The Debt Snowball</h2>
+  <div class="method-box snowball">
+    <h3>❄️ The Debt Snowball</h3>
+    <p><strong>Pay off your smallest balance first</strong>, regardless of interest rate. Put every extra pound at the smallest debt while making minimum payments on all others. When it's gone, roll that payment into the next smallest.</p>
+    <p><strong>Best for:</strong> People who need motivation, have many small debts, or have struggled to stay committed to a payoff plan in the past.</p>
+  </div>
+
+  <p>Here's exactly how the snowball works with a real example. Suppose you have four debts and £600/month to put toward them:</p>
+
+  <table>
+    <tr><th>Debt</th><th>Balance</th><th>APR</th><th>Min Payment</th><th>Snowball Order</th></tr>
+    <tr class="winner-row"><td>Store card</td><td>£400</td><td>30%</td><td>£20</td><td>1st (smallest balance)</td></tr>
+    <tr><td>Credit card</td><td>£1,500</td><td>22%</td><td>£45</td><td>2nd</td></tr>
+    <tr><td>Personal loan</td><td>£3,000</td><td>12%</td><td>£80</td><td>3rd</td></tr>
+    <tr><td>Car finance</td><td>£6,000</td><td>8%</td><td>£120</td><td>4th (largest balance)</td></tr>
+  </table>
+
+  <p>Step by step:</p>
+  <ol>
+    <li>Make minimum payments on the credit card (£45), loan (£80), and car finance (£120) = £245/month</li>
+    <li>Put the remaining £355 at the store card (£20 min + £335 extra)</li>
+    <li>The £400 store card is cleared in about <strong>5 weeks</strong></li>
+    <li>Now roll that £355 + the freed £20 minimum = £375 at the credit card</li>
+    <li>The £1,500 credit card is cleared in about <strong>5 more months</strong></li>
+    <li>Roll everything into the loan… and so on</li>
+  </ol>
+
+  <p>The "snowball" effect: each debt you clear frees up its minimum payment, which gets added to your attack on the next debt. The monthly amount hitting your target debt grows bigger with each win.</p>
+
+  <div class="success">
+    <strong>Why the snowball works psychologically</strong>
+    <p>Paying off that store card completely in weeks creates a genuine win. Research consistently shows that people who use the debt snowball are more likely to stay committed and actually become debt free. A mathematically inferior plan you finish is better than the optimal plan you abandon.</p>
+  </div>
+
+  <h2 id="avalanche">Method 2: The Debt Avalanche</h2>
+  <div class="method-box avalanche">
+    <h3>🌊 The Debt Avalanche</h3>
+    <p><strong>Pay off your highest-interest debt first</strong>, regardless of balance size. Put every extra pound at the highest-rate debt while making minimum payments on all others. When it's gone, move to the next highest rate.</p>
+    <p><strong>Best for:</strong> People who are motivated by data, have high-interest rate debts, or are comfortable with a longer initial wait for their first win.</p>
+  </div>
+
+  <p>Using the same example and the avalanche method:</p>
+
+  <table>
+    <tr><th>Debt</th><th>Balance</th><th>APR</th><th>Min Payment</th><th>Avalanche Order</th></tr>
+    <tr class="winner-row"><td>Store card</td><td>£400</td><td>30%</td><td>£20</td><td>1st (highest rate)</td></tr>
+    <tr><td>Credit card</td><td>£1,500</td><td>22%</td><td>£45</td><td>2nd</td></tr>
+    <tr><td>Personal loan</td><td>£3,000</td><td>12%</td><td>£80</td><td>3rd</td></tr>
+    <tr><td>Car finance</td><td>£6,000</td><td>8%</td><td>£120</td><td>4th (lowest rate)</td></tr>
+  </table>
+
+  <p>In this specific case the order happens to be the same — the smallest balance is also the highest rate. But consider if the credit card was the highest rate instead of the store card. The avalanche would target it first, even though it's a larger balance and takes longer to clear.</p>
+
+  <h2 id="comparison">Side-by-Side Comparison With Real Numbers</h2>
+  <p>Let's use a scenario where the methods genuinely differ. You have:</p>
+  <ul>
+    <li>Debt A: £500 at 10% APR</li>
+    <li>Debt B: £2,000 at 18% APR</li>
+    <li>Debt C: £4,000 at 25% APR</li>
+    <li>Extra payment budget: £400/month above minimums</li>
+  </ul>
+
+  <table>
+    <tr><th></th><th>Debt Snowball</th><th>Debt Avalanche</th></tr>
+    <tr><td>Attack order</td><td>A → B → C (by balance)</td><td>C → B → A (by rate)</td></tr>
+    <tr><td>First debt cleared</td><td>~2 months (Debt A)</td><td>~8 months (Debt C)</td></tr>
+    <tr><td>All debt cleared</td><td>~18 months</td><td>~16 months</td></tr>
+    <tr class="highlight-row"><td>Total interest paid</td><td>~£1,820</td><td>~£1,510</td></tr>
+    <tr><td>Difference</td><td colspan="2"><strong>Avalanche saves ~£310 and 2 months</strong></td></tr>
+  </table>
+
+  <p>The avalanche saves money — but notice the snowball person gets their first win (Debt A cleared) in 2 months versus 8 months for the avalanche. That 6-month wait without a visible win is where many people fall off the plan.</p>
+
+  <h2 id="which">Which Method Should You Choose?</h2>
+  <p>The honest answer: <strong>the one you'll actually stick with.</strong></p>
+  <p>Research from the Harvard Business Review and multiple behavioural economics studies shows that people using the snowball method are more likely to complete their debt payoff, even accounting for the higher total interest. The psychological boost of clearing individual debts maintains motivation.</p>
+  <p>Use the avalanche if:</p>
+  <ul>
+    <li>You have one or two very high-rate debts that dwarf everything else</li>
+    <li>You're naturally data-driven and don't need quick wins for motivation</li>
+    <li>The interest saving is substantial (thousands, not hundreds)</li>
+  </ul>
+  <p>Use the snowball if:</p>
+  <ul>
+    <li>You have many small debts and need visible progress</li>
+    <li>You've tried paying off debt before and given up</li>
+    <li>The rate differences between your debts are relatively small</li>
+  </ul>
+
+  <h3>The hybrid approach</h3>
+  <p>Many people get the best results by combining both: use the snowball to eliminate one or two small debts quickly (getting momentum and freeing up minimum payments), then switch to the avalanche for the remaining larger balances. This is sometimes called the "snowflake" method.</p>
+
+  <h2 id="balance-transfer">The Balance Transfer Shortcut</h2>
+  <p>A balance transfer moves existing credit card debt to a new card offering 0% interest for a promotional period. This is one of the most powerful tools available for paying off debt, because <strong>every pound you pay goes directly toward reducing your balance</strong> — not paying interest.</p>
+
+  <table>
+    <tr><th>Feature</th><th>Details</th></tr>
+    <tr><td>Promotional period</td><td>Typically 12–30 months at 0%</td></tr>
+    <tr><td>Transfer fee</td><td>Usually 2–3% of the balance transferred (one-off)</td></tr>
+    <tr><td>New purchases</td><td>Often charged at a higher rate — don't use the card for new spending</td></tr>
+    <tr><td>After the 0% period</td><td>The revert rate kicks in (often 20%+) — aim to clear before this</td></tr>
+  </table>
+
+  <div class="callout">
+    <strong>Balance transfer worked example</strong>
+    <p>You have £3,000 on a credit card at 20% APR. You transfer to a 0% card with a 2% fee and 24-month promotional period. Fee: £60. You now pay £130/month → card is cleared in 23 months with £0 additional interest. Without the transfer, paying £130/month takes 27 months and costs £712 in interest. The balance transfer saves you £652.</p>
+  </div>
+
+  <p>To be eligible for the best balance transfer deals, you typically need a good credit score. If your score has been affected by your debt situation, it's worth checking your eligibility with a soft search tool before applying (hard searches can temporarily lower your score).</p>
+
+  <h2 id="find-money">How to Find Extra Money to Pay Debt</h2>
+  <p>Any extra money you can direct at your target debt dramatically accelerates the payoff. Here are the most effective sources:</p>
+
+  <h3>Regular budget cuts</h3>
+  <ul>
+    <li>Review every subscription — most households have 2–4 they've forgotten about</li>
+    <li>Switch energy, broadband, and mobile contracts (£50–150/month possible)</li>
+    <li>Reduce food waste (average UK household throws away £60 of food per month)</li>
+    <li>Cook rather than order takeaways (£50–200/month)</li>
+  </ul>
+
+  <h3>One-off cash boosts</h3>
+  <ul>
+    <li><strong>Sell unused items</strong> — eBay, Facebook Marketplace, Vinted. Most homes have £200–500 of unused items</li>
+    <li><strong>Tax rebates</strong> — millions of UK taxpayers are owed refunds. Check through HMRC's online services</li>
+    <li><strong>Overpaid council tax</strong> — if you've moved, check whether your banding has been reassessed</li>
+    <li><strong>Cashback sites</strong> — Quidco and TopCashback give money back on purchases you'd make anyway</li>
+  </ul>
+
+  <h3>Income increases</h3>
+  <ul>
+    <li>Ask for a pay rise (data shows asking directly is the most effective approach)</li>
+    <li>Freelance work or a second income stream</li>
+    <li>Rent a room under the Rent a Room scheme (up to £7,500/year tax-free)</li>
+  </ul>
+
+  <h2 id="step-by-step">Your Step-by-Step Debt Payoff Plan</h2>
+
+  <div class="step-box">
+    <div class="step-num">1</div>
+    <div class="step-text"><strong>List all your debts</strong><p>Write down every debt: balance, interest rate, minimum payment, and creditor. Include credit cards, overdrafts, personal loans, buy now pay later, and any money owed to family.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">2</div>
+    <div class="step-text"><strong>Build a starter emergency fund</strong><p>Before aggressively paying debt, save £500–1,000 in an easy-access account. Without this buffer, one unexpected bill sends you straight back into debt. Once built, freeze it and don't touch it.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">3</div>
+    <div class="step-text"><strong>Know your monthly surplus</strong><p>Calculate income minus essential expenses. This is your monthly debt attack budget. If it's zero or negative, you need to cut expenses or increase income before any method will work.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">4</div>
+    <div class="step-text"><strong>Choose your method and set up payments</strong><p>Pick snowball or avalanche based on your personality. Set up direct debits for the minimum payments on all debts, plus your extra payment on the target debt. Automation removes willpower from the equation.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">5</div>
+    <div class="step-text"><strong>Consider a balance transfer</strong><p>If you have credit card debt at high rates and a decent credit score, check eligibility for a 0% balance transfer card. Even a 12-month 0% deal can save hundreds and accelerate your payoff significantly.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">6</div>
+    <div class="step-text"><strong>Stop adding new debt</strong><p>Cut up or freeze (literally, in a block of ice) the credit cards you're paying off. Don't use buy now pay later for any new purchases. This step is non-negotiable — you can't fill a bath with the plug out.</p></div>
+  </div>
+
+  <div class="step-box">
+    <div class="step-num">7</div>
+    <div class="step-text"><strong>Track and celebrate milestones</strong><p>Mark off each debt as it's cleared. Celebrate appropriately (not by spending money). Tell someone who'll hold you accountable. Track your total debt number going down monthly.</p></div>
+  </div>
+
+  <h2 id="save-or-invest">Should You Save or Invest While Paying Off Debt?</h2>
+  <p>This question has a clear mathematical answer, but it's worth understanding the logic:</p>
+
+  <table>
+    <tr><th>Debt Type</th><th>Rate</th><th>Expected Investment Return</th><th>Verdict</th></tr>
+    <tr><td>Credit card</td><td>20–30%</td><td>~7% (market)</td><td class="winner-row" style="background:#fef2f2;color:#dc2626">Clear debt first</td></tr>
+    <tr><td>Personal loan</td><td>10–15%</td><td>~7% (market)</td><td style="background:#fef2f2;color:#dc2626">Clear debt first</td></tr>
+    <tr><td>Student loan (UK)</td><td>RPI+4.5%</td><td>~7% (market)</td><td style="background:#eff6ff;color:#1d4ed8">Depends — usually invest</td></tr>
+    <tr><td>0% finance</td><td>0%</td><td>~7% (market)</td><td style="background:#f0fdf4;color:#166534">Invest the difference</td></tr>
+    <tr class="highlight-row"><td>Pension (employer match)</td><td>N/A</td><td>Instant 50–100% return</td><td>Always contribute enough to get the match</td></tr>
+  </table>
+
+  <p>One golden rule: <strong>always contribute enough to your pension to get the full employer match</strong>, even while paying debt. Employer matching is a guaranteed 50–100% instant return — no investment or debt payoff strategy can beat that.</p>
+
+  <h2 id="credit-score">How Debt Payoff Affects Your Credit Score</h2>
+  <p>Paying off debt generally improves your credit score, but the mechanics are worth understanding:</p>
+  <ul>
+    <li><strong>Credit utilisation</strong> — the proportion of your available credit you're using. As balances fall, utilisation drops, and scores improve. Below 30% is good; below 10% is excellent.</li>
+    <li><strong>Payment history</strong> — every on-time payment (even the minimum) builds a positive record. Setting up direct debits prevents missed payments which damage scores significantly.</li>
+    <li><strong>Account age</strong> — older accounts help your score. Closing a paid-off credit card can temporarily lower your score by reducing available credit and shortening average account age. Consider keeping old cards open with a small recurring charge on them.</li>
+    <li><strong>Closing accounts</strong> — don't close all your credit cards when you clear them. Leave at least one with a low or zero balance to maintain your available credit.</li>
+  </ul>
+
+  <h2 id="uk-help">UK Debt Help Resources</h2>
+  <p>If your debt situation feels overwhelming, these UK services provide free, independent advice:</p>
+  <ul>
+    <li><strong>StepChange Debt Charity</strong> — stepchange.org — free debt advice and debt management plans</li>
+    <li><strong>National Debtline</strong> — nationaldebtline.org — free advice by phone and online</li>
+    <li><strong>Citizens Advice</strong> — citizensadvice.org.uk — covers debt alongside other financial issues</li>
+    <li><strong>MoneyHelper</strong> — moneyhelper.org.uk — government-backed financial guidance service</li>
+  </ul>
+  <p>These are all free. There is no need to pay a debt management company — the free services provide the same help, and some paid services have been found to leave people worse off.</p>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Calculate your debt payoff timeline</strong>
+      <span>Enter your debts, interest rates and monthly budget — see exactly when you'll be debt free</span>
+    </div>
+    <a href="https://debt-payoff.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Calculator →</a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item"><h3>Should I save while paying off debt?</h3><p>Build a small emergency fund (£500–1,000) first to avoid new debt when unexpected costs hit. Then focus on high-interest debt. Once high-rate debt is cleared, redirect those payments to savings. Always contribute enough to pension to get any employer match — that's a better return than paying debt.</p></div>
+    <div class="faq-item"><h3>Is it better to pay off debt or invest?</h3><p>If your debt rate exceeds your expected investment return, pay the debt first. Credit card at 20% APR versus an expected 7% investment return — pay the card. For low-rate debt like student loans or 0% finance, investing alongside is often mathematically better.</p></div>
+    <div class="faq-item"><h3>Does paying off debt improve my credit score?</h3><p>Yes. Reducing credit utilisation is one of the fastest ways to improve your credit score. Aim for below 30% utilisation across all cards, ideally below 10%. Every on-time payment also builds positive history.</p></div>
+    <div class="faq-item"><h3>What is a balance transfer and how does it work?</h3><p>A balance transfer moves your existing credit card debt to a new card at 0% interest for a promotional period (12–30 months). You pay a one-off fee (2–3%). Every payment then reduces your actual debt rather than paying interest — potentially saving hundreds or thousands.</p></div>
+    <div class="faq-item"><h3>How much extra should I pay each month?</h3><p>As much as you possibly can without compromising essentials. Even an extra £50/month makes a significant difference due to compound interest working in reverse. On a £5,000 credit card at 20% APR, paying £200/month instead of the minimum saves over £4,500 in interest and 15 years of repayment.</p>]]></content:encoded>
     <description>A complete guide to the debt snowball and debt avalanche methods with worked examples and UK-specific tips.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -46,6 +790,69 @@
     <title>IR35 Explained: What Every UK Contractor Needs to Know</title>
     <link>https://tabutility.com/blog/ir35-explained-uk-contractors/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/ir35-explained-uk-contractors/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>What Is IR35?</h2>
+<p>IR35 (officially the "off-payroll working rules") is UK tax legislation designed to ensure contractors who work like employees pay similar taxes to employees, even if they operate through a limited company.</p>
+<p>The name comes from the Inland Revenue press release number 35, published in 1999 when the rules were first announced. They've been significantly reformed since then — most recently in 2021 when responsibility for determining IR35 status shifted from contractors to medium and large businesses.</p>
+
+<h2>Who Does IR35 Affect?</h2>
+<p>IR35 affects contractors who:</p>
+<ul>
+  <li>Work through their own limited company (Personal Service Company, or PSC)</li>
+  <li>Provide services to a client</li>
+  <li>Would be considered an employee if the limited company didn't exist</li>
+</ul>
+<p>If you're a sole trader, IR35 doesn't apply to you — you're already taxed as an individual.</p>
+
+<h2>Inside vs Outside IR35: What's the Difference?</h2>
+<p><strong>Outside IR35</strong> — you're genuinely self-employed. You can pay yourself a combination of salary and dividends, keeping your tax bill lower.</p>
+<p><strong>Inside IR35</strong> — HMRC considers you to be a "disguised employee." The fee-payer (client or agency) must deduct Income Tax and National Insurance before paying you, similar to PAYE. You effectively pay employee taxes without receiving employee benefits.</p>
+<p>Being inside IR35 typically costs a contractor an additional 20–25% in tax.</p>
+
+<h2>How Is IR35 Status Determined?</h2>
+<p>There's no single test. HMRC considers the overall picture of the working arrangement. The three main factors are:</p>
+<ol>
+  <li><strong>Control</strong> — Does the client control how, when, and where you work? High control = more likely inside IR35.</li>
+  <li><strong>Substitution</strong> — Can you send someone else to do the work? If yes, this points toward outside IR35.</li>
+  <li><strong>Mutuality of obligation</strong> — Is the client obligated to offer you work, and are you obligated to accept it? If yes, points toward inside IR35.</li>
+</ol>
+<p>Other factors include financial risk (do you have business costs, equipment?), part and parcel of the organisation (do you appear on org charts, attend company socials?), and exclusivity (do you work for multiple clients?).</p>
+
+<h2>Who Decides Your Status?</h2>
+<p>Since April 2021:</p>
+<ul>
+  <li><strong>Small businesses</strong> (under 50 employees, under £10.2m turnover) — the contractor decides their own status</li>
+  <li><strong>Medium and large businesses</strong> — the client decides and issues a Status Determination Statement (SDS)</li>
+  <li><strong>Public sector</strong> — the client decides (this rule has applied since 2017)</li>
+</ul>
+
+<h2>How to Protect Yourself</h2>
+<ul>
+  <li><strong>Get a contract review</strong> — have an IR35 specialist review your contract before signing</li>
+  <li><strong>Use HMRC's CEST tool</strong> — Check Employment Status for Tax, though it's not always conclusive</li>
+  <li><strong>Working practices matter as much as contracts</strong> — if your day-to-day working life looks like employment, the contract won't save you</li>
+  <li><strong>Consider IR35 insurance</strong> — specialist policies cover investigation costs and backdated tax bills</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Can I appeal an IR35 determination?</h3><p>Yes. If you disagree with a client's Status Determination Statement, you can raise a dispute with the client. They must respond within 45 days. If still unresolved, you can challenge HMRC's position through the tax tribunal system.</p></div>
+  <div class="faq-item"><h3>Does IR35 apply to all contracts?</h3><p>IR35 is assessed on a contract-by-contract basis. You could be inside IR35 for one client and outside for another simultaneously — your overall tax status depends on each individual engagement.</p></div>
+  <div class="faq-item"><h3>What happens if HMRC investigates me?</h3><p>HMRC can investigate historic contracts going back several years. If found inside IR35, you'll owe unpaid Income Tax and National Insurance plus interest and potentially penalties. This can run to tens of thousands of pounds, which is why IR35 insurance is worth considering.</p></div>
+  <div class="faq-item"><h3>Is working inside IR35 always bad?</h3><p>Not necessarily. Some contractors accept inside-IR35 roles for the right day rate, stable long-term work, or to build specific experience. The key is knowing the true financial impact — typically £10,000–£30,000 more in tax per year depending on earnings.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the IR35 Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://uk-ir35-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>IR35 is one of the most misunderstood tax rules for UK contractors. This guide explains what it is, how HMRC determines your status, and what you can do about it.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -53,6 +860,67 @@
     <title>How Much Do You Need to Retire in the UK? A Realistic Guide</title>
     <link>https://tabutility.com/blog/how-much-to-retire-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-much-to-retire-uk/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>The Three Levels of Retirement in the UK</h2>
+<p>The Pensions and Lifetime Savings Association (PLSA) publishes annual "Retirement Living Standards" that define three levels of retirement lifestyle. For a single person in 2025:</p>
+<ul>
+  <li><strong>Minimum</strong> — £14,400/year. Covers all needs with some left for fun, but no car and limited holidays.</li>
+  <li><strong>Moderate</strong> — £31,300/year. More financial security, a car, one European holiday per year.</li>
+  <li><strong>Comfortable</strong> — £43,100/year. Regular holidays, generous food and leisure budget, some financial gifts to family.</li>
+</ul>
+<p>For couples, the figures are £22,400 / £43,100 / £59,000 respectively.</p>
+
+<h2>How Much Pension Pot Do You Need?</h2>
+<p>The most widely used rule is the <strong>4% rule</strong> — you can safely withdraw 4% of your pension pot each year without running out of money over a 30-year retirement.</p>
+<p>This means:</p>
+<ul>
+  <li>Minimum lifestyle (£14,400/year minus State Pension of ~£11,500) → top-up of £2,900 → pot needed: ~£72,500</li>
+  <li>Moderate lifestyle (£31,300/year minus State Pension) → top-up of £19,800 → pot needed: ~£495,000</li>
+  <li>Comfortable lifestyle (£43,100/year minus State Pension) → top-up of £31,600 → pot needed: ~£790,000</li>
+</ul>
+<p>Note: the full new State Pension is currently £11,502/year (2025/26), which significantly reduces the pot you need for minimum and moderate lifestyles.</p>
+
+<h2>The 4% Rule: Is It Reliable?</h2>
+<p>The 4% rule comes from the "Trinity Study" (1998), which found that a portfolio of 50% stocks and 50% bonds could sustain 4% withdrawals for 30 years in 95% of historical scenarios.</p>
+<p>Some caveats for UK retirees:</p>
+<ul>
+  <li>The study used US data. UK and global markets may perform differently.</li>
+  <li>With current gilt yields and lower expected equity returns, some advisors suggest 3.5% is more prudent.</li>
+  <li>If you retire early (at 55), your pot needs to last 35–40 years, not 30.</li>
+  <li>Sequence of returns risk — a market crash in your first few years of retirement can permanently damage your portfolio even if markets recover later.</li>
+</ul>
+
+<h2>How Much Should You Be Saving?</h2>
+<p>A common rule of thumb: save half your age as a percentage of your income into your pension. So if you start at 30, save 15% of your income. If you start at 40, save 20%.</p>
+<p>More practically, the minimum employer + employee contribution under auto-enrolment is 8% of qualifying earnings. Most financial advisors recommend 12–15% or more for a comfortable retirement.</p>
+
+<h2>Don't Forget These Factors</h2>
+<ul>
+  <li><strong>State Pension</strong> — check your State Pension forecast at gov.uk/check-state-pension. You need 35 qualifying years of National Insurance contributions for the full amount.</li>
+  <li><strong>Defined benefit (final salary) pensions</strong> — if you have one, factor in the annual income it will provide. These are increasingly rare but very valuable.</li>
+  <li><strong>Housing</strong> — owning your home outright at retirement eliminates rent/mortgage costs and significantly reduces the income you need.</li>
+  <li><strong>Tax</strong> — pension withdrawals above the Personal Allowance (£12,570) are taxable. Factor this into your income planning.</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Can I retire at 55 in the UK?</h3><p>The minimum pension access age is currently 55 (rising to 57 in 2028). You can access your private pension from this age, but the State Pension won't begin until 66 (rising to 67 between 2026–2028). Early retirement requires a larger pot to bridge the gap and fund a longer retirement.</p></div>
+  <div class="faq-item"><h3>Is a £500,000 pension pot enough to retire on?</h3><p>At 4% withdrawal, £500,000 generates £20,000/year. Combined with the full State Pension (£11,502), that's £31,502/year — roughly a moderate retirement lifestyle for a single person. Whether it's "enough" depends entirely on your spending habits and lifestyle expectations.</p></div>
+  <div class="faq-item"><h3>What if I haven't saved enough?</h3><p>Options include: working longer, reducing retirement spending expectations, downsizing your home, equity release, part-time work in early retirement, or increasing pension contributions significantly in your remaining working years. Starting later just means saving more aggressively.</p></div>
+  <div class="faq-item"><h3>Should I prioritise pension over ISA?</h3><p>Generally, a pension is more tax-efficient due to contribution relief (you get 20–45% tax relief on contributions). However, ISAs offer more flexibility — you can withdraw at any age with no tax on withdrawals. Most people benefit from using both.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Retirement Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://retirement-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>How much money do you actually need to retire comfortably in the UK? This guide covers the PLSA retirement standards, the 4% rule, and how to calculate your own target.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -60,6 +928,72 @@
     <title>How to Calculate BMI and What Your Number Actually Means</title>
     <link>https://tabutility.com/blog/how-to-calculate-bmi/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-bmi/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>What Is BMI?</h2>
+<p>Body Mass Index (BMI) is a number calculated from your height and weight. It's used by doctors, nurses, and health organisations worldwide as a quick screening tool for weight-related health risks.</p>
+<p>Despite its limitations, BMI remains the most practical large-scale health screening tool available — it requires only two measurements and correlates reasonably well with body fat percentage at a population level.</p>
+
+<h2>The BMI Formula</h2>
+<p>BMI is calculated as:</p>
+<div class="formula">BMI = weight (kg) ÷ height (m)²</div>
+<p>For example: weight 75kg, height 1.75m → BMI = 75 ÷ (1.75 × 1.75) = 75 ÷ 3.0625 = <strong>24.5</strong></p>
+<p>In imperial units: BMI = (weight in lbs × 703) ÷ height in inches²</p>
+
+<h2>BMI Ranges for Adults</h2>
+<p>The WHO classification system (used in the UK):</p>
+<ul>
+  <li><strong>Below 18.5</strong> — Underweight. May indicate malnutrition or an underlying health condition.</li>
+  <li><strong>18.5–24.9</strong> — Healthy weight. Associated with lowest health risks at population level.</li>
+  <li><strong>25–29.9</strong> — Overweight. Increased risk of some conditions; lifestyle changes often recommended.</li>
+  <li><strong>30–34.9</strong> — Obese (Class I). Significant increased risk of type 2 diabetes, heart disease, and some cancers.</li>
+  <li><strong>35–39.9</strong> — Obese (Class II). High risk; medical intervention usually recommended.</li>
+  <li><strong>40+</strong> — Severely obese (Class III). Very high risk; specialist care typically required.</li>
+</ul>
+
+<h2>BMI for Different Ethnicities</h2>
+<p>Research shows that people of Asian, Black African, and some other ethnic backgrounds have higher health risks at lower BMI values. NHS guidance uses adjusted thresholds for South Asian, Chinese, and other Asian populations:</p>
+<ul>
+  <li>Overweight: BMI 23+ (vs 25+ for white European populations)</li>
+  <li>Obese: BMI 27.5+ (vs 30+)</li>
+</ul>
+<p>These adjusted thresholds are important — someone of South Asian heritage with a BMI of 24 may be at similar health risk to a white European with a BMI of 26–27.</p>
+
+<h2>What BMI Doesn't Tell You</h2>
+<p>BMI is a useful screening tool but has significant limitations:</p>
+<ul>
+  <li><strong>It ignores muscle</strong> — a muscular athlete can have a BMI in the "overweight" or even "obese" range despite having very low body fat. Many professional rugby players fall into this category.</li>
+  <li><strong>It ignores fat distribution</strong> — where you carry fat matters. Visceral fat (around your organs) is more dangerous than subcutaneous fat (under the skin). Waist circumference is a better predictor of metabolic health than BMI alone.</li>
+  <li><strong>It treats men and women the same</strong> — women naturally carry more body fat than men at the same BMI, which isn't reflected in the standard ranges.</li>
+  <li><strong>It ignores age</strong> — older adults naturally carry more body fat and may have more muscle loss, meaning the same BMI represents different health risks at different ages.</li>
+</ul>
+
+<h2>Better Indicators to Use Alongside BMI</h2>
+<ul>
+  <li><strong>Waist circumference</strong> — high risk: over 94cm (men) or 80cm (women)</li>
+  <li><strong>Waist-to-height ratio</strong> — aim for waist circumference less than half your height</li>
+  <li><strong>Body fat percentage</strong> — measured by DEXA scan, bioelectrical impedance, or calipers</li>
+  <li><strong>Blood pressure, cholesterol, and blood sugar</strong> — direct markers of metabolic health</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is BMI accurate for children?</h3><p>Children use age- and sex-specific BMI percentiles rather than the adult ranges. A child's BMI is compared against other children of the same age and sex. The NHS has a separate healthy weight calculator for children aged 2–17.</p></div>
+  <div class="faq-item"><h3>Can I be healthy with a high BMI?</h3><p>Yes — BMI is a population-level screening tool, not an individual diagnosis. Someone with a BMI of 27–28 who exercises regularly, has healthy blood pressure and cholesterol, and eats well may be healthier than someone with a BMI of 22 who is sedentary with poor metabolic markers.</p></div>
+  <div class="faq-item"><h3>What BMI is considered dangerously low?</h3><p>A BMI below 17.5 is often associated with significant health risks and is sometimes used as a clinical indicator in eating disorder assessment. If your BMI is below 18.5, a GP appointment is worth considering.</p></div>
+  <div class="faq-item"><h3>How quickly can I change my BMI?</h3><p>Realistically, sustainable weight loss of 0.5–1kg per week is achievable. At 1kg/week, a person who is 1.75m tall would see their BMI drop by roughly 0.3 points per week. Setting a realistic 3–6 month goal tends to produce more lasting results than crash approaches.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the BMI Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://bmi-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>BMI is the most widely used health screening tool in the world. Learn how to calculate it, what the ranges mean, and where it falls short as a health measure.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -67,6 +1001,71 @@
     <title>UK Stamp Duty in 2025: How Much Will You Pay When Buying a Home?</title>
     <link>https://tabutility.com/blog/uk-stamp-duty-guide/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/uk-stamp-duty-guide/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>What Is Stamp Duty?</h2>
+<p>Stamp Duty Land Tax (SDLT) is a tax paid when you buy property or land over a certain price in England and Northern Ireland. Scotland has its own Land and Buildings Transaction Tax (LBTT) and Wales has Land Transaction Tax (LTT) — the rates and thresholds differ.</p>
+<p>Stamp duty is paid to HMRC within 14 days of completing your property purchase. Your solicitor or conveyancer usually handles this.</p>
+
+<h2>Stamp Duty Rates in England (2025)</h2>
+<p>Stamp duty is charged on the portion of the purchase price within each band — similar to how income tax works. You don't pay the higher rate on the entire purchase price, only on the slice above each threshold.</p>
+<p><strong>Standard residential rates (from April 2025):</strong></p>
+<ul>
+  <li>Up to £125,000 — 0%</li>
+  <li>£125,001 to £250,000 — 2%</li>
+  <li>£250,001 to £925,000 — 5%</li>
+  <li>£925,001 to £1.5 million — 10%</li>
+  <li>Above £1.5 million — 12%</li>
+</ul>
+<p><em>Note: The temporary thresholds introduced in 2022 (zero rate up to £250,000) ended in March 2025. The rates above reflect the current position.</em></p>
+
+<h2>First-Time Buyer Relief</h2>
+<p>First-time buyers get a discount:</p>
+<ul>
+  <li>No stamp duty on the first £300,000 of a property purchase</li>
+  <li>5% on the portion from £300,001 to £500,000</li>
+  <li>No relief available if the property costs more than £500,000 — standard rates apply in full</li>
+</ul>
+<p>To qualify, every buyer named on the purchase must be a first-time buyer. If you're buying jointly with someone who has owned property before, you don't qualify for first-time buyer relief.</p>
+
+<h2>Buy-to-Let and Second Home Surcharge</h2>
+<p>If you're buying an additional residential property (including buy-to-let), you pay an extra 3% surcharge on top of the standard rates. This applies on the entire purchase price from pound one.</p>
+<p>Example: £250,000 buy-to-let → standard duty would be £2,500, but with the surcharge it's £10,000 (the 3% applies to the full £250,000 as well as the standard rates on each band).</p>
+
+<h2>How to Calculate Your Stamp Duty</h2>
+<p>Example for a standard purchase at £350,000:</p>
+<ul>
+  <li>First £125,000 at 0% = £0</li>
+  <li>Next £125,000 (£125k–£250k) at 2% = £2,500</li>
+  <li>Remaining £100,000 (£250k–£350k) at 5% = £5,000</li>
+  <li><strong>Total = £7,500</strong></li>
+</ul>
+
+<h2>Who Else Gets Relief?</h2>
+<ul>
+  <li><strong>Charities</strong> — exempt when buying for charitable purposes</li>
+  <li><strong>Zero-carbon homes</strong> — currently no exemption; this was removed</li>
+  <li><strong>Multiple dwellings relief</strong> — when buying multiple properties in a single transaction (though rules were tightened in 2024)</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>When do I have to pay stamp duty?</h3><p>Within 14 days of completing your property purchase. Your solicitor usually handles this automatically as part of the conveyancing process.</p></div>
+  <div class="faq-item"><h3>Can I add stamp duty to my mortgage?</h3><p>Some lenders will include stamp duty in the mortgage amount, but this increases your loan size and means paying interest on the stamp duty for the life of the mortgage. It's generally better to pay stamp duty from savings if possible.</p></div>
+  <div class="faq-item"><h3>Do I pay stamp duty on a shared ownership property?</h3><p>You can choose to pay stamp duty on the full market value of the property (staircasing method) or just on the share you're buying. The latter delays the remaining duty until you buy additional shares or sell.</p></div>
+  <div class="faq-item"><h3>Is stamp duty the same in Scotland and Wales?</h3><p>No. Scotland has Land and Buildings Transaction Tax (LBTT) and Wales has Land Transaction Tax (LTT), each with their own rates and thresholds. Our calculator covers England and Northern Ireland (SDLT) only.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the UK Stamp Duty Calculator</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://uk-stamp-duty-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>Stamp Duty Land Tax (SDLT) is one of the biggest costs of buying property in England. This guide explains the current rates, thresholds, and who qualifies for relief.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -74,6 +1073,67 @@
     <title>How to Get the Best Exchange Rate When Sending Money Abroad</title>
     <link>https://tabutility.com/blog/best-currency-exchange-rate/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/best-currency-exchange-rate/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>Why Your Bank's Exchange Rate Is Worse Than You Think</h2>
+<p>When you send money abroad through a traditional bank, you'll typically see a quoted exchange rate that looks reasonable. What you often don't see is the markup — the difference between the real mid-market rate (what you'd find on Google or Reuters) and what the bank actually gives you.</p>
+<p>UK high-street banks typically add a markup of 2–4% on top of the mid-market rate, plus a fixed transaction fee of £5–25. On a £5,000 international transfer, that's £100–200 in hidden costs beyond the stated fees.</p>
+
+<h2>Understanding Exchange Rates</h2>
+<p><strong>The mid-market rate</strong> (also called the interbank rate or spot rate) is the midpoint between buying and selling prices in the global currency market. It's the "real" exchange rate — the one you see on Google, XE.com, or our converter.</p>
+<p><strong>The retail rate</strong> is what banks and exchange services offer customers. It's always worse than the mid-market rate — that's how they make money. The gap is called the spread or markup.</p>
+<p>The key is finding services that charge the smallest markup and most transparent fees.</p>
+
+<h2>Where to Get the Best Exchange Rate</h2>
+<p><strong>Specialist transfer services</strong> consistently beat banks on exchange rates:</p>
+<ul>
+  <li><strong>Wise (formerly TransferWise)</strong> — uses the real mid-market rate and charges a small, transparent percentage fee. One of the most widely trusted international transfer services.</li>
+  <li><strong>Revolut</strong> — mid-market rate on weekdays (small markup on weekends), good for regular international use.</li>
+  <li><strong>OFX</strong> — good for larger transfers (£5,000+), dedicated account managers available.</li>
+  <li><strong>CurrencyFair</strong> — peer-to-peer matching model, can get very close to mid-market on popular currency pairs.</li>
+</ul>
+<p><strong>What to avoid:</strong></p>
+<ul>
+  <li>Airport exchange kiosks — typically 8–12% worse than mid-market. Use ATMs instead.</li>
+  <li>Hotel exchange desks — similarly poor rates.</li>
+  <li>Sending money via PayPal — convenient but their exchange rates include a 3–4% markup.</li>
+</ul>
+
+<h2>Tips for Getting the Best Rate</h2>
+<ul>
+  <li><strong>Compare before you send</strong> — use a comparison site like Monito or MoneySavingExpert's tool to compare rates across providers in real time.</li>
+  <li><strong>Transfer larger amounts less often</strong> — most services charge a fixed fee plus a percentage. Fewer larger transfers are more efficient than many small ones.</li>
+  <li><strong>Watch the timing</strong> — currency rates fluctuate constantly. For large transfers, monitoring the rate for a few days and setting a rate alert can save meaningful money.</li>
+  <li><strong>Use a forward contract for very large amounts</strong> — if you're buying property abroad, you can lock in today's exchange rate for a future transfer, protecting against adverse movements.</li>
+</ul>
+
+<h2>How Much Can You Save?</h2>
+<p>Example: sending £10,000 to euros</p>
+<ul>
+  <li>Barclays: approx. 2.5% markup + £25 fee → you lose around £275</li>
+  <li>Wise: approx. 0.4% fee → you lose around £40</li>
+  <li><strong>Saving: ~£235 on a single transfer</strong></li>
+</ul>
+<p>Over multiple transfers — common for expats, remote workers, or landlords with overseas properties — these savings compound quickly.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is the mid-market exchange rate?</h3><p>The mid-market rate is the midpoint between buying and selling prices in the global currency market — the "real" rate before any markup. It's what you see on Google Finance, XE.com, or our currency converter. No bank or transfer service gives you this rate for free.</p></div>
+  <div class="faq-item"><h3>Is it safe to use online money transfer services?</h3><p>Yes — reputable services like Wise, Revolut, and OFX are regulated by the Financial Conduct Authority (FCA) in the UK and equivalent bodies internationally. They hold your money in segregated accounts and are required to process your transfer. Check FCA registration before using any service.</p></div>
+  <div class="faq-item"><h3>How long does an international transfer take?</h3><p>It depends on the currency pair and service. Wise typically completes transfers within 1–2 business days for common currencies, often faster. Bank transfers can take 3–5 business days. Some services offer instant transfers for an additional fee.</p></div>
+  <div class="faq-item"><h3>Should I use a credit card abroad?</h3><p>A specialist travel credit card (like Starling or Chase UK) or debit card charges no foreign transaction fee and uses the mid-market rate. Standard credit cards add 2–3% foreign transaction fees. Never choose to pay in sterling when a card terminal asks — always pay in local currency.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Currency Converter</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://currency-converter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>Banks charge far more than they should for currency exchange. Learn how exchange rates work, where the hidden fees are, and how to get the best rate when sending money internationally.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -81,6 +1141,85 @@
     <title>Why Word Count Matters: A Guide for Writers, Students and Content Creators</title>
     <link>https://tabutility.com/blog/why-word-count-matters/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/why-word-count-matters/</guid>
+    <content:encoded><![CDATA[<!-- Top ad -->
+  <h2>Why Word Count Matters</h2>
+<p>Word count isn't just a bureaucratic requirement — it's a proxy for depth, effort, and readability. Too short and you appear superficial. Too long and you risk losing your reader. Understanding the right length for different types of writing is a genuine skill.</p>
+
+<h2>Word Count for Different Types of Writing</h2>
+
+<h3>Academic Essays and Assignments</h3>
+<ul>
+  <li><strong>Short essay (school)</strong> — 500–800 words</li>
+  <li><strong>Standard university essay</strong> — 1,500–3,000 words</li>
+  <li><strong>Extended essay / dissertation chapter</strong> — 5,000–10,000 words</li>
+  <li><strong>PhD thesis</strong> — 80,000–100,000 words (UK standard)</li>
+</ul>
+<p>Universities typically specify a word count range and penalise you for being significantly over or under. Usually 10% either side is acceptable — but check your institution's policy.</p>
+
+<h3>Blog Posts and Online Articles</h3>
+<ul>
+  <li><strong>Short-form / news</strong> — 300–600 words. Good for quick updates, announcements.</li>
+  <li><strong>Standard blog post</strong> — 800–1,500 words. Most common format, covers a topic reasonably thoroughly.</li>
+  <li><strong>Long-form / pillar content</strong> — 2,000–4,000 words. Best for SEO, comprehensive guides, and topics where depth adds genuine value.</li>
+  <li><strong>Cornerstone content</strong> — 5,000–10,000+ words. Ultimate guides, resources that become reference points.</li>
+</ul>
+<p>For SEO, Google tends to rank longer content for competitive informational queries — not because length is the goal, but because longer content tends to cover topics more comprehensively.</p>
+
+<h3>Business Writing</h3>
+<ul>
+  <li><strong>Email</strong> — under 200 words ideally. If it's longer, consider whether it should be a document or meeting.</li>
+  <li><strong>Executive summary</strong> — 150–250 words</li>
+  <li><strong>Business report</strong> — 1,000–5,000 words depending on scope</li>
+  <li><strong>Proposal</strong> — 1,000–2,500 words</li>
+</ul>
+
+<h3>Creative Writing</h3>
+<ul>
+  <li><strong>Flash fiction</strong> — under 1,000 words</li>
+  <li><strong>Short story</strong> — 1,500–7,500 words</li>
+  <li><strong>Novella</strong> — 20,000–50,000 words</li>
+  <li><strong>Novel</strong> — 70,000–100,000 words (genre dependent; romance 50k–100k, literary fiction 70k–120k, fantasy can run to 120k+)</li>
+</ul>
+
+<h3>Social Media</h3>
+<ul>
+  <li><strong>Tweet / X post</strong> — under 280 characters (~50 words)</li>
+  <li><strong>LinkedIn post</strong> — 150–300 words for best engagement</li>
+  <li><strong>Instagram caption</strong> — 125–150 words (more gets cut off)</li>
+</ul>
+
+<h2>Reading Time as a Guide</h2>
+<p>The average adult reads approximately 200–250 words per minute. This gives you a quick way to estimate reading time:</p>
+<ul>
+  <li>500 words ≈ 2–2.5 minutes</li>
+  <li>1,000 words ≈ 4–5 minutes</li>
+  <li>2,000 words ≈ 8–10 minutes</li>
+</ul>
+<p>For online content, studies suggest the "sweet spot" for engagement is 7 minutes — around 1,600–1,700 words. Longer pieces see higher scroll depth but lower completion rates.</p>
+
+<h2>The Real Rule: Write What It Needs</h2>
+<p>Word count targets are guides, not goals. A 1,000-word article padded to 2,000 with repetition and filler is worse than a concise 800-word piece that answers the question completely.</p>
+<p>Write until you've thoroughly addressed your topic. Then stop.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Does word count include references and footnotes?</h3><p>It depends on your institution or publisher's guidelines. Most university essays exclude reference lists but include in-text citations. Always check the specific rules — they vary significantly.</p></div>
+  <div class="faq-item"><h3>What is the ideal blog post length for SEO?</h3><p>For competitive informational queries, 1,500–2,500 words tends to perform well. But the most important factor is whether the content genuinely answers the reader's question better than competing pages — length is a byproduct of thoroughness, not the goal itself.</p></div>
+  <div class="faq-item"><h3>How many words per page is standard?</h3><p>At standard formatting (12pt font, double-spaced, 1-inch margins), approximately 250–300 words per page. Single-spaced is roughly 500–600 words per page. This varies with font choice and margin size.</p></div>
+  <div class="faq-item"><h3>Does a word counter count numbers as words?</h3><p>Yes — most word counters, including ours, count any string of characters separated by spaces as a word. So "2025" counts as one word, "£1,500" counts as one word, and a hyphenated compound like "well-known" typically counts as one word.</p></div>
+</div>
+
+  <!-- Tool CTA -->
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Word Counter</strong>
+      <span>Free, instant, no sign-up required</span>
+    </div>
+    <a href="https://word-counter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  </div>
+
+  <!-- Bottom ad -->
+  ]]></content:encoded>
     <description>Whether you're writing an essay, a blog post, or a job application, word count affects how your work is received. Learn the ideal word counts for every type of writing.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -88,6 +1227,231 @@
     <title>APR Explained: The Only Number That Matters When Borrowing</title>
     <link>https://tabutility.com/blog/apr-explained/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/apr-explained/</guid>
+    <content:encoded><![CDATA[<p class="lead">APR — Annual Percentage Rate — is the single most important number when comparing any borrowing product. Yet most people either ignore it or don't fully understand what it includes. This guide explains exactly what APR is, how it's calculated, where lenders use it to mislead you, and how to use it properly when making financial decisions.</p>
+
+  <div class="toc">
+    <h3>In this guide</h3>
+    <ol>
+      <li><a href="#what-is">What APR actually is</a></li>
+      <li><a href="#vs-rate">APR vs interest rate: the key difference</a></li>
+      <li><a href="#whats-included">What APR includes and excludes</a></li>
+      <li><a href="#how-calculated">How APR is calculated</a></li>
+      <li><a href="#representative">Representative vs personal APR</a></li>
+      <li><a href="#by-product">APR across different products</a></li>
+      <li><a href="#misleads">Where APR misleads you</a></li>
+      <li><a href="#credit-score">How your credit score affects your APR</a></li>
+      <li><a href="#bnpl">APR and buy now pay later</a></li>
+      <li><a href="#mortgage">APRC for mortgages</a></li>
+      <li><a href="#how-to-use">How to use APR properly</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is">What APR Actually Is</h2>
+  <p>APR stands for Annual Percentage Rate. It's the total yearly cost of borrowing money, expressed as a percentage of the loan amount — including the interest rate plus most mandatory fees and charges.</p>
+  <p>The key word is <em>annual</em>. APR normalises costs into a yearly figure, which allows you to compare products that might have very different fee structures, loan terms, or payment schedules on an apples-to-apples basis.</p>
+  <p>APR was designed specifically to solve the problem of lenders obscuring the true cost of borrowing. Before APR became a standardised disclosure requirement, lenders could advertise a low interest rate while hiding substantial fees. APR forces everything into one comparable number.</p>
+
+  <div class="callout">
+    <strong>The legal requirement</strong>
+    <p>Under UK law (the Consumer Credit Act), lenders must display APR prominently in all credit advertisements. This makes comparison shopping much easier — though as we'll see, APR still has limitations that require careful interpretation.</p>
+  </div>
+
+  <h2 id="vs-rate">APR vs Interest Rate: The Key Difference</h2>
+  <p>These two numbers are frequently confused. Here's the simple distinction:</p>
+  <ul>
+    <li><strong>Interest rate</strong> — the cost of borrowing the money itself, expressed as a yearly percentage of the loan balance</li>
+    <li><strong>APR</strong> — the interest rate plus most mandatory fees and charges, giving you the total yearly cost of the product</li>
+  </ul>
+
+  <div class="example">
+    <h3>💡 Clear example</h3>
+    <p>You take a £10,000 personal loan over 3 years. The lender charges 6% interest and a £200 arrangement fee.</p>
+    <p>Interest rate: 6.0%</p>
+    <p>APR: 7.2% (because the £200 fee, spread over 3 years, adds approximately 1.2% per year to the effective cost)</p>
+    <p>The APR is always the same or higher than the interest rate. If they're identical, there are no additional fees included.</p>
+  </div>
+
+  <p>This matters because two loans with the same interest rate can have very different APRs if one charges more fees. Always compare APRs, not just interest rates.</p>
+
+  <h2 id="whats-included">What APR Includes and Excludes</h2>
+  <h3>APR includes:</h3>
+  <ul>
+    <li>The interest rate</li>
+    <li>Arrangement or origination fees</li>
+    <li>Mandatory insurance (e.g. payment protection if the lender requires it)</li>
+    <li>Any other mandatory charges required to obtain the credit</li>
+  </ul>
+
+  <h3>APR does NOT include:</h3>
+  <ul>
+    <li>Optional fees (such as payment protection insurance you choose to buy)</li>
+    <li>Late payment charges</li>
+    <li>Early repayment charges</li>
+    <li>Charges for exceeding your credit limit</li>
+    <li>Costs you can avoid through your behaviour</li>
+  </ul>
+
+  <div class="warning">
+    <strong>The exclusions matter</strong>
+    <p>Some lenders levy significant charges for early repayment. If you plan to pay off a loan early, you need to check the early repayment charge (ERC) separately — it won't appear in the APR. A loan with a lower APR but a high ERC can end up costing more than a loan with a slightly higher APR and no ERC.</p>
+  </div>
+
+  <h2 id="how-calculated">How APR Is Calculated</h2>
+  <p>The precise calculation of APR uses the internal rate of return (IRR) method — it finds the interest rate that makes the present value of all future payments equal to the amount borrowed minus fees.</p>
+  <div class="formula-box">
+    <div class="formula">∑ [Cₖ / (1 + APR/100)^(tₖ)] = 0</div>
+    <div class="formula-sub">Where Cₖ = each cashflow (drawdowns and repayments) and tₖ = the time of each cashflow in years</div>
+  </div>
+  <p>You don't need to calculate this manually — lenders are required to display it. But understanding the formula helps you grasp why APR can behave unexpectedly in certain situations, particularly for short-term loans and products with large upfront fees.</p>
+
+  <h3>A simpler worked example</h3>
+  <p>Loan: £5,000 over 2 years at 8% interest with a £100 arrangement fee:</p>
+  <ul>
+    <li>Monthly payment: £226.14 (calculated from the interest rate)</li>
+    <li>Total repaid: £226.14 × 24 = £5,427.36</li>
+    <li>Total interest: £427.36</li>
+    <li>Total cost including fee: £527.36</li>
+    <li>APR: approximately 9.8% (the £100 fee effectively adds ~1.8% to the annual cost)</li>
+  </ul>
+
+  <h2 id="representative">Representative vs Personal APR</h2>
+  <p>This is one of the most misunderstood aspects of APR in financial advertising.</p>
+  <p><strong>Representative APR</strong> is the rate that at least 51% of successful applicants will receive. Lenders are legally required to display this in advertising. It's meant to be a realistic guide to the rate most people will get.</p>
+  <p><strong>Personal APR</strong> is the rate you're actually offered based on your individual credit assessment. It appears in your offer letter or agreement — and it may be significantly higher than the representative APR.</p>
+
+  <div class="warning">
+    <strong>The 51% problem</strong>
+    <p>Up to 49% of people who are approved for credit may receive a higher rate than the advertised representative APR. If you have an average or below-average credit score, always assume you'll be offered worse terms than the headline figure. Use eligibility checkers with soft searches to see your likely actual rate before applying.</p>
+  </div>
+
+  <h2 id="by-product">APR Across Different Products</h2>
+  <p>Different credit products have very different typical APR ranges. Here's a reference guide for the UK market in 2026:</p>
+
+  <table>
+    <tr><th>Product Type</th><th>Typical APR Range</th><th>Notes</th></tr>
+    <tr class="good"><td>Mortgage</td><td>4–7%</td><td>Secured on property; lowest rates available</td></tr>
+    <tr class="good"><td>Personal loan (excellent credit)</td><td>5–8%</td><td>Best rates for 700+ credit score</td></tr>
+    <tr><td>Personal loan (good credit)</td><td>8–15%</td><td>Most common range for approved applicants</td></tr>
+    <tr><td>Car finance (PCP/HP)</td><td>6–20%</td><td>Varies widely; dealer finance often expensive</td></tr>
+    <tr><td>Credit card (purchase)</td><td>20–30%</td><td>Avoid carrying a balance at these rates</td></tr>
+    <tr class="bad"><td>Store card</td><td>25–40%</td><td>Almost always worse than a standard credit card</td></tr>
+    <tr class="bad"><td>Authorised overdraft</td><td>35–40%</td><td>UK FCA capped these at 40% in 2020</td></tr>
+    <tr class="bad"><td>Short-term/payday loan</td><td>400–1,500%+</td><td>Annualised — misleadingly high for very short-term use</td></tr>
+  </table>
+
+  <h2 id="misleads">Where APR Misleads You</h2>
+  <p>APR is a useful standardised tool, but it has several important limitations:</p>
+
+  <h3>1. Short-term loans</h3>
+  <p>APR assumes you borrow for a full year. Short-term loans are designed to be repaid in days or weeks — when annualised, their rates look astronomical. A £100 loan for 30 days with a £10 fee has an APR of approximately 122%. This sounds extreme, but the actual cost is only £10 — not £122.</p>
+  <p>This doesn't mean short-term loans are good value — the absolute cost is still high relative to the amount borrowed. But APR is particularly misleading for evaluating them.</p>
+
+  <h3>2. Fixed-rate mortgages</h3>
+  <p>A 2-year fixed mortgage has its APR calculated over the full 25-year mortgage term, even though the rate changes after 2 years. This makes short-term fixed rates appear to have worse APRs than they really are. The APRC (Annual Percentage Rate of Charge) tries to solve this — see below.</p>
+
+  <h3>3. 0% promotional deals</h3>
+  <p>A 0% purchase credit card has a 0% APR during the promotional period. But the revert rate after the promotion can be 20–30%. APR doesn't easily capture this two-phase cost structure. Always check what the rate reverts to and when.</p>
+
+  <h3>4. Products you repay early</h3>
+  <p>APR assumes you hold the product for its full stated term. If you repay a personal loan 12 months early, the actual cost differs from the APR. The "total amount repayable" figure is often more useful for fixed-term loans — it tells you exactly how many pounds you'll pay back.</p>
+
+  <h2 id="credit-score">How Your Credit Score Affects Your APR</h2>
+  <p>Your credit score is the most significant factor determining the APR you're offered. Lenders use it to assess how likely you are to repay, and they price risk accordingly — lower scores receive higher APRs.</p>
+
+  <table>
+    <tr><th>Credit Score Band</th><th>What Lenders See</th><th>Typical Personal Loan APR</th></tr>
+    <tr class="good"><td>Excellent (700+)</td><td>Very low risk</td><td>5–8%</td></tr>
+    <tr class="good"><td>Good (660–699)</td><td>Low risk</td><td>8–12%</td></tr>
+    <tr><td>Fair (580–659)</td><td>Moderate risk</td><td>12–20%</td></tr>
+    <tr class="bad"><td>Poor (500–579)</td><td>Higher risk</td><td>20–35%</td></tr>
+    <tr class="bad"><td>Very poor (below 500)</td><td>Declined or very high rate</td><td>35%+ or declined</td></tr>
+  </table>
+
+  <p>The difference between excellent and fair credit on a £10,000 loan over 5 years can be thousands of pounds in additional interest. Improving your credit score before applying for significant credit can save substantial money.</p>
+
+  <h3>How to improve your APR eligibility</h3>
+  <ul>
+    <li>Check your credit report for errors (all three main UK agencies offer free reports: Experian, Equifax, TransUnion)</li>
+    <li>Reduce credit card utilisation below 30%</li>
+    <li>Register on the electoral roll at your current address</li>
+    <li>Avoid multiple credit applications in a short period</li>
+    <li>Maintain a long history of on-time payments</li>
+    <li>Close unused credit accounts that were opened a long time ago can sometimes help</li>
+  </ul>
+
+  <h2 id="bnpl">APR and Buy Now Pay Later</h2>
+  <p>Buy Now Pay Later (BNPL) products like Klarna, Clearpay, and Laybuy have grown enormously. Many offer 0% interest for short periods — but understanding the APR picture requires care:</p>
+  <ul>
+    <li><strong>Pay in 3 (0% for 6–8 weeks)</strong> — truly 0% APR if paid on time. Late payment fees apply.</li>
+    <li><strong>Pay in 30 days</strong> — 0% APR. No fees if paid on time.</li>
+    <li><strong>BNPL instalment plans (3–36 months)</strong> — some are genuinely 0%, others charge rates of 18–30% APR after an initial period.</li>
+    <li><strong>BNPL "credit" products</strong> — some BNPL providers offer longer-term credit at standard credit rates. Read the terms carefully.</li>
+  </ul>
+
+  <div class="warning">
+    <strong>BNPL and credit reporting</strong>
+    <p>As of 2026, BNPL providers are increasingly reporting to credit reference agencies. Missed BNPL payments can now damage your credit score, which in turn affects the APR you're offered on future credit. Treat BNPL like any other credit obligation.</p>
+  </div>
+
+  <h2 id="mortgage">APRC for Mortgages</h2>
+  <p>Mortgages use a slightly different measure: APRC (Annual Percentage Rate of Charge). It was introduced under the EU Mortgage Credit Directive and is designed to make mortgage comparison more reliable.</p>
+  <p>APRC for mortgages includes:</p>
+  <ul>
+    <li>The interest rate (for the full mortgage term, not just the fixed period)</li>
+    <li>Arrangement fees</li>
+    <li>Valuation fees (if mandatory)</li>
+    <li>Legal fees charged by the lender</li>
+    <li>Any other mandatory costs</li>
+  </ul>
+  <p>For a 2-year fixed mortgage, the APRC assumes the rate reverts to the lender's Standard Variable Rate (SVR) after the initial fixed period — which is typically much higher. This is why the APRC on a 2-year fix often looks worse than the APRC on a 5-year fix: the 5-year fix applies the lower rate for longer before reverting to SVR.</p>
+  <p>The APRC is useful for comparing mortgages of the same type (e.g., comparing two 5-year fixes). It's less useful for comparing a 2-year fix against a 5-year fix, because the different assumptions about when the SVR kicks in distort the comparison.</p>
+
+  <h2 id="how-to-use">How to Use APR Properly</h2>
+  <p>Armed with the above, here's how to get the most out of APR when making borrowing decisions:</p>
+
+  <h3>Do compare APRs when:</h3>
+  <ul>
+    <li>Comparing similar products of the same type (loan vs loan, card vs card)</li>
+    <li>Choosing between personal loans of the same term length</li>
+    <li>Evaluating credit cards for balance transfers (compare the APR after any promotional period)</li>
+  </ul>
+
+  <h3>Also check "total amount repayable" when:</h3>
+  <ul>
+    <li>Comparing fixed-term loans — the total repayable in pounds is often more intuitive than APR</li>
+    <li>Evaluating whether a loan with fees is cheaper than one without</li>
+  </ul>
+
+  <h3>Always check separately:</h3>
+  <ul>
+    <li>Early repayment charges (ERC) — if you might repay early</li>
+    <li>Revert rates on 0% promotional deals — what you'll pay after the deal ends</li>
+    <li>Monthly payment amounts — affordability matters regardless of APR</li>
+    <li>Overpayment flexibility — some loans allow overpayments without penalty</li>
+  </ul>
+
+  <div class="example">
+    <h3>💡 Worked comparison</h3>
+    <p><strong>Loan A:</strong> £8,000 over 4 years, 7.9% APR, no fees. Monthly payment: £194. Total repaid: £9,312. Total interest: £1,312.</p>
+    <p><strong>Loan B:</strong> £8,000 over 4 years, 6.5% APR, £300 arrangement fee. Monthly payment: £189. Total repaid: £9,072 (including fee). Total interest: £772.</p>
+    <p>Even though Loan B has a lower APR, the total repayable is also lower — it's genuinely cheaper. The lower APR correctly identifies the better deal here. But if you planned to repay in 2 years and Loan B had an early repayment charge, the calculation could flip.</p>
+  </div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Calculate the true cost of any loan</strong>
+      <span>Enter the APR, loan amount and term — see total interest and monthly payments instantly</span>
+    </div>
+    <a href="https://apr.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open APR Calculator →</a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item"><h3>Is a lower APR always better?</h3><p>Generally yes — a lower APR means lower total borrowing costs. But context matters. A slightly higher APR with flexible terms (no early repayment charge, payment holidays, overpayment allowance) may be better value than a cheaper but inflexible product. Always check the full terms alongside the APR.</p></div>
+    <div class="faq-item"><h3>What is a good APR for a personal loan in the UK?</h3><p>In 2026, personal loan APRs range from around 5% to 35%+. Under 8% is very good and typically available only with excellent credit. 8–15% is the typical range for approved applicants with good credit. Above 20% and it's worth exploring 0% credit card alternatives for purchases or balance transfers.</p></div>
+    <div class="faq-item"><h3>Does APR affect my credit score?</h3><p>No — APR is the cost of borrowing and doesn't affect your credit score. However, applying for credit triggers a hard search that can temporarily lower your score by a few points. Use eligibility checkers (soft searches) before applying to see your likely rate without affecting your score.</p></div>
+    <div class="faq-item"><h3>What is representative APR?</h3><p>The rate that at least 51% of successful applicants receive. It must be displayed in all credit advertising. The other 49% may be offered a higher personal APR based on their credit assessment. Never assume you'll get the representative rate — use eligibility tools to check your likely personal rate first.</p></div>
+    <div class="faq-item"><h3>What is the difference between APR and APRC?</h3><p>APRC (Annual Percentage Rate of Charge) is specifically used for mortgages. It applies the full interest rate over the entire mortgage term (assuming reversion to SVR after the fixed period), making it a more complete picture of long-term mortgage cost. For comparing mortgages of the same type, APRC is more useful than the initial rate alone.</p>]]></content:encoded>
     <description>A complete guide to APR — what it includes, where it misleads you, and how to use it correctly.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -95,6 +1459,73 @@
     <title>How to Calculate Body Fat Percentage (And What It Actually Means)</title>
     <link>https://tabutility.com/blog/how-to-calculate-body-fat-percentage/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-body-fat-percentage/</guid>
+    <content:encoded><![CDATA[<h2>Why Body Fat Percentage Matters More Than BMI</h2>
+<p>BMI tells you whether your weight is proportionate to your height. Body fat percentage tells you how much of that weight is actually fat. Two people can have identical BMIs — a sedentary office worker and a trained athlete — yet have completely different health profiles.</p>
+<p>Body fat percentage is a more precise indicator of metabolic health, cardiovascular risk, and physical fitness than BMI alone. Doctors, trainers, and sports scientists use it to track progress and diagnose health risks that BMI misses.</p>
+
+<h2>The US Navy Method (No Equipment Needed)</h2>
+<p>The most practical way to estimate body fat without lab equipment is the US Navy circumference method. It requires only a tape measure.</p>
+
+<h3>For men:</h3>
+<div class="formula">BF% = 495 ÷ (1.0324 − 0.19077 × log(waist − neck) + 0.15456 × log(height)) − 450</div>
+<p>Measurements needed: waist circumference (at navel), neck circumference, height. All in centimetres.</p>
+
+<h3>For women:</h3>
+<div class="formula">BF% = 495 ÷ (1.29579 − 0.35004 × log(waist + hip − neck) + 0.22100 × log(height)) − 450</div>
+<p>Measurements needed: waist, hip, neck, height. All in centimetres.</p>
+<p>The Navy method is accurate to within 3–4% of DEXA scan results for most people. It is less reliable for very lean or very muscular individuals.</p>
+
+<h2>Healthy Body Fat Percentage Ranges</h2>
+<table>
+  <tr><th>Category</th><th>Men</th><th>Women</th></tr>
+  <tr><td>Essential fat (minimum for organ function)</td><td>2–5%</td><td>10–13%</td></tr>
+  <tr><td>Athletes</td><td>6–13%</td><td>14–20%</td></tr>
+  <tr><td>Fit / healthy</td><td>14–17%</td><td>21–24%</td></tr>
+  <tr><td>Acceptable</td><td>18–24%</td><td>25–31%</td></tr>
+  <tr><td>Obese</td><td>25%+</td><td>32%+</td></tr>
+</table>
+<p>These ranges come from the American Council on Exercise (ACE) and are widely used in fitness contexts. Clinical classifications may differ slightly.</p>
+
+<h2>Other Measurement Methods</h2>
+<h3>Skinfold calipers</h3>
+<p>A trained tester pinches skin at multiple sites (typically 3, 4, or 7 sites) and feeds the measurements into a formula. Accuracy depends heavily on the tester's technique. When done correctly, within 3–5% of DEXA.</p>
+
+<h3>Bioelectrical impedance analysis (BIA)</h3>
+<p>Consumer body fat scales and gym machines use a low electrical current to estimate fat vs lean mass. Convenient but inconsistent — results vary with hydration levels, time of day, and whether you've eaten recently. Fine for tracking trends, not precise readings.</p>
+
+<h3>DEXA scan</h3>
+<p>Dual-energy X-ray absorptiometry is the gold standard for body composition measurement. It distinguishes fat, lean mass, and bone density across different body regions. Highly accurate (±1.5%), but costs £100–£200 per scan and isn't available everywhere.</p>
+
+<h3>Hydrostatic weighing</h3>
+<p>You are weighed underwater. Based on the principle that fat floats and muscle sinks, this gives a highly accurate body fat reading. Mostly available at universities and specialist sports labs.</p>
+
+<h2>Body Fat vs BMI: Which Should You Use?</h2>
+<p>Both metrics have a place. BMI is quick, free, and useful at a population level. Body fat percentage is more meaningful for individuals — particularly those who are very muscular (where BMI overestimates risk) or who carry weight in dangerous places (where BMI underestimates visceral fat).</p>
+<p>If you can only track one thing, body fat percentage plus waist circumference gives a more complete picture than BMI alone.</p>
+
+<h2>How to Reduce Body Fat Effectively</h2>
+<ul>
+  <li><strong>Calorie deficit</strong> — the foundation. 500 kcal below maintenance per day produces roughly 0.5kg fat loss per week.</li>
+  <li><strong>Resistance training</strong> — preserves muscle while losing fat, improving your body fat percentage more than cardio alone.</li>
+  <li><strong>Protein intake</strong> — aim for 1.6–2.2g per kg of bodyweight daily to support muscle retention during a deficit.</li>
+  <li><strong>Sleep and stress</strong> — cortisol from chronic stress and poor sleep promotes fat storage, especially visceral fat. Often overlooked.</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is a healthy body fat percentage for men?</h3><p>For men, 14–17% is generally considered fit, 18–24% acceptable, and above 25% is classified as obese by most fitness standards. Athletes often sit between 6–13%. Below 5% is below essential fat levels and not sustainable.</p></div>
+  <div class="faq-item"><h3>What is a healthy body fat percentage for women?</h3><p>Women naturally carry more essential fat due to hormonal and reproductive physiology. 21–24% is fit, 25–31% acceptable. Below 13% can impair hormonal function and bone health. Above 32% is generally classified as obese.</p></div>
+  <div class="faq-item"><h3>Is the US Navy method accurate?</h3><p>For most people it is accurate to within 3–4% of DEXA scan results — good enough for tracking progress over time. It becomes less reliable at extremes: very lean individuals (where small measurement errors matter more) and very muscular individuals (where the formula assumptions break down).</p></div>
+  <div class="faq-item"><h3>How quickly can I reduce body fat?</h3><p>Realistically, 0.5–1% body fat per month is a sustainable target. Rapid fat loss approaches often sacrifice muscle mass, which lowers your metabolic rate and makes regain more likely. Patience combined with consistent resistance training and a modest calorie deficit produces the best long-term results.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Body Fat Calculator</strong>
+      <span>Free Navy method calculator — no sign-up required</span>
+    </div>
+    <a href="https://body-fat-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Body fat percentage tells you more about your health than BMI alone. Learn how to calculate it, what the healthy ranges are, and the most accurate measurement methods.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -102,6 +1533,74 @@
     <title>How Much Water Should You Drink Per Day? The Real Answer</title>
     <link>https://tabutility.com/blog/how-much-water-should-you-drink-per-day/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-much-water-should-you-drink-per-day/</guid>
+    <content:encoded><![CDATA[<h2>Where Does the "8 Glasses a Day" Rule Come From?</h2>
+<p>The "8×8" recommendation — eight 8-ounce glasses per day, totalling about 1.9 litres — has been repeated so often it feels scientific. In reality, it has almost no clinical basis. It appears to have originated from a 1945 US dietary recommendation that was widely misquoted and has persisted through decades of health messaging.</p>
+<p>The actual science is more nuanced: your hydration needs vary significantly based on your body weight, activity level, diet, climate, and health status.</p>
+
+<h2>How to Calculate Your Personal Water Intake</h2>
+<p>The most widely cited evidence-based formula used by dietitians is:</p>
+<div class="formula">Daily water (ml) = body weight (kg) × 35</div>
+<p>So a 70kg adult needs approximately 70 × 35 = <strong>2,450 ml (2.45 litres)</strong> as a baseline.</p>
+
+<h3>Adjustments to make:</h3>
+<ul>
+  <li><strong>Exercise</strong> — add 500–750ml per hour of moderate exercise; more for intense or prolonged activity in heat.</li>
+  <li><strong>Hot climate</strong> — add 500–1,000ml on hot days or if you work in a hot environment.</li>
+  <li><strong>Pregnancy</strong> — NHS recommends an additional 300ml per day; breastfeeding requires roughly an additional 500–700ml.</li>
+  <li><strong>High-fibre diet</strong> — fibre absorbs water; increase intake slightly if you eat a high-fibre diet.</li>
+  <li><strong>Illness with fever, vomiting, or diarrhoea</strong> — significant extra hydration needed; oral rehydration salts may be appropriate.</li>
+</ul>
+
+<h2>Official Recommendations</h2>
+<table>
+  <tr><th>Organisation</th><th>Men</th><th>Women</th></tr>
+  <tr><td>European Food Safety Authority (EFSA)</td><td>2.5 litres/day total</td><td>2.0 litres/day total</td></tr>
+  <tr><td>NHS (UK)</td><td colspan="2">6–8 glasses (~1.2–1.6 litres) from drinks alone</td></tr>
+  <tr><td>US National Academies</td><td>3.7 litres total</td><td>2.7 litres total</td></tr>
+</table>
+<p>Note: "total" includes water from food — fruit, vegetables, and other foods contribute roughly 20–30% of daily water intake. The NHS figure refers to drinks only.</p>
+
+<h2>Does Coffee and Tea Count?</h2>
+<p>Yes. Despite the common myth, caffeinated drinks do count towards daily fluid intake. While caffeine has a mild diuretic effect, research shows that regular tea and coffee drinkers are fully adapted to this effect, and the net fluid contribution is positive.</p>
+<p>A 250ml cup of coffee contributes roughly 200–220ml of effective hydration. Alcohol is a different matter — it actively increases water loss and should not be counted.</p>
+
+<h2>Signs You're Drinking Too Little</h2>
+<ul>
+  <li><strong>Dark yellow urine</strong> — aim for pale straw yellow. Dark yellow or amber means you need more water.</li>
+  <li><strong>Thirst</strong> — by the time you feel thirsty, you're already mildly dehydrated (1–2% body weight deficit).</li>
+  <li><strong>Headaches and fatigue</strong> — often the first cognitive effects of mild dehydration.</li>
+  <li><strong>Dry lips and mouth</strong> — basic indicator of inadequate fluid intake.</li>
+  <li><strong>Reduced urination</strong> — fewer than 4 bathroom visits per day is a sign of underhydration.</li>
+</ul>
+
+<h2>Can You Drink Too Much Water?</h2>
+<p>Hyponatremia — low blood sodium caused by excessive water intake — is rare but real. It occurs when you dilute sodium levels by drinking large volumes without electrolytes. Symptoms include nausea, headache, confusion, and in severe cases, seizures.</p>
+<p>For healthy adults in normal daily life, the kidneys can process up to about 1 litre per hour. The risk is primarily relevant during endurance events (marathons, ultramarathons, triathlons) where athletes over-drink plain water for hours. Electrolyte drinks are recommended for events lasting over 90 minutes.</p>
+
+<h2>Practical Tips for Staying Hydrated</h2>
+<ul>
+  <li>Start each morning with a large glass of water before coffee — your body is mildly dehydrated after 7–8 hours of sleep.</li>
+  <li>Keep a 500ml or 1-litre bottle on your desk as a visual cue.</li>
+  <li>Eat water-rich foods: cucumber (96% water), celery (95%), tomatoes (94%), watermelon (92%), strawberries (91%).</li>
+  <li>Check your urine colour mid-afternoon as a daily audit.</li>
+  <li>Set reminder alarms if you frequently forget to drink during focused work.</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is 2 litres of water a day enough?</h3><p>For a sedentary adult in a temperate climate, 2 litres of total fluid intake is roughly adequate. Active people, those in hot climates, pregnant or breastfeeding women, and larger individuals need considerably more — often 3–4 litres or higher when exercise and environment are factored in.</p></div>
+  <div class="faq-item"><h3>Does coffee count towards daily water intake?</h3><p>Yes. Despite caffeine's mild diuretic effect, tea and coffee still contribute positively to net fluid intake. The water in the drink outweighs the diuretic effect. However, very high caffeine consumption (more than 6 cups of strong coffee per day) may begin to have a net negative effect on hydration.</p></div>
+  <div class="faq-item"><h3>What are the signs of dehydration?</h3><p>Early signs include dark yellow urine, persistent thirst, dry mouth, and fatigue. Moderate dehydration causes headaches, difficulty concentrating, dizziness, and constipation. Severe dehydration (5%+ body weight deficit) is a medical emergency requiring prompt fluid replacement.</p></div>
+  <div class="faq-item"><h3>Can you drink too much water?</h3><p>Yes — hyponatremia (low blood sodium from dilution) can occur when very large volumes of plain water are consumed rapidly. In everyday settings this is rare in healthy adults. The main risk is during prolonged endurance events. Use electrolyte drinks for exercise lasting over 90 minutes in warm conditions.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Water Intake Calculator</strong>
+      <span>Personalised daily hydration target based on your weight and activity</span>
+    </div>
+    <a href="https://water-intake-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>The '8 glasses a day' rule is outdated. Your actual water needs depend on your weight, activity level, and climate. Learn how to calculate your personal hydration target.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -109,6 +1608,75 @@
     <title>Best Sleep Schedule by Age: How Much Sleep Do You Actually Need?</title>
     <link>https://tabutility.com/blog/best-sleep-schedule-by-age/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/best-sleep-schedule-by-age/</guid>
+    <content:encoded><![CDATA[<h2>Why Sleep Requirements Change With Age</h2>
+<p>Sleep is not a uniform need. The amount and structure of sleep the brain requires shifts dramatically from infancy through to old age, driven by neurological development, hormonal changes, and metabolism. A toddler's brain needs 11–14 hours to consolidate development; a healthy 65-year-old may function well on 7–8 hours of lighter, more fragmented sleep.</p>
+<p>Understanding your age-appropriate sleep need is the starting point for building a schedule that works — and for recognising when something is wrong.</p>
+
+<h2>Sleep Recommendations by Age Group</h2>
+<p>These ranges come from the American Academy of Sleep Medicine (AASM) and are endorsed by the NHS and most major sleep research bodies:</p>
+<table>
+  <tr><th>Age Group</th><th>Recommended Sleep</th><th>Notes</th></tr>
+  <tr><td>Newborns (0–3 months)</td><td>14–17 hours</td><td>Distributed across multiple short sleep periods</td></tr>
+  <tr><td>Infants (4–11 months)</td><td>12–15 hours</td><td>Includes naps; sleep consolidates into longer night periods</td></tr>
+  <tr><td>Toddlers (1–2 years)</td><td>11–14 hours</td><td>One daytime nap is typical</td></tr>
+  <tr><td>Preschool (3–5 years)</td><td>10–13 hours</td><td>Napping reduces; night sleep lengthens</td></tr>
+  <tr><td>School age (6–12 years)</td><td>9–11 hours</td><td>Early school start times create chronic sleep deprivation risk</td></tr>
+  <tr><td>Teenagers (13–17 years)</td><td>8–10 hours</td><td>Circadian rhythm shifts later; natural bedtime moves to 10–11pm+</td></tr>
+  <tr><td>Adults (18–64 years)</td><td>7–9 hours</td><td>Consistent timing matters as much as duration</td></tr>
+  <tr><td>Older adults (65+)</td><td>7–8 hours</td><td>Sleep becomes lighter and more fragmented; earlier wake times common</td></tr>
+</table>
+
+<h2>Understanding Sleep Cycles</h2>
+<p>Sleep is not a single continuous state. Each night you cycle through distinct stages:</p>
+<ul>
+  <li><strong>Stage 1 (Light sleep)</strong> — transition into sleep; easily disturbed; lasts 1–5 minutes.</li>
+  <li><strong>Stage 2 (Light sleep)</strong> — body temperature drops, heart rate slows; memory consolidation begins. Accounts for about 50% of total sleep time.</li>
+  <li><strong>Stage 3 (Deep/slow-wave sleep)</strong> — hardest to wake from; physical restoration and immune function occur here; growth hormone released.</li>
+  <li><strong>REM sleep</strong> — brain activity increases; vivid dreaming; emotional processing and memory consolidation. Increases in proportion through the night.</li>
+</ul>
+<p>One full cycle takes approximately <strong>90 minutes</strong>. Adults typically complete 4–6 cycles per night. Waking mid-cycle, especially during deep sleep, causes sleep inertia — the disoriented, heavy feeling that can persist for 20–30 minutes after waking.</p>
+
+<h2>How to Calculate Your Ideal Bedtime</h2>
+<p>Work backwards from your required wake time. If you need to be up at 6:30am and want 7.5 hours of sleep (5 complete 90-minute cycles), your ideal bedtime is 11:00pm — accounting for approximately 14 minutes of average sleep-onset time.</p>
+<p>The formula: <strong>Bedtime = Wake time − (number of cycles × 90 min) − 14 min (sleep onset)</strong></p>
+<p>Five cycles (7.5 hours) is ideal for most adults. Four cycles (6 hours) is acceptable occasionally but not sustainably.</p>
+
+<h2>The Teenage Sleep Shift</h2>
+<p>Adolescence brings a biological shift in the circadian rhythm called a "phase delay." Melatonin release moves roughly 2 hours later than in adults, meaning teenagers genuinely cannot fall asleep early — it is not laziness. Their natural sleep window shifts to approximately midnight to 9am.</p>
+<p>Early school start times (7:30–8:00am) force teenagers to operate in chronic sleep deprivation. Research published in the journal <em>Sleep</em> consistently links later school start times to better academic performance, reduced accidents, and improved mental health outcomes.</p>
+
+<h2>Signs Your Sleep Schedule Is Misaligned</h2>
+<ul>
+  <li>You rely on an alarm to wake up every day (your body would sleep longer naturally).</li>
+  <li>You sleep dramatically longer on weekends — "social jet lag" of more than 2 hours indicates a significant mismatch.</li>
+  <li>You feel at peak energy very late at night (night owl) or extremely early in the morning (lark) — and your schedule forces the opposite.</li>
+  <li>You cannot function without caffeine before 10am.</li>
+</ul>
+
+<h2>Evidence-Based Tips for Better Sleep</h2>
+<ul>
+  <li><strong>Consistent timing</strong> — same bedtime and wake time every day, including weekends. Consistency matters more than total duration.</li>
+  <li><strong>Light exposure</strong> — bright morning light resets your circadian clock and improves sleep quality. Evening blue light (phones, tablets) delays sleep onset.</li>
+  <li><strong>Room temperature</strong> — 16–18°C (60–65°F) is the evidence-based optimal range for sleep. Core body temperature must drop 1–2°C to initiate sleep.</li>
+  <li><strong>Caffeine cut-off</strong> — caffeine has a half-life of 5–7 hours. A coffee at 3pm still has half its caffeine in your system at 9pm. Cut off by early afternoon.</li>
+  <li><strong>Alcohol</strong> — sedating but sleep-disrupting. Alcohol suppresses REM sleep in the first half of the night and causes fragmented, lighter sleep in the second half.</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is 6 hours of sleep enough for adults?</h3><p>For most adults, no. Research — including landmark studies by Matt Walker at UC Berkeley and the Walker Lab — consistently shows that adults who regularly sleep 6 hours or fewer show measurable cognitive impairment equivalent to 2–3 nights of total sleep deprivation, increased risk of cardiovascular disease, type 2 diabetes, and shortened lifespan compared to those sleeping 7–9 hours.</p></div>
+  <div class="faq-item"><h3>What is a sleep cycle?</h3><p>A sleep cycle lasts approximately 90 minutes and progresses through light sleep, deep sleep (slow-wave), and REM sleep. Adults complete 4–6 cycles per night. The proportion of deep sleep is higher in the first half of the night; REM increases in the second half — which is why cutting sleep short by an hour significantly reduces REM sleep.</p></div>
+  <div class="faq-item"><h3>Is it better to wake up at the end of a sleep cycle?</h3><p>Yes. Waking mid-cycle during deep sleep causes sleep inertia — grogginess that can persist for 20–45 minutes. Our sleep calculator calculates wake times that land at the end of a 90-minute cycle, making the morning significantly easier. Even if the total time is slightly shorter, waking at the right point in the cycle feels better.</p></div>
+  <div class="faq-item"><h3>Can you catch up on sleep at the weekend?</h3><p>Partially. A 2023 study in the journal <em>Sleep</em> found that recovery sleep over a weekend can partially restore cognitive function and some metabolic markers depleted by a week of short sleep. However, the recovery is incomplete, and the benefits diminish if the deprivation is chronic. The best strategy remains consistent adequate sleep throughout the week.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Sleep Calculator</strong>
+      <span>Find your optimal bedtime and wake-up based on sleep cycles</span>
+    </div>
+    <a href="https://sleep-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Sleep needs change across your lifetime. From newborns to older adults, here's exactly how much sleep each age group needs and how to build a schedule that works.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -116,6 +1684,85 @@
     <title>How to Calculate Your Due Date: Pregnancy Weeks Explained</title>
     <link>https://tabutility.com/blog/how-to-calculate-your-due-date/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-your-due-date/</guid>
+    <content:encoded><![CDATA[<div class="disclaimer">ℹ️ <strong>For information only.</strong> Always confirm your due date and pregnancy dates with your midwife or doctor. An early ultrasound scan is the most accurate dating method.</div>
+
+<h2>How Due Dates Are Calculated: Naegele's Rule</h2>
+<p>The standard method for estimating a due date is <strong>Naegele's rule</strong>, developed by German obstetrician Franz Karl Naegele in the 19th century and still used worldwide today. It assumes a 28-day menstrual cycle with ovulation on day 14.</p>
+<p>The formula:</p>
+<div class="formula">EDD = Last Menstrual Period (LMP) + 280 days (40 weeks)</div>
+<p>Or equivalently: take the first day of your LMP, subtract 3 months, add 1 year, and add 7 days.</p>
+<p><strong>Example:</strong> LMP = 1 January 2026 → Due date = 8 October 2026.</p>
+
+<h2>Why Pregnancy Is Counted From the LMP — Not Conception</h2>
+<p>This is the most confusing aspect of pregnancy dating for most people. Pregnancy weeks are counted from the first day of the last menstrual period, which typically precedes ovulation and conception by about 2 weeks.</p>
+<p>Why? Because the LMP is a reliable known date, whereas conception often cannot be pinpointed precisely. When a doctor says you're "6 weeks pregnant," the embryo is typically around 4 weeks old from conception.</p>
+<p>This means weeks 1 and 2 of "pregnancy" actually occur before conception — they represent the phase between the previous period and ovulation.</p>
+
+<h2>The Three Trimesters</h2>
+<table>
+  <tr><th>Trimester</th><th>Weeks</th><th>Key Developments</th></tr>
+  <tr><td>First trimester</td><td>Weeks 1–12</td><td>All major organs form; risk of miscarriage highest; morning sickness typical; first scan at ~12 weeks</td></tr>
+  <tr><td>Second trimester</td><td>Weeks 13–26</td><td>Movement felt (~18–22 weeks); anomaly scan at ~20 weeks; generally most comfortable trimester</td></tr>
+  <tr><td>Third trimester</td><td>Weeks 27–40</td><td>Rapid growth and weight gain; baby positions for birth; full term from week 37</td></tr>
+</table>
+
+<h2>Key Pregnancy Milestones by Week</h2>
+<table>
+  <tr><th>Week</th><th>Milestone</th></tr>
+  <tr><td>4</td><td>Typical timing of first positive pregnancy test</td></tr>
+  <tr><td>6</td><td>Heartbeat detectable on ultrasound</td></tr>
+  <tr><td>8</td><td>All major organs are forming; embryo becomes a foetus</td></tr>
+  <tr><td>12</td><td>End of first trimester; miscarriage risk drops significantly; dating scan</td></tr>
+  <tr><td>16–20</td><td>Quickening — first fetal movements felt</td></tr>
+  <tr><td>20</td><td>Anomaly scan (structural survey)</td></tr>
+  <tr><td>24</td><td>Threshold of viability (with medical support)</td></tr>
+  <tr><td>28</td><td>Start of third trimester</td></tr>
+  <tr><td>37</td><td>Full term — delivery at any point after this is considered term</td></tr>
+  <tr><td>40</td><td>Estimated Due Date (EDD)</td></tr>
+  <tr><td>42</td><td>Post-term; induction typically offered</td></tr>
+</table>
+
+<h2>How Accurate Is the Due Date?</h2>
+<p>Only about <strong>4–5% of babies are born on their exact EDD</strong>. This surprises most people who treat the due date as a specific target. In reality it is the midpoint of a normal distribution:</p>
+<ul>
+  <li>~80% of babies are born within 2 weeks either side of the EDD (weeks 38–42)</li>
+  <li>~11% arrive before week 37 (preterm)</li>
+  <li>~7% are still undelivered past week 42 (post-term)</li>
+</ul>
+<p>The EDD is better understood as a planning date and clinical reference point — not a prediction of when labour will start.</p>
+
+<h2>Dating Methods: LMP vs Ultrasound</h2>
+<p>If an early ultrasound (usually at 8–12 weeks) gives a gestational age that differs from the LMP-calculated date by more than 5–7 days, most guidelines (including NICE in the UK) recommend adjusting the EDD to the ultrasound date. This is because:</p>
+<ul>
+  <li>Cycle length varies, and not everyone ovulates on day 14.</li>
+  <li>The LMP date may be uncertain if cycles are irregular.</li>
+  <li>Crown-rump length measurement at 11–13 weeks is accurate to ±5 days.</li>
+</ul>
+<p>In cycles longer than 28 days (e.g. a 35-day cycle), the EDD calculated from LMP will typically be about 7 days earlier than the actual EDD — the baby will tend to arrive around a week "late" by LMP dating because ovulation happened a week later than assumed.</p>
+
+<h2>What If My Cycle Is Not 28 Days?</h2>
+<p>Naegele's rule assumes a 28-day cycle. If your cycle is different, the EDD should be adjusted:</p>
+<ul>
+  <li><strong>Longer cycles</strong> (e.g. 35 days) → add the extra days to the EDD. A 35-day cycle shifts the EDD 7 days later.</li>
+  <li><strong>Shorter cycles</strong> (e.g. 21 days) → subtract the difference. A 21-day cycle shifts the EDD 7 days earlier.</li>
+</ul>
+<p>Our due date calculator accepts custom cycle lengths to adjust for this automatically.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>How accurate is the calculated due date?</h3><p>Only about 4–5% of babies arrive on their exact estimated due date. Around 80% are born within the two-week window either side (weeks 38–42). The EDD is a clinical reference point and planning tool, not a precise prediction. An early ultrasound scan (before 14 weeks) is more accurate than LMP dating and will be used by your care team to set the official EDD if there is a discrepancy.</p></div>
+  <div class="faq-item"><h3>How are pregnancy weeks counted?</h3><p>From the first day of the last menstrual period (LMP), not from conception. This is a convention based on the fact that the LMP is a reliable known date, whereas the exact date of conception often cannot be confirmed. At the time of a positive test (around week 4), the embryo is typically about 2 weeks old from conception but counted as 4 weeks pregnant by gestational age.</p></div>
+  <div class="faq-item"><h3>What is the difference between gestational age and fetal age?</h3><p>Gestational age counts from the LMP — the standard medical measure used in all clinical contexts and on your scan reports. Fetal age (embryonic age) counts from conception and is typically 2 weeks less. When your midwife says "you're 10 weeks," that is gestational age; the embryo is approximately 8 weeks old from fertilisation.</p></div>
+  <div class="faq-item"><h3>What if my cycle is not 28 days?</h3><p>Naegele's rule assumes a 28-day cycle with ovulation on day 14. If your cycle is longer, ovulation occurs later, and the EDD should be pushed forward accordingly. A 35-day cycle would move the EDD 7 days later than the standard calculation. Our calculator lets you enter your cycle length to adjust for this. If there is significant uncertainty, your 12-week dating scan will provide the most reliable estimate.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Due Date Calculator</strong>
+      <span>Calculate your EDD and current pregnancy week instantly</span>
+    </div>
+    <a href="https://due-date-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Learn how due dates are calculated using Naegele's rule, how pregnancy weeks are counted, what trimester you're in, and why only 5% of babies arrive on their due date.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -123,6 +1770,87 @@
     <title>What Is Base64 Encoding and How Does It Work?</title>
     <link>https://tabutility.com/blog/what-is-base64-encoding/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-base64-encoding/</guid>
+    <content:encoded><![CDATA[<h2>The Problem Base64 Solves</h2>
+<p>Computers store everything as binary — sequences of 0s and 1s. When you need to send binary data (an image, a PDF, a certificate) through a system designed to handle text — an email, an HTTP header, a JSON API, an XML document — you have a problem. Many text-based protocols cannot reliably handle arbitrary binary bytes. Characters like null bytes, control characters, or bytes above 127 can corrupt or terminate the transmission.</p>
+<p>Base64 solves this by converting binary data into a safe subset of 64 printable ASCII characters that travel reliably through any text-based system.</p>
+
+<h2>How Base64 Works</h2>
+<p>Base64 uses a 64-character alphabet: <strong>A–Z</strong> (26), <strong>a–z</strong> (26), <strong>0–9</strong> (10), plus <strong>+</strong> and <strong>/</strong> (2). The encoding process works in three steps:</p>
+<ol>
+  <li>Take the binary input and group it into chunks of <strong>3 bytes (24 bits)</strong>.</li>
+  <li>Split each 24-bit chunk into <strong>four 6-bit groups</strong>.</li>
+  <li>Map each 6-bit value (0–63) to the corresponding character in the Base64 alphabet.</li>
+</ol>
+<p>If the input is not divisible by 3, padding characters (<code>=</code>) are added to make the output length a multiple of 4.</p>
+
+<h3>A worked example</h3>
+<p>Encoding the text "Man":</p>
+<div class="formula">
+  Text:   M         a         n<br>
+  ASCII:  77        97        110<br>
+  Binary: 01001101  01100001  01101110<br>
+  Groups: 010011 | 010110 | 000101 | 101110<br>
+  Values: 19     | 22     | 5      | 46<br>
+  Base64: T      | W      | F      | u  → <strong>TWFu</strong>
+</div>
+<p>Every 3 bytes of input becomes exactly 4 characters of Base64 output — a 33% size increase.</p>
+
+<h2>Where You'll See Base64 in the Wild</h2>
+<ul>
+  <li><strong>Email attachments</strong> — MIME encoding uses Base64 to attach files (images, PDFs, spreadsheets) to email messages that only support ASCII text in transit.</li>
+  <li><strong>Data URIs</strong> — inline images in HTML/CSS: <code>src="data:image/png;base64,iVBORw0KGgo..."</code> — avoids an extra HTTP request for small icons.</li>
+  <li><strong>JSON Web Tokens (JWTs)</strong> — the header and payload sections of a JWT are Base64url-encoded (a URL-safe variant). This is why JWTs look like garbled text with dots.</li>
+  <li><strong>HTTP Basic Authentication</strong> — credentials in the format <code>username:password</code> are Base64-encoded in the Authorization header.</li>
+  <li><strong>Cryptographic certificates</strong> — PEM files (SSL/TLS certificates, SSH keys) are Base64-encoded DER format wrapped in <code>-----BEGIN CERTIFICATE-----</code> headers.</li>
+  <li><strong>API responses</strong> — some APIs return binary data (images, audio) as Base64 strings embedded in JSON to avoid multipart responses.</li>
+</ul>
+
+<h2>Base64 Is Not Encryption</h2>
+<p>This is the most common misconception. Base64 is purely an encoding scheme — it is completely reversible by anyone without any key or secret. Seeing Base64 in an HTTP header does not mean credentials are protected. HTTP Basic Auth, for example, encodes credentials in Base64 but is effectively plaintext unless the connection uses HTTPS.</p>
+<p>For actual confidentiality, you need encryption (AES, RSA, etc.). Base64 just makes binary data text-safe.</p>
+
+<h2>Base64url: The URL-Safe Variant</h2>
+<p>Standard Base64 uses <code>+</code> and <code>/</code>, which have special meanings in URLs (<code>+</code> = space, <code>/</code> = path separator). Base64url substitutes:</p>
+<ul>
+  <li><code>+</code> → <code>-</code></li>
+  <li><code>/</code> → <code>_</code></li>
+  <li>Padding <code>=</code> is often omitted</li>
+</ul>
+<p>This makes Base64url safe to use in URLs, filenames, and query parameters without percent-encoding. JWTs, OAuth tokens, and many modern APIs use Base64url rather than standard Base64.</p>
+
+<h2>Encoding and Decoding in Code</h2>
+<h3>JavaScript (browser)</h3>
+<div class="formula">
+  btoa("Hello, World!")  // → "SGVsbG8sIFdvcmxkIQ=="<br>
+  atob("SGVsbG8sIFdvcmxkIQ==")  // → "Hello, World!"
+</div>
+<h3>Python</h3>
+<div class="formula">
+  import base64<br>
+  base64.b64encode(b"Hello")  # → b'SGVsbG8='<br>
+  base64.b64decode("SGVsbG8=")  # → b'Hello'
+</div>
+<h3>Command line</h3>
+<div class="formula">
+  echo -n "Hello" | base64  # → SGVsbG8=<br>
+  echo "SGVsbG8=" | base64 --decode  # → Hello
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is Base64 a form of encryption?</h3><p>No. Base64 is encoding, not encryption. Anyone who receives Base64 data can decode it instantly without any key. It provides zero security or confidentiality — it exists purely to represent binary data safely as printable ASCII text. Never use Base64 to protect sensitive information.</p></div>
+  <div class="faq-item"><h3>How much larger does Base64 make the data?</h3><p>Exactly 33% larger. Every 3 bytes of input produce 4 characters of output (plus padding). A 1MB image embedded as Base64 in HTML becomes approximately 1.37MB of text. This is why inline Base64 images are only efficient for very small assets like icons.</p></div>
+  <div class="faq-item"><h3>What is the difference between Base64 and Base64url?</h3><p>Standard Base64 uses + and / which are special URL characters. Base64url substitutes - for + and _ for /, making it safe in URLs and filenames without percent-encoding. It also usually omits the = padding. JWTs and most modern OAuth tokens use Base64url.</p></div>
+  <div class="faq-item"><h3>When should I use Base64 for images?</h3><p>Inline Base64 images make sense for very small assets (icons under ~1–2KB) where the HTTP request round-trip overhead outweighs the 33% size increase. For anything larger, serving images from a CDN is more efficient — browsers cache them, they compress well with HTTP/2, and they don't bloat HTML/CSS file sizes.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Base64 Encoder / Decoder</strong>
+      <span>Instant encode and decode — runs entirely in your browser</span>
+    </div>
+    <a href="https://base64-encoder.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -130,6 +1858,66 @@
     <title>What Is a UUID? How Unique IDs Are Generated and When to Use Them</title>
     <link>https://tabutility.com/blog/what-is-a-uuid/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-a-uuid/</guid>
+    <content:encoded><![CDATA[<h2>What Is a UUID?</h2>
+<p>A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify information in computer systems. It is represented as 32 hexadecimal digits displayed in five groups separated by hyphens:</p>
+<div class="formula">550e8400-e29b-41d4-a716-446655440000</div>
+<p>The format is <code>8-4-4-4-12</code> characters, always 36 characters in total including the four hyphens. UUIDs are also called GUIDs (Globally Unique Identifiers), especially in Microsoft environments — they are the same thing.</p>
+
+<h2>UUID Versions Explained</h2>
+<table>
+  <tr><th>Version</th><th>How Generated</th><th>Sortable?</th><th>Best For</th></tr>
+  <tr><td>v1</td><td>Timestamp + MAC address</td><td>Yes (but exposes MAC address)</td><td>Legacy systems</td></tr>
+  <tr><td>v3</td><td>MD5 hash of a name + namespace</td><td>No</td><td>Deterministic IDs from names</td></tr>
+  <tr><td>v4</td><td>Randomly generated</td><td>No</td><td>General purpose — most widely used</td></tr>
+  <tr><td>v5</td><td>SHA-1 hash of a name + namespace</td><td>No</td><td>Deterministic IDs (more secure than v3)</td></tr>
+  <tr><td>v7</td><td>Unix timestamp + random bits</td><td>Yes ✓</td><td>Database primary keys (recommended)</td></tr>
+</table>
+
+<h3>UUID v4 — the default choice</h3>
+<p>UUID v4 is generated entirely from random or pseudo-random data. 122 bits are random; 6 bits are fixed for version/variant markers. It is the most commonly used version because it requires no coordination between systems, exposes no information about when or where it was generated, and has an effectively zero chance of collision.</p>
+
+<h3>UUID v7 — the modern choice for databases</h3>
+<p>Ratified in RFC 9562 (2022), UUID v7 embeds a Unix millisecond timestamp in the most significant 48 bits. This means UUIDs sort chronologically, which is a major database performance advantage — most database B-tree indexes benefit significantly from monotonically increasing keys, avoiding page splits and fragmentation.</p>
+<p>If you're choosing a UUID type for new database primary keys, v7 is the current best practice recommendation from PostgreSQL and database performance experts.</p>
+
+<h2>How Unique Are UUIDs Really?</h2>
+<p>UUID v4 has 122 random bits. The total number of possible UUID v4 values is 2¹²² ≈ <strong>5.3 × 10³⁶</strong> (5.3 undecillion).</p>
+<p>The probability of a collision when generating <em>n</em> UUIDs follows the birthday problem formula. To reach even a 50% probability of a single collision, you would need to generate approximately <strong>2.7 × 10¹⁸</strong> UUIDs — roughly 2.7 billion billion. At 1 billion UUIDs per second, that would take 85 years.</p>
+<p>In practice, UUID v4 collisions are a theoretical concern only. Systems generating UUIDs at any realistic scale are safe to treat them as unique.</p>
+
+<h2>UUIDs vs Auto-Increment Integers</h2>
+<p>Both are valid approaches for database primary keys. The choice depends on your requirements:</p>
+<ul>
+  <li><strong>Auto-increment integers</strong> are smaller (4–8 bytes vs 16 bytes), cheaper to index, human-readable in logs, and increment predictably. Their drawback: they require a central counter, making them hard to generate across distributed systems, and they reveal your record count to anyone who can see an ID.</li>
+  <li><strong>UUIDs</strong> can be generated by any client without coordination, don't reveal record counts or business metrics through IDs, and allow safe merging of data from multiple databases. Their drawback: larger storage footprint and, for v4, poor database index locality (random inserts cause B-tree fragmentation).</li>
+</ul>
+<p>The modern consensus: use UUID v7 for new systems where you want the benefits of UUIDs — sortable by time, good index performance, distributed generation, and no information leakage.</p>
+
+<h2>Generating UUIDs in Code</h2>
+<h3>JavaScript / Node.js</h3>
+<div class="formula">crypto.randomUUID()  // Built-in since Node 15.6, browser since Chrome 92<br>// → "550e8400-e29b-41d4-a716-446655440000"</div>
+<h3>Python</h3>
+<div class="formula">import uuid<br>str(uuid.uuid4())  # → "550e8400-e29b-41d4-a716-446655440000"</div>
+<h3>PostgreSQL</h3>
+<div class="formula">SELECT gen_random_uuid();  -- UUID v4, built-in since PostgreSQL 13</div>
+<h3>SQL Server</h3>
+<div class="formula">SELECT NEWID();  -- Generates a GUID (UUID v4)</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Are UUIDs truly unique?</h3><p>In practice, yes. The probability of generating a duplicate UUID v4 is approximately 1 in 5.3 undecillion. To have a 50% chance of a collision, you would need to generate 2.7 × 10¹⁸ UUIDs — an entirely theoretical concern at any realistic generation rate. Systems treat UUID v4 as functionally unique without any practical caveats.</p></div>
+  <div class="faq-item"><h3>What is the difference between UUID v4 and v7?</h3><p>UUID v4 is entirely random with no time component, making it non-sortable. UUID v7 (ratified RFC 9562, 2022) embeds a millisecond-precision Unix timestamp in the first 48 bits, making UUIDs sort chronologically. This makes v7 significantly better for database primary keys where sorted insertion reduces index fragmentation and improves query performance.</p></div>
+  <div class="faq-item"><h3>Should I use UUIDs or auto-increment integers for database IDs?</h3><p>It depends on your architecture. Auto-increment integers are smaller, faster to index, and simpler. UUIDs work better for distributed systems (multiple servers generating IDs independently), when merging data from multiple databases, or when you don't want to expose record counts through predictable sequential IDs. For new systems, UUID v7 gives you the benefits of UUIDs with much better database performance than v4.</p></div>
+  <div class="faq-item"><h3>What does the version number in a UUID mean?</h3><p>The version digit defines how the UUID was generated. It appears as the first digit of the third group: <code>xxxxxxxx-xxxx-<strong>4</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v4, <code>xxxxxxxx-xxxx-<strong>7</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v7. The variant bits in the fourth group identify it as a standard RFC 4122/9562 UUID rather than older proprietary formats.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the UUID Generator</strong>
+      <span>Generate v4 and v7 UUIDs instantly in your browser</span>
+    </div>
+    <a href="https://uuid-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -137,6 +1925,81 @@
     <title>How to Generate a Strong Password (And Actually Remember It)</title>
     <link>https://tabutility.com/blog/how-to-generate-a-strong-password/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-generate-a-strong-password/</guid>
+    <content:encoded><![CDATA[<h2>The Password Problem</h2>
+<p>The most common passwords in data breaches year after year are "123456", "password", "qwerty", and name+birth year combinations. Not because people are careless — but because memorising dozens of unique, complex passwords is genuinely impossible without a system.</p>
+<p>The result is password reuse: most people use the same handful of passwords everywhere. When one site is breached (and sites are breached constantly), attackers run those credentials against every major service — banking, email, shopping — in automated attacks called credential stuffing.</p>
+<p>This guide covers what actually makes a password strong, how attackers crack them, and practical strategies that work in the real world.</p>
+
+<h2>How Password Cracking Actually Works</h2>
+<h3>1. Dictionary attacks</h3>
+<p>Attackers don't try random characters — they start with known words, common phrases, and previous breach data. "password", "letmein", "iloveyou" are cracked in milliseconds. Adding a number and symbol at the end ("Password1!") only adds a few seconds to the attack — these patterns are well-known.</p>
+
+<h3>2. Brute force</h3>
+<p>Every possible combination is tried systematically. Modern GPUs can test billions of hashes per second against stolen password databases. Short passwords fall quickly regardless of complexity:</p>
+<table>
+  <tr><th>Password Length</th><th>Character Set</th><th>Approximate Crack Time*</th></tr>
+  <tr><td>8 characters</td><td>Lowercase only</td><td>Minutes</td></tr>
+  <tr><td>8 characters</td><td>Mixed case + numbers + symbols</td><td>Hours to days</td></tr>
+  <tr><td>12 characters</td><td>Mixed case + numbers + symbols</td><td>Centuries</td></tr>
+  <tr><td>16 characters</td><td>Mixed case + numbers + symbols</td><td>Practically infinite</td></tr>
+</table>
+<p style="font-size:12px;color:#64748b">*Against a fast offline hash attack. Online attacks (login forms) are limited by rate throttling; offline attacks occur when databases are stolen.</p>
+
+<h3>3. Credential stuffing</h3>
+<p>Leaked username/password pairs from one breach are automatically tested against other services. If you reuse passwords, a breach on a small shopping site can give attackers access to your bank account. This is currently the most common attack vector.</p>
+
+<h2>What Makes a Password Strong</h2>
+<p>Two things matter most, in order of importance:</p>
+<ol>
+  <li><strong>Length</strong> — the single biggest factor. Each additional character multiplies the search space exponentially. A 16-character password is millions of times harder to crack than a 12-character one.</li>
+  <li><strong>Unpredictability</strong> — human-chosen passwords follow patterns attackers know. True randomness (from a password generator or dice) is far stronger than anything a human invents.</li>
+</ol>
+<p>Special character substitutions (replacing 'a' with '@', 'o' with '0') add almost no security — these are among the first transformations attackers apply to dictionary words.</p>
+
+<h2>Two Strategies That Actually Work</h2>
+<h3>Strategy 1: Password manager + fully random passwords</h3>
+<p>This is the gold standard. A password manager generates and stores a unique 20+ character random password for every account. You memorise one master password; the manager handles everything else.</p>
+<p>Recommended managers: <strong>Bitwarden</strong> (open source, free), <strong>1Password</strong>, <strong>Dashlane</strong>. Browser-native options (Apple Keychain, Chrome's password manager) work well if you're already in that ecosystem.</p>
+<p>A manager-generated password looks like: <code>Kx9#mQ2@pLvN7^tR</code> — impossible to remember, no need to try.</p>
+
+<h3>Strategy 2: Diceware passphrases (for passwords you must memorise)</h3>
+<p>Diceware generates a passphrase by randomly selecting words from a large wordlist using physical dice (or a secure random generator). The result is memorable but highly secure:</p>
+<p><strong>correct-horse-battery-staple</strong> — 4 random words from a 7,776-word list gives 2⁵¹ possible combinations. More secure than most 10-character complex passwords, and memorisable.</p>
+<p>Use diceware for: your password manager master password, device unlock passwords, and any password you genuinely must remember without a manager.</p>
+
+<h2>The Non-Negotiables</h2>
+<ul>
+  <li><strong>Never reuse passwords across sites</strong> — credential stuffing is the most common attack; unique passwords eliminate it entirely.</li>
+  <li><strong>Enable two-factor authentication (2FA)</strong> on all important accounts. Even a stolen password is useless without the second factor. Use an authenticator app (Authy, Google Authenticator) rather than SMS where possible.</li>
+  <li><strong>Check if you've been breached</strong> — haveibeenpwned.com (run by security researcher Troy Hunt) shows if your email appears in known data breaches.</li>
+  <li><strong>Never share passwords via email or SMS</strong> — use your password manager's secure sharing feature if you must share.</li>
+</ul>
+
+<h2>What to Avoid</h2>
+<ul>
+  <li>Names of family members, pets, or sports teams</li>
+  <li>Birth dates, anniversaries, or phone numbers</li>
+  <li>Dictionary words with obvious substitutions (P@ssw0rd)</li>
+  <li>Patterns like qwerty123 or abc123</li>
+  <li>Your username or email address as part of the password</li>
+  <li>Any password shorter than 12 characters for accounts that matter</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>How long should a password be?</h3><p>At minimum 12 characters for any account that matters; 16+ for important accounts like email, banking, and your password manager master password. Length is the most important factor — each additional character exponentially increases the search space. A 16-character password with mixed case, numbers, and symbols is effectively uncrackable by brute force with current technology.</p></div>
+  <div class="faq-item"><h3>Is a passphrase better than a random password?</h3><p>For passwords you need to memorise, yes. A random 4-word diceware passphrase (like "correct-horse-battery-staple") has around 51 bits of entropy and is vastly more memorable than a short complex password. For passwords stored in a manager, fully random is better — use a 20+ character string you'll never need to type manually.</p></div>
+  <div class="faq-item"><h3>Should I change my passwords regularly?</h3><p>The old 90-day rotation advice is outdated. NIST (US National Institute of Standards and Technology) explicitly recommends against mandatory routine password rotation in their latest guidelines — it leads to predictable patterns like Password1!, Password2!. Change a password immediately when there's a known breach or suspected compromise, but otherwise keep a strong unique password indefinitely.</p></div>
+  <div class="faq-item"><h3>What is the most important thing I can do for my password security?</h3><p>Start using a password manager. This single change lets you have a unique, random, long password for every account without memorising any of them. It eliminates credential stuffing attacks entirely — your leaked LinkedIn password cannot be used on your bank. Free options like Bitwarden make this accessible to everyone.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Password Generator</strong>
+      <span>Generate strong random passwords instantly — never stored or transmitted</span>
+    </div>
+    <a href="https://password-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Most people's passwords are dangerously weak. Learn what makes a password secure, how attackers crack them, and the best strategies for generating strong passwords you can manage.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -144,6 +2007,125 @@
     <title>How to Format JSON: A Developer's Complete Guide</title>
     <link>https://tabutility.com/blog/how-to-format-json/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-format-json/</guid>
+    <content:encoded><![CDATA[<h2>What Is JSON?</h2>
+<p>JSON (JavaScript Object Notation) is a lightweight text format for storing and exchanging data. Introduced by Douglas Crockford in the early 2000s and formalised as RFC 8259, it has become the dominant data interchange format for APIs, configuration files, and web applications worldwide.</p>
+<p>JSON is language-independent — it can be parsed in Python, Java, Ruby, Go, PHP, Swift, or any other mainstream language. Its simplicity and human-readability made it replace XML in most web API contexts over the past 15 years.</p>
+
+<h2>The 6 JSON Data Types</h2>
+<table>
+  <tr><th>Type</th><th>Example</th><th>Notes</th></tr>
+  <tr><td>String</td><td><code>"hello"</code></td><td>Must use double quotes — never single quotes</td></tr>
+  <tr><td>Number</td><td><code>42</code>, <code>3.14</code>, <code>-7</code></td><td>No distinction between integers and floats</td></tr>
+  <tr><td>Boolean</td><td><code>true</code>, <code>false</code></td><td>Lowercase only — <code>True</code> is invalid</td></tr>
+  <tr><td>Null</td><td><code>null</code></td><td>Lowercase only — <code>NULL</code> is invalid</td></tr>
+  <tr><td>Array</td><td><code>[1, "two", true]</code></td><td>Ordered list of any JSON values</td></tr>
+  <tr><td>Object</td><td><code>{"key": "value"}</code></td><td>Unordered key-value pairs; keys must be strings</td></tr>
+</table>
+
+<h2>Valid JSON — A Complete Example</h2>
+<div class="code-block">
+{<br>
+&nbsp;&nbsp;<span class="key">"user"</span>: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id"</span>: <span class="num">1042</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"Alice Johnson"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"email"</span>: <span class="str">"alice@example.com"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"active"</span>: <span class="bool">true</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"score"</span>: <span class="num">98.5</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nickname"</span>: <span class="bool">null</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tags"</span>: [<span class="str">"admin"</span>, <span class="str">"verified"</span>]<br>
+&nbsp;&nbsp;}<br>
+}
+</div>
+
+<h2>The Most Common JSON Errors</h2>
+<h3>1. Trailing commas</h3>
+<p>The most frequent JSON error. JSON does not allow a comma after the last item in an object or array:</p>
+<div class="code-block">
+<span class="comment">// INVALID — trailing comma after "blue"</span><br>
+{ <span class="key">"colors"</span>: [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>,] }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"colors"</span>: [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>] }
+</div>
+
+<h3>2. Single quotes</h3>
+<p>JSON requires double quotes for both keys and string values. Single quotes are not valid JSON:</p>
+<div class="code-block">
+<span class="comment">// INVALID</span><br>
+{ <span class="key">'name'</span>: <span class="str">'Alice'</span> }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"name"</span>: <span class="str">"Alice"</span> }
+</div>
+
+<h3>3. Unquoted keys</h3>
+<div class="code-block">
+<span class="comment">// INVALID — keys must be quoted strings</span><br>
+{ name: <span class="str">"Alice"</span> }<br><br>
+<span class="comment">// VALID</span><br>
+{ <span class="key">"name"</span>: <span class="str">"Alice"</span> }
+</div>
+
+<h3>4. Comments</h3>
+<p>Standard JSON does not support comments. <code>// comment</code> or <code>/* comment */</code> will cause a parse error. If you need comments in config files, consider JSONC or JSON5 (which require specific parsers), or move to YAML/TOML for configuration.</p>
+
+<h3>5. Undefined and functions</h3>
+<p>JSON has no concept of <code>undefined</code>, functions, dates (as objects), or <code>NaN</code>/<code>Infinity</code>. These JavaScript-specific values cannot be serialised to JSON.</p>
+
+<h2>Pretty-Printing vs Minifying</h2>
+<p><strong>Pretty-printed JSON</strong> uses indentation (typically 2 or 4 spaces) and newlines for human readability — ideal for config files, debugging, and version control.</p>
+<p><strong>Minified JSON</strong> removes all unnecessary whitespace to reduce file size — ideal for API responses and production builds where bandwidth matters.</p>
+<p>In JavaScript: <code>JSON.stringify(data, null, 2)</code> pretty-prints with 2-space indentation. <code>JSON.stringify(data)</code> minifies.</p>
+<p>A 10KB pretty-printed JSON file typically minifies to 6–7KB — a 30–40% reduction. For large payloads delivered over mobile connections, this matters.</p>
+
+<h2>Working With JSON in Code</h2>
+<h3>JavaScript</h3>
+<div class="code-block">
+<span class="comment">// Parse (string → object)</span><br>
+const obj = JSON.parse('<span class="str">{"name":"Alice"}</span>');<br><br>
+<span class="comment">// Stringify (object → string)</span><br>
+const json = JSON.stringify(obj, null, 2); <span class="comment">// pretty, 2 spaces</span>
+</div>
+
+<h3>Python</h3>
+<div class="code-block">
+import json<br><br>
+<span class="comment"># Parse</span><br>
+obj = json.loads('<span class="str">{"name": "Alice"}</span>')<br><br>
+<span class="comment"># Stringify</span><br>
+json_str = json.dumps(obj, indent=2)
+</div>
+
+<h3>Command line (with jq)</h3>
+<div class="code-block">
+<span class="comment"># Pretty-print any JSON file</span><br>
+cat data.json | jq '.'<br><br>
+<span class="comment"># Extract a field</span><br>
+cat data.json | jq '.user.name'
+</div>
+
+<h2>Validating JSON</h2>
+<p>JSON validators check that your text conforms to the JSON specification and report the exact location of any errors. You should validate JSON whenever you:</p>
+<ul>
+  <li>Receive JSON from an external API and need to debug a parse error</li>
+  <li>Hand-write JSON configuration files</li>
+  <li>Copy JSON from documentation or a browser network panel</li>
+  <li>Need to confirm generated JSON is well-formed before shipping</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is the difference between JSON and JavaScript objects?</h3><p>JSON is a text format — it is always a string. JavaScript objects are in-memory data structures. Key differences: JSON requires double quotes around all keys and string values; JS objects allow single quotes and unquoted keys. JSON does not support <code>undefined</code>, functions, Date objects, or comments. <code>JSON.parse()</code> converts a JSON string to a JS object; <code>JSON.stringify()</code> converts a JS object to a JSON string.</p></div>
+  <div class="faq-item"><h3>Can JSON have comments?</h3><p>No — standard JSON (RFC 8259) explicitly does not support comments. This was a deliberate design decision by Douglas Crockford to keep the format simple and interoperable. JSON5 and JSONC are unofficial supersets that add comment support, but they require custom parsers and are not universally supported. For config files requiring comments, consider YAML or TOML instead.</p></div>
+  <div class="faq-item"><h3>What causes 'Unexpected token' errors in JSON?</h3><p>The most common causes are: (1) trailing commas after the last element in an array or object, (2) single quotes instead of double quotes around keys or strings, (3) unquoted keys, (4) control characters (tab, newline) embedded literally inside strings instead of escaped as \t or \n, and (5) <code>undefined</code> values (which JSON has no equivalent for). Paste into a JSON formatter to immediately identify the line and character position of the error.</p></div>
+  <div class="faq-item"><h3>What is the difference between pretty-printed and minified JSON?</h3><p>Pretty-printed JSON uses indentation and newlines for readability — ideal for config files, logs, and debugging. Minified JSON removes all whitespace to reduce file size — typically 30–40% smaller. For APIs, minified is preferred for performance. Use <code>JSON.stringify(data, null, 2)</code> in JavaScript or <code>json.dumps(data, indent=2)</code> in Python for pretty output; omit the indent argument for minified output.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the JSON Formatter & Validator</strong>
+      <span>Paste, format, validate, and minify JSON instantly in your browser</span>
+    </div>
+    <a href="https://json-formatter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -151,6 +2133,87 @@
     <title>Celsius to Fahrenheit: How Temperature Conversion Works</title>
     <link>https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/</guid>
+    <content:encoded><![CDATA[<h2>The Three Temperature Scales</h2>
+<p>Three temperature scales are in common use today. Celsius (°C) is the standard in science and most of the world. Fahrenheit (°F) is used primarily in the United States and a handful of other countries for everyday weather and cooking. Kelvin (K) is the SI base unit used in physics and chemistry — it starts at absolute zero, the coldest possible temperature.</p>
+
+<h2>The Conversion Formulas</h2>
+
+<h3>Celsius to Fahrenheit</h3>
+<div class="formula">°F = (°C × 9/5) + 32</div>
+<p>Example: 20°C → (20 × 9/5) + 32 = 36 + 32 = <strong>68°F</strong></p>
+
+<h3>Fahrenheit to Celsius</h3>
+<div class="formula">°C = (°F − 32) × 5/9</div>
+<p>Example: 98.6°F → (98.6 − 32) × 5/9 = 66.6 × 0.5556 = <strong>37°C</strong> (normal body temperature)</p>
+
+<h3>Celsius to Kelvin</h3>
+<div class="formula">K = °C + 273.15</div>
+<p>Example: 0°C (freezing point of water) = <strong>273.15 K</strong></p>
+
+<h3>Fahrenheit to Kelvin</h3>
+<div class="formula">K = (°F + 459.67) × 5/9</div>
+
+<h2>Quick Reference: Common Temperatures</h2>
+<table>
+  <tr><th>Description</th><th>Celsius (°C)</th><th>Fahrenheit (°F)</th><th>Kelvin (K)</th></tr>
+  <tr><td>Absolute zero</td><td>−273.15</td><td>−459.67</td><td>0</td></tr>
+  <tr><td>Freezing point of water</td><td>0</td><td>32</td><td>273.15</td></tr>
+  <tr><td>Cold winter day (UK)</td><td>−5</td><td>23</td><td>268.15</td></tr>
+  <tr><td>Comfortable room temp</td><td>21</td><td>70</td><td>294.15</td></tr>
+  <tr><td>Human body temperature</td><td>37</td><td>98.6</td><td>310.15</td></tr>
+  <tr><td>Hot summer day</td><td>35</td><td>95</td><td>308.15</td></tr>
+  <tr><td>Boiling point of water</td><td>100</td><td>212</td><td>373.15</td></tr>
+  <tr><td>Oven (moderate)</td><td>180</td><td>356</td><td>453.15</td></tr>
+</table>
+
+<h2>The Mental Maths Shortcut</h2>
+<p>For quick estimates when you don't have a calculator:</p>
+<ul>
+  <li><strong>Celsius → Fahrenheit:</strong> Double the Celsius value, then add 30. <br>Example: 25°C → (25×2) + 30 = 80°F (exact: 77°F). Good enough for everyday use.</li>
+  <li><strong>Fahrenheit → Celsius:</strong> Subtract 30, then halve it. <br>Example: 80°F → (80−30) ÷ 2 = 25°C (exact: 26.7°C).</li>
+</ul>
+<p>These shortcuts are within 2–4°F accuracy for typical weather and body temperatures — not precise enough for cooking or science, but fine for "is it warm enough for a T-shirt?"</p>
+
+<h2>Key Anchor Points to Memorise</h2>
+<ul>
+  <li><strong>0°C = 32°F</strong> — water freezes</li>
+  <li><strong>20°C ≈ 68°F</strong> — pleasantly warm room / spring day</li>
+  <li><strong>37°C = 98.6°F</strong> — healthy human body temperature</li>
+  <li><strong>100°C = 212°F</strong> — water boils</li>
+  <li><strong>−40°C = −40°F</strong> — where the scales meet</li>
+</ul>
+
+<h2>Why Two Scales? A Brief History</h2>
+<p>Gabriel Fahrenheit (1686–1736) was a German physicist who developed his scale in 1724. He set 0°F at the temperature of an ice/salt/water mixture (the coldest he could reliably create in a lab) and calibrated 96°F to body temperature. Later adjustments moved body temperature to 98.6°F.</p>
+<p>Anders Celsius (1701–1744) proposed the centigrade scale in 1742 — 0° for the boiling point of water and 100° for freezing. Confusingly, this was inverted from today's convention; it was reversed after his death to the form we use today.</p>
+<p>Lord Kelvin (William Thomson, 1824–1907) established the absolute scale based on thermodynamic principles — 0 K is absolute zero, the theoretical minimum temperature at which all molecular motion stops.</p>
+
+<h2>Cooking Temperature Conversions</h2>
+<table>
+  <tr><th>Oven Setting</th><th>°C (Fan)</th><th>°C (Conventional)</th><th>°F</th><th>Gas Mark</th></tr>
+  <tr><td>Very low</td><td>120</td><td>140</td><td>275</td><td>1</td></tr>
+  <tr><td>Low</td><td>140</td><td>160</td><td>325</td><td>3</td></tr>
+  <tr><td>Moderate</td><td>160</td><td>180</td><td>350</td><td>4</td></tr>
+  <tr><td>Moderately hot</td><td>170</td><td>190</td><td>375</td><td>5</td></tr>
+  <tr><td>Hot</td><td>190</td><td>210</td><td>425</td><td>7</td></tr>
+  <tr><td>Very hot</td><td>210</td><td>230</td><td>450</td><td>8</td></tr>
+</table>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>What is 100°C in Fahrenheit?</h3><p>100°C is exactly 212°F — the boiling point of water at sea level (1 atm pressure). At altitude, where air pressure is lower, water boils at a lower temperature — at the summit of Everest (~8,849m), water boils at approximately 70°C (158°F), which is why cooking times must be extended significantly at high altitude.</p></div>
+  <div class="faq-item"><h3>What is the quick mental shortcut for Celsius to Fahrenheit?</h3><p>Double the Celsius value and add 30. For 20°C: (20×2)+30 = 70°F (exact answer is 68°F). This estimate is accurate to within 3–4°F for temperatures between -10°C and 40°C — the range you encounter in everyday life. Not precise enough for medical or cooking use, but excellent for getting a feel for weather forecasts.</p></div>
+  <div class="faq-item"><h3>Why does the US still use Fahrenheit?</h3><p>The US adopted Fahrenheit as its standard before the Metric Conversion Act of 1975 established a national policy of voluntary metrication. Unlike most countries, the US never mandated metric adoption. The Fahrenheit scale arguably has some practical appeal for human-scale weather — 0°F is bitterly cold and 100°F is dangerously hot, giving intuitive meaning to the range — but scientifically and globally, Celsius is far more practical.</p></div>
+  <div class="faq-item"><h3>What temperature is the same in Celsius and Fahrenheit?</h3><p>−40°. At exactly −40°C = −40°F the two scales intersect. You can verify with the formula: (−40 × 9/5) + 32 = −72 + 32 = −40. This is also approximately the temperature of extremely cold winter days in interior Alaska, northern Canada, and Siberia.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Temperature Converter</strong>
+      <span>Instantly convert between Celsius, Fahrenheit, and Kelvin</span>
+    </div>
+    <a href="https://unit-converter.tabutility.com/" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Converting between Celsius, Fahrenheit, and Kelvin is easier once you understand the formulas. Learn the quick mental math tricks and the science behind temperature scales.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -158,6 +2221,89 @@
     <title>Miles to Kilometres: Distance Conversion Guide</title>
     <link>https://tabutility.com/blog/miles-to-kilometres-distance-conversion/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/miles-to-kilometres-distance-conversion/</guid>
+    <content:encoded><![CDATA[<h2>The Exact Relationship</h2>
+<p>One international mile is exactly <strong>1.609344 kilometres</strong>. This is not an approximation — it has been the exact legal definition since 1959, when the United States, United Kingdom, Canada, Australia, New Zealand, and South Africa jointly agreed to standardise the international yard and pound.</p>
+<p>For most practical purposes, <strong>1 mile ≈ 1.6 km</strong> is accurate enough. The rounding error is just 0.6%.</p>
+
+<h2>Conversion Formulas</h2>
+<div class="formula">kilometres = miles × 1.609344</div>
+<div class="formula">miles = kilometres ÷ 1.609344</div>
+<p>Or equivalently: miles = kilometres × 0.621371</p>
+
+<h2>Miles to Kilometres Reference Table</h2>
+<table>
+  <tr><th>Miles</th><th>Kilometres</th><th>Context</th></tr>
+  <tr><td>0.25</td><td>0.40</td><td>Short walk / quarter mile</td></tr>
+  <tr><td>0.5</td><td>0.80</td><td>Half mile</td></tr>
+  <tr><td>1</td><td>1.609</td><td>One mile</td></tr>
+  <tr><td>3.1</td><td>5.0</td><td>5K run</td></tr>
+  <tr><td>6.2</td><td>10.0</td><td>10K run</td></tr>
+  <tr><td>13.1</td><td>21.1</td><td>Half marathon</td></tr>
+  <tr><td>26.2</td><td>42.2</td><td>Full marathon</td></tr>
+  <tr><td>60</td><td>96.6</td><td>60 mph in km/h</td></tr>
+  <tr><td>70</td><td>112.7</td><td>UK motorway speed limit in km/h</td></tr>
+  <tr><td>100</td><td>160.9</td><td>100 miles</td></tr>
+</table>
+
+<h2>Kilometres to Miles Reference Table</h2>
+<table>
+  <tr><th>Kilometres</th><th>Miles</th><th>Context</th></tr>
+  <tr><td>1</td><td>0.621</td><td>1 km</td></tr>
+  <tr><td>5</td><td>3.107</td><td>5K run</td></tr>
+  <tr><td>10</td><td>6.214</td><td>10K run</td></tr>
+  <tr><td>21.1</td><td>13.1</td><td>Half marathon</td></tr>
+  <tr><td>42.2</td><td>26.2</td><td>Full marathon</td></tr>
+  <tr><td>100</td><td>62.1</td><td>100 km</td></tr>
+  <tr><td>120</td><td>74.6</td><td>European motorway limit in mph</td></tr>
+</table>
+
+<h2>The Mental Maths Trick (Fibonacci Method)</h2>
+<p>Here's a remarkable shortcut: the ratio of miles to kilometres (1 : 1.609) is very close to the golden ratio (1 : 1.618). And consecutive Fibonacci numbers (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...) approach the golden ratio as you go further along the sequence.</p>
+<p>This means: <strong>consecutive Fibonacci numbers give you approximate mile/km conversions</strong>.</p>
+<ul>
+  <li>5 miles ≈ 8 km (exact: 8.05 km)</li>
+  <li>8 km ≈ 5 miles (exact: 4.97 miles)</li>
+  <li>13 miles ≈ 21 km (exact: 20.9 km)</li>
+  <li>21 km ≈ 13 miles (exact: 13.05 miles)</li>
+  <li>55 miles ≈ 89 km (exact: 88.5 km)</li>
+</ul>
+<p>This works beautifully for running distances and road trip estimates — no calculator needed.</p>
+
+<h2>Converting Running Pace</h2>
+<p>Runners often need to convert pace (time per distance unit) as well as distance. The conversion works in reverse:</p>
+<ul>
+  <li><strong>Minutes per mile → minutes per km:</strong> Divide by 1.609. A 10:00/mile pace = 6:13/km.</li>
+  <li><strong>Minutes per km → minutes per mile:</strong> Multiply by 1.609. A 6:00/km pace = 9:39/mile.</li>
+</ul>
+<p>Popular pace benchmarks converted:</p>
+<table>
+  <tr><th>Min/mile</th><th>Min/km</th><th>5K finish time</th></tr>
+  <tr><td>7:00</td><td>4:21</td><td>21:45</td></tr>
+  <tr><td>8:00</td><td>4:58</td><td>24:51</td></tr>
+  <tr><td>9:00</td><td>5:35</td><td>27:57</td></tr>
+  <tr><td>10:00</td><td>6:13</td><td>31:04</td></tr>
+  <tr><td>12:00</td><td>7:27</td><td>37:17</td></tr>
+</table>
+
+<h2>Why the UK Uses Both Miles and Kilometres</h2>
+<p>The UK officially adopted the metric system in the 1970s, and most measurements — weight, height, volume — have transitioned to metric. Road signs, speed limits, and road distances are one of the last holdouts, remaining in miles. The government has periodically discussed conversion, but the cost (estimated at over £1 billion to replace all road signs) and public resistance have kept miles on British roads.</p>
+<p>Meanwhile, running events, athletics tracks, cycling, and fitness apps all use kilometres — creating the situation where a British runner might train for a "10K" and drive to the start line past speed limit signs in miles.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>How many kilometres is a mile?</h3><p>Exactly 1.609344 kilometres by international definition since 1959. For quick calculations, 1 mile ≈ 1.6 km introduces only a 0.6% error — acceptable for most everyday purposes.</p></div>
+  <div class="faq-item"><h3>How many miles is a 5K run?</h3><p>5 kilometres is 3.107 miles — typically rounded to 3.1 miles. Other common running distances: 10K = 6.21 miles, half marathon (21.1km) = 13.1 miles, full marathon (42.195km) = 26.219 miles (always quoted as 26.2).</p></div>
+  <div class="faq-item"><h3>Why does the UK use miles for roads but kilometres for running?</h3><p>The UK metricated most measurements in the 1970s but never changed road signs — largely due to the cost (£1bn+ estimate) and public attachment to miles. Running events, however, are internationally standardised in metric distances (5K, 10K, etc.) and have used kilometres globally since long before the UK metrication debate.</p></div>
+  <div class="faq-item"><h3>How do I convert mph to km/h?</h3><p>Multiply by 1.609344. So 60 mph = 96.56 km/h, and the UK's 70 mph motorway limit = 112.65 km/h. Quick estimate: multiply by 1.6. To convert back, divide by 1.609 or multiply by 0.621.</p></div>
+</div>
+
+  <div class="cta-box">
+    <div class="cta-text">
+      <strong>Try the Length & Distance Converter</strong>
+      <span>Convert miles, kilometres, metres, feet, and more instantly</span>
+    </div>
+    <a href="https://unit-converter.tabutility.com/" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
+  ]]></content:encoded>
     <description>Whether you're travelling, running, or converting UK road signs, here's everything you need to know about converting miles to kilometres — with formulas, tables, and mental maths shortcuts.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
