@@ -84,17 +84,17 @@
 <p>A UK student loan isn't really a loan — it works more like a graduate tax with an expiry date. You repay 9% of everything you earn above a threshold, and whatever's left after 25, 30 or 40 years simply vanishes. That design produces some genuinely strange outcomes: a graduate on £35,000 can repay <strong>£67,861</strong> on a £45,000 loan and <em>still</em> have £40,197 written off.</p>
 <p>So we built a year-by-year repayment simulator and ran it for every plan — Plan 1, Plan 2, Plan 4 and Plan 5 — across starting salaries from £25,000 to £100,000. Here's how long your loan actually lasts, what you'll really repay, and the salary you need to ever clear it.</p>
 
-<div class="note"><strong>Our assumptions:</strong> 2025/26 repayment thresholds (Plan 1: £26,065 · Plan 2: £28,470 · Plan 4: £32,745 · Plan 5: £25,000), 9% repayment above threshold, current 2025/26 interest rates held constant (3.2% for Plans 1/4/5; 3.2%–6.2% income-sliding for Plan 2), salary and thresholds both growing 3% a year. Typical balances at graduation: £20,000 (Plan 1), £48,000 (Plan 2), £25,000 (Plan 4), £45,000 (Plan 5).</div>
+<div class="note"><strong>Our assumptions:</strong> 2025/26 repayment thresholds (Plan 1: £26,065 · Plan 2: £28,470 · Plan 4: £32,745 · Plan 5: £25,000), 9% repayment above threshold, current 2025/26 interest rates held constant (3.2% for Plans 1/4/5; 3.2%–6.2% income-sliding for Plan 2), salary, repayment thresholds and Plan 2's interest-rate income band all growing 3% a year. Typical balances at graduation: £20,000 (Plan 1), £48,000 (Plan 2), £25,000 (Plan 4), £45,000 (Plan 5).</div>
 
 <h2>Plan 2 (Started Uni 2012–2022): Most People Never Finish Paying</h2>
 <p>Plan 2 is the plan most current repayers are on — and the one with the harshest arithmetic. With a typical £48,000 balance and interest running up to 6.2%, repayments at ordinary salaries never outrun the interest:</p>
 <table>
   <tr><th>Starting salary</th><th>Repayment /mo (yr 1)</th><th>How long it lasts</th><th>Total repaid</th><th>Written off at 30y</th></tr>
-  <tr><td>£30,000</td><td>£11</td><td>Full 30 years</td><td>£6,551</td><td>£206,793</td></tr>
-  <tr><td>£35,000</td><td>£49</td><td>Full 30 years</td><td>£27,960</td><td>£186,028</td></tr>
-  <tr><td>£40,000</td><td>£86</td><td>Full 30 years</td><td>£49,369</td><td>£155,038</td></tr>
-  <tr><td>£45,000</td><td>£124</td><td>Full 30 years</td><td>£70,778</td><td>£116,014</td></tr>
-  <tr><td>£50,000</td><td>£161</td><td>Full 30 years</td><td>£92,187</td><td>£70,234</td></tr>
+  <tr><td>£30,000</td><td>£11</td><td>Full 30 years</td><td>£6,551</td><td>£120,628</td></tr>
+  <tr><td>£35,000</td><td>£49</td><td>Full 30 years</td><td>£27,960</td><td>£110,018</td></tr>
+  <tr><td>£40,000</td><td>£86</td><td>Full 30 years</td><td>£49,369</td><td>£97,197</td></tr>
+  <tr><td>£45,000</td><td>£124</td><td>Full 30 years</td><td>£70,778</td><td>£81,730</td></tr>
+  <tr><td>£50,000</td><td>£161</td><td>Full 30 years</td><td>£92,187</td><td>£63,102</td></tr>
   <tr><td>£60,000</td><td>£236</td><td>Cleared in 26 years</td><td>£106,288</td><td>—</td></tr>
   <tr><td>£70,000</td><td>£311</td><td>Cleared in 18 years</td><td>£83,200</td><td>—</td></tr>
   <tr><td>£80,000</td><td>£386</td><td>Cleared in 14 years</td><td>£73,453</td><td>—</td></tr>
@@ -162,7 +162,7 @@
 </ol>
 
 <h2>Method Notes</h2>
-<p>All figures computed by Tabutility, August 2026, using a year-by-year simulation. Repayment thresholds are the published 2025/26 figures: Plan 1 £26,065, Plan 2 £28,470, Plan 4 £32,745, Plan 5 £25,000; repayments are 9% of income above threshold. Interest: 3.2% for Plans 1, 4 and 5; Plan 2 slides from 3.2% at the threshold to 6.2% at £51,245+ (published 2025/26 rates, held constant). Salaries and thresholds are both assumed to grow 3% a year, so results are effectively in today's-money terms. Write-off horizons assume the post-September-2006 Plan 1 rules (25 years) and post-2007 Plan 4 rules (30 years); pre-September-2006 Plan 1 loans are instead cancelled at age 65, and pre-2007 Scottish (Plan 4) loans at age 65 or 30 years, whichever comes first — cohorts our tables don't model. Typical balances reflect common amounts at graduation; your own balance, salary path and future rate changes will move the numbers. This analysis shows how the system's mechanics play out — it is not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
+<p>All figures computed by Tabutility, August 2026, using a year-by-year simulation. Repayment thresholds are the published 2025/26 figures: Plan 1 £26,065, Plan 2 £28,470, Plan 4 £32,745, Plan 5 £25,000; repayments are 9% of income above threshold. Interest: 3.2% for Plans 1, 4 and 5; Plan 2 slides from 3.2% at the threshold to 6.2% at £51,245+ (published 2025/26 rates, held constant). Salaries, repayment thresholds and the endpoints of Plan 2's interest-rate income band (£28,470–£51,245) are all assumed to grow 3% a year, so results are effectively in today's-money terms. Write-off horizons assume the post-September-2006 Plan 1 rules (25 years) and post-2007 Plan 4 rules (30 years); pre-September-2006 Plan 1 loans are instead cancelled at age 65, and pre-2007 Scottish (Plan 4) loans at age 65 or 30 years, whichever comes first — cohorts our tables don't model. Typical balances reflect common amounts at graduation; your own balance, salary path and future rate changes will move the numbers. This analysis shows how the system's mechanics play out — it is not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
 
 <h2>FAQs</h2>
 <h3>Will I ever pay off my Plan 2 student loan?</h3>
