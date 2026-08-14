@@ -6,8 +6,104 @@
     <description>Free guides on personal finance, tax, property, health, and more. Written by the team behind Tabutility's 100 free browser tools.</description>
     <language>en-gb</language>
     <atom:link href="https://tabutility.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 12 Aug 2026 09:00:00 +0000</lastBuildDate>
-  <item>
+    <lastBuildDate>Thu, 13 Aug 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+    <title>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</title>
+    <link>https://tabutility.com/blog/mortgage-affordability-uk-salary/</link>
+    <guid isPermaLink="true">https://tabutility.com/blog/mortgage-affordability-uk-salary/</guid>
+    <description>Original data: borrowing power, monthly payments and the share of take-home pay a mortgage really eats, for every UK salary from £20,000 to £150,000.</description>
+    <pubDate>Thu, 13 Aug 2026 09:00:00 +0000</pubDate>
+    <content:encoded><![CDATA[<h1>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</h1>
+  <div class="meta">Published 13 August 2026 · Original data analysis · 8 min read</div>
+
+  <!-- Top ad -->
+  <p>"How much mortgage can I afford?" is one of the most-searched money questions in the UK — and most answers stop at "4.5 times your salary." That's only half the story. The multiple is applied to your <strong>gross</strong> salary, but you repay the mortgage from your <strong>take-home</strong> pay — after Income Tax and National Insurance have taken their cut.</p>
+<p>So we computed the full picture for every salary from £20,000 to £150,000, using 2025/26 tax rules: how much you can borrow, what it costs per month, and — the number almost nobody publishes — <strong>what share of your real take-home pay that repayment swallows</strong>.</p>
+
+<div class="note"><strong>Our assumptions:</strong> standard 4.5× income multiple, 25-year repayment term, 10% deposit, England &amp; Wales 2025/26 tax and NI (no student loan or pension deductions). We show payments at a 4.5% rate and a 7% stress-test rate — the kind of check lenders actually run.</div>
+
+<h2>The Master Table: Borrowing Power by Salary</h2>
+<table>
+  <tr><th>Salary</th><th>Take-home /mo</th><th>Max loan (4.5×)</th><th>House price (10% dep.)</th><th>Payment @4.5%</th><th>% of take-home</th><th>Stress @7%</th></tr>
+  <tr><td>£20,000</td><td>£1,493</td><td>£90,000</td><td>£100,000</td><td>£500</td><td>33.5%</td><td>£636</td></tr>
+  <tr><td>£25,000</td><td>£1,793</td><td>£112,500</td><td>£125,000</td><td>£625</td><td>34.9%</td><td>£795</td></tr>
+  <tr><td>£30,000</td><td>£2,093</td><td>£135,000</td><td>£150,000</td><td>£750</td><td>35.8%</td><td>£954</td></tr>
+  <tr><td>£35,000</td><td>£2,393</td><td>£157,500</td><td>£175,000</td><td>£875</td><td>36.6%</td><td>£1,113</td></tr>
+  <tr><td>£40,000</td><td>£2,693</td><td>£180,000</td><td>£200,000</td><td>£1,000</td><td>37.1%</td><td>£1,272</td></tr>
+  <tr><td>£50,000</td><td>£3,293</td><td>£225,000</td><td>£250,000</td><td>£1,251</td><td>38.0%</td><td>£1,590</td></tr>
+  <tr><td>£60,000</td><td>£3,780</td><td>£270,000</td><td>£300,000</td><td>£1,501</td><td>39.7%</td><td>£1,908</td></tr>
+  <tr><td>£70,000</td><td>£4,263</td><td>£315,000</td><td>£350,000</td><td>£1,751</td><td>41.1%</td><td>£2,226</td></tr>
+  <tr><td>£80,000</td><td>£4,746</td><td>£360,000</td><td>£400,000</td><td>£2,001</td><td>42.2%</td><td>£2,544</td></tr>
+  <tr><td>£100,000</td><td>£5,713</td><td>£450,000</td><td>£500,000</td><td>£2,501</td><td>43.8%</td><td>£3,181</td></tr>
+  <tr><td>£120,000</td><td>£6,346</td><td>£540,000</td><td>£600,000</td><td>£3,001</td><td>47.3%</td><td>£3,817</td></tr>
+  <tr><td>£150,000</td><td>£7,607</td><td>£675,000</td><td>£750,000</td><td>£3,752</td><td>49.3%</td><td>£4,771</td></tr>
+</table>
+
+<h2>The Finding Nobody Talks About: The Affordability Squeeze Climbs With Salary</h2>
+<p>Here's the counter-intuitive result. On £20,000, a maximum mortgage costs <strong>33.5%</strong> of your take-home pay. On £150,000 — seven and a half times the salary — it costs <strong>49.3%</strong>. The more you earn, the <em>bigger</em> the bite a maximum mortgage takes out of your real pay packet.</p>
+<p>Why? Because the 4.5× multiple is applied to gross salary, but progressive tax means your take-home grows much more slowly than your gross. Between £100,000 and £125,140, the tapered personal allowance means you keep barely £53 of every extra £100 — yet the lender happily multiplies the full gross figure by 4.5.</p>
+<div class="note"><strong>Practical takeaway:</strong> if you earn over £60,000, borrowing the full 4.5× at today's rates likely puts you above the classic "keep housing under 35% of take-home" guideline. That's not a reason to panic — it's a reason to run your own numbers rather than trusting the multiple.</div>
+
+  <div class="cta-box">
+    <div>
+      <strong>Run your own numbers in 10 seconds</strong>
+      <p>Free mortgage affordability calculator — no signup, works in your browser.</p>
+    </div>
+    <a href="https://mortgage-calculator.tabutility.com/">Try the Mortgage Calculator →</a>
+  </div>
+
+<h2>What Salary Do You Need for a…?</h2>
+<p>Flipping the table around — here's the salary required at each price point, assuming a 10% deposit and the standard 4.5× multiple:</p>
+<table>
+  <tr><th>House price</th><th>Deposit (10%)</th><th>Loan needed</th><th>Salary required</th><th>Payment @4.5%</th></tr>
+  <tr><td>£200,000</td><td>£20,000</td><td>£180,000</td><td>£40,000</td><td>£1,000/mo</td></tr>
+  <tr><td>£250,000</td><td>£25,000</td><td>£225,000</td><td>£50,000</td><td>£1,251/mo</td></tr>
+  <tr><td>£300,000</td><td>£30,000</td><td>£270,000</td><td>£60,000</td><td>£1,501/mo</td></tr>
+  <tr><td>£350,000</td><td>£35,000</td><td>£315,000</td><td>£70,000</td><td>£1,751/mo</td></tr>
+  <tr><td>£400,000</td><td>£40,000</td><td>£360,000</td><td>£80,000</td><td>£2,001/mo</td></tr>
+  <tr><td>£500,000</td><td>£50,000</td><td>£450,000</td><td>£100,000</td><td>£2,501/mo</td></tr>
+</table>
+<p>Remember these salary figures can be <strong>combined incomes</strong> — a couple on £30,000 each clears the £60,000 needed for a £300,000 home.</p>
+
+  <!-- Mid ad -->
+  <h2>The 7% Stress Test: Can You Still Afford It?</h2>
+<p>Lenders don't just check today's rate — they test whether you'd cope if rates jumped. Our stress column shows repayments at 7%. The gap is brutal: on a £50,000 salary, the maximum mortgage goes from £1,251 to <strong>£1,590 a month</strong> — from 38% to 48% of take-home. On £100,000, the stressed payment hits £3,181, over 55% of monthly net pay.</p>
+<p>This is exactly why lenders sometimes offer you <em>less</em> than 4.5× — the stress test binds before the multiple does.</p>
+
+<h2>Three Ways to Improve What You Can Actually Afford</h2>
+<ol>
+  <li><strong>Bigger deposit beats bigger multiple.</strong> Every £10,000 of extra deposit cuts roughly £56/month off a 25-year mortgage at 4.5% — and can unlock cheaper rate bands at 15% and 25% deposits.</li>
+  <li><strong>Check your real take-home first.</strong> Student loans, pension contributions and salary sacrifice all change the arithmetic. Our <a href="https://tabutility.com/uk-salary/">UK salary take-home tables</a> show the true net figure for every salary from £20,000 to £200,000.</li>
+  <li><strong>Longer term ≠ cheaper mortgage.</strong> Stretching from 25 to 35 years cuts the monthly payment but adds tens of thousands in interest. Use it as a safety valve, not a plan.</li>
+</ol>
+
+<h2>Method Notes</h2>
+<p>All figures computed by Tabutility, August 2026. Take-home pay uses 2025/26 England &amp; Wales Income Tax bands (personal allowance £12,570 with taper above £100,000) and Class 1 employee NI (8% between £12,570–£50,270, 2% above). Mortgage payments use the standard amortisation formula over 25 years. Real lender offers vary with credit history, outgoings and lender policy — this analysis shows the standard framework, not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
+
+<h2>FAQs</h2>
+<h3>How many times my salary can I borrow?</h3>
+<p>4.5× gross salary is the standard cap most UK lenders apply. Some stretch to 5–5.5× for higher earners or professionals.</p>
+<h3>What salary do I need for a £300,000 house?</h3>
+<p>About £60,000 (single or combined) with a 10% deposit — £270,000 borrowed at 4.5×.</p>
+<h3>What percentage of take-home pay should a mortgage be?</h3>
+<p>Under 35% is the classic guideline. Our data shows maximum borrowing at current rates exceeds that for most salaries above £30,000.</p>
+<h3>Why do higher earners feel more squeezed?</h3>
+<p>The multiple uses gross pay, but repayments come from net pay — and progressive tax means net pay grows slower. At £150,000 a maximum mortgage takes 49% of take-home versus 34% at £20,000.</p>
+
+  <div class="cta-box">
+    <div>
+      <strong>See your full take-home pay breakdown</strong>
+      <p>Tax, NI and net pay for any UK salary — instant and free.</p>
+    </div>
+    <a href="https://uk-salary-calculator.tabutility.com/">UK Salary Calculator →</a>
+  </div>
+
+<p><em>Related reading: <a href="https://tabutility.com/blog/second-job-tax-uk/">Second Job Tax UK</a> · <a href="https://tabutility.com/blog/what-is-good-rental-yield-uk/">What Is a Good Rental Yield?</a> · <a href="https://tabutility.com/blog/how-much-to-retire-uk/">How Much Do You Need to Retire?</a></em></p>
+
+  <!-- Bottom ad -->
+  </div>]]></content:encoded>
+  </item>
+<item>
     <title>Side Hustle Tax UK: When You Must Register for Self Assessment</title>
     <link>https://tabutility.com/blog/side-hustle-tax-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/side-hustle-tax-uk/</guid>
