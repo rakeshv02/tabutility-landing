@@ -7,7 +7,128 @@
     <language>en-gb</language>
     <atom:link href="https://tabutility.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>Fri, 14 Aug 2026 09:00:00 +0000</lastBuildDate>
-    <item>
+      <item>
+    <title>The Salary You Need to Buy a Typical Home in Every US State (2026 Data)</title>
+    <link>https://tabutility.com/blog/salary-to-buy-home-every-us-state/</link>
+    <guid isPermaLink="true">https://tabutility.com/blog/salary-to-buy-home-every-us-state/</guid>
+    <description>From $44,543 in West Virginia to $203,996 in Hawaii — the household income needed for a typical home in all 50 states + DC, computed from June 2026 Zillow data.</description>
+    <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    <content:encoded><![CDATA[<h1>The Salary You Need to Buy a Typical Home in Every US State (2026 Data)</h1>
+  <div class="meta">Published 13 August 2026 · Original data analysis · Source: Zillow Home Value Index, June 2026</div>
+
+  <p>How much do you need to earn to buy a typical home where you live? We took the latest <a href="https://www.zillow.com/research/data/" rel="nofollow">Zillow Home Value Index</a> (June 2026) for all 50 states plus DC and computed the household income required, using the classic lender math: <strong>10% down, a 30-year mortgage at 6.5%, and the 28% rule</strong> (housing payment ≤ 28% of gross income).</p>
+<p>The spread is staggering: <strong>$44,543 in West Virginia versus $203,996 in Hawaii</strong> — a 4.6× gap for the same milestone. The US median household income sits near the requirement of states in the middle of our table, which is exactly why homeownership feels effortless in some states and impossible in others.</p>
+
+<div class="note"><strong>Method in one line:</strong> required salary = 12 × monthly principal-and-interest on 90% of the state's typical home value ÷ 0.28. Property taxes, insurance and HOA fees are excluded (see method notes) — real requirements run higher, especially in high-tax states.</div>
+
+<h2>All 50 States + DC, Ranked by Required Salary</h2>
+<table>
+  <tr><th>#</th><th>State</th><th>Typical home value</th><th>P&amp;I payment /mo</th><th>Salary needed</th></tr>
+      <tr><td>1</td><td>Hawaii</td><td>$836,741</td><td>$4,760</td><td><strong>$203,996</strong></td></tr>
+      <tr><td>2</td><td>California</td><td>$775,549</td><td>$4,412</td><td><strong>$189,077</strong></td></tr>
+      <tr><td>3</td><td>Massachusetts</td><td>$672,867</td><td>$3,828</td><td><strong>$164,043</strong></td></tr>
+      <tr><td>4</td><td>Washington</td><td>$603,303</td><td>$3,432</td><td><strong>$147,084</strong></td></tr>
+      <tr><td>5</td><td>New Jersey</td><td>$584,681</td><td>$3,326</td><td><strong>$142,544</strong></td></tr>
+      <tr><td>6</td><td>District of Columbia</td><td>$579,332</td><td>$3,296</td><td><strong>$141,240</strong></td></tr>
+      <tr><td>7</td><td>Colorado</td><td>$543,435</td><td>$3,091</td><td><strong>$132,488</strong></td></tr>
+      <tr><td>8</td><td>Utah</td><td>$541,692</td><td>$3,081</td><td><strong>$132,063</strong></td></tr>
+      <tr><td>9</td><td>New York</td><td>$525,947</td><td>$2,992</td><td><strong>$128,225</strong></td></tr>
+      <tr><td>10</td><td>New Hampshire</td><td>$522,944</td><td>$2,975</td><td><strong>$127,492</strong></td></tr>
+      <tr><td>11</td><td>Rhode Island</td><td>$517,078</td><td>$2,941</td><td><strong>$126,062</strong></td></tr>
+      <tr><td>12</td><td>Oregon</td><td>$504,432</td><td>$2,870</td><td><strong>$122,979</strong></td></tr>
+      <tr><td>13</td><td>Idaho</td><td>$482,199</td><td>$2,743</td><td><strong>$117,559</strong></td></tr>
+      <tr><td>14</td><td>Montana</td><td>$476,115</td><td>$2,708</td><td><strong>$116,076</strong></td></tr>
+      <tr><td>15</td><td>Connecticut</td><td>$455,424</td><td>$2,591</td><td><strong>$111,031</strong></td></tr>
+      <tr><td>16</td><td>Nevada</td><td>$448,215</td><td>$2,550</td><td><strong>$109,274</strong></td></tr>
+      <tr><td>17</td><td>Maryland</td><td>$436,104</td><td>$2,481</td><td><strong>$106,321</strong></td></tr>
+      <tr><td>18</td><td>Maine</td><td>$424,107</td><td>$2,413</td><td><strong>$103,396</strong></td></tr>
+      <tr><td>19</td><td>Arizona</td><td>$422,822</td><td>$2,405</td><td><strong>$103,083</strong></td></tr>
+      <tr><td>20</td><td>Virginia</td><td>$419,920</td><td>$2,389</td><td><strong>$102,376</strong></td></tr>
+      <tr><td>21</td><td>Delaware</td><td>$412,252</td><td>$2,345</td><td><strong>$100,506</strong></td></tr>
+      <tr><td>22</td><td>Vermont</td><td>$402,017</td><td>$2,287</td><td><strong>$98,011</strong></td></tr>
+      <tr><td>23</td><td>Alaska</td><td>$400,659</td><td>$2,279</td><td><strong>$97,680</strong></td></tr>
+      <tr><td>24</td><td>Florida</td><td>$378,126</td><td>$2,151</td><td><strong>$92,186</strong></td></tr>
+      <tr><td>25</td><td>Wyoming</td><td>$372,526</td><td>$2,119</td><td><strong>$90,821</strong></td></tr>
+      <tr><td>26</td><td>Minnesota</td><td>$356,887</td><td>$2,030</td><td><strong>$87,008</strong></td></tr>
+      <tr><td>27</td><td>Wisconsin</td><td>$342,279</td><td>$1,947</td><td><strong>$83,447</strong></td></tr>
+      <tr><td>28</td><td>North Carolina</td><td>$340,430</td><td>$1,937</td><td><strong>$82,996</strong></td></tr>
+      <tr><td>29</td><td>Tennessee</td><td>$338,769</td><td>$1,927</td><td><strong>$82,591</strong></td></tr>
+      <tr><td>30</td><td>Georgia</td><td>$335,358</td><td>$1,908</td><td><strong>$81,760</strong></td></tr>
+      <tr><td>31</td><td>South Dakota</td><td>$325,618</td><td>$1,852</td><td><strong>$79,385</strong></td></tr>
+      <tr><td>32</td><td>New Mexico</td><td>$321,186</td><td>$1,827</td><td><strong>$78,304</strong></td></tr>
+      <tr><td>33</td><td>South Carolina</td><td>$309,323</td><td>$1,760</td><td><strong>$75,412</strong></td></tr>
+      <tr><td>34</td><td>Texas</td><td>$302,999</td><td>$1,724</td><td><strong>$73,871</strong></td></tr>
+      <tr><td>35</td><td>Illinois</td><td>$298,871</td><td>$1,700</td><td><strong>$72,864</strong></td></tr>
+      <tr><td>36</td><td>Pennsylvania</td><td>$294,099</td><td>$1,673</td><td><strong>$71,701</strong></td></tr>
+      <tr><td>37</td><td>North Dakota</td><td>$293,556</td><td>$1,670</td><td><strong>$71,568</strong></td></tr>
+      <tr><td>38</td><td>Nebraska</td><td>$284,464</td><td>$1,618</td><td><strong>$69,352</strong></td></tr>
+      <tr><td>39</td><td>Missouri</td><td>$271,597</td><td>$1,545</td><td><strong>$66,215</strong></td></tr>
+      <tr><td>40</td><td>Michigan</td><td>$269,972</td><td>$1,536</td><td><strong>$65,818</strong></td></tr>
+      <tr><td>41</td><td>Indiana</td><td>$262,265</td><td>$1,492</td><td><strong>$63,940</strong></td></tr>
+      <tr><td>42</td><td>Kansas</td><td>$252,794</td><td>$1,438</td><td><strong>$61,631</strong></td></tr>
+      <tr><td>43</td><td>Ohio</td><td>$251,502</td><td>$1,431</td><td><strong>$61,316</strong></td></tr>
+      <tr><td>44</td><td>Alabama</td><td>$241,517</td><td>$1,374</td><td><strong>$58,881</strong></td></tr>
+      <tr><td>45</td><td>Iowa</td><td>$241,255</td><td>$1,372</td><td><strong>$58,817</strong></td></tr>
+      <tr><td>46</td><td>Kentucky</td><td>$235,363</td><td>$1,339</td><td><strong>$57,381</strong></td></tr>
+      <tr><td>47</td><td>Arkansas</td><td>$228,662</td><td>$1,301</td><td><strong>$55,747</strong></td></tr>
+      <tr><td>48</td><td>Oklahoma</td><td>$225,437</td><td>$1,282</td><td><strong>$54,961</strong></td></tr>
+      <tr><td>49</td><td>Louisiana</td><td>$217,968</td><td>$1,240</td><td><strong>$53,140</strong></td></tr>
+      <tr><td>50</td><td>Mississippi</td><td>$198,428</td><td>$1,129</td><td><strong>$48,376</strong></td></tr>
+      <tr><td>51</td><td>West Virginia</td><td>$182,704</td><td>$1,039</td><td><strong>$44,543</strong></td></tr>
+</table>
+
+  <div class="cta-box">
+    <div>
+      <strong>Run your own numbers in 10 seconds</strong>
+      <p>Free mortgage calculator — payment, interest, any rate or term.</p>
+    </div>
+    <a href="https://mortgage-calculator.tabutility.com/">Try the Mortgage Calculator →</a>
+  </div>
+
+<h2>What Jumps Out of the Data</h2>
+<ul>
+  <li><strong>The $100k wall:</strong> in 12 states + DC you now need a six-figure household income for a typical home. A generation ago that was true almost nowhere.</li>
+  <li><strong>The affordable belt:</strong> West Virginia, Mississippi, Louisiana, Oklahoma and Arkansas all clear at under $56,000 — below the income of many dual-earner households anywhere in the country. Remote workers have noticed.</li>
+  <li><strong>Hawaii vs West Virginia:</strong> the identical 10%-down buyer needs 4.6× the income. No other everyday purchase varies this much by geography.</li>
+  <li><strong>The middle is moving:</strong> states like Arizona, Georgia and North Carolina — affordable a decade ago — now sit in the $80–100k band, squeezing out local first-time buyers.</li>
+</ul>
+
+  <h2>How Far Does Your Salary Go?</h2>
+<p>Flip the question: what does your current income buy?</p>
+<ul>
+  <li><strong>$50,000:</strong> a typical home in 3 states — West Virginia, Mississippi and Louisiana.</li>
+  <li><strong>$75,000:</strong> opens up roughly 20 states, mostly in the South and Midwest.</li>
+  <li><strong>$100,000:</strong> 38 states are within reach — but not Colorado, Utah, Washington, or the coasts.</li>
+  <li><strong>$150,000:</strong> everything except Massachusetts, California and Hawaii.</li>
+</ul>
+<p>Check your own take-home pay first — the 28% rule uses gross income, but your budget lives on net. Our <a href="https://tabutility.com/us-salary/">US salary take-home tables</a> show the after-tax reality for every salary from $30,000 to $300,000.</p>
+
+<h2>Method Notes</h2>
+<p>Home values: Zillow Home Value Index (ZHVI), all-homes smoothed seasonally-adjusted, June 2026, by state — the "typical" mid-market home, not the median sale price. Mortgage math: 10% down payment, 30-year fixed at 6.5%, standard amortization; principal and interest only. Income requirement: P&amp;I capped at 28% of gross household income. Excludes property tax, homeowners insurance, PMI (which applies below 20% down) and HOA fees, so treat these as lower bounds. Computed by Tabutility, August 2026. You're welcome to cite or reproduce this table with a link to this page.</p>
+
+<h2>FAQs</h2>
+<h3>What salary do you need to buy a house in the US?</h3>
+<p>Between roughly $45,000 and $204,000 depending on the state, for a typical home with 10% down at 6.5%.</p>
+<h3>What is the 28% rule?</h3>
+<p>Keep your housing payment at or below 28% of gross monthly income — the standard lender affordability screen.</p>
+<h3>Do these numbers include property taxes and insurance?</h3>
+<p>No — principal and interest only. Add roughly 15–25% to the required salary in high-property-tax states.</p>
+<h3>Can two incomes count?</h3>
+<p>Yes — these are household income figures. Two $55,000 earners qualify where $110,000 is required.</p>
+
+  <div class="cta-box">
+    <div>
+      <strong>See your real US take-home pay</strong>
+      <p>Federal tax, Social Security and Medicare — instant and free.</p>
+    </div>
+    <a href="https://us-paycheck-calculator.tabutility.com/">US Paycheck Calculator →</a>
+  </div>
+
+<p><em>Related reading: <a href="https://tabutility.com/blog/mortgage-affordability-uk-salary/">Mortgage Affordability on Every UK Salary</a> · <a href="https://tabutility.com/blog/student-loan-repayment-uk/">UK Student Loan Repayments</a></em></p>
+
+  </div>]]></content:encoded>
+  </item>
+<item>
     <title>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</title>
     <link>https://tabutility.com/blog/student-loan-repayment-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/student-loan-repayment-uk/</guid>
@@ -95,7 +216,7 @@
 </ol>
 
 <h2>Method Notes</h2>
-<p>All figures computed by Tabutility, August 2026, using a year-by-year simulation. Repayment thresholds are the published 2025/26 figures: Plan 1 £26,065, Plan 2 £28,470, Plan 4 £32,745, Plan 5 £25,000; repayments are 9% of income above threshold. Interest: 4.3% for Plans 1, 4 and 5; Plan 2 slides from 4.3% at the threshold to 7.3% at £51,245+ (current published rates, held constant). Salaries and thresholds are both assumed to grow 3% a year, so results are effectively in today's-money terms. Write-off horizons assume the post-September-2006 Plan 1 rules (25 years) and post-2007 Plan 4 rules (30 years); pre-September-2006 Plan 1 loans are instead cancelled at age 65, and pre-2007 Scottish (Plan 4) loans at age 65 or 30 years, whichever comes first — cohorts our tables don't model. Typical balances reflect common amounts at graduation; your own balance, salary path and future rate changes will move the numbers. This analysis shows how the system's mechanics play out — it is not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
+<p>All figures computed by Tabutility, August 2026, using a year-by-year simulation. Repayment thresholds are the published 2025/26 figures: Plan 1 £26,065, Plan 2 £28,470, Plan 4 £32,745, Plan 5 £25,000; repayments are 9% of income above threshold. Interest: 4.3% for Plans 1, 4 and 5; Plan 2 slides from 4.3% at the threshold to 7.3% at £51,245+ (current published rates, held constant). Salaries and thresholds are both assumed to grow 3% a year, so results are effectively in today's-money terms. Write-off horizons assume the post-September-2006 Plan 1 rules (25 years) and post-2007 Plan 4 rules (30 years); older Plan 1 and Scottish loans are instead cancelled at age 65, which our tables don't model. Typical balances reflect common amounts at graduation; your own balance, salary path and future rate changes will move the numbers. This analysis shows how the system's mechanics play out — it is not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
 
 <h2>FAQs</h2>
 <h3>Will I ever pay off my Plan 2 student loan?</h3>
@@ -103,7 +224,7 @@
 <h3>How much of my salary goes to repayments?</h3>
 <p>9% of everything above your plan's threshold (6% for Postgraduate Loans). On £35,000 that's roughly £49/month on Plan 2 or £75/month on Plan 5.</p>
 <h3>When is my student loan written off?</h3>
-<p>For loans taken out from September 2006: 25 years for Plan 1, 30 years for Plans 2 and 4, 40 years for Plan 5 — counted from the April you first became liable to repay. Older loans have different rules: pre-September-2006 Plan 1 loans are cancelled when you turn 65, and pre-2007 Scottish (Plan 4) loans are cancelled at age 65 or 30 years after the April you were first due to repay, whichever comes first.</p>
+<p>For loans taken out from September 2006: 25 years for Plan 1, 30 years for Plans 2 and 4, 40 years for Plan 5 — counted from the April you first became liable to repay. Older loans have different rules: pre-2006 Plan 1 loans (and pre-2007 Scottish loans) are instead cancelled when you turn 65.</p>
 <h3>Is it worth paying off a student loan early?</h3>
 <p>Only if you'd clear it anyway. If your salary path leads to write-off, overpayments repay money you'd never have owed. High earners who'll clear the loan fast can save real interest.</p>
 
