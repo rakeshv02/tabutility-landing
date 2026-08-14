@@ -6,7 +6,119 @@
     <description>Free guides on personal finance, tax, property, health, and more. Written by the team behind Tabutility's 100 free browser tools.</description>
     <language>en-gb</language>
     <atom:link href="https://tabutility.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 13 Aug 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+    <title>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</title>
+    <link>https://tabutility.com/blog/student-loan-repayment-uk/</link>
+    <guid isPermaLink="true">https://tabutility.com/blog/student-loan-repayment-uk/</guid>
+    <description>Original data: years to clear, total repaid vs borrowed, and write-off outcomes for UK student loan Plans 1, 2, 4 and 5 — simulated for every salary. You need ~£61,000 to ever clear a typical Plan 2 loan.</description>
+    <pubDate>Fri, 14 Aug 2026 09:00:00 +0000</pubDate>
+    <content:encoded><![CDATA[<h1>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</h1>
+  <div class="meta">Published 14 August 2026 · Original data analysis · 9 min read</div>
+
+  <!-- Top ad -->
+  
+<p>A UK student loan isn't really a loan — it works more like a graduate tax with an expiry date. You repay 9% of everything you earn above a threshold, and whatever's left after 25, 30 or 40 years simply vanishes. That design produces some genuinely strange outcomes: a graduate on £35,000 can repay <strong>£67,861</strong> on a £45,000 loan and <em>still</em> have £95,295 written off.</p>
+<p>So we built a year-by-year repayment simulator and ran it for every plan — Plan 1, Plan 2, Plan 4 and Plan 5 — across starting salaries from £25,000 to £100,000. Here's how long your loan actually lasts, what you'll really repay, and the salary you need to ever clear it.</p>
+
+<div class="note"><strong>Our assumptions:</strong> 2025/26 repayment thresholds (Plan 1: £26,065 · Plan 2: £28,470 · Plan 4: £32,745 · Plan 5: £25,000), 9% repayment above threshold, current interest rates held constant (4.3% for Plans 1/4/5; 4.3%–7.3% income-sliding for Plan 2), salary and thresholds both growing 3% a year. Typical balances at graduation: £20,000 (Plan 1), £48,000 (Plan 2), £25,000 (Plan 4), £45,000 (Plan 5).</div>
+
+<h2>Plan 2 (Started Uni 2012–2022): Most People Never Finish Paying</h2>
+<p>Plan 2 is the plan most current repayers are on — and the one with the harshest arithmetic. With a typical £48,000 balance and interest running up to 7.3%, repayments at ordinary salaries never outrun the interest:</p>
+<table>
+  <tr><th>Starting salary</th><th>Repayment /mo (yr 1)</th><th>How long it lasts</th><th>Total repaid</th><th>Written off at 30y</th></tr>
+  <tr><td>£30,000</td><td>£11</td><td>Full 30 years</td><td>£6,551</td><td>£285,141</td></tr>
+  <tr><td>£35,000</td><td>£49</td><td>Full 30 years</td><td>£27,960</td><td>£265,176</td></tr>
+  <tr><td>£40,000</td><td>£86</td><td>Full 30 years</td><td>£49,369</td><td>£231,447</td></tr>
+  <tr><td>£45,000</td><td>£124</td><td>Full 30 years</td><td>£70,778</td><td>£186,839</td></tr>
+  <tr><td>£50,000</td><td>£161</td><td>Full 30 years</td><td>£92,187</td><td>£133,090</td></tr>
+  <tr><td>£60,000</td><td>£236</td><td>Full 30 years</td><td>£135,005</td><td>£11,213</td></tr>
+  <tr><td>£70,000</td><td>£311</td><td>Cleared in 20 years</td><td>£98,131</td><td>—</td></tr>
+  <tr><td>£80,000</td><td>£386</td><td>Cleared in 15 years</td><td>£82,068</td><td>—</td></tr>
+  <tr><td>£100,000</td><td>£536</td><td>Cleared in 10 years</td><td>£69,236</td><td>—</td></tr>
+</table>
+<p>The headline finding: in our model you need a starting salary of roughly <strong>£61,000</strong> to ever clear a typical Plan 2 loan. Below that, it's a 30-year payroll deduction followed by a write-off. And notice the perverse peak: the £60,000 earner repays <strong>£135,005</strong> — more than anyone else on the table — because they pay heavily for the full 30 years but never quite escape the interest.</p>
+
+<h2>Plan 5 (Started Uni 2023+): Smaller Bills, Forty-Year Sentence</h2>
+<p>Plan 5 cut the interest rate (RPI only, no added percentage) but dropped the threshold to £25,000 and stretched the write-off to <strong>40 years</strong>. The result: more graduates repay for most of their working life.</p>
+<table>
+  <tr><th>Starting salary</th><th>Repayment /mo (yr 1)</th><th>How long it lasts</th><th>Total repaid</th><th>Written off at 40y</th></tr>
+  <tr><td>£30,000</td><td>£38</td><td>Full 40 years</td><td>£33,931</td><td>£168,862</td></tr>
+  <tr><td>£35,000</td><td>£75</td><td>Full 40 years</td><td>£67,861</td><td>£95,295</td></tr>
+  <tr><td>£40,000</td><td>£113</td><td>Full 40 years</td><td>£101,792</td><td>£21,727</td></tr>
+  <tr><td>£45,000</td><td>£150</td><td>Cleared in 32 years</td><td>£91,528</td><td>—</td></tr>
+  <tr><td>£50,000</td><td>£188</td><td>Cleared in 25 years</td><td>£77,492</td><td>—</td></tr>
+  <tr><td>£60,000</td><td>£263</td><td>Cleared in 17 years</td><td>£65,422</td><td>—</td></tr>
+  <tr><td>£70,000</td><td>£338</td><td>Cleared in 13 years</td><td>£60,017</td><td>—</td></tr>
+  <tr><td>£100,000</td><td>£563</td><td>Cleared in 8 years</td><td>£53,622</td><td>—</td></tr>
+</table>
+<p>On a £40,000 salary you repay <strong>£101,792</strong> over 40 years on a £45,000 loan — 2.3× what you borrowed — and there's still £21,727 left to write off at the end. The break-even starting salary to ever clear a typical Plan 5 balance is about <strong>£41,500</strong>.</p>
+
+  <div class="cta-box">
+    <div>
+      <strong>See your exact monthly repayment</strong>
+      <p>Free UK student loan calculator — all plans, no signup, instant.</p>
+    </div>
+    <a href="https://uk-student-loan.tabutility.com/">Try the Student Loan Calculator →</a>
+  </div>
+
+  <!-- Mid ad -->
+  
+<h2>Plan 1 and Plan 4: The Forgiving Ones</h2>
+<p>Older Plan 1 loans (and Scotland's Plan 4) carry smaller balances and lower interest, so they behave much more like normal loans:</p>
+<table>
+  <tr><th>Starting salary</th><th>Plan 1 (£20k debt, 25y)</th><th>Plan 1 total repaid</th><th>Plan 4 (£25k debt, 30y)</th><th>Plan 4 total repaid</th></tr>
+  <tr><td>£35,000</td><td>Written off (£9,599 left)</td><td>£29,319</td><td>Written off (£71,092 left)</td><td>£9,655</td></tr>
+  <tr><td>£40,000</td><td>Cleared in 19 years</td><td>£30,486</td><td>Written off (£32,708 left)</td><td>£31,064</td></tr>
+  <tr><td>£45,000</td><td>Cleared in 14 years</td><td>£27,115</td><td>Cleared in 28 years</td><td>£46,942</td></tr>
+  <tr><td>£50,000</td><td>Cleared in 11 years</td><td>£25,438</td><td>Cleared in 19 years</td><td>£38,272</td></tr>
+  <tr><td>£60,000</td><td>Cleared in 8 years</td><td>£23,757</td><td>Cleared in 12 years</td><td>£32,549</td></tr>
+  <tr><td>£80,000</td><td>Cleared in 5 years</td><td>£22,442</td><td>Cleared in 7 years</td><td>£29,234</td></tr>
+</table>
+<p>Break-even starting salaries: about <strong>£37,000</strong> for Plan 1 and <strong>£44,500</strong> for Plan 4 (the Scottish threshold is higher, so low earners repay very little — but the debt compounds while they don't).</p>
+
+<h2>The Salary You Need to Ever Pay It Off</h2>
+<table>
+  <tr><th>Plan</th><th>Typical balance</th><th>Write-off horizon</th><th>Starting salary needed to clear</th></tr>
+  <tr><td>Plan 1</td><td>£20,000</td><td>25 years</td><td>~£37,000</td></tr>
+  <tr><td>Plan 5</td><td>£45,000</td><td>40 years</td><td>~£41,500</td></tr>
+  <tr><td>Plan 4</td><td>£25,000</td><td>30 years</td><td>~£44,500</td></tr>
+  <tr><td>Plan 2</td><td>£48,000</td><td>30 years</td><td>~£61,000</td></tr>
+</table>
+<div class="note"><strong>Practical takeaway:</strong> if your salary path sits below your plan's break-even line, voluntary overpayments are usually wasted money — you'd be repaying debt that was destined to be written off anyway. If you're comfortably above it, overpaying early can cut years of interest. Run your own numbers before sending the Student Loans Company a penny extra.</div>
+
+<h2>Three Things the Model Makes Obvious</h2>
+<ol>
+  <li><strong>Middle earners pay the most.</strong> On Plan 2, the £60,000 starter repays £135,005 — more than double what the £100,000 starter pays (£69,236). High earners escape the interest quickly; low earners barely pay; the middle carries the system.</li>
+  <li><strong>The plan you're on matters more than the amount you borrowed.</strong> A £45,000 Plan 5 loan on £40,000 costs £101,792 over a career; a £48,000 Plan 2 loan on the same salary costs £49,369 — because Plan 2's write-off arrives ten years sooner.</li>
+  <li><strong>"Debt" is the wrong mental model.</strong> For most graduates the balance is irrelevant — what matters is 9% of income above the threshold, for 25–40 years. Budget for the deduction, not the headline number.</li>
+</ol>
+
+<h2>Method Notes</h2>
+<p>All figures computed by Tabutility, August 2026, using a year-by-year simulation. Repayment thresholds are the published 2025/26 figures: Plan 1 £26,065, Plan 2 £28,470, Plan 4 £32,745, Plan 5 £25,000; repayments are 9% of income above threshold. Interest: 4.3% for Plans 1, 4 and 5; Plan 2 slides from 4.3% at the threshold to 7.3% at £51,245+ (current published rates, held constant). Salaries and thresholds are both assumed to grow 3% a year, so results are effectively in today's-money terms. Typical balances reflect common amounts at graduation; your own balance, salary path and future rate changes will move the numbers. This analysis shows how the system's mechanics play out — it is not financial advice. You're free to cite or reproduce these tables with a link to this page.</p>
+
+<h2>FAQs</h2>
+<h3>Will I ever pay off my Plan 2 student loan?</h3>
+<p>Only if you earn well above average — our model puts the break-even starting salary around £61,000 for a typical £48,000 balance. Below that, expect 30 years of deductions and a write-off.</p>
+<h3>How much of my salary goes to repayments?</h3>
+<p>9% of everything above your plan's threshold (6% for Postgraduate Loans). On £35,000 that's roughly £49/month on Plan 2 or £75/month on Plan 5.</p>
+<h3>When is my student loan written off?</h3>
+<p>25 years for Plan 1, 30 years for Plans 2 and 4, 40 years for Plan 5 — counted from the April you first became liable to repay.</p>
+<h3>Is it worth paying off a student loan early?</h3>
+<p>Only if you'd clear it anyway. If your salary path leads to write-off, overpayments repay money you'd never have owed. High earners who'll clear the loan fast can save real interest.</p>
+
+  <div class="cta-box">
+    <div>
+      <strong>Model your own repayments in 10 seconds</strong>
+      <p>Plan 1, 2, 4, 5 and Postgraduate — monthly and annual figures, free.</p>
+    </div>
+    <a href="https://uk-student-loan.tabutility.com/">UK Student Loan Calculator →</a>
+  </div>
+
+<p><em>Related reading: <a href="https://tabutility.com/blog/mortgage-affordability-uk-salary/">Mortgage Affordability on Every UK Salary</a> · <a href="https://tabutility.com/blog/how-to-calculate-salary-after-tax/">How to Calculate Salary After Tax</a> · <a href="https://tabutility.com/blog/second-job-tax-uk/">Second Job Tax UK</a></em></p>
+
+  <!-- Bottom ad -->]]></content:encoded>
+  </item>
     <item>
     <title>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</title>
     <link>https://tabutility.com/blog/mortgage-affordability-uk-salary/</link>
