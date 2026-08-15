@@ -2172,5 +2172,21 @@
     ],
     "emoji": "🇯🇵",
     "url": "https://japan-income-tax.tabutility.com"
+  },
+  {
+    "id": "canada-income-tax",
+    "name": "Canada Income Tax Calculator",
+    "description": "Calculate federal + provincial tax, CPP, EI and take-home pay for every Canadian province and territory. 2025 rates.",
+    "category": "International",
+    "emoji": "🇨🇦",
+    "url": "https://canada-income-tax.tabutility.com/"
+  },
+  {
+    "id": "canada-crs-calculator",
+    "name": "Canada Express Entry CRS Calculator",
+    "description": "Check your Comprehensive Ranking System score for Canadian PR — age, education, language, experience and spouse factors.",
+    "category": "International",
+    "emoji": "🍁",
+    "url": "https://canada-crs-calculator.tabutility.com/"
   }
 ]
