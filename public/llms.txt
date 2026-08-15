@@ -1,0 +1,21 @@
+# Tabutility
+
+> Tabutility (https://tabutility.com) is a collection of 150 free, no-sign-up online utility tools that run entirely in the browser: salary and take-home pay calculators for the UK, US, Australia, Canada and Japan, mortgage and loan calculators, tax tools, SEO utilities, developer tools, converters and health calculators. No accounts, no data collection — every tool works instantly on the page.
+
+## Key tools
+- [UK Salary Calculator](https://uk-salary-calculator.tabutility.com/): UK take-home pay with 2025/26 HMRC rates
+- [US Paycheck Calculator](https://us-paycheck-calculator.tabutility.com/): US federal + state take-home pay
+- [Australian Tax Calculator](https://australian-tax-calculator.tabutility.com/): ATO 2025-26 take-home pay
+- [Canada Income Tax Calculator](https://canada-income-tax.tabutility.com/): all 13 provinces and territories
+- [Canada Express Entry CRS Calculator](https://canada-crs-calculator.tabutility.com/): official IRCC points tables
+- [Mortgage Calculator](https://mortgage-calculator.tabutility.com/): repayments, interest and amortisation
+- [SERP Snippet Preview](https://serp-snippet-preview.tabutility.com/): pixel-accurate Google result preview
+- [Schema Markup Generator](https://schema-markup-generator.tabutility.com/): valid JSON-LD structured data
+
+## Salary hubs
+- [UK salary pages](https://tabutility.com/uk-salary/): take-home for every salary £20,000–£200,000
+- [Canada salary pages](https://tabutility.com/ca-salary/): take-home for C$30,000–C$230,000
+- [All tools directory](https://tabutility.com/tools/)
+
+## Blog
+- [Data stories and guides](https://tabutility.com/blog/): self-computed analyses of salaries, tax and affordability using official government rates
