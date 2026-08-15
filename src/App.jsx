@@ -34,6 +34,20 @@ function trackRecentTool(tool) {
 }
 
 const CALC = {
+  ca: gross => {
+    // Federal 2025 (blended 14.5% first bracket) + Ontario, with BPA/CEA/CPP/EI credits
+    const fb = [[57375, .145], [114750, .205], [177882, .26], [253414, .29], [Infinity, .33]];
+    const ob = [[52886, .0505], [105775, .0915], [150000, .1116], [220000, .1216], [Infinity, .1316]];
+    const bt = (inc, b) => { let t = 0, p = 0; for (const [top, r] of b) { if (inc <= p) break; t += (Math.min(inc, top) - p) * r; p = top; } return t; };
+    const cpp = Math.max(0, Math.min(gross, 71300) - 3500) * .0595 + Math.max(0, Math.min(gross, 81200) - 71300) * .04;
+    const ei = Math.min(gross, 65700) * .0164;
+    const fbpa = gross <= 177882 ? 16129 : gross >= 253414 ? 14538 : 16129 - (16129 - 14538) * (gross - 177882) / (253414 - 177882);
+    const fed = Math.max(0, bt(gross, fb) - (fbpa + Math.min(1471, gross) + cpp + ei) * .145);
+    let on = Math.max(0, bt(gross, ob) - (12747 + cpp + ei) * .0505);
+    let sur = 0; if (on > 5710) sur += (on - 5710) * .2; if (on > 7307) sur += (on - 7307) * .36; on += sur;
+    on += gross <= 20000 ? 0 : gross <= 36000 ? Math.min((gross - 20000) * .06, 300) : gross <= 48000 ? 300 + Math.min((gross - 36000) * .06, 150) : gross <= 72000 ? 450 + Math.min((gross - 48000) * .25, 150) : gross <= 200000 ? 600 + Math.min((gross - 72000) * .25, 150) : 750 + Math.min((gross - 200000) * .25, 150);
+    return gross - fed - on - cpp - ei;
+  },
   uk: gross => {
     const pa = 12570, br = 50270, hr = 125140;
     let ePA = gross > 100000 ? Math.max(0, pa - (gross - 100000) / 2) : pa, t = Math.max(0, gross - ePA);
@@ -73,6 +87,7 @@ const COUNTRIES = {
   uk: { flag: "🇬🇧", label: "UK", sym: "£", min: 20000, max: 200000, year: "2025/26", slug: "uk-salary", hub: "https://uk-salary-calculator.tabutility.com" },
   us: { flag: "🇺🇸", label: "US", sym: "$", min: 30000, max: 300000, year: "2026", slug: "us-salary", hub: "https://us-paycheck-calculator.tabutility.com" },
   au: { flag: "🇦🇺", label: "AU", sym: "A$", min: 40000, max: 250000, year: "2025–26", slug: "au-salary", hub: "https://australian-tax-calculator.tabutility.com" },
+  ca: { flag: "🇨🇦", label: "CA", sym: "C$", min: 30000, max: 250000, year: "2025", slug: null, hub: "https://canada-income-tax.tabutility.com" },
   jp: { flag: "🇯🇵", label: "JP", sym: "¥", min: 3000000, max: 20000000, year: "2026", slug: null, hub: "https://japan-income-tax.tabutility.com" },
 };
 function money(c, n) { return `${c.sym}${Math.round(n).toLocaleString("en-US")}`; }
@@ -103,7 +118,7 @@ export default function App() {
         ["Am I a healthy weight?", "https://bmi-calculator.tabutility.com", "Check your BMI"],
       ].map(([q, href, label]) => <a key={q} className="question-card" href={href} style={styles.question}><b>{q}</b><span>{label} ↗</span></a>)}</div>
     </header>
-    <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
+    <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["ca", "🇨🇦 CA"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
     {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
     <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? toolsData.length : toolsData.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
     {isFiltered ? <main style={styles.content}><div style={styles.result}>{filtered.length ? `${filtered.length} tools${search ? ` matching “${search}”` : ""}` : `No tools found for “${search}”`}</div>{filtered.length ? <ToolGrid tools={filtered} /> : <div style={styles.empty}>⌕<strong>Nothing found</strong><span>Try a different search or browse a category above.</span></div>}</main> : <HomeContent country={country} c={c} />}
