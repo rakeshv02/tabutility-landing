@@ -2188,5 +2188,29 @@
     "category": "International",
     "emoji": "🍁",
     "url": "https://canada-crs-calculator.tabutility.com/"
+  },
+  {
+    "id": "serp-snippet-preview",
+    "name": "SERP Snippet Preview",
+    "description": "Preview how your page title and meta description appear in Google search results, with pixel-accurate width limits for desktop and mobile.",
+    "category": "SEO",
+    "emoji": "🔍",
+    "url": "https://serp-snippet-preview.tabutility.com/"
+  },
+  {
+    "id": "meta-tags-generator",
+    "name": "Meta Tags Generator",
+    "description": "Generate a complete, paste-ready HTML head block — title, meta description, Open Graph and Twitter card tags — with live character counters.",
+    "category": "SEO",
+    "emoji": "🏷️",
+    "url": "https://meta-tags-generator.tabutility.com/"
+  },
+  {
+    "id": "schema-markup-generator",
+    "name": "Schema Markup Generator",
+    "description": "Create valid JSON-LD structured data for FAQ, Article, LocalBusiness, Product, HowTo and Breadcrumb schemas — no coding needed.",
+    "category": "SEO",
+    "emoji": "📋",
+    "url": "https://schema-markup-generator.tabutility.com/"
   }
 ]
