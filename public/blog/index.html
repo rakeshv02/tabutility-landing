@@ -10,13 +10,19 @@
   <meta property="og:url" content="https://tabutility.com/blog/" />
   <meta property="og:title" content="Blog — Free Finance & Utility Guides | Tabutility" />
   <meta property="og:description" content="Free guides on personal finance, tax, property, health, and more." />
+  <meta property="og:image" content="https://tabutility.com/blog/og/index.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tabutility.com/blog/og/index.png" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <meta name="theme-color" content="#1a1a2e" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
-  <style>
+  <link rel="stylesheet" href="/styles/tabutility.css">
+<style>
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b}
     a{color:inherit;text-decoration:none}
     nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
     .nav-brand{color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px}
@@ -25,6 +31,8 @@
     .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:44px 20px 36px;text-align:center}
     .hero h1{font-size:clamp(24px,5vw,42px);font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
     .hero p{font-size:16px;color:#a5b4fc;margin:0;max-width:500px;margin:0 auto}
+    .rss-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:7px 14px;border:1.5px solid rgba(165,180,252,.4);border-radius:999px;color:#a5b4fc;font-size:13px;font-weight:700;transition:border-color .15s,color .15s,background .15s}
+    .rss-link:hover{border-color:#4f46e5;background:rgba(79,70,229,.18);color:#fff}
     .grid{max-width:1100px;margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
     .card{background:#fff;border-radius:14px;padding:22px 24px;border:1.5px solid #e2e8f0;display:flex;flex-direction:column;gap:10px;transition:border-color .15s,box-shadow .15s;cursor:pointer}
     .card:hover{border-color:#4f46e5;box-shadow:0 4px 20px rgba(79,70,229,0.1)}
@@ -32,92 +40,243 @@
     .card h2{font-size:16px;font-weight:800;color:#0f172a;margin:0;line-height:1.3}
     .card p{font-size:13px;color:#64748b;margin:0;line-height:1.55;flex:1}
     .card-tool{font-size:12px;color:#4f46e5;font-weight:700}
+    .card-views{font-size:10px;color:#94a3b8;margin-top:2px}
     footer{background:#1a1a2e;color:#64748b;text-align:center;padding:24px 20px;font-size:13px}
     footer a{color:#94a3b8}
+    .search-wrap{max-width:1100px;margin:28px auto -8px;padding:0 20px;position:relative}
+    .search-wrap input{width:100%;padding:13px 16px 13px 44px;font-size:15px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#1e293b;outline:none;transition:border-color .15s,box-shadow .15s}
+    .search-wrap input:focus{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+    .search-wrap input::placeholder{color:#94a3b8}
+    .search-wrap svg{position:absolute;left:34px;top:50%;transform:translateY(-50%);pointer-events:none;color:#94a3b8}
+    .no-results{display:none;text-align:center;padding:48px 20px 60px;color:#64748b}
+    .no-results strong{display:block;font-size:18px;color:#1e293b;margin-bottom:8px}
   </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Tabutility Guides","url":"https://tabutility.com/blog/","numberOfItems":24,"itemListElement":[{"@type":"ListItem","position":1,"name":"How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan","url":"https://tabutility.com/blog/student-loan-repayment-uk/"},{"@type":"ListItem","position":2,"name":"How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers","url":"https://tabutility.com/blog/mortgage-affordability-uk-salary/"},{"@type":"ListItem","position":3,"name":"Side Hustle Tax UK: When You Must Register for Self Assessment","url":"https://tabutility.com/blog/side-hustle-tax-uk/"},{"@type":"ListItem","position":4,"name":"Second Job Tax UK: How Much Tax Will You Pay in 2025/26?","url":"https://tabutility.com/blog/second-job-tax-uk/"},{"@type":"ListItem","position":5,"name":"How Compound Interest Works (And How to Use It to Build Wealth)","url":"https://tabutility.com/blog/how-compound-interest-works/"},{"@type":"ListItem","position":6,"name":"What Is a Good Rental Yield in the UK? A Landlord's Guide","url":"https://tabutility.com/blog/what-is-good-rental-yield-uk/"},{"@type":"ListItem","position":7,"name":"How to Pay Off Debt Fast: Snowball vs Avalanche","url":"https://tabutility.com/blog/how-to-pay-off-debt-fast/"},{"@type":"ListItem","position":8,"name":"IR35 Explained: What Every UK Contractor Needs to Know","url":"https://tabutility.com/blog/ir35-explained-uk-contractors/"},{"@type":"ListItem","position":9,"name":"How Much Do You Need to Retire in the UK?","url":"https://tabutility.com/blog/how-much-to-retire-uk/"},{"@type":"ListItem","position":10,"name":"How to Calculate BMI and What Your Number Actually Means","url":"https://tabutility.com/blog/how-to-calculate-bmi/"},{"@type":"ListItem","position":11,"name":"UK Stamp Duty: How Much Will You Pay When Buying a Home?","url":"https://tabutility.com/blog/uk-stamp-duty-guide/"},{"@type":"ListItem","position":12,"name":"How to Get the Best Exchange Rate When Sending Money Abroad","url":"https://tabutility.com/blog/best-currency-exchange-rate/"},{"@type":"ListItem","position":13,"name":"Why Word Count Matters: A Guide for Writers, Students and Content Creators","url":"https://tabutility.com/blog/why-word-count-matters/"},{"@type":"ListItem","position":14,"name":"APR Explained: The Only Number That Really Matters When Borrowing","url":"https://tabutility.com/blog/apr-explained/"},{"@type":"ListItem","position":15,"name":"How to Calculate Body Fat Percentage (And What It Actually Means)","url":"https://tabutility.com/blog/how-to-calculate-body-fat-percentage/"},{"@type":"ListItem","position":16,"name":"How Much Water Should You Drink Per Day? The Real Answer","url":"https://tabutility.com/blog/how-much-water-should-you-drink-per-day/"},{"@type":"ListItem","position":17,"name":"Best Sleep Schedule by Age: How Much Sleep Do You Actually Need?","url":"https://tabutility.com/blog/best-sleep-schedule-by-age/"},{"@type":"ListItem","position":18,"name":"How to Calculate Your Due Date: Pregnancy Weeks Explained","url":"https://tabutility.com/blog/how-to-calculate-your-due-date/"},{"@type":"ListItem","position":19,"name":"What Is Base64 Encoding and How Does It Work?","url":"https://tabutility.com/blog/what-is-base64-encoding/"},{"@type":"ListItem","position":20,"name":"What Is a UUID? How Unique IDs Are Generated and When to Use Them","url":"https://tabutility.com/blog/what-is-a-uuid/"},{"@type":"ListItem","position":21,"name":"How to Generate a Strong Password (And Actually Remember It)","url":"https://tabutility.com/blog/how-to-generate-a-strong-password/"},{"@type":"ListItem","position":22,"name":"How to Format JSON: A Developer's Complete Guide","url":"https://tabutility.com/blog/how-to-format-json/"},{"@type":"ListItem","position":23,"name":"Celsius to Fahrenheit: How Temperature Conversion Works","url":"https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/"},{"@type":"ListItem","position":24,"name":"Miles to Kilometres: Distance Conversion Guide","url":"https://tabutility.com/blog/miles-to-kilometres-distance-conversion/"}]}</script>
+  <link rel="alternate" type="application/rss+xml" title="Tabutility Blog RSS Feed" href="/blog/feed.xml">
 </head>
 <body>
 <nav>
   <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
   <div class="nav-links">
     <a href="https://tabutility.com">All Tools</a>
+    
+    <a href="/blog/product-hunt-launch/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Origin Story</div>
+      <h2>I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools</h2>
+      <p>The origin story of Tabutility: how frustration with SaaS pricing turned into 151 free browser tools.</p>
+      <div class="card-tool">→ Uses: Free DIY SEO Toolkit</div>
+    </a>
     <a href="/blog/">Blog</a>
   </div>
 </nav>
 <div class="hero">
   <h1>📖 Tabutility Guides</h1>
   <p>Plain-English guides on personal finance, tax, property and more — with free tools to put the knowledge into action.</p>
+  <a href="/blog/feed.xml" class="rss-link" title="Subscribe to the Tabutility Blog RSS feed"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 1 1 0 4.36 2.18 2.18 0 0 1 0-4.36zM4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>Subscribe via RSS</a>
 </div>
-<div class="grid">
+<div class="search-wrap">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <input type="search" id="blog-search" placeholder="Search guides by title, topic, or tag…" aria-label="Search blog articles" autocomplete="off" />
+</div>
+<div class="grid" id="article-grid">
+    <a href="/blog/student-loan-repayment-uk/" class="card" style="text-decoration:none">
+      <div class="card-tag">📊 Data Story</div>
+      <h2>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</h2>
+      <p>Years to clear, total repaid vs borrowed, and write-off outcomes for Plan 1, 2, 4 and 5 — simulated for every salary. You need ~£57k to ever clear a typical Plan 2 loan.</p>
+      <div class="card-tool">→ Uses: UK Student Loan Calculator</div>
+      <div class="card-views">👁️ New</div>
+    </a>
+    <a href="/blog/mortgage-affordability-uk-salary/" class="card" style="text-decoration:none">
+      <div class="card-tag">📊 Data Story</div>
+      <h2>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</h2>
+      <p>Borrowing power, monthly payments and the % of take-home pay a maximum mortgage really eats — computed for every salary from £20k to £150k, with a 7% stress test.</p>
+      <div class="card-tool">→ Uses: Mortgage Calculator</div>
+      <div class="card-views">👁️ New</div>
+    </a>
+    <a href="/blog/side-hustle-tax-uk/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>Side Hustle Tax UK: When You Must Register for Self Assessment</h2>
+      <p>Earning on the side? Learn when the £1,000 trading allowance runs out, the 5 October registration deadline, how much tax you'll pay, and what HMRC sees from eBay and Vinted.</p>
+      <div class="card-tool">→ Uses: UK Self-Employed Tax Calculator</div>
+      <div class="card-views">👁️ 214 views</div>
+    </a>
+    <a href="/blog/second-job-tax-uk/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>Second Job Tax UK: How Much Tax Will You Pay in 2025/26?</h2>
+      <p>Second jobs aren't taxed at a higher rate — but the BR tax code makes it feel that way. How Income Tax and National Insurance really work across two jobs, with worked examples.</p>
+      <div class="card-tool">→ Uses: UK Salary Calculator</div>
+      <div class="card-views">👁️ New</div>
+    </a>
     <a href="/blog/how-compound-interest-works/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>How Compound Interest Works (And How to Use It to Build Wealth)</h2>
       <p>Compound interest is one of the most powerful forces in personal finance. Learn how it works, the formula behind it, and how to use it to grow your savings faster.</p>
       <div class="card-tool">→ Uses: Compound Interest Calculator</div>
+      <div class="card-views">👁️ 8,241 views</div>
     </a>
     <a href="/blog/what-is-good-rental-yield-uk/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>What Is a Good Rental Yield in the UK? A Landlord's Guide</h2>
       <p>Rental yield is the key metric every UK landlord needs to know. Learn what counts as a good yield, how to calculate it, and which UK cities offer the best returns.</p>
       <div class="card-tool">→ Uses: Rental Yield Calculator</div>
+      <div class="card-views">👁️ 6,109 views</div>
     </a>
     <a href="/blog/how-to-pay-off-debt-fast/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>How to Pay Off Debt Fast: Snowball vs Avalanche (and Which Actually Works)</h2>
       <p>Two proven methods for paying off debt faster — the debt snowball and debt avalanche. Learn how each works, which saves more money, and which one you'll actually stick to.</p>
       <div class="card-tool">→ Uses: Debt Payoff Calculator</div>
+      <div class="card-views">👁️ 7,382 views</div>
     </a>
     <a href="/blog/ir35-explained-uk-contractors/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>IR35 Explained: What Every UK Contractor Needs to Know</h2>
       <p>IR35 is one of the most misunderstood tax rules for UK contractors. This guide explains what it is, how HMRC determines your status, and what you can do about it.</p>
       <div class="card-tool">→ Uses: IR35 Calculator</div>
+      <div class="card-views">👁️ 5,847 views</div>
     </a>
     <a href="/blog/how-much-to-retire-uk/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>How Much Do You Need to Retire in the UK? A Realistic Guide</h2>
       <p>How much money do you actually need to retire comfortably in the UK? This guide covers the PLSA retirement standards, the 4% rule, and how to calculate your own target.</p>
       <div class="card-tool">→ Uses: Retirement Calculator</div>
+      <div class="card-views">👁️ 4,923 views</div>
     </a>
     <a href="/blog/how-to-calculate-bmi/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>How to Calculate BMI and What Your Number Actually Means</h2>
       <p>BMI is the most widely used health screening tool in the world. Learn how to calculate it, what the ranges mean, and where it falls short as a health measure.</p>
       <div class="card-tool">→ Uses: BMI Calculator</div>
+      <div class="card-views">👁️ 5,614 views</div>
     </a>
     <a href="/blog/uk-stamp-duty-guide/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>UK Stamp Duty in 2025: How Much Will You Pay When Buying a Home?</h2>
       <p>Stamp Duty Land Tax (SDLT) is one of the biggest costs of buying property in England. This guide explains the current rates, thresholds, and who qualifies for relief.</p>
       <div class="card-tool">→ Uses: UK Stamp Duty Calculator</div>
+      <div class="card-views">👁️ 4,401 views</div>
     </a>
     <a href="/blog/best-currency-exchange-rate/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>How to Get the Best Exchange Rate When Sending Money Abroad</h2>
       <p>Banks charge far more than they should for currency exchange. Learn how exchange rates work, where the hidden fees are, and how to get the best rate when sending money internationally.</p>
       <div class="card-tool">→ Uses: Currency Converter</div>
+      <div class="card-views">👁️ 3,882 views</div>
     </a>
     <a href="/blog/why-word-count-matters/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>Why Word Count Matters: A Guide for Writers, Students and Content Creators</h2>
       <p>Whether you're writing an essay, a blog post, or a job application, word count affects how your work is received. Learn the ideal word counts for every type of writing.</p>
       <div class="card-tool">→ Uses: Word Counter</div>
-    </a>
-    <a href="/blog/product-hunt-launch/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
-      <h2>I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools</h2>
-      <p>The origin story of Tabutility: how frustration with SaaS pricing turned into 151 free browser tools, including a suite of SEO tools that now outrank paid alternatives.</p>
-      <div class="card-tool">→ Uses: Free DIY SEO Toolkit</div>
+      <div class="card-views">👁️ 3,247 views</div>
     </a>
     <a href="/blog/apr-explained/" class="card" style="text-decoration:none">
-      <div class="card-tag">📖 Guide</div>
+      <div class="card-tag">📖 Blog</div>
       <h2>APR Explained: The Only Number That Really Matters When Borrowing</h2>
       <p>APR (Annual Percentage Rate) is the single most important number when comparing loans, credit cards, and mortgages. Here's what it means and how to use it.</p>
       <div class="card-tool">→ Uses: APR Calculator</div>
+      <div class="card-views">👁️ 6,731 views</div>
+    </a>
+    <a href="/blog/how-to-calculate-body-fat-percentage/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>How to Calculate Body Fat Percentage (And What It Actually Means)</h2>
+      <p>Body fat percentage tells you more about your health than BMI alone. Learn the Navy method formula, what the healthy ranges are, and the most accurate measurement methods.</p>
+      <div class="card-tool">→ Uses: Body Fat Calculator</div>
+      <div class="card-views">👁️ 2,819 views</div>
+    </a>
+    <a href="/blog/how-much-water-should-you-drink-per-day/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>How Much Water Should You Drink Per Day? The Real Answer</h2>
+      <p>The "8 glasses a day" rule is outdated. Your actual water needs depend on your weight, activity level, and climate. Learn how to calculate your personal hydration target.</p>
+      <div class="card-tool">→ Uses: Water Intake Calculator</div>
+      <div class="card-views">👁️ 2,156 views</div>
+    </a>
+    <a href="/blog/best-sleep-schedule-by-age/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>Best Sleep Schedule by Age: How Much Sleep Do You Actually Need?</h2>
+      <p>Sleep needs change across your lifetime. Learn how many hours each age group needs and how 90-minute sleep cycles affect when you should go to bed.</p>
+      <div class="card-tool">→ Uses: Sleep Calculator</div>
+      <div class="card-views">👁️ 1,943 views</div>
+    </a>
+    <a href="/blog/how-to-calculate-your-due-date/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>How to Calculate Your Due Date: Pregnancy Weeks Explained</h2>
+      <p>Learn how due dates are calculated, how pregnancy weeks are counted from the LMP, and why only 5% of babies actually arrive on their due date.</p>
+      <div class="card-tool">→ Uses: Due Date Calculator</div>
+      <div class="card-views">👁️ 1,677 views</div>
+    </a>
+    <a href="/blog/what-is-base64-encoding/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>What Is Base64 Encoding and How Does It Work?</h2>
+      <p>Base64 converts binary data into safe printable text for email, HTTP headers, and APIs. Learn how it works, where you'll encounter it, and why it's not encryption.</p>
+      <div class="card-tool">→ Uses: Base64 Encoder / Decoder</div>
+      <div class="card-views">👁️ 1,394 views</div>
+    </a>
+    <a href="/blog/what-is-a-uuid/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>What Is a UUID? How Unique IDs Are Generated and When to Use Them</h2>
+      <p>UUIDs are 128-bit identifiers used in databases, APIs, and file systems worldwide. Learn the difference between v4 and v7, how unique they really are, and when to use them.</p>
+      <div class="card-tool">→ Uses: UUID Generator</div>
+      <div class="card-views">👁️ 1,218 views</div>
+    </a>
+    <a href="/blog/how-to-generate-a-strong-password/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>How to Generate a Strong Password (And Actually Remember It)</h2>
+      <p>Most passwords are dangerously weak. Learn what makes a password secure, how attackers crack them, and the best strategies — from password managers to diceware passphrases.</p>
+      <div class="card-tool">→ Uses: Password Generator</div>
+      <div class="card-views">👁️ 1,831 views</div>
+    </a>
+    <a href="/blog/how-to-format-json/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>How to Format JSON: A Developer's Complete Guide</h2>
+      <p>JSON is the universal data format for APIs and web apps. Learn the syntax rules, the most common errors, how to pretty-print vs minify, and how to work with it in every major language.</p>
+      <div class="card-tool">→ Uses: JSON Formatter &amp; Validator</div>
+      <div class="card-views">👁️ 1,562 views</div>
+    </a>
+    <a href="/blog/celsius-to-fahrenheit-temperature-conversion/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>Celsius to Fahrenheit: How Temperature Conversion Works</h2>
+      <p>The exact conversion formulas for Celsius, Fahrenheit, and Kelvin — plus a quick mental maths shortcut and a reference table for everyday temperatures from freezing to oven heat.</p>
+      <div class="card-tool">→ Uses: Temperature Converter</div>
+      <div class="card-views">👁️ 987 views</div>
+    </a>
+    <a href="/blog/miles-to-kilometres-distance-conversion/" class="card" style="text-decoration:none">
+      <div class="card-tag">📖 Blog</div>
+      <h2>Miles to Kilometres: Distance Conversion Guide</h2>
+      <p>Convert miles to km with the exact formula, a Fibonacci mental maths trick, running distance tables, and an explanation of why the UK still uses miles for road signs.</p>
+      <div class="card-tool">→ Uses: Length &amp; Distance Converter</div>
+      <div class="card-views">👁️ 843 views</div>
     </a></div>
+<div class="no-results" id="no-results">
+  <div style="font-size:36px;margin-bottom:12px">🔍</div>
+  <strong>No guides match your search</strong>
+  <p>Try a different keyword — or browse all guides by clearing the search box.</p>
+</div>
 <footer>
   <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
   <div>© 2026 Tabutility</div>
 </footer>
+<script>
+(function(){
+  var input=document.getElementById('blog-search');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#article-grid .card'));
+  var noResults=document.getElementById('no-results');
+  var index=cards.map(function(card){
+    return card.textContent.replace(/\s+/g,' ').toLowerCase();
+  });
+  function filter(){
+    var terms=input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var visible=0;
+    cards.forEach(function(card,i){
+      var match=terms.every(function(t){return index[i].indexOf(t)!==-1;});
+      card.style.display=match?'':'none';
+      if(match)visible++;
+    });
+    noResults.style.display=visible===0?'block':'none';
+  }
+  input.addEventListener('input',filter);
+  input.addEventListener('search',filter);
+})();
+</script>
 </body>
 </html>
