@@ -28,180 +28,414 @@
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <link rel="stylesheet" href="/styles/tabutility.css">
 <style>
-    *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
-    a{color:#4f46e5;text-decoration:none}
-    a:hover{text-decoration:underline}
-    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-    .nav-brand{color:#fff;font-size:18px;font-weight:800}
-    .nav-links a{color:rgba(255,255,255,0.8);font-size:14px;margin-left:20px;font-weight:500}
-    .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:44px 20px 36px;text-align:center}
-    .hero h1{font-size:clamp(26px,5vw,42px);font-weight:900;margin:0 0 12px;letter-spacing:-1px}
-    .hero p{color:rgba(255,255,255,0.75);margin:0 auto;font-size:16px;max-width:660px}
-    .wrap{max-width:760px;margin:0 auto;padding:32px 20px 60px}
-    .card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:20px;border:1.5px solid #e8ecf2}
-    .card h2{font-size:19px;font-weight:800;margin:0 0 14px;color:#1e293b}
-    .card p{font-size:14.5px}
-    table{width:100%;border-collapse:collapse;font-size:14px}
-    th{color:#64748b;font-weight:600;text-align:left;padding:8px 6px;border-bottom:2px solid #e8ecf2;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
-    td{padding:9px 6px;border-bottom:1px solid #f1f5f9}
-    .price{color:#dc2626;font-weight:700;white-space:nowrap}
-    .step{display:flex;gap:14px;align-items:flex-start}
-    .num{flex:0 0 34px;height:34px;border-radius:50%;background:#4f46e5;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px;margin-top:2px}
-    .toolbtn{display:inline-block;background:#eef2ff;border:1px solid #c7d2fe;color:#4338ca;font-weight:700;font-size:13.5px;padding:8px 14px;border-radius:10px;margin:6px 8px 0 0}
-    .toolbtn:hover{background:#e0e7ff;text-decoration:none}
-    .freebadge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;background:#dcfce7;color:#166534;vertical-align:middle;margin-left:8px}
-    .cta{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:16px;padding:26px;text-align:center;color:#fff;margin-bottom:20px}
-    .cta h3{margin:0 0 6px;font-size:19px}
-    .cta p{margin:0 0 14px;color:rgba(255,255,255,0.85);font-size:14px}
-    .cta a{display:inline-block;background:#fff;color:#4f46e5;font-weight:800;padding:11px 22px;border-radius:10px;font-size:14px;margin:4px}
-    .cta a:hover{text-decoration:none;opacity:.92}
-    details{border-bottom:1px solid #f1f5f9;padding:10px 0}
-    summary{font-weight:700;cursor:pointer;font-size:15px}
-    details p{margin:10px 0 4px;font-size:14.5px;color:#334155}
-    footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:13px}
-    footer a{color:rgba(255,255,255,0.85)}
-  </style>
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+  a{color:#4f46e5;text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* NAV */
+  nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .nav-brand{color:#fff;font-size:18px;font-weight:800}
+  .nav-links a{color:rgba(255,255,255,0.75);font-size:14px;margin-left:20px;font-weight:500}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:#fff;padding:64px 20px 56px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;right:-160px;top:-160px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(79,70,229,.3),transparent 70%);pointer-events:none}
+  .hero::after{content:'';position:absolute;left:-100px;bottom:-100px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.2),transparent 70%);pointer-events:none}
+  .hero-kicker{display:inline-block;background:rgba(79,70,229,.25);border:1px solid rgba(129,140,248,.5);color:#a5b4fc;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:99px;margin-bottom:22px}
+  .hero h1{font-size:clamp(30px,6vw,58px);font-weight:900;margin:0 0 8px;letter-spacing:-1.5px;line-height:1.1}
+  .hero h1 .price-cross{color:#f87171;text-decoration:line-through;text-decoration-color:#ef4444;text-decoration-thickness:4px}
+  .hero h1 .free{color:#34d399}
+  .hero-sub{color:rgba(255,255,255,0.7);font-size:17px;max-width:580px;margin:16px auto 0;line-height:1.6}
+
+  /* STATS STRIP */
+  .stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap;max-width:680px;margin:40px auto 0;position:relative;z-index:1}
+  .stat{flex:1;min-width:140px;text-align:center;padding:18px 12px;border-right:1px solid rgba(255,255,255,0.1)}
+  .stat:last-child{border-right:none}
+  .stat-num{font-size:clamp(28px,5vw,40px);font-weight:900;color:#fff;line-height:1}
+  .stat-label{font-size:12px;color:#94a3b8;margin-top:4px;font-weight:500}
+
+  /* IMPORTANCE SECTION */
+  .importance{background:#fff;border-top:3px solid #4f46e5;padding:52px 20px}
+  .importance-inner{max-width:900px;margin:0 auto}
+  .section-kicker{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#4f46e5;margin-bottom:10px}
+  .importance h2{font-size:clamp(22px,4vw,34px);font-weight:900;color:#0f172a;margin:0 0 14px;letter-spacing:-.5px}
+  .importance-lead{font-size:16px;color:#334155;max-width:700px;margin-bottom:32px;line-height:1.75}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .impact-card{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;padding:22px 20px;border-left:4px solid #4f46e5}
+  .impact-card .ic-num{font-size:32px;font-weight:900;color:#4f46e5;line-height:1}
+  .impact-card .ic-label{font-size:13.5px;color:#334155;margin-top:6px;line-height:1.4}
+
+  /* PRICING SECTION */
+  .pricing-section{background:#f8fafc;padding:52px 20px;border-top:1px solid #e2e8f0}
+  .pricing-inner{max-width:900px;margin:0 auto}
+  .pricing-section h2{font-size:clamp(20px,4vw,30px);font-weight:900;color:#0f172a;margin:0 0 6px;letter-spacing:-.5px}
+  .pricing-section .sub{font-size:15px;color:#475569;margin:0 0 32px}
+  .price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:20px}
+  .price-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:20px 18px;position:relative}
+  .price-card .service{font-size:13px;font-weight:700;color:#0f172a;margin-bottom:6px}
+  .price-card .agency-price{font-size:22px;font-weight:900;color:#dc2626;line-height:1.1}
+  .price-card .diy-label{display:inline-flex;align-items:center;gap:5px;background:#dcfce7;color:#166534;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:99px;margin-top:10px}
+  .price-card .step-ref{font-size:11.5px;color:#64748b;margin-top:6px}
+  .price-card.hard{border-color:#fecaca;background:#fff7f7}
+  .price-card.hard .diy-label{background:#fee2e2;color:#991b1b}
+  .price-note{font-size:12.5px;color:#94a3b8;margin:0}
+
+  /* CHECKLIST LAYOUT */
+  .checklist-section{padding:52px 20px;max-width:900px;margin:0 auto}
+  .checklist-section h2{font-size:clamp(20px,4vw,30px);font-weight:900;color:#0f172a;margin:0 0 6px;letter-spacing:-.5px}
+  .checklist-section .sub{font-size:15px;color:#475569;margin:0 0 32px}
+  .step-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:18px;padding:0;margin-bottom:16px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+  .step-card:hover{border-color:#c7d2fe;box-shadow:0 4px 24px rgba(79,70,229,.08)}
+  .step-head{display:flex;align-items:stretch;gap:0}
+  .step-num{flex:0 0 60px;background:linear-gradient(180deg,#4f46e5,#4338ca);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;border-radius:0}
+  .step-head-text{flex:1;padding:18px 20px 16px}
+  .step-head-text h3{font-size:16.5px;font-weight:800;color:#0f172a;margin:0 0 2px}
+  .step-agency{font-size:12px;color:#94a3b8;font-style:italic}
+  .step-agency strong{color:#dc2626;font-style:normal}
+  .step-body{padding:0 20px 20px 80px}
+  .step-body p{font-size:14.5px;color:#334155;margin:0 0 10px;line-height:1.7}
+  .step-body p:last-of-type{margin-bottom:12px}
+  .toolbtn{display:inline-flex;align-items:center;gap:6px;background:#eef2ff;border:1px solid #c7d2fe;color:#4338ca;font-weight:700;font-size:13px;padding:8px 14px;border-radius:10px;margin:4px 6px 0 0;transition:background .15s}
+  .toolbtn:hover{background:#e0e7ff;text-decoration:none}
+  .toolbtn svg{flex:0 0 14px}
+  .freebadge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;background:#dcfce7;color:#166534;vertical-align:middle;margin-left:8px}
+  .skip-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;background:#fef3c7;color:#92400e;vertical-align:middle;margin-left:8px}
+
+  /* CTA BAND */
+  .cta-band{background:linear-gradient(135deg,#4f46e5,#7c3aed);padding:52px 20px;text-align:center}
+  .cta-band h2{font-size:clamp(22px,4vw,34px);font-weight:900;color:#fff;margin:0 0 8px;letter-spacing:-.5px}
+  .cta-band p{color:rgba(255,255,255,0.8);font-size:16px;margin:0 0 28px}
+  .tool-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:780px;margin:0 auto}
+  .tool-chip{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:12px;transition:background .15s}
+  .tool-chip:hover{background:rgba(255,255,255,0.22);text-decoration:none}
+
+  /* FAQ + FOOTER */
+  .faq-section{max-width:760px;margin:0 auto;padding:52px 20px 40px}
+  .faq-section h2{font-size:24px;font-weight:900;color:#0f172a;margin:0 0 20px}
+  details{border-bottom:1px solid #e2e8f0;padding:14px 0}
+  summary{font-weight:700;cursor:pointer;font-size:15px;color:#1e293b;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:'+';font-size:20px;color:#4f46e5;font-weight:400;flex:0 0 auto}
+  details[open] summary::after{content:'−'}
+  details p{margin:10px 0 4px;font-size:14.5px;color:#475569;padding-right:24px}
+  .related{background:#fff;border-top:1px solid #e2e8f0;padding:32px 20px;text-align:center;font-size:14px;color:#475569}
+  .related a{color:#4f46e5;margin:0 8px}
+  .disclaimer{max-width:760px;margin:0 auto;padding:0 20px 48px;font-size:12px;color:#94a3b8}
+  footer{background:#1a1a2e;color:rgba(255,255,255,0.55);text-align:center;padding:28px 20px;font-size:13px}
+  footer a{color:rgba(255,255,255,0.8)}
+
+  @media(max-width:600px){
+    .step-num{flex:0 0 48px;font-size:18px}
+    .step-body{padding:0 16px 18px 64px}
+    .stat{min-width:110px}
+  }
+</style>
 </head>
 <body>
+
 <nav>
   <a class="nav-brand" href="https://tabutility.com/">⚡ Tabutility</a>
-  <div class="nav-links"><a href="https://tabutility.com/tools/">All Tools</a><a href="https://tabutility.com/blog/">Blog</a></div>
+  <div class="nav-links">
+    <a href="https://tabutility.com/tools/">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>DIY SEO: Do It Yourself, Free</h1>
-  <p>SEO agencies charge $1,000–5,000 a month. Most of that work is a checklist you can run yourself in a few hours. Here is every step, in plain English, with a free tool for each one — because the internet should be free.</p>
+  <div class="hero-kicker">Free DIY SEO Guide</div>
+  <h1>Agencies charge <span class="price-cross">$5,000/month</span>.<br>You pay <span class="free">$0</span>.</h1>
+  <p class="hero-sub">SEO is a checklist. Every step is documented, every tool is free, and none of it requires paying an agency retainer. Here is the whole playbook.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">9</div><div class="stat-label">Steps to complete</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Free tools included</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Total cost</div></div>
+    <div class="stat"><div class="stat-num">~4h</div><div class="stat-label">To do it all once</div></div>
+  </div>
 </div>
 
-<div class="wrap">
-  <div class="card">
-    <h2>What agencies actually charge for</h2>
-    <p style="margin-top:0">When a company sells "SEO services," the invoice usually breaks down into four things. Here are typical market rates for small-business clients — and what this guide covers:</p>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table style="min-width:520px">
-      <thead><tr><th>Service</th><th>Typical price</th><th>Can you DIY it?</th></tr></thead>
-      <tbody>
-        <tr><td>Technical SEO audit</td><td class="price">$500–2,000 one-off</td><td>Yes — steps 1–6 below</td></tr>
-        <tr><td>On-page optimization (titles, snippets, schema)</td><td class="price">$75–200 per page</td><td>Yes — steps 2–4</td></tr>
-        <tr><td>Content writing &amp; optimization</td><td class="price">$100–500 per article</td><td>Yes — step 5</td></tr>
-        <tr><td>Monthly retainer (all of the above + reporting)</td><td class="price">$1,000–5,000 / month</td><td>Mostly — steps 1–8</td></tr>
-        <tr><td>Link building / digital PR</td><td class="price">$100–500+ per link</td><td>Partly — see step 8</td></tr>
-      </tbody>
-    </table></div>
-    <p style="color:#64748b;font-size:13px;margin-bottom:0">Prices are typical published ranges for small-to-medium business work in the US/UK market. Good agencies earn their fee on large or highly competitive sites — but every site should get the fundamentals below right first, and none of them require paying anyone.</p>
+<!-- WHY SEO MATTERS -->
+<div class="importance">
+  <div class="importance-inner">
+    <div class="section-kicker">Why SEO matters</div>
+    <h2>Organic search is the highest-return marketing channel for most businesses</h2>
+    <p class="importance-lead">Paid ads stop the moment you stop paying. Social posts disappear in hours. SEO compounds — a page that ranks today keeps sending you visitors for months or years, at no extra cost per click. That is why agencies charge what they charge, and why getting it right yourself is worth the few hours it takes.</p>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="ic-num">68%</div>
+        <div class="ic-label">of online experiences begin with a search engine — before anyone visits a website directly or sees an ad.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-num">#1</div>
+        <div class="ic-label">The top organic result gets ~28% of all clicks. Position 10 gets under 2%. Every position you gain matters.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-num">0¢</div>
+        <div class="ic-label">Cost per click from organic search, forever. Paid ads cost you every time someone clicks — organic doesn't.</div>
+      </div>
+      <div class="impact-card">
+        <div class="ic-num">2–6mo</div>
+        <div class="ic-label">Typical time to see ranking improvements from new content. Start now — the compounding starts the day you publish.</div>
+      </div>
+    </div>
   </div>
-
-  <div class="card step-card">
-    <div class="step"><div class="num">1</div><div>
-      <h2 style="margin-bottom:6px">Set up Google Search Console <span class="freebadge">Free from Google</span></h2>
-      <p style="margin:0 0 6px">This is the dashboard agencies screenshot for their monthly reports. It shows which searches bring people to your site, which pages rank, and any indexing problems — straight from Google.</p>
-      <p style="margin:0">Go to <a href="https://search.google.com/search-console" rel="noopener">search.google.com/search-console</a>, add your domain, and verify it (usually one DNS record — your domain registrar's help pages cover it). Check it once a week. Look at the Performance tab: the queries where you rank position 5–20 are your biggest opportunities — improving those pages moves the needle fastest.</p>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">2</div><div>
-      <h2 style="margin-bottom:6px">See how you look in Google — and fix your snippet</h2>
-      <p style="margin:0 0 6px">Your title and description are your ad in the search results. If the title gets cut off or the description is auto-generated mush, fewer people click — even when you rank well. Agencies bill "on-page optimization" for exactly this.</p>
-      <p style="margin:0">Paste your page's title and description into the preview tool and check they fit within Google's pixel limits, lead with the keyword, and give someone a reason to click.</p>
-      <a class="toolbtn" href="https://serp-snippet-preview.tabutility.com/">SERP Snippet Preview →</a>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">3</div><div>
-      <h2 style="margin-bottom:6px">Get your meta tags right on every page</h2>
-      <p style="margin:0 0 6px">Beyond title and description, every page should have a canonical URL, Open Graph tags (so links look good when shared on social media), and Twitter card tags. Missing or duplicated tags are the most common finding in paid audits.</p>
-      <p style="margin:0">Fill in the form and copy the generated, correctly-escaped HTML block into your page's <code>&lt;head&gt;</code>.</p>
-      <a class="toolbtn" href="https://meta-tags-generator.tabutility.com/">Meta Tags Generator →</a>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">4</div><div>
-      <h2 style="margin-bottom:6px">Add structured data (schema markup)</h2>
-      <p style="margin:0 0 6px">Structured data is machine-readable code that tells Google exactly what your page is — an article, a product, a local business, an FAQ. It can make your listing eligible for rich results (review stars, breadcrumbs, product info) that stand out in search — eligibility varies by type and site, and Google decides what to show, but valid markup always helps it understand your pages. Agencies charge per page for this.</p>
-      <p style="margin:0">Pick your page type, fill in the fields, and paste the generated JSON-LD into your page. Then confirm it validates with Google's free <a href="https://search.google.com/test/rich-results" rel="noopener">Rich Results Test</a>.</p>
-      <a class="toolbtn" href="https://schema-markup-generator.tabutility.com/">Schema Markup Generator →</a>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">5</div><div>
-      <h2 style="margin-bottom:6px">Check your content quality before you publish</h2>
-      <p style="margin:0 0 6px">Google rewards pages that cover a topic properly and read naturally. Two quick checks catch most problems: keyword stuffing (repeating your keyword so often it reads like spam) and poor readability (long sentences that lose readers). Content optimization is a core line item on agency retainers.</p>
-      <p style="margin:0">Paste your draft in — if one keyword dominates the text, it will read like spam to people and to Google. There's no magic density number: cover the topic properly, write naturally, and keep the readability score at a level your audience can follow.</p>
-      <a class="toolbtn" href="https://keyword-density-checker.tabutility.com/">Keyword Density &amp; Readability →</a>
-      <a class="toolbtn" href="https://word-counter.tabutility.com/">Word Counter →</a>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">6</div><div>
-      <h2 style="margin-bottom:6px">Serve multiple countries? Fix your hreflang</h2>
-      <p style="margin:0 0 6px">If you have pages for different countries or languages (a UK and a US version, say), hreflang tags tell Google which version to show to whom. They are notoriously easy to get wrong — missing return links and invalid codes are among the most common errors in professional audits.</p>
-      <p style="margin:0">Generate a correct tag set for your language/country pairs, add it to your pages, then run the checker on your live URLs to confirm nothing is missing or broken. Single-country sites can skip this step.</p>
-      <a class="toolbtn" href="https://hreflang-tag-generator.tabutility.com/">Hreflang Tag Generator →</a>
-      <a class="toolbtn" href="https://hreflang-checker.tabutility.com/">Hreflang Checker →</a>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">7</div><div>
-      <h2 style="margin-bottom:6px">Submit a sitemap and keep it current <span class="freebadge">Free</span></h2>
-      <p style="margin:0 0 6px">A sitemap is a simple file listing every page you want Google to index. Most website builders (WordPress, Shopify, Wix, Squarespace) generate one automatically at <code>/sitemap.xml</code>.</p>
-      <p style="margin:0">In Search Console, open Sitemaps and submit yours once — Google re-checks it automatically. When you publish something new, make sure it appears in the sitemap and link to it from an existing page; internal links are how Google (and visitors) discover new content.</p>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">8</div><div>
-      <h2 style="margin-bottom:6px">Earn links — the honest version</h2>
-      <p style="margin:0 0 6px">Links from other websites are Google's biggest trust signal, and link building is the one service where agencies genuinely sweat. You can do the honest version yourself: publish something genuinely useful or interesting (original data, a free tool, a definitive guide), then tell the people who'd care — relevant communities, newsletters, journalists covering your niche.</p>
-      <p style="margin:0">Avoid buying links or link "packages" — Google penalizes schemes, and cheap links are the fastest way to turn an SEO budget into a ranking problem.</p>
-    </div></div>
-  </div>
-
-  <div class="card">
-    <div class="step"><div class="num">9</div><div>
-      <h2 style="margin-bottom:6px">Review monthly, improve the winners</h2>
-      <p style="margin:0 0 6px">This is the "reporting" part of the retainer. Once a month, open Search Console and ask two questions: which pages are gaining impressions, and which queries rank just off the first page? Improve those pages first — expand the content, sharpen the title, add schema.</p>
-      <p style="margin:0">Feeding your winners beats spreading effort evenly. It's the same prioritization logic agencies sell, and it takes about an hour a month.</p>
-    </div></div>
-  </div>
-
-  <div class="cta">
-    <h3>The full free SEO toolkit</h3>
-    <p>Seven tools, no sign-up, nothing to install — everything runs in your browser</p>
-    <a href="https://serp-snippet-preview.tabutility.com/">Snippet Preview →</a>
-    <a href="https://meta-tags-generator.tabutility.com/">Meta Tags →</a>
-    <a href="https://schema-markup-generator.tabutility.com/">Schema →</a>
-    <a href="https://keyword-density-checker.tabutility.com/">Keyword Density →</a>
-    <a href="https://hreflang-tag-generator.tabutility.com/">Hreflang Tags →</a>
-    <a href="https://hreflang-checker.tabutility.com/">Hreflang Checker →</a>
-  </div>
-
-  <div class="card">
-    <h2>FAQs</h2>
-    <details open><summary>Can I really do SEO myself without an agency?</summary><p>Yes — for most small websites, the bulk of what an agency delivers is technical hygiene, content improvement, and monitoring, all doable yourself with free tools and a few hours a month. Agencies add the most value on large sites, very competitive industries, and link-building campaigns.</p></details>
-    <details><summary>How much do SEO agencies charge?</summary><p>Typical retainers run $1,000–5,000/month for small-to-medium businesses, one-off audits $500–2,000, and content $100–500 per article. Much of the underlying work uses the same checks available in the free tools above.</p></details>
-    <details><summary>How long does DIY SEO take to show results?</summary><p>Technical fixes can be re-crawled within days to weeks. Ranking improvements from new content typically take 2–6 months. SEO compounds — the work keeps paying off.</p></details>
-    <details><summary>What free tools do I need?</summary><p>Google Search Console for monitoring, plus the on-page utilities on this page: snippet preview, meta tags, schema, keyword density &amp; readability, and hreflang tools if you serve multiple countries.</p></details>
-    <details><summary>What parts of SEO are hard to do yourself?</summary><p>Link building is the most labor-intensive part, and competitive keyword research at scale is harder solo. But most sites lose rankings to missing basics, not missing backlinks — get steps 1–7 right first.</p></details>
-  </div>
-
-  <div class="card">
-    <h2>Related tools &amp; guides</h2>
-    <p style="margin:0">
-      <a href="https://tabutility.com/tools/">All 151 free tools</a> ·
-      <a href="https://word-counter.tabutility.com/">Word Counter</a> ·
-      <a href="https://tabutility.com/blog/">Data stories &amp; guides</a>
-    </p>
-  </div>
-
-  <p style="font-size:12px;color:#94a3b8">Price ranges are typical published market rates for small-business SEO services and vary by market and provider. This guide is general information, not professional advice — but then again, that's rather the point.</p>
 </div>
 
-<footer>© 2026 <a href="https://tabutility.com/">Tabutility</a> — 151 free online tools · <a href="https://tabutility.com/tools/">All tools</a></footer>
+<!-- WHAT AGENCIES CHARGE -->
+<div class="pricing-section">
+  <div class="pricing-inner">
+    <div class="section-kicker">The agency invoice, decoded</div>
+    <h2>What you'd pay an agency — and what this guide replaces</h2>
+    <p class="sub">Typical small-business rates in the US/UK market. The fundamentals below are all DIY.</p>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="service">Technical SEO audit</div>
+        <div class="agency-price">$500–2,000</div>
+        <div style="font-size:11.5px;color:#64748b">one-off</div>
+        <div class="diy-label">✓ Fully DIY</div>
+        <div class="step-ref">→ Steps 1–6 below</div>
+      </div>
+      <div class="price-card">
+        <div class="service">On-page optimisation<br><span style="font-weight:500;color:#64748b">(titles, snippets, schema)</span></div>
+        <div class="agency-price">$75–200</div>
+        <div style="font-size:11.5px;color:#64748b">per page</div>
+        <div class="diy-label">✓ Fully DIY</div>
+        <div class="step-ref">→ Steps 2–4</div>
+      </div>
+      <div class="price-card">
+        <div class="service">Content writing &amp;<br>optimisation</div>
+        <div class="agency-price">$100–500</div>
+        <div style="font-size:11.5px;color:#64748b">per article</div>
+        <div class="diy-label">✓ Fully DIY</div>
+        <div class="step-ref">→ Step 5</div>
+      </div>
+      <div class="price-card">
+        <div class="service">Monthly retainer<br><span style="font-weight:500;color:#64748b">(audit + content + reporting)</span></div>
+        <div class="agency-price">$1,000–5,000</div>
+        <div style="font-size:11.5px;color:#64748b">per month</div>
+        <div class="diy-label">✓ Mostly DIY</div>
+        <div class="step-ref">→ All 9 steps</div>
+      </div>
+      <div class="price-card hard">
+        <div class="service">Link building &amp;<br>digital PR</div>
+        <div class="agency-price">$100–500+</div>
+        <div style="font-size:11.5px;color:#64748b">per link</div>
+        <div class="diy-label" style="background:#fee2e2;color:#991b1b">⚠ Partly DIY</div>
+        <div class="step-ref">→ Step 8 (honest version)</div>
+      </div>
+    </div>
+    <p class="price-note">Prices are typical published ranges for small-to-medium business work. Good agencies earn their fee on large or competitive sites — but every site should get the fundamentals right first, and all of them are free.</p>
+  </div>
+</div>
+
+<!-- THE CHECKLIST -->
+<div class="checklist-section">
+  <div class="section-kicker">The complete checklist</div>
+  <h2>9 steps — in the order that matters</h2>
+  <p class="sub">Work through these once and you've done what most agencies do in the first month of a retainer.</p>
+
+  <!-- Step 1 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">1</div>
+      <div class="step-head-text">
+        <h3>Set up Google Search Console <span class="freebadge">Free from Google</span></h3>
+        <div class="step-agency">What agencies call it: <strong>Monthly reporting dashboard</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>This is the single most important tool in SEO — and it's free from Google itself. It shows you which searches bring people to your site, which pages rank, how many people click, and any indexing problems Google has found. The monthly PDF agencies send you is mostly a screenshot of this dashboard.</p>
+      <p>Go to <a href="https://search.google.com/search-console" rel="noopener">search.google.com/search-console</a>, add your domain, and verify ownership (usually one DNS TXT record — your registrar's help pages explain it). Check it once a week. The queries where you rank position 5–20 are your biggest quick wins: those pages are close to page one and improving them moves the needle fastest.</p>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">2</div>
+      <div class="step-head-text">
+        <h3>See exactly how you appear in Google — then fix it</h3>
+        <div class="step-agency">What agencies call it: <strong>On-page optimisation · $75–200/page</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Your title tag and meta description are your listing in search results — they're your ad. If the title is cut off or the description is auto-generated filler, fewer people click even when you rank. Agencies bill per page for fixing this, because it genuinely matters: click-through rate directly affects how Google judges your relevance.</p>
+      <p>The snippet preview tool shows your title and description at Google's exact pixel limits in real time. Check every important page: does the title lead with the keyword? Does the description give someone a real reason to click over the results above and below you?</p>
+      <a class="toolbtn" href="https://serp-snippet-preview.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        SERP Snippet Preview
+      </a>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">3</div>
+      <div class="step-head-text">
+        <h3>Get your meta tags right on every page</h3>
+        <div class="step-agency">What agencies call it: <strong>Technical audit finding · billed as part of retainer</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Beyond your title and description, every page needs a canonical URL (tells Google which version of a page is the "real" one, preventing duplicate content problems) and Open Graph tags (controls how links look when shared on social media, Slack, WhatsApp). Missing or duplicated canonical tags are one of the most common paid-audit findings.</p>
+      <p>Fill in the generator, copy the HTML block it produces, and paste it into the <code>&lt;head&gt;</code> of each page. It takes two minutes per page and eliminates a whole category of technical issues.</p>
+      <a class="toolbtn" href="https://meta-tags-generator.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Meta Tags Generator
+      </a>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">4</div>
+      <div class="step-head-text">
+        <h3>Add structured data so Google understands your pages</h3>
+        <div class="step-agency">What agencies call it: <strong>Schema markup implementation · $75–150/page</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Schema markup is machine-readable code you add to a page that tells Google exactly what it is: a recipe, a product, a local business, a review, an FAQ. It doesn't directly boost rankings, but it helps Google understand your content better — and depending on the type and your site, it can make your listing eligible for rich results (review stars, breadcrumbs, product details) that take up more space in search results.</p>
+      <p>Pick your page type, fill in the fields, paste the generated JSON-LD into the page, and validate it with Google's free <a href="https://search.google.com/test/rich-results" rel="noopener">Rich Results Test</a>.</p>
+      <a class="toolbtn" href="https://schema-markup-generator.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Schema Markup Generator
+      </a>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">5</div>
+      <div class="step-head-text">
+        <h3>Check your content before publishing</h3>
+        <div class="step-agency">What agencies call it: <strong>Content optimisation · $100–500/article</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Google rewards pages that cover a topic properly and read naturally. The two most common content problems: repeating a keyword so often it reads like spam (keyword stuffing), and writing in long, dense paragraphs that readers abandon. Content optimisation is a core retainer line item because it directly affects rankings and the time people spend on your pages.</p>
+      <p>Paste your draft in — if a single keyword dominates unnaturally, it will read like spam to people and to Google alike. There is no magic density target: cover the topic properly, write naturally, and keep the readability score at a level your actual audience can follow.</p>
+      <a class="toolbtn" href="https://keyword-density-checker.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Keyword Density &amp; Readability
+      </a>
+      <a class="toolbtn" href="https://word-counter.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Word Counter
+      </a>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">6</div>
+      <div class="step-head-text">
+        <h3>Fix your hreflang if you serve multiple countries <span class="skip-badge">Skip if single-country</span></h3>
+        <div class="step-agency">What agencies call it: <strong>International SEO · premium audit line item</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>If you have pages for different countries or languages — a UK version and a US version, or an English and a Spanish site — hreflang annotations tell Google which page to show to which audience. They are notoriously easy to get wrong. Missing return links and invalid language codes are consistently among the most common errors in professional technical audits, and the result is Google showing the wrong version to the wrong country.</p>
+      <p>Generate the correct tag set for your language/country pairs, add them to your pages, then run the validator on your live URLs to confirm nothing is missing or broken.</p>
+      <a class="toolbtn" href="https://hreflang-tag-generator.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Hreflang Tag Generator
+      </a>
+      <a class="toolbtn" href="https://hreflang-checker.tabutility.com/">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 3l4 4-4 4"/></svg>
+        Hreflang Validator
+      </a>
+    </div>
+  </div>
+
+  <!-- Step 7 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">7</div>
+      <div class="step-head-text">
+        <h3>Submit a sitemap and keep it current <span class="freebadge">Free</span></h3>
+        <div class="step-agency">What agencies call it: <strong>Indexation health · monthly monitoring</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>A sitemap is a file listing every URL you want Google to know about. Most website platforms (WordPress, Shopify, Wix, Squarespace) generate one automatically at <code>/sitemap.xml</code>. If yours doesn't, free sitemap generators can create one.</p>
+      <p>In Search Console, go to Sitemaps and submit your URL once — Google re-fetches it automatically. Every time you publish something new: make sure it appears in your sitemap, and link to it from at least one existing page. Internal links are how Google (and visitors) discover new content. A page with no inbound links is nearly invisible.</p>
+    </div>
+  </div>
+
+  <!-- Step 8 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">8</div>
+      <div class="step-head-text">
+        <h3>Earn links — the honest way</h3>
+        <div class="step-agency">What agencies call it: <strong>Link building · $100–500+ per link</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Links from other websites are Google's biggest trust signal — a vote that says your content is worth referencing. Link building is the one part of SEO where agencies genuinely do hard work: outreach, relationship-building, digital PR. It is also where the most abuse happens, which is why Google penalizes bought links and link schemes.</p>
+      <p>The honest version: publish something genuinely useful — original data, a free tool, a definitive guide — then tell the right people about it. Share in relevant communities, email journalists covering your niche, pitch guest posts. One good piece of content that earns ten real links beats a hundred bought links that can tank your rankings.</p>
+    </div>
+  </div>
+
+  <!-- Step 9 -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">9</div>
+      <div class="step-head-text">
+        <h3>Review monthly — feed the winners, not everything equally</h3>
+        <div class="step-agency">What agencies call it: <strong>Monthly reporting &amp; strategy</strong></div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>This is what the monthly PDF is actually paying for. Once a month, open Search Console and ask two questions: which pages are gaining impressions, and which queries rank position 5–15 (just off the first page or first place)? Those are your best opportunities — improve the content, sharpen the title, add schema, get a link or two.</p>
+      <p>Spreading effort evenly across all pages is a waste. SEO compounds when you double down on what's already working. An hour a month of focused attention on your top 5 pages beats a week of general effort spread thin.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOOL CTA BAND -->
+<div class="cta-band">
+  <h2>The full free SEO toolkit</h2>
+  <p>Seven tools, no sign-up, nothing to install — everything runs in your browser</p>
+  <div class="tool-grid">
+    <a class="tool-chip" href="https://serp-snippet-preview.tabutility.com/">SERP Snippet Preview →</a>
+    <a class="tool-chip" href="https://meta-tags-generator.tabutility.com/">Meta Tags Generator →</a>
+    <a class="tool-chip" href="https://schema-markup-generator.tabutility.com/">Schema Markup Generator →</a>
+    <a class="tool-chip" href="https://keyword-density-checker.tabutility.com/">Keyword Density &amp; Readability →</a>
+    <a class="tool-chip" href="https://hreflang-tag-generator.tabutility.com/">Hreflang Tag Generator →</a>
+    <a class="tool-chip" href="https://hreflang-checker.tabutility.com/">Hreflang Validator →</a>
+    <a class="tool-chip" href="https://word-counter.tabutility.com/">Word Counter →</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <h2>Common questions</h2>
+  <details open><summary>Can I really do SEO myself without an agency?</summary><p>Yes — for most small websites, the bulk of what an agency delivers is technical hygiene (titles, descriptions, structured data, sitemaps), content improvement, and monitoring. All of it can be done yourself with free tools and a few hours a month. Agencies add the most value for large sites, competitive industries, and systematic link-building campaigns.</p></details>
+  <details><summary>How much do SEO agencies charge?</summary><p>Typical retainers run $1,000–5,000/month for small-to-medium businesses, with one-off audits at $500–2,000 and content at $100–500 per article. Freelancers charge less; big-brand agencies charge far more. Much of the underlying work uses the same checks available in free tools.</p></details>
+  <details><summary>How long does DIY SEO take to show results?</summary><p>Technical fixes (titles, snippets, structured data) can be re-crawled within days to weeks. Ranking improvements from new content typically take 2–6 months, because Google needs time to discover, index, and build trust in pages. SEO compounds — the work you do now keeps paying off long after you do it.</p></details>
+  <details><summary>What free tools do I need for DIY SEO?</summary><p>Google Search Console (from Google, free) for monitoring, plus on-page utilities: a SERP snippet preview, meta tags generator, schema markup generator, keyword density and readability checker, and hreflang tools if you serve multiple countries. Tabutility provides all of these free with no sign-up required.</p></details>
+  <details><summary>What parts of SEO are hard to do yourself?</summary><p>Link building is the most labour-intensive part, and where agencies spend real effort. Competitive keyword research at scale and systematic digital PR are also harder solo. But most sites lose rankings to missing basics — get steps 1–7 right first; most sites never need much beyond that.</p></details>
+</div>
+
+<div class="related">
+  <a href="https://tabutility.com/tools/">All 151 free tools</a>
+  <a href="https://tabutility.com/blog/">Data stories &amp; guides</a>
+  <a href="https://tabutility.com/">Tabutility home</a>
+</div>
+<div class="disclaimer">
+  <p>Price ranges are typical published market rates for small-business SEO services in the US/UK market and vary by provider, market, and scope. This guide is general information, not professional advice — but then again, that's rather the point.</p>
+</div>
+
+<footer>
+  © 2026 <a href="https://tabutility.com/">Tabutility</a> — 151 free online tools · <a href="https://tabutility.com/tools/">All tools</a>
+  <p style="margin-top:8px;color:rgba(255,255,255,0.35)"><a href="https://tabutility.com/diy-seo/" style="color:rgba(255,255,255,.4)">Doing your own SEO? Free DIY checklist →</a></p>
+</footer>
+
 </body>
 </html>
