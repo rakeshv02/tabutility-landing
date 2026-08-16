@@ -112,7 +112,7 @@ function buildStaticLinks() {
 
   const sections = Object.keys(byCat).sort((a, b) => byCat[b].length - byCat[a].length).map(cat => {
     const cards = byCat[cat].map(t =>
-      '<a class="s-link-card" href="' + t.url.replace(/\/+$/, '') + '/"><strong>' + esc(t.emoji ? t.emoji + ' ' + t.name : t.name) + '</strong><span>' + esc(t.description || '') + '</span></a>'
+      '<a class="s-link-card" href="' + t.url.replace(/\/?$/, '/') + '"><strong>' + esc(t.emoji ? t.emoji + ' ' + t.name : t.name) + '</strong><span>' + esc(t.description || '') + '</span></a>'
     ).join('\n            ');
     return '<section class="s-links"><h2>' + esc(cat) + ' (' + byCat[cat].length + ')</h2><div class="s-link-grid">\n            ' + cards + '\n          </div></section>';
   }).join('\n          ');
