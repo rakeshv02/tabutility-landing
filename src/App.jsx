@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import toolsData from "./tools.config.json";
 
-const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
+const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "SEO", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
 const CATEGORY_COLORS = {
   Calculators: { badge: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
   "Developer Tools": { badge: "#16a34a", light: "#f0fdf4", text: "#15803d" },
@@ -11,6 +11,7 @@ const CATEGORY_COLORS = {
   "Image Tools": { badge: "#e11d48", light: "#fff1f2", text: "#be123c" },
   Wellness: { badge: "#0d9488", light: "#f0fdfa", text: "#0f766e" },
   "Fun Tools": { badge: "#f97316", light: "#fff7ed", text: "#c2410c" },
+  SEO: { badge: "#059669", light: "#ecfdf5", text: "#065f46" },
   Productivity: { badge: "#0ea5e9", light: "#f0f9ff", text: "#0369a1" },
   toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" },
   statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
@@ -122,7 +123,7 @@ export default function App() {
     {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
     <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? toolsData.length : toolsData.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
     {isFiltered ? <main style={styles.content}><div style={styles.result}>{filtered.length ? `${filtered.length} tools${search ? ` matching “${search}”` : ""}` : `No tools found for “${search}”`}</div>{filtered.length ? <ToolGrid tools={filtered} /> : <div style={styles.empty}>⌕<strong>Nothing found</strong><span>Try a different search or browse a category above.</span></div>}</main> : <HomeContent country={country} c={c} />}
-    <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>{toolsData.length} free browser-based utility tools. No sign-up required.</div><a href="/blog/">▣ Read our guides →</a><a href="/diy-seo/">⚙ Free DIY SEO checklist →</a><small>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
+    <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>{toolsData.length} free browser-based utility tools. No sign-up required.</div><a href="/blog/">▣ Read our guides →</a><small>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
   </div>;
 }
 
@@ -133,7 +134,7 @@ function HomeContent({ country, c }) {
     ["◎", "Global Take-Home Pay Report 2026", "A clear view of what salaries are worth after tax around the world.", "/global-take-home-pay-report-2026/"],
     ["◈", "Take-Home Pay by Country", "Compare the same salary across borders, with the assumptions visible.", "/take-home-pay-by-country/"],
     ["£$", "Salary guides that answer the next question", "Browse country-by-country take-home pay and raise comparisons.", country === "all" || country === "jp" ? "/uk-salary/" : `/${country}-salary/`],
-  ].map(([icon, title, desc, href]) => <a href={href} key={title} style={styles.feature}><span style={styles.featureIcon}>{icon}</span><div><h3>{title}</h3><p>{desc}</p><b>Explore →</b></div></a>)}</div><a href="https://loan-calculator.tabutility.com" style={styles.loan}><span><i>FEATURED</i><strong>Loan Calculator Hub</strong><small>Monthly payments · amortization · rate comparison · extra payment simulator</small></span><b>Try free →</b></a><h2 style={{ ...styles.sectionTitle, marginTop: 44 }}>More handy tools</h2>{["Calculators", "International", "Developer Tools", "Content Tools", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"].map(cat => <CategorySection key={cat} category={cat} tools={toolsData.filter(t => t.category === cat)} />)}</section></main>;
+  ].map(([icon, title, desc, href]) => <a href={href} key={title} style={styles.feature}><span style={styles.featureIcon}>{icon}</span><div><h3>{title}</h3><p>{desc}</p><b>Explore →</b></div></a>)}</div><a href="https://loan-calculator.tabutility.com" style={styles.loan}><span><i>FEATURED</i><strong>Loan Calculator Hub</strong><small>Monthly payments · amortization · rate comparison · extra payment simulator</small></span><b>Try free →</b></a><a href="/diy-seo/" style={{ ...styles.loan, background: "linear-gradient(135deg,#059669,#047857)", marginTop: 12 }}><span><i>FREE GUIDE</i><strong>DIY SEO — Skip the Agency</strong><small>7 free tools · step-by-step checklist · what agencies charge vs what you can do yourself</small></span><b>Read free →</b></a><h2 style={{ ...styles.sectionTitle, marginTop: 44 }}>More handy tools</h2>{["Calculators", "International", "Developer Tools", "SEO", "Content Tools", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"].map(cat => <CategorySection key={cat} category={cat} tools={toolsData.filter(t => t.category === cat)} />)}</section></main>;
 }
 
 function TakeHome({ country: initial, c: initialC, salary: initialSalary }) {
