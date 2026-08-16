@@ -25,7 +25,7 @@ const BLOG_POSTS = [
   { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/", categories: ["Calculators", "International"] },
   { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/", categories: ["Calculators", "Converters"] },
 ];
-const HOVER_STYLES = `.tool-card{transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.tool-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.1)!important}.question-card{transition:transform .18s,background .18s,border-color .18s}.question-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)!important;border-color:rgba(129,140,248,.6)!important}`;
+const HOVER_STYLES = `.tool-card{transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.tool-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.1)!important}.hero-pop-link{transition:background .15s,border-color .15s}.hero-pop-link:hover{background:#eef2ff!important;border-color:#818cf8!important}@media(max-width:800px){.hero-split{flex-direction:column!important}.hero-card-wrap{display:none!important}.hero-title-size{font-size:clamp(36px,8vw,52px)!important}}`;
 function trackRecentTool(tool) {
   try {
     const stored = JSON.parse(localStorage.getItem("tab_recent") || "[]");
@@ -105,49 +105,75 @@ export default function App() {
   const setNation = id => { setCountry(id); try { localStorage.setItem("tab_country", id); } catch {} };
   const c = COUNTRIES[country] || COUNTRIES.uk;
   return <div style={styles.page}><style>{HOVER_STYLES}</style>
-    <header style={styles.hero}>
-      <div style={styles.heroOrb1} aria-hidden="true" />
-      <div style={styles.heroOrb2} aria-hidden="true" />
-      <nav style={styles.heroNav}>
-        <div style={styles.brand}>⚡ <span>Tabutility</span></div>
-        <div style={styles.heroNavLinks}>
-          <a href="/blog/" style={styles.heroNavLink}>Blog</a>
-          <a href="/diy-seo/" style={styles.heroNavLink}>Free SEO guide</a>
-          <a href="/tools/" style={styles.heroNavLink}>All tools</a>
+    {/* ── Top nav ── */}
+    <nav style={styles.topNav}>
+      <div style={styles.brand}>⚡ Tabutility</div>
+      <div style={styles.topNavLinks}>
+        {[["Money","#take-home"],["Tax","https://uk-salary-calculator.tabutility.com"],["Everyday","https://loan-calculator.tabutility.com"],["Developer","#developer-tools"],["Guides","/blog/"]].map(([l,h])=><a key={l} href={h} style={styles.topNavLink}>{l}</a>)}
+      </div>
+      <div style={styles.topNavRight}>
+        <button style={styles.searchNavBtn} onClick={()=>{ document.querySelector('input[aria-label="Search tools"]')?.focus(); }}>
+          <span style={{fontSize:15,color:"#94a3b8"}}>⌕</span> Search {toolsData.length} tools <kbd style={styles.kbd}>⌘K</kbd>
+        </button>
+      </div>
+    </nav>
+    {/* ── Hero split ── */}
+    <div style={styles.hero}>
+      <div className="hero-split" style={styles.heroSplit}>
+        {/* Left */}
+        <div style={styles.heroLeft}>
+          <div style={styles.heroKicker}>
+            <span style={styles.heroDot} />
+            {toolsData.length} free tools · No sign-up
+          </div>
+          <h1 className="hero-title-size" style={styles.heroTitle}>
+            Get the number.<br /><em style={{color:"#4f46e5",fontStyle:"normal"}}>Move on.</em>
+          </h1>
+          <p style={styles.heroSub}>Salary after tax, mortgage costs, SEO tools, dev utilities and more — free browser tools that give you the answer and get out of the way.</p>
+          <div style={styles.searchWrap}>
+            <span style={styles.searchIcon}>⌕</span>
+            <input aria-label="Search tools" placeholder={`What do you want to work out?`} value={search} onChange={e=>{ setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />
+            {search && <button onClick={()=>setSearch("")} style={styles.clear}>×</button>}
+          </div>
+          <div style={styles.trustRow}>
+            {[["🖥️","Runs in your browser"],["🔓","No account needed"],["$0","Always free"]].map(([ic,t])=><div key={t} style={styles.trustItem}><span>{ic}</span>{t}</div>)}
+          </div>
         </div>
-      </nav>
-      <div style={styles.heroCenterWrap}>
-        <div style={styles.heroKicker}>
-          <span style={styles.heroDot} />
-          {toolsData.length} free tools · No sign-up · Runs in your browser
-        </div>
-        <h1 style={styles.heroTitle}>Free tools for the<br />questions everyone Googles.</h1>
-        <p style={styles.heroSub}>Salary calculators, tax tools, mortgage maths, dev utilities, SEO tools and more — every answer instant, everything free.</p>
-        <div style={styles.searchWrap}>
-          <span style={styles.searchIcon}>⌕</span>
-          <input aria-label="Search tools" placeholder={`Search ${toolsData.length} tools…`} value={search} onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />
-          {search && <button onClick={() => setSearch("")} style={styles.clear}>×</button>}
-        </div>
-        <div style={styles.heroStats}>
-          {[["151", "Free tools"], ["5", "Countries"], ["11", "Categories"], ["$0", "Forever"]].map(([n, l]) =>
-            <div key={l} style={styles.heroStat}><strong style={styles.heroStatNum}>{n}</strong><span style={styles.heroStatLabel}>{l}</span></div>
-          )}
+        {/* Right — live calculator card */}
+        <div className="hero-card-wrap" style={styles.heroRight}>
+          <HeroCard country={country === "all" ? "uk" : country} onCountryChange={setNation} />
         </div>
       </div>
-      <div style={styles.questions}>{[
-        ["💰", "How much of my salary do I keep?", "#take-home", "Calculate take-home"],
-        ["📈", "Is my raise worth it?", `/${["uk", "us", "au"].includes(country) ? country : "uk"}-salary/compare/`, "Compare the net gain"],
-        ["🏦", "What does a loan really cost?", "https://loan-calculator.tabutility.com", "See the full cost"],
-        ["🌍", "How do countries compare?", "/global-take-home-pay-report-2026/", "Read the report"],
-        ["⚙️", "Need a quick dev tool?", "#developer-tools", "Browse developer tools"],
-        ["🔍", "How do I rank in Google — for free?", "/diy-seo/", "Free DIY SEO guide"],
-      ].map(([icon, q, href, label]) => <a key={q} className="question-card" href={href} style={styles.question}><span style={styles.questionIcon}>{icon}</span><div><b style={styles.questionTitle}>{q}</b><span style={styles.questionLabel}>{label} ↗</span></div></a>)}</div>
-    </header>
+    </div>
+    {/* ── Popular bar ── */}
+    <div style={styles.popularBar}>
+      <span style={styles.popLabel}>POPULAR:</span>
+      {[["Salary calculator","https://uk-salary-calculator.tabutility.com"],["Income tax","https://uk-salary-calculator.tabutility.com"],["Mortgage calculator","https://loan-calculator.tabutility.com"],["VAT calculator","https://vat-calculator.tabutility.com"],["Compound interest","https://compound-interest-calculator.tabutility.com"],["Percentage calculator","https://percentage-calculator.tabutility.com"]].map(([l,h])=><a key={l} href={h} className="hero-pop-link" style={styles.popLink}>{l}</a>)}
+    </div>
     <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["ca", "🇨🇦 CA"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
     {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
     <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? toolsData.length : toolsData.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
     {isFiltered ? <main style={styles.content}><div style={styles.result}>{filtered.length ? `${filtered.length} tools${search ? ` matching “${search}”` : ""}` : `No tools found for “${search}”`}</div>{filtered.length ? <ToolGrid tools={filtered} /> : <div style={styles.empty}>⌕<strong>Nothing found</strong><span>Try a different search or browse a category above.</span></div>}</main> : <HomeContent country={country} c={c} />}
     <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>{toolsData.length} free browser-based utility tools. No sign-up required.</div><a href="/blog/">▣ Read our guides →</a><small>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
+  </div>;
+}
+
+function HeroCard({ country, onCountryChange }) {
+  const c = COUNTRIES[country]; const [salary, setSalary] = useState(country === "jp" ? 5000000 : country === "us" ? 85000 : country === "au" ? 90000 : 52000);
+  const net = CALC[country](salary); const step = country === "jp" ? 100000 : 1000;
+  return <div style={styles.heroCard}>
+    <div style={styles.heroCardLabel}>SALARY CALCULATOR <span style={styles.liveBadge}>LIVE</span></div>
+    <div style={styles.heroCardTitle}>What lands in your account?</div>
+    <div style={styles.heroCardToggle}>{Object.entries(COUNTRIES).map(([id,ct])=><button key={id} onClick={()=>onCountryChange(id)} style={{...styles.heroCardToggleBtn,...(country===id?styles.heroCardToggleActive:{})}}>{ct.flag} {ct.label}</button>)}</div>
+    <div style={styles.heroCardSalRow}><span style={{fontSize:13,color:"#64748b"}}>Gross yearly salary</span><strong style={{fontSize:22,fontWeight:900,color:"#0f172a"}}>{money(c,salary)}</strong></div>
+    <input type="range" min={c.min} max={c.max} step={step} value={Math.min(c.max,Math.max(c.min,salary))} onChange={e=>setSalary(Number(e.target.value))} style={{width:"100%",accentColor:"#4f46e5",margin:"10px 0 3px",cursor:"pointer"}} />
+    <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:"#94a3b8",marginBottom:16}}><span>{money(c,c.min)}</span><span>{money(c,c.max)}</span></div>
+    <div style={styles.heroNetRow}>
+      <div style={styles.heroNetBlock}><small>TAKE-HOME / YEAR</small><strong>{money(c,net)}</strong></div>
+      <div style={styles.heroNetBlock}><small>PER MONTH</small><strong>{money(c,net/12)}</strong></div>
+      <div style={{...styles.heroNetBlock,textAlign:"right"}}><small>TAX RATE</small><strong style={{color:"#4f46e5"}}>{((salary-net)/salary*100).toFixed(1)}%</strong></div>
+    </div>
+    <a href={c.hub} style={styles.heroCardCta}>Open full calculator ↗</a>
   </div>;
 }
 
@@ -175,32 +201,47 @@ function BlogSection({ activeCategory }) { const posts = BLOG_POSTS.filter(p => 
 
 const styles = {
   page: { fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#f1f5f9", color: "#1e293b", minHeight: "100vh" },
-  hero: { background: "linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%)", color: "#fff", padding: "0 0 40px", textAlign: "center", position: "relative", overflow: "hidden" },
-  heroOrb1: { position: "absolute", right: "-160px", top: "-160px", width: 480, height: 480, borderRadius: "50%", background: "radial-gradient(circle,rgba(79,70,229,.32),transparent 70%)", pointerEvents: "none" },
-  heroOrb2: { position: "absolute", left: "-100px", bottom: "-100px", width: 340, height: 340, borderRadius: "50%", background: "radial-gradient(circle,rgba(124,58,237,.2),transparent 70%)", pointerEvents: "none" },
-  heroNav: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 28px", position: "relative", zIndex: 2 },
-  heroNavLinks: { display: "flex", gap: 4 },
-  heroNavLink: { color: "rgba(255,255,255,.65)", fontSize: 13, fontWeight: 600, textDecoration: "none", padding: "6px 12px", borderRadius: 8, transition: "color .15s" },
-  heroCenterWrap: { position: "relative", zIndex: 2, padding: "20px 20px 0" },
-  heroKicker: { display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(79,70,229,.22)", border: "1px solid rgba(129,140,248,.4)", color: "#a5b4fc", fontSize: 12, fontWeight: 700, letterSpacing: "1.2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: 99, marginBottom: 22 },
-  heroDot: { width: 7, height: 7, borderRadius: "50%", background: "#34d399", flexShrink: 0, boxShadow: "0 0 6px #34d399" },
-  brand: { fontSize: 20, fontWeight: 900, letterSpacing: "-.5px", color: "#fff", textDecoration: "none" },
-  heroTitle: { margin: "0 auto 16px", fontSize: "clamp(32px,5.5vw,58px)", letterSpacing: -2, lineHeight: 1.08, maxWidth: 780, fontWeight: 900 },
-  heroSub: { color: "rgba(255,255,255,.65)", margin: "0 auto 26px", fontSize: 16, maxWidth: 580, lineHeight: 1.65 },
-  searchWrap: { maxWidth: 600, margin: "0 auto 28px", position: "relative", zIndex: 2 },
-  searchIcon: { position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", fontSize: 24, color: "#c7d2fe", pointerEvents: "none" },
-  search: { width: "100%", boxSizing: "border-box", padding: "16px 48px", borderRadius: 14, border: "2px solid rgba(165,180,252,.35)", background: "rgba(255,255,255,.1)", color: "#fff", fontSize: 17, outline: "none", backdropFilter: "blur(8px)" },
-  clear: { position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", background: "none", border: 0, color: "#a5b4fc", fontSize: 24, cursor: "pointer", lineHeight: 1 },
-  heroStats: { display: "flex", justifyContent: "center", gap: 0, flexWrap: "wrap", maxWidth: 520, margin: "0 auto 32px", border: "1px solid rgba(255,255,255,.1)", borderRadius: 14, overflow: "hidden" },
-  heroStat: { flex: "1 1 100px", padding: "14px 10px", borderRight: "1px solid rgba(255,255,255,.1)", display: "flex", flexDirection: "column", alignItems: "center", gap: 3 },
-  heroStatNum: { fontSize: 28, fontWeight: 900, color: "#fff", lineHeight: 1 },
-  heroStatLabel: { fontSize: 11, color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".8px" },
-  questions: { maxWidth: 960, margin: "0 auto", padding: "0 20px", display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 10, position: "relative", zIndex: 2 },
-  question: { textAlign: "left", color: "#fff", textDecoration: "none", background: "rgba(255,255,255,.07)", border: "1px solid rgba(199,210,254,.18)", borderRadius: 14, padding: "14px 15px", boxSizing: "border-box", display: "flex", alignItems: "flex-start", gap: 10 },
-  questionIcon: { fontSize: 20, flexShrink: 0, marginTop: 2 },
-  questionTitle: { display: "block", fontSize: 13, fontWeight: 700, lineHeight: 1.35, marginBottom: 5, color: "#fff" },
-  questionLabel: { color: "#818cf8", fontSize: 12, fontWeight: 600 },
-   toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }, statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
+  /* ── Top nav ── */
+  topNav: { background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "0 32px", display: "flex", alignItems: "center", gap: 28, height: 56, position: "sticky", top: 0, zIndex: 10, boxShadow: "0 1px 3px rgba(0,0,0,.05)" },
+  brand: { fontSize: 18, fontWeight: 900, letterSpacing: "-.5px", color: "#1a1a2e", flexShrink: 0 },
+  topNavLinks: { display: "flex", gap: 2, flex: 1 },
+  topNavLink: { fontSize: 13, fontWeight: 600, color: "#475569", textDecoration: "none", padding: "6px 11px", borderRadius: 7, whiteSpace: "nowrap" },
+  topNavRight: { marginLeft: "auto", flexShrink: 0 },
+  searchNavBtn: { display: "flex", alignItems: "center", gap: 8, background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 8, padding: "7px 14px", fontSize: 13, color: "#94a3b8", cursor: "pointer", whiteSpace: "nowrap" },
+  kbd: { background: "#e2e8f0", borderRadius: 4, padding: "1px 6px", fontSize: 11, color: "#64748b", fontFamily: "monospace" },
+  /* ── Hero ── */
+  hero: { background: "#fff", borderBottom: "1px solid #e2e8f0" },
+  heroSplit: { maxWidth: 1200, margin: "0 auto", padding: "56px 40px 52px", display: "flex", gap: 64, alignItems: "center" },
+  heroLeft: { flex: "1 1 0", minWidth: 0 },
+  heroRight: { flex: "0 0 400px", width: 400 },
+  heroKicker: { display: "inline-flex", alignItems: "center", gap: 8, background: "#eff6ff", border: "1px solid #bfdbfe", color: "#3b82f6", fontSize: 11, fontWeight: 800, letterSpacing: "1.5px", textTransform: "uppercase", padding: "5px 13px", borderRadius: 99, marginBottom: 22 },
+  heroDot: { width: 6, height: 6, borderRadius: "50%", background: "#22c55e", flexShrink: 0, boxShadow: "0 0 5px #22c55e" },
+  heroTitle: { margin: "0 0 18px", fontSize: "clamp(36px,4.5vw,54px)", letterSpacing: -2.5, lineHeight: 1.06, fontWeight: 900, color: "#0f172a" },
+  heroSub: { color: "#64748b", margin: "0 0 30px", fontSize: 16, lineHeight: 1.7, maxWidth: 480 },
+  searchWrap: { position: "relative", marginBottom: 24, maxWidth: 500 },
+  searchIcon: { position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)", fontSize: 20, color: "#94a3b8", pointerEvents: "none", zIndex: 1 },
+  search: { width: "100%", boxSizing: "border-box", padding: "13px 42px 13px 42px", borderRadius: 10, border: "1.5px solid #e2e8f0", background: "#f8fafc", color: "#1e293b", fontSize: 15, outline: "none" },
+  clear: { position: "absolute", right: 13, top: "50%", transform: "translateY(-50%)", background: "none", border: 0, color: "#94a3b8", fontSize: 22, cursor: "pointer", lineHeight: 1 },
+  trustRow: { display: "flex", gap: 22, flexWrap: "wrap" },
+  trustItem: { display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#64748b", fontWeight: 600 },
+  /* ── Hero card ── */
+  heroCard: { background: "#fff", border: "1.5px solid #e2e8f0", borderRadius: 16, padding: "22px 24px", boxShadow: "0 4px 24px rgba(15,23,42,.09)" },
+  heroCardLabel: { fontSize: 10, fontWeight: 800, letterSpacing: "1.5px", color: "#94a3b8", textTransform: "uppercase", marginBottom: 8, display: "flex", alignItems: "center", justifyContent: "space-between" },
+  liveBadge: { background: "#dcfce7", color: "#16a34a", fontSize: 9, fontWeight: 800, padding: "2px 8px", borderRadius: 99, letterSpacing: ".8px" },
+  heroCardTitle: { fontSize: 15, fontWeight: 800, color: "#1e293b", marginBottom: 12 },
+  heroCardToggle: { display: "flex", gap: 4, flexWrap: "wrap", marginBottom: 16 },
+  heroCardToggleBtn: { border: "1px solid #e2e8f0", background: "#f8fafc", color: "#475569", padding: "5px 10px", borderRadius: 7, fontSize: 12, fontWeight: 700, cursor: "pointer" },
+  heroCardToggleActive: { background: "#eef2ff", color: "#4338ca", borderColor: "#818cf8" },
+  heroCardSalRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 },
+  heroNetRow: { display: "flex", justifyContent: "space-between", background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 10, padding: "13px 16px", marginBottom: 14 },
+  heroNetBlock: { display: "flex", flexDirection: "column", gap: 4 },
+  heroCardCta: { display: "block", textAlign: "center", background: "#4f46e5", color: "#fff", borderRadius: 9, padding: "11px", fontSize: 13, fontWeight: 700, textDecoration: "none" },
+  /* ── Popular bar ── */
+  popularBar: { background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "11px 32px", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" },
+  popLabel: { fontSize: 11, fontWeight: 800, color: "#94a3b8", textTransform: "uppercase", letterSpacing: 1, whiteSpace: "nowrap", marginRight: 4 },
+  popLink: { background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", padding: "5px 13px", borderRadius: 99, fontSize: 12, fontWeight: 600, whiteSpace: "nowrap", textDecoration: "none" },
+  /* ── keep legacy keys used below the fold ── */
+  toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }, statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
    countryBar: { background: "#fff", borderBottom: "1px solid #e2e8f0" }, countryInner: { maxWidth: 1200, margin: "auto", padding: "10px 20px", display: "flex", gap: 7, alignItems: "center", overflowX: "auto" }, countryLabel: { fontSize: 12, color: "#64748b", fontWeight: 700, whiteSpace: "nowrap", marginRight: 4 }, countryButton: { border: "1px solid #e2e8f0", background: "#f8fafc", color: "#475569", padding: "7px 13px", borderRadius: 20, fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, countryActive: { background: "#eef2ff", color: "#4338ca", borderColor: "#818cf8" },
   recent: { background: "#1a1a2e", color: "#64748b", padding: "9px 20px", display: "flex", flexWrap: "wrap", gap: 7, alignItems: "center", fontSize: 12 }, filter: { position: "sticky", top: 0, zIndex: 5, background: "#1e293b", boxShadow: "0 2px 8px #0002" }, filterInner: { maxWidth: 1200, margin: "auto", padding: "9px 20px", display: "flex", gap: 6, overflowX: "auto", alignItems: "center" }, pill: { border: 0, borderRadius: 20, padding: "7px 12px", fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, blogLink: { color: "#c7d2fe", textDecoration: "none", marginLeft: "auto", whiteSpace: "nowrap", padding: "7px 12px" },
   takeSection: { background: "#17213b", padding: "44px 20px" }, takeCard: { maxWidth: 900, margin: "auto", background: "linear-gradient(135deg,#202b51,#16213e)", border: "1px solid #3d4c7c", borderRadius: 18, padding: "25px clamp(18px,4vw,42px)", color: "#fff", boxShadow: "0 12px 35px #0f172a55" }, takeHead: { display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }, sectionKicker: { color: "#818cf8", fontSize: 11, letterSpacing: 1.5, fontWeight: 800 }, sectionTitle: { fontSize: 26, letterSpacing: -.7, margin: "5px 0 18px", color: "#1e293b" }, muted: { color: "#a5b4fc", margin: 0, fontSize: 13 }, toggle: { display: "flex", background: "#111a31", padding: 4, borderRadius: 9, height: "fit-content" }, toggleActive: { background: "#4f46e5", color: "#fff" }, salaryLine: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 30, color: "#c7d2fe", fontSize: 14 }, salaryLineStrong: {}, range: { width: "100%", accentColor: "#818cf8", margin: "15px 0 3px", cursor: "pointer", minHeight: 30 }, rangeLabels: { display: "flex", justifyContent: "space-between", color: "#64748b", fontSize: 11 }, netResult: { display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: 25, paddingTop: 22, borderTop: "1px solid #ffffff1c" }, netResultStrong: {}, rate: { textAlign: "right", color: "#c7d2fe" }, takeLinks: { display: "flex", gap: 18, flexWrap: "wrap", marginTop: 25, fontSize: 13 }, content: { maxWidth: 1200, margin: "auto", padding: "38px 20px 55px" }, featureGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 12 }, feature: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: 20, display: "flex", gap: 14, textDecoration: "none", boxShadow: "0 2px 6px #0f172a08" }, featureIcon: { fontSize: 28, color: "#4f46e5" }, loan: { margin: "18px 0 38px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap", background: "linear-gradient(135deg,#4f46e5,#7c3aed)", color: "#fff", borderRadius: 14, padding: "20px 23px", textDecoration: "none" }, grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(175px,1fr))", gap: 10 }, category: { marginBottom: 36 }, categoryHead: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }, more: { background: "none", border: 0, fontWeight: 700, cursor: "pointer" }, toolCard: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 10, padding: "12px 13px", minHeight: 116, boxSizing: "border-box", display: "flex", flexDirection: "column", boxShadow: "0 1px 3px #0f172a08" }, toolName: { display: "flex", gap: 8, alignItems: "center", fontSize: 13 }, toolCardCategory: { alignSelf: "flex-start", fontStyle: "normal", fontSize: 10, padding: "2px 5px", borderRadius: 4, margin: "7px 0 5px" }, toolCardDescription: { fontSize: 11, color: "#64748b", lineHeight: 1.4, margin: "0 0 8px", flex: 1 }, result: { color: "#64748b", marginBottom: 15 }, empty: { minHeight: 240, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: "#94a3b8", fontSize: 34 }, blog: { maxWidth: 1200, margin: "0 auto", padding: "10px 20px 60px" }, blogHead: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: 15 }, blogGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 12 }, post: { textDecoration: "none", minHeight: 150 }, footer: { background: "#1a1a2e", color: "#94a3b8", padding: "30px 20px", textAlign: "center", display: "flex", flexDirection: "column", gap: 7, fontSize: 13 },
