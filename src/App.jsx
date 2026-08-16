@@ -25,7 +25,7 @@ const BLOG_POSTS = [
   { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/", categories: ["Calculators", "International"] },
   { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/", categories: ["Calculators", "Converters"] },
 ];
-const HOVER_STYLES = `.tool-card{transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.tool-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.1)!important}.question-card{transition:transform .18s,background .18s}.question-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.16)!important}`;
+const HOVER_STYLES = `.tool-card{transition:border-color .15s,background .15s,transform .15s,box-shadow .15s}.tool-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.1)!important}.question-card{transition:transform .18s,background .18s,border-color .18s}.question-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)!important;border-color:rgba(129,140,248,.6)!important}`;
 function trackRecentTool(tool) {
   try {
     const stored = JSON.parse(localStorage.getItem("tab_recent") || "[]");
@@ -106,18 +106,42 @@ export default function App() {
   const c = COUNTRIES[country] || COUNTRIES.uk;
   return <div style={styles.page}><style>{HOVER_STYLES}</style>
     <header style={styles.hero}>
-      <div style={styles.brand}>⚡ <span>Tabutility</span></div>
-      <h1 style={styles.heroTitle}>Instant answers to everyday questions.</h1>
-      <p style={styles.heroSub}>{toolsData.length} free tools — money, dev, health and more. No sign-up.</p>
-      <div style={styles.searchWrap}><span style={styles.searchIcon}>⌕</span><input aria-label="Search tools" placeholder={`Search ${toolsData.length} tools…`} value={search} onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />{search && <button onClick={() => setSearch("")} style={styles.clear}>×</button>}</div>
+      <div style={styles.heroOrb1} aria-hidden="true" />
+      <div style={styles.heroOrb2} aria-hidden="true" />
+      <nav style={styles.heroNav}>
+        <div style={styles.brand}>⚡ <span>Tabutility</span></div>
+        <div style={styles.heroNavLinks}>
+          <a href="/blog/" style={styles.heroNavLink}>Blog</a>
+          <a href="/diy-seo/" style={styles.heroNavLink}>Free SEO guide</a>
+          <a href="/tools/" style={styles.heroNavLink}>All tools</a>
+        </div>
+      </nav>
+      <div style={styles.heroCenterWrap}>
+        <div style={styles.heroKicker}>
+          <span style={styles.heroDot} />
+          {toolsData.length} free tools · No sign-up · Runs in your browser
+        </div>
+        <h1 style={styles.heroTitle}>Free tools for the<br />questions everyone Googles.</h1>
+        <p style={styles.heroSub}>Salary calculators, tax tools, mortgage maths, dev utilities, SEO tools and more — every answer instant, everything free.</p>
+        <div style={styles.searchWrap}>
+          <span style={styles.searchIcon}>⌕</span>
+          <input aria-label="Search tools" placeholder={`Search ${toolsData.length} tools…`} value={search} onChange={e => { setSearch(e.target.value); setActiveCategory("All"); }} style={styles.search} />
+          {search && <button onClick={() => setSearch("")} style={styles.clear}>×</button>}
+        </div>
+        <div style={styles.heroStats}>
+          {[["151", "Free tools"], ["5", "Countries"], ["11", "Categories"], ["$0", "Forever"]].map(([n, l]) =>
+            <div key={l} style={styles.heroStat}><strong style={styles.heroStatNum}>{n}</strong><span style={styles.heroStatLabel}>{l}</span></div>
+          )}
+        </div>
+      </div>
       <div style={styles.questions}>{[
-        ["How much of my salary do I keep?", "#take-home", "Calculate take-home"],
-        ["Is my raise worth it?", `/${["uk", "us", "au"].includes(country) ? country : "uk"}-salary/compare/`, "Compare the net gain"],
-        ["What does a loan really cost?", "https://loan-calculator.tabutility.com", "See the full cost"],
-        ["How do countries compare?", "/global-take-home-pay-report-2026/", "Read the report"],
-        ["Need a quick dev tool?", "#developer-tools", "Browse developer tools"],
-        ["Am I a healthy weight?", "https://bmi-calculator.tabutility.com", "Check your BMI"],
-      ].map(([q, href, label]) => <a key={q} className="question-card" href={href} style={styles.question}><b>{q}</b><span>{label} ↗</span></a>)}</div>
+        ["💰", "How much of my salary do I keep?", "#take-home", "Calculate take-home"],
+        ["📈", "Is my raise worth it?", `/${["uk", "us", "au"].includes(country) ? country : "uk"}-salary/compare/`, "Compare the net gain"],
+        ["🏦", "What does a loan really cost?", "https://loan-calculator.tabutility.com", "See the full cost"],
+        ["🌍", "How do countries compare?", "/global-take-home-pay-report-2026/", "Read the report"],
+        ["⚙️", "Need a quick dev tool?", "#developer-tools", "Browse developer tools"],
+        ["🔍", "How do I rank in Google — for free?", "/diy-seo/", "Free DIY SEO guide"],
+      ].map(([icon, q, href, label]) => <a key={q} className="question-card" href={href} style={styles.question}><span style={styles.questionIcon}>{icon}</span><div><b style={styles.questionTitle}>{q}</b><span style={styles.questionLabel}>{label} ↗</span></div></a>)}</div>
     </header>
     <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["ca", "🇨🇦 CA"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
     {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
@@ -151,10 +175,31 @@ function BlogSection({ activeCategory }) { const posts = BLOG_POSTS.filter(p => 
 
 const styles = {
   page: { fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#f1f5f9", color: "#1e293b", minHeight: "100vh" },
-  hero: { background: "linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%)", color: "#fff", padding: "26px 20px 30px", textAlign: "center" },
-  brand: { fontSize: 21, fontWeight: 900, letterSpacing: "-.5px", marginBottom: 22 }, heroTitle: { margin: 0, fontSize: "clamp(30px,6vw,50px)", letterSpacing: -2, lineHeight: 1.05 }, heroSub: { color: "#a5b4fc", margin: "12px auto 22px", fontSize: 15 },
-  searchWrap: { maxWidth: 560, margin: "0 auto", position: "relative" }, searchIcon: { position: "absolute", left: 15, top: 8, fontSize: 25, color: "#c7d2fe" }, search: { width: "100%", boxSizing: "border-box", padding: "14px 42px", borderRadius: 12, border: "2px solid rgba(165,180,252,.3)", background: "rgba(255,255,255,.1)", color: "#fff", fontSize: 16, outline: "none" }, clear: { position: "absolute", right: 13, top: 9, background: "none", border: 0, color: "#a5b4fc", fontSize: 23, cursor: "pointer" },
-  questions: { maxWidth: 920, margin: "22px auto 0", display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: 9 }, question: { textAlign: "left", color: "#fff", textDecoration: "none", background: "rgba(255,255,255,.09)", border: "1px solid rgba(199,210,254,.22)", borderRadius: 12, padding: "13px 14px", minHeight: 67, boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 7 }, questionSpan: { color: "#a5b4fc" },
+  hero: { background: "linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%)", color: "#fff", padding: "0 0 40px", textAlign: "center", position: "relative", overflow: "hidden" },
+  heroOrb1: { position: "absolute", right: "-160px", top: "-160px", width: 480, height: 480, borderRadius: "50%", background: "radial-gradient(circle,rgba(79,70,229,.32),transparent 70%)", pointerEvents: "none" },
+  heroOrb2: { position: "absolute", left: "-100px", bottom: "-100px", width: 340, height: 340, borderRadius: "50%", background: "radial-gradient(circle,rgba(124,58,237,.2),transparent 70%)", pointerEvents: "none" },
+  heroNav: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 28px", position: "relative", zIndex: 2 },
+  heroNavLinks: { display: "flex", gap: 4 },
+  heroNavLink: { color: "rgba(255,255,255,.65)", fontSize: 13, fontWeight: 600, textDecoration: "none", padding: "6px 12px", borderRadius: 8, transition: "color .15s" },
+  heroCenterWrap: { position: "relative", zIndex: 2, padding: "20px 20px 0" },
+  heroKicker: { display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(79,70,229,.22)", border: "1px solid rgba(129,140,248,.4)", color: "#a5b4fc", fontSize: 12, fontWeight: 700, letterSpacing: "1.2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: 99, marginBottom: 22 },
+  heroDot: { width: 7, height: 7, borderRadius: "50%", background: "#34d399", flexShrink: 0, boxShadow: "0 0 6px #34d399" },
+  brand: { fontSize: 20, fontWeight: 900, letterSpacing: "-.5px", color: "#fff", textDecoration: "none" },
+  heroTitle: { margin: "0 auto 16px", fontSize: "clamp(32px,5.5vw,58px)", letterSpacing: -2, lineHeight: 1.08, maxWidth: 780, fontWeight: 900 },
+  heroSub: { color: "rgba(255,255,255,.65)", margin: "0 auto 26px", fontSize: 16, maxWidth: 580, lineHeight: 1.65 },
+  searchWrap: { maxWidth: 600, margin: "0 auto 28px", position: "relative", zIndex: 2 },
+  searchIcon: { position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", fontSize: 24, color: "#c7d2fe", pointerEvents: "none" },
+  search: { width: "100%", boxSizing: "border-box", padding: "16px 48px", borderRadius: 14, border: "2px solid rgba(165,180,252,.35)", background: "rgba(255,255,255,.1)", color: "#fff", fontSize: 17, outline: "none", backdropFilter: "blur(8px)" },
+  clear: { position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", background: "none", border: 0, color: "#a5b4fc", fontSize: 24, cursor: "pointer", lineHeight: 1 },
+  heroStats: { display: "flex", justifyContent: "center", gap: 0, flexWrap: "wrap", maxWidth: 520, margin: "0 auto 32px", border: "1px solid rgba(255,255,255,.1)", borderRadius: 14, overflow: "hidden" },
+  heroStat: { flex: "1 1 100px", padding: "14px 10px", borderRight: "1px solid rgba(255,255,255,.1)", display: "flex", flexDirection: "column", alignItems: "center", gap: 3 },
+  heroStatNum: { fontSize: 28, fontWeight: 900, color: "#fff", lineHeight: 1 },
+  heroStatLabel: { fontSize: 11, color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".8px" },
+  questions: { maxWidth: 960, margin: "0 auto", padding: "0 20px", display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 10, position: "relative", zIndex: 2 },
+  question: { textAlign: "left", color: "#fff", textDecoration: "none", background: "rgba(255,255,255,.07)", border: "1px solid rgba(199,210,254,.18)", borderRadius: 14, padding: "14px 15px", boxSizing: "border-box", display: "flex", alignItems: "flex-start", gap: 10 },
+  questionIcon: { fontSize: 20, flexShrink: 0, marginTop: 2 },
+  questionTitle: { display: "block", fontSize: 13, fontWeight: 700, lineHeight: 1.35, marginBottom: 5, color: "#fff" },
+  questionLabel: { color: "#818cf8", fontSize: 12, fontWeight: 600 },
    toggleButton: { background: "transparent", border: 0, color: "#c7d2fe", borderRadius: 6, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }, statBlock: { display: "flex", flexDirection: "column", gap: 7, minWidth: 0 },
    countryBar: { background: "#fff", borderBottom: "1px solid #e2e8f0" }, countryInner: { maxWidth: 1200, margin: "auto", padding: "10px 20px", display: "flex", gap: 7, alignItems: "center", overflowX: "auto" }, countryLabel: { fontSize: 12, color: "#64748b", fontWeight: 700, whiteSpace: "nowrap", marginRight: 4 }, countryButton: { border: "1px solid #e2e8f0", background: "#f8fafc", color: "#475569", padding: "7px 13px", borderRadius: 20, fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, countryActive: { background: "#eef2ff", color: "#4338ca", borderColor: "#818cf8" },
   recent: { background: "#1a1a2e", color: "#64748b", padding: "9px 20px", display: "flex", flexWrap: "wrap", gap: 7, alignItems: "center", fontSize: 12 }, filter: { position: "sticky", top: 0, zIndex: 5, background: "#1e293b", boxShadow: "0 2px 8px #0002" }, filterInner: { maxWidth: 1200, margin: "auto", padding: "9px 20px", display: "flex", gap: 6, overflowX: "auto", alignItems: "center" }, pill: { border: 0, borderRadius: 20, padding: "7px 12px", fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, blogLink: { color: "#c7d2fe", textDecoration: "none", marginLeft: "auto", whiteSpace: "nowrap", padding: "7px 12px" },
