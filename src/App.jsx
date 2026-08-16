@@ -158,8 +158,10 @@ export default function App() {
   </div>;
 }
 
+const HERO_DEFAULTS = { jp: 5000000, us: 85000, au: 90000, ca: 75000, uk: 52000 };
 function HeroCard({ country, onCountryChange }) {
-  const c = COUNTRIES[country]; const [salary, setSalary] = useState(country === "jp" ? 5000000 : country === "us" ? 85000 : country === "au" ? 90000 : 52000);
+  const c = COUNTRIES[country]; const [salary, setSalary] = useState(HERO_DEFAULTS[country] ?? 52000);
+  useEffect(() => { setSalary(HERO_DEFAULTS[country] ?? 52000); }, [country]);
   const net = CALC[country](salary); const step = country === "jp" ? 100000 : 1000;
   return <div style={styles.heroCard}>
     <div style={styles.heroCardLabel}>SALARY CALCULATOR <span style={styles.liveBadge}>LIVE</span></div>
