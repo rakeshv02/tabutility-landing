@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your BC Salary After Tax in Every Province (2025) — What If You Moved? | Tabutility</title>
+<meta name="description" content="You earn the same BC salary — how much would you keep if you lived in Alberta, Ontario, Quebec, or any other Canadian province? Compare 2025 take-home pay across all 10 provinces. Pick a salary and see the full breakdown instantly."/>
+<link rel="canonical" href="https://tabutility.com/bc-data-story/"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Your BC Salary After Tax in Every Province (2025)"/>
+<meta property="og:description" content="Pick a BC salary and see exactly how much you'd keep after tax in every Canadian province. Powered by Tabutility's 2025 tax logic — no API calls, fully self-contained."/>
+<meta property="og:url" content="https://tabutility.com/bc-data-story/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Your BC Salary After Tax in Every Province (2025)"/>
+<meta name="twitter:description" content="Pick a BC salary and see how much you'd keep if you lived in Alberta, Ontario, Quebec or any other Canadian province."/>
+<meta name="theme-color" content="#0f172a"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Your BC Salary After Tax in Every Province (2025)","url":"https://tabutility.com/bc-data-story/","description":"Compare 2025 take-home pay for a BC salary across all 10 Canadian provinces. See how much you'd keep after tax if you moved from British Columbia.","publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"BC Salary After Tax","item":"https://tabutility.com/bc-salary/"},{"@type":"ListItem","position":3,"name":"BC Salary in Every Province","item":"https://tabutility.com/bc-data-story/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"If I move from BC to Alberta, how much more do I keep?","acceptedAnswer":{"@type":"Answer","text":"On a C$100,000 salary, moving from BC to Alberta saves roughly C$1,500–C$2,500 per year in provincial tax. The gap grows significantly at higher incomes — above C$125,000, Alberta's advantage can exceed C$5,000/year because BC's top rates kick in earlier and BC has no health premium offset like Ontario's, but does have higher top brackets."}},{"@type":"Question","name":"Does Quebec have lower take-home pay than BC?","acceptedAnswer":{"@type":"Answer","text":"Yes, Quebec typically has lower take-home pay than BC at most salary levels. Quebec's provincial tax rates are higher (up to 25.75%), though Quebec residents benefit from the 16.5% federal abatement (reducing federal tax) and generally lower cost of living. The net effect still means less after-tax pay than BC in most brackets."}},{"@type":"Question","name":"Which Canadian province has the highest take-home pay?","acceptedAnswer":{"@type":"Answer","text":"Alberta consistently offers the highest take-home pay in Canada for middle and upper incomes. Alberta has a flat 10% starting rate (rising to 15% above C$341,000), no provincial surtax, no health premium, and no provincial sales tax. Below roughly C$60,000, some provinces with low bottom-bracket rates can be competitive."}},{"@type":"Question","name":"Why is BC take-home pay different from Ontario on the same salary?","acceptedAnswer":{"@type":"Answer","text":"BC and Ontario have different provincial tax brackets, different basic personal amounts, and different add-ons. Ontario adds a health premium of up to C$900/year and a surtax above certain thresholds, which hurts higher earners. BC has no health premium and no surtax, but its top marginal rate of 20.5% is higher than Ontario's 13.16% (though that rate only kicks in above C$240,716 in BC)."}},{"@type":"Question","name":"Does this include CPP and EI?","acceptedAnswer":{"@type":"Answer","text":"Yes. CPP contributions (5.95% on earnings between C$3,500 and C$68,500) and EI premiums (1.66% on insurable earnings up to C$63,200) are the same across all provinces except Quebec. Quebec residents pay QPP instead of CPP, and QPIP instead of EI, with slightly different rates. These are factored into every province's calculation on this page."}}]}</script>
+<link rel="stylesheet" href="/styles/tabutility.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--tab-font,'Segoe UI',system-ui,Arial,sans-serif);background:var(--tab-bg,#f8fafc);color:var(--tab-text,#334155);line-height:1.6;min-height:100vh}
+a{color:var(--tab-accent,#4f46e5);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{background:var(--tab-navy,#1a1a2e);padding:14px 24px;display:flex;align-items:center;gap:20px}
+nav .brand{color:#fff;font-weight:800;font-size:18px}
+nav a{color:var(--tab-faint,#94a3b8);font-size:14px}
+nav a:hover{color:#fff;text-decoration:none}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px 60px}
+header.hero{text-align:center;padding:40px 0 10px}
+h1{font-size:30px;font-weight:800;color:var(--tab-heading,#0f172a);margin-bottom:10px}
+.sub{color:var(--tab-muted,#64748b);font-size:15px;max-width:640px;margin:0 auto}
+h2{font-size:22px;font-weight:700;margin:36px 0 14px;color:var(--tab-heading,#0f172a)}
+h3{font-size:16px;font-weight:700;margin:0 0 6px;color:var(--tab-heading,#0f172a)}
+p{color:var(--tab-text-2,#475569);margin-bottom:14px}
+.card{background:#fff;border:1px solid var(--tab-border,#e2e8f0);border-radius:14px;padding:22px;margin-bottom:18px}
+.controls-label{font-size:12px;font-weight:600;color:var(--tab-muted,#64748b);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.sal-btn{background:var(--tab-bg-alt,#f1f5f9);border:1px solid var(--tab-border,#e2e8f0);color:var(--tab-text,#334155);padding:9px 16px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
+.sal-btn:hover{border-color:var(--tab-accent,#4f46e5)}
+.sal-btn.active{background:var(--tab-accent,#4f46e5);color:#fff;border-color:var(--tab-accent,#4f46e5)}
+.custom-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.custom-row label{font-size:13px;color:var(--tab-muted,#64748b)}
+.custom-row input{background:#fff;border:1px solid var(--tab-border,#e2e8f0);color:#1e293b;padding:9px 12px;border-radius:8px;font-size:15px;width:170px}
+.custom-row input:focus{outline:none;border-color:var(--tab-accent,#4f46e5);box-shadow:0 0 0 3px rgba(79,70,229,.12)}
+.chart{margin-top:6px}
+.bar-row{display:grid;grid-template-columns:160px 1fr;align-items:center;gap:12px;margin-bottom:9px}
+.bar-province{font-size:13px;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{background:var(--tab-bg-alt,#f1f5f9);border-radius:6px;height:28px;position:relative;overflow:hidden;border:1px solid var(--tab-border,#e2e8f0)}
+.bar-fill{height:100%;background:linear-gradient(90deg,#4338ca,#4f46e5);border-radius:5px 0 0 5px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:60px;transition:width .4s ease}
+.bar-fill.bc-bar{background:linear-gradient(90deg,#0284c7,#0ea5e9)}
+.bar-fill span{font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:13px}
+.table-scroll{overflow-x:auto}
+th,td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--tab-border,#e2e8f0);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--tab-muted,#64748b);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+td{color:#1e293b}
+tr.bc-row td{background:#f0f9ff;font-weight:600}
+tr:hover td{background:rgba(79,70,229,0.05)}
+tr.bc-row:hover td{background:#e0f2fe}
+.diff-pos{color:#16a34a;font-weight:600}
+.diff-neg{color:#dc2626;font-weight:600}
+.diff-zero{color:#64748b}
+.note{font-size:12px;color:var(--tab-faint,#94a3b8);margin-top:10px}
+ul.findings{list-style:none;margin:0 0 14px}
+ul.findings li{padding:8px 0 8px 26px;position:relative;color:var(--tab-text-2,#475569);border-bottom:1px solid var(--tab-border,#e2e8f0)}
+ul.findings li:last-child{border-bottom:none}
+ul.findings li:before{content:"▸";position:absolute;left:4px;color:var(--tab-accent,#4f46e5);font-weight:700}
+.province-notes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pn{background:var(--tab-bg,#f8fafc);border:1px solid var(--tab-border,#e2e8f0);border-radius:10px;padding:14px}
+.pn h3{font-size:14px}
+.pn p{font-size:12px;color:var(--tab-muted,#64748b);margin:0}
+.faq-item{border-bottom:1px solid var(--tab-border,#e2e8f0);padding:14px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{font-size:15px;margin-bottom:6px}
+.faq-item p{font-size:13px;color:var(--tab-muted,#64748b);margin:0}
+.promo-box{background:linear-gradient(135deg,#1e3a5f,#1e40af);border-radius:14px;padding:22px;margin-bottom:18px;color:#fff}
+.promo-box h3{color:#fff;margin-bottom:8px}
+.promo-box p{color:rgba(255,255,255,0.85);font-size:14px;margin-bottom:14px}
+.promo-box a{display:inline-block;background:#fff;color:#1e40af;padding:9px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none}
+.promo-box a:hover{background:#dbeafe}
+footer{background:var(--tab-navy,#1a1a2e);padding:24px 16px;text-align:center;color:var(--tab-muted,#64748b);font-size:13px}
+footer a{color:var(--tab-faint,#94a3b8)}
+@media(max-width:600px){
+  .province-notes{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:110px 1fr;gap:8px}
+  .bar-province{font-size:12px}
+  h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="https://tabutility.com/">⚡ Tabutility</a>
+  <a href="https://tabutility.com/bc-salary/">← BC Salary Hub</a>
+  <a href="https://tabutility.com/">All Tools</a>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>🍁 Your BC Salary After Tax in Every Province (2025)</h1>
+    <p class="sub">You earn the same salary in British Columbia — how much would you keep if you moved? Pick a gross salary and see your real take-home pay across all 10 Canadian provinces, ranked from most to least generous.</p>
+  </header>
+
+  <p>Every province applies the same federal income tax, CPP and EI — but the <em>provincial</em> tax on top varies enormously. Move from BC to Alberta and you could keep thousands more per year. Stay in Quebec and you'll see a noticeably smaller paycheque. The difference isn't just about provincial rates: Ontario adds a surtax and health premium, Quebec has its own pension plan (QPP) and parental insurance (QPIP), and Manitoba's top bracket kicks in earlier than most.</p>
+  <p>All calculations below use 2025 tax rules for a single employed person with no deductions beyond the basic personal amount. The same salary is run through every province's tax system and the results are ranked so you can see at a glance what a move would cost or save you.</p>
+
+  <div class="card">
+    <div class="controls-label">Choose a gross annual salary (CAD)</div>
+    <div class="btn-row" id="btnRow"></div>
+    <div class="custom-row">
+      <label for="customSal">Or enter your own (C$):</label>
+      <input type="number" id="customSal" min="0" step="1000" placeholder="e.g. 110000"/>
+    </div>
+  </div>
+
+  <h2>Take-home pay by province</h2>
+  <p id="chartIntro">Ranked by net take-home pay. The blue bar is British Columbia — your current home base.</p>
+  <div class="card">
+    <div class="chart" id="chart"></div>
+  </div>
+
+  <h2>Full breakdown</h2>
+  <div class="card">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Province</th><th>Gross</th><th>Net (annual)</th><th>vs BC</th><th>Effective rate</th></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <p class="note">Highlighted row = British Columbia (your baseline). "vs BC" = annual difference if you moved there vs staying in BC. Effective rate = all income tax + CPP/QPP + EI/QPIP as a % of gross salary.</p>
+  </div>
+
+  <h2>Key findings</h2>
+  <ul class="findings" id="findings"></ul>
+
+  <h2>Province-by-province notes</h2>
+  <p>Each figure uses the same profile: a single employed person, 2025 tax year, no deductions beyond the basic personal amount. Here is exactly what each province's calculation includes:</p>
+  <div class="province-notes" id="provinceNotes"></div>
+
+  <h2>Methodology</h2>
+  <p>Every figure on this page is computed in real time using the 2025 tax rules embedded directly in this page's JavaScript. We use the 2025/2026 federal and provincial parameters published by the CRA and each provincial revenue authority. The calculations cover:</p>
+  <ul style="color:#475569;padding-left:22px;margin-bottom:14px;font-size:14px">
+    <li style="margin-bottom:6px"><strong>Federal income tax</strong> — 2025 brackets with the C$16,129 basic personal amount and corresponding 15% federal credit.</li>
+    <li style="margin-bottom:6px"><strong>CPP / QPP</strong> — CPP at 5.95% on earnings between C$3,500 and C$68,500 for all provinces except Quebec, which uses QPP at 6.4% on the same band.</li>
+    <li style="margin-bottom:6px"><strong>EI / QPIP</strong> — EI at 1.66% up to C$63,200 insurable earnings for all provinces except Quebec. Quebec pays EI at a reduced rate (1.31% up to C$63,200) plus QPIP at 0.494% up to C$88,000.</li>
+    <li style="margin-bottom:6px"><strong>Provincial income tax</strong> — each province's 2025 brackets, basic personal amount and applicable credits (surtaxes, health premiums, abatements).</li>
+    <li style="margin-bottom:6px"><strong>Quebec abatement</strong> — Quebec residents receive a 16.5% reduction in basic federal income tax because Quebec runs its own programs.</li>
+  </ul>
+  <p>We do not model provincial tax credits beyond the basic personal amount credit, employer contributions, or voluntary deductions (RRSP, pension, union dues). Figures are estimates for general comparison — they are not personal tax advice. For a precise calculation including your specific deductions, use our <a href="https://canada-income-tax.tabutility.com">Canada Income Tax Calculator</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="card">
+    <div class="faq-item"><h3>If I move from BC to Alberta, how much more do I keep?</h3><p>On a C$100,000 salary, moving from BC to Alberta typically saves C$1,500–C$2,500 per year in provincial tax. The gap grows significantly at higher incomes — above C$125,000, Alberta's advantage can exceed C$5,000/year because Alberta's top rate of 15% is far lower than BC's 20.5%.</p></div>
+    <div class="faq-item"><h3>Does Quebec have lower take-home pay than BC?</h3><p>Yes, Quebec typically has lower take-home pay than BC at most salary levels. Quebec's provincial rates are higher (up to 25.75%). Quebec residents do benefit from the 16.5% federal abatement, which partially offsets this — but the net result is still less after-tax income than BC for most salary ranges.</p></div>
+    <div class="faq-item"><h3>Which Canadian province has the highest take-home pay?</h3><p>Alberta consistently offers the highest take-home pay for middle and higher incomes. Alberta has no provincial surtax, no health premium, no provincial sales tax, and rates that top out at 15% (vs BC's 20.5% or Ontario's 13.16% base with surtax on top).</p></div>
+    <div class="faq-item"><h3>Why is BC take-home different from Ontario on the same salary?</h3><p>BC and Ontario have different provincial brackets, different basic personal amounts, and different add-ons. Ontario adds a health premium (up to C$900/year) and a surtax above C$5,315 of provincial tax. BC has neither — but BC's top marginal rate of 20.5% is higher than Ontario's 13.16% base (the Ontario surtax means effective top rates are close at very high incomes).</p></div>
+    <div class="faq-item"><h3>Does this include CPP and EI?</h3><p>Yes. CPP (5.95% on earnings between C$3,500 and C$68,500) and EI (1.66% up to C$63,200) are the same in all provinces except Quebec, which uses QPP and adds QPIP. All of these are included in every province's net pay figure.</p></div>
+  </div>
+
+  <div class="promo-box">
+    <h3>Run your exact numbers</h3>
+    <p>The figures here use default assumptions. For a calculation that includes your RRSP contributions, pension deductions or self-employment income, use our full Canada Income Tax Calculator — it covers all 13 provinces and territories.</p>
+    <a href="https://canada-income-tax.tabutility.com" rel="noopener">Open Canada Income Tax Calculator →</a>
+  </div>
+
+  <h2>Related resources</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:18px">
+    <a href="https://tabutility.com/bc-salary/" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#1e293b;font-size:13px;font-weight:600">🌊 BC Salary Hub — all salary levels</a>
+    <a href="https://tabutility.com/ca-salary/" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#1e293b;font-size:13px;font-weight:600">🍁 Ontario Salary Hub — national baseline</a>
+    <a href="https://tabutility.com/ab-salary/" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#1e293b;font-size:13px;font-weight:600">🤠 Alberta Salary Hub — highest take-home</a>
+    <a href="https://tabutility.com/take-home-pay-by-country/" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#1e293b;font-size:13px;font-weight:600">🌍 Take-home pay across 14 countries</a>
+    <a href="https://canada-income-tax.tabutility.com" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#1e293b;font-size:13px;font-weight:600">🇨🇦 Canada Income Tax Calculator (all provinces)</a>
+  </div>
+</div>
+
+<footer>
+  © 2025 Tabutility · 2025 Canadian tax rules · Single employed person, no deductions beyond BPA · Estimates for comparison only, not tax advice · <a href="https://tabutility.com/">All Tools</a>
+</footer>
+
+<script>
+// ============================================================
+// 2025 Canadian provincial tax calculations
+// Single employed person, no deductions beyond BPA
+// ============================================================
+
+// --- Federal parameters (same for all provinces) ---
+var FED_BPA = 16129;
+var FED_BRACKETS = [
+  [0,       57375,  0.15],
+  [57375,   114750, 0.205],
+  [114750,  158519, 0.26],
+  [158519,  220000, 0.29],
+  [220000,  Infinity, 0.33]
+];
+var FED_CREDIT_RATE = 0.15;
+
+// CPP: 5.95% on (salary - 3500), max insurable 68500
+var CPP_RATE = 0.0595;
+var CPP_EXEMPT = 3500;
+var CPP_MAX_PENSIONABLE = 68500;
+
+// EI: 1.66% up to max insurable 63200
+var EI_RATE = 0.0166;
+var EI_MAX_INSURABLE = 63200;
+
+// QPP (Quebec): 6.4% on same band
+var QPP_RATE = 0.064;
+
+// EI Quebec reduced rate + QPIP
+var EI_RATE_QC = 0.0131;
+var QPIP_RATE = 0.00494;
+var QPIP_MAX = 88000;
+
+// QC federal abatement: 16.5% of basic federal tax
+var QC_ABATEMENT = 0.165;
+
+function calcFederalTax(gross) {
+  var taxable = Math.max(0, gross - FED_BPA);
+  var tax = 0;
+  for (var i = 0; i < FED_BRACKETS.length; i++) {
+    var b = FED_BRACKETS[i];
+    if (taxable <= b[0]) break;
+    tax += (Math.min(taxable, b[1]) - b[0]) * b[2];
+  }
+  // Basic federal personal credit
+  tax -= FED_CREDIT_RATE * FED_BPA;
+  return Math.max(0, tax);
+}
+
+function calcCPP(gross) {
+  return Math.min(Math.max(0, gross - CPP_EXEMPT), CPP_MAX_PENSIONABLE - CPP_EXEMPT) * CPP_RATE;
+}
+
+function calcQPP(gross) {
+  return Math.min(Math.max(0, gross - CPP_EXEMPT), CPP_MAX_PENSIONABLE - CPP_EXEMPT) * QPP_RATE;
+}
+
+function calcEI(gross) {
+  return Math.min(gross, EI_MAX_INSURABLE) * EI_RATE;
+}
+
+function calcEI_QC(gross) {
+  return Math.min(gross, EI_MAX_INSURABLE) * EI_RATE_QC;
+}
+
+function calcQPIP(gross) {
+  return Math.min(gross, QPIP_MAX) * QPIP_RATE;
+}
+
+function applyBrackets(taxable, brackets) {
+  var tax = 0;
+  for (var i = 0; i < brackets.length; i++) {
+    var b = brackets[i];
+    if (taxable <= b[0]) break;
+    tax += (Math.min(taxable, b[1]) - b[0]) * b[2];
+  }
+  return tax;
+}
+
+// ---- Provincial tax functions ----
+
+function calcBC(gross) {
+  var BPA = 11981;
+  var brackets = [
+    [0,       45654,  0.0506],
+    [45654,   91310,  0.077],
+    [91310,   104835, 0.105],
+    [104835,  127299, 0.1229],
+    [127299,  172602, 0.147],
+    [172602,  240716, 0.168],
+    [240716,  Infinity, 0.205]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.0506 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcAB(gross) {
+  var BPA = 21872;
+  var brackets = [
+    [0,       148269, 0.10],
+    [148269,  177922, 0.12],
+    [177922,  237230, 0.13],
+    [237230,  355845, 0.14],
+    [355845,  Infinity, 0.15]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  return Math.max(0, applyBrackets(taxable, brackets));
+}
+
+function calcSK(gross) {
+  var BPA = 17661;
+  var brackets = [
+    [0,       49720,  0.105],
+    [49720,   142058, 0.125],
+    [142058,  Infinity, 0.145]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.105 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcMB(gross) {
+  var BPA = 15780;
+  var brackets = [
+    [0,       36842,  0.108],
+    [36842,   79625,  0.1275],
+    [79625,   Infinity, 0.174]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.108 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcON(gross) {
+  var BPA = 11865;
+  var brackets = [
+    [0,       51446,  0.0505],
+    [51446,   102894, 0.0915],
+    [102894,  150000, 0.1116],
+    [150000,  220000, 0.1216],
+    [220000,  Infinity, 0.1316]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.0505 * BPA;
+  var baseTax = Math.max(0, tax - credit);
+
+  // Ontario surtax
+  var surtax = 0;
+  if (baseTax > 6802) {
+    surtax += (baseTax - 6802) * 0.36;
+  }
+  if (baseTax > 5315) {
+    surtax += Math.min(baseTax - 5315, 6802 - 5315) * 0.20;
+  }
+
+  // Ontario health premium
+  var hp = 0;
+  if (gross > 200600) hp = 900;
+  else if (gross > 200000) hp = 750 + (gross - 200000) * 0.25;
+  else if (gross > 100000) hp = 600;
+  else if (gross > 72600) hp = 450;
+  else if (gross > 48600) hp = 300;
+  else if (gross > 36000) hp = 0 + (gross - 36000) * (300/12600);
+  // bands 0 and free band omitted as they're 0
+
+  return baseTax + surtax + hp;
+}
+
+function calcQC(gross) {
+  var BPA = 17183;
+  var brackets = [
+    [0,       51780,  0.14],
+    [51780,   103545, 0.19],
+    [103545,  126000, 0.24],
+    [126000,  Infinity, 0.2575]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.14 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcNB(gross) {
+  var BPA = 12458;
+  var brackets = [
+    [0,       47715,  0.094],
+    [47715,   95431,  0.14],
+    [95431,   176756, 0.16],
+    [176756,  240716, 0.195],
+    [240716,  Infinity, 0.203]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.094 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcNS(gross) {
+  var BPA = 8481;
+  var brackets = [
+    [0,       29590,  0.0879],
+    [29590,   59180,  0.1495],
+    [59180,   93000,  0.1667],
+    [93000,   150000, 0.175],
+    [150000,  Infinity, 0.21]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.0879 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+function calcPEI(gross) {
+  var BPA = 12000;
+  var brackets = [
+    [0,       32656,  0.0965],
+    [32656,   64313,  0.1363],
+    [64313,   105000, 0.1665],
+    [105000,  140000, 0.18],
+    [140000,  Infinity, 0.1875]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.0965 * BPA;
+  var baseTax = Math.max(0, tax - credit);
+  // PEI surtax: 10% on provincial tax > C$12,000
+  var surtax = baseTax > 12000 ? (baseTax - 12000) * 0.10 : 0;
+  return baseTax + surtax;
+}
+
+function calcNL(gross) {
+  var BPA = 10818;
+  var brackets = [
+    [0,       43198,  0.087],
+    [43198,   86395,  0.145],
+    [86395,   154244, 0.158],
+    [154244,  215943, 0.178],
+    [215943,  275870, 0.198],
+    [275870,  551739, 0.208],
+    [551739,  Infinity, 0.213]
+  ];
+  var taxable = Math.max(0, gross - BPA);
+  var tax = applyBrackets(taxable, brackets);
+  var credit = 0.087 * BPA;
+  return Math.max(0, tax - credit);
+}
+
+// ---- Net pay calculator per province ----
+function calcNet(gross, provId) {
+  var fedTax = calcFederalTax(gross);
+  var provTax, cpp, ei;
+
+  if (provId === 'qc') {
+    provTax = calcQC(gross);
+    // QC abatement reduces federal tax
+    fedTax = Math.max(0, fedTax - fedTax * QC_ABATEMENT);
+    cpp = calcQPP(gross);
+    ei = calcEI_QC(gross) + calcQPIP(gross);
+  } else {
+    cpp = calcCPP(gross);
+    ei = calcEI(gross);
+    switch (provId) {
+      case 'bc': provTax = calcBC(gross); break;
+      case 'ab': provTax = calcAB(gross); break;
+      case 'sk': provTax = calcSK(gross); break;
+      case 'mb': provTax = calcMB(gross); break;
+      case 'on': provTax = calcON(gross); break;
+      case 'nb': provTax = calcNB(gross); break;
+      case 'ns': provTax = calcNS(gross); break;
+      case 'pei': provTax = calcPEI(gross); break;
+      case 'nl': provTax = calcNL(gross); break;
+      default: provTax = 0;
+    }
+  }
+
+  return gross - fedTax - provTax - cpp - ei;
+}
+
+// ---- Province definitions ----
+var PROVINCES = [
+  { id:'ab', name:'Alberta', flag:'🤠', abbr:'AB', note:'No health premium, no provincial surtax. Flat 10% up to C$148,269 then rising to 15% above C$355,845. Alberta\'s C$21,872 basic personal amount is the highest in Canada. CPP and EI at standard federal rates.' },
+  { id:'bc', name:'British Columbia', flag:'🌊', abbr:'BC', note:'Your home base. 7-bracket system from 5.06% to 20.5%. BPA C$11,981. No health premium (MSP was eliminated January 2020), no surtax. CPP and EI at standard federal rates.' },
+  { id:'sk', name:'Saskatchewan', flag:'🌾', abbr:'SK', note:'3 brackets: 10.5% / 12.5% / 14.5%. BPA C$17,661. No surtax, no health premium. CPP and EI at standard federal rates.' },
+  { id:'mb', name:'Manitoba', flag:'🦬', abbr:'MB', note:'3 brackets: 10.8% / 12.75% / 17.4%. BPA C$15,780. No surtax, no dedicated health premium. CPP and EI at standard federal rates.' },
+  { id:'on', name:'Ontario', flag:'🍁', abbr:'ON', note:'5 brackets (5.05%–13.16%) plus surtax of 20% on provincial tax above C$5,315 and 36% above C$6,802. Health premium up to C$900/year. BPA C$11,865. CPP and EI at standard federal rates.' },
+  { id:'qc', name:'Quebec', flag:'🏛️', abbr:'QC', note:'4 brackets (14%–25.75%). BPA C$17,183. QPP at 6.4% instead of CPP. QPIP at 0.494% (up to C$88,000) plus reduced EI (1.31%). Federal abatement: 16.5% reduction in basic federal tax.' },
+  { id:'nb', name:'New Brunswick', flag:'⚓', abbr:'NB', note:'5 brackets: 9.4%–20.3%. BPA C$12,458. No surtax, no health premium. CPP and EI at standard federal rates.' },
+  { id:'ns', name:'Nova Scotia', flag:'⚓', abbr:'NS', note:'5 brackets: 8.79%–21%. BPA C$8,481 (lowest BPA in Canada). No surtax, no health premium. CPP and EI at standard federal rates.' },
+  { id:'pei', name:'Prince Edward Island', flag:'🌿', abbr:'PEI', note:'5 brackets: 9.65%–18.75%. BPA C$12,000. Surtax of 10% on provincial tax above C$12,000. CPP and EI at standard federal rates.' },
+  { id:'nl', name:'Newfoundland & Labrador', flag:'🐟', abbr:'NL', note:'7 brackets: 8.7%–21.3%. BPA C$10,818. No surtax, no health premium. CPP and EI at standard federal rates.' }
+];
+
+var fmt = function(n){ return 'C$' + Math.round(n).toLocaleString('en-CA'); };
+var currentSalary = 100000;
+var PRESETS = [50000, 75000, 100000, 125000, 150000, 200000];
+
+function buildButtons() {
+  var row = document.getElementById('btnRow');
+  PRESETS.forEach(function(v) {
+    var b = document.createElement('button');
+    b.className = 'sal-btn';
+    b.textContent = 'C$' + (v >= 1000 ? (v/1000) + 'k' : v);
+    b.setAttribute('data-val', v);
+    b.onclick = function(){ setSalary(v); document.getElementById('customSal').value = ''; };
+    row.appendChild(b);
+  });
+}
+
+function setSalary(val) {
+  currentSalary = val;
+  document.querySelectorAll('.sal-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.getAttribute('data-val'), 10) === val);
+  });
+  render();
+}
+
+function computeAll(gross) {
+  var results = PROVINCES.map(function(p) {
+    var net = calcNet(gross, p.id);
+    var effRate = gross > 0 ? (gross - net) / gross : 0;
+    return { p: p, gross: gross, net: net, effRate: effRate };
+  });
+  results.sort(function(a, b) { return b.net - a.net; });
+  return results;
+}
+
+function render() {
+  var rows = computeAll(currentSalary);
+  var bcRow = rows.find(function(r) { return r.p.id === 'bc'; });
+  var bcNet = bcRow ? bcRow.net : 0;
+  var maxNet = rows[0].net;
+
+  // Chart
+  var chart = document.getElementById('chart');
+  chart.innerHTML = rows.map(function(r) {
+    var w = maxNet > 0 ? (r.net / maxNet * 100) : 0;
+    var isBC = r.p.id === 'bc';
+    var label = r.p.flag + ' ' + r.p.name + (isBC ? ' ★' : '');
+    return '<div class="bar-row">' +
+      '<div class="bar-province">' + label + '</div>' +
+      '<div class="bar-track">' +
+        '<div class="bar-fill' + (isBC ? ' bc-bar' : '') + '" style="width:' + w.toFixed(1) + '%">' +
+          '<span>' + fmt(r.net) + '</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+
+  // Table
+  var tb = document.getElementById('tableBody');
+  tb.innerHTML = rows.map(function(r) {
+    var diff = r.net - bcNet;
+    var diffStr, diffClass;
+    if (r.p.id === 'bc') {
+      diffStr = '— (you)';
+      diffClass = 'diff-zero';
+    } else if (diff > 0) {
+      diffStr = '+' + fmt(diff);
+      diffClass = 'diff-pos';
+    } else {
+      diffStr = '−' + fmt(Math.abs(diff));
+      diffClass = 'diff-neg';
+    }
+    return '<tr' + (r.p.id === 'bc' ? ' class="bc-row"' : '') + '>' +
+      '<td>' + r.p.flag + ' ' + r.p.name + '</td>' +
+      '<td>' + fmt(r.gross) + '</td>' +
+      '<td>' + fmt(r.net) + '</td>' +
+      '<td class="' + diffClass + '">' + diffStr + '</td>' +
+      '<td>' + (r.effRate * 100).toFixed(1) + '%</td>' +
+    '</tr>';
+  }).join('');
+
+  // Chart intro
+  document.getElementById('chartIntro').textContent =
+    'On a gross BC salary of ' + fmt(currentSalary) + ', here is how much you\'d keep in each province. The blue bar is British Columbia — your home base.';
+}
+
+function buildFindings() {
+  var rows = computeAll(100000);
+  var bcRow = rows.find(function(r) { return r.p.id === 'bc'; });
+  var abRow = rows.find(function(r) { return r.p.id === 'ab'; });
+  var onRow = rows.find(function(r) { return r.p.id === 'on'; });
+  var qcRow = rows.find(function(r) { return r.p.id === 'qc'; });
+  var topRow = rows[0];
+  var bottomRow = rows[rows.length - 1];
+
+  var abVsBC = abRow.net - bcRow.net;
+  var bcVsON = bcRow.net - onRow.net;
+  var bcVsQC = bcRow.net - qcRow.net;
+  var spread = topRow.net - bottomRow.net;
+
+  var items = [
+    'On a <strong>' + fmt(100000) + '</strong> BC salary, <strong>' + topRow.p.flag + ' ' + topRow.p.name + '</strong> gives you the most take-home pay at <strong>' + fmt(topRow.net) + '</strong> — that\'s <strong>' + fmt(topRow.net - bcRow.net) + ' more</strong> per year than staying in BC.',
+    '<strong>BC</strong> comes in at <strong>' + fmt(bcRow.net) + '</strong> per year (' + (bcRow.effRate * 100).toFixed(1) + '% effective rate). Moving to <strong>' + abRow.p.flag + ' Alberta</strong> would save you <strong>' + fmt(abVsBC) + '/year</strong> — roughly ' + fmt(abVsBC / 12) + ' extra per month.',
+    'BC beats <strong>' + onRow.p.flag + ' Ontario</strong> by <strong>' + fmt(bcVsON) + '/year</strong> on a C$100k salary, mainly because Ontario charges a health premium (up to C$600 at this income level) and applies a surtax on higher provincial tax amounts.',
+    'Moving to <strong>' + qcRow.p.flag + ' Quebec</strong> would cost you <strong>' + fmt(bcVsQC) + '/year</strong> compared to BC. Quebec\'s higher provincial rates (up to 25.75%) more than offset the 16.5% federal abatement at this income level.',
+    'The gap between the highest and lowest province is <strong>' + fmt(spread) + '/year</strong> on the same C$100k salary — a real difference that compounds significantly over a career.'
+  ];
+
+  // Also compute at 150k to show AB advantage growth
+  var rows150 = computeAll(150000);
+  var bcRow150 = rows150.find(function(r) { return r.p.id === 'bc'; });
+  var abRow150 = rows150.find(function(r) { return r.p.id === 'ab'; });
+  var abVsBC150 = abRow150.net - bcRow150.net;
+  items.push('The Alberta advantage grows with income: at <strong>' + fmt(150000) + '</strong>, Alberta saves you <strong>' + fmt(abVsBC150) + '/year</strong> vs BC — the gap widens because BC\'s higher brackets kick in earlier.');
+
+  document.getElementById('findings').innerHTML = items.map(function(i) { return '<li>' + i + '</li>'; }).join('');
+}
+
+function buildProvinceNotes() {
+  document.getElementById('provinceNotes').innerHTML = PROVINCES.map(function(p) {
+    return '<div class="pn"><h3>' + p.flag + ' ' + p.name + '</h3><p>' + p.note + '</p></div>';
+  }).join('');
+}
+
+// Init
+buildButtons();
+buildProvinceNotes();
+buildFindings();
+setSalary(100000);
+
+document.getElementById('customSal').addEventListener('input', function() {
+  var v = parseFloat(this.value);
+  if (Number.isFinite(v) && v > 0 && v <= 5000000) {
+    document.querySelectorAll('.sal-btn').forEach(function(b) { b.classList.remove('active'); });
+    currentSalary = v;
+    render();
+  }
+});
+</script>
+</body>
+</html>
