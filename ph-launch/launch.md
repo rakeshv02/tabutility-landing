@@ -40,7 +40,7 @@ It started because I got annoyed. Semrush wanted $130/month to do things I could
 - **Developer utilities** — Base64 encoder, URL encoder, JSON formatter, hash generator, colour converter
 - **Everyday calculators** — BMI, percentage, age, discount, tip, unit converters, timezone lookup
 
-Every tool runs entirely in your browser. No account. No tracking. No upsell. The answer appears, you close the tab.
+Every tool runs entirely in your browser. No account required, no sign-up wall, no upsell. The answer appears, you close the tab.
 
 The DIY SEO guide at tabutility.com/diy-seo/ is the other thing I'm proud of — 9 steps, 7 tools, $0, ~4 hours. It documents exactly what I do to rank pages without paying an agency.
 
