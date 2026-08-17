@@ -2247,20 +2247,10 @@
   },
   {
     "id": "uk-mortgage-in-principle",
-    "name": "UK Mortgage in Principle",
-    "description": "Get a UK mortgage in principle estimate in 4 steps — see how much you can borrow, which mortgage types you qualify for (Residential, BTL, Shared Ownership, Help to Buy), and your full monthly cost including Council Tax by region.",
+    "name": "UK Mortgage in Principle Calculator",
+    "description": "Find out how much a UK lender is likely to offer based on your income, deposit, and outgoings — and see what your monthly repayment would look like.",
     "category": "Calculators",
-    "emoji": "🏡",
-    "url": "https://uk-mortgage-in-principle.tabutility.com",
-    "tags": [
-      "mortgage",
-      "UK",
-      "agreement in principle",
-      "AIP",
-      "buy-to-let",
-      "shared ownership",
-      "council tax",
-      "first-time buyer"
-    ]
+    "emoji": "🏠",
+    "url": "https://uk-mortgage-in-principle.tabutility.com/"
   }
 ]
