@@ -13,28 +13,67 @@
     <guid isPermaLink="true">https://tabutility.com/blog/product-hunt-launch/</guid>
     <description>The origin story of Tabutility: how frustration with SaaS pricing turned into 151 free browser tools, including a suite of SEO tools that now outrank paid alternatives.</description>
     <pubDate>Sun, 16 Aug 2026 09:00:00 +0000</pubDate>
-    <content:encoded><![CDATA[<h1>I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools</h1>
-  <div class="meta">Published 16 August 2026 · Origin story · 6 min read</div>
-
+    <content:encoded><![CDATA[
 <h2>The Moment I Snapped</h2>
-<p>It was a Tuesday afternoon. I had a blog post I wanted to check before publishing — I just needed to know the keyword density, whether the meta description was the right length, and if the readability score was acceptable.</p>
+<p>It was a Tuesday afternoon. I had a blog post I wanted to check before publishing — I just needed to know the keyword density, whether the meta description was the right length, and if the readability score was acceptable. Standard pre-publish checks.</p>
 <p>Semrush wanted $129.95 a month. Ahrefs wanted $99. Every "free" alternative had a sign-up wall, a daily limit, or served me an ad before telling me the answer.</p>
 <p>I'm a developer. These are arithmetic problems. Keyword density is word count divided by total words. Meta tag length is a character count. Flesch-Kincaid is a formula from 1975. I opened a code editor and built a keyword density checker in about 45 minutes.</p>
-<p>That was the first Tabutility tool.</p>
+<p>That was the first Tabutility tool. I didn't plan what came after.</p>
 
 <h2>One Tool Became Seven</h2>
-<p>Within a month I had seven SEO tools — keyword density, readability scorer, meta tag length checker, heading structure auditor, word counter, duplicate word finder, and a Flesch-Kincaid calculator.</p>
-<p>Together they do everything I was being asked to pay $130/month for. No account. No daily limit. No ad before the answer.</p>
+<p>The keyword density checker worked well. So well that I kept finding new reasons to open it. Then I noticed the next friction point: I had no good way to check readability. Another weekend, another tool.</p>
+<p>Within a month I had seven SEO tools:</p>
+<ul>
+  <li><strong>Keyword density checker</strong> — shows exactly which words appear most, with percentages</li>
+  <li><strong>Readability scorer</strong> — Flesch-Kincaid, Gunning Fog, and SMOG in one pass</li>
+  <li><strong>Meta tag length checker</strong> — live character counts for title and description with Google's display limits</li>
+  <li><strong>Heading structure auditor</strong> — visualises your H1/H2/H3 hierarchy at a glance</li>
+  <li><strong>Word counter</strong> — words, characters, sentences, paragraphs, estimated reading time</li>
+  <li><strong>Duplicate word finder</strong> — catches the overused phrases editors miss</li>
+  <li><strong>Flesch-Kincaid calculator</strong> — dedicated grade-level readability with per-sentence breakdown</li>
+</ul>
+<p>Together they do everything I was being asked to pay $130/month for. Combined, they now get more organic traffic than any other section of the site — which I take as strong evidence that other people are also tired of paying agency prices for things that are just arithmetic.</p>
 
 <h2>Then Seven Became 151</h2>
-<p>Once the SEO tools were running, I kept noticing other friction points: salary calculations after a job offer, mortgage scenario modelling, take-home pay for a move abroad. Each friction point became a tool.</p>
-<p>I looked up one day and there were 151 tools across salary, tax, mortgage, developer utilities, health calculators, and more.</p>
+<p>Once the SEO tools were running, I started noticing other recurring friction points.</p>
+<p>A salary negotiation. I needed to know my actual take-home pay under the new contract. Every UK salary calculator I found either had ads plastered over the answer or required me to create an account to save my result. So I built the <a href="https://uk-salary-calculator.tabutility.com">UK salary calculator</a> — no ads, no account, just the number.</p>
+<p>A mortgage decision. I wanted to stress-test different scenarios: what happens if rates go up 1%? What if I overpay £200/month? The mortgage calculators I found gave me one number and called it a day. I built one that lets you model the whole thing.</p>
+<p>Each friction point became a tool. Each tool attracted people with the same friction point. I looked up one day and there were 151 tools across salary, tax, mortgage, developer utilities, health calculators, and more.</p>
+
+<h2>What's in the Toolkit</h2>
+<p>The current collection spans:</p>
+<ul>
+  <li><strong>Salary &amp; tax calculators</strong> for the UK, US, Australia, Canada, and Japan — take-home pay, income tax, national insurance, all on one slider</li>
+  <li><strong>Mortgage tools</strong> — repayment calculator, affordability checker, stamp duty, LMI, overpayment simulator</li>
+  <li><strong>7 free SEO tools</strong> — everything above, free, with no account and no daily limit</li>
+  <li><strong>Developer utilities</strong> — Base64 encoder/decoder, URL encoder, JSON formatter, hash generator, colour converter, regex tester</li>
+  <li><strong>Everyday calculators</strong> — BMI, percentage, age, discount, tip, unit converters, timezone lookup, compound interest</li>
+  <li><strong>Finance tools</strong> — debt payoff planner, APR calculator, rental yield, retirement calculator, currency converter</li>
+</ul>
+<p>Every tool runs entirely in your browser. Nothing is sent to a server. No account. No sign-up. The answer appears, you close the tab.</p>
 
 <h2>The DIY SEO Guide</h2>
-<p>Alongside the tools, I wrote a <a href="https://tabutility.com/diy-seo/">step-by-step DIY SEO guide</a> that documents exactly what I do to rank pages without paying an agency. Nine steps, seven tools, $0, approximately four hours of work per post.</p>
-<p>For comparison, a typical SEO agency charges £500–£2,000/month for the same work on a small site.</p>
+<p>Alongside the tools, I wrote <a href="https://tabutility.com/diy-seo/">a step-by-step DIY SEO guide</a> that documents exactly what I do to rank pages without paying an agency. Nine steps, seven tools, $0, approximately four hours of work per post.</p>
+<p>It covers keyword research, on-page optimisation, readability scoring, meta tag optimisation, internal linking, and how to measure whether it's actually working. The guide uses only free tools — mostly Tabutility's own, plus Google Search Console and Google Analytics, which are free.</p>
+<p>For comparison, a typical SEO agency charges £500–£2,000/month for the same work on a small site. The guide covers what they do. You can decide what's worth paying for.</p>
 
-<p><a href="https://tabutility.com/blog/product-hunt-launch/">Read the full story →</a></p>]]></content:encoded>
+<h2>Why Free?</h2>
+<p>The honest answer: I built these tools for myself, and charging for them would have required a payment system, account management, customer support, and a whole support operation I had no interest in running.</p>
+<p>The secondary answer: free tools with no sign-up wall get used. And used tools get shared. The salary calculators get linked to from Reddit, personal finance blogs, and job offer discussions. The SEO tools get linked to from content marketing guides. That organic sharing is worth more than the subscription revenue I'd have earned from the fraction of users willing to pay.</p>
+<p>The site is supported by Google AdSense — ads that appear on tool pages after the answer is already visible. I deliberately placed them below the result rather than between you and the answer.</p>
+
+<h2>What's Next</h2>
+<p>More salary pages — I'm building detailed take-home pay guides for every major city and income level in each country Tabutility supports. More tax tools as 2027 rates are confirmed. Possibly a mobile app if the demand is there.</p>
+<p>If you have a tool you wish existed — something you've been paying for, or couldn't find for free — the comments on the <a href="https://www.producthunt.com/posts/tabutility">Product Hunt launch page</a> are the right place to say so. I read every comment.</p>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <div class="faq-item"><h3>Is Tabutility actually free, or is there a catch?</h3><p>There's no catch. Every tool is free with no sign-up, no account, and no daily limit. The site is supported by AdSense advertising — ads appear on pages but always after the answer is visible, not between you and the result.</p></div>
+  <div class="faq-item"><h3>Are the SEO tools really a Semrush alternative?</h3><p>For content-side SEO — keyword density, readability, meta tags, heading structure, word count — yes, the free tools do everything you'd use Semrush's on-page checker for. What they don't do is backlink analysis, competitor research, or rank tracking, which require crawling the web and can't be done in a browser tab.</p></div>
+  <div class="faq-item"><h3>How accurate are the salary and tax calculators?</h3><p>The calculators use the current official tax rates and thresholds for each country. UK figures use HMRC's published rates; US figures use IRS tables; Australian figures use ATO rates. They're updated when official rates change. For complex situations (multiple income sources, unusual deductions), consult an accountant — these tools are for quick estimates, not professional advice.</p></div>
+  <div class="faq-item"><h3>Can I suggest a new tool?</h3><p>Yes — leave a comment on the <a href="https://www.producthunt.com/posts/tabutility">Product Hunt page</a> or use the feedback link on any tool page. The most-requested tools get built first. The SEO suite and several of the salary calculators were built because people asked for them.</p></div>
+</div>
+]]></content:encoded>
     </item>
     <item>
     <title>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</title>
@@ -42,11 +81,13 @@
     <guid isPermaLink="true">https://tabutility.com/blog/student-loan-repayment-uk/</guid>
     <description>Original data: years to clear, total repaid vs borrowed, and write-off outcomes for UK student loan Plans 1, 2, 4 and 5 — simulated for every salary. You need ~£57,000 to ever clear a typical Plan 2 loan.</description>
     <pubDate>Fri, 14 Aug 2026 09:00:00 +0000</pubDate>
-    <content:encoded><![CDATA[<h1>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</h1>
+    <content:encoded><![CDATA[
+<h1>How Long Will Your Student Loan Actually Last? We Modelled Every Salary and Plan</h1>
   <div class="meta">Published 14 August 2026 · Original data analysis · 9 min read</div>
 
-  <!-- Top ad -->
   
+  
+
 <p>A UK student loan isn't really a loan — it works more like a graduate tax with an expiry date. You repay 9% of everything you earn above a threshold, and whatever's left after 25, 30 or 40 years simply vanishes. That design produces some genuinely strange outcomes: a graduate on £35,000 can repay <strong>£67,861</strong> on a £45,000 loan and <em>still</em> have £40,197 written off.</p>
 <p>So we built a year-by-year repayment simulator and ran it for every plan — Plan 1, Plan 2, Plan 4 and Plan 5 — across starting salaries from £25,000 to £100,000. Here's how long your loan actually lasts, what you'll really repay, and the salary you need to ever clear it.</p>
 
@@ -83,16 +124,11 @@
 </table>
 <p>On a £40,000 salary you repay <strong>£83,774</strong> on a £45,000 loan — 1.9× what you borrowed — and it takes 36 years to clear. The break-even starting salary to ever clear a typical Plan 5 balance is about <strong>£38,500</strong>.</p>
 
-  <div class="cta-box">
-    <div>
-      <strong>See your exact monthly repayment</strong>
-      <p>Free UK student loan calculator — all plans, no signup, instant.</p>
-    </div>
-    <a href="https://uk-student-loan.tabutility.com/">Try the Student Loan Calculator →</a>
-  </div>
-
-  <!-- Mid ad -->
   
+
+  
+  
+
 <h2>Plan 1 and Plan 4: The Forgiving Ones</h2>
 <p>Older Plan 1 loans (and Scotland's Plan 4) carry smaller balances and lower interest, so they behave much more like normal loans:</p>
 <table>
@@ -146,7 +182,12 @@
 
 <p><em>Related reading: <a href="https://tabutility.com/blog/mortgage-affordability-uk-salary/">Mortgage Affordability on Every UK Salary</a> · <a href="https://tabutility.com/blog/how-to-calculate-salary-after-tax/">How to Calculate Salary After Tax</a> · <a href="https://tabutility.com/blog/second-job-tax-uk/">Second Job Tax UK</a></em></p>
 
-  <!-- Bottom ad -->]]></content:encoded>
+  
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    
+  </div>
+]]></content:encoded>
   </item>
       <item>
     <title>The Salary You Need to Buy a Typical Home in Every US State (2026 Data)</title>
@@ -154,10 +195,13 @@
     <guid isPermaLink="true">https://tabutility.com/blog/salary-to-buy-home-every-us-state/</guid>
     <description>From $44,543 in West Virginia to $203,996 in Hawaii — the household income needed for a typical home in all 50 states + DC, computed from June 2026 Zillow data.</description>
     <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    <content:encoded><![CDATA[<h1>The Salary You Need to Buy a Typical Home in Every US State (2026 Data)</h1>
+    <content:encoded><![CDATA[
+<h1>The Salary You Need to Buy a Typical Home in Every US State (2026 Data)</h1>
   <div class="meta">Published 13 August 2026 · Original data analysis · Source: Zillow Home Value Index, June 2026</div>
 
-  <p>How much do you need to earn to buy a typical home where you live? We took the latest <a href="https://www.zillow.com/research/data/" rel="nofollow">Zillow Home Value Index</a> (June 2026) for all 50 states plus DC and computed the household income required, using the classic lender math: <strong>10% down, a 30-year mortgage at 6.5%, and the 28% rule</strong> (housing payment ≤ 28% of gross income).</p>
+  
+
+<p>How much do you need to earn to buy a typical home where you live? We took the latest <a href="https://www.zillow.com/research/data/" rel="nofollow">Zillow Home Value Index</a> (June 2026) for all 50 states plus DC and computed the household income required, using the classic lender math: <strong>10% down, a 30-year mortgage at 6.5%, and the 28% rule</strong> (housing payment ≤ 28% of gross income).</p>
 <p>The spread is staggering: <strong>$44,543 in West Virginia versus $203,996 in Hawaii</strong> — a 4.6× gap for the same milestone. The US median household income sits near the requirement of states in the middle of our table, which is exactly why homeownership feels effortless in some states and impossible in others.</p>
 
 <div class="note"><strong>Method in one line:</strong> required salary = 12 × monthly principal-and-interest on 90% of the state's typical home value ÷ 0.28. Property taxes, insurance and HOA fees are excluded (see method notes) — real requirements run higher, especially in high-tax states.</div>
@@ -218,13 +262,7 @@
       <tr><td>51</td><td>West Virginia</td><td>$182,704</td><td>$1,039</td><td><strong>$44,543</strong></td></tr>
 </table>
 
-  <div class="cta-box">
-    <div>
-      <strong>Run your own numbers in 10 seconds</strong>
-      <p>Free mortgage calculator — payment, interest, any rate or term.</p>
-    </div>
-    <a href="https://mortgage-calculator.tabutility.com/">Try the Mortgage Calculator →</a>
-  </div>
+  
 
 <h2>What Jumps Out of the Data</h2>
 <ul>
@@ -234,7 +272,9 @@
   <li><strong>The middle is moving:</strong> states like Arizona, Georgia and North Carolina — affordable a decade ago — now sit in the $80–100k band, squeezing out local first-time buyers.</li>
 </ul>
 
-  <h2>How Far Does Your Salary Go?</h2>
+  
+
+<h2>How Far Does Your Salary Go?</h2>
 <p>Flip the question: what does your current income buy?</p>
 <ul>
   <li><strong>$50,000:</strong> a typical home in just 2 states — West Virginia and Mississippi (Louisiana misses by ~$3,000).</li>
@@ -267,7 +307,11 @@
 
 <p><em>Related reading: <a href="https://tabutility.com/blog/mortgage-affordability-uk-salary/">Mortgage Affordability on Every UK Salary</a> · <a href="https://tabutility.com/blog/student-loan-repayment-uk/">UK Student Loan Repayments</a></em></p>
 
-  </div>]]></content:encoded>
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    
+  </div>
+]]></content:encoded>
   </item>
     <item>
     <title>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</title>
@@ -275,11 +319,14 @@
     <guid isPermaLink="true">https://tabutility.com/blog/mortgage-affordability-uk-salary/</guid>
     <description>Original data: borrowing power, monthly payments and the share of take-home pay a mortgage really eats, for every UK salary from £20,000 to £150,000.</description>
     <pubDate>Thu, 13 Aug 2026 09:00:00 +0000</pubDate>
-    <content:encoded><![CDATA[<h1>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</h1>
+    <content:encoded><![CDATA[
+<h1>How Much Mortgage Can You Afford on Every UK Salary? We Ran the Numbers</h1>
   <div class="meta">Published 13 August 2026 · Original data analysis · 8 min read</div>
 
-  <!-- Top ad -->
-  <p>"How much mortgage can I afford?" is one of the most-searched money questions in the UK — and most answers stop at "4.5 times your salary." That's only half the story. The multiple is applied to your <strong>gross</strong> salary, but you repay the mortgage from your <strong>take-home</strong> pay — after Income Tax and National Insurance have taken their cut.</p>
+  
+  
+
+<p>"How much mortgage can I afford?" is one of the most-searched money questions in the UK — and most answers stop at "4.5 times your salary." That's only half the story. The multiple is applied to your <strong>gross</strong> salary, but you repay the mortgage from your <strong>take-home</strong> pay — after Income Tax and National Insurance have taken their cut.</p>
 <p>So we computed the full picture for every salary from £20,000 to £150,000, using 2025/26 tax rules: how much you can borrow, what it costs per month, and — the number almost nobody publishes — <strong>what share of your real take-home pay that repayment swallows</strong>.</p>
 
 <div class="note"><strong>Our assumptions:</strong> standard 4.5× income multiple, 25-year repayment term, 10% deposit, England &amp; Wales 2025/26 tax and NI (no student loan or pension deductions). We show payments at a 4.5% rate and a 7% stress-test rate — the kind of check lenders actually run.</div>
@@ -306,13 +353,7 @@
 <p>Why? Because the 4.5× multiple is applied to gross salary, but progressive tax means your take-home grows much more slowly than your gross. Between £100,000 and £125,140, the tapered personal allowance means you keep barely £53 of every extra £100 — yet the lender happily multiplies the full gross figure by 4.5.</p>
 <div class="note"><strong>Practical takeaway:</strong> if you earn over £60,000, borrowing the full 4.5× at today's rates likely puts you above the classic "keep housing under 35% of take-home" guideline. That's not a reason to panic — it's a reason to run your own numbers rather than trusting the multiple.</div>
 
-  <div class="cta-box">
-    <div>
-      <strong>Run your own numbers in 10 seconds</strong>
-      <p>Free mortgage affordability calculator — no signup, works in your browser.</p>
-    </div>
-    <a href="https://mortgage-calculator.tabutility.com/">Try the Mortgage Calculator →</a>
-  </div>
+  
 
 <h2>What Salary Do You Need for a…?</h2>
 <p>Flipping the table around — here's the salary required at each price point, assuming a 10% deposit and the standard 4.5× multiple:</p>
@@ -327,8 +368,10 @@
 </table>
 <p>Remember these salary figures can be <strong>combined incomes</strong> — a couple on £30,000 each clears the £60,000 needed for a £300,000 home.</p>
 
-  <!-- Mid ad -->
-  <h2>The 7% Stress Test: Can You Still Afford It?</h2>
+  
+  
+
+<h2>The 7% Stress Test: Can You Still Afford It?</h2>
 <p>Lenders don't just check today's rate — they test whether you'd cope if rates jumped. Our stress column shows repayments at 7%. The gap is brutal: on a £50,000 salary, the maximum mortgage goes from £1,251 to <strong>£1,590 a month</strong> — from 38% to 48% of take-home. On £100,000, the stressed payment hits £3,181, over 55% of monthly net pay.</p>
 <p>This is exactly why lenders sometimes offer you <em>less</em> than 4.5× — the stress test binds before the multiple does.</p>
 
@@ -362,15 +405,19 @@
 
 <p><em>Related reading: <a href="https://tabutility.com/blog/second-job-tax-uk/">Second Job Tax UK</a> · <a href="https://tabutility.com/blog/what-is-good-rental-yield-uk/">What Is a Good Rental Yield?</a> · <a href="https://tabutility.com/blog/how-much-to-retire-uk/">How Much Do You Need to Retire?</a></em></p>
 
-  <!-- Bottom ad -->
-  </div>]]></content:encoded>
+  
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    
+  </div>
+]]></content:encoded>
   </item>
 <item>
     <title>Side Hustle Tax UK: When You Must Register for Self Assessment</title>
     <link>https://tabutility.com/blog/side-hustle-tax-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/side-hustle-tax-uk/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <p>Selling on Vinted, freelancing on the weekend, renting out a parking space, delivering food after work — millions of people in the UK now earn money on the side. What many don't realise is that HMRC has a clear line for when that income becomes taxable, and since 2025 the online platforms themselves report your sales directly to HMRC. This guide explains exactly when you need to register, what you'll pay, and the one deadline you can't afford to miss: <strong>5 October</strong>.</p>
+    <content:encoded><![CDATA[
+<p>Selling on Vinted, freelancing on the weekend, renting out a parking space, delivering food after work — millions of people in the UK now earn money on the side. What many don't realise is that HMRC has a clear line for when that income becomes taxable, and since 2025 the online platforms themselves report your sales directly to HMRC. This guide explains exactly when you need to register, what you'll pay, and the one deadline you can't afford to miss: <strong>5 October</strong>.</p>
 
 <h2>The £1,000 Trading Allowance: Your Tax-Free Buffer</h2>
 <p>Every individual gets a <strong>£1,000 trading allowance</strong> per tax year (6 April to 5 April). If your total gross side-hustle income — before any expenses — is £1,000 or less, you owe no tax on it and usually don't need to tell HMRC at all.</p>
@@ -432,18 +479,7 @@
   <div class="faq-item"><h3>Does HMRC know about my eBay or Vinted sales?</h3><p>Yes. Since January 2025, digital platforms must report sellers who make roughly 30+ sales or earn around €2,000 in a calendar year directly to HMRC, including your name, address and payment details. HMRC matches this against tax returns.</p></div>
   <div class="faq-item"><h3>Is selling my own second-hand belongings taxable?</h3><p>Generally no. Selling your own used clothes, books or furniture isn't trading, regardless of the amount. Tax applies when you buy or make items specifically to resell at a profit, or when you're paid for work or services. Individual items sold for over £6,000 can trigger Capital Gains Tax.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the UK Self-Employed Tax Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://uk-self-employed-tax.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Earning from a side hustle in the UK? Learn when the £1,000 trading allowance runs out, the 5 October registration deadline, how much tax you'll actually pay, and what HMRC already knows from selling platforms.</description>
     <pubDate>Wed, 12 Aug 2026 09:00:00 +0000</pubDate>
   </item>
@@ -451,8 +487,8 @@
     <title>Second Job Tax UK: How Much Tax Will You Pay in 2025/26?</title>
     <link>https://tabutility.com/blog/second-job-tax-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/second-job-tax-uk/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <p>More than 1.2 million people in the UK now work a second job, and the single biggest worry is always the same: <strong>"will I get hammered on tax?"</strong> The short answer is no — a second job doesn't attract any extra tax. But the way it's <em>collected</em> is different, and that's where the confusion (and the scary-looking payslips) come from.</p>
+    <content:encoded><![CDATA[
+<p>More than 1.2 million people in the UK now work a second job, and the single biggest worry is always the same: <strong>"will I get hammered on tax?"</strong> The short answer is no — a second job doesn't attract any extra tax. But the way it's <em>collected</em> is different, and that's where the confusion (and the scary-looking payslips) come from.</p>
 
 <h2>The Big Myth: "Second Jobs Are Taxed at a Higher Rate"</h2>
 <p>They aren't. HMRC taxes your <strong>total income</strong> for the year, no matter how many jobs it comes from. Someone earning £25,000 from one job pays exactly the same Income Tax as someone earning £18,000 from one job and £7,000 from another.</p>
@@ -497,18 +533,7 @@
   <div class="faq-item"><h3>Do I need to tell HMRC about a second job?</h3><p>Not directly — your new employer's starter checklist does it automatically. Just make sure you tick that it isn't your only job. Check your tax codes at gov.uk/check-income-tax-current-year after your first payslip.</p></div>
   <div class="faq-item"><h3>Is a side hustle taxed like a second job?</h3><p>No. Self-employed income goes through Self Assessment, not PAYE. The first £1,000 of trading income each year is covered by the trading allowance — below that you normally don't even need to register.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the UK Salary Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://uk-salary-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>How tax codes, Income Tax and National Insurance actually work across two jobs in the UK — with worked examples and common myths debunked.</description>
     <pubDate>Wed, 12 Aug 2026 09:00:00 +0000</pubDate>
   </item>
@@ -516,7 +541,8 @@
     <title>How Compound Interest Works (And How to Use It to Build Wealth)</title>
     <link>https://tabutility.com/blog/how-compound-interest-works/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-compound-interest-works/</guid>
-    <content:encoded><![CDATA[<p class="lead">Compound interest is the single most important concept in personal finance — and one of the least understood. Whether it's working for you in your savings account or against you on a credit card, understanding exactly how it works can be worth tens of thousands of pounds over your lifetime.</p>
+    <content:encoded><![CDATA[
+<p class="lead">Compound interest is the single most important concept in personal finance — and one of the least understood. Whether it's working for you in your savings account or against you on a credit card, understanding exactly how it works can be worth tens of thousands of pounds over your lifetime.</p>
 
   <div class="toc">
     <h3>In this guide</h3>
@@ -535,7 +561,9 @@
     </ol>
   </div>
 
-  <!-- Ad slot -->
+  
+  
+
   <h2 id="what-is">What Compound Interest Actually Is</h2>
   <p>Compound interest is interest calculated on both your original deposit <em>and</em> the interest you've already earned. This is different from simple interest, which only ever calculates on your original amount.</p>
   <p>Here's the simplest possible illustration. Imagine you put £1,000 in a savings account paying 10% per year (a nice round number for the maths):</p>
@@ -673,7 +701,9 @@
     <p>If you're in your 20s or early 30s, the most valuable financial decision you can make isn't finding a higher return — it's simply starting now, with whatever you can afford. Even £50 per month invested at 25 is worth far more than £500 per month invested at 45.</p>
   </div>
 
-  <!-- Second ad slot -->
+  
+  
+
   <h2 id="inflation">Compound Interest vs Inflation: The Real Return</h2>
   <p>Compound interest grows your money in nominal terms. But inflation erodes purchasing power — £1 today buys more than £1 will in 10 years. To understand real growth, you need to look at the <strong>real rate of return</strong>: your interest rate minus inflation.</p>
 
@@ -771,14 +801,8 @@
     </div>
   </div>
 
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Calculate your own compound interest</strong>
-      <span>Enter your starting amount, monthly contributions, rate and time period — see year-by-year growth instantly</span>
-    </div>
-    <a href="https://compound-interest-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Calculator →</a>
-  </div>
+  
+  
 
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
@@ -805,7 +829,9 @@
     <div class="faq-item">
       <h3>Does compound interest work against me on debt?</h3>
       <p>Yes. Credit cards, overdrafts, and many personal loans use compound interest working against you. A £1,000 credit card balance at 20% APR can cost thousands in interest if only minimum payments are made. The Rule of 72 shows that a 20% APR debt doubles roughly every 3.6 years if left unpaid.</p>
-    ]]></content:encoded>
+    </div>
+  </div>
+]]></content:encoded>
     <description>A complete guide to compound interest with real worked examples, the rule of 72, and UK savings options.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -813,8 +839,8 @@
     <title>What Is a Good Rental Yield in the UK? A Landlord's Guide</title>
     <link>https://tabutility.com/blog/what-is-good-rental-yield-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-good-rental-yield-uk/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>What Is Rental Yield?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is Rental Yield?</h2>
 <p>Rental yield is the annual income you earn from a property expressed as a percentage of its value. It's the primary way landlords measure whether a buy-to-let investment is worth making — before factoring in capital growth.</p>
 <p>There are two types:</p>
 <ul>
@@ -864,18 +890,7 @@
   <div class="faq-item"><h3>Does rental yield include mortgage payments?</h3><p>Gross yield doesn't. Net yield can include mortgage interest as a cost, but this varies. When assessing cash flow, always model your specific mortgage payment against expected rent to understand your monthly position.</p></div>
   <div class="faq-item"><h3>What rental yield do I need to cover costs?</h3><p>At current UK mortgage rates (around 4–5%), you typically need a gross yield of at least 6–7% to break even after mortgage, management fees, and maintenance. Below this, the property may cost you money monthly.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Rental Yield Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://rental-yield.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Rental yield is the key metric every UK landlord needs to know. Learn what counts as a good yield, how to calculate it, and which UK cities offer the best returns.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -883,7 +898,8 @@
     <title>How to Pay Off Debt Fast: Snowball vs Avalanche</title>
     <link>https://tabutility.com/blog/how-to-pay-off-debt-fast/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-pay-off-debt-fast/</guid>
-    <content:encoded><![CDATA[<p class="lead">Debt doesn't just cost you money — it costs you sleep, stress, and financial freedom. This guide gives you two proven strategies for clearing it, real worked examples showing exactly how much each saves you, and practical tactics to accelerate your payoff regardless of which method you choose.</p>
+    <content:encoded><![CDATA[
+<p class="lead">Debt doesn't just cost you money — it costs you sleep, stress, and financial freedom. This guide gives you two proven strategies for clearing it, real worked examples showing exactly how much each saves you, and practical tactics to accelerate your payoff regardless of which method you choose.</p>
 
   <div class="toc">
     <h3>In this guide</h3>
@@ -901,6 +917,8 @@
       <li><a href="#uk-help">UK debt help resources</a></li>
     </ol>
   </div>
+
+  
 
   <h2 id="minimum-trap">The Minimum Payment Trap</h2>
   <p>Before we get into strategies, it's important to understand just how destructive minimum payments are. Credit card companies set minimum payments at 1–2% of your balance or a small fixed amount — whichever is higher. This is deliberate: it maximises the interest you pay them.</p>
@@ -1056,6 +1074,8 @@
     <li>Rent a room under the Rent a Room scheme (up to £7,500/year tax-free)</li>
   </ul>
 
+  
+
   <h2 id="step-by-step">Your Step-by-Step Debt Payoff Plan</h2>
 
   <div class="step-box">
@@ -1126,13 +1146,7 @@
   </ul>
   <p>These are all free. There is no need to pay a debt management company — the free services provide the same help, and some paid services have been found to leave people worse off.</p>
 
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Calculate your debt payoff timeline</strong>
-      <span>Enter your debts, interest rates and monthly budget — see exactly when you'll be debt free</span>
-    </div>
-    <a href="https://debt-payoff.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Calculator →</a>
-  </div>
+  
 
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
@@ -1140,7 +1154,9 @@
     <div class="faq-item"><h3>Is it better to pay off debt or invest?</h3><p>If your debt rate exceeds your expected investment return, pay the debt first. Credit card at 20% APR versus an expected 7% investment return — pay the card. For low-rate debt like student loans or 0% finance, investing alongside is often mathematically better.</p></div>
     <div class="faq-item"><h3>Does paying off debt improve my credit score?</h3><p>Yes. Reducing credit utilisation is one of the fastest ways to improve your credit score. Aim for below 30% utilisation across all cards, ideally below 10%. Every on-time payment also builds positive history.</p></div>
     <div class="faq-item"><h3>What is a balance transfer and how does it work?</h3><p>A balance transfer moves your existing credit card debt to a new card at 0% interest for a promotional period (12–30 months). You pay a one-off fee (2–3%). Every payment then reduces your actual debt rather than paying interest — potentially saving hundreds or thousands.</p></div>
-    <div class="faq-item"><h3>How much extra should I pay each month?</h3><p>As much as you possibly can without compromising essentials. Even an extra £50/month makes a significant difference due to compound interest working in reverse. On a £5,000 credit card at 20% APR, paying £200/month instead of the minimum saves over £4,500 in interest and 15 years of repayment.</p>]]></content:encoded>
+    <div class="faq-item"><h3>How much extra should I pay each month?</h3><p>As much as you possibly can without compromising essentials. Even an extra £50/month makes a significant difference due to compound interest working in reverse. On a £5,000 credit card at 20% APR, paying £200/month instead of the minimum saves over £4,500 in interest and 15 years of repayment.</p></div>
+  </div>
+]]></content:encoded>
     <description>A complete guide to the debt snowball and debt avalanche methods with worked examples and UK-specific tips.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1148,8 +1164,8 @@
     <title>IR35 Explained: What Every UK Contractor Needs to Know</title>
     <link>https://tabutility.com/blog/ir35-explained-uk-contractors/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/ir35-explained-uk-contractors/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>What Is IR35?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is IR35?</h2>
 <p>IR35 (officially the "off-payroll working rules") is UK tax legislation designed to ensure contractors who work like employees pay similar taxes to employees, even if they operate through a limited company.</p>
 <p>The name comes from the Inland Revenue press release number 35, published in 1999 when the rules were first announced. They've been significantly reformed since then — most recently in 2021 when responsibility for determining IR35 status shifted from contractors to medium and large businesses.</p>
 
@@ -1199,18 +1215,7 @@
   <div class="faq-item"><h3>What happens if HMRC investigates me?</h3><p>HMRC can investigate historic contracts going back several years. If found inside IR35, you'll owe unpaid Income Tax and National Insurance plus interest and potentially penalties. This can run to tens of thousands of pounds, which is why IR35 insurance is worth considering.</p></div>
   <div class="faq-item"><h3>Is working inside IR35 always bad?</h3><p>Not necessarily. Some contractors accept inside-IR35 roles for the right day rate, stable long-term work, or to build specific experience. The key is knowing the true financial impact — typically £10,000–£30,000 more in tax per year depending on earnings.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the IR35 Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://uk-ir35-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>IR35 is one of the most misunderstood tax rules for UK contractors. This guide explains what it is, how HMRC determines your status, and what you can do about it.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1218,8 +1223,8 @@
     <title>How Much Do You Need to Retire in the UK? A Realistic Guide</title>
     <link>https://tabutility.com/blog/how-much-to-retire-uk/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-much-to-retire-uk/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>The Three Levels of Retirement in the UK</h2>
+    <content:encoded><![CDATA[
+<h2>The Three Levels of Retirement in the UK</h2>
 <p>The Pensions and Lifetime Savings Association (PLSA) publishes annual "Retirement Living Standards" that define three levels of retirement lifestyle. For a single person in 2025:</p>
 <ul>
   <li><strong>Minimum</strong> — £14,400/year. Covers all needs with some left for fun, but no car and limited holidays.</li>
@@ -1267,18 +1272,7 @@
   <div class="faq-item"><h3>What if I haven't saved enough?</h3><p>Options include: working longer, reducing retirement spending expectations, downsizing your home, equity release, part-time work in early retirement, or increasing pension contributions significantly in your remaining working years. Starting later just means saving more aggressively.</p></div>
   <div class="faq-item"><h3>Should I prioritise pension over ISA?</h3><p>Generally, a pension is more tax-efficient due to contribution relief (you get 20–45% tax relief on contributions). However, ISAs offer more flexibility — you can withdraw at any age with no tax on withdrawals. Most people benefit from using both.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Retirement Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://retirement-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>How much money do you actually need to retire comfortably in the UK? This guide covers the PLSA retirement standards, the 4% rule, and how to calculate your own target.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1286,8 +1280,8 @@
     <title>How to Calculate BMI and What Your Number Actually Means</title>
     <link>https://tabutility.com/blog/how-to-calculate-bmi/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-bmi/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>What Is BMI?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is BMI?</h2>
 <p>Body Mass Index (BMI) is a number calculated from your height and weight. It's used by doctors, nurses, and health organisations worldwide as a quick screening tool for weight-related health risks.</p>
 <p>Despite its limitations, BMI remains the most practical large-scale health screening tool available — it requires only two measurements and correlates reasonably well with body fat percentage at a population level.</p>
 
@@ -1340,18 +1334,7 @@
   <div class="faq-item"><h3>What BMI is considered dangerously low?</h3><p>A BMI below 17.5 is often associated with significant health risks and is sometimes used as a clinical indicator in eating disorder assessment. If your BMI is below 18.5, a GP appointment is worth considering.</p></div>
   <div class="faq-item"><h3>How quickly can I change my BMI?</h3><p>Realistically, sustainable weight loss of 0.5–1kg per week is achievable. At 1kg/week, a person who is 1.75m tall would see their BMI drop by roughly 0.3 points per week. Setting a realistic 3–6 month goal tends to produce more lasting results than crash approaches.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the BMI Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://bmi-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>BMI is the most widely used health screening tool in the world. Learn how to calculate it, what the ranges mean, and where it falls short as a health measure.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1359,8 +1342,8 @@
     <title>UK Stamp Duty in 2025: How Much Will You Pay When Buying a Home?</title>
     <link>https://tabutility.com/blog/uk-stamp-duty-guide/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/uk-stamp-duty-guide/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>What Is Stamp Duty?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is Stamp Duty?</h2>
 <p>Stamp Duty Land Tax (SDLT) is a tax paid when you buy property or land over a certain price in England and Northern Ireland. Scotland has its own Land and Buildings Transaction Tax (LBTT) and Wales has Land Transaction Tax (LTT) — the rates and thresholds differ.</p>
 <p>Stamp duty is paid to HMRC within 14 days of completing your property purchase. Your solicitor or conveyancer usually handles this.</p>
 
@@ -1412,18 +1395,7 @@
   <div class="faq-item"><h3>Do I pay stamp duty on a shared ownership property?</h3><p>You can choose to pay stamp duty on the full market value of the property (staircasing method) or just on the share you're buying. The latter delays the remaining duty until you buy additional shares or sell.</p></div>
   <div class="faq-item"><h3>Is stamp duty the same in Scotland and Wales?</h3><p>No. Scotland has Land and Buildings Transaction Tax (LBTT) and Wales has Land Transaction Tax (LTT), each with their own rates and thresholds. Our calculator covers England and Northern Ireland (SDLT) only.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the UK Stamp Duty Calculator</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://uk-stamp-duty-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Stamp Duty Land Tax (SDLT) is one of the biggest costs of buying property in England. This guide explains the current rates, thresholds, and who qualifies for relief.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1431,8 +1403,8 @@
     <title>How to Get the Best Exchange Rate When Sending Money Abroad</title>
     <link>https://tabutility.com/blog/best-currency-exchange-rate/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/best-currency-exchange-rate/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>Why Your Bank's Exchange Rate Is Worse Than You Think</h2>
+    <content:encoded><![CDATA[
+<h2>Why Your Bank's Exchange Rate Is Worse Than You Think</h2>
 <p>When you send money abroad through a traditional bank, you'll typically see a quoted exchange rate that looks reasonable. What you often don't see is the markup — the difference between the real mid-market rate (what you'd find on Google or Reuters) and what the bank actually gives you.</p>
 <p>UK high-street banks typically add a markup of 2–4% on top of the mid-market rate, plus a fixed transaction fee of £5–25. On a £5,000 international transfer, that's £100–200 in hidden costs beyond the stated fees.</p>
 
@@ -1480,18 +1452,7 @@
   <div class="faq-item"><h3>How long does an international transfer take?</h3><p>It depends on the currency pair and service. Wise typically completes transfers within 1–2 business days for common currencies, often faster. Bank transfers can take 3–5 business days. Some services offer instant transfers for an additional fee.</p></div>
   <div class="faq-item"><h3>Should I use a credit card abroad?</h3><p>A specialist travel credit card (like Starling or Chase UK) or debit card charges no foreign transaction fee and uses the mid-market rate. Standard credit cards add 2–3% foreign transaction fees. Never choose to pay in sterling when a card terminal asks — always pay in local currency.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Currency Converter</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://currency-converter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Banks charge far more than they should for currency exchange. Learn how exchange rates work, where the hidden fees are, and how to get the best rate when sending money internationally.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1499,8 +1460,8 @@
     <title>Why Word Count Matters: A Guide for Writers, Students and Content Creators</title>
     <link>https://tabutility.com/blog/why-word-count-matters/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/why-word-count-matters/</guid>
-    <content:encoded><![CDATA[<!-- Top ad -->
-  <h2>Why Word Count Matters</h2>
+    <content:encoded><![CDATA[
+<h2>Why Word Count Matters</h2>
 <p>Word count isn't just a bureaucratic requirement — it's a proxy for depth, effort, and readability. Too short and you appear superficial. Too long and you risk losing your reader. Understanding the right length for different types of writing is a genuine skill.</p>
 
 <h2>Word Count for Different Types of Writing</h2>
@@ -1566,18 +1527,7 @@
   <div class="faq-item"><h3>How many words per page is standard?</h3><p>At standard formatting (12pt font, double-spaced, 1-inch margins), approximately 250–300 words per page. Single-spaced is roughly 500–600 words per page. This varies with font choice and margin size.</p></div>
   <div class="faq-item"><h3>Does a word counter count numbers as words?</h3><p>Yes — most word counters, including ours, count any string of characters separated by spaces as a word. So "2025" counts as one word, "£1,500" counts as one word, and a hyphenated compound like "well-known" typically counts as one word.</p></div>
 </div>
-
-  <!-- Tool CTA -->
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Word Counter</strong>
-      <span>Free, instant, no sign-up required</span>
-    </div>
-    <a href="https://word-counter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  </div>
-
-  <!-- Bottom ad -->
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Whether you're writing an essay, a blog post, or a job application, word count affects how your work is received. Learn the ideal word counts for every type of writing.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1585,7 +1535,8 @@
     <title>APR Explained: The Only Number That Matters When Borrowing</title>
     <link>https://tabutility.com/blog/apr-explained/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/apr-explained/</guid>
-    <content:encoded><![CDATA[<p class="lead">APR — Annual Percentage Rate — is the single most important number when comparing any borrowing product. Yet most people either ignore it or don't fully understand what it includes. This guide explains exactly what APR is, how it's calculated, where lenders use it to mislead you, and how to use it properly when making financial decisions.</p>
+    <content:encoded><![CDATA[
+<p class="lead">APR — Annual Percentage Rate — is the single most important number when comparing any borrowing product. Yet most people either ignore it or don't fully understand what it includes. This guide explains exactly what APR is, how it's calculated, where lenders use it to mislead you, and how to use it properly when making financial decisions.</p>
 
   <div class="toc">
     <h3>In this guide</h3>
@@ -1603,6 +1554,8 @@
       <li><a href="#how-to-use">How to use APR properly</a></li>
     </ol>
   </div>
+
+  
 
   <h2 id="what-is">What APR Actually Is</h2>
   <p>APR stands for Annual Percentage Rate. It's the total yearly cost of borrowing money, expressed as a percentage of the loan amount — including the interest rate plus most mandatory fees and charges.</p>
@@ -1713,6 +1666,8 @@
   <h3>4. Products you repay early</h3>
   <p>APR assumes you hold the product for its full stated term. If you repay a personal loan 12 months early, the actual cost differs from the APR. The "total amount repayable" figure is often more useful for fixed-term loans — it tells you exactly how many pounds you'll pay back.</p>
 
+  
+
   <h2 id="credit-score">How Your Credit Score Affects Your APR</h2>
   <p>Your credit score is the most significant factor determining the APR you're offered. Lenders use it to assess how likely you are to repay, and they price risk accordingly — lower scores receive higher APRs.</p>
 
@@ -1795,13 +1750,7 @@
     <p>Even though Loan B has a lower APR, the total repayable is also lower — it's genuinely cheaper. The lower APR correctly identifies the better deal here. But if you planned to repay in 2 years and Loan B had an early repayment charge, the calculation could flip.</p>
   </div>
 
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Calculate the true cost of any loan</strong>
-      <span>Enter the APR, loan amount and term — see total interest and monthly payments instantly</span>
-    </div>
-    <a href="https://apr.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open APR Calculator →</a>
-  </div>
+  
 
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
@@ -1809,7 +1758,9 @@
     <div class="faq-item"><h3>What is a good APR for a personal loan in the UK?</h3><p>In 2026, personal loan APRs range from around 5% to 35%+. Under 8% is very good and typically available only with excellent credit. 8–15% is the typical range for approved applicants with good credit. Above 20% and it's worth exploring 0% credit card alternatives for purchases or balance transfers.</p></div>
     <div class="faq-item"><h3>Does APR affect my credit score?</h3><p>No — APR is the cost of borrowing and doesn't affect your credit score. However, applying for credit triggers a hard search that can temporarily lower your score by a few points. Use eligibility checkers (soft searches) before applying to see your likely rate without affecting your score.</p></div>
     <div class="faq-item"><h3>What is representative APR?</h3><p>The rate that at least 51% of successful applicants receive. It must be displayed in all credit advertising. The other 49% may be offered a higher personal APR based on their credit assessment. Never assume you'll get the representative rate — use eligibility tools to check your likely personal rate first.</p></div>
-    <div class="faq-item"><h3>What is the difference between APR and APRC?</h3><p>APRC (Annual Percentage Rate of Charge) is specifically used for mortgages. It applies the full interest rate over the entire mortgage term (assuming reversion to SVR after the fixed period), making it a more complete picture of long-term mortgage cost. For comparing mortgages of the same type, APRC is more useful than the initial rate alone.</p>]]></content:encoded>
+    <div class="faq-item"><h3>What is the difference between APR and APRC?</h3><p>APRC (Annual Percentage Rate of Charge) is specifically used for mortgages. It applies the full interest rate over the entire mortgage term (assuming reversion to SVR after the fixed period), making it a more complete picture of long-term mortgage cost. For comparing mortgages of the same type, APRC is more useful than the initial rate alone.</p></div>
+  </div>
+]]></content:encoded>
     <description>A complete guide to APR — what it includes, where it misleads you, and how to use it correctly.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1817,7 +1768,8 @@
     <title>How to Calculate Body Fat Percentage (And What It Actually Means)</title>
     <link>https://tabutility.com/blog/how-to-calculate-body-fat-percentage/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-body-fat-percentage/</guid>
-    <content:encoded><![CDATA[<h2>Why Body Fat Percentage Matters More Than BMI</h2>
+    <content:encoded><![CDATA[
+<h2>Why Body Fat Percentage Matters More Than BMI</h2>
 <p>BMI tells you whether your weight is proportionate to your height. Body fat percentage tells you how much of that weight is actually fat. Two people can have identical BMIs — a sedentary office worker and a trained athlete — yet have completely different health profiles.</p>
 <p>Body fat percentage is a more precise indicator of metabolic health, cardiovascular risk, and physical fitness than BMI alone. Doctors, trainers, and sports scientists use it to track progress and diagnose health risks that BMI misses.</p>
 
@@ -1876,14 +1828,7 @@
   <div class="faq-item"><h3>Is the US Navy method accurate?</h3><p>For most people it is accurate to within 3–4% of DEXA scan results — good enough for tracking progress over time. It becomes less reliable at extremes: very lean individuals (where small measurement errors matter more) and very muscular individuals (where the formula assumptions break down).</p></div>
   <div class="faq-item"><h3>How quickly can I reduce body fat?</h3><p>Realistically, 0.5–1% body fat per month is a sustainable target. Rapid fat loss approaches often sacrifice muscle mass, which lowers your metabolic rate and makes regain more likely. Patience combined with consistent resistance training and a modest calorie deficit produces the best long-term results.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Body Fat Calculator</strong>
-      <span>Free Navy method calculator — no sign-up required</span>
-    </div>
-    <a href="https://body-fat-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Body fat percentage tells you more about your health than BMI alone. Learn how to calculate it, what the healthy ranges are, and the most accurate measurement methods.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1891,7 +1836,8 @@
     <title>How Much Water Should You Drink Per Day? The Real Answer</title>
     <link>https://tabutility.com/blog/how-much-water-should-you-drink-per-day/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-much-water-should-you-drink-per-day/</guid>
-    <content:encoded><![CDATA[<h2>Where Does the "8 Glasses a Day" Rule Come From?</h2>
+    <content:encoded><![CDATA[
+<h2>Where Does the "8 Glasses a Day" Rule Come From?</h2>
 <p>The "8×8" recommendation — eight 8-ounce glasses per day, totalling about 1.9 litres — has been repeated so often it feels scientific. In reality, it has almost no clinical basis. It appears to have originated from a 1945 US dietary recommendation that was widely misquoted and has persisted through decades of health messaging.</p>
 <p>The actual science is more nuanced: your hydration needs vary significantly based on your body weight, activity level, diet, climate, and health status.</p>
 
@@ -1951,14 +1897,7 @@
   <div class="faq-item"><h3>What are the signs of dehydration?</h3><p>Early signs include dark yellow urine, persistent thirst, dry mouth, and fatigue. Moderate dehydration causes headaches, difficulty concentrating, dizziness, and constipation. Severe dehydration (5%+ body weight deficit) is a medical emergency requiring prompt fluid replacement.</p></div>
   <div class="faq-item"><h3>Can you drink too much water?</h3><p>Yes — hyponatremia (low blood sodium from dilution) can occur when very large volumes of plain water are consumed rapidly. In everyday settings this is rare in healthy adults. The main risk is during prolonged endurance events. Use electrolyte drinks for exercise lasting over 90 minutes in warm conditions.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Water Intake Calculator</strong>
-      <span>Personalised daily hydration target based on your weight and activity</span>
-    </div>
-    <a href="https://water-intake-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>The '8 glasses a day' rule is outdated. Your actual water needs depend on your weight, activity level, and climate. Learn how to calculate your personal hydration target.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -1966,7 +1905,8 @@
     <title>Best Sleep Schedule by Age: How Much Sleep Do You Actually Need?</title>
     <link>https://tabutility.com/blog/best-sleep-schedule-by-age/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/best-sleep-schedule-by-age/</guid>
-    <content:encoded><![CDATA[<h2>Why Sleep Requirements Change With Age</h2>
+    <content:encoded><![CDATA[
+<h2>Why Sleep Requirements Change With Age</h2>
 <p>Sleep is not a uniform need. The amount and structure of sleep the brain requires shifts dramatically from infancy through to old age, driven by neurological development, hormonal changes, and metabolism. A toddler's brain needs 11–14 hours to consolidate development; a healthy 65-year-old may function well on 7–8 hours of lighter, more fragmented sleep.</p>
 <p>Understanding your age-appropriate sleep need is the starting point for building a schedule that works — and for recognising when something is wrong.</p>
 
@@ -2027,14 +1967,7 @@
   <div class="faq-item"><h3>Is it better to wake up at the end of a sleep cycle?</h3><p>Yes. Waking mid-cycle during deep sleep causes sleep inertia — grogginess that can persist for 20–45 minutes. Our sleep calculator calculates wake times that land at the end of a 90-minute cycle, making the morning significantly easier. Even if the total time is slightly shorter, waking at the right point in the cycle feels better.</p></div>
   <div class="faq-item"><h3>Can you catch up on sleep at the weekend?</h3><p>Partially. A 2023 study in the journal <em>Sleep</em> found that recovery sleep over a weekend can partially restore cognitive function and some metabolic markers depleted by a week of short sleep. However, the recovery is incomplete, and the benefits diminish if the deprivation is chronic. The best strategy remains consistent adequate sleep throughout the week.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Sleep Calculator</strong>
-      <span>Find your optimal bedtime and wake-up based on sleep cycles</span>
-    </div>
-    <a href="https://sleep-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Sleep needs change across your lifetime. From newborns to older adults, here's exactly how much sleep each age group needs and how to build a schedule that works.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2042,7 +1975,8 @@
     <title>How to Calculate Your Due Date: Pregnancy Weeks Explained</title>
     <link>https://tabutility.com/blog/how-to-calculate-your-due-date/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-calculate-your-due-date/</guid>
-    <content:encoded><![CDATA[<div class="disclaimer">ℹ️ <strong>For information only.</strong> Always confirm your due date and pregnancy dates with your midwife or doctor. An early ultrasound scan is the most accurate dating method.</div>
+    <content:encoded><![CDATA[
+<div class="disclaimer">ℹ️ <strong>For information only.</strong> Always confirm your due date and pregnancy dates with your midwife or doctor. An early ultrasound scan is the most accurate dating method.</div>
 
 <h2>How Due Dates Are Calculated: Naegele's Rule</h2>
 <p>The standard method for estimating a due date is <strong>Naegele's rule</strong>, developed by German obstetrician Franz Karl Naegele in the 19th century and still used worldwide today. It assumes a 28-day menstrual cycle with ovulation on day 14.</p>
@@ -2113,14 +2047,7 @@
   <div class="faq-item"><h3>What is the difference between gestational age and fetal age?</h3><p>Gestational age counts from the LMP — the standard medical measure used in all clinical contexts and on your scan reports. Fetal age (embryonic age) counts from conception and is typically 2 weeks less. When your midwife says "you're 10 weeks," that is gestational age; the embryo is approximately 8 weeks old from fertilisation.</p></div>
   <div class="faq-item"><h3>What if my cycle is not 28 days?</h3><p>Naegele's rule assumes a 28-day cycle with ovulation on day 14. If your cycle is longer, ovulation occurs later, and the EDD should be pushed forward accordingly. A 35-day cycle would move the EDD 7 days later than the standard calculation. Our calculator lets you enter your cycle length to adjust for this. If there is significant uncertainty, your 12-week dating scan will provide the most reliable estimate.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Due Date Calculator</strong>
-      <span>Calculate your EDD and current pregnancy week instantly</span>
-    </div>
-    <a href="https://due-date-calculator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Learn how due dates are calculated using Naegele's rule, how pregnancy weeks are counted, what trimester you're in, and why only 5% of babies arrive on their due date.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2128,7 +2055,8 @@
     <title>What Is Base64 Encoding and How Does It Work?</title>
     <link>https://tabutility.com/blog/what-is-base64-encoding/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-base64-encoding/</guid>
-    <content:encoded><![CDATA[<h2>The Problem Base64 Solves</h2>
+    <content:encoded><![CDATA[
+<h2>The Problem Base64 Solves</h2>
 <p>Computers store everything as binary — sequences of 0s and 1s. When you need to send binary data (an image, a PDF, a certificate) through a system designed to handle text — an email, an HTTP header, a JSON API, an XML document — you have a problem. Many text-based protocols cannot reliably handle arbitrary binary bytes. Characters like null bytes, control characters, or bytes above 127 can corrupt or terminate the transmission.</p>
 <p>Base64 solves this by converting binary data into a safe subset of 64 printable ASCII characters that travel reliably through any text-based system.</p>
 
@@ -2201,14 +2129,7 @@
   <div class="faq-item"><h3>What is the difference between Base64 and Base64url?</h3><p>Standard Base64 uses + and / which are special URL characters. Base64url substitutes - for + and _ for /, making it safe in URLs and filenames without percent-encoding. It also usually omits the = padding. JWTs and most modern OAuth tokens use Base64url.</p></div>
   <div class="faq-item"><h3>When should I use Base64 for images?</h3><p>Inline Base64 images make sense for very small assets (icons under ~1–2KB) where the HTTP request round-trip overhead outweighs the 33% size increase. For anything larger, serving images from a CDN is more efficient — browsers cache them, they compress well with HTTP/2, and they don't bloat HTML/CSS file sizes.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Base64 Encoder / Decoder</strong>
-      <span>Instant encode and decode — runs entirely in your browser</span>
-    </div>
-    <a href="https://base64-encoder.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Base64 encoding converts binary data into text so it can be safely transmitted over text-based protocols. Learn how it works, when to use it, and how to encode and decode it instantly.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2216,7 +2137,8 @@
     <title>What Is a UUID? How Unique IDs Are Generated and When to Use Them</title>
     <link>https://tabutility.com/blog/what-is-a-uuid/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/what-is-a-uuid/</guid>
-    <content:encoded><![CDATA[<h2>What Is a UUID?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is a UUID?</h2>
 <p>A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify information in computer systems. It is represented as 32 hexadecimal digits displayed in five groups separated by hyphens:</p>
 <div class="formula">550e8400-e29b-41d4-a716-446655440000</div>
 <p>The format is <code>8-4-4-4-12</code> characters, always 36 characters in total including the four hyphens. UUIDs are also called GUIDs (Globally Unique Identifiers), especially in Microsoft environments — they are the same thing.</p>
@@ -2268,14 +2190,7 @@
   <div class="faq-item"><h3>Should I use UUIDs or auto-increment integers for database IDs?</h3><p>It depends on your architecture. Auto-increment integers are smaller, faster to index, and simpler. UUIDs work better for distributed systems (multiple servers generating IDs independently), when merging data from multiple databases, or when you don't want to expose record counts through predictable sequential IDs. For new systems, UUID v7 gives you the benefits of UUIDs with much better database performance than v4.</p></div>
   <div class="faq-item"><h3>What does the version number in a UUID mean?</h3><p>The version digit defines how the UUID was generated. It appears as the first digit of the third group: <code>xxxxxxxx-xxxx-<strong>4</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v4, <code>xxxxxxxx-xxxx-<strong>7</strong>xxx-xxxx-xxxxxxxxxxxx</code> for v7. The variant bits in the fourth group identify it as a standard RFC 4122/9562 UUID rather than older proprietary formats.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the UUID Generator</strong>
-      <span>Generate v4 and v7 UUIDs instantly in your browser</span>
-    </div>
-    <a href="https://uuid-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2283,7 +2198,8 @@
     <title>How to Generate a Strong Password (And Actually Remember It)</title>
     <link>https://tabutility.com/blog/how-to-generate-a-strong-password/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-generate-a-strong-password/</guid>
-    <content:encoded><![CDATA[<h2>The Password Problem</h2>
+    <content:encoded><![CDATA[
+<h2>The Password Problem</h2>
 <p>The most common passwords in data breaches year after year are "123456", "password", "qwerty", and name+birth year combinations. Not because people are careless — but because memorising dozens of unique, complex passwords is genuinely impossible without a system.</p>
 <p>The result is password reuse: most people use the same handful of passwords everywhere. When one site is breached (and sites are breached constantly), attackers run those credentials against every major service — banking, email, shopping — in automated attacks called credential stuffing.</p>
 <p>This guide covers what actually makes a password strong, how attackers crack them, and practical strategies that work in the real world.</p>
@@ -2350,14 +2266,7 @@
   <div class="faq-item"><h3>Should I change my passwords regularly?</h3><p>The old 90-day rotation advice is outdated. NIST (US National Institute of Standards and Technology) explicitly recommends against mandatory routine password rotation in their latest guidelines — it leads to predictable patterns like Password1!, Password2!. Change a password immediately when there's a known breach or suspected compromise, but otherwise keep a strong unique password indefinitely.</p></div>
   <div class="faq-item"><h3>What is the most important thing I can do for my password security?</h3><p>Start using a password manager. This single change lets you have a unique, random, long password for every account without memorising any of them. It eliminates credential stuffing attacks entirely — your leaked LinkedIn password cannot be used on your bank. Free options like Bitwarden make this accessible to everyone.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Password Generator</strong>
-      <span>Generate strong random passwords instantly — never stored or transmitted</span>
-    </div>
-    <a href="https://password-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Most people's passwords are dangerously weak. Learn what makes a password secure, how attackers crack them, and the best strategies for generating strong passwords you can manage.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2365,7 +2274,8 @@
     <title>How to Format JSON: A Developer's Complete Guide</title>
     <link>https://tabutility.com/blog/how-to-format-json/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/how-to-format-json/</guid>
-    <content:encoded><![CDATA[<h2>What Is JSON?</h2>
+    <content:encoded><![CDATA[
+<h2>What Is JSON?</h2>
 <p>JSON (JavaScript Object Notation) is a lightweight text format for storing and exchanging data. Introduced by Douglas Crockford in the early 2000s and formalised as RFC 8259, it has become the dominant data interchange format for APIs, configuration files, and web applications worldwide.</p>
 <p>JSON is language-independent — it can be parsed in Python, Java, Ruby, Go, PHP, Swift, or any other mainstream language. Its simplicity and human-readability made it replace XML in most web API contexts over the past 15 years.</p>
 
@@ -2473,17 +2383,11 @@ cat data.json | jq '.user.name'
 <div class="faq">
   <div class="faq-item"><h3>What is the difference between JSON and JavaScript objects?</h3><p>JSON is a text format — it is always a string. JavaScript objects are in-memory data structures. Key differences: JSON requires double quotes around all keys and string values; JS objects allow single quotes and unquoted keys. JSON does not support <code>undefined</code>, functions, Date objects, or comments. <code>JSON.parse()</code> converts a JSON string to a JS object; <code>JSON.stringify()</code> converts a JS object to a JSON string.</p></div>
   <div class="faq-item"><h3>Can JSON have comments?</h3><p>No — standard JSON (RFC 8259) explicitly does not support comments. This was a deliberate design decision by Douglas Crockford to keep the format simple and interoperable. JSON5 and JSONC are unofficial supersets that add comment support, but they require custom parsers and are not universally supported. For config files requiring comments, consider YAML or TOML instead.</p></div>
-  <div class="faq-item"><h3>What causes 'Unexpected token' errors in JSON?</h3><p>The most common causes are: (1) trailing commas after the last element in an array or object, (2) single quotes instead of double quotes around keys or strings, (3) unquoted keys, (4) control characters (tab, newline) embedded literally inside strings instead of escaped as \t or \n, and (5) <code>undefined</code> values (which JSON has no equivalent for). Paste into a JSON formatter to immediately identify the line and character position of the error.</p></div>
+  <div class="faq-item"><h3>What causes 'Unexpected token' errors in JSON?</h3><p>The most common causes are: (1) trailing commas after the last element in an array or object, (2) single quotes instead of double quotes around keys or strings, (3) unquoted keys, (4) control characters (tab, newline) embedded literally inside strings instead of escaped as 	 or 
+, and (5) <code>undefined</code> values (which JSON has no equivalent for). Paste into a JSON formatter to immediately identify the line and character position of the error.</p></div>
   <div class="faq-item"><h3>What is the difference between pretty-printed and minified JSON?</h3><p>Pretty-printed JSON uses indentation and newlines for readability — ideal for config files, logs, and debugging. Minified JSON removes all whitespace to reduce file size — typically 30–40% smaller. For APIs, minified is preferred for performance. Use <code>JSON.stringify(data, null, 2)</code> in JavaScript or <code>json.dumps(data, indent=2)</code> in Python for pretty output; omit the indent argument for minified output.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the JSON Formatter & Validator</strong>
-      <span>Paste, format, validate, and minify JSON instantly in your browser</span>
-    </div>
-    <a href="https://json-formatter.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>JSON is the universal data format for APIs, configs, and web apps. Learn the syntax rules, how to format and validate it, common mistakes, and how to work with it in every major language.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2491,7 +2395,8 @@ cat data.json | jq '.user.name'
     <title>Celsius to Fahrenheit: How Temperature Conversion Works</title>
     <link>https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/celsius-to-fahrenheit-temperature-conversion/</guid>
-    <content:encoded><![CDATA[<h2>The Three Temperature Scales</h2>
+    <content:encoded><![CDATA[
+<h2>The Three Temperature Scales</h2>
 <p>Three temperature scales are in common use today. Celsius (°C) is the standard in science and most of the world. Fahrenheit (°F) is used primarily in the United States and a handful of other countries for everyday weather and cooking. Kelvin (K) is the SI base unit used in physics and chemistry — it starts at absolute zero, the coldest possible temperature.</p>
 
 <h2>The Conversion Formulas</h2>
@@ -2564,14 +2469,7 @@ cat data.json | jq '.user.name'
   <div class="faq-item"><h3>Why does the US still use Fahrenheit?</h3><p>The US adopted Fahrenheit as its standard before the Metric Conversion Act of 1975 established a national policy of voluntary metrication. Unlike most countries, the US never mandated metric adoption. The Fahrenheit scale arguably has some practical appeal for human-scale weather — 0°F is bitterly cold and 100°F is dangerously hot, giving intuitive meaning to the range — but scientifically and globally, Celsius is far more practical.</p></div>
   <div class="faq-item"><h3>What temperature is the same in Celsius and Fahrenheit?</h3><p>−40°. At exactly −40°C = −40°F the two scales intersect. You can verify with the formula: (−40 × 9/5) + 32 = −72 + 32 = −40. This is also approximately the temperature of extremely cold winter days in interior Alaska, northern Canada, and Siberia.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Temperature Converter</strong>
-      <span>Instantly convert between Celsius, Fahrenheit, and Kelvin</span>
-    </div>
-    <a href="https://unit-converter.tabutility.com/" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Converting between Celsius, Fahrenheit, and Kelvin is easier once you understand the formulas. Learn the quick mental math tricks and the science behind temperature scales.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
@@ -2579,7 +2477,8 @@ cat data.json | jq '.user.name'
     <title>Miles to Kilometres: Distance Conversion Guide</title>
     <link>https://tabutility.com/blog/miles-to-kilometres-distance-conversion/</link>
     <guid isPermaLink="true">https://tabutility.com/blog/miles-to-kilometres-distance-conversion/</guid>
-    <content:encoded><![CDATA[<h2>The Exact Relationship</h2>
+    <content:encoded><![CDATA[
+<h2>The Exact Relationship</h2>
 <p>One international mile is exactly <strong>1.609344 kilometres</strong>. This is not an approximation — it has been the exact legal definition since 1959, when the United States, United Kingdom, Canada, Australia, New Zealand, and South Africa jointly agreed to standardise the international yard and pound.</p>
 <p>For most practical purposes, <strong>1 mile ≈ 1.6 km</strong> is accurate enough. The rounding error is just 0.6%.</p>
 
@@ -2654,14 +2553,7 @@ cat data.json | jq '.user.name'
   <div class="faq-item"><h3>Why does the UK use miles for roads but kilometres for running?</h3><p>The UK metricated most measurements in the 1970s but never changed road signs — largely due to the cost (£1bn+ estimate) and public attachment to miles. Running events, however, are internationally standardised in metric distances (5K, 10K, etc.) and have used kilometres globally since long before the UK metrication debate.</p></div>
   <div class="faq-item"><h3>How do I convert mph to km/h?</h3><p>Multiply by 1.609344. So 60 mph = 96.56 km/h, and the UK's 70 mph motorway limit = 112.65 km/h. Quick estimate: multiply by 1.6. To convert back, divide by 1.609 or multiply by 0.621.</p></div>
 </div>
-
-  <div class="cta-box">
-    <div class="cta-text">
-      <strong>Try the Length & Distance Converter</strong>
-      <span>Convert miles, kilometres, metres, feet, and more instantly</span>
-    </div>
-    <a href="https://unit-converter.tabutility.com/" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
-  ]]></content:encoded>
+]]></content:encoded>
     <description>Whether you're travelling, running, or converting UK road signs, here's everything you need to know about converting miles to kilometres — with formulas, tables, and mental maths shortcuts.</description>
     <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
   </item>
