@@ -2236,5 +2236,31 @@
     "category": "SEO",
     "emoji": "🌐",
     "url": "https://hreflang-checker.tabutility.com/"
+  },
+  {
+    "id": "us-mortgage-loan-finder",
+    "name": "US Mortgage Loan Finder",
+    "description": "Answer 5 questions to find your best US mortgage loan type — FHA, VA, USDA, Conventional, DSCR or Jumbo — then see your full monthly PITI payment with property tax by state, PMI, and insurance.",
+    "category": "Calculators",
+    "emoji": "🏡",
+    "url": "https://us-mortgage-loan-finder.tabutility.com/"
+  },
+  {
+    "id": "uk-mortgage-in-principle",
+    "name": "UK Mortgage in Principle",
+    "description": "Get a UK mortgage in principle estimate in 4 steps — see how much you can borrow, which mortgage types you qualify for (Residential, BTL, Shared Ownership, Help to Buy), and your full monthly cost including Council Tax by region.",
+    "category": "Calculators",
+    "emoji": "🏡",
+    "url": "https://uk-mortgage-in-principle.tabutility.com",
+    "tags": [
+      "mortgage",
+      "UK",
+      "agreement in principle",
+      "AIP",
+      "buy-to-let",
+      "shared ownership",
+      "council tax",
+      "first-time buyer"
+    ]
   }
 ]
