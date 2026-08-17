@@ -18,7 +18,7 @@ const CATEGORY_COLORS = {
 };
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
 const BLOG_POSTS = [
-  { title: "I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools", desc: "The origin story of Tabutility: how one frustrating Tuesday afternoon turned into 151 free tools.", url: "/blog/product-hunt-launch/", categories: ["SEO", "All"] },
+  { title: "I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools", desc: "The origin story of Tabutility: how one frustrating Tuesday afternoon turned into 153 free tools.", url: "/blog/product-hunt-launch/", categories: ["SEO", "All"] },
   { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/", categories: ["Calculators"] },
   { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/", categories: ["Calculators", "International"] },
   { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/", categories: ["Calculators"] },
