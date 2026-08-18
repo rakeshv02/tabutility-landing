@@ -62,6 +62,9 @@ export default function App() {
         <a href="/blog/" style={{ color: "#a5b4fc", fontSize: 13, fontWeight: 700, textDecoration: "none" }}>📖 Blog</a>
       </div>
 
+      {/* ── Chrome extension banner ── */}
+      <ExtensionBanner />
+
       {/* ── Hero ── */}
       <div style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)", color: "#fff", padding: "44px 20px 36px", textAlign: "center" }}>
         <div style={{ fontSize: 40, marginBottom: 8 }}>⚡</div>
@@ -308,5 +311,24 @@ function ToolCard({ tool }) {
         <div style={{ fontSize: 11, color: colors.badge, fontWeight: 700 }}>Open →</div>
       </div>
     </a>
+  );
+}
+
+function ExtensionBanner() {
+  const [hidden, setHidden] = useState(() => {
+    try { return localStorage.getItem("ext-banner-dismissed") === "1"; } catch { return false; }
+  });
+  if (hidden) return null;
+  return (
+    <div style={{ background: "#4f46e5", padding: "9px 40px 9px 20px", textAlign: "center", position: "relative" }}>
+      <a href="/chrome-extension/" style={{ color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none" }}>
+        Tired of opening tabs? Get the free Chrome extension &rarr;
+      </a>
+      <button
+        onClick={() => { setHidden(true); try { localStorage.setItem("ext-banner-dismissed", "1"); } catch {} }}
+        aria-label="Dismiss"
+        style={{ position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#c7d2fe", fontSize: 16, cursor: "pointer", lineHeight: 1 }}
+      >&times;</button>
+    </div>
   );
 }
