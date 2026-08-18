@@ -106,6 +106,7 @@ export default function App() {
   const setNation = id => { setCountry(id); try { localStorage.setItem("tab_country", id); } catch {} };
   const c = COUNTRIES[country] || COUNTRIES.uk;
   return <div style={styles.page}><style>{HOVER_STYLES}</style>
+    <ExtensionBanner />
     {/* ── Top nav ── */}
     <nav style={styles.topNav}>
       <div style={styles.brand}>⚡ Tabutility</div>
@@ -249,3 +250,22 @@ const styles = {
   recent: { background: "#1a1a2e", color: "#64748b", padding: "9px 20px", display: "flex", flexWrap: "wrap", gap: 7, alignItems: "center", fontSize: 12 }, filter: { position: "sticky", top: 0, zIndex: 5, background: "#1e293b", boxShadow: "0 2px 8px #0002" }, filterInner: { maxWidth: 1200, margin: "auto", padding: "9px 20px", display: "flex", gap: 6, overflowX: "auto", alignItems: "center" }, pill: { border: 0, borderRadius: 20, padding: "7px 12px", fontWeight: 700, whiteSpace: "nowrap", cursor: "pointer" }, blogLink: { color: "#c7d2fe", textDecoration: "none", marginLeft: "auto", whiteSpace: "nowrap", padding: "7px 12px" },
   takeSection: { background: "#17213b", padding: "44px 20px" }, takeCard: { maxWidth: 900, margin: "auto", background: "linear-gradient(135deg,#202b51,#16213e)", border: "1px solid #3d4c7c", borderRadius: 18, padding: "25px clamp(18px,4vw,42px)", color: "#fff", boxShadow: "0 12px 35px #0f172a55" }, takeHead: { display: "flex", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }, sectionKicker: { color: "#818cf8", fontSize: 11, letterSpacing: 1.5, fontWeight: 800 }, sectionTitle: { fontSize: 26, letterSpacing: -.7, margin: "5px 0 18px", color: "#1e293b" }, muted: { color: "#a5b4fc", margin: 0, fontSize: 13 }, toggle: { display: "flex", background: "#111a31", padding: 4, borderRadius: 9, height: "fit-content" }, toggleActive: { background: "#4f46e5", color: "#fff" }, salaryLine: { display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 30, color: "#c7d2fe", fontSize: 14 }, salaryLineStrong: {}, range: { width: "100%", accentColor: "#818cf8", margin: "15px 0 3px", cursor: "pointer", minHeight: 30 }, rangeLabels: { display: "flex", justifyContent: "space-between", color: "#64748b", fontSize: 11 }, netResult: { display: "flex", justifyContent: "space-between", alignItems: "end", marginTop: 25, paddingTop: 22, borderTop: "1px solid #ffffff1c" }, netResultStrong: {}, rate: { textAlign: "right", color: "#c7d2fe" }, takeLinks: { display: "flex", gap: 18, flexWrap: "wrap", marginTop: 25, fontSize: 13 }, content: { maxWidth: 1200, margin: "auto", padding: "38px 20px 55px" }, featureGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 12 }, feature: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: 20, display: "flex", gap: 14, textDecoration: "none", boxShadow: "0 2px 6px #0f172a08" }, featureIcon: { fontSize: 28, color: "#4f46e5" }, loan: { margin: "18px 0 38px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap", background: "linear-gradient(135deg,#4f46e5,#7c3aed)", color: "#fff", borderRadius: 14, padding: "20px 23px", textDecoration: "none" }, grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(175px,1fr))", gap: 10 }, category: { marginBottom: 36 }, categoryHead: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }, more: { background: "none", border: 0, fontWeight: 700, cursor: "pointer" }, toolCard: { background: "#fff", border: "1px solid #e2e8f0", borderRadius: 10, padding: "12px 13px", minHeight: 116, boxSizing: "border-box", display: "flex", flexDirection: "column", boxShadow: "0 1px 3px #0f172a08" }, toolName: { display: "flex", gap: 8, alignItems: "center", fontSize: 13 }, toolCardCategory: { alignSelf: "flex-start", fontStyle: "normal", fontSize: 10, padding: "2px 5px", borderRadius: 4, margin: "7px 0 5px" }, toolCardDescription: { fontSize: 11, color: "#64748b", lineHeight: 1.4, margin: "0 0 8px", flex: 1 }, result: { color: "#64748b", marginBottom: 15 }, empty: { minHeight: 240, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: "#94a3b8", fontSize: 34 }, blog: { maxWidth: 1200, margin: "0 auto", padding: "10px 20px 60px" }, blogHead: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: 15 }, blogGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 12 }, post: { textDecoration: "none", minHeight: 150 }, footer: { background: "#1a1a2e", color: "#94a3b8", padding: "30px 20px", textAlign: "center", display: "flex", flexDirection: "column", gap: 7, fontSize: 13 },
 };
+
+function ExtensionBanner() {
+  const [hidden, setHidden] = useState(() => {
+    try { return localStorage.getItem("ext-banner-dismissed") === "1"; } catch { return false; }
+  });
+  if (hidden) return null;
+  return (
+    <div style={{ background: "#4f46e5", padding: "9px 40px 9px 20px", textAlign: "center", position: "relative" }}>
+      <a href="/chrome-extension/" style={{ color: "#fff", fontSize: 13.5, fontWeight: 700, textDecoration: "none" }}>
+        Tired of opening tabs? Get the free Chrome extension &rarr;
+      </a>
+      <button
+        onClick={() => { setHidden(true); try { localStorage.setItem("ext-banner-dismissed", "1"); } catch {} }}
+        aria-label="Dismiss"
+        style={{ position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#c7d2fe", fontSize: 16, cursor: "pointer", lineHeight: 1 }}
+      >&times;</button>
+    </div>
+  );
+}
