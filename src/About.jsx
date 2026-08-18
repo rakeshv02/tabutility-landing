@@ -107,8 +107,19 @@ export default function About() {
 
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-700">
-          <p className="text-gray-400 text-sm">
+        <div className="mt-12 pt-8 border-t border-slate-700" style={{textAlign:"center"}}>
+          <p className="text-gray-400 text-sm" style={{marginBottom:"16px"}}>
+            If Tabutility saved you time or money, a coffee keeps the tools running ☕
+          </p>
+          <a
+            href="https://ko-fi.com/tabutility"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{display:"inline-flex",alignItems:"center",gap:"8px",background:"#ff5e5b",color:"#fff",borderRadius:"8px",padding:"10px 22px",fontWeight:700,textDecoration:"none",fontSize:"14px"}}
+          >
+            ☕ Buy me a coffee
+          </a>
+          <p className="text-gray-400 text-sm" style={{marginTop:"16px"}}>
             Built with ❤️ by a solo founder. Building in public. No venture capital. No exit strategy. Just tools that work.
           </p>
         </div>
