@@ -147,19 +147,18 @@ export default function App() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
             {[
-              { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/", views: "8,241" },
-              { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/", views: "6,109" },
-              { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/", views: "7,382" },
-              { title: "IR35 Explained", desc: "What every UK contractor needs to know about off-payroll working rules in plain English.", url: "/blog/ir35-explained-uk-contractors/", views: "5,847" },
-              { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/", views: "4,923" },
-              { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/", views: "6,731" },
+              { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/" },
+              { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/" },
+              { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/" },
+              { title: "IR35 Explained", desc: "What every UK contractor needs to know about off-payroll working rules in plain English.", url: "/blog/ir35-explained-uk-contractors/" },
+              { title: "How Much to Retire in the UK?", desc: "The PLSA standards, the 4% rule, and how to calculate your own retirement target.", url: "/blog/how-much-to-retire-uk/" },
+              { title: "APR Explained", desc: "The one number that actually matters when comparing loans, cards and mortgages.", url: "/blog/apr-explained/" },
             ].map(post => (
               <a key={post.url} href={post.url} style={{ textDecoration: "none" }}>
                 <div style={{ background: "#fff", borderRadius: 10, padding: "14px 16px", border: "1.5px solid #e2e8f0", height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 6, transition: "border-color .15s, box-shadow .15s" }}
                   className="tool-card">
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <div style={{ fontSize: 10, fontWeight: 700, color: "#4f46e5", textTransform: "uppercase", letterSpacing: ".06em" }}>📖 Blog</div>
-                    <div style={{ fontSize: 10, color: "#94a3b8" }}>👁 {post.views}</div>
                   </div>
                   <div style={{ fontSize: 13, fontWeight: 800, color: "#0f172a", lineHeight: 1.3 }}>{post.title}</div>
                   <div style={{ fontSize: 12, color: "#64748b", lineHeight: 1.5, flex: 1 }}>{post.desc}</div>

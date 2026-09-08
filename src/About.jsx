@@ -17,8 +17,8 @@ export default function About() {
             </p>
             <ul className="list-disc list-inside space-y-2 ml-2 mt-3">
               <li><strong>Free forever</strong> — No hidden paywalls, no premium tiers to unlock basic features</li>
-              <li><strong>Private by default</strong> — All processing happens in your browser. Your data never leaves your device</li>
-              <li><strong>No tracking</strong> — We don't follow you around the web. No creepy analytics</li>
+              <li><strong>Private by default</strong> — Calculator inputs are processed in your browser and are not sent to Tabutility for calculation</li>
+              <li><strong>No tracking</strong> — Limited usage analytics are disclosed in our Privacy Policy</li>
               <li><strong>Actually useful</strong> — Each tool solves a real problem, not an imaginary one</li>
             </ul>
           </section>
@@ -39,7 +39,7 @@ export default function About() {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Why Build This Way?</h2>
             <p>
-              Most SaaS companies treat users as revenue. We're different. Our revenue comes from optional subscriptions (for power users) and non-intrusive ads. No tracking. No selling your data. Just tools that work.
+              Most SaaS companies treat users as revenue. We're different. Our revenue comes from optional subscriptions (for power users) and non-intrusive ads. Usage measurement and advertising are disclosed in our Privacy Policy. We do not sell calculator inputs.
             </p>
             <p className="mt-4">
               By building in public, I'm holding myself accountable. You'll see our metrics, our mistakes, and our wins. This transparency builds trust. And trust is what's missing from the internet right now.
@@ -78,7 +78,7 @@ export default function About() {
             <div className="space-y-4 mt-4">
               <div>
                 <h3 className="font-semibold text-white">Privacy First</h3>
-                <p className="text-gray-400">Your data is yours. We don't collect, store, or sell it.</p>
+                <p className="text-gray-400">Calculator inputs remain on your device. Site usage is measured as described in our Privacy Policy.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-white">Transparency</h3>

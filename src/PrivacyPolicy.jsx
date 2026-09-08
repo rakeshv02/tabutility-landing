@@ -3,7 +3,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-slate-900 text-gray-100 py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-        <p className="text-gray-400 mb-8">Last updated: July 2026</p>
+        <p className="text-gray-400 mb-8">Last updated: September 2026</p>
 
         <div className="space-y-8 text-gray-300 leading-relaxed">
           
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
             <ul className="list-disc list-inside space-y-2 ml-2">
               <li><strong>Personal Data:</strong> We do not require you to create an account. Our tools run entirely in your browser with no server-side processing.</li>
               <li><strong>Usage Data:</strong> When you visit our site, we automatically collect certain information including your browser type, IP address (via Google Analytics), and pages visited.</li>
-              <li><strong>Cookies:</strong> We use cookies for analytics and advertising purposes only. You can control cookie settings in your browser.</li>
+              <li><strong>Cookies:</strong> We use cookies for analytics and advertising purposes only. You can control cookies through your browser and any consent controls presented on the site.</li>
             </ul>
           </section>
 
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc list-inside space-y-2 ml-2">
               <li><strong>Google Analytics:</strong> For tracking website usage and user behavior</li>
-              <li><strong>Google AdSense:</strong> For displaying personalized advertisements</li>
+              <li><strong>Google AdSense:</strong> For site review and, if approved, displaying advertisements subject to user consent where required</li>
               <li><strong>Cloudflare:</strong> For DNS and security services</li>
               <li><strong>Vercel:</strong> For hosting and deployment</li>
             </ul>
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
 
         <div className="mt-12 pt-8 border-t border-slate-700">
           <p className="text-gray-400 text-sm">
-            Built by a solo founder. No tracking. No BS.
+            Built by a solo founder. Analytics and advertising use are disclosed above.
           </p>
         </div>
       </div>
