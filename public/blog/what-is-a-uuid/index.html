@@ -21,12 +21,10 @@
   <meta name="twitter:description" content="UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
   <meta name="theme-color" content="#1a1a2e" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is a UUID? How Unique IDs Are Generated and When to Use Them","description":"UUIDs are 128-bit identifiers used everywhere in software — databases, APIs, file systems. Learn what they are, the difference between UUID versions, and when to use them.","datePublished":"2026-07-28","dateModified":"2026-07-28","author":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"publisher":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"},"url":"https://tabutility.com/blog/what-is-a-uuid/","mainEntityOfPage":"https://tabutility.com/blog/what-is-a-uuid/"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are UUIDs truly unique?","acceptedAnswer":{"@type":"Answer","text":"In practice, yes. The probability of generating a duplicate UUID v4 is astronomically small — roughly 1 in 5.3 undecillion. You would need to generate billions of UUIDs per second for trillions of years to have a realistic collision chance."}},{"@type":"Question","name":"What is the difference between UUID v4 and v7?","acceptedAnswer":{"@type":"Answer","text":"UUID v4 is randomly generated with no time component, making it non-sortable. UUID v7 (ratified 2022) embeds a millisecond-precision Unix timestamp in the first 48 bits, making UUIDs sortable by creation time — ideal for database primary keys."}},{"@type":"Question","name":"Should I use UUIDs or auto-increment integers for database IDs?","acceptedAnswer":{"@type":"Answer","text":"It depends. Auto-increment integers are smaller, faster to index, and human-readable. UUIDs are better when you need decentralised ID generation (multiple servers or clients generating IDs without coordination), when you want to avoid exposing sequential record counts, or when merging data from multiple systems."}},{"@type":"Question","name":"What does the version number in a UUID mean?","acceptedAnswer":{"@type":"Answer","text":"The version number (v1, v4, v5, v7, etc.) defines how the UUID was generated — from a timestamp and MAC address (v1), random data (v4), a hash of a name (v5), or a timestamp with random data (v7). The version digit appears as the first digit of the third group: xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx for v4."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://tabutility.com/blog/"},{"@type":"ListItem","position":3,"name":"What Is a UUID?","item":"https://tabutility.com/blog/what-is-a-uuid/"}]}</script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <link rel="stylesheet" href="/styles/tabutility.css">
 <style>
@@ -83,7 +81,7 @@
     .related-card-meta{padding:8px 16px;background:#f8fafc;border-top:1px solid #f1f5f9;font-size:11px;color:#94a3b8;font-weight:600}
       .rss-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:7px 14px;border:1.5px solid rgba(165,180,252,.4);border-radius:999px;color:#a5b4fc;font-size:13px;font-weight:700;text-decoration:none;transition:border-color .15s,color .15s,background .15s}.rss-link:hover{border-color:#4f46e5;background:rgba(79,70,229,.18);color:#fff;text-decoration:none}
   </style>
-  <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="noindex, follow">
 </head>
 <body>
 
@@ -111,12 +109,7 @@
     What Is a UUID?
   </div>
 
-  <div class="ad-slot">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-  </div>
-
-<h2>What Is a UUID?</h2>
+  <h2>What Is a UUID?</h2>
 <p>A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify information in computer systems. It is represented as 32 hexadecimal digits displayed in five groups separated by hyphens:</p>
 <div class="formula">550e8400-e29b-41d4-a716-446655440000</div>
 <p>The format is <code>8-4-4-4-12</code> characters, always 36 characters in total including the four hyphens. UUIDs are also called GUIDs (Globally Unique Identifiers), especially in Microsoft environments — they are the same thing.</p>
@@ -177,30 +170,13 @@
     <a href="https://uuid-generator.tabutility.com" class="cta-btn" target="_blank" rel="noopener">Open Tool →</a>
   </div>
 
-  <div class="ad-slot">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
-
-</div>
 
 <footer>
   <div style="margin-bottom:8px"><a href="https://tabutility.com">⚡ Tabutility</a> — 100 free browser-based utility tools</div>
   <div>© 2026 Tabutility · No sign-up required · See Privacy Policy</div>
   <div style="margin-top:12px"><a href="/blog/feed.xml" class="rss-link" title="Subscribe to the Tabutility Blog RSS feed"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 1 1 0 4.36 2.18 2.18 0 0 1 0-4.36zM4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>Subscribe via RSS</a></div>
 </footer>
-
-<script>
-(function(){
-  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
-  var belowFold=Array.from(ins).slice(1);
-  if(!belowFold.length)return;
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries,obs){entries.forEach(function(e){if(e.isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});e.target.setAttribute('data-lazy-done','1');obs.unobserve(e.target);}});},{rootMargin:'200px'});
-    belowFold.forEach(function(el){io.observe(el);});
-  } else { belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});}); }
-})();
-</script>
 
 </body>
 </html>
