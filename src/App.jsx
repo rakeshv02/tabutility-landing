@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import toolsData from "./tools.config.json";
 
-const CATEGORIES = ["All", "Calculators", "Developer Tools", "Content Tools", "SEO", "International", "Converters", "Image Tools", "Wellness", "Fun Tools", "Productivity"];
+const CATEGORIES = ["All", "Calculators", "International"];
+const FEATURED_IDS = new Set(["mortgage-calculator","mortgage-affordability-calculator","loan-calculator","uk-student-loan","uk-self-employed-tax","uk-salary-calculator","us-paycheck-calculator","australian-tax-calculator","canadian-tax-calculator","compound-interest-calculator"]);
+const featuredTools = toolsData.filter(tool => FEATURED_IDS.has(tool.id));
 const CATEGORY_COLORS = {
   Calculators: { badge: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
   "Developer Tools": { badge: "#16a34a", light: "#f0fdf4", text: "#15803d" },
@@ -18,7 +20,6 @@ const CATEGORY_COLORS = {
 };
 const DEFAULT_COLOR = { badge: "#374151", light: "#f9fafb", text: "#111827" };
 const BLOG_POSTS = [
-  { title: "I Refused to Pay $130/Month for Semrush — So I Built 7 Free SEO Tools", desc: "The origin story of Tabutility: how one frustrating Tuesday afternoon turned into 153 free tools.", url: "/blog/product-hunt-launch/", categories: ["SEO", "All"] },
   { title: "How Compound Interest Works", desc: "How modest savings snowball into real wealth — and why starting early beats saving more.", url: "/blog/how-compound-interest-works/", categories: ["Calculators"] },
   { title: "What Is a Good Rental Yield?", desc: "The UK landlord benchmark, city-by-city breakdown, and how to improve your returns.", url: "/blog/what-is-good-rental-yield-uk/", categories: ["Calculators", "International"] },
   { title: "How to Pay Off Debt Fast", desc: "Snowball vs avalanche — which method saves more money and which one you'll stick to.", url: "/blog/how-to-pay-off-debt-fast/", categories: ["Calculators"] },
@@ -101,8 +102,8 @@ export default function App() {
   const [country, setCountry] = useState(() => { try { return localStorage.getItem("tab_country") || "all"; } catch { return "all"; } });
   const [recentTools, setRecentTools] = useState(() => { try { return JSON.parse(localStorage.getItem("tab_recent") || "[]"); } catch { return []; } });
   const isFiltered = search.trim() !== "" || activeCategory !== "All";
-  const filtered = useMemo(() => toolsData.filter(t => (activeCategory === "All" || t.category === activeCategory) && (!search.trim() || `${t.name} ${t.description} ${(t.tags || []).join(" ")}`.toLowerCase().includes(search.toLowerCase()))), [search, activeCategory]);
-  useEffect(() => { document.title = search.trim() ? `"${search}" — Tabutility` : activeCategory !== "All" ? `${activeCategory} — ${toolsData.filter(t => t.category === activeCategory).length} Free Tools | Tabutility` : `Tabutility — ${toolsData.length} Free Online Utility Tools | No Sign-up`; }, [search, activeCategory]);
+  const filtered = useMemo(() => featuredTools.filter(t => (activeCategory === "All" || t.category === activeCategory) && (!search.trim() || `${t.name} ${t.description} ${(t.tags || []).join(" ")}`.toLowerCase().includes(search.toLowerCase()))), [search, activeCategory]);
+  useEffect(() => { document.title = search.trim() ? `"${search}" — Tabutility` : "Tabutility — Salary, Tax, Mortgage and Loan Calculators"; }, [search, activeCategory]);
   useEffect(() => { const sync = () => { try { setRecentTools(JSON.parse(localStorage.getItem("tab_recent") || "[]")); } catch {} }; window.addEventListener("tab_recent_updated", sync); window.addEventListener("focus", sync); return () => { window.removeEventListener("tab_recent_updated", sync); window.removeEventListener("focus", sync); }; }, []);
   const setNation = id => { setCountry(id); try { localStorage.setItem("tab_country", id); } catch {} };
   const c = COUNTRIES[country] || COUNTRIES.uk;
@@ -112,11 +113,11 @@ export default function App() {
     <nav style={styles.topNav}>
       <div style={styles.brand}>⚡ Tabutility</div>
       <div style={styles.topNavLinks}>
-        {[["Money","#take-home"],["Tax","https://uk-salary-calculator.tabutility.com"],["Everyday","https://loan-calculator.tabutility.com"],["Developer","#developer-tools"],["Guides","/blog/"]].map(([l,h])=><a key={l} href={h} style={styles.topNavLink}>{l}</a>)}
+        {[["Calculators","#flagship-calculators"],["Tax","https://uk-salary-calculator.tabutility.com"],["Mortgage","https://mortgage-calculator.tabutility.com"],["Methodology","/about/"],["Guides","/blog/"]].map(([l,h])=><a key={l} href={h} style={styles.topNavLink}>{l}</a>)}
       </div>
       <div style={styles.topNavRight}>
         <button style={styles.searchNavBtn} onClick={()=>{ document.querySelector('input[aria-label="Search tools"]')?.focus(); }}>
-          <span style={{fontSize:15,color:"#94a3b8"}}>⌕</span> Search {toolsData.length} tools <kbd style={styles.kbd}>⌘K</kbd>
+          <span style={{fontSize:15,color:"#94a3b8"}}>⌕</span> Search calculators <kbd style={styles.kbd}>⌘K</kbd>
         </button>
       </div>
     </nav>
@@ -127,7 +128,7 @@ export default function App() {
         <div style={styles.heroLeft}>
           <div style={styles.heroKicker}>
             <span style={styles.heroDot} />
-            {toolsData.length} free tools · No sign-up
+            10 sourced calculators · No sign-up
           </div>
           <h1 className="hero-title-size" style={styles.heroTitle}>
             Get the number.<br /><em style={{color:"#4f46e5",fontStyle:"normal"}}>Move on.</em>
@@ -151,13 +152,13 @@ export default function App() {
     {/* ── Popular bar ── */}
     <div style={styles.popularBar}>
       <span style={styles.popLabel}>POPULAR:</span>
-      {[["Salary calculator","https://uk-salary-calculator.tabutility.com"],["Income tax","https://uk-salary-calculator.tabutility.com"],["Mortgage calculator","https://loan-calculator.tabutility.com"],["VAT calculator","https://vat-calculator.tabutility.com"],["Compound interest","https://compound-interest-calculator.tabutility.com"],["Percentage calculator","https://percentage-calculator.tabutility.com"]].map(([l,h])=><a key={l} href={h} className="hero-pop-link" style={styles.popLink}>{l}</a>)}
+      {[["Salary calculator","https://uk-salary-calculator.tabutility.com"],["US paycheck","https://us-paycheck-calculator.tabutility.com"],["Mortgage calculator","https://mortgage-calculator.tabutility.com"],["Mortgage affordability","https://mortgage-affordability-calculator.tabutility.com"],["Student loan","https://uk-student-loan.tabutility.com"],["Compound interest","https://compound-interest-calculator.tabutility.com"]].map(([l,h])=><a key={l} href={h} className="hero-pop-link" style={styles.popLink}>{l}</a>)}
     </div>
     <div style={styles.countryBar}><div style={styles.countryInner}><span style={styles.countryLabel}>I’m looking at</span>{[["uk", "🇬🇧 UK"], ["us", "🇺🇸 US"], ["au", "🇦🇺 AU"], ["ca", "🇨🇦 CA"], ["jp", "🇯🇵 JP"], ["all", "🌍 All"]].map(([id, label]) => <button key={id} onClick={() => setNation(id)} style={{ ...styles.countryButton, ...(country === id ? styles.countryActive : {}) }}>{label}</button>)}</div></div>
     {recentTools.length > 0 && <div style={styles.recent}><span>RECENT</span>{recentTools.slice(0, 6).map(t => <a key={t.id} href={t.url} onClick={() => trackRecentTool(t)}>{t.emoji} {t.name}</a>)}<button onClick={() => { localStorage.removeItem("tab_recent"); setRecentTools([]); }}>× clear</button></div>}
-    <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? toolsData.length : toolsData.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
+    <div style={styles.filter}><div style={styles.filterInner}>{CATEGORIES.map(cat => { const active = activeCategory === cat; const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR; return <button key={cat} onClick={() => { setActiveCategory(cat); setSearch(""); }} style={{ ...styles.pill, background: active ? color.badge : "#334155", color: active ? "#fff" : "#94a3b8" }}>{cat} <small>{cat === "All" ? featuredTools.length : featuredTools.filter(t => t.category === cat).length}</small></button> })}<a href="/blog/" style={styles.blogLink}>▣ Blog</a></div></div>
     {isFiltered ? <main style={styles.content}><div style={styles.result}>{filtered.length ? `${filtered.length} tools${search ? ` matching “${search}”` : ""}` : `No tools found for “${search}”`}</div>{filtered.length ? <ToolGrid tools={filtered} /> : <div style={styles.empty}>⌕<strong>Nothing found</strong><span>Try a different search or browse a category above.</span></div>}</main> : <HomeContent country={country} c={c} />}
-    <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>{toolsData.length} free browser-based utility tools. No sign-up required.</div><a href="/blog/" style={{color:"#818cf8",textDecoration:"none"}}>Blog</a><span style={{color:"#334155"}}> · </span><a href="/about/" style={{color:"#94a3b8",textDecoration:"none"}}>About</a><span style={{color:"#334155"}}> · </span><a href="/privacy-policy/" style={{color:"#94a3b8",textDecoration:"none"}}>Privacy</a><span style={{color:"#334155"}}> · </span><a href="/contact/" style={{color:"#94a3b8",textDecoration:"none"}}>Contact</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><a href="https://ko-fi.com/tabutility" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:"#ff5e5b",color:"#fff",borderRadius:8,padding:"7px 16px",fontWeight:700,textDecoration:"none",fontSize:13,marginTop:6}}>☕ Buy me a coffee</a><small style={{marginTop:6,display:"block"}}>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
+    <BlogSection activeCategory={activeCategory} /><footer style={styles.footer}><div style={{ fontSize: 18, color: "#fff" }}>⚡ Tabutility</div><div>Independent publisher of free salary, tax, mortgage and loan calculators.</div><a href="/blog/" style={{color:"#818cf8",textDecoration:"none"}}>Blog</a><span style={{color:"#334155"}}> · </span><a href="/about/" style={{color:"#94a3b8",textDecoration:"none"}}>About</a><span style={{color:"#334155"}}> · </span><a href="/privacy-policy/" style={{color:"#94a3b8",textDecoration:"none"}}>Privacy</a><span style={{color:"#334155"}}> · </span><a href="/contact/" style={{color:"#94a3b8",textDecoration:"none"}}>Contact</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><span style={{color:"#334155"}}> · </span><a href="/terms/" style={{color:"#94a3b8",textDecoration:"none"}}>Terms</a><a href="https://ko-fi.com/tabutility" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:"#ff5e5b",color:"#fff",borderRadius:8,padding:"7px 16px",fontWeight:700,textDecoration:"none",fontSize:13,marginTop:6}}>☕ Buy me a coffee</a><small style={{marginTop:6,display:"block"}}>© {new Date().getFullYear()} Tabutility · All tools run in your browser</small></footer>
   </div>;
 }
 
