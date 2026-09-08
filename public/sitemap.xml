@@ -1449,4 +1449,7 @@
     <priority>0.8</priority>
   </url>
   <url><loc>https://tabutility.com/us-data-story/</loc><lastmod>2026-08-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tabutility.com/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://tabutility.com/terms/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://tabutility.com/contact/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>
